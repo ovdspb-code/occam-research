@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Occam Research — Computational Neuroscience</title>
+<meta name="description" content="Occam Research: investigating noise-assisted transport on biological connectomes through the Coherent Resonant Netting (CRN) framework.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --paper: #fafaf8;
+    --accent: #2d5a7b;
+    --accent-light: #e8f0f5;
+    --muted: #6b7280;
+    --border: #d1d5db;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'Source Sans 3', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--paper); line-height: 1.7; font-size: 16px; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 60px 0 40px; border-bottom: 2px solid var(--ink); }
+  .lab-name { font-family: var(--serif); font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px; }
+  .lab-subtitle { font-family: var(--sans); font-size: 1.05rem; font-weight: 300; color: var(--muted); letter-spacing: 0.02em; }
+  section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type { border-bottom: none; }
+  h2 { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; margin-bottom: 16px; color: var(--ink); }
+  p { margin-bottom: 14px; font-size: 0.975rem; color: #2d2d2d; }
+  p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+  a:hover { border-bottom-color: var(--accent); }
+  .pi-card { display: flex; gap: 20px; align-items: flex-start; }
+  .pi-info h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 2px; }
+  .pi-role { font-size: 0.875rem; color: var(--muted); margin-bottom: 8px; }
+  .pi-bio { font-size: 0.925rem; color: #3d3d3d; }
+  .pub-list { list-style: none; }
+  .pub-list li { padding: 16px 0; border-bottom: 1px solid #ececec; }
+  .pub-list li:last-child { border-bottom: none; }
+  .pub-title { font-family: var(--serif); font-size: 1rem; font-weight: 600; line-height: 1.4; margin-bottom: 4px; }
+  .pub-meta { font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+  .pub-tag { display: inline-block; font-size: 0.75rem; font-weight: 500; padding: 2px 8px; border-radius: 3px; margin-right: 6px; }
+  .tag-preprint { background: var(--accent-light); color: var(--accent); }
+  .tag-data { background: #f0fdf4; color: #166534; }
+  .tag-software { background: #fef3c7; color: #92400e; }
+  .links-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .links-row a { font-size: 0.825rem; font-family: var(--mono); padding: 3px 10px; border: 1px solid var(--border); border-radius: 3px; transition: all 0.2s; }
+  .links-row a:hover { background: var(--accent-light); border-color: var(--accent); }
+  .resources { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .resource-card { display: block; padding: 20px; border: 1px solid var(--border); border-radius: 4px; transition: border-color 0.2s; }
+  .resource-card:hover { border-color: var(--accent); }
+  .resource-card h3 { font-family: var(--sans); font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
+  .resource-card p { font-size: 0.825rem; color: var(--muted); margin-bottom: 0; }
+  .ids { font-size: 0.9rem; line-height: 2; }
+  footer { padding: 30px 0; text-align: center; font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--border); }
+  .disclaimer { margin-top: 24px; padding: 16px 20px; background: #f9fafb; border-left: 3px solid var(--border); font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+  @media (max-width: 600px) { .lab-name { font-size: 1.6rem; } .resources { grid-template-columns: 1fr; } .pi-card { flex-direction: column; } header { padding: 40px 0 30px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="lab-name">Occam Research</div>
+    <div class="lab-subtitle">Computational Neuroscience · Sant Cugat del Vallès, Spain</div>
+  </header>
+  <section>
+    <h2>Research Focus</h2>
+    <p>We investigate the thermodynamics of neural computation — specifically, how biological networks might exploit noise-assisted transport to solve the energy–information bottleneck of hypothesis selection.</p>
+    <p>Our primary framework is <strong>Coherent Resonant Netting (CRN)</strong>, which models a two-regime decision architecture: a low-cost wave-like filtering stage (Stage-I) that prunes hypotheses before expensive spiking commitment (Stage-II). Using GKSL/Lindblad open-system dynamics as a functional proxy, we test whether Disorder-Enhanced Selectivity (DES) emerges on real biological connectomes and depends on native network topology.</p>
+    <p>Current work spans 100 Human Connectome Project subjects and three model organisms (C.&nbsp;elegans, Drosophila larva, mouse cortex proxy), with over 500,000 transport simulations and full topology-destroying controls. All code and data are open.</p>
+  </section>
+  <section>
+    <h2>Principal Investigator</h2>
+    <div class="pi-card">
+      <div class="pi-info">
+        <h3>Oleg Dolgikh</h3>
+        <div class="pi-role">Independent Researcher · Systems Engineer (M.Sc. equiv., SPbETU 1994)</div>
+        <p class="pi-bio">Background in applied optimization and distributed systems (20+ years). Since 2020, focused exclusively on theoretical neuroscience: Landauer bounds in biological networks, spectral graph theory, ENAQT regimes, and variational free energy minimization.</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Publications &amp; Data</h2>
+    <ul class="pub-list">
+      <li>
+        <div class="pub-title">Coherent-Resonant Netting: Disorder-Enhanced Selectivity from Transient Wave-like Dynamics on Biological Connectomes</div>
+        <div class="pub-meta">O. Dolgikh · 2026 · Under review, Frontiers in Computational Neuroscience</div>
+        <div><span class="pub-tag tag-preprint">Preprint</span></div>
+        <div class="links-row">
+          <a href="https://doi.org/10.5281/zenodo.18249250">Zenodo</a>
+          <a href="https://www.researchgate.net/profile/Oleg-Dolgikh-3">ResearchGate</a>
+        </div>
+      </li>
+      <li>
+        <div class="pub-title">Hidden Pseudoreplication in Disorder-Averaged Transport Simulations on Parcellated Connectomes</div>
+        <div class="pub-meta">O. Dolgikh · 2026 · Preprint</div>
+        <div><span class="pub-tag tag-preprint">Preprint</span></div>
+        <div class="links-row">
+          <a href="https://doi.org/10.5281/zenodo.18520884">Zenodo</a>
+        </div>
+      </li>
+      <li>
+        <div class="pub-title">Evolutionary Game Theory Reveals Modular Specialization as a Universal Solution to Neural Trade-offs</div>
+        <div class="pub-meta">O. Dolgikh · 2026 · Dataset</div>
+        <div><span class="pub-tag tag-data">Data</span></div>
+        <div class="links-row">
+          <a href="https://doi.org/10.5281/zenodo.18379851">Zenodo</a>
+        </div>
+      </li>
+      <li>
+        <div class="pub-title">CRN_SIM: Simulation Suite for Coherent Resonant Netting</div>
+        <div class="pub-meta">O. Dolgikh · 2026 · Software</div>
+        <div><span class="pub-tag tag-software">Software</span></div>
+        <div class="links-row">
+          <a href="https://doi.org/10.5281/zenodo.18248773">Zenodo</a>
+          <a href="https://github.com/ovdspb-code">GitHub</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>Open Resources</h2>
+    <div class="resources">
+      <a href="https://github.com/ovdspb-code" class="resource-card">
+        <h3>GitHub</h3>
+        <p>Simulation code, analysis pipelines, configuration files</p>
+      </a>
+      <a href="https://doi.org/10.5281/zenodo.18249250" class="resource-card">
+        <h3>Zenodo</h3>
+        <p>Preprints, datasets, DOI-archived releases</p>
+      </a>
+      <a href="https://www.researchgate.net/profile/Oleg-Dolgikh-3" class="resource-card">
+        <h3>ResearchGate</h3>
+        <p>Full-text access, discussion</p>
+      </a>
+      <a href="https://orcid.org/0009-0008-0159-1718" class="resource-card">
+        <h3>ORCID</h3>
+        <p>0009-0008-0159-1718</p>
+      </a>
+    </div>
+  </section>
+  <section>
+    <h2>Contact</h2>
+    <div class="ids">
+      <strong>Email</strong>: <a href="mailto:research@occam.world">research@occam.world</a><br>
+      <strong>ORCID</strong>: <a href="https://orcid.org/0009-0008-0159-1718">0009-0008-0159-1718</a><br>
+      <strong>Location</strong>: Sant Cugat del Vallès, Barcelona, Spain
+    </div>
+    <div class="disclaimer">
+      <strong>Note on scope.</strong> CRN is a testable computational hypothesis, not a claim of microscopic quantum coherence in neural tissue. The GKSL formalism is used as a functional proxy for wave-like dynamics with tunable damping. We actively seek critical feedback and experimental collaboration.
+    </div>
+  </section>
+</div>
+<footer>
+  <div class="container">© 2026 Occam Research · Oleg Dolgikh</div>
+</footer>
+</body>
+</html>
