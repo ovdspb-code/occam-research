@@ -4,157 +4,366 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Occam Research — Computational Neuroscience</title>
-<meta name="description" content="Occam Research: investigating noise-assisted transport on biological connectomes through the Coherent Resonant Netting (CRN) framework.">
+<meta name="description" content="Occam Research: noise-assisted transport on biological connectomes. Coherent Resonant Netting (CRN) framework.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --ink: #1a1a2e;
-    --paper: #fafaf8;
-    --accent: #2d5a7b;
-    --accent-light: #e8f0f5;
-    --muted: #6b7280;
-    --border: #d1d5db;
-    --serif: 'Source Serif 4', Georgia, serif;
-    --sans: 'Source Sans 3', -apple-system, sans-serif;
-    --mono: 'JetBrains Mono', monospace;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: var(--sans); color: var(--ink); background: var(--paper); line-height: 1.7; font-size: 16px; -webkit-font-smoothing: antialiased; }
-  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
-  header { padding: 60px 0 40px; border-bottom: 2px solid var(--ink); }
-  .lab-name { font-family: var(--serif); font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px; }
-  .lab-subtitle { font-family: var(--sans); font-size: 1.05rem; font-weight: 300; color: var(--muted); letter-spacing: 0.02em; }
-  section { padding: 36px 0; border-bottom: 1px solid var(--border); }
-  section:last-of-type { border-bottom: none; }
-  h2 { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; margin-bottom: 16px; color: var(--ink); }
-  p { margin-bottom: 14px; font-size: 0.975rem; color: #2d2d2d; }
-  p:last-child { margin-bottom: 0; }
-  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
-  a:hover { border-bottom-color: var(--accent); }
-  .pi-card { display: flex; gap: 20px; align-items: flex-start; }
-  .pi-info h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 2px; }
-  .pi-role { font-size: 0.875rem; color: var(--muted); margin-bottom: 8px; }
-  .pi-bio { font-size: 0.925rem; color: #3d3d3d; }
-  .pub-list { list-style: none; }
-  .pub-list li { padding: 16px 0; border-bottom: 1px solid #ececec; }
-  .pub-list li:last-child { border-bottom: none; }
-  .pub-title { font-family: var(--serif); font-size: 1rem; font-weight: 600; line-height: 1.4; margin-bottom: 4px; }
-  .pub-meta { font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
-  .pub-tag { display: inline-block; font-size: 0.75rem; font-weight: 500; padding: 2px 8px; border-radius: 3px; margin-right: 6px; }
-  .tag-preprint { background: var(--accent-light); color: var(--accent); }
-  .tag-data { background: #f0fdf4; color: #166534; }
-  .tag-software { background: #fef3c7; color: #92400e; }
-  .links-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
-  .links-row a { font-size: 0.825rem; font-family: var(--mono); padding: 3px 10px; border: 1px solid var(--border); border-radius: 3px; transition: all 0.2s; }
-  .links-row a:hover { background: var(--accent-light); border-color: var(--accent); }
-  .resources { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .resource-card { display: block; padding: 20px; border: 1px solid var(--border); border-radius: 4px; transition: border-color 0.2s; }
-  .resource-card:hover { border-color: var(--accent); }
-  .resource-card h3 { font-family: var(--sans); font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
-  .resource-card p { font-size: 0.825rem; color: var(--muted); margin-bottom: 0; }
-  .ids { font-size: 0.9rem; line-height: 2; }
-  footer { padding: 30px 0; text-align: center; font-size: 0.8rem; color: var(--muted); border-top: 1px solid var(--border); }
-  .disclaimer { margin-top: 24px; padding: 16px 20px; background: #f9fafb; border-left: 3px solid var(--border); font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
-  @media (max-width: 600px) { .lab-name { font-size: 1.6rem; } .resources { grid-template-columns: 1fr; } .pi-card { flex-direction: column; } header { padding: 40px 0 30px; } }
+:root {
+  --bg: #0c0f1a;
+  --surface: #141828;
+  --surface2: #1a1f35;
+  --accent: #4e8eff;
+  --accent2: #5ec4b6;
+  --warm: #e8b84e;
+  --text: #e4e8f1;
+  --muted: #7a8194;
+  --border: #252a3e;
+  --glow: rgba(78,142,255,0.15);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 28px}
+
+.hero{position:relative;padding:80px 0 60px;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(78,142,255,0.08) 0%,transparent 70%);pointer-events:none}
+.hero-label{font-size:.75rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.hero h1{font-family:'Newsreader',serif;font-size:2.8rem;font-weight:600;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
+.hero h1 span{color:var(--accent)}
+.hero-sub{font-size:1.05rem;color:var(--muted);max-width:600px;font-weight:300}
+.hero-loc{margin-top:20px;font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:6px}
+.hero-loc::before{content:'◆';color:var(--accent);font-size:.5rem}
+
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:12px;overflow:hidden;margin:40px 0}
+.stat{background:var(--surface);padding:24px 20px;text-align:center}
+.stat-num{font-size:1.6rem;font-weight:700;color:var(--text);font-variant-numeric:tabular-nums}
+.stat-num .unit{font-size:.9rem;font-weight:400;color:var(--muted)}
+.stat-label{font-size:.75rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:.08em}
+
+section{padding:48px 0;border-top:1px solid var(--border)}
+h2{font-family:'Newsreader',serif;font-size:1.5rem;font-weight:600;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+h2 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
+p{margin-bottom:14px;font-size:.95rem;color:#bfc5d4}
+p:last-child{margin-bottom:0}
+strong{color:var(--text);font-weight:600}
+a{color:var(--accent);text-decoration:none;transition:color .2s}
+a:hover{color:#7eadff}
+
+.enaqt-vis{background:var(--surface);border-radius:16px;padding:32px;margin:28px 0;position:relative;overflow:hidden}
+.enaqt-vis::after{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(94,196,182,0.06) 0%,transparent 70%);pointer-events:none}
+.enaqt-canvas{width:100%;height:220px;display:block}
+.enaqt-legend{display:flex;gap:24px;margin-top:16px;font-size:.8rem;color:var(--muted)}
+.enaqt-legend span{display:flex;align-items:center;gap:6px}
+.enaqt-legend .leg-dot{width:10px;height:10px;border-radius:50%}
+
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-top:20px}
+.card{display:block;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;transition:border-color .3s,transform .3s;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card h3{font-size:1rem;font-weight:600;margin-bottom:6px;color:var(--text)}
+.card p{font-size:.85rem;color:var(--muted);margin-bottom:0}
+
+.pub{padding:20px 0;border-bottom:1px solid var(--border)}
+.pub:last-child{border-bottom:none}
+.pub-title{font-family:'Newsreader',serif;font-size:1.05rem;font-weight:600;line-height:1.4;margin-bottom:4px}
+.pub-meta{font-size:.8rem;color:var(--muted);margin-bottom:8px}
+.pub-links{display:flex;gap:8px;flex-wrap:wrap}
+.pub-links a{font-size:.78rem;font-family:'JetBrains Mono',monospace;padding:4px 12px;border:1px solid var(--border);border-radius:6px;transition:all .2s}
+.pub-links a:hover{background:var(--glow);border-color:var(--accent)}
+.tag{display:inline-block;font-size:.7rem;font-weight:500;padding:2px 8px;border-radius:4px;margin-bottom:8px}
+.tag-pre{background:rgba(78,142,255,0.15);color:var(--accent)}
+.tag-data{background:rgba(94,196,182,0.12);color:var(--accent2)}
+.tag-soft{background:rgba(232,184,78,0.12);color:var(--warm)}
+
+.pi-info h3{font-size:1.1rem;font-weight:600;margin-bottom:2px}
+.pi-role{font-size:.85rem;color:var(--muted);margin-bottom:10px}
+.pi-bio{font-size:.9rem;color:#9da3b5}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:16px}
+.contact-item{font-size:.9rem}
+.contact-item .label{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:4px}
+
+.disclaimer{margin-top:32px;padding:20px 24px;background:var(--surface2);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;font-size:.85rem;color:var(--muted);line-height:1.6}
+
+footer{padding:32px 0;text-align:center;font-size:.75rem;color:var(--muted);border-top:1px solid var(--border);margin-top:20px}
+
+@media(max-width:700px){
+  .hero h1{font-size:2rem}
+  .stats-bar{grid-template-columns:repeat(2,1fr)}
+  .card-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
-<div class="container">
-  <header>
-    <div class="lab-name">Occam Research</div>
-    <div class="lab-subtitle">Computational Neuroscience · Sant Cugat del Vallès, Spain</div>
-  </header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="hero-label">Occam Research</div>
+    <h1>Noise-assisted transport on <span>biological connectomes</span></h1>
+    <p class="hero-sub">Investigating how wave-like dynamics with tunable dephasing produce selective advantages in neural decision architectures — the Coherent Resonant Netting (CRN) framework.</p>
+    <div class="hero-loc">Sant Cugat del Vallès, Barcelona, Spain</div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-num">518<span class="unit">K</span></div>
+      <div class="stat-label">GKSL Trials</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100</div>
+      <div class="stat-label">HCP Subjects</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Model Organisms</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">91<span class="unit">%</span></div>
+      <div class="stat-label">ENAQT Window</div>
+    </div>
+  </div>
+
   <section>
-    <h2>Research Focus</h2>
-    <p>We investigate the thermodynamics of neural computation — specifically, how biological networks might exploit noise-assisted transport to solve the energy–information bottleneck of hypothesis selection.</p>
-    <p>Our primary framework is <strong>Coherent Resonant Netting (CRN)</strong>, which models a two-regime decision architecture: a low-cost wave-like filtering stage (Stage-I) that prunes hypotheses before expensive spiking commitment (Stage-II). Using GKSL/Lindblad open-system dynamics as a functional proxy, we test whether Disorder-Enhanced Selectivity (DES) emerges on real biological connectomes and depends on native network topology.</p>
-    <p>Current work spans 100 Human Connectome Project subjects and three model organisms (C.&nbsp;elegans, Drosophila larva, mouse cortex proxy), with over 500,000 transport simulations and full topology-destroying controls. All code and data are open.</p>
-  </section>
-  <section>
-    <h2>Principal Investigator</h2>
-    <div class="pi-card">
-      <div class="pi-info">
-        <h3>Oleg Dolgikh</h3>
-        <div class="pi-role">Independent Researcher · Systems Engineer (M.Sc. equiv.)</div>
-        <p class="pi-bio">Background in applied optimization and distributed systems (20+ years). Since 2020, focused exclusively on theoretical neuroscience: Landauer bounds in biological networks, spectral graph theory, ENAQT regimes, and variational free energy minimization.</p>
+    <h2><span class="dot"></span>The ENAQT Signature</h2>
+    <p>Too little noise — the system gets trapped in interference patterns. Too much — it freezes (quantum Zeno). At an intermediate dephasing rate κ*, transport efficiency peaks. This inverted-U is the hallmark of environment-assisted quantum transport, and CRN finds it on real biological connectomes.</p>
+    <div class="enaqt-vis">
+      <canvas class="enaqt-canvas" id="enaqtCanvas"></canvas>
+      <div class="enaqt-legend">
+        <span><span class="leg-dot" style="background:var(--accent)"></span> CRN (GKSL, κ*)</span>
+        <span><span class="leg-dot" style="background:var(--warm)"></span> Classical random walk</span>
+        <span><span class="leg-dot" style="background:#555"></span> Pure coherent (κ=0)</span>
       </div>
     </div>
   </section>
+
   <section>
-    <h2>Publications &amp; Data</h2>
-    <ul class="pub-list">
-      <li>
-        <div class="pub-title">Coherent-Resonant Netting: Disorder-Enhanced Selectivity from Transient Wave-like Dynamics on Biological Connectomes</div>
-        <div class="pub-meta">O. Dolgikh · 2026 · Under review, Frontiers in Computational Neuroscience</div>
-        <div><span class="pub-tag tag-preprint">Preprint</span></div>
-        <div class="links-row">
-          <a href="https://doi.org/10.5281/zenodo.18249250">Zenodo</a>
-          <a href="https://www.researchgate.net/profile/Oleg-Dolgikh-3">ResearchGate</a>
-        </div>
-      </li>
-      <li>
-        <div class="pub-title">Hidden Pseudoreplication in Disorder-Averaged Transport Simulations on Parcellated Connectomes</div>
-        <div class="pub-meta">O. Dolgikh · 2026 · Preprint</div>
-        <div><span class="pub-tag tag-preprint">Preprint</span></div>
-        <div class="links-row">
-          <a href="https://doi.org/10.5281/zenodo.18520884">Zenodo</a>
-        </div>
-      </li>
-      <li>
-        <div class="pub-title">Evolutionary Game Theory Reveals Modular Specialization as a Universal Solution to Neural Trade-offs</div>
-        <div class="pub-meta">O. Dolgikh · 2026 · Dataset</div>
-        <div><span class="pub-tag tag-data">Data</span></div>
-        <div class="links-row">
-          <a href="https://doi.org/10.5281/zenodo.18379851">Zenodo</a>
-        </div>
-      </li>
-      <li>
-        <div class="pub-title">CRN_SIM: Simulation Suite for Coherent Resonant Netting</div>
-        <div class="pub-meta">O. Dolgikh · 2026 · Software</div>
-        <div><span class="pub-tag tag-software">Software</span></div>
-        <div class="links-row">
-          <a href="https://doi.org/10.5281/zenodo.18248773">Zenodo</a>
-          <a href="https://github.com/ovdspb-code">GitHub</a>
-        </div>
-      </li>
-    </ul>
+    <h2><span class="dot"></span>Research Focus</h2>
+    <p>Biological agents face an energy–information bottleneck: inference requires rapid exploration of large hypothesis spaces, yet high-gain spiking is metabolically expensive. CRN proposes a <strong>two-regime decision architecture</strong>:</p>
+    <p><strong>Stage-I (netting)</strong> — low-cost wave-like filtering via GKSL/Lindblad dynamics, with tunable dephasing κ and disorder ε, operating on the structural connectome to concentrate probability on target hypotheses.</p>
+    <p><strong>Stage-II (fixation)</strong> — expensive spiking commitment that broadcasts the winner. By filtering before firing, the brain reduces the number of costly O(N) broadcast events to O(1).</p>
+    <p>We test whether <strong>Disorder-Enhanced Selectivity (DES)</strong> — a signature where moderate disorder improves target selectivity — emerges on real connectomes and depends on native topology. Degree-preserving rewiring destroys the effect. Classical random walks cannot reproduce it.</p>
   </section>
+
   <section>
-    <h2>Open Resources</h2>
-    <div class="resources">
-      <a href="https://github.com/ovdspb-code" class="resource-card">
+    <h2><span class="dot"></span>Publications &amp; Data</h2>
+
+    <div class="pub">
+      <span class="tag tag-pre">Under Review</span>
+      <div class="pub-title">Coherent-Resonant Netting: Disorder-Enhanced Selectivity from Transient Wave-like Dynamics on Biological Connectomes</div>
+      <div class="pub-meta">O. Dolgikh · 2026 · Frontiers in Computational Neuroscience</div>
+      <div class="pub-links">
+        <a href="https://doi.org/10.5281/zenodo.18249250">Zenodo</a>
+        <a href="https://www.researchgate.net/profile/Oleg-Dolgikh-3">ResearchGate</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <span class="tag tag-pre">Preprint</span>
+      <div class="pub-title">Hidden Pseudoreplication in Disorder-Averaged Transport Simulations on Parcellated Connectomes</div>
+      <div class="pub-meta">O. Dolgikh · 2026</div>
+      <div class="pub-links">
+        <a href="https://doi.org/10.5281/zenodo.18520884">Zenodo</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <span class="tag tag-data">Dataset</span>
+      <div class="pub-title">Evolutionary Game Theory Reveals Modular Specialization as a Universal Solution to Neural Trade-offs</div>
+      <div class="pub-meta">O. Dolgikh · 2026</div>
+      <div class="pub-links">
+        <a href="https://doi.org/10.5281/zenodo.18379851">Zenodo</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <span class="tag tag-soft">Software</span>
+      <div class="pub-title">CRN_SIM: Simulation Suite for Coherent Resonant Netting</div>
+      <div class="pub-meta">O. Dolgikh · 2026</div>
+      <div class="pub-links">
+        <a href="https://doi.org/10.5281/zenodo.18519173">Zenodo</a>
+        <a href="https://github.com/ovdspb-code">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="dot"></span>Open Resources</h2>
+    <div class="card-grid">
+      <a href="https://github.com/ovdspb-code" class="card">
         <h3>GitHub</h3>
         <p>Simulation code, analysis pipelines, configuration files</p>
       </a>
-      <a href="https://doi.org/10.5281/zenodo.18249250" class="resource-card">
+      <a href="https://doi.org/10.5281/zenodo.18249250" class="card">
         <h3>Zenodo</h3>
         <p>Preprints, datasets, DOI-archived releases</p>
       </a>
-      <a href="https://www.researchgate.net/profile/Oleg-Dolgikh-3" class="resource-card">
+      <a href="https://www.researchgate.net/profile/Oleg-Dolgikh-3" class="card">
         <h3>ResearchGate</h3>
-        <p>Full-text access, discussion</p>
+        <p>Full-text access, community discussion</p>
       </a>
-      <a href="https://orcid.org/0009-0008-0159-1718" class="resource-card">
+      <a href="https://orcid.org/0009-0008-0159-1718" class="card">
         <h3>ORCID</h3>
         <p>0009-0008-0159-1718</p>
       </a>
+      <a href="/drosophila.html" class="card">
+        <h3>Interactive Demo</h3>
+        <p>Drosophila larva MB connectome visualization</p>
+      </a>
     </div>
   </section>
+
   <section>
-    <h2>Contact</h2>
-    <div class="ids">
-      <strong>Email</strong>: <a href="mailto:research@occam.world">research@occam.world</a><br>
-      <strong>ORCID</strong>: <a href="https://orcid.org/0009-0008-0159-1718">0009-0008-0159-1718</a><br>
-      <strong>Location</strong>: Sant Cugat del Vallès, Barcelona, Spain
+    <h2><span class="dot"></span>Principal Investigator</h2>
+    <div class="pi-info">
+      <h3>Oleg Dolgikh</h3>
+      <div class="pi-role">Independent Researcher · Systems Engineer (M.Sc. equiv., SPbETU 1994)</div>
+      <p class="pi-bio">Background in applied optimization and distributed systems (20+ years). Since 2020, focused exclusively on theoretical neuroscience: Landauer bounds in biological networks, spectral graph theory, ENAQT regimes, and variational free energy minimization.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="dot"></span>Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="label">Email</div>
+        <a href="mailto:research@occam.world">research@occam.world</a>
+      </div>
+      <div class="contact-item">
+        <div class="label">ORCID</div>
+        <a href="https://orcid.org/0009-0008-0159-1718">0009-0008-0159-1718</a>
+      </div>
+      <div class="contact-item">
+        <div class="label">Location</div>
+        Sant Cugat del Vallès, Barcelona, Spain
+      </div>
+      <div class="contact-item">
+        <div class="label">Affiliation</div>
+        Occam Research
+      </div>
     </div>
     <div class="disclaimer">
       <strong>Note on scope.</strong> CRN is a testable computational hypothesis, not a claim of microscopic quantum coherence in neural tissue. The GKSL formalism is used as a functional proxy for wave-like dynamics with tunable damping. We actively seek critical feedback and experimental collaboration.
     </div>
   </section>
+
 </div>
+
 <footer>
-  <div class="container">© 2026 Occam Research · Oleg Dolgikh</div>
+  <div class="wrap">© 2026 Occam Research · Oleg Dolgikh</div>
 </footer>
+
+<script>
+const canvas = document.getElementById('enaqtCanvas');
+const ctx = canvas.getContext('2d');
+const dpr = window.devicePixelRatio || 1;
+
+function resize() {
+  const rect = canvas.parentElement.getBoundingClientRect();
+  canvas.width = rect.width * dpr;
+  canvas.height = 220 * dpr;
+  canvas.style.width = rect.width + 'px';
+  canvas.style.height = '220px';
+  ctx.scale(dpr, dpr);
+  draw();
+}
+
+function draw() {
+  const W = canvas.width / dpr;
+  const H = canvas.height / dpr;
+  const pad = {l:50, r:30, t:20, b:40};
+  const pw = W - pad.l - pad.r;
+  const ph = H - pad.t - pad.b;
+
+  ctx.clearRect(0, 0, W, H);
+
+  ctx.strokeStyle = '#252a3e';
+  ctx.lineWidth = 1;
+  for (let i = 0; i <= 4; i++) {
+    const y = pad.t + (ph / 4) * i;
+    ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(pad.l + pw, y); ctx.stroke();
+  }
+
+  ctx.fillStyle = '#7a8194';
+  ctx.font = '11px Space Grotesk';
+  ctx.textAlign = 'center';
+  ctx.fillText('Dephasing rate (κ)', pad.l + pw / 2, H - 5);
+  ctx.save();
+  ctx.translate(14, pad.t + ph / 2);
+  ctx.rotate(-Math.PI / 2);
+  ctx.fillText('Transport efficiency', 0, 0);
+  ctx.restore();
+
+  const kLabels = ['0', '0.01', '0.1', '1', '10'];
+  kLabels.forEach((label, i) => {
+    const x = pad.l + (pw / (kLabels.length - 1)) * i;
+    ctx.fillStyle = '#7a8194';
+    ctx.font = '10px JetBrains Mono';
+    ctx.textAlign = 'center';
+    ctx.fillText(label, x, H - pad.b + 16);
+  });
+
+  const N = 100;
+  ctx.beginPath();
+  ctx.strokeStyle = '#4e8eff';
+  ctx.lineWidth = 2.5;
+  ctx.shadowColor = 'rgba(78,142,255,0.4)';
+  ctx.shadowBlur = 10;
+  for (let i = 0; i <= N; i++) {
+    const t = i / N;
+    const v = 0.15 + 0.7 * Math.exp(-0.5 * Math.pow((t - 0.35) / 0.18, 2));
+    const x = pad.l + t * pw;
+    const y = pad.t + ph * (1 - v);
+    if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+  ctx.shadowBlur = 0;
+
+  const starT = 0.35;
+  const starV = 0.15 + 0.7;
+  const starX = pad.l + starT * pw;
+  const starY = pad.t + ph * (1 - starV);
+  ctx.beginPath();
+  ctx.arc(starX, starY, 5, 0, Math.PI * 2);
+  ctx.fillStyle = '#4e8eff';
+  ctx.fill();
+  ctx.font = '600 12px Space Grotesk';
+  ctx.textAlign = 'center';
+  ctx.fillText('κ*', starX, starY - 12);
+
+  ctx.beginPath();
+  ctx.strokeStyle = '#e8b84e';
+  ctx.lineWidth = 1.5;
+  ctx.setLineDash([6, 4]);
+  const classicalY = pad.t + ph * (1 - 0.32);
+  ctx.moveTo(pad.l, classicalY);
+  ctx.lineTo(pad.l + pw, classicalY);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  ctx.beginPath();
+  ctx.strokeStyle = '#555';
+  ctx.lineWidth = 1;
+  ctx.setLineDash([3, 3]);
+  for (let i = 0; i <= N; i++) {
+    const t = i / N;
+    const v = 0.22 + 0.04 * Math.sin(t * 25);
+    const x = pad.l + t * pw;
+    const y = pad.t + ph * (1 - v);
+    if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  ctx.font = '10px Space Grotesk';
+  ctx.fillStyle = 'rgba(78,142,255,0.5)';
+  ctx.textAlign = 'center';
+  ctx.fillText('Interference traps', pad.l + pw * 0.08, pad.t + 14);
+  ctx.fillText('Zeno freeze', pad.l + pw * 0.88, pad.t + 14);
+}
+
+resize();
+window.addEventListener('resize', resize);
+</script>
+
 </body>
 </html>
