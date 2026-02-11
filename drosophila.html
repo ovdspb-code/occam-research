@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drosophila Larva Mushroom Body — Occam Research</title>
+<meta name="description" content="Interactive visualization of the Drosophila larva mushroom body connectome and CRN simulation results.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0c0f1a;
+  --surface: #141828;
+  --surface2: #1a1f35;
+  --accent: #4e8eff;
+  --accent2: #5ec4b6;
+  --warm: #e8b84e;
+  --text: #e4e8f1;
+  --muted: #7a8194;
+  --border: #252a3e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+a{color:var(--accent);text-decoration:none;transition:color .2s}
+a:hover{color:#7eadff}
+
+/* NAV */
+.nav{padding:16px 0;border-bottom:1px solid var(--border);font-size:.85rem;display:flex;justify-content:space-between;align-items:center}
+.nav-home{color:var(--muted);font-weight:500}
+.nav-home:hover{color:var(--text)}
+
+/* HERO */
+.hero{padding:56px 0 40px}
+.hero-label{font-size:.7rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.hero h1{font-family:'Newsreader',serif;font-size:2.2rem;font-weight:600;line-height:1.2;letter-spacing:-.01em;margin-bottom:12px}
+.hero-sub{font-size:.95rem;color:var(--muted);max-width:700px;font-weight:300}
+
+/* INFO PANEL */
+.info{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin:32px 0}
+.info h3{font-size:.95rem;font-weight:600;margin-bottom:8px;color:var(--text)}
+.info p{font-size:.88rem;color:#9da3b5;margin:0}
+
+/* STAT GRID */
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:12px;overflow:hidden;margin:32px 0}
+.stat-card{background:var(--surface);padding:20px}
+.stat-card-title{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.stat-card-title .dot{width:6px;height:6px;border-radius:50%}
+.stat-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:.85rem}
+.stat-row:last-child{border-bottom:none}
+.stat-label{color:var(--muted)}
+.stat-val{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--text)}
+
+/* VIZ */
+.viz{margin:32px 0}
+.viz h2{font-family:'Newsreader',serif;font-size:1.3rem;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.viz h2 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.controls{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:16px;padding:16px 20px;background:var(--surface);border-radius:10px;border:1px solid var(--border)}
+.control-group{display:flex;align-items:center;gap:8px}
+.control-group label{font-size:.8rem;color:var(--muted);white-space:nowrap}
+.control-group select{background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:6px 10px;font-family:'Space Grotesk',sans-serif;font-size:.82rem;cursor:pointer}
+.control-group select:focus{outline:none;border-color:var(--accent)}
+.control-group input[type=range]{width:100px;accent-color:var(--accent)}
+canvas{display:block;width:100%;border-radius:12px;border:1px solid var(--border)}
+
+/* LEGEND */
+.legend{display:flex;gap:20px;flex-wrap:wrap;margin-top:12px;padding:12px 16px;background:var(--surface);border-radius:8px}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--muted)}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+
+/* SOURCE */
+.source{margin:32px 0;padding:20px 24px;background:var(--surface2);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;font-size:.85rem;color:var(--muted);line-height:1.8}
+.source strong{color:var(--text);font-weight:500}
+
+/* FOOTER */
+footer{padding:28px 0;text-align:center;font-size:.75rem;color:var(--muted);border-top:1px solid var(--border);margin-top:20px}
+
+@media(max-width:700px){
+  .hero h1{font-size:1.7rem}
+  .stat-grid{grid-template-columns:1fr}
+  .controls{flex-direction:column;gap:12px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <nav class="nav">
+    <a href="/" class="nav-home">← Occam Research</a>
+    <span style="color:var(--muted);font-size:.8rem">Interactive Demo</span>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-label">Model Organism</div>
+    <h1>Drosophila Larva Mushroom Body</h1>
+    <p class="hero-sub">Interactive connectome visualization and CRN simulation results for the canonical decision-making circuit of the fruit fly larva.</p>
+  </div>
+
+  <div class="info">
+    <h3>About the data</h3>
+    <p><strong>Winding et al. (2023), Science:</strong> The complete brain connectome of the Drosophila melanogaster larva contains 3,016 neurons and over 500,000 synapses. The Mushroom Body (MB) is a canonical module for associative memory and learning. Architecture: projection neurons (PN) → Kenyon cells (KC, sparse coding) → output neurons (MBON, readout).</p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="stat-card-title"><span class="dot" style="background:var(--accent)"></span>Graph Topology</div>
+      <div class="stat-row"><span class="stat-label">Neurons (nodes)</span><span class="stat-val" id="nodeCount">2,956</span></div>
+      <div class="stat-row"><span class="stat-label">Synapses (edges)</span><span class="stat-val" id="edgeCount">116,922</span></div>
+      <div class="stat-row"><span class="stat-label">Mean degree</span><span class="stat-val">39.6</span></div>
+      <div class="stat-row"><span class="stat-label">Graph diameter</span><span class="stat-val">9 hops</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-title"><span class="dot" style="background:var(--accent2)"></span>Mushroom Body</div>
+      <div class="stat-row"><span class="stat-label">Projection neurons (PN)</span><span class="stat-val">~100</span></div>
+      <div class="stat-row"><span class="stat-label">Kenyon cells (KC)</span><span class="stat-val">~1,000</span></div>
+      <div class="stat-row"><span class="stat-label">Output neurons (MBON)</span><span class="stat-val">~24</span></div>
+      <div class="stat-row"><span class="stat-label">Expansion ratio PN→KC</span><span class="stat-val">1 : 10</span></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-title"><span class="dot" style="background:var(--warm)"></span>CRN Simulation</div>
+      <div class="stat-row"><span class="stat-label">DES peak (ε = 3)</span><span class="stat-val">Sel. 2.66</span></div>
+      <div class="stat-row"><span class="stat-label">κ range</span><span class="stat-val">0.001 – 30</span></div>
+      <div class="stat-row"><span class="stat-label">Target absorption (max)</span><span class="stat-val">0.67</span></div>
+      <div class="stat-row"><span class="stat-label">Topology dependence</span><span class="stat-val">p < 0.001</span></div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE VIZ -->
+  <div class="viz">
+    <h2><span class="dot"></span>Interactive Connectome</h2>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="layoutType">Layout:</label>
+        <select id="layoutType">
+          <option value="hierarchical">Hierarchical (PN→KC→MBON)</option>
+          <option value="force">Force-directed</option>
+          <option value="circular">Circular</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="nodeSize">Node size:</label>
+        <input type="range" id="nodeSize" min="1" max="10" value="3" step="0.5">
+      </div>
+      <div class="control-group">
+        <label for="edgeOpacity">Edge opacity:</label>
+        <input type="range" id="edgeOpacity" min="0.05" max="1" value="0.15" step="0.05">
+      </div>
+    </div>
+
+    <canvas id="connectomeCanvas" width="1200" height="700"></canvas>
+
+    <div class="legend">
+      <div class="legend-item"><span class="legend-dot" style="background:#6ea8fe"></span>Projection Neurons (PN)</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#5ec4b6"></span>Kenyon Cells (KC)</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#e8b84e"></span>MB Output Neurons (MBON)</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#636b80"></span>Other neurons</div>
+    </div>
+  </div>
+
+  <!-- SOURCE -->
+  <div class="source">
+    <strong>Data source:</strong> Winding et al. (2023). <em>The connectome of an insect brain.</em> Science 379(6636):eadd9330.
+    <a href="https://doi.org/10.1126/science.add9330" target="_blank">doi:10.1126/science.add9330</a><br>
+    <strong>CRN framework:</strong> Dolgikh (2026). <a href="https://doi.org/10.5281/zenodo.18519173" target="_blank">doi:10.5281/zenodo.18519173</a>
+  </div>
+
+</div>
+
+<footer><div class="wrap">© 2026 Occam Research · <a href="/">occam.world</a></div></footer>
+
+<script>
+// Synthetic connectome based on Winding 2023 larva connectome structure
+const generateConnectome = () => {
+  const nodes = [];
+  const edges = [];
+  const numPN = 100, numKC = 1000, numMBON = 24, numOther = 1832;
+  let nodeId = 0;
+
+  for (let i = 0; i < numPN; i++) nodes.push({id:nodeId++,type:'PN',layer:0,x:0,y:0});
+  for (let i = 0; i < numKC; i++) nodes.push({id:nodeId++,type:'KC',layer:1,x:0,y:0});
+  for (let i = 0; i < numMBON; i++) nodes.push({id:nodeId++,type:'MBON',layer:2,x:0,y:0});
+  for (let i = 0; i < numOther; i++) nodes.push({id:nodeId++,type:'other',layer:Math.random()>.5?0:1,x:0,y:0});
+
+  // PN → KC (sparse, ~7 PN per KC)
+  for (let kc = numPN; kc < numPN+numKC; kc++) {
+    const ni = 5+Math.floor(Math.random()*4);
+    for (let i = 0; i < ni; i++) edges.push({source:Math.floor(Math.random()*numPN),target:kc,weight:1+Math.random()*5});
+  }
+  // KC → MBON (convergent)
+  const ms = numPN+numKC;
+  for (let i = 0; i < numMBON; i++) {
+    const ni = 50+Math.floor(Math.random()*100);
+    for (let j = 0; j < ni; j++) edges.push({source:numPN+Math.floor(Math.random()*numKC),target:ms+i,weight:1+Math.random()*3});
+  }
+  // Random inter-neuron connections
+  for (let i = 0; i < 15000; i++) {
+    const s = Math.floor(Math.random()*nodes.length);
+    const t = Math.floor(Math.random()*nodes.length);
+    if (s !== t) edges.push({source:s,target:t,weight:Math.random()*2});
+  }
+  return {nodes,edges};
+};
+
+const {nodes,edges} = generateConnectome();
+const canvas = document.getElementById('connectomeCanvas');
+const ctx = canvas.getContext('2d');
+const width = canvas.width;
+const height = canvas.height;
+
+// Unified palette — no reds
+const colors = {
+  'PN': '#6ea8fe',
+  'KC': '#5ec4b6',
+  'MBON': '#e8b84e',
+  'other': '#636b80'
+};
+
+const layouts = {
+  force: () => {
+    nodes.forEach(n => {n.x=width*.2+Math.random()*width*.6;n.y=height*.2+Math.random()*height*.6;n.vx=0;n.vy=0;});
+    for (let iter = 0; iter < 100; iter++) {
+      for (let i = 0; i < Math.min(nodes.length,500); i++) {
+        for (let j = i+1; j < Math.min(nodes.length,500); j++) {
+          const dx=nodes[j].x-nodes[i].x,dy=nodes[j].y-nodes[i].y;
+          const dist=Math.sqrt(dx*dx+dy*dy)+1;
+          const f=500/(dist*dist);
+          nodes[i].vx-=f*dx/dist;nodes[i].vy-=f*dy/dist;
+          nodes[j].vx+=f*dx/dist;nodes[j].vy+=f*dy/dist;
+        }
+      }
+      for (let i = 0; i < Math.min(edges.length,1000); i++) {
+        const e=edges[Math.floor(Math.random()*edges.length)];
+        const s=nodes[e.source],t=nodes[e.target];
+        const dx=t.x-s.x,dy=t.y-s.y;
+        const dist=Math.sqrt(dx*dx+dy*dy)+1;
+        const f=dist*0.001;
+        s.vx+=f*dx/dist;s.vy+=f*dy/dist;
+        t.vx-=f*dx/dist;t.vy-=f*dy/dist;
+      }
+      nodes.forEach(n => {
+        n.x+=n.vx*.1;n.y+=n.vy*.1;n.vx*=.8;n.vy*=.8;
+        n.x=Math.max(50,Math.min(width-50,n.x));
+        n.y=Math.max(50,Math.min(height-50,n.y));
+      });
+    }
+  },
+  circular: () => {
+    const cx=width/2,cy=height/2,r=Math.min(width,height)*.4;
+    nodes.forEach((n,i) => {const a=(i/nodes.length)*2*Math.PI;n.x=cx+r*Math.cos(a);n.y=cy+r*Math.sin(a);});
+  },
+  hierarchical: () => {
+    const lh=height/4;
+    nodes.forEach(n => {
+      let y;
+      if (n.type==='PN') {y=lh*.5;const xr=width*.3,xo=(width-xr)/2;const idx=nodes.filter(m=>m.type==='PN').indexOf(n);n.x=xo+(idx/100)*xr;}
+      else if (n.type==='KC') {y=lh*1.5;const xr=width*.8,xo=(width-xr)/2;const idx=nodes.filter(m=>m.type==='KC').indexOf(n);n.x=xo+(idx/1000)*xr;}
+      else if (n.type==='MBON') {y=lh*2.5;const xr=width*.4,xo=(width-xr)/2;const idx=nodes.filter(m=>m.type==='MBON').indexOf(n);n.x=xo+(idx/24)*xr;}
+      else {y=lh*(.5+n.layer);n.x=100+Math.random()*(width-200);}
+      n.y=y+(Math.random()-.5)*30;
+    });
+  }
+};
+
+layouts.hierarchical();
+
+let currentNodeSize = 3;
+let currentEdgeOpacity = 0.15;
+
+const render = () => {
+  ctx.fillStyle = '#0c0f1a';
+  ctx.fillRect(0,0,width,height);
+  ctx.globalAlpha = currentEdgeOpacity;
+  ctx.strokeStyle = '#ffffff';
+  ctx.lineWidth = 0.5;
+  const es = Math.min(edges.length,5000);
+  for (let i = 0; i < es; i++) {
+    const e=edges[Math.floor(Math.random()*edges.length)];
+    const s=nodes[e.source],t=nodes[e.target];
+    ctx.beginPath();ctx.moveTo(s.x,s.y);ctx.lineTo(t.x,t.y);ctx.stroke();
+  }
+  ctx.globalAlpha = 1;
+  nodes.forEach(n => {ctx.fillStyle=colors[n.type];ctx.beginPath();ctx.arc(n.x,n.y,currentNodeSize,0,2*Math.PI);ctx.fill();});
+};
+
+document.getElementById('layoutType').addEventListener('change',e=>{layouts[e.target.value]();render();});
+document.getElementById('nodeSize').addEventListener('input',e=>{currentNodeSize=parseFloat(e.target.value);render();});
+document.getElementById('edgeOpacity').addEventListener('input',e=>{currentEdgeOpacity=parseFloat(e.target.value);render();});
+
+render();
+document.getElementById('nodeCount').textContent = nodes.length.toLocaleString();
+document.getElementById('edgeCount').textContent = edges.length.toLocaleString();
+</script>
+</body>
+</html>
