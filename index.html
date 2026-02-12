@@ -129,6 +129,49 @@ footer a{color:var(--text-3);font-weight:500}
 
 @media(max-width:768px){.hero h1{font-size:1.6rem}.stat-grid{grid-template-columns:1fr}.charts-row{grid-template-columns:1fr}.controls{flex-direction:column;gap:10px}.card-grid{grid-template-columns:1fr}}
 
+/* SCORECARD */
+.scorecard{margin:48px 0}
+.scorecard h2{font-family:var(--font-head);font-size:1.3rem;font-weight:600;margin-bottom:6px}
+.scorecard-meta{font-size:.78rem;color:var(--text-3);margin-bottom:20px;font-family:var(--font-mono)}
+.sc-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;margin-bottom:12px;transition:background .3s}
+.sc-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:8px}
+.sc-id{font-family:var(--font-mono);font-size:.75rem;font-weight:600;color:var(--accent);background:var(--accent-light);padding:2px 8px;border-radius:4px;flex-shrink:0}
+.sc-name{font-weight:600;font-size:.92rem;flex:1}
+.sc-score{font-family:var(--font-mono);font-size:1.1rem;font-weight:700;flex-shrink:0;min-width:48px;text-align:right}
+.sc-score.high{color:var(--teal)}.sc-score.mid{color:var(--warm)}.sc-score.low{color:var(--coral)}
+.sc-bar{height:4px;border-radius:2px;background:var(--border-light);margin:10px 0;overflow:hidden}
+.sc-bar-fill{height:100%;border-radius:2px;transition:width .6s ease}
+.sc-desc{font-size:.82rem;color:var(--text-2);margin-bottom:6px}
+.sc-evidence{font-size:.78rem;color:var(--text-3);line-height:1.6}
+.sc-evidence strong{color:var(--text-2);font-weight:500}
+
+/* SECTIONS */
+.section{margin:48px 0;padding-top:32px;border-top:1px solid var(--border-light)}
+.section h2{font-family:var(--font-head);font-size:1.3rem;font-weight:600;margin-bottom:14px}
+.section p{font-size:.9rem;color:var(--text-2);line-height:1.75;margin-bottom:12px}
+.section p:last-child{margin-bottom:0}
+.section strong{color:var(--text);font-weight:600}
+.pub-list{margin-top:16px}
+.pub-item{padding:16px 0;border-bottom:1px solid var(--border-light)}
+.pub-item:last-child{border-bottom:none}
+.pub-tag{display:inline-block;font-size:.68rem;font-weight:600;padding:2px 8px;border-radius:4px;margin-bottom:6px}
+.pub-tag.review{background:var(--accent-light);color:var(--accent)}
+.pub-tag.preprint{background:var(--teal-light);color:var(--teal)}
+.pub-tag.dataset{background:var(--warm-light);color:var(--warm)}
+.pub-tag.software{background:var(--coral-light);color:var(--coral)}
+.pub-title{font-family:var(--font-head);font-size:.95rem;font-weight:600;line-height:1.4;margin-bottom:4px}
+.pub-meta{font-size:.78rem;color:var(--text-3);margin-bottom:6px}
+.pub-links{display:flex;gap:8px;flex-wrap:wrap}
+.pub-links a{font-size:.75rem;font-family:var(--font-mono);padding:4px 12px;border:1px solid var(--border);border-radius:6px;transition:all .2s;color:var(--text-2)}
+.pub-links a:hover{background:var(--accent-light);border-color:var(--accent);color:var(--accent)}
+.pi-box{display:flex;gap:24px;align-items:flex-start;margin-top:16px}
+.pi-info h3{font-size:1.05rem;font-weight:600;margin-bottom:2px}
+.pi-role{font-size:.82rem;color:var(--text-3);margin-bottom:8px}
+.pi-bio{font-size:.88rem;color:var(--text-2);line-height:1.7}
+.contact-row{display:flex;gap:32px;flex-wrap:wrap;margin-top:12px;font-size:.85rem}
+.contact-row .label{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-3);margin-bottom:2px;font-weight:600}
+.disclaimer{margin-top:24px;padding:18px 22px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:.84rem;color:var(--text-2);line-height:1.65}
+
 </style>
 <script>
 // Theme toggle
@@ -174,12 +217,105 @@ footer a{color:var(--text-3);font-weight:500}
 
 <div class="card-grid" id="cardGrid"></div>
 
-<div class="about">
-  <h2>About CRN</h2>
-  <p>Coherent Resonant Netting (CRN) is a two-stage decision architecture where low-amplitude wave-like exploration prunes hypothesis space at low metabolic cost, followed by high-gain spiking commitment. The theory predicts that <strong>intermediate noise (dephasing)</strong> optimizes selective signal routing — the inverted-U transport window, or <strong>ENAQT</strong>. These interactive demos let you explore this phenomenon on real biological connectomes.</p>
-  <p style="margin-top:10px"><a href="https://doi.org/10.5281/zenodo.18249250" target="_blank">Core paper →</a> · <a href="https://github.com/ovdspb-code/CRN_4.1" target="_blank">Simulation code →</a></p>
+<!-- RESEARCH FOCUS -->
+<div class="section">
+  <h2>Research Focus</h2>
+  <p>Biological agents face an energy–information bottleneck: inference requires rapid exploration of large hypothesis spaces, yet high-gain spiking is metabolically expensive. CRN proposes a <strong>two-regime decision architecture</strong>:</p>
+  <p><strong>Stage-I (netting)</strong> — low-cost wave-like filtering via GKSL/Lindblad dynamics, with tunable dephasing κ and disorder ε, operating on the structural connectome to concentrate probability on target hypotheses.</p>
+  <p><strong>Stage-II (fixation)</strong> — expensive spiking commitment that broadcasts the winner. By filtering before firing, the brain reduces the number of costly O(N) broadcast events to O(1).</p>
+  <p>We test whether <strong>Disorder-Enhanced Selectivity (DES)</strong> — a signature where moderate disorder improves target selectivity — emerges on real connectomes and depends on native topology. Degree-preserving rewiring destroys the effect. Classical random walks cannot reproduce it.</p>
 </div>
 
+<!-- SCORECARD -->
+<div class="scorecard section" id="scorecardSection">
+  <h2>Evidence Scorecard</h2>
+  <p class="scorecard-meta">Loading scorecard…</p>
+  <div id="scorecardGrid"></div>
+</div>
+
+<!-- PUBLICATIONS -->
+<div class="section">
+  <h2>Publications &amp; Data</h2>
+  <div class="pub-list">
+    <div class="pub-item">
+      <span class="pub-tag review">Under Review</span>
+      <div class="pub-title">Coherent-Resonant Netting: Disorder-Enhanced Selectivity from Transient Wave-like Dynamics on Biological Connectomes</div>
+      <div class="pub-meta">O. Dolgikh · 2026 · Frontiers in Computational Neuroscience</div>
+      <div class="pub-links">
+        <a href="https://doi.org/10.5281/zenodo.18249250" target="_blank">Zenodo</a>
+        <a href="https://www.researchgate.net/profile/Oleg-Dolgikh-3" target="_blank">ResearchGate</a>
+      </div>
+    </div>
+    <div class="pub-item">
+      <span class="pub-tag preprint">Preprint</span>
+      <div class="pub-title">Hidden Pseudoreplication in Disorder-Averaged Transport Simulations on Parcellated Connectomes</div>
+      <div class="pub-meta">O. Dolgikh · 2026</div>
+      <div class="pub-links">
+        <a href="https://doi.org/10.5281/zenodo.18520884" target="_blank">Zenodo</a>
+      </div>
+    </div>
+    <div class="pub-item">
+      <span class="pub-tag dataset">Dataset</span>
+      <div class="pub-title">Evolutionary Game Theory Reveals Modular Specialization as a Universal Solution to Neural Trade-offs</div>
+      <div class="pub-meta">O. Dolgikh · 2026</div>
+      <div class="pub-links">
+        <a href="https://doi.org/10.5281/zenodo.18379851" target="_blank">Zenodo</a>
+      </div>
+    </div>
+    <div class="pub-item">
+      <span class="pub-tag software">Software</span>
+      <div class="pub-title">CRN_SIM: Simulation Suite for Coherent Resonant Netting</div>
+      <div class="pub-meta">O. Dolgikh · 2026</div>
+      <div class="pub-links">
+        <a href="https://doi.org/10.5281/zenodo.18519173" target="_blank">Zenodo</a>
+        <a href="https://github.com/ovdspb-code" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPEN RESOURCES -->
+<div class="section">
+  <h2>Open Resources</h2>
+  <div class="card-grid" style="margin-top:16px">
+    <a href="https://github.com/ovdspb-code" class="card" target="_blank" style="padding:20px">
+      <h3 style="font-size:1rem">GitHub</h3>
+      <p style="font-size:.84rem;margin-bottom:0">Simulation code, analysis pipelines, configuration files</p>
+    </a>
+    <a href="https://doi.org/10.5281/zenodo.18249250" class="card" target="_blank" style="padding:20px">
+      <h3 style="font-size:1rem">Zenodo</h3>
+      <p style="font-size:.84rem;margin-bottom:0">Preprints, datasets, DOI-archived releases</p>
+    </a>
+    <a href="https://www.researchgate.net/profile/Oleg-Dolgikh-3" class="card" target="_blank" style="padding:20px">
+      <h3 style="font-size:1rem">ResearchGate</h3>
+      <p style="font-size:.84rem;margin-bottom:0">Full-text access, community discussion</p>
+    </a>
+    <a href="https://orcid.org/0009-0008-0159-1718" class="card" target="_blank" style="padding:20px">
+      <h3 style="font-size:1rem">ORCID</h3>
+      <p style="font-size:.84rem;margin-bottom:0">0009-0008-0159-1718</p>
+    </a>
+  </div>
+</div>
+
+<!-- PI -->
+<div class="section">
+  <h2>Principal Investigator</h2>
+  <div class="pi-box">
+    <div>
+      <h3>Oleg Dolgikh</h3>
+      <div class="pi-role">Independent Researcher</div>
+      <p class="pi-bio">Background in applied optimization and distributed systems (20+ years). Since 2020, focused exclusively on theoretical neuroscience: Landauer bounds in biological networks, spectral graph theory, ENAQT regimes, and variational free energy minimization.</p>
+      <div class="contact-row">
+        <div><div class="label">Location</div>Sant Cugat del Vallès, Barcelona</div>
+        <div><div class="label">Affiliation</div>Occam Research</div>
+        <div><div class="label">ORCID</div><a href="https://orcid.org/0009-0008-0159-1718">0009-0008-0159-1718</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="disclaimer">
+    <strong>Note on scope.</strong> CRN is a testable computational hypothesis, not a claim of microscopic quantum coherence in neural tissue. The GKSL formalism is used as a functional proxy for wave-like dynamics with tunable damping. We actively seek critical feedback and experimental collaboration.
+  </div>
+</div>
 </div>
 <footer><div class="wrap">© 2026 Occam Research · <a href="https://occam.world">occam.world</a> · CRN Interactive v2.1</div></footer>
 <script>
@@ -207,6 +343,39 @@ fetch('pages.json').then(r=>r.json()).then(pages => {
   });
 }).catch(() => {
   document.getElementById('cardGrid').innerHTML = '<p style="color:var(--text-3);font-size:.85rem">Could not load pages.json. If viewing locally, use a simple HTTP server: <code>python -m http.server</code></p>';
+});
+
+// ===== SCORECARD from scorecard.json =====
+fetch('scorecard.json').then(r=>r.json()).then(sc => {
+  const meta = document.querySelector('.scorecard-meta');
+  meta.textContent = `Updated ${sc.updated} · ${sc.version} · ${sc.trials} GKSL trials · ${sc.subjects} HCP subjects`;
+  const grid = document.getElementById('scorecardGrid');
+  grid.innerHTML = '';
+  sc.claims.forEach(c => {
+    const cls = c.score >= 80 ? 'high' : c.score >= 60 ? 'mid' : 'low';
+    const color = c.score >= 80 ? 'var(--teal)' : c.score >= 60 ? 'var(--warm)' : 'var(--coral)';
+    const el = document.createElement('div');
+    el.className = 'sc-item';
+    el.innerHTML = `
+      <div class="sc-header">
+        <span class="sc-id">${c.id}</span>
+        <span class="sc-name">${c.name}</span>
+        <span class="sc-score ${cls}">${c.score}%</span>
+      </div>
+      <div class="sc-bar"><div class="sc-bar-fill" style="width:${c.score}%;background:${color}"></div></div>
+      <div class="sc-desc">${c.desc}</div>
+      <div class="sc-evidence"><strong>Evidence:</strong> ${c.evidence}<br><strong>Gap:</strong> ${c.gap}</div>
+    `;
+    grid.appendChild(el);
+  });
+  // Add note
+  const note = document.createElement('p');
+  note.style.cssText = 'font-size:.78rem;color:var(--text-3);margin-top:14px;line-height:1.6';
+  note.textContent = sc.note;
+  grid.appendChild(note);
+}).catch(() => {
+  const s = document.getElementById('scorecardSection');
+  if(s) s.style.display = 'none';
 });
 </script>
 </body>
