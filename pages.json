@@ -1,0 +1,25 @@
+[
+  {
+    "id": "human",
+    "title": "Human Connectome — CRN Dynamics",
+    "desc": "GKSL transport on HCP Subject 100206. T2 basal ganglia gating vs T3 motor relay. Interactive κ sweep, live trajectory animation, 4 diagnostic charts.",
+    "date": "2026-02-12",
+    "tags": [
+      "human",
+      "ENAQT",
+      "interactive",
+      "GKSL"
+    ]
+  },
+  {
+    "id": "drosophila",
+    "title": "Drosophila Larva — Mushroom Body",
+    "desc": "CRN transport on the L1 larval mushroom body connectome. PN → KC → MBON pathway with synapse-level resolution.",
+    "date": "2026-02-10",
+    "tags": [
+      "drosophila",
+      "model organism",
+      "interactive"
+    ]
+  }
+]
