@@ -2,29 +2,29 @@
   {
     "id": "human",
     "title": "Human Connectome — CRN Dynamics",
-    "desc": "GKSL transport on HCP Subject 100206. T2 basal ganglia gating vs T3 motor relay. Interactive κ sweep, live trajectory animation, 4 diagnostic charts.",
+    "desc": "HCP Subject 100206, T2 basal ganglia gating loop. 20 nodes, 152 edges. Interactive κ-slider with pre-computed GKSL trajectories.",
     "date": "2026-02-12",
-    "tags": ["human", "ENAQT", "interactive", "GKSL"]
+    "tags": ["connectome", "interactive", "GKSL", "T2", "HCP"]
   },
   {
     "id": "elegans",
     "title": "C. elegans — Touch Withdrawal Circuit",
-    "desc": "Minimal connectome benchmark. 24 neurons, 41 synapses. κ-sweep, disorder sweep, thermal sensitivity, target sensitivity on synapse-level data.",
+    "desc": "24 neurons, 41 synapses. Live Lindblad master equation solved in browser — real-time density matrix evolution with adjustable κ, ε, γ.",
     "date": "2026-02-12",
-    "tags": ["nematode", "minimal", "DES", "ENAQT"]
+    "tags": ["connectome", "interactive", "live-GKSL", "ENAQT", "minimal"]
   },
   {
     "id": "drosophila",
     "title": "Drosophila Larva — Mushroom Body",
-    "desc": "CRN transport on the L1 larval mushroom body connectome. PN → KC → MBON pathway with synapse-level resolution.",
-    "date": "2026-02-10",
-    "tags": ["drosophila", "model organism", "interactive"]
+    "desc": "L1 larval connectome, PN → KC → MBON circuit. Static CRN transport analysis across the olfactory learning pathway.",
+    "date": "2026-02-12",
+    "tags": ["connectome", "static", "mushroom-body"]
   },
   {
     "id": "mouse",
     "title": "Mouse Cortex Proxy — Synthetic Benchmark",
-    "desc": "Transport–memory tradeoff on N=8 synthetic graphs (chain, Watts–Strogatz, modular). Evolutionary strategy selection and energy analysis.",
+    "desc": "N=8 chain graph with live GKSL solver. Transport–memory tradeoff in controlled synthetic setting. Not biological data.",
     "date": "2026-02-12",
-    "tags": ["mouse", "synthetic", "tradeoff", "evolutionary"]
+    "tags": ["synthetic", "interactive", "live-GKSL", "benchmark"]
   }
 ]
