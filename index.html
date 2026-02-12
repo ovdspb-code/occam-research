@@ -205,10 +205,14 @@ footer{padding:32px 0;text-align:center;font-size:.75rem;color:var(--muted);bord
         <h3>ORCID</h3>
         <p>0009-0008-0159-1718</p>
       </a>
-      <a href="/drosophila.html" class="card">
-        <h3>Interactive Demo</h3>
-        <p>Drosophila larva MB connectome visualization</p>
-      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="dot"></span>Interactive Demos</h2>
+    <p style="margin-bottom:20px">Live GKSL trajectory visualizations on real biological connectomes. Each page is self-contained with embedded solver output.</p>
+    <div class="card-grid" id="demoGrid">
+      <div style="color:var(--muted);font-size:.85rem;padding:20px">Loading…</div>
     </div>
   </section>
 
@@ -216,7 +220,7 @@ footer{padding:32px 0;text-align:center;font-size:.75rem;color:var(--muted);bord
     <h2><span class="dot"></span>Principal Investigator</h2>
     <div class="pi-info">
       <h3>Oleg Dolgikh</h3>
-      <div class="pi-role">Independent Researcher · Systems Engineer (M.Sc. equiv., SPbETU 1994)</div>
+      <div class="pi-role">Independent Researcher</div>
       <p class="pi-bio">Background in applied optimization and distributed systems (20+ years). Since 2020, focused exclusively on theoretical neuroscience: Landauer bounds in biological networks, spectral graph theory, ENAQT regimes, and variational free energy minimization.</p>
     </div>
   </section>
@@ -226,7 +230,7 @@ footer{padding:32px 0;text-align:center;font-size:.75rem;color:var(--muted);bord
     <div class="contact-grid">
       <div class="contact-item">
         <div class="label">Email</div>
-        <a href="mailto:research@occam.world">research@occam.world</a>
+        <a href="/cdn-cgi/l/email-protection#84f6e1f7e1e5f6e7ecc4ebe7e7e5e9aaf3ebf6e8e0"><span class="__cf_email__" data-cfemail="e89a8d9b8d899a8b80a8878b8b8985c69f879a848c">[email&#160;protected]</span></a>
       </div>
       <div class="contact-item">
         <div class="label">ORCID</div>
@@ -252,7 +256,7 @@ footer{padding:32px 0;text-align:center;font-size:.75rem;color:var(--muted);bord
   <div class="wrap">© 2026 Occam Research · Oleg Dolgikh</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const canvas = document.getElementById('enaqtCanvas');
 const ctx = canvas.getContext('2d');
 const dpr = window.devicePixelRatio || 1;
@@ -355,15 +359,43 @@ function draw() {
   ctx.setLineDash([]);
 
   ctx.font = '10px Space Grotesk';
-  ctx.fillStyle = 'rgba(78,142,255,0.5)';
-  ctx.textAlign = 'center';
-  ctx.fillText('Interference traps', pad.l + pw * 0.08, pad.t + 14);
-  ctx.fillText('Zeno freeze', pad.l + pw * 0.88, pad.t + 14);
+    ctx.fillStyle = 'rgba(78,142,255,0.5)';
+  ctx.textAlign = 'left';
+  ctx.fillText('Interference traps', pad.l + 8, pad.t + 14);
+  ctx.fillText('Zeno freeze', pad.l + pw - 70, pad.t + ph - 20);
+  ctx.fillStyle = '#e8b84e';
+  ctx.fillText('Classical limit', pad.l + pw - 80, classicalY - 8);
 }
 
 resize();
 window.addEventListener('resize', resize);
-</script>
 
+// ===== DYNAMIC DEMO CARDS FROM pages.json =====
+fetch('pages.json')
+  .then(r => r.json())
+  .then(pages => {
+    const grid = document.getElementById('demoGrid');
+    if(!grid) return;
+    grid.innerHTML = '';
+    pages.sort((a,b) => b.date.localeCompare(a.date));
+    pages.forEach(p => {
+      const card = document.createElement('a');
+      card.href = p.id + '.html';
+      card.className = 'card';
+      const tags = (p.tags||[]).map(t =>
+        '<span style="display:inline-block;font-size:.65rem;padding:1px 6px;border-radius:3px;background:rgba(78,142,255,0.1);color:var(--accent);margin-right:4px">'+t+'</span>'
+      ).join('');
+      card.innerHTML = '<h3>'+p.title+'</h3>'
+        + '<p>'+p.desc+'</p>'
+        + '<div style="margin-top:8px">'+tags+'</div>'
+        + '<div style="font-size:.7rem;color:var(--muted);margin-top:6px">'+p.date+'</div>';
+      grid.appendChild(card);
+    });
+  })
+  .catch(() => {
+    const grid = document.getElementById('demoGrid');
+    if(grid) grid.innerHTML = '<div style="color:var(--muted);font-size:.85rem">Demo pages: <a href="human.html">Human Connectome</a> · <a href="drosophila.html">Drosophila</a></div>';
+  });
+</script>
 </body>
 </html>
