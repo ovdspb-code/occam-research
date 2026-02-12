@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C. elegans — Touch Withdrawal Circuit | CRN Interactive</title>
+<meta name="description" content="CRN transport on the C. elegans touch withdrawal circuit. 24 neurons, 41 synapses. κ-sweep, disorder sweep, thermal sensitivity.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fafbfd; --surface: #ffffff; --surface-alt: #f4f5f8;
+  --surface-accent: #f0f2ff; --canvas-bg: #f7f8fb;
+  --border: #e2e5ec; --border-light: #eef0f4; --border-focus: #3b4cc0;
+  --text: #1a1d27; --text-2: #4a4e5a; --text-3: #8b8f9e; --text-inv: #fff;
+  --accent: #3b4cc0; --accent-hover: #2a38a0; --accent-light: #eef0ff;
+  --teal: #0d8a7c; --teal-light: #e8f6f4;
+  --warm: #c47d0a; --warm-light: #fdf4e4;
+  --coral: #c0443b; --coral-light: #fde8e6;
+  --c-source: #3b4cc0; --c-target: #c47d0a; --c-inter: #0d8a7c;
+  --c-crn: #3b4cc0; --c-thermal: #c0443b; --c-ctqw: #0d8a7c;
+  --radius: 14px; --radius-sm: 8px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.04), 0 1px 2px rgba(0,0,0,.03);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.06), 0 1px 4px rgba(0,0,0,.04);
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-head: 'Source Serif 4', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+[data-theme="dark"] {
+  --bg: #0f1119; --surface: #181b28; --surface-alt: #1e2235;
+  --surface-accent: #1c2044; --canvas-bg: #13151f;
+  --border: #2a2e42; --border-light: #232738; --border-focus: #6b7cff;
+  --text: #e4e7f0; --text-2: #a8adc0; --text-3: #6b7088; --text-inv: #0f1119;
+  --accent: #6b7cff; --accent-hover: #8b99ff; --accent-light: #1c2044;
+  --teal: #4ecdc4; --teal-light: #162e2b;
+  --warm: #f0b429; --warm-light: #2a2210;
+  --coral: #ff6b6b; --coral-light: #2a1515;
+  --c-source: #6b7cff; --c-target: #f0b429; --c-inter: #4ecdc4;
+  --c-crn: #6b7cff; --c-thermal: #ff6b6b; --c-ctqw: #4ecdc4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+a{color:var(--accent);text-decoration:none;transition:color .15s}a:hover{color:var(--accent-hover)}
+.nav{padding:18px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border-light)}
+.nav-brand{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--text);font-size:.92rem;text-decoration:none}
+.nav-brand:hover{color:var(--accent)}
+.nav-brand svg{width:22px;height:22px}
+.nav-right{display:flex;gap:16px;align-items:center;font-size:.82rem}
+.nav-right a{color:var(--text-2);font-weight:500}
+.theme-toggle{background:none;border:1px solid var(--border);border-radius:8px;padding:5px 8px;cursor:pointer;color:var(--text-2);font-size:1rem;line-height:1;transition:all .2s;display:flex;align-items:center}
+.theme-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.hero{padding:48px 0 36px}
+.hero-eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);display:inline-block}
+.hero h1{font-family:var(--font-head);font-size:2.1rem;font-weight:700;line-height:1.2;letter-spacing:-.015em;margin-bottom:10px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero-sub{font-size:.92rem;color:var(--text-2);max-width:700px;font-weight:300;line-height:1.75}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;transition:background .3s}
+.stat-card-title{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;font-weight:600;color:var(--text-3);margin-bottom:12px;display:flex;align-items:center;gap:7px}
+.stat-card-title .dot{width:7px;height:7px;border-radius:50%}
+.stat-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border-light);font-size:.82rem}
+.stat-row:last-child{border-bottom:none}
+.stat-label{color:var(--text-2)}
+.stat-val{font-family:var(--font-mono);font-size:.8rem;font-weight:500}
+.stat-val.good{color:var(--teal)}.stat-val.warn{color:var(--warm)}.stat-val.bad{color:var(--coral)}
+.viz{margin:28px 0}
+.viz h2{font-family:var(--font-head);font-size:1.15rem;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.viz h2 .dot{width:8px;height:8px;border-radius:50%}
+canvas{display:block;width:100%;border-radius:var(--radius);border:1px solid var(--border);background:var(--canvas-bg);transition:background .3s}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;padding:10px 14px;background:var(--surface);border-radius:var(--radius-sm);border:1px solid var(--border-light)}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:.76rem;color:var(--text-2)}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.charts-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+.chart-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;transition:background .3s}
+.chart-box h3{font-size:.8rem;font-weight:600;color:var(--text-3);margin-bottom:10px}
+.source-box{margin:28px 0;padding:20px 24px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:.82rem;color:var(--text-2);line-height:1.8}
+.source-box strong{color:var(--text);font-weight:600}
+footer{padding:28px 0;text-align:center;font-size:.74rem;color:var(--text-3);border-top:1px solid var(--border-light);margin-top:28px}
+footer a{color:var(--text-3);font-weight:500}
+@media(max-width:768px){.hero h1{font-size:1.6rem}.stat-grid{grid-template-columns:1fr}.charts-row{grid-template-columns:1fr}}
+</style>
+<script>
+(function(){
+  const saved = localStorage.getItem('crn-theme');
+  if(saved) document.documentElement.setAttribute('data-theme', saved);
+  else if(window.matchMedia('(prefers-color-scheme:dark)').matches) document.documentElement.setAttribute('data-theme','dark');
+  window.toggleTheme = function(){
+    const cur = document.documentElement.getAttribute('data-theme');
+    const next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('crn-theme', next);
+    document.getElementById('themeBtn').textContent = next === 'dark' ? '☀️' : '🌙';
+    renderAll();
+  };
+  window.addEventListener('DOMContentLoaded', ()=>{
+    document.getElementById('themeBtn').textContent = (document.documentElement.getAttribute('data-theme')==='dark') ? '☀️' : '🌙';
+  });
+})();
+</script>
+</head>
+<body>
+<div class="wrap">
+<nav class="nav">
+  <a href="index.html" class="nav-brand">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4m-8.5-13.5 2.8 2.8m11.4 5.4 2.8 2.8M2 12h4m12 0h4M4.9 4.9l2.8 2.8m8.6 8.6 2.8 2.8"/></svg>
+    Occam Research
+  </a>
+  <div class="nav-right">
+    <a href="index.html">← All demos</a>
+    <a href="https://github.com/ovdspb-code/CRN_4.1" target="_blank">GitHub</a>
+    <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" title="Toggle dark/light mode">🌙</button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow"><span class="dot"></span>Model Organism</div>
+  <h1><em>C. elegans</em> Touch Withdrawal Circuit</h1>
+  <p class="hero-sub">Minimal connectome benchmark: 24 neurons from mechanosensory input to motor command. The touch circuit of <em>Caenorhabditis elegans</em> is the smallest biological network where CRN transport signatures — ENAQT window, thermal advantage, and target sensitivity — can be tested on a complete, synapse-level connectome.</p>
+</div>
+
+<!-- STAT CARDS -->
+<div class="stat-grid">
+  <div class="stat-card">
+    <div class="stat-card-title"><span class="dot" style="background:var(--accent)"></span>Network</div>
+    <div class="stat-row"><span class="stat-label">Nodes</span><span class="stat-val">24</span></div>
+    <div class="stat-row"><span class="stat-label">Edges</span><span class="stat-val">41</span></div>
+    <div class="stat-row"><span class="stat-label">Density</span><span class="stat-val">0.149</span></div>
+    <div class="stat-row"><span class="stat-label">Diameter</span><span class="stat-val">7</span></div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-card-title"><span class="dot" style="background:var(--teal)"></span>Topology</div>
+    <div class="stat-row"><span class="stat-label">Avg path length</span><span class="stat-val">2.94</span></div>
+    <div class="stat-row"><span class="stat-label">Clustering</span><span class="stat-val">0.362</span></div>
+    <div class="stat-row"><span class="stat-label">Small-world σ</span><span class="stat-val good">2.34</span></div>
+    <div class="stat-row"><span class="stat-label">Components</span><span class="stat-val">1</span></div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-card-title"><span class="dot" style="background:var(--warm)"></span>CRN Transport</div>
+    <div class="stat-row"><span class="stat-label">κ* optimal</span><span class="stat-val warn">3.0</span></div>
+    <div class="stat-row"><span class="stat-label">P_crn at κ*</span><span class="stat-val good">0.997</span></div>
+    <div class="stat-row"><span class="stat-label">Gain vs CTQW</span><span class="stat-val good">2.53×</span></div>
+    <div class="stat-row"><span class="stat-label">Targets</span><span class="stat-val">3 motor</span></div>
+  </div>
+</div>
+
+<!-- NETWORK GRAPH -->
+<div class="viz">
+  <h2><span class="dot" style="background:var(--accent)"></span>Circuit Architecture</h2>
+  <canvas id="graphCanvas" height="340"></canvas>
+  <div class="legend">
+    <div class="legend-item"><span class="legend-dot" style="background:var(--c-source)"></span>Sensory (source)</div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--c-inter)"></span>Interneuron</div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--c-target)"></span>Motor (target)</div>
+  </div>
+</div>
+
+<!-- CHARTS 2x2 -->
+<div class="charts-row">
+  <div class="chart-box">
+    <h3>A · P_crn vs dephasing κ (ε=1, T=1)</h3>
+    <canvas id="chartKappa" height="260"></canvas>
+  </div>
+  <div class="chart-box">
+    <h3>B · Disorder sweep (best κ at each ε)</h3>
+    <canvas id="chartEps" height="260"></canvas>
+  </div>
+  <div class="chart-box">
+    <h3>C · Thermal environment T_env (ε=1)</h3>
+    <canvas id="chartTemp" height="260"></canvas>
+  </div>
+  <div class="chart-box">
+    <h3>D · Target sensitivity (n_targets)</h3>
+    <canvas id="chartTargets" height="260"></canvas>
+  </div>
+</div>
+<div class="legend">
+  <div class="legend-item"><span class="legend-dot" style="background:var(--c-crn)"></span>CRN (GKSL)</div>
+  <div class="legend-item"><span class="legend-dot" style="background:var(--c-thermal)"></span>Thermal CRW</div>
+  <div class="legend-item"><span class="legend-dot" style="background:var(--c-ctqw)"></span>Coherent (CTQW)</div>
+</div>
+
+<!-- SOURCE -->
+<div class="source-box">
+  <strong>Data source:</strong> White, J. G. et al. (1986). <em>The structure of the nervous system of the nematode Caenorhabditis elegans.</em> Phil. Trans. R. Soc. Lond. B, 314, 1–340. Touch circuit subgraph: 6 mechanosensory neurons → 15 interneurons → 3 motor neurons.<br>
+  <strong>CRN framework:</strong> Dolgikh, O. (2026). <em>Coherent-Resonant Netting.</em>
+  <a href="https://doi.org/10.5281/zenodo.18249250" target="_blank">doi:10.5281/zenodo.18249250</a>
+</div>
+
+</div>
+<footer><div class="wrap">© 2026 Occam Research · <a href="https://occam.world">occam.world</a> · CRN Interactive v2.1</div></footer>
+
+<script>
+// ========== DATA ==========
+const KAPPA_DATA = [
+  {k:0.001, p:0.4085, regime:'Quantum'},
+  {k:0.01,  p:0.5255, regime:'CRN'},
+  {k:0.05,  p:0.7969, regime:'CRN'},
+  {k:0.1,   p:0.9120, regime:'CRN'},
+  {k:0.3,   p:0.9861, regime:'CRN'},
+  {k:0.5,   p:0.9934, regime:'CRN'},
+  {k:1.0,   p:0.9964, regime:'CRN'},
+  {k:3.0,   p:0.9972, regime:'CRN'},
+  {k:5.0,   p:0.9965, regime:'CRN'},
+  {k:10.0,  p:0.9927, regime:'CRN'},
+  {k:30.0,  p:0.9487, regime:'Classical'},
+  {k:50.0,  p:0.8762, regime:'Classical'},
+];
+const KAPPA_THERMAL = 0.9999;
+const KAPPA_CTQW = 0.3934;
+
+const EPS_DATA = [
+  {e:0.0, crn:0.9978, th:0.9999, ctqw:0.5986},
+  {e:0.3, crn:0.9977, th:0.9999, ctqw:0.5993},
+  {e:0.5, crn:0.9975, th:1.0000, ctqw:0.5551},
+  {e:1.0, crn:0.9972, th:0.9999, ctqw:0.3934},
+  {e:1.5, crn:0.9967, th:0.9996, ctqw:0.4627},
+  {e:2.0, crn:0.9960, th:0.9952, ctqw:0.4594},
+  {e:3.0, crn:0.9943, th:0.9269, ctqw:0.4323},
+];
+
+const TEMP_DATA = [
+  {t:0.1, crn:0.9972, th:0.7164, ctqw:0.3934},
+  {t:0.3, crn:0.9972, th:0.8946, ctqw:0.3934},
+  {t:0.5, crn:0.9972, th:0.9952, ctqw:0.3934},
+  {t:1.0, crn:0.9972, th:0.9999, ctqw:0.3934},
+  {t:2.0, crn:0.9972, th:1.0000, ctqw:0.3934},
+  {t:5.0, crn:0.9972, th:0.9999, ctqw:0.3934},
+  {t:10., crn:0.9972, th:0.9999, ctqw:0.3934},
+];
+
+const TARG_DATA = [
+  {n:1,  crn:0.8609, th:0.8981, ctqw:0.2389},
+  {n:2,  crn:0.9922, th:0.9732, ctqw:0.3697},
+  {n:3,  crn:0.9972, th:0.9999, ctqw:0.3934},
+  {n:6,  crn:0.9999, th:1.0000, ctqw:0.5071},
+  {n:14, crn:1.0000, th:1.0000, ctqw:0.5120},
+];
+
+// Touch circuit graph — 24 neurons
+const NEURONS = [
+  // Sensory (6): ALM L/R, AVM, PLM L/R, PVM
+  {id:0, name:'ALML', type:'source', layer:0},
+  {id:1, name:'ALMR', type:'source', layer:0},
+  {id:2, name:'AVM',  type:'source', layer:0},
+  {id:3, name:'PLML', type:'source', layer:0},
+  {id:4, name:'PLMR', type:'source', layer:0},
+  {id:5, name:'PVM',  type:'source', layer:0},
+  // Interneurons (15): command + premotor
+  {id:6,  name:'AVD L', type:'inter', layer:1},
+  {id:7,  name:'AVD R', type:'inter', layer:1},
+  {id:8,  name:'AVA L', type:'inter', layer:1},
+  {id:9,  name:'AVA R', type:'inter', layer:1},
+  {id:10, name:'AVB L', type:'inter', layer:1},
+  {id:11, name:'AVB R', type:'inter', layer:1},
+  {id:12, name:'PVC L', type:'inter', layer:1},
+  {id:13, name:'PVC R', type:'inter', layer:1},
+  {id:14, name:'DVA',   type:'inter', layer:1},
+  {id:15, name:'LUA L', type:'inter', layer:2},
+  {id:16, name:'LUA R', type:'inter', layer:2},
+  {id:17, name:'PVD L', type:'inter', layer:2},
+  {id:18, name:'PVD R', type:'inter', layer:2},
+  {id:19, name:'BDU L', type:'inter', layer:2},
+  {id:20, name:'BDU R', type:'inter', layer:2},
+  // Motor (3)
+  {id:21, name:'VA',  type:'target', layer:3},
+  {id:22, name:'VB',  type:'target', layer:3},
+  {id:23, name:'VD',  type:'target', layer:3},
+];
+
+const SYNAPSES = [
+  // Sensory → command interneurons
+  [0,6],[0,8],[1,7],[1,9],[2,6],[2,7],[2,8],[2,9],
+  [3,12],[3,13],[4,12],[4,13],[5,12],[5,14],
+  // Command cross-connections
+  [6,7],[6,8],[7,9],[8,9],[10,11],[12,13],
+  // Command → premotor
+  [6,15],[7,16],[8,21],[9,21],[10,22],[11,22],
+  [12,15],[12,23],[13,16],[13,23],
+  // Premotor links
+  [14,15],[14,16],[15,17],[16,18],[17,19],[18,20],
+  // Premotor → motor
+  [15,21],[16,21],[17,23],[18,23],[19,22],[20,22],
+  // Additional (reach 41 edges)
+  [3,14],[5,10],[6,14],
+];
+
+// ========== DRAWING ==========
+function getCSS(v){ return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+
+function drawGraph(canvasId){
+  const c = document.getElementById(canvasId);
+  const ctx = c.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const W = c.clientWidth, H = c.clientHeight;
+  c.width = W*dpr; c.height = H*dpr;
+  ctx.scale(dpr,dpr);
+  ctx.clearRect(0,0,W,H);
+
+  const colors = {source: getCSS('--c-source'), inter: getCSS('--c-inter'), target: getCSS('--c-target')};
+  const layers = [0,1,2,3];
+  const layerX = [80, 260, 440, 620];
+  const pad = 30;
+
+  // Position nodes by layer
+  const byLayer = {};
+  NEURONS.forEach(n => { if(!byLayer[n.layer]) byLayer[n.layer]=[]; byLayer[n.layer].push(n); });
+
+  const pos = {};
+  layers.forEach(l => {
+    const arr = byLayer[l] || [];
+    const gap = (H - 2*pad) / (arr.length + 1);
+    const xBase = layerX[l] * (W / 700);
+    arr.forEach((n, i) => {
+      pos[n.id] = { x: xBase, y: pad + gap * (i+1) };
+    });
+  });
+
+  // Edges
+  ctx.lineWidth = 1;
+  SYNAPSES.forEach(([a,b]) => {
+    if(!pos[a] || !pos[b]) return;
+    ctx.beginPath();
+    ctx.moveTo(pos[a].x, pos[a].y);
+    ctx.lineTo(pos[b].x, pos[b].y);
+    ctx.strokeStyle = getCSS('--border') + '88';
+    ctx.stroke();
+  });
+
+  // Nodes
+  const R = {source:7, inter:5, target:8};
+  NEURONS.forEach(n => {
+    const p = pos[n.id]; if(!p) return;
+    const r = R[n.type];
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, r, 0, Math.PI*2);
+    ctx.fillStyle = colors[n.type];
+    ctx.fill();
+    // Label
+    ctx.fillStyle = getCSS('--text-3');
+    ctx.font = '9px ' + getCSS('--font-mono');
+    ctx.textAlign = n.layer < 2 ? 'right' : 'left';
+    const lx = n.layer < 2 ? p.x - r - 4 : p.x + r + 4;
+    ctx.fillText(n.name, lx, p.y + 3);
+  });
+
+  // Layer labels
+  ctx.font = '600 10px ' + getCSS('--font-body');
+  ctx.fillStyle = getCSS('--text-3');
+  ctx.textAlign = 'center';
+  const labels = ['Sensory','Command','Premotor','Motor'];
+  layers.forEach((l,i) => {
+    const xBase = layerX[l] * (W / 700);
+    ctx.fillText(labels[i], xBase, 16);
+  });
+}
+
+function drawLineChart(canvasId, data, xKey, yKeys, xLabel, yLabel, opts={}){
+  const c = document.getElementById(canvasId);
+  const ctx = c.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const W = c.clientWidth, H = c.clientHeight;
+  c.width = W*dpr; c.height = H*dpr;
+  ctx.scale(dpr,dpr);
+  ctx.clearRect(0,0,W,H);
+
+  const ml=56, mr=16, mt=16, mb=36;
+  const pw=W-ml-mr, ph=H-mt-mb;
+
+  const allY = [];
+  data.forEach(d => yKeys.forEach(k => { if(d[k.key]!==undefined) allY.push(d[k.key]); }));
+  if(opts.hlines) opts.hlines.forEach(h => allY.push(h.val));
+  const yMin = opts.yMin !== undefined ? opts.yMin : Math.min(...allY)*0.95;
+  const yMax = opts.yMax !== undefined ? opts.yMax : Math.max(...allY)*1.02;
+
+  const xVals = data.map(d => d[xKey]);
+  const useLog = opts.logX;
+  const xLog = useLog ? xVals.map(v => Math.log10(v)) : xVals;
+  const xMin = Math.min(...xLog), xMax = Math.max(...xLog);
+
+  function toX(v){ return ml + ((useLog ? Math.log10(v) : v) - xMin) / (xMax - xMin) * pw; }
+  function toY(v){ return mt + (1 - (v - yMin) / (yMax - yMin)) * ph; }
+
+  // Grid
+  ctx.strokeStyle = getCSS('--border-light');
+  ctx.lineWidth = 1;
+  for(let i=0; i<=4; i++){
+    const y = mt + ph*i/4;
+    ctx.beginPath(); ctx.moveTo(ml,y); ctx.lineTo(ml+pw,y); ctx.stroke();
+  }
+
+  // Horizontal ref lines
+  if(opts.hlines){
+    opts.hlines.forEach(h => {
+      ctx.setLineDash([4,4]);
+      ctx.strokeStyle = h.color;
+      ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(ml, toY(h.val)); ctx.lineTo(ml+pw, toY(h.val)); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = h.color;
+      ctx.font = '9px ' + getCSS('--font-mono');
+      ctx.textAlign = 'right';
+      ctx.fillText(h.label, ml+pw, toY(h.val)-3);
+    });
+  }
+
+  // Data lines
+  yKeys.forEach(yk => {
+    ctx.strokeStyle = yk.color;
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    let first = true;
+    data.forEach(d => {
+      if(d[yk.key] === undefined) return;
+      const x = toX(d[xKey]), y = toY(d[yk.key]);
+      if(first){ ctx.moveTo(x,y); first=false; } else ctx.lineTo(x,y);
+    });
+    ctx.stroke();
+    // Dots
+    data.forEach(d => {
+      if(d[yk.key] === undefined) return;
+      ctx.beginPath();
+      ctx.arc(toX(d[xKey]), toY(d[yk.key]), 3, 0, Math.PI*2);
+      ctx.fillStyle = yk.color;
+      ctx.fill();
+    });
+  });
+
+  // Peak marker for first series
+  if(opts.markPeak){
+    let best = data[0], bestY = -Infinity;
+    const pk = yKeys[0].key;
+    data.forEach(d => { if(d[pk] > bestY){ bestY = d[pk]; best = d; }});
+    const px = toX(best[xKey]), py = toY(bestY);
+    ctx.beginPath(); ctx.arc(px,py,6,0,Math.PI*2);
+    ctx.strokeStyle = yKeys[0].color; ctx.lineWidth=2; ctx.stroke();
+    ctx.fillStyle = getCSS('--text');
+    ctx.font = '600 10px ' + getCSS('--font-mono');
+    ctx.textAlign = 'center';
+    ctx.fillText('κ*=' + best[xKey], px, py-10);
+  }
+
+  // Axes labels
+  ctx.fillStyle = getCSS('--text-3');
+  ctx.font = '500 10px ' + getCSS('--font-body');
+  ctx.textAlign = 'center';
+  ctx.fillText(xLabel, ml + pw/2, H - 4);
+  ctx.save();
+  ctx.translate(12, mt + ph/2);
+  ctx.rotate(-Math.PI/2);
+  ctx.fillText(yLabel, 0, 0);
+  ctx.restore();
+
+  // Tick labels
+  ctx.font = '9px ' + getCSS('--font-mono');
+  ctx.textAlign = 'center';
+  data.forEach(d => {
+    const x = toX(d[xKey]);
+    ctx.fillText(String(d[xKey]), x, H - mb + 14);
+  });
+  // Y ticks
+  ctx.textAlign = 'right';
+  for(let i=0; i<=4; i++){
+    const v = yMin + (yMax-yMin)*i/4;
+    ctx.fillText(v.toFixed(2), ml-6, mt + ph*(1-i/4) + 3);
+  }
+}
+
+function renderAll(){
+  const cCRN = getCSS('--c-crn');
+  const cTH  = getCSS('--c-thermal');
+  const cCTQW = getCSS('--c-ctqw');
+
+  drawGraph('graphCanvas');
+
+  // A: κ sweep
+  drawLineChart('chartKappa',
+    KAPPA_DATA, 'k',
+    [{key:'p', color:cCRN}],
+    'κ (dephasing)', 'P_crn (target prob.)',
+    { logX:true, yMin:0.3, yMax:1.05, markPeak:true,
+      hlines:[
+        {val:KAPPA_THERMAL, color:cTH, label:'Thermal CRW'},
+        {val:KAPPA_CTQW, color:cCTQW, label:'CTQW'}
+      ]
+    }
+  );
+
+  // B: ε sweep
+  drawLineChart('chartEps',
+    EPS_DATA, 'e',
+    [{key:'crn', color:cCRN}, {key:'th', color:cTH}, {key:'ctqw', color:cCTQW}],
+    'ε (disorder)', 'P (target prob.)',
+    { logX:false, yMin:0.3, yMax:1.05 }
+  );
+
+  // C: T sweep
+  drawLineChart('chartTemp',
+    TEMP_DATA, 't',
+    [{key:'crn', color:cCRN}, {key:'th', color:cTH}, {key:'ctqw', color:cCTQW}],
+    'T_env', 'P (target prob.)',
+    { logX:true, yMin:0.3, yMax:1.05 }
+  );
+
+  // D: Target sensitivity
+  drawLineChart('chartTargets',
+    TARG_DATA, 'n',
+    [{key:'crn', color:cCRN}, {key:'th', color:cTH}, {key:'ctqw', color:cCTQW}],
+    'n_targets', 'P (target prob.)',
+    { logX:false, yMin:0.2, yMax:1.05 }
+  );
+}
+
+window.addEventListener('DOMContentLoaded', renderAll);
+window.addEventListener('resize', renderAll);
+</script>
+</body>
+</html>

@@ -4,22 +4,27 @@
     "title": "Human Connectome — CRN Dynamics",
     "desc": "GKSL transport on HCP Subject 100206. T2 basal ganglia gating vs T3 motor relay. Interactive κ sweep, live trajectory animation, 4 diagnostic charts.",
     "date": "2026-02-12",
-    "tags": [
-      "human",
-      "ENAQT",
-      "interactive",
-      "GKSL"
-    ]
+    "tags": ["human", "ENAQT", "interactive", "GKSL"]
+  },
+  {
+    "id": "elegans",
+    "title": "C. elegans — Touch Withdrawal Circuit",
+    "desc": "Minimal connectome benchmark. 24 neurons, 41 synapses. κ-sweep, disorder sweep, thermal sensitivity, target sensitivity on synapse-level data.",
+    "date": "2026-02-12",
+    "tags": ["nematode", "minimal", "DES", "ENAQT"]
   },
   {
     "id": "drosophila",
     "title": "Drosophila Larva — Mushroom Body",
     "desc": "CRN transport on the L1 larval mushroom body connectome. PN → KC → MBON pathway with synapse-level resolution.",
     "date": "2026-02-10",
-    "tags": [
-      "drosophila",
-      "model organism",
-      "interactive"
-    ]
+    "tags": ["drosophila", "model organism", "interactive"]
+  },
+  {
+    "id": "mouse",
+    "title": "Mouse Cortex Proxy — Synthetic Benchmark",
+    "desc": "Transport–memory tradeoff on N=8 synthetic graphs (chain, Watts–Strogatz, modular). Evolutionary strategy selection and energy analysis.",
+    "date": "2026-02-12",
+    "tags": ["mouse", "synthetic", "tradeoff", "evolutionary"]
   }
 ]
