@@ -1,0 +1,65 @@
+{
+  "updated": "2026-02-10",
+  "version": "v3",
+  "trials": "518K",
+  "subjects": 100,
+  "note": "Scores are updated with each new data package. Scale: 0% = no data / falsified, 100% = reproducible with controls, falsifiable, pre-registered.",
+  "claims": [
+    {
+      "id": "P2",
+      "name": "GKSL as Stage-I proxy",
+      "desc": "Lindblad open-system formalism correctly interpolates between coherent and diffusive regimes on biological graphs.",
+      "score": 82,
+      "evidence": "518K trials across 6 disorder levels without numerical artifacts. CTRW ≡ 0 everywhere (9600 trials). Clear GKSL vs classical separation.",
+      "gap": "Alternative wave proxies (telegraph equation) not yet tested."
+    },
+    {
+      "id": "C1",
+      "name": "Two-factor mechanism",
+      "desc": "Stage-I efficiency depends on the interaction of partial coherence and graph topology.",
+      "score": 75,
+      "evidence": "Confirmed on 3 model organisms + 100 HCP subjects. Rewiring controls attenuate the effect. CTRW anti-baseline decisive.",
+      "gap": "No experimental confirmation. Small effect on some dense graphs."
+    },
+    {
+      "id": "C2",
+      "name": "Disorder-enhanced selectivity (DES)",
+      "desc": "Moderate disorder ε improves target selectivity via inverted-U, suppressing distractor paths more than target paths.",
+      "score": 55,
+      "evidence": "Works on micro-connectomes (Drosophila, C. elegans). On human DTI: DES = 56% topology + 26% weight-specific (p=0.002). 90% of subjects show DES at ε=1–2.",
+      "gap": "No DES on dense macro-connectomes. Scale-dependent boundary unclear."
+    },
+    {
+      "id": "C3",
+      "name": "ENAQT window (inverted-U in κ)",
+      "desc": "There exists an optimal dephasing rate κ* that maximizes transport to targets — neither fully coherent nor fully classical.",
+      "score": 90,
+      "evidence": "7-point κ grid + ICC fix + CTRW null. Inverted-U confirmed in 91/100 HCP subjects and all 3 model organisms. Rock-solid.",
+      "gap": "Single DTI modality. No experimental dephasing manipulation."
+    },
+    {
+      "id": "C4",
+      "name": "Topology dependence",
+      "desc": "ENAQT gain depends on native connectome topology — degree-preserving weight shuffle destroys the advantage in gating circuits.",
+      "score": 72,
+      "evidence": "T2 (gating): ΔG = +0.51–0.57, d = 1.2–1.5. T3 (relay): ΔG ≈ 0. Mechanistic predictors M2/M5 identified. Surrogate controls + betweenness-freeze.",
+      "gap": "M2/M5 causal link not tested by direct intervention."
+    },
+    {
+      "id": "H1",
+      "name": "ENAQT in human connectomes",
+      "desc": "Environment-assisted transport operates on macro-scale DTI connectomes, not only micro-connectomes.",
+      "score": 85,
+      "evidence": "100 HCP subjects, 518K GKSL trials. Consolidated across P0–P4 validation blocks. ICC = 0.914 rank stability.",
+      "gap": "Single imaging modality (DTI). No fMRI/MEG cross-validation."
+    },
+    {
+      "id": "B2",
+      "name": "Mechanistic hierarchy",
+      "desc": "Classical waves → 0% inverted-U; Schrödinger + dephasing → 72%; full GKSL → 100%. Quantum formalism required for complete expression.",
+      "score": 70,
+      "evidence": "Telegraph batch (20 subj): 0/20 inverted-U. Schrödinger batch (100 subj): 72% [63–81% CI]. GKSL: 100/100.",
+      "gap": "Telegraph tested on 20 subjects only. Intermediate formalisms not explored."
+    }
+  ]
+}
