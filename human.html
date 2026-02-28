@@ -1,1 +1,178 @@
-see workspace file
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human Connectome — CRN Dynamics | CRN Interactive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAC/klEQVR4nCXLW0xTdxgA8O/7ziktPbRcKjLaCoptVdSDOoITcI3RiCgmjQ9eHxQTw4MkxhcTE6PxYcY4l2zJzGLMNMYE3EyUGa/1Ui8peKFeENRApYC2alsspaUq6/l/Pvh7/6FgRgaBDIKJKBUZ7Wu79cnbM9k7UjK/Qjbpc+eWGyvt5U2LSdEDMzILYBScJZJfnfcHjrbLg1EUXNbwk8FgEHpJJyAzllLmlbuaG3JKzQSAzIJIDvx99Vbrr9lg+BOhca1bP/OHWHK0yGYNBQfnbGkY6riXCH1AQFnTNEmSQvde+H45aSIpd549SMaPT3oVnOX8udp/umPNkd2ha93/f560zLICABGRNpn1/d6mjadDhAXL622SCI+l4oXF/vaL7v3bx6OJ7mP/uDYv11lMrAlCxJFn/QNdT4vUCuvKmpunz7lqVUv17K4TbRUbmnIthZd3Hclf5HTtaGRmRiQACD7qiadSkUKzMTkeF6BzldmCb+KlZZeevzvfejhLWHewOWeKGZiJgAAgOvR+2pKq0VhcoLZgU9OJln1zPe6FW1Z8vu4dj8Tq9jdbl6maEEAEgAQAX4gnNE1hLaQz2DLJL4QDhZbpsSFTemy4uORdqR0AEACZGZgAIH9Gqf/hk7ziqQDo/bdj5/FDgf98nWculdSqCfXHP9oeBV68JyLBAN9DZU2VuUCJpCeKczhlKng9HHZC8sNXzbqucc+BjZzVjp3pTKYnEREYiVk4VVdVrdrXN3Dndtfqbev77z542d1T37r17MPBRDyxd3fj64Foh/clIjAzCWadTt60a1uugiCh7/5jkYhJdlvYkOdZ4/7zuNeSn7fZU33F15+cyBIBEUpCCLV+Ucvelkw2PfLqTXBkuMK9dKrd1vkgsGp13V+nbi5Uy3V6fhseBSBkwYAshEYk37lw4+Rvp+JDb5MWR41nrVkxSjogWclMZByOKZ4VlUUFehTMCMDMzBqRHItEL7df6PL39yaU2Qsq8016p6PEMb1o6WKnQS8xi29kt2Uxx8E6VQAAAABJRU5ErkJggg==">
+<link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAIAA3AwAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgCAAAAkJFoNgAAAv5JREFUeJwly1tMU3cYAPDv+84pLT20XCoy2gqKbVXUgzqCE3CN0YgoJo0PXh8UE8ODJMYXExOj8WHGOJdsycxizDTGBNxMlBmv9VIvKXihXhDUQKWAtmpbLKWlKuv5fz74e/+hYEYGgQyCiSgVGe1ru/XJ2zPZO1Iyv0I26XPnlhsr7eVNi0nRAzMyC2AUnCWSX533B462y4NRFFzW8JPBYBB6SScgM5ZS5pW7mhtySs0EgMyCSA78ffVW66/ZYPgToXGtWz/zh1hytMhmDQUH52xpGOq4lwh9QEBZ0zRJkkL3Xvh+OWkiKXeePUjGj096FZzl/Lnaf7pjzZHdoWvd/3+etMyyAgARkTaZ9f3epo2nQ4QFy+ttkgiPpeKFxf72i+7928ejie5j/7g2L9dZTKwJQsSRZ/0DXU+L1Arrypqbp8+5alVL9eyuE20VG5pyLYWXdx3JX+R07WhkZkYkAAg+6omnUpFCszE5Hhegc5XZgm/ipWWXnr8733o4S1h3sDlnihmYiYAAIDr0ftqSqtFYXKC2YFPTiZZ9cz3uhVtWfL7uHY/E6vY3W5epmhBABIAEAF+IJzRNYS2kM9gyyS+EA4WW6bEhU3psuLjkXakdABAAmRmYACB/Rqn/4ZO84qkA6P23Y+fxQ4H/fJ1nLpXUqgn1xz/aHgVevCciwQDfQ2VNlblAiaQninM4ZSp4PRx2QvLDV826rnHPgY2c1Y6d6UymJxERGIlZOFVXVa3a1zdw53bX6m3r++8+eNndU9+69ezDwUQ8sXd34+uBaIf3JSIwMwlmnU7etGtbroIgoe/+Y5GISXZb2JDnWeP+87jXkp+32VN9xdefnMgSARFKQgi1flHL3pZMNj3y6k1wZLjCvXSq3db5ILBqdd1fp24uVMt1en4bHgUgZMGALIRGJN+5cOPkb6fiQ2+TFkeNZ61ZMUo6IFnJTGQcjimeFZVFBXoUzAjAzMwakRyLRC+3X+jy9/cmlNkLKvNNeqejxDG9aOlip0EvMYtvZLdlMcfBOlUAAAAASUVORK5CYII=">
+<link rel="stylesheet" href="style.css">
+<script>
+(function(){
+  if(window.matchMedia('(prefers-color-scheme:dark)').matches) document.documentElement.setAttribute('data-theme','dark');
+  window.toggleTheme = function(){
+    const cur = document.documentElement.getAttribute('data-theme');
+    const next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    const btn = document.getElementById('themeBtn');
+    if(btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
+    if(typeof renderAll === 'function') setTimeout(renderAll, 50);
+  };
+  window.addEventListener('DOMContentLoaded', ()=>{
+    const btn = document.getElementById('themeBtn');
+    if(btn) btn.textContent = (document.documentElement.getAttribute('data-theme')==='dark') ? '☀️' : '🌙';
+  });
+})();
+</script>
+</head>
+<body>
+<header class="site-header">
+<div class="wrap">
+<nav class="nav">
+  <a href="index.html" class="nav-brand">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAAS8klEQVR4nGV5e3Bb1Zn/nbN0de+VZMmWZVu2LNtxEpI4IU4gkCYBkhA2IXRZoEBoodsHJbBs2S4t7HTbdoayk0dJyDTssszukCGlhJItXVI2NAFCICQQQkJCHiR+xLEtW7L1sv04j3t1H7r3nP1DtpNp58xfZ84c/b7fd77zfUdhjEEPIiKAjAiRQRRdBAiAHVijBCACMIiGiAhRBJSqgYimATEADoAHOABuwAFOYBsA4A8ggYCIAFgAASDaBkCC4wYBCqACoABWABYoAAqgAsqQAsUCqkCBWAFUQAGKgKECqoYAKEAGoAAGgA4YAGCFZgMGYBgAmIiAc47gDMGZMKEIHJiCgMCAhQFGKbSAHQAIgABAbAAABGJdDDBAuBgA0AQ5zAQQ5fxAAAABJRU5ErkJggg==" alt="Occam Research" class="nav-logo" style="height:28px;width:auto;">
+    Occam Research
+  </a>
+  <div class="nav-right">
+    <a href="index.html">← All organisms</a><a href="drosophila.html">Drosophila →</a>
+    <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" title="Toggle dark/light mode" aria-label="Switch to dark mode">🌙</button>
+  </div>
+</nav>
+</div>
+</header>
+<main>
+<div class="wrap">
+
+<section class="hero">
+  <div class="hero-eyebrow"><span class="dot"></span>Human Connectome Project · Subject 100206</div>
+  <h1>CRN Dynamics on Basal Ganglia Pathways</h1>
+  <p class="hero-sub">Interactive GKSL open-system transport on DTI-derived connectome subgraphs. Explore the inverted-U selectivity window predicted by CRN theory across two functionally distinct neural pathways.</p>
+</section>
+
+<div class="info-box">
+  <h3>T2 / T3 Dissociation</h3>
+  <p>Both ports show the inverted-U transport profile (ENAQT), but respond differently to weight perturbation. In <strong>T2</strong> (gating), shuffling edge weights destroys selectivity (G > 0) — the <em>specific</em> DTI weight pattern matters. In <strong>T3</strong> (relay), surrogates perform equally well (G ≈ 0) — topology alone suffices. This double dissociation is a core prediction of CRN.</p>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="t2">T2 — Basal Ganglia</button>
+  <button class="tab-btn" data-tab="t3">T3 — Motor Relay</button>
+</div>
+
+<div class="tab-content active" id="panel-t2">
+<div class="stat-grid">
+  <div class="stat-card">
+    <div class="stat-card-title"><span class="dot" style="background:var(--accent)"></span>Subgraph Topology</div>
+    <div class="stat-row"><span class="stat-label">ROI nodes</span><span class="stat-val">20</span></div>
+    <div class="stat-row"><span class="stat-label">DTI edges</span><span class="stat-val">152</span></div>
+    <div class="stat-row"><span class="stat-label">Density</span><span class="stat-val">0.80</span></div>
+    <div class="stat-row"><span class="stat-label">Hemisphere</span><span class="stat-val">Left</span></div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-card-title"><span class="dot" style="background:var(--teal)"></span>CRN Architecture</div>
+    <div class="stat-row"><span class="stat-label">Sources (BG input)</span><span class="stat-val">3</span></div>
+    <div class="stat-row"><span class="stat-label">Targets (gating out)</span><span class="stat-val">2</span></div>
+    <div class="stat-row"><span class="stat-label">Intermediate ROIs</span><span class="stat-val">15</span></div>
+    <div class="stat-row"><span class="stat-label">Disorder ε</span><span class="stat-val">2.0</span></div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-card-title"><span class="dot" style="background:var(--warm)"></span>ENAQT Result</div>
+    <div class="stat-row"><span class="stat-label">Peak R₀ selectivity</span><span class="stat-val warn">7.13</span></div>
+    <div class="stat-row"><span class="stat-label">κ* (optimal)</span><span class="stat-val">1.0</span></div>
+    <div class="stat-row"><span class="stat-label">Inverted-U window</span><span class="stat-val good">✓ confirmed</span></div>
+    <div class="stat-row"><span class="stat-label">Topology-specific</span><span class="stat-val good">✓ G > 0</span></div>
+  </div>
+</div>
+
+<div class="viz">
+  <h2><span class="dot" style="background:var(--accent)"></span>Connectome — Live GKSL Dynamics</h2>
+  <div class="controls">
+    <div class="control-group"><label>κ (dephasing)</label>
+      <select id="kappaSelect">
+        <option value="0">0.001 (coherent)</option><option value="1">0.01</option><option value="2">0.1</option>
+        <option value="3">0.3</option><option value="4" selected>1.0 (optimal)</option>
+        <option value="5">3.0</option><option value="6">10.0 (classical)</option>
+      </select>
+    </div>
+    <div class="control-group"><label>Layout</label>
+      <select id="layoutSelect"><option value="anatomical" selected>Anatomical</option><option value="hierarchical">Hierarchical</option><option value="force">Force-directed</option></select>
+    </div>
+    <div class="control-group"><label>Scale</label><input type="range" id="nodeSizeRange" min="0.5" max="3" value="1.5" step="0.1"></div>
+    <button class="play-btn" id="playBtn">▶ Play</button>
+    <span class="time-display" id="timeDisplay">t = 0.00</span>
+    <div class="control-group" style="flex:1;min-width:120px"><input type="range" id="timeSlider" min="0" max="50" value="0" step="1" style="width:100%"></div>
+  </div>
+  <canvas id="graphCanvas" width="1200" height="560"></canvas>
+  <div class="legend">
+    <div class="legend-item"><span class="legend-dot" style="background:var(--accent)"></span>Sources (Striatum)</div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--warm)"></span>Targets (Thal / Pall)</div>
+    <div class="legend-item"><span class="legend-dot" style="background:var(--teal)"></span>Intermediate (Cortical)</div>
+    <div class="legend-item"><span class="legend-dot" style="background:rgba(0,0,0,.12)"></span>Node size ~ ρ<sub>ii</sub>(t)</div>
+  </div>
+</div>
+
+<div class="charts-row">
+  <div class="chart-box"><h3>R₀(t) — Selectivity Dynamics</h3><canvas id="r0Chart" width="560" height="260"></canvas></div>
+  <div class="chart-box"><h3>Inverted-U — R₀(T<sub>end</sub>) vs κ</h3><canvas id="enaqtChart" width="560" height="260"></canvas></div>
+</div>
+<div class="charts-row">
+  <div class="chart-box"><h3>P<sub>T</sub>(t) — Target Absorption</h3><canvas id="ptChart" width="560" height="260"></canvas></div>
+  <div class="chart-box"><h3>P<sub>D</sub>(t) — Distractor Leakage</h3><canvas id="pdChart" width="560" height="260"></canvas></div>
+</div>
+</div>
+
+<div class="tab-content" id="panel-t3">
+<div class="stat-grid">
+  <div class="stat-card">
+    <div class="stat-card-title"><span class="dot" style="background:var(--accent)"></span>Subgraph Topology</div>
+    <div class="stat-row"><span class="stat-label">ROI nodes</span><span class="stat-val">~22</span></div>
+    <div class="stat-row"><span class="stat-label">DTI edges</span><span class="stat-val">~170</span></div>
+    <div class="stat-row"><span class="stat-label">Hemisphere</span><span class="stat-val">Left</span></div>
+    <div class="stat-row"><span class="stat-label">Pathway</span><span class="stat-val">Thal → Motor Ctx</span></div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-card-title"><span class="dot" style="background:var(--teal)"></span>CRN Architecture</div>
+    <div class="stat-row"><span class="stat-label">Sources</span><span class="stat-val">Thalamus</span></div>
+    <div class="stat-row"><span class="stat-label">Targets</span><span class="stat-val">Precentral / Paracentral</span></div>
+    <div class="stat-row"><span class="stat-label">Transport type</span><span class="stat-val warn">Structure-driven</span></div>
+    <div class="stat-row"><span class="stat-label">Weight sensitivity</span><span class="stat-val">Low (G ≈ 0)</span></div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-card-title"><span class="dot" style="background:var(--warm)"></span>Key Finding</div>
+    <div class="stat-row"><span class="stat-label">ENAQT present</span><span class="stat-val good">✓</span></div>
+    <div class="stat-row"><span class="stat-label">Topology-specific</span><span class="stat-val bad">✗ G ≈ 0</span></div>
+    <div class="stat-row"><span class="stat-label">Interpretation</span><span class="stat-val">Relay, not gating</span></div>
+    <div class="stat-row"><span class="stat-label">Weight shuffle</span><span class="stat-val">No effect</span></div>
+  </div>
+</div>
+<div class="info-box" style="margin-top:var(--space-5)">
+  <h3>T3 — Motor Relay Pathway</h3>
+  <p>T3 shows an inverted-U transport profile (ENAQT exists), but unlike T2, weight-shuffled surrogates perform equally well → <strong>graph geometry alone drives transport</strong>. CRN theory predicts this: gating circuits (T2) require weight-tuned interference, relay circuits (T3) broadcast via structure.</p>
+  <p style="margin-top:var(--space-3);color:var(--warm);font-size:var(--text-xs)">⚠ T3 trajectory data not loaded. Run: <code style="background:var(--surface-alt);padding:2px 8px;border-radius:4px;font-family:var(--font-mono);font-size:var(--text-xs)">python crn_dump_trajectories.py --port T3 --outfile trajectories_100206_T3.json</code></p>
+</div>
+</div>
+
+<div class="source-box">
+  <strong>Data source:</strong> Human Connectome Project (HCP), Subject 100206, DTI tractography. Van Essen et al. (2013). <em>NeuroImage.</em> <a href="https://doi.org/10.1016/j.neuroimage.2013.05.041" target="_blank" rel="noopener noreferrer">doi:10.1016/j.neuroimage.2013.05.041</a><br>
+  <strong>CRN framework:</strong> Dolgikh (2026). <a href="https://doi.org/10.5281/zenodo.18249250" target="_blank" rel="noopener noreferrer">doi:10.5281/zenodo.18249250</a><br>
+  <strong>GKSL solver:</strong> RK2, dt=0.05, T<sub>end</sub>=10, γ<sub>T</sub>=1.0, γ<sub>L</sub>=5×10⁻⁴, ε=2.0
+</div>
+
+</div>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+  <div class="footer-bottom">
+    <span>&copy; 2026 Occam Research</span>
+    <span><a href="https://occam.world" target="_blank" rel="noopener noreferrer">occam.world</a> &middot; CRN Interactive v4.0</span>
+  </div>
+</div>
+</footer>
+
+<script src="human-data.js"></script>
+</body>
+</html>
