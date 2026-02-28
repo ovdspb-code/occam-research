@@ -39,7 +39,7 @@
   <div class="nav-right">
     <a href="https://github.com/ovdspb-code/CRN_4.1" target="_blank" rel="noopener noreferrer">GitHub</a>
     <a href="https://doi.org/10.5281/zenodo.18249250" target="_blank" rel="noopener noreferrer">Paper</a>
-    <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" title="Toggle dark/light mode" aria-label="Switch to dark mode">&#x1F319;</button>
+    <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" title="Toggle dark/light mode" aria-label="Switch to dark mode">🌙</button>
   </div>
 </nav>
 </div>
@@ -49,7 +49,7 @@
 <div class="wrap">
 
 <section class="hero hero-center">
-  <div class="hero-badge">&#x25CF; Live Research</div>
+  <div class="hero-badge">● Live Research</div>
   <h1>Coherent Resonant Netting<br>across <em>biological scales</em></h1>
   <p class="hero-sub">Interactive visualizations of noise-assisted transport on real connectome data — from nematode to human. Each page shows GKSL open-system dynamics and the inverted-U selectivity window predicted by CRN theory.</p>
 </section>
@@ -72,45 +72,11 @@
   <div id="scorecardGrid"></div>
 </section>
 
-<!-- PUBLICATIONS -->
-<section class="section reveal">
+<!-- PUBLICATIONS (loaded dynamically from publications.json) -->
+<section class="section reveal" id="pubsSection">
   <h2>Publications &amp; Data</h2>
-  <div class="pub-list">
-    <div class="pub-item">
-      <span class="pub-tag review">Under Review</span>
-      <div class="pub-title">Coherent-Resonant Netting: Disorder-Enhanced Selectivity from Transient Wave-like Dynamics on Biological Connectomes</div>
-      <div class="pub-meta">O. Dolgikh &middot; 2026 &middot; Frontiers in Computational Neuroscience</div>
-      <div class="pub-links">
-        <a href="https://doi.org/10.5281/zenodo.18249250" target="_blank" rel="noopener noreferrer">Zenodo</a>
-        <a href="https://www.researchgate.net/profile/Oleg-Dolgikh-3" target="_blank" rel="noopener noreferrer">ResearchGate</a>
-      </div>
-    </div>
-    <div class="pub-item">
-      <span class="pub-tag preprint">Preprint</span>
-      <div class="pub-title">Hidden Pseudoreplication in Disorder-Averaged Transport Simulations on Parcellated Connectomes</div>
-      <div class="pub-meta">O. Dolgikh &middot; 2026</div>
-      <div class="pub-links">
-        <a href="https://doi.org/10.5281/zenodo.18520884" target="_blank" rel="noopener noreferrer">Zenodo</a>
-      </div>
-    </div>
-    <div class="pub-item">
-      <span class="pub-tag dataset">Dataset</span>
-      <div class="pub-title">Evolutionary Game Theory Reveals Modular Specialization as a Universal Solution to Neural Trade-offs</div>
-      <div class="pub-meta">O. Dolgikh &middot; 2026</div>
-      <div class="pub-links">
-        <a href="https://doi.org/10.5281/zenodo.18379851" target="_blank" rel="noopener noreferrer">Zenodo</a>
-      </div>
-    </div>
-    <div class="pub-item">
-      <span class="pub-tag software">Software</span>
-      <div class="pub-title">CRN_SIM: Simulation Suite for Coherent Resonant Netting</div>
-      <div class="pub-meta">O. Dolgikh &middot; 2026</div>
-      <div class="pub-links">
-        <a href="https://doi.org/10.5281/zenodo.18519173" target="_blank" rel="noopener noreferrer">Zenodo</a>
-        <a href="https://github.com/ovdspb-code" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </div>
-  </div>
+  <p class="pubs-meta" style="font-size:var(--text-xs);color:var(--text-3);margin-bottom:var(--space-4)">Loading publications…</p>
+  <div class="pub-list" id="pubsList"></div>
 </section>
 
 <!-- OPEN RESOURCES -->
@@ -184,22 +150,22 @@
   </div>
   <div class="footer-bottom">
     <span>&copy; 2026 Occam Research</span>
-    <span><a href="https://occam.world" target="_blank" rel="noopener noreferrer">occam.world</a> &middot; CRN Interactive v3.0</span>
+    <span><a href="https://occam.world" target="_blank" rel="noopener noreferrer">occam.world</a> · CRN Interactive v3.0</span>
   </div>
 </div>
 </footer>
 
 <script>
 const icons = {
-  human:     {emoji:'&#x1F9E0;', bg:'var(--accent-light)'},
-  drosophila:{emoji:'&#x1FAB0;', bg:'var(--teal-light)'},
-  elegans:   {emoji:'&#x1FAB1;', bg:'var(--warm-light)'},
-  mouse:     {emoji:'&#x1F42D;', bg:'var(--coral-light)'},
+  human:     {emoji:'🧠', bg:'var(--accent-light)'},
+  drosophila:{emoji:'🪰', bg:'var(--teal-light)'},
+  elegans:   {emoji:'🪱', bg:'var(--warm-light)'},
+  mouse:     {emoji:'🐭', bg:'var(--coral-light)'},
 };
 fetch('pages.json').then(r=>r.json()).then(pages => {
   const grid = document.getElementById('cardGrid');
   pages.forEach(p => {
-    const ic = icons[p.id] || {emoji:'&#x1F4CA;', bg:'var(--surface-alt)'};
+    const ic = icons[p.id] || {emoji:'📊', bg:'var(--surface-alt)'};
     const card = document.createElement('a');
     card.href = p.id + '.html';
     card.className = 'card';
@@ -216,10 +182,64 @@ fetch('pages.json').then(r=>r.json()).then(pages => {
   document.getElementById('cardGrid').innerHTML = '<p style="color:var(--text-3);font-size:var(--text-sm)">Could not load pages.json. If viewing locally, use a simple HTTP server: <code>python -m http.server</code></p>';
 });
 
+// ===== PUBLICATIONS from publications.json =====
+fetch('publications.json').then(r=>r.json()).then(data => {
+  const meta = document.querySelector('.pubs-meta');
+  meta.textContent = `Updated ${data.updated} · ${data.publications.length} works · Source: ${data.source}`;
+  const list = document.getElementById('pubsList');
+  list.innerHTML = '';
+
+  const statusLabels = {
+    under_review: { label: 'Under Review', cls: 'review' },
+    preprint: { label: 'Preprint', cls: 'preprint' },
+    published: { label: 'Published', cls: 'dataset' }
+  };
+  const typeLabels = {
+    preprint: 'preprint',
+    dataset: 'dataset',
+    software: 'software'
+  };
+
+  // Sort: under_review first, then preprints, then rest; within group by date desc
+  const order = { under_review: 0, preprint: 1, published: 2 };
+  const sorted = [...data.publications].sort((a, b) => {
+    const oa = order[a.status] ?? 3, ob = order[b.status] ?? 3;
+    if (oa !== ob) return oa - ob;
+    return b.date.localeCompare(a.date);
+  });
+
+  sorted.forEach(pub => {
+    const st = statusLabels[pub.status] || { label: pub.status, cls: 'preprint' };
+    const typeCls = typeLabels[pub.type] || pub.type;
+    const tagCls = pub.type === 'preprint' ? st.cls : typeCls;
+    const tagLabel = pub.type === 'preprint' ? st.label : pub.type.charAt(0).toUpperCase() + pub.type.slice(1);
+    const year = pub.date ? pub.date.split('-')[0] : '';
+    const venue = pub.venue ? ` · ${pub.venue}` : '';
+
+    const linksHTML = Object.entries(pub.links || {}).map(([name, url]) => {
+      const label = name.charAt(0).toUpperCase() + name.slice(1);
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+    }).join('');
+
+    const el = document.createElement('div');
+    el.className = 'pub-item';
+    el.innerHTML = `
+      <span class="pub-tag ${tagCls}">${tagLabel}</span>
+      <div class="pub-title">${pub.title}</div>
+      <div class="pub-meta">${pub.authors} · ${year}${venue}</div>
+      <div class="pub-links">${linksHTML}</div>
+    `;
+    list.appendChild(el);
+  });
+}).catch(() => {
+  const s = document.getElementById('pubsSection');
+  if(s) s.querySelector('.pubs-meta').textContent = 'Could not load publications.json';
+});
+
 // ===== SCORECARD from scorecard.json =====
 fetch('scorecard.json').then(r=>r.json()).then(sc => {
   const meta = document.querySelector('.scorecard-meta');
-  meta.textContent = `Updated ${sc.updated} \u00b7 ${sc.version} \u00b7 ${sc.trials} GKSL trials \u00b7 ${sc.subjects} HCP subjects`;
+  meta.textContent = `Updated ${sc.updated} · ${sc.version} · ${sc.trials} GKSL trials · ${sc.subjects} HCP subjects`;
   const grid = document.getElementById('scorecardGrid');
   grid.innerHTML = '';
   sc.claims.forEach(c => {

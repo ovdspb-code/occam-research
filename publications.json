@@ -1,0 +1,178 @@
+{
+  "updated": "2026-02-28",
+  "source": "ORCID 0009-0008-0159-1718 + manual curation",
+  "publications": [
+    {
+      "id": "crn-core",
+      "type": "preprint",
+      "status": "under_review",
+      "title": "Coherent-Resonant Netting: Disorder-Enhanced Selectivity from Transient Wave-like Dynamics on Biological Connectomes",
+      "short": "CRN Core Paper",
+      "authors": "O. Dolgikh",
+      "date": "2026-01-14",
+      "venue": "Frontiers in Computational Neuroscience",
+      "doi": "10.5281/zenodo.18249250",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18249250",
+        "researchgate": "https://www.researchgate.net/profile/Oleg-Dolgikh-3"
+      }
+    },
+    {
+      "id": "c5c-energy",
+      "type": "preprint",
+      "status": "preprint",
+      "title": "Energetic Efficiency of Two-Stage Wave\u2013Commitment Decision Architecture: A Meta-Analytic Comparison with Drift-Diffusion Models",
+      "short": "C5c Energy Paper",
+      "authors": "O. Dolgikh",
+      "date": "2026-02-26",
+      "venue": null,
+      "doi": "10.5281/zenodo.18785552",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18785552",
+        "researchgate": "https://www.researchgate.net/profile/Oleg-Dolgikh-3"
+      }
+    },
+    {
+      "id": "c5c-energy-data",
+      "type": "dataset",
+      "status": "published",
+      "title": "Energetic Efficiency of Two-Stage Wave\u2013Commitment Decision Architecture: Data, Code, and Figures",
+      "short": "C5c Energy Dataset",
+      "authors": "O. Dolgikh",
+      "date": "2026-02-26",
+      "venue": null,
+      "doi": "10.5281/zenodo.18785856",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18785856"
+      }
+    },
+    {
+      "id": "hcp-subgraphs",
+      "type": "preprint",
+      "status": "preprint",
+      "title": "Noise-Assisted Transport Windows in Human Connectome Subgraphs: Evidence from Basal Ganglia and Motor Pathways",
+      "short": "HCP Subgraphs Paper",
+      "authors": "O. Dolgikh",
+      "date": "2026-02-25",
+      "venue": null,
+      "doi": "10.5281/zenodo.18773244",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18773244"
+      }
+    },
+    {
+      "id": "icc-paper",
+      "type": "preprint",
+      "status": "under_review",
+      "title": "Hidden Pseudoreplication in Disorder-Averaged Transport Simulations on Parcellated Connectomes",
+      "short": "ICC Paper",
+      "authors": "O. Dolgikh",
+      "date": "2026-02-07",
+      "venue": "NBDT (Neurons, Behavior, Data and Theory)",
+      "doi": "10.5281/zenodo.18520884",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18520884"
+      }
+    },
+    {
+      "id": "drosophila-data",
+      "type": "dataset",
+      "status": "published",
+      "title": "CRN Drosophila Larva Mushroom-Body Benchmark: Simulation Artifacts and Derived Data",
+      "short": "Drosophila Benchmark Data",
+      "authors": "O. Dolgikh",
+      "date": "2026-02-19",
+      "venue": null,
+      "doi": "10.5281/zenodo.18697117",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18697117"
+      }
+    },
+    {
+      "id": "egt-paper",
+      "type": "dataset",
+      "status": "published",
+      "title": "Evolutionary Game Theory Reveals Modular Specialization as a Universal Solution to Neural Trade-offs",
+      "short": "EGT Paper",
+      "authors": "O. Dolgikh",
+      "date": "2026-01-26",
+      "venue": null,
+      "doi": "10.5281/zenodo.18379851",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18379851"
+      }
+    },
+    {
+      "id": "crn-sim",
+      "type": "software",
+      "status": "published",
+      "title": "CRN_SIM: Simulation Suite for Coherent Resonant Netting",
+      "short": "CRN_SIM Code",
+      "authors": "O. Dolgikh",
+      "date": "2026-01-19",
+      "venue": null,
+      "doi": "10.5281/zenodo.18248773",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18248773",
+        "github": "https://github.com/ovdspb-code"
+      }
+    },
+    {
+      "id": "crn-hcp-enaqt",
+      "type": "software",
+      "status": "published",
+      "title": "CRN-HCP-ENAQT: Noise-Assisted Transport in Human Connectome Subgraphs",
+      "short": "CRN-HCP-ENAQT Code",
+      "authors": "O. Dolgikh",
+      "date": "2026-02-07",
+      "venue": null,
+      "doi": "10.5281/zenodo.18519173",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18519173",
+        "github": "https://github.com/ovdspb-code"
+      }
+    },
+    {
+      "id": "crn-sim-r12",
+      "type": "software",
+      "status": "published",
+      "title": "CRN_Sim (R12-CROWN): Supplementary simulation suite and artifacts for CRN",
+      "short": "CRN_SIM R12-CROWN",
+      "authors": "O. Dolgikh",
+      "date": "2026-02-14",
+      "venue": null,
+      "doi": "10.5281/zenodo.18338260",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18338260"
+      }
+    },
+    {
+      "id": "elegans-data",
+      "type": "dataset",
+      "status": "published",
+      "title": "CRN: C. elegans Touch Circuit Simulation Artifacts",
+      "short": "C. elegans Data",
+      "authors": "O. Dolgikh",
+      "date": "2026-01-30",
+      "venue": null,
+      "doi": "10.5281/zenodo.18432681",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18432681"
+      }
+    },
+    {
+      "id": "mouse-data",
+      "type": "dataset",
+      "status": "published",
+      "title": "CRN: Mouse cortical proxy simulation artifacts (step2\u2013step6 release candidate)",
+      "short": "Mouse Proxy Data",
+      "authors": "O. Dolgikh",
+      "date": "2026-01-30",
+      "venue": null,
+      "doi": "10.5281/zenodo.18433187",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18433187"
+      }
+    }
+  ]
+}
