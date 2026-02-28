@@ -6,13 +6,13 @@
 <title>Mouse Cortex Proxy — Synthetic Benchmark | CRN</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script>
 (function(){
   if(window.matchMedia('(prefers-color-scheme:dark)').matches) document.documentElement.setAttribute('data-theme','dark');
-  window.toggleTheme=function(){const c=document.documentElement.getAttribute('data-theme');const n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);document.getElementById('themeBtn').textContent=n==='dark'?'\u2600\uFE0F':'\uD83C\uDF19';drawCharts()};
-  addEventListener('DOMContentLoaded',()=>{document.getElementById('themeBtn').textContent=(document.documentElement.getAttribute('data-theme')==='dark')?'\u2600\uFE0F':'\uD83C\uDF19'});
+  window.toggleTheme=function(){const c=document.documentElement.getAttribute('data-theme');const n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);document.getElementById('themeBtn').textContent=n==='dark'?'☀️':'🌙';drawCharts()};
+  addEventListener('DOMContentLoaded',()=>{document.getElementById('themeBtn').textContent=(document.documentElement.getAttribute('data-theme')==='dark')?'☀️':'🌙'});
 })();
 </script>
 </head>
@@ -21,12 +21,12 @@
 <div class="wrap">
 <nav class="nav">
   <a href="index.html" class="nav-brand">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4m-8.5-13.5 2.8 2.8m11.4 5.4 2.8 2.8M2 12h4m12 0h4M4.9 4.9l2.8 2.8m8.6 8.6 2.8 2.8"/></svg>
+    <img src="favicon.jpg" alt="Occam Research" class="nav-logo" style="height:28px;width:auto;">
     Occam Research
   </a>
   <div class="nav-right">
-    <a href="index.html">&larr; All demos</a>
-    <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" aria-label="Switch to dark mode">&#x1F319;</button>
+    <a href="index.html">← All demos</a>
+    <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" aria-label="Switch to dark mode">🌙</button>
   </div>
 </nav>
 </div>
@@ -36,10 +36,10 @@
 <div class="wrap">
 
 <section class="hero">
-  <div class="hero-eyebrow" style="color:var(--warm)">Synthetic Benchmark &middot; Live GKSL</div>
-  <span class="badge">&#x26A0; SYNTHETIC — NOT A BIOLOGICAL CONNECTOME</span>
+  <div class="hero-eyebrow" style="color:var(--warm)">Synthetic Benchmark · Live GKSL</div>
+  <span class="badge">⚠ SYNTHETIC — NOT A BIOLOGICAL CONNECTOME</span>
   <h1>Mouse Cortex Proxy — Transport vs Memory</h1>
-  <p class="hero-sub">N=8 chain graph. Live Lindblad solver: source node 0 &rarr; target node 7. Drag κ to see the ENAQT sweet spot where intermediate dephasing maximizes transport.</p>
+  <p class="hero-sub">N=8 chain graph. Live Lindblad solver: source node 0 → target node 7. Drag κ to see the ENAQT sweet spot where intermediate dephasing maximizes transport.</p>
 </section>
 
 <div class="stat-grid">
@@ -67,8 +67,8 @@
   <h2 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:400">Live GKSL — Chain Transport</h2>
   <canvas id="simCanvas" height="260"></canvas>
   <div class="controls">
-    <button class="btn" id="playBtn" onclick="togglePlay()">&#x25B6; Play</button>
-    <button class="btn outline" onclick="resetSim()">&#x21BA; Reset</button>
+    <button class="btn" id="playBtn" onclick="togglePlay()">▶ Play</button>
+    <button class="btn outline" onclick="resetSim()">↺ Reset</button>
     <label style="font-size:var(--text-xs);font-weight:600;color:var(--text-3);min-width:50px">κ</label>
     <input type="range" id="kSlider" min="-2" max="2" step=".05" value="-.4" style="flex:1;min-width:100px;accent-color:var(--accent)">
     <span class="val" id="kVal">0.40</span>
@@ -85,14 +85,14 @@
 </div>
 
 <div class="charts-row">
-  <div class="chart-box"><h3>A &middot; Transport gap vs κ</h3><canvas id="cA" height="240"></canvas></div>
-  <div class="chart-box"><h3>B &middot; Transport / memory / fitness vs noise</h3><canvas id="cB" height="240"></canvas></div>
-  <div class="chart-box"><h3>C &middot; Cortex recall &amp; leakage vs T</h3><canvas id="cC" height="240"></canvas></div>
-  <div class="chart-box"><h3>D &middot; Energy tax ratio vs cycle time</h3><canvas id="cD" height="240"></canvas></div>
+  <div class="chart-box"><h3>A · Transport gap vs κ</h3><canvas id="cA" height="240"></canvas></div>
+  <div class="chart-box"><h3>B · Transport / memory / fitness vs noise</h3><canvas id="cB" height="240"></canvas></div>
+  <div class="chart-box"><h3>C · Cortex recall &amp; leakage vs T</h3><canvas id="cC" height="240"></canvas></div>
+  <div class="chart-box"><h3>D · Energy tax ratio vs cycle time</h3><canvas id="cD" height="240"></canvas></div>
 </div>
 
 <div class="source-box" style="border-left-color:var(--warm)">
-  <strong>&#x26A0; Synthetic benchmark.</strong> N=8 chain, not biological connectome. Requires validation on Allen Brain Atlas data.<br>
+  <strong>⚠ Synthetic benchmark.</strong> N=8 chain, not biological connectome. Requires validation on Allen Brain Atlas data.<br>
   <strong>CRN:</strong> Dolgikh, O. (2026). <a href="https://doi.org/10.5281/zenodo.18249250" target="_blank" rel="noopener noreferrer">doi:10.5281/zenodo.18249250</a>
 </div>
 
@@ -102,7 +102,7 @@
 <div class="wrap">
   <div class="footer-bottom">
     <span>&copy; 2026 Occam Research</span>
-    <span><a href="https://occam.world" target="_blank" rel="noopener noreferrer">occam.world</a> &middot; CRN Interactive v3.0</span>
+    <span><a href="https://occam.world" target="_blank" rel="noopener noreferrer">occam.world</a> &middot; CRN Interactive v4.0</span>
   </div>
 </div>
 </footer>

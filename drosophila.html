@@ -6,7 +6,7 @@
 <title>Drosophila Larva — Mushroom Body | CRN Interactive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script>
 (function(){
@@ -16,12 +16,12 @@
     const next = cur === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     const btn = document.getElementById('themeBtn');
-    if(btn) btn.textContent = next === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
+    if(btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
     if(typeof renderAll === 'function') setTimeout(renderAll, 50);
   };
   window.addEventListener('DOMContentLoaded', ()=>{
     const btn = document.getElementById('themeBtn');
-    if(btn) btn.textContent = (document.documentElement.getAttribute('data-theme')==='dark') ? '\u2600\uFE0F' : '\uD83C\uDF19';
+    if(btn) btn.textContent = (document.documentElement.getAttribute('data-theme')==='dark') ? '☀️' : '🌙';
   });
 })();
 </script>
@@ -31,12 +31,12 @@
 <div class="wrap">
 <nav class="nav">
   <a href="index.html" class="nav-brand">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4m-8.5-13.5 2.8 2.8m11.4 5.4 2.8 2.8M2 12h4m12 0h4M4.9 4.9l2.8 2.8m8.6 8.6 2.8 2.8"/></svg>
+    <img src="favicon.jpg" alt="Occam Research" class="nav-logo" style="height:28px;width:auto;">
     Occam Research
   </a>
   <div class="nav-right">
-    <a href="index.html">&larr; All organisms</a><a href="human.html">Human &rarr;</a>
-    <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" title="Toggle dark/light mode" aria-label="Switch to dark mode">&#x1F319;</button>
+    <a href="index.html">← All organisms</a><a href="human.html">Human →</a>
+    <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" title="Toggle dark/light mode" aria-label="Switch to dark mode">🌙</button>
   </div>
 </nav>
 </div>
@@ -53,7 +53,7 @@
 
 <div class="info-box">
   <h3>About the data</h3>
-  <p><strong>Winding et al. (2023), Science:</strong> The complete brain connectome of the <em>Drosophila melanogaster</em> larva contains 3,016 neurons and over 500,000 synapses. The Mushroom Body (MB) is a canonical module for associative memory and learning. Architecture: projection neurons (PN) &rarr; Kenyon cells (KC, sparse coding) &rarr; output neurons (MBON, readout).</p>
+  <p><strong>Winding et al. (2023), Science:</strong> The complete brain connectome of the <em>Drosophila melanogaster</em> larva contains 3,016 neurons and over 500,000 synapses. The Mushroom Body (MB) is a canonical module for associative memory and learning. Architecture: projection neurons (PN) → Kenyon cells (KC, sparse coding) → output neurons (MBON, readout).</p>
 </div>
 
 <div class="stat-grid">
@@ -69,14 +69,14 @@
     <div class="stat-row"><span class="stat-label">Projection neurons (PN)</span><span class="stat-val">100</span></div>
     <div class="stat-row"><span class="stat-label">Kenyon cells (KC)</span><span class="stat-val">1,000</span></div>
     <div class="stat-row"><span class="stat-label">Output neurons (MBON)</span><span class="stat-val">24</span></div>
-    <div class="stat-row"><span class="stat-label">Expansion ratio PN&rarr;KC</span><span class="stat-val">1 : 10</span></div>
+    <div class="stat-row"><span class="stat-label">Expansion ratio PN→KC</span><span class="stat-val">1 : 10</span></div>
   </div>
   <div class="stat-card">
     <div class="stat-card-title"><span class="dot" style="background:var(--warm)"></span>CRN Simulation</div>
     <div class="stat-row"><span class="stat-label">DES peak (ε = 3)</span><span class="stat-val warn">Sel. 2.66</span></div>
     <div class="stat-row"><span class="stat-label">κ range</span><span class="stat-val">0.001 – 30</span></div>
     <div class="stat-row"><span class="stat-label">Target absorption max</span><span class="stat-val">0.67</span></div>
-    <div class="stat-row"><span class="stat-label">Topology dependence</span><span class="stat-val good">p &lt; 0.001</span></div>
+    <div class="stat-row"><span class="stat-label">Topology dependence</span><span class="stat-val good">p < 0.001</span></div>
   </div>
 </div>
 
@@ -85,7 +85,7 @@
   <div class="controls">
     <div class="control-group"><label for="layoutType">Layout</label>
       <select id="layoutType">
-        <option value="hierarchical">Hierarchical (PN&rarr;KC&rarr;MBON)</option>
+        <option value="hierarchical">Hierarchical (PN→KC→MBON)</option>
         <option value="force">Force-directed</option>
         <option value="circular">Circular</option>
       </select>
@@ -113,7 +113,7 @@
 <div class="wrap">
   <div class="footer-bottom">
     <span>&copy; 2026 Occam Research</span>
-    <span><a href="https://occam.world" target="_blank" rel="noopener noreferrer">occam.world</a> &middot; CRN Interactive v3.0</span>
+    <span><a href="https://occam.world" target="_blank" rel="noopener noreferrer">occam.world</a> &middot; CRN Interactive v4.0</span>
   </div>
 </div>
 </footer>
