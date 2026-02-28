@@ -8,6 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="style.css">
 <script>
 (function(){
@@ -17,12 +20,12 @@
     const next = cur === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     const btn = document.getElementById('themeBtn');
-    if(btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
+    if(btn) btn.textContent = next === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
     if(typeof renderAll === 'function') setTimeout(renderAll, 50);
   };
   window.addEventListener('DOMContentLoaded', ()=>{
     const btn = document.getElementById('themeBtn');
-    if(btn) btn.textContent = (document.documentElement.getAttribute('data-theme')==='dark') ? '☀️' : '🌙';
+    if(btn) btn.textContent = (document.documentElement.getAttribute('data-theme')==='dark') ? '\u2600\uFE0F' : '\uD83C\uDF19';
   });
 })();
 </script>
@@ -33,7 +36,7 @@
 <div class="wrap">
 <nav class="nav">
   <a href="index.html" class="nav-brand">
-    <img src="favicon.jpg" alt="Occam Research" class="nav-logo" style="height:28px;width:auto;">
+    <img src="favicon.png" alt="Occam Research" class="nav-logo" style="height:28px;width:auto;">
     Occam Research
   </a>
   <div class="nav-right">
