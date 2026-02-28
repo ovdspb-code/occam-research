@@ -1,1 +1,276 @@
-PLACEHOLDER_INDEX
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRN Interactive — Occam Research</title>
+<meta name="description" content="Coherent Resonant Netting: interactive visualizations of noise-assisted transport across biological connectomes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAC/klEQVR4nCXLW0xTdxgA8O/7ziktPbRcKjLaCoptVdSDOoITcI3RiCgmjQ9eHxQTw4MkxhcTE6PxYcY4l2zJzGLMNMYE3EyUGa/1Ui8peKFeENRApYC2alsspaUq6/l/Pvh7/6FgRgaBDIKJKBUZ7Wu79cnbM9k7UjK/Qjbpc+eWGyvt5U2LSdEDMzILYBScJZJfnfcHjrbLg1EUXNbwk8FgEHpJJyAzllLmlbuaG3JKzQSAzIJIDvx99Vbrr9lg+BOhca1bP/OHWHK0yGYNBQfnbGkY6riXCH1AQFnTNEmSQvde+H45aSIpd549SMaPT3oVnOX8udp/umPNkd2ha93/f560zLICABGRNpn1/d6mjadDhAXL622SCI+l4oXF/vaL7v3bx6OJ7mP/uDYv11lMrAlCxJFn/QNdT4vUCuvKmpunz7lqVUv17K4TbRUbmnIthZd3Hclf5HTtaGRmRiQACD7qiadSkUKzMTkeF6BzldmCb+KlZZeevzvfejhLWHewOWeKGZiJgAAgOvR+2pKq0VhcoLZgU9OJln1zPe6FW1Z8vu4dj8Tq9jdbl6maEEAEgAQAX4gnNE1hLaQz2DLJL4QDhZbpsSFTemy4uORdqR0AEACZGZgAIH9Gqf/hk7ziqQDo/bdj5/FDgf98nWculdSqCfXHP9oeBV68JyLBAN9DZU2VuUCJpCeKczhlKng9HHZC8sNXzbqucc+BjZzVjp3pTKYnEREYiVk4VVdVrdrXN3Dndtfqbev77z542d1T37r17MPBRDyxd3fj64Foh/clIjAzCWadTt60a1uugiCh7/5jkYhJdlvYkOdZ4/7zuNeSn7fZU33F15+cyBIBEUpCCLV+Ucvelkw2PfLqTXBkuMK9dKrd1vkgsGp13V+nbi5Uy3V6fhseBSBkwYAshEYk37lw4+Rvp+JDb5MWR41nrVkxSjogWclMZByOKZ4VlUUFehTMCMDMzBqRHItEL7df6PL39yaU2Qsq8016p6PEMb1o6WKnQS8xi29kt2Uxx8E6VQAAAABJRU5ErkJggg==">
+<link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAIAA3AwAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgCAAAAkJFoNgAAAv5JREFUeJwly1tMU3cYAPDv+84pLT20XCoy2gqKbVXUgzqCE3CN0YgoJo0PXh8UE8ODJMYXExOj8WHGOJdsycxizDTGBNxMlBmv9VIvKXihXhDUQKWAtmpbLKWlKuv5fz74e/+hYEYGgQyCiSgVGe1ru/XJ2zPZO1Iyv0I26XPnlhsr7eVNi0nRAzMyC2AUnCWSX533B462y4NRFFzW8JPBYBB6SScgM5ZS5pW7mhtySs0EgMyCSA78ffVW66/ZYPgToXGtWz/zh1hytMhmDQUH52xpGOq4lwh9QEBZ0zRJkkL3Xvh+OWkiKXeePUjGj096FZzl/Lnaf7pjzZHdoWvd/3+etMyyAgARkTaZ9f3epo2nQ4QFy+ttkgiPpeKFxf72i+7928ejie5j/7g2L9dZTKwJQsSRZ/0DXU+L1Arrypqbp8+5alVL9eyuE20VG5pyLYWXdx3JX+R07WhkZkYkAAg+6omnUpFCszE5Hhegc5XZgm/ipWWXnr8733o4S1h3sDlnihmYiYAAIDr0ftqSqtFYXKC2YFPTiZZ9cz3uhVtWfL7uHY/E6vY3W5epmhBABIAEAF+IJzRNYS2kM9gyyS+EA4WW6bEhU3psuLjkXakdABAAmRmYACB/Rqn/4ZO84qkA6P23Y+fxQ4H/fJ1nLpXUqgn1xz/aHgVevCciwQDfQ2VNlblAiaQninM4ZSp4PRx2QvLDV826rnHPgY2c1Y6d6UymJxERGIlZOFVXVa3a1zdw53bX6m3r++8+eNndU9+69ezDwUQ8sXd34+uBaIf3JSIwMwlmnU7etGtbroIgoe/+Y5GISXZb2JDnWeP+87jXkp+32VN9xdefnMgSARFKQgi1flHL3pZMNj3y6k1wZLjCvXSq3db5ILBqdd1fp24uVMt1en4bHgUgZMGALIRGJN+5cOPkb6fiQ2+TFkeNZ61ZMUo6IFnJTGQcjimeFZVFBXoUzAjAzMwakRyLRC+3X+jy9/cmlNkLKvNNeqejxDG9aOlip0EvMYtvZLdlMcfBOlUAAAAASUVORK5CYII=">
+<link rel="stylesheet" href="style.css">
+<script>
+(function(){
+  if(window.matchMedia('(prefers-color-scheme:dark)').matches) document.documentElement.setAttribute('data-theme','dark');
+  window.toggleTheme = function(){
+    const cur = document.documentElement.getAttribute('data-theme');
+    const next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    const btn = document.getElementById('themeBtn');
+    if(btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
+    if(typeof renderAll === 'function') setTimeout(renderAll, 50);
+  };
+  window.addEventListener('DOMContentLoaded', ()=>{
+    const btn = document.getElementById('themeBtn');
+    if(btn) btn.textContent = (document.documentElement.getAttribute('data-theme')==='dark') ? '☀️' : '🌙';
+  });
+})();
+</script>
+</head>
+<body>
+
+<header class="site-header">
+<div class="wrap">
+<nav class="nav">
+  <a href="index.html" class="nav-brand">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAAS8klEQVR4nGV5e3Bb1Zn/nbN0de+VZMmWZVu2LNtxEpI4IU4gkCYBkhA2IXRZoEBoodsHJbBs2S0t7HTbdoayk0dJyDTssszukCGlhJItXVI2NAFCICQQQkJCHiR+xLEtW7L1sv04j3t1H7r3nP1DtpNp58xfZ84c/b7fd77zfUdhjEEPIiKAjAiRQRRdBAiAHVijBCACMIiGiAhRBJSqgYimATEADoAHOABuwAFOYBsA4A8ggYCIAFgAASDaBkCC4wYBCqACoABWABYoAAqgAsqQAsUCqkCBWAFUQAGKgKECqoYAKEAGoAAGgA4YAGCFZgMGYBgAmIiAc47gDMGZMKEIHJiCgMCAhQFGKbSAHQAIgABAbAAABGJdDDBAuBgA0AQ5zAQQ5fxAAAABJRU5ErkJggg==" alt="Occam Research" class="nav-logo" style="height:28px;width:auto;">
+    Occam Research
+  </a>
+  <div class="nav-right">
+    <a href="https://github.com/ovdspb-code/CRN_4.1" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://doi.org/10.5281/zenodo.18249250" target="_blank" rel="noopener noreferrer">Paper</a>
+    <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" title="Toggle dark/light mode" aria-label="Switch to dark mode">🌙</button>
+  </div>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="wrap">
+
+<section class="hero hero-center">
+  <div class="hero-badge">● Live Research</div>
+  <h1>Coherent Resonant Netting<br>across <em>biological scales</em></h1>
+  <p class="hero-sub">Interactive visualizations of noise-assisted transport on real connectome data — from nematode to human. Each page shows GKSL open-system dynamics and the inverted-U selectivity window predicted by CRN theory.</p>
+</section>
+
+<div class="card-grid reveal" id="cardGrid"></div>
+
+<!-- RESEARCH FOCUS -->
+<section class="section reveal">
+  <h2>Research Focus</h2>
+  <p>Biological agents face an energy-information bottleneck: inference requires rapid exploration of large hypothesis spaces, yet high-gain spiking is metabolically expensive. CRN proposes a <strong>two-regime decision architecture</strong>:</p>
+  <p><strong>Stage-I (netting)</strong> — low-cost wave-like filtering via GKSL/Lindblad dynamics, with tunable dephasing κ and disorder ε, operating on the structural connectome to concentrate probability on target hypotheses.</p>
+  <p><strong>Stage-II (fixation)</strong> — expensive spiking commitment that broadcasts the winner. By filtering before firing, the brain reduces the number of costly O(N) broadcast events to O(1).</p>
+  <p>We test whether <strong>Disorder-Enhanced Selectivity (DES)</strong> — a signature where moderate disorder improves target selectivity — emerges on real connectomes and depends on native topology. Degree-preserving rewiring destroys the effect. Classical random walks cannot reproduce it.</p>
+</section>
+
+<!-- SCORECARD -->
+<section class="scorecard section reveal" id="scorecardSection">
+  <h2>Evidence Scorecard</h2>
+  <p class="scorecard-meta">Loading scorecard…</p>
+  <div id="scorecardGrid"></div>
+</section>
+
+<!-- PUBLICATIONS (loaded dynamically from publications.json) -->
+<section class="section reveal" id="pubsSection">
+  <h2>Publications &amp; Data</h2>
+  <p class="pubs-meta" style="font-size:var(--text-xs);color:var(--text-3);margin-bottom:var(--space-4)">Loading publications…</p>
+  <div class="pub-list" id="pubsList"></div>
+</section>
+
+<!-- OPEN RESOURCES -->
+<section class="section reveal">
+  <h2>Open Resources</h2>
+  <div class="card-grid" style="margin-top:var(--space-4)">
+    <a href="https://github.com/ovdspb-code" class="card" target="_blank" rel="noopener noreferrer" style="padding:var(--space-5)">
+      <h3 style="font-size:var(--text-base)">GitHub</h3>
+      <p style="font-size:var(--text-sm);margin-bottom:0">Simulation code, analysis pipelines, configuration files</p>
+    </a>
+    <a href="https://doi.org/10.5281/zenodo.18249250" class="card" target="_blank" rel="noopener noreferrer" style="padding:var(--space-5)">
+      <h3 style="font-size:var(--text-base)">Zenodo</h3>
+      <p style="font-size:var(--text-sm);margin-bottom:0">Preprints, datasets, DOI-archived releases</p>
+    </a>
+    <a href="https://www.researchgate.net/profile/Oleg-Dolgikh-3" class="card" target="_blank" rel="noopener noreferrer" style="padding:var(--space-5)">
+      <h3 style="font-size:var(--text-base)">ResearchGate</h3>
+      <p style="font-size:var(--text-sm);margin-bottom:0">Full-text access, community discussion</p>
+    </a>
+    <a href="https://orcid.org/0009-0008-0159-1718" class="card" target="_blank" rel="noopener noreferrer" style="padding:var(--space-5)">
+      <h3 style="font-size:var(--text-base)">ORCID</h3>
+      <p style="font-size:var(--text-sm);margin-bottom:0">0009-0008-0159-1718</p>
+    </a>
+  </div>
+</section>
+
+<!-- PI -->
+<section class="section reveal">
+  <h2>Principal Investigator</h2>
+  <div class="pi-box">
+    <div>
+      <h3 class="pi-info" style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;margin-bottom:2px">Oleg Dolgikh</h3>
+      <div class="pi-role">Independent Researcher</div>
+      <p class="pi-bio">Background in applied optimization and distributed systems (20+ years). Since 2020, focused exclusively on theoretical neuroscience: Landauer bounds in biological networks, spectral graph theory, ENAQT regimes, and variational free energy minimization.</p>
+      <div class="contact-row">
+        <div><div class="label">Location</div>Sant Cugat del Vallès, Barcelona</div>
+        <div><div class="label">Affiliation</div>Occam Research</div>
+        <div><div class="label">ORCID</div><a href="https://orcid.org/0009-0008-0159-1718" target="_blank" rel="noopener noreferrer">0009-0008-0159-1718</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="disclaimer">
+    <strong>Note on scope.</strong> CRN is a testable computational hypothesis, not a claim of microscopic quantum coherence in neural tissue. The GKSL formalism is used as a functional proxy for wave-like dynamics with tunable damping. We actively seek critical feedback and experimental collaboration.
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="wrap">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Occam Research</div>
+      <div class="footer-brand-sub">Computational neuroscience at the intersection of open quantum systems and biological connectomics.</div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Organisms</h4>
+        <a href="human.html">Human Connectome</a>
+        <a href="elegans.html">C. elegans</a>
+        <a href="drosophila.html">Drosophila</a>
+        <a href="mouse.html">Mouse Proxy</a>
+      </div>
+      <div class="footer-col">
+        <h4>External</h4>
+        <a href="https://github.com/ovdspb-code/CRN_4.1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://doi.org/10.5281/zenodo.18249250" target="_blank" rel="noopener noreferrer">Zenodo</a>
+        <a href="https://orcid.org/0009-0008-0159-1718" target="_blank" rel="noopener noreferrer">ORCID</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Occam Research</span>
+    <span><a href="https://occam.world" target="_blank" rel="noopener noreferrer">occam.world</a> &middot; CRN Interactive v4.0</span>
+  </div>
+</div>
+</footer>
+
+<script>
+const icons = {
+  human:     {emoji:'🧠', bg:'var(--accent-light)'},
+  drosophila:{emoji:'🥰', bg:'var(--teal-light)'},
+  elegans:   {emoji:'🥱', bg:'var(--warm-light)'},
+  mouse:     {emoji:'🐭', bg:'var(--coral-light)'},
+};
+fetch('pages.json').then(r=>r.json()).then(pages => {
+  const grid = document.getElementById('cardGrid');
+  pages.forEach(p => {
+    const ic = icons[p.id] || {emoji:'📊', bg:'var(--surface-alt)'};
+    const card = document.createElement('a');
+    card.href = p.id + '.html';
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="card-icon" style="background:${ic.bg}">${ic.emoji}</div>
+      <h3>${p.title}</h3>
+      <p>${p.desc}</p>
+      <div class="card-meta">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      <div class="card-date">${p.date}</div>
+    `;
+    grid.appendChild(card);
+  });
+}).catch(() => {
+  document.getElementById('cardGrid').innerHTML = '<p style="color:var(--text-3);font-size:var(--text-sm)">Could not load pages.json. If viewing locally, use a simple HTTP server: <code>python -m http.server</code></p>';
+});
+
+// ===== PUBLICATIONS from publications.json =====
+fetch('publications.json').then(r=>r.json()).then(data => {
+  const meta = document.querySelector('.pubs-meta');
+  meta.textContent = `Updated ${data.updated} · ${data.publications.length} works · Source: ${data.source}`;
+  const list = document.getElementById('pubsList');
+  list.innerHTML = '';
+
+  const statusLabels = {
+    under_review: { label: 'Under Review', cls: 'review' },
+    preprint: { label: 'Preprint', cls: 'preprint' },
+    published: { label: 'Published', cls: 'dataset' }
+  };
+  const typeLabels = {
+    preprint: 'preprint',
+    dataset: 'dataset',
+    software: 'software'
+  };
+
+  // Sort: under_review first, then preprints, then rest; within group by date desc
+  const order = { under_review: 0, preprint: 1, published: 2 };
+  const sorted = [...data.publications].sort((a, b) => {
+    const oa = order[a.status] ?? 3, ob = order[b.status] ?? 3;
+    if (oa !== ob) return oa - ob;
+    return b.date.localeCompare(a.date);
+  });
+
+  sorted.forEach(pub => {
+    const st = statusLabels[pub.status] || { label: pub.status, cls: 'preprint' };
+    const typeCls = typeLabels[pub.type] || pub.type;
+    const tagCls = pub.type === 'preprint' ? st.cls : typeCls;
+    const tagLabel = pub.type === 'preprint' ? st.label : pub.type.charAt(0).toUpperCase() + pub.type.slice(1);
+    const year = pub.date ? pub.date.split('-')[0] : '';
+    const venue = pub.venue ? ` · ${pub.venue}` : '';
+
+    const linksHTML = Object.entries(pub.links || {}).map(([name, url]) => {
+      const label = name.charAt(0).toUpperCase() + name.slice(1);
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+    }).join('');
+
+    const el = document.createElement('div');
+    el.className = 'pub-item';
+    el.innerHTML = `
+      <span class="pub-tag ${tagCls}">${tagLabel}</span>
+      <div class="pub-title">${pub.title}</div>
+      <div class="pub-meta">${pub.authors} · ${year}${venue}</div>
+      <div class="pub-links">${linksHTML}</div>
+    `;
+    list.appendChild(el);
+  });
+}).catch(() => {
+  const s = document.getElementById('pubsSection');
+  if(s) s.querySelector('.pubs-meta').textContent = 'Could not load publications.json';
+});
+
+// ===== SCORECARD from scorecard.json =====
+fetch('scorecard.json').then(r=>r.json()).then(sc => {
+  const meta = document.querySelector('.scorecard-meta');
+  meta.textContent = `Updated ${sc.updated} · ${sc.version} · ${sc.trials} GKSL trials · ${sc.subjects} HCP subjects`;
+  const grid = document.getElementById('scorecardGrid');
+  grid.innerHTML = '';
+  sc.claims.forEach(c => {
+    const cls = c.score >= 80 ? 'high' : c.score >= 60 ? 'mid' : 'low';
+    const color = c.score >= 80 ? 'var(--teal)' : c.score >= 60 ? 'var(--warm)' : 'var(--coral)';
+    const gradEnd = c.score >= 80 ? 'var(--teal-light)' : c.score >= 60 ? 'var(--warm-light)' : 'var(--coral-light)';
+    const el = document.createElement('div');
+    el.className = 'sc-item';
+    el.innerHTML = `
+      <div class="sc-header">
+        <span class="sc-id">${c.id}</span>
+        <span class="sc-name">${c.name}</span>
+        <span class="sc-score ${cls}">${c.score}%</span>
+      </div>
+      <div class="sc-bar"><div class="sc-bar-fill" style="width:${c.score}%;background:linear-gradient(90deg, ${color}, ${color})"></div></div>
+      <div class="sc-desc">${c.desc}</div>
+      <div class="sc-evidence"><strong>Evidence:</strong> ${c.evidence}<br><strong>Gap:</strong> ${c.gap}</div>
+    `;
+    grid.appendChild(el);
+  });
+  const note = document.createElement('p');
+  note.style.cssText = 'font-size:var(--text-xs);color:var(--text-3);margin-top:var(--space-4);line-height:1.6;max-width:72ch';
+  note.textContent = sc.note;
+  grid.appendChild(note);
+}).catch(() => {
+  const s = document.getElementById('scorecardSection');
+  if(s) s.style.display = 'none';
+});
+</script>
+</body>
+</html>
