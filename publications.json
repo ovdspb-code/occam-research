@@ -1,20 +1,21 @@
 {
-  "updated": "2026-03-04",
+  "updated": "2026-03-06",
   "source": "ORCID 0009-0008-0159-1718 + manual curation",
   "publications": [
     {
       "id": "crn-core",
       "type": "preprint",
-      "status": "under_review",
-      "title": "Coherent-Resonant Netting: Disorder-Enhanced Selectivity from Transient Wave-like Dynamics on Biological Connectomes",
+      "status": "preprint",
+      "title": "Thermodynamic Advantage of Transient Coherent Dynamics in Hierarchical Decision Architectures: Coherent Resonant Netting (CRN) via Open System Formalism",
       "short": "CRN Core Paper",
       "authors": "O. Dolgikh",
       "date": "2026-01-14",
-      "venue": "Frontiers in Computational Neuroscience",
+      "venue": null,
       "doi": "10.5281/zenodo.18249250",
       "links": {
         "zenodo": "https://doi.org/10.5281/zenodo.18249250",
-        "researchgate": "https://www.researchgate.net/profile/Oleg-Dolgikh-3"
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6150569",
+        "researchgate": "https://www.researchgate.net/publication/399867871"
       }
     },
     {
@@ -29,7 +30,7 @@
       "doi": "10.5281/zenodo.18865478",
       "links": {
         "zenodo": "https://doi.org/10.5281/zenodo.18865478",
-        "researchgate": "https://www.researchgate.net/profile/Oleg-Dolgikh-3"
+        "researchgate": "https://www.researchgate.net/publication/401552887"
       }
     },
     {
@@ -44,7 +45,7 @@
       "doi": "10.5281/zenodo.18785552",
       "links": {
         "zenodo": "https://doi.org/10.5281/zenodo.18785552",
-        "researchgate": "https://www.researchgate.net/profile/Oleg-Dolgikh-3"
+        "researchgate": "https://www.researchgate.net/publication/401245088"
       }
     },
     {
@@ -72,7 +73,8 @@
       "venue": null,
       "doi": "10.5281/zenodo.18773244",
       "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18773244"
+        "zenodo": "https://doi.org/10.5281/zenodo.18773244",
+        "researchgate": "https://www.researchgate.net/publication/401205486"
       }
     },
     {
@@ -86,7 +88,23 @@
       "venue": "NBDT (Neurons, Behavior, Data and Theory)",
       "doi": "10.5281/zenodo.18520884",
       "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18520884"
+        "zenodo": "https://doi.org/10.5281/zenodo.18520884",
+        "researchgate": "https://www.researchgate.net/publication/400638253"
+      }
+    },
+    {
+      "id": "lindblad-preprint",
+      "type": "preprint",
+      "status": "preprint",
+      "title": "Thermodynamic Advantage of Transient Wave Dynamics in Hierarchical Decision Architectures: A Lindblad Formalism Approach",
+      "short": "Lindblad Formalism Paper",
+      "authors": "O. Dolgikh",
+      "date": "2026-01-08",
+      "venue": null,
+      "doi": "10.5281/zenodo.18189550",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18189550",
+        "researchgate": "https://www.researchgate.net/publication/399528998"
       }
     },
     {
