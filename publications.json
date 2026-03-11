@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-07",
+  "updated": "2026-03-11",
   "source": "ORCID 0009-0008-0159-1718 + manual curation",
   "publications": [
     {
@@ -220,6 +220,22 @@
       "links": {
         "zenodo": "https://doi.org/10.5281/zenodo.18433187"
       }
+    },
+    {
+      "id": "qrn-thermodynamic-motivation",
+      "type": "preprint",
+      "status": "preprint",
+      "title": "Quantum-Resonant Netting (QRN) Thermodynamic motivation, formal model of open wave dynamics on the cognitome, and validation program",
+      "short": "QRN (older name of CRN): thermodynamic motivation + open-system formal model on cognitome",
+      "authors": "O. Dolgikh",
+      "date": "2026-01-02",
+      "venue": null,
+      "doi": "10.5281/zenodo.18133404",
+      "links": [
+        "https://doi.org/10.5281/zenodo.18133404",
+        "https://zenodo.org/records/18133404",
+        "https://doi.org/10.5281/zenodo.18133403"
+      ]
     }
   ]
 }
