@@ -1,270 +1,284 @@
 {
-    "updated": "2026-03-11",
-    "source": "ORCID 0009-0008-0159-1718 + manual curation",
-    "publications": [
-        {
-            "id": "crn-fcn",
-            "type": "preprint",
-            "status": "preprint",
-            "title": "Rate-Matched Wave and Classical Transport on Connectome Motifs: Topology Dominates Selectivity While ENAQT Remains Wave-Specific",
-            "short": "CRN-FCN Rate Matching Paper",
-            "authors": "O. Dolgikh",
-            "date": "2026-03-11",
-            "venue": null,
-            "doi": "10.5281/zenodo.18960172",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18960172",
-                "researchgate": "https://www.researchgate.net/publication/401802742"
-            }
-        },
-        {
-            "id": "crn-fcn-data",
-            "type": "dataset",
-            "status": "published",
-            "title": "CRN_FCN_DATASET v1.1 — Rate-Matched Wave and Classical Transport on Connectome Motifs",
-            "short": "CRN-FCN Dataset",
-            "authors": "O. Dolgikh",
-            "date": "2026-03-11",
-            "venue": null,
-            "doi": "10.5281/zenodo.18959732",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18959732"
-            }
-        },
-        {
-            "id": "crn-ssrn",
-            "type": "preprint",
-            "status": "preprint",
-            "title": "Thermodynamic Advantage of Transient Wave Dynamics in Hierarchical Decision Architectures. Coherent Resonant Netting (CRN) via an Open-System Formalism",
-            "short": "CRN Open-System Formalism (SSRN)",
-            "authors": "O. Dolgikh",
-            "date": "2026-03-05",
-            "venue": "SSRN",
-            "doi": "10.2139/ssrn.6150569",
-            "links": {
-                "ssrn": "https://doi.org/10.2139/ssrn.6150569"
-            }
-        },
-        {
-            "id": "crn-core",
-            "type": "preprint",
-            "status": "preprint",
-            "title": "Thermodynamic Advantage of Transient Coherent Dynamics in Hierarchical Decision Architectures: Coherent Resonant Netting (CRN) via Open System Formalism",
-            "short": "CRN Core Paper",
-            "authors": "O. Dolgikh",
-            "date": "2026-01-14",
-            "venue": null,
-            "doi": "10.5281/zenodo.18249250",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18249250",
-                "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6150569",
-                "researchgate": "https://www.researchgate.net/publication/399867871"
-            }
-        },
-        {
-            "id": "readout-symmetry",
-            "type": "preprint",
-            "status": "preprint",
-            "title": "Target-Specific Readout Restores Bilateral Symmetry of Coherent Transport Selectivity Across 1064 Human Connectomes",
-            "short": "Readout Symmetry Paper",
-            "authors": "O. Dolgikh",
-            "date": "2026-03-04",
-            "venue": null,
-            "doi": "10.5281/zenodo.18865478",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18865478",
-                "researchgate": "https://www.researchgate.net/publication/401552887"
-            }
-        },
-        {
-            "id": "c5c-energy",
-            "type": "preprint",
-            "status": "preprint",
-            "title": "Energetic Efficiency of Two-Stage Wave–Commitment Decision Architecture: A Meta-Analytic Comparison with Drift-Diffusion Models",
-            "short": "C5c Energy Paper",
-            "authors": "O. Dolgikh",
-            "date": "2026-02-26",
-            "venue": null,
-            "doi": "10.5281/zenodo.18785552",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18785552",
-                "researchgate": "https://www.researchgate.net/publication/401245088"
-            }
-        },
-        {
-            "id": "c5c-energy-data",
-            "type": "dataset",
-            "status": "published",
-            "title": "Energetic Efficiency of Two-Stage Wave–Commitment Decision Architecture: Data, Code, and Figures",
-            "short": "C5c Energy Dataset",
-            "authors": "O. Dolgikh",
-            "date": "2026-02-26",
-            "venue": null,
-            "doi": "10.5281/zenodo.18785856",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18785856"
-            }
-        },
-        {
-            "id": "hcp-subgraphs",
-            "type": "preprint",
-            "status": "preprint",
-            "title": "Noise-Assisted Transport Windows in Human Connectome Subgraphs: Evidence from Basal Ganglia and Motor Pathways",
-            "short": "HCP Subgraphs Paper",
-            "authors": "O. Dolgikh",
-            "date": "2026-02-25",
-            "venue": null,
-            "doi": "10.5281/zenodo.18773244",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18773244",
-                "researchgate": "https://www.researchgate.net/publication/401205486"
-            }
-        },
-        {
-            "id": "icc-paper",
-            "type": "preprint",
-            "status": "under_review",
-            "title": "Hidden Pseudoreplication in Disorder-Averaged Transport Simulations on Parcellated Connectomes",
-            "short": "ICC Paper",
-            "authors": "O. Dolgikh",
-            "date": "2026-02-07",
-            "venue": "NBDT (Neurons, Behavior, Data and Theory)",
-            "doi": "10.5281/zenodo.18520884",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18520884",
-                "researchgate": "https://www.researchgate.net/publication/400638253"
-            }
-        },
-        {
-            "id": "lindblad-preprint",
-            "type": "preprint",
-            "status": "preprint",
-            "title": "Thermodynamic Advantage of Transient Wave Dynamics in Hierarchical Decision Architectures: A Lindblad Formalism Approach",
-            "short": "Lindblad Formalism Paper",
-            "authors": "O. Dolgikh",
-            "date": "2026-01-08",
-            "venue": null,
-            "doi": "10.5281/zenodo.18189550",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18189550",
-                "researchgate": "https://www.researchgate.net/publication/399528998"
-            }
-        },
-        {
-            "id": "drosophila-data",
-            "type": "dataset",
-            "status": "published",
-            "title": "CRN Drosophila Larva Mushroom-Body Benchmark: Simulation Artifacts and Derived Data",
-            "short": "Drosophila Benchmark Data",
-            "authors": "O. Dolgikh",
-            "date": "2026-02-19",
-            "venue": null,
-            "doi": "10.5281/zenodo.18697117",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18697117"
-            }
-        },
-        {
-            "id": "egt-paper",
-            "type": "dataset",
-            "status": "published",
-            "title": "Evolutionary Game Theory Reveals Modular Specialization as a Universal Solution to Neural Trade-offs",
-            "short": "EGT Paper",
-            "authors": "O. Dolgikh",
-            "date": "2026-01-26",
-            "venue": null,
-            "doi": "10.5281/zenodo.18379851",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18379851"
-            }
-        },
-        {
-            "id": "crn-sim",
-            "type": "software",
-            "status": "published",
-            "title": "CRN_SIM: Simulation Suite for Coherent Resonant Netting",
-            "short": "CRN_SIM Code",
-            "authors": "O. Dolgikh",
-            "date": "2026-01-19",
-            "venue": null,
-            "doi": "10.5281/zenodo.18248773",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18248773",
-                "github": "https://github.com/ovdspb-code"
-            }
-        },
-        {
-            "id": "crn-hcp-enaqt",
-            "type": "software",
-            "status": "published",
-            "title": "CRN-HCP-ENAQT: Noise-Assisted Transport in Human Connectome Subgraphs",
-            "short": "CRN-HCP-ENAQT Code",
-            "authors": "O. Dolgikh",
-            "date": "2026-02-07",
-            "venue": null,
-            "doi": "10.5281/zenodo.18519173",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18519173",
-                "github": "https://github.com/ovdspb-code"
-            }
-        },
-        {
-            "id": "crn-sim-r12",
-            "type": "software",
-            "status": "published",
-            "title": "CRN_Sim (R12-CROWN): Supplementary simulation suite and artifacts for CRN",
-            "short": "CRN_SIM R12-CROWN",
-            "authors": "O. Dolgikh",
-            "date": "2026-02-14",
-            "venue": null,
-            "doi": "10.5281/zenodo.18338260",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18338260"
-            }
-        },
-        {
-            "id": "elegans-data",
-            "type": "dataset",
-            "status": "published",
-            "title": "CRN: C. elegans Touch Circuit Simulation Artifacts",
-            "short": "C. elegans Data",
-            "authors": "O. Dolgikh",
-            "date": "2026-01-30",
-            "venue": null,
-            "doi": "10.5281/zenodo.18432681",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18432681"
-            }
-        },
-        {
-            "id": "mouse-data",
-            "type": "dataset",
-            "status": "published",
-            "title": "CRN: Mouse cortical proxy simulation artifacts (step2–step6 release candidate)",
-            "short": "Mouse Proxy Data",
-            "authors": "O. Dolgikh",
-            "date": "2026-01-30",
-            "venue": null,
-            "doi": "10.5281/zenodo.18433187",
-            "links": {
-                "zenodo": "https://doi.org/10.5281/zenodo.18433187"
-            }
-        },
-        {
-            "id": "qrn-thermodynamic-motivation",
-            "type": "preprint",
-            "status": "preprint",
-            "title": "Quantum-Resonant Netting (QRN) Thermodynamic motivation, formal model of open wave dynamics on the cognitome, and validation program",
-            "short": "QRN (older name of CRN): thermodynamic motivation + open-system formal model on cognitome",
-            "authors": "O. Dolgikh",
-            "date": "2026-01-02",
-            "venue": null,
-            "doi": "10.5281/zenodo.18133404",
-            "links": [
-                "https://doi.org/10.5281/zenodo.18133404",
-                "https://zenodo.org/records/18133404",
-                "https://doi.org/10.5281/zenodo.18133403"
-            ]
-        }
-    ]
+  "updated": "2026-03-12",
+  "source": "ORCID 0009-0008-0159-1718 + manual curation",
+  "publications": [
+    {
+      "id": "enaqt-boundary-conditions-on-the-allen-m",
+      "type": "dataset",
+      "status": "preprint",
+      "title": "ENAQT Boundary Conditions on the Allen Mouse Cortex Connectome: Code, Data, and Figures",
+      "short": "ENAQT Boundary Conditions on the Allen Mouse Cortex Connectome: Code, Data, a...",
+      "authors": "O. Dolgikh",
+      "date": "2026-03-12",
+      "venue": null,
+      "doi": "10.5281/zenodo.18968563",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18968563"
+      }
+    },
+    {
+      "id": "crn-fcn",
+      "type": "preprint",
+      "status": "preprint",
+      "title": "Rate-Matched Wave and Classical Transport on Connectome Motifs: Topology Dominates Selectivity While ENAQT Remains Wave-Specific",
+      "short": "CRN-FCN Rate Matching Paper",
+      "authors": "O. Dolgikh",
+      "date": "2026-03-11",
+      "venue": null,
+      "doi": "10.5281/zenodo.18960172",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18960172",
+        "researchgate": "https://www.researchgate.net/publication/401802742"
+      }
+    },
+    {
+      "id": "crn-fcn-data",
+      "type": "dataset",
+      "status": "published",
+      "title": "CRN_FCN_DATASET v1.1 — Rate-Matched Wave and Classical Transport on Connectome Motifs",
+      "short": "CRN-FCN Dataset",
+      "authors": "O. Dolgikh",
+      "date": "2026-03-11",
+      "venue": null,
+      "doi": "10.5281/zenodo.18959732",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18959732"
+      }
+    },
+    {
+      "id": "crn-ssrn",
+      "type": "preprint",
+      "status": "preprint",
+      "title": "Thermodynamic Advantage of Transient Wave Dynamics in Hierarchical Decision Architectures. Coherent Resonant Netting (CRN) via an Open-System Formalism",
+      "short": "CRN Open-System Formalism (SSRN)",
+      "authors": "O. Dolgikh",
+      "date": "2026-03-05",
+      "venue": "SSRN",
+      "doi": "10.2139/ssrn.6150569",
+      "links": {
+        "ssrn": "https://doi.org/10.2139/ssrn.6150569"
+      }
+    },
+    {
+      "id": "crn-core",
+      "type": "preprint",
+      "status": "preprint",
+      "title": "Thermodynamic Advantage of Transient Coherent Dynamics in Hierarchical Decision Architectures: Coherent Resonant Netting (CRN) via Open System Formalism",
+      "short": "CRN Core Paper",
+      "authors": "O. Dolgikh",
+      "date": "2026-01-14",
+      "venue": null,
+      "doi": "10.5281/zenodo.18249250",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18249250",
+        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6150569",
+        "researchgate": "https://www.researchgate.net/publication/399867871"
+      }
+    },
+    {
+      "id": "readout-symmetry",
+      "type": "preprint",
+      "status": "preprint",
+      "title": "Target-Specific Readout Restores Bilateral Symmetry of Coherent Transport Selectivity Across 1064 Human Connectomes",
+      "short": "Readout Symmetry Paper",
+      "authors": "O. Dolgikh",
+      "date": "2026-03-04",
+      "venue": null,
+      "doi": "10.5281/zenodo.18865478",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18865478",
+        "researchgate": "https://www.researchgate.net/publication/401552887"
+      }
+    },
+    {
+      "id": "c5c-energy",
+      "type": "preprint",
+      "status": "preprint",
+      "title": "Energetic Efficiency of Two-Stage Wave–Commitment Decision Architecture: A Meta-Analytic Comparison with Drift-Diffusion Models",
+      "short": "C5c Energy Paper",
+      "authors": "O. Dolgikh",
+      "date": "2026-02-26",
+      "venue": null,
+      "doi": "10.5281/zenodo.18785552",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18785552",
+        "researchgate": "https://www.researchgate.net/publication/401245088"
+      }
+    },
+    {
+      "id": "c5c-energy-data",
+      "type": "dataset",
+      "status": "published",
+      "title": "Energetic Efficiency of Two-Stage Wave–Commitment Decision Architecture: Data, Code, and Figures",
+      "short": "C5c Energy Dataset",
+      "authors": "O. Dolgikh",
+      "date": "2026-02-26",
+      "venue": null,
+      "doi": "10.5281/zenodo.18785856",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18785856"
+      }
+    },
+    {
+      "id": "hcp-subgraphs",
+      "type": "preprint",
+      "status": "preprint",
+      "title": "Noise-Assisted Transport Windows in Human Connectome Subgraphs: Evidence from Basal Ganglia and Motor Pathways",
+      "short": "HCP Subgraphs Paper",
+      "authors": "O. Dolgikh",
+      "date": "2026-02-25",
+      "venue": null,
+      "doi": "10.5281/zenodo.18773244",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18773244",
+        "researchgate": "https://www.researchgate.net/publication/401205486"
+      }
+    },
+    {
+      "id": "icc-paper",
+      "type": "preprint",
+      "status": "under_review",
+      "title": "Hidden Pseudoreplication in Disorder-Averaged Transport Simulations on Parcellated Connectomes",
+      "short": "ICC Paper",
+      "authors": "O. Dolgikh",
+      "date": "2026-02-07",
+      "venue": "NBDT (Neurons, Behavior, Data and Theory)",
+      "doi": "10.5281/zenodo.18520884",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18520884",
+        "researchgate": "https://www.researchgate.net/publication/400638253"
+      }
+    },
+    {
+      "id": "lindblad-preprint",
+      "type": "preprint",
+      "status": "preprint",
+      "title": "Thermodynamic Advantage of Transient Wave Dynamics in Hierarchical Decision Architectures: A Lindblad Formalism Approach",
+      "short": "Lindblad Formalism Paper",
+      "authors": "O. Dolgikh",
+      "date": "2026-01-08",
+      "venue": null,
+      "doi": "10.5281/zenodo.18189550",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18189550",
+        "researchgate": "https://www.researchgate.net/publication/399528998"
+      }
+    },
+    {
+      "id": "drosophila-data",
+      "type": "dataset",
+      "status": "published",
+      "title": "CRN Drosophila Larva Mushroom-Body Benchmark: Simulation Artifacts and Derived Data",
+      "short": "Drosophila Benchmark Data",
+      "authors": "O. Dolgikh",
+      "date": "2026-02-19",
+      "venue": null,
+      "doi": "10.5281/zenodo.18697117",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18697117"
+      }
+    },
+    {
+      "id": "egt-paper",
+      "type": "dataset",
+      "status": "published",
+      "title": "Evolutionary Game Theory Reveals Modular Specialization as a Universal Solution to Neural Trade-offs",
+      "short": "EGT Paper",
+      "authors": "O. Dolgikh",
+      "date": "2026-01-26",
+      "venue": null,
+      "doi": "10.5281/zenodo.18379851",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18379851"
+      }
+    },
+    {
+      "id": "crn-sim",
+      "type": "software",
+      "status": "published",
+      "title": "CRN_SIM: Simulation Suite for Coherent Resonant Netting",
+      "short": "CRN_SIM Code",
+      "authors": "O. Dolgikh",
+      "date": "2026-01-19",
+      "venue": null,
+      "doi": "10.5281/zenodo.18248773",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18248773",
+        "github": "https://github.com/ovdspb-code"
+      }
+    },
+    {
+      "id": "crn-hcp-enaqt",
+      "type": "software",
+      "status": "published",
+      "title": "CRN-HCP-ENAQT: Noise-Assisted Transport in Human Connectome Subgraphs",
+      "short": "CRN-HCP-ENAQT Code",
+      "authors": "O. Dolgikh",
+      "date": "2026-02-07",
+      "venue": null,
+      "doi": "10.5281/zenodo.18519173",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18519173",
+        "github": "https://github.com/ovdspb-code"
+      }
+    },
+    {
+      "id": "crn-sim-r12",
+      "type": "software",
+      "status": "published",
+      "title": "CRN_Sim (R12-CROWN): Supplementary simulation suite and artifacts for CRN",
+      "short": "CRN_SIM R12-CROWN",
+      "authors": "O. Dolgikh",
+      "date": "2026-02-14",
+      "venue": null,
+      "doi": "10.5281/zenodo.18338260",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18338260"
+      }
+    },
+    {
+      "id": "elegans-data",
+      "type": "dataset",
+      "status": "published",
+      "title": "CRN: C. elegans Touch Circuit Simulation Artifacts",
+      "short": "C. elegans Data",
+      "authors": "O. Dolgikh",
+      "date": "2026-01-30",
+      "venue": null,
+      "doi": "10.5281/zenodo.18432681",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18432681"
+      }
+    },
+    {
+      "id": "mouse-data",
+      "type": "dataset",
+      "status": "published",
+      "title": "CRN: Mouse cortical proxy simulation artifacts (step2–step6 release candidate)",
+      "short": "Mouse Proxy Data",
+      "authors": "O. Dolgikh",
+      "date": "2026-01-30",
+      "venue": null,
+      "doi": "10.5281/zenodo.18433187",
+      "links": {
+        "zenodo": "https://doi.org/10.5281/zenodo.18433187"
+      }
+    },
+    {
+      "id": "qrn-thermodynamic-motivation",
+      "type": "preprint",
+      "status": "preprint",
+      "title": "Quantum-Resonant Netting (QRN) Thermodynamic motivation, formal model of open wave dynamics on the cognitome, and validation program",
+      "short": "QRN (older name of CRN): thermodynamic motivation + open-system formal model on cognitome",
+      "authors": "O. Dolgikh",
+      "date": "2026-01-02",
+      "venue": null,
+      "doi": "10.5281/zenodo.18133404",
+      "links": [
+        "https://doi.org/10.5281/zenodo.18133404",
+        "https://zenodo.org/records/18133404",
+        "https://doi.org/10.5281/zenodo.18133403"
+      ]
+    }
+  ]
 }
