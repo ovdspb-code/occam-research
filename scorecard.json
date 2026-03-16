@@ -1,65 +1,279 @@
 {
-  "updated": "2026-02-10",
-  "version": "v3",
-  "trials": "518K",
-  "subjects": 100,
+  "updated": "2026-03-16",
+  "version": "v10",
+  "trials": "~520K GKSL + ~741K DDM MC + ~741K WW",
+  "subjects": 1064,
+  "subjects_invU": 741,
   "note": "Scores are updated with each new data package. Scale: 0% = no data / falsified, 100% = reproducible with controls, falsifiable, pre-registered.",
+  "changelog": "v6→v10: DDM Monte-Carlo, Wong-Wang attractor, spatial routing falsification, flux-bridge confirmation. P1 +27, C4 +13, C5 +7, P3 +5, C1 +2. New claim H11.",
   "claims": [
     {
+      "id": "P1",
+      "level": "L1",
+      "name": "Two-Stage Architecture",
+      "desc": "Stage-I netting (GKSL transport) + Stage-II fixation (DDM or attractor commitment).",
+      "score": 70,
+      "prev": 43,
+      "delta": "+27",
+      "evidence": "DDM MC (N=741, 1000 trials/subj): d=-1.34, 90.8% faster, ΔRT=-12ms, Δacc=+2.7%. WW attractor (N=741, 500 trials/subj): d=-1.84, 96.6% faster, ΔRT=-111ms, Δacc=+6.7%. G_log dose-response r≈0.5. Topology disruption DDM: MS 84%, WS 100%. Flux-bridge confirmed 22/22. CRN bias = starting-point prior.",
+      "gap": "β/κ not biophysically calibrated. I₀=0.38 near-bifurcation. One dataset (HCP). r²≈0.27 (73% variance unexplained).",
+      "next": "ε-sweep × G_log correlation, biophysical κ calibration, second dataset (Drosophila MB closed-loop)."
+    },
+    {
       "id": "P2",
+      "level": "L1",
       "name": "GKSL as Stage-I proxy",
       "desc": "Lindblad open-system formalism correctly interpolates between coherent and diffusive regimes on biological graphs.",
-      "score": 82,
-      "evidence": "518K trials across 6 disorder levels without numerical artifacts. CTRW ≡ 0 everywhere (9600 trials). Clear GKSL vs classical separation.",
-      "gap": "Alternative wave proxies (telegraph equation) not yet tested."
+      "score": 87,
+      "prev": 87,
+      "delta": "0",
+      "evidence": "~520K trials across 6 disorder levels. CTRW ≡ 0. Block2 hierarchy: telegraph 0/20, Schrödinger 72/100, GKSL 100/100.",
+      "gap": "Alternative wave proxies limited to telegraph only."
+    },
+    {
+      "id": "P3",
+      "level": "L1",
+      "name": "Mechanistic Neutrality",
+      "desc": "CRN scalar R₀ interface is substrate-neutral — any transport mechanism generating R₀ feeds commitment.",
+      "score": 70,
+      "prev": 65,
+      "delta": "+5",
+      "evidence": "WW results: CRN bias = starting-point prior, not coherence-specific channel. Three-component model (transport × label × commitment) neutral to substrate. Block2: telegraph 0/20 → Schrödinger 72/100 → GKSL 100/100.",
+      "gap": "Only GKSL tested as full Stage-I source. No alternative transport mechanism producing nonzero R₀."
     },
     {
       "id": "C1",
-      "name": "Two-factor mechanism",
-      "desc": "Stage-I efficiency depends on the interaction of partial coherence and graph topology.",
-      "score": 75,
-      "evidence": "Confirmed on 3 model organisms + 100 HCP subjects. Rewiring controls attenuate the effect. CTRW anti-baseline decisive.",
-      "gap": "No experimental confirmation. Small effect on some dense graphs."
+      "level": "L2",
+      "name": "Four-Factor Mechanism",
+      "desc": "Stage-I efficiency depends on interaction of partial coherence, graph topology, disorder, and commitment topology.",
+      "score": 85,
+      "prev": 83,
+      "delta": "+2",
+      "evidence": "WW dose-response r≈0.5 confirms graded dependence. DDM + WW = two commitment topologies, both work. 3 organisms + 741 HCP subjects.",
+      "gap": "No experimental confirmation. Fourth factor (commitment topology) tested with only two models."
     },
     {
       "id": "C2",
-      "name": "Disorder-enhanced selectivity (DES)",
-      "desc": "Moderate disorder ε improves target selectivity via inverted-U, suppressing distractor paths more than target paths.",
-      "score": 55,
-      "evidence": "Works on micro-connectomes (Drosophila, C. elegans). On human DTI: DES = 56% topology + 26% weight-specific (p=0.002). 90% of subjects show DES at ε=1–2.",
-      "gap": "No DES on dense macro-connectomes. Scale-dependent boundary unclear."
+      "level": "L2",
+      "name": "Disorder-Enhanced Selectivity (DES)",
+      "desc": "Moderate disorder ε improves target selectivity via inverted-U.",
+      "score": 68,
+      "prev": 68,
+      "delta": "0",
+      "evidence": "Works on micro-connectomes. DES = 56% topology + 26% weight-specific (p=0.002). MB Perm v5b running.",
+      "gap": "DDM/WW tests at ε=0 only. DES ε-sweep not tested in closed-loop."
     },
     {
       "id": "C3",
-      "name": "ENAQT window (inverted-U in κ)",
-      "desc": "There exists an optimal dephasing rate κ* that maximizes transport to targets — neither fully coherent nor fully classical.",
-      "score": 90,
-      "evidence": "7-point κ grid + ICC fix + CTRW null. Inverted-U confirmed in 91/100 HCP subjects and all 3 model organisms. Rock-solid.",
+      "level": "L2",
+      "name": "ENAQT Window (inverted-U in κ)",
+      "desc": "Optimal dephasing rate κ* maximizes transport — neither fully coherent nor fully classical.",
+      "score": 95,
+      "prev": 95,
+      "delta": "0",
+      "evidence": "7-point κ grid + ICC fix + CTRW null. 741/1064 invU (70%). G median=0.78. Rock-solid.",
       "gap": "Single DTI modality. No experimental dephasing manipulation."
     },
     {
       "id": "C4",
-      "name": "Topology dependence",
-      "desc": "ENAQT gain depends on native connectome topology — degree-preserving weight shuffle destroys the advantage in gating circuits.",
-      "score": 72,
-      "evidence": "T2 (gating): ΔG = +0.51–0.57, d = 1.2–1.5. T3 (relay): ΔG ≈ 0. Mechanistic predictors M2/M5 identified. Surrogate controls + betweenness-freeze.",
-      "gap": "M2/M5 causal link not tested by direct intervention."
+      "level": "L2",
+      "name": "Topology Dependence",
+      "desc": "ENAQT gain depends on native connectome topology — disruption destroys advantage.",
+      "score": 90,
+      "prev": 77,
+      "delta": "+13",
+      "evidence": "Gate1c (5 subj × 12 seeds): MS 99.5% (428/430), WS 94.4% (406/430). DDM topology disruption: MS 84%, WS 100%. Two independent tests (GKSL + DDM).",
+      "gap": "Predictive model ΔG~f(graph) absent. MB permutation pending. N>5 needed for DDM topology disruption."
+    },
+    {
+      "id": "C5",
+      "level": "L2",
+      "name": "Energy Advantage",
+      "desc": "CRN architecture saves energy through faster commitment at equal or better accuracy.",
+      "score": 55,
+      "prev": 48,
+      "delta": "+7",
+      "evidence": "DDM accuracy-matched: ΔRT=-12ms, 100% faster at equal P. WW: 96.6% faster + 96.9% more accurate. Fewer errors = fewer repeat trials.",
+      "gap": "No explicit energy accounting (joules). No comparison with alternative architectures."
     },
     {
       "id": "H1",
-      "name": "ENAQT in human connectomes",
-      "desc": "Environment-assisted transport operates on macro-scale DTI connectomes, not only micro-connectomes.",
-      "score": 85,
-      "evidence": "100 HCP subjects, 518K GKSL trials. Consolidated across P0–P4 validation blocks. ICC = 0.914 rank stability.",
-      "gap": "Single imaging modality (DTI). No fMRI/MEG cross-validation."
+      "level": "L3",
+      "name": "ENAQT on human DTI connectome",
+      "desc": "Environment-assisted transport operates on macro-scale DTI connectomes.",
+      "score": 95,
+      "prev": 95,
+      "delta": "0",
+      "evidence": "1064 HCP subjects, ~520K GKSL trials. 741 invU (70%). ICC = 0.914.",
+      "gap": "Single imaging modality (DTI)."
     },
     {
-      "id": "B2",
-      "name": "Mechanistic hierarchy",
-      "desc": "Classical waves → 0% inverted-U; Schrödinger + dephasing → 72%; full GKSL → 100%. Quantum formalism required for complete expression.",
+      "id": "H2",
+      "level": "L3",
+      "name": "Containment (T3)",
+      "score": 15,
+      "prev": 15,
+      "delta": "0",
+      "desc": "Near falsified.",
+      "evidence": "T3 containment not supported.",
+      "gap": ""
+    },
+    {
+      "id": "H3a",
+      "level": "L3",
+      "name": "DES on T2",
+      "score": 72,
+      "prev": 72,
+      "delta": "0",
+      "desc": "DES confirmed on gating (T2) circuits.",
+      "evidence": "DES = 56% topology + 26% weight-specific.",
+      "gap": ""
+    },
+    {
+      "id": "H3b",
+      "level": "L3",
+      "name": "No DES on T3",
+      "score": 78,
+      "prev": 78,
+      "delta": "0",
+      "desc": "No DES on relay (T3) circuits.",
+      "evidence": "Confirmed on T3 circuits.",
+      "gap": ""
+    },
+    {
+      "id": "H4",
+      "level": "L3",
+      "name": "Gain vs CRW (full)",
+      "score": 40,
+      "prev": 40,
+      "delta": "0",
+      "desc": "Full gain comparison vs continuous random walk.",
+      "evidence": "Limited.",
+      "gap": "Not tested at scale."
+    },
+    {
+      "id": "H5",
+      "level": "L3",
+      "name": "κ-grid adequacy",
+      "score": 95,
+      "prev": 95,
+      "delta": "0",
+      "desc": "7-point κ grid sufficient to capture inverted-U.",
+      "evidence": "Settled.",
+      "gap": ""
+    },
+    {
+      "id": "H6",
+      "level": "L3",
+      "name": "Pathway specificity",
+      "score": 80,
+      "prev": 80,
+      "delta": "0",
+      "desc": "ENAQT advantage is pathway-specific within connectomes.",
+      "evidence": "Confirmed across basal ganglia and motor pathways.",
+      "gap": ""
+    },
+    {
+      "id": "H7",
+      "level": "L3",
+      "name": "DES topology-driven",
       "score": 70,
-      "evidence": "Telegraph batch (20 subj): 0/20 inverted-U. Schrödinger batch (100 subj): 72% [63–81% CI]. GKSL: 100/100.",
-      "gap": "Telegraph tested on 20 subjects only. Intermediate formalisms not explored."
+      "prev": 70,
+      "delta": "0",
+      "desc": "DES depends on topology, not just disorder level.",
+      "evidence": "MB Perm v5b pending.",
+      "gap": "Pending v5b results."
+    },
+    {
+      "id": "H8",
+      "level": "L3",
+      "name": "T3 emerging ws",
+      "score": 45,
+      "prev": 45,
+      "delta": "0",
+      "desc": "T3 effect emerging with weight-specific analysis.",
+      "evidence": "Preliminary.",
+      "gap": ""
+    },
+    {
+      "id": "H9",
+      "level": "L3",
+      "name": "Bilateral symmetry",
+      "score": 70,
+      "prev": 70,
+      "delta": "0",
+      "desc": "ENAQT selectivity shows bilateral symmetry across hemispheres.",
+      "evidence": "T3R fix pending.",
+      "gap": "T3R fix pending."
+    },
+    {
+      "id": "H10",
+      "level": "L3",
+      "name": "Mouse ENAQT-negative",
+      "score": 60,
+      "prev": 60,
+      "delta": "0",
+      "desc": "Mouse cortex connectome does not show inverted-U (ENAQT-negative).",
+      "evidence": "0/37 invU. Predictor: λ₂>1 AND 0.2<CV<0.5.",
+      "gap": ""
+    },
+    {
+      "id": "H_le",
+      "level": "L3",
+      "name": "Label field necessity",
+      "score": 65,
+      "prev": 65,
+      "delta": "0",
+      "desc": "Label field is necessary for target-specific transport.",
+      "evidence": "Confirmed in model.",
+      "gap": ""
+    },
+    {
+      "id": "H11",
+      "level": "L3",
+      "name": "Closed-loop decision advantage",
+      "score": 75,
+      "prev": "—",
+      "delta": "new",
+      "desc": "Stage-I ENAQT transport, via scalar R₀ interface, accelerates Stage-II commitment in two independent formalisms (DDM, Wong-Wang) at cohort scale (N=741).",
+      "evidence": "DDM MC d=-1.34, 90.8% wins. WW d=-1.84, 96.6% wins. Topology disruption destroys advantage. G_log dose-response r≈0.5.",
+      "gap": "β/κ not calibrated. One dataset. Starting-point prior, not drift. No in vivo behavioral correlate."
     }
-  ]
+  ],
+  "level_averages": {
+    "L1_architecture": {
+      "v6": 65,
+      "v10": 76,
+      "delta": "+11"
+    },
+    "L2_core_claims": {
+      "v6": 74,
+      "v10": 79,
+      "delta": "+5"
+    },
+    "L3_human": {
+      "v6": 68,
+      "v10": 69,
+      "delta": "+1"
+    }
+  },
+  "key_numbers": {
+    "gksl_trials": "~520K",
+    "ctrw_trials": 9600,
+    "hcp_subjects": 1064,
+    "invU_subjects": 741,
+    "ddm_mc_trials": "~741K",
+    "ww_trials": "~741K",
+    "ratio100_rows": 35112,
+    "ddm_cohen_d": -1.34,
+    "ddm_pct_faster": 90.8,
+    "ww_cohen_d": -1.84,
+    "ww_pct_faster": 96.6,
+    "glog_r_drt": -0.52,
+    "glog_r_dacc": 0.47,
+    "gate1c_ms": "99.5%",
+    "gate1c_ws": "94.4%",
+    "screening_invU_pct": "70%",
+    "g_median": 0.78
+  }
 }
