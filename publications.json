@@ -1,7 +1,30 @@
 {
-  "updated": "2026-03-12",
+  "updated": "2026-03-17",
   "source": "ORCID 0009-0008-0159-1718 + manual curation",
   "publications": [
+    {
+      "id": "crn-stage2-hcp-1064-dataset",
+      "type": "dataset",
+      "status": "published",
+      "title": "CRN Stage-II Dataset: Transport-derived decision bias on 1064 HCP connectomes",
+      "short": "Stage-II: decision bias from transport interface A on 1064 HCP connectomes",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "date": "2026-03-16",
+      "venue": "Zenodo",
+      "doi": "10.5281/zenodo.19056201",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.5281/zenodo.19056201"
+        },
+        {
+          "label": "Zenodo record",
+          "url": "https://zenodo.org/records/19056201"
+        }
+      ]
+    },
     {
       "id": "enaqt-boundary-conditions-on-the-allen-m",
       "type": "dataset",
