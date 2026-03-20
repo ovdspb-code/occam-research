@@ -1,7 +1,26 @@
 {
-  "updated": "2026-03-19",
+  "updated": "2026-03-20",
   "source": "ORCID 0009-0008-0159-1718 + manual curation",
   "publications": [
+    {
+      "id": "10-5281-zenodo-19119411",
+      "type": "dataset",
+      "status": "published",
+      "title": "Data and Code for \"From Whole-Brain Nulls to Motif-Scale Mechanisms: Structural Regimes of Coherent Transport Advantage in Human Connectomes\"",
+      "short": "ORCID import (Zenodo)",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "date": "2026-03-20",
+      "venue": "Zenodo",
+      "doi": "10.5281/zenodo.19119411",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.5281/zenodo.19119411"
+        }
+      ]
+    },
     {
       "id": "ssrn-6353239",
       "type": "preprint",
