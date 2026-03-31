@@ -1,7 +1,37 @@
 {
-  "updated": "2026-03-26",
+  "updated": "2026-03-31",
   "source": "ORCID 0009-0008-0159-1718 + manual curation",
   "publications": [
+    {
+      "title": "Parameter A as a Motif-Scale Transport Coordinate: Target Vulnerability and Central-Path Modulation on Human Routing Motifs",
+      "doi": "10.5281/zenodo.19339775",
+      "type": "preprint",
+      "year": null,
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "source": "ORCID"
+    },
+    {
+      "title": "Parameter A as a Motif-Scale Transport Coordinate: Target Vulnerability and Central-Path Modulation on Human Routing Motifs",
+      "doi": "10.5281/zenodo.19331897",
+      "type": "preprint",
+      "year": null,
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "source": "ORCID"
+    },
+    {
+      "title": "Entropy-Informed Coherence Costs on Connectome Routing Motifs: A Markovian Reference Surface for Dephasing-Assisted Transport",
+      "doi": "10.5281/zenodo.19340280",
+      "type": "preprint",
+      "year": null,
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "source": "ORCID"
+    },
     {
       "id": "crn-ssrn",
       "type": "preprint",
