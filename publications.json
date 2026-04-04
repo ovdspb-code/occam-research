@@ -1,7 +1,14 @@
 {
-  "updated": "2026-03-31",
+  "updated": "2026-04-04",
   "source": "ORCID 0009-0008-0159-1718 + manual curation",
   "publications": [
+    {
+      "title": "Verace: A Deterministic Conflict Detection Pipeline Architecture for Enterprise Knowledge Bases",
+      "doi": "10.5281/zenodo.19402811",
+      "type": "preprint",
+      "source": "orcid",
+      "added": "2026-04-04"
+    },
     {
       "title": "Parameter A as a Motif-Scale Transport Coordinate: Target Vulnerability and Central-Path Modulation on Human Routing Motifs",
       "doi": "10.5281/zenodo.19339775",
