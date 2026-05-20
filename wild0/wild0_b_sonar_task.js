@@ -3,7 +3,7 @@
 
   const CONFIG = {
     task_id: "WILD0_B1_sonar_triage",
-    version: "2.10.1-occam",
+    version: "2.10.2-occam",
     base_rate: 0.25,
     noise_model: {
       sensitivity: 0.85,
@@ -76,6 +76,7 @@
   let hasDownloaded = false;
   let hasUploaded = false;
   let uploadInFlight = false;
+  let lastUploadStartedAt = null;
   let hoverTimer = null;
   const configCache = new Map();
 
@@ -1719,6 +1720,7 @@
     session.trials.push(exportTrial);
     session.current_plan_index += 1;
     autosaveSession();
+    if (session.upload_url) uploadSessionData(true, "trial_checkpoint");
     const msg = current.phase === "practice"
       ? `Practice feedback: ${qualitativeFeedback(current)}. Diagnostic stress checks are not included.`
       : `Round feedback: ${qualitativeFeedback(current)}. Diagnostic stress checks are not included.`;
@@ -1833,6 +1835,7 @@
     renderFinalReview();
     prepareFinishControls();
     autosaveSession();
+    if (session.upload_url) uploadSessionData(true, "task_finished");
   }
 
   function prepareFinishControls() {
@@ -1845,9 +1848,9 @@
       radio.addEventListener("change", onPerceivedEaseChange);
     }
     uploadRetryBtn.classList.toggle("hidden", !session?.upload_url);
-    uploadRetryBtn.addEventListener("click", () => uploadSessionData(true));
+    uploadRetryBtn.addEventListener("click", () => uploadSessionData(true, "manual_retry"));
     if (session?.upload_url) {
-      uploadNotice.textContent = "This hosted build will upload the session JSON after you answer the final question. You can still download a local copy.";
+      uploadNotice.textContent = "This hosted build uploads session JSON automatically during the task and again after the final question. You can still download a local copy.";
     } else {
       uploadNotice.textContent = "This public static build has no upload endpoint configured. Download the JSON file and keep it with the study records.";
     }
@@ -1866,7 +1869,7 @@
     autosaveSession();
     updateUploadStatus();
     updateDownloadButtons();
-    if (session.upload_url) uploadSessionData(false);
+    if (session.upload_url) uploadSessionData(true, "final_question");
   }
 
   function updateDownloadButtons() {
@@ -1885,7 +1888,7 @@
       return;
     }
     completionBtn.classList.remove("hidden");
-    completionBtn.disabled = !(session.upload_url && hasUploaded);
+    completionBtn.disabled = !(session.upload_url && hasUploaded && session.perceived_ease);
   }
 
   function updateUploadStatus(message = null, cls = "") {
@@ -1896,36 +1899,35 @@
       status.textContent = message;
       return;
     }
-    if (!session.perceived_ease) {
-      status.textContent = "Please answer the final question before upload/download.";
-      return;
-    }
     if (!session.upload_url) {
-      status.textContent = "Final question saved locally. Download the JSON to keep this session.";
+      status.textContent = session.perceived_ease
+        ? "Final question saved locally. Download the JSON to keep this session."
+        : "Please answer the final question, then download the JSON to keep this session.";
       return;
     }
     if (session.upload_status === "succeeded") {
       status.classList.add("ok");
-      status.textContent = "Upload succeeded. You may return to Prolific if this is a hosted session.";
+      status.textContent = session.perceived_ease
+        ? "Upload succeeded. You may return to Prolific if this is a hosted session."
+        : "Task data uploaded. Please answer the final question to complete the session.";
     } else if (session.upload_status === "failed") {
       status.classList.add("warn");
       status.textContent = "Upload failed. Please retry before returning to Prolific.";
     } else if (session.upload_status === "uploading") {
       status.textContent = "Uploading session data...";
     } else {
-      status.textContent = "Ready to upload after final question.";
+      status.textContent = "Automatic upload is configured.";
     }
   }
 
-  async function uploadSessionData(force = false) {
+  async function uploadSessionData(force = false, reason = "manual") {
     if (!session?.upload_url || uploadInFlight) return;
-    if (!session.perceived_ease) {
-      updateUploadStatus("Please answer the final question before upload.", "warn");
-      return;
-    }
     if (hasUploaded && !force) return;
     uploadInFlight = true;
+    lastUploadStartedAt = new Date().toISOString();
     session.upload_status = "uploading";
+    session.last_upload_reason = reason;
+    session.last_upload_started_at = lastUploadStartedAt;
     updateUploadStatus();
     autosaveSession();
     try {
@@ -1939,6 +1941,7 @@
       session.upload_status = "succeeded";
       session.uploaded_at = new Date().toISOString();
       session.upload_response_status = response.status;
+      session.upload_response_reason = reason;
       updateUploadStatus();
       updateCompletionButton();
       autosaveSession();
@@ -2088,6 +2091,20 @@
     };
   }
 
+  function beaconUpload(reason = "beforeunload") {
+    if (!session?.upload_url || !navigator.sendBeacon) return false;
+    try {
+      session.last_upload_reason = reason;
+      session.last_upload_started_at = new Date().toISOString();
+      const payload = JSON.stringify(exportSession());
+      const blob = new Blob([payload], { type: "application/json" });
+      return navigator.sendBeacon(session.upload_url, blob);
+    } catch (err) {
+      console.warn("WILD0 beacon upload failed", err);
+      return false;
+    }
+  }
+
   function autosaveSession() {
     if (!session || !session.autosave_key) return;
     try {
@@ -2199,7 +2216,11 @@
   window.addEventListener("beforeunload", event => {
     const unfinished = session && !session.finished_at && session.trials.length > 0;
     const uploadPending = session && session.finished_at && session.upload_url && !hasUploaded;
-    if (unfinished || uploadPending) {
+    const finalQuestionPending = session && session.finished_at && !session.perceived_ease;
+    if (session?.upload_url && (unfinished || uploadPending || finalQuestionPending)) {
+      beaconUpload(unfinished ? "beforeunload_checkpoint" : "beforeunload_final");
+    }
+    if (unfinished || uploadPending || finalQuestionPending) {
       event.preventDefault();
       event.returnValue = "";
     }
