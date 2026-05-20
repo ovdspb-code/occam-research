@@ -3,7 +3,7 @@
 
   const CONFIG = {
     task_id: "WILD0_B1_sonar_triage",
-    version: "2.10.2-occam",
+    version: "2.10.3-occam",
     base_rate: 0.25,
     noise_model: {
       sensitivity: 0.85,
@@ -92,6 +92,12 @@
       x ^= x << 5;
       return (x >>> 0) / 4294967296;
     };
+  }
+
+  function defaultUploadMode(uploadUrl, requestedMode) {
+    if (requestedMode) return requestedMode;
+    if (/script\.google\.com/i.test(uploadUrl || "")) return "no_cors_form";
+    return "json_cors";
   }
 
   function hashString(text) {
@@ -457,6 +463,7 @@
     const mode = document.getElementById("taskMode").value;
     const completionUrl = params.get("completion_url") || params.get("completion") || "";
     const uploadUrl = params.get("upload_url") || params.get("datapipe_url") || params.get("DATAPIPE_URL") || "";
+    const uploadMode = defaultUploadMode(uploadUrl, params.get("upload_mode") || params.get("uploadMode") || "");
     const scored = buildScoredPlan(seedBase, mode);
     const practice = CONFIG.practice_trials.map((t, i) => ({ ...t, repeat_idx: i }));
     hasDownloaded = false;
@@ -474,6 +481,7 @@
       },
       completion_url: completionUrl || null,
       upload_url: uploadUrl || null,
+      upload_mode: uploadUrl ? uploadMode : null,
       upload_status: uploadUrl ? "pending" : "not_configured",
       uploaded_at: null,
       perceived_ease: null,
@@ -1910,6 +1918,11 @@
       status.textContent = session.perceived_ease
         ? "Upload succeeded. You may return to Prolific if this is a hosted session."
         : "Task data uploaded. Please answer the final question to complete the session.";
+    } else if (session.upload_status === "sent_unverified") {
+      status.classList.add("ok");
+      status.textContent = session.perceived_ease
+        ? "Upload request sent. You may return to Prolific if this is a hosted session."
+        : "Task data upload request sent. Please answer the final question to complete the session.";
     } else if (session.upload_status === "failed") {
       status.classList.add("warn");
       status.textContent = "Upload failed. Please retry before returning to Prolific.";
@@ -1933,14 +1946,27 @@
     try {
       const response = await fetch(session.upload_url, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(exportSession())
+        mode: session.upload_mode === "no_cors_form" ? "no-cors" : "cors",
+        headers: session.upload_mode === "no_cors_form"
+          ? { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" }
+          : { "Content-Type": "application/json" },
+        body: session.upload_mode === "no_cors_form"
+          ? new URLSearchParams({
+              payload: JSON.stringify(exportSession()),
+              task_id: CONFIG.task_id,
+              version: CONFIG.version,
+              participant_id: session.participant_id,
+              reason
+            }).toString()
+          : JSON.stringify(exportSession())
       });
-      if (!response.ok) throw new Error(`Upload failed with status ${response.status}`);
+      if (session.upload_mode !== "no_cors_form" && !response.ok) {
+        throw new Error(`Upload failed with status ${response.status}`);
+      }
       hasUploaded = true;
-      session.upload_status = "succeeded";
+      session.upload_status = session.upload_mode === "no_cors_form" ? "sent_unverified" : "succeeded";
       session.uploaded_at = new Date().toISOString();
-      session.upload_response_status = response.status;
+      session.upload_response_status = session.upload_mode === "no_cors_form" ? "opaque_no_cors" : response.status;
       session.upload_response_reason = reason;
       updateUploadStatus();
       updateCompletionButton();
@@ -2097,7 +2123,7 @@
       session.last_upload_reason = reason;
       session.last_upload_started_at = new Date().toISOString();
       const payload = JSON.stringify(exportSession());
-      const blob = new Blob([payload], { type: "application/json" });
+      const blob = new Blob([payload], { type: session.upload_mode === "no_cors_form" ? "text/plain;charset=UTF-8" : "application/json" });
       return navigator.sendBeacon(session.upload_url, blob);
     } catch (err) {
       console.warn("WILD0 beacon upload failed", err);
