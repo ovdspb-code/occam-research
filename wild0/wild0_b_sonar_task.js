@@ -3,7 +3,8 @@
 
   const CONFIG = {
     task_id: "WILD0_B1_sonar_triage",
-    version: "2.10.3-occam",
+    version: "2.11.0-b1lite-freeze",
+    study_name: "WILD0_B1_lite",
     base_rate: 0.25,
     noise_model: {
       sensitivity: 0.85,
@@ -22,6 +23,14 @@
     b05_m_values: [256, 512],
     b06_m_values: [512],
     b06_repeats_per_cell: 3,
+    b1_m: 512,
+    b1_repeats_per_condition: 3,
+    b1_condition_sequences: [
+      ["K1_ONE_FLEET", "K2_TWO_FLEETS", "K1_ONE_FLEET", "K2_TWO_FLEETS", "K1_ONE_FLEET", "K2_TWO_FLEETS"],
+      ["K2_TWO_FLEETS", "K1_ONE_FLEET", "K2_TWO_FLEETS", "K1_ONE_FLEET", "K2_TWO_FLEETS", "K1_ONE_FLEET"],
+      ["K1_ONE_FLEET", "K2_TWO_FLEETS", "K2_TWO_FLEETS", "K1_ONE_FLEET", "K1_ONE_FLEET", "K2_TWO_FLEETS"],
+      ["K2_TWO_FLEETS", "K1_ONE_FLEET", "K1_ONE_FLEET", "K2_TWO_FLEETS", "K2_TWO_FLEETS", "K1_ONE_FLEET"]
+    ],
     m_values: [128, 256, 512],
     repeats_per_cell: 2,
     practice_trials: [
@@ -67,6 +76,22 @@
     primary_fill_strata: ["inference"],
     primary_stratum: "inference",
     floor_guard_by_m: { 128: 0.30, 256: 0.35, 512: 0.38 },
+    b1_lite_prereg: {
+      target_included_n: 30,
+      raw_recruit_n: "36-40",
+      K1_anchor_correct_min: 7,
+      K1_anchor_total: 9,
+      mean_unique_clicks_min: 28,
+      mean_delta_inference_min: 0.10,
+      positive_delta_fraction_min: 0.70,
+      anchor_gap_clean_max: 0.05,
+      anchor_gap_caution_max: 0.10
+    },
+    device_gate: {
+      b1_desktop_only: true,
+      min_viewport_width: 1200,
+      min_viewport_height: 700
+    },
     reveal_truth_after_each_trial: false,
     cell_size_px: 40
   };
@@ -98,6 +123,34 @@
     if (requestedMode) return requestedMode;
     if (/script\.google\.com/i.test(uploadUrl || "")) return "no_cors_form";
     return "json_cors";
+  }
+
+  function deviceEligibilityForMode(mode) {
+    const pointerCoarse = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+    const pointerFine = window.matchMedia && window.matchMedia("(pointer: fine)").matches;
+    const primaryTouchLike = Boolean(pointerCoarse && !pointerFine);
+    const mobileLikeUA = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const viewportPass = window.innerWidth >= CONFIG.device_gate.min_viewport_width
+      && window.innerHeight >= CONFIG.device_gate.min_viewport_height;
+    const pass = mode !== "B1" || (viewportPass && !primaryTouchLike && !mobileLikeUA);
+    const reasons = [];
+    if (!viewportPass) reasons.push(`window must be at least ${CONFIG.device_gate.min_viewport_width}x${CONFIG.device_gate.min_viewport_height}`);
+    if (primaryTouchLike) reasons.push("touch-primary device detected");
+    if (mobileLikeUA) reasons.push("mobile/tablet browser detected");
+    return {
+      pass,
+      mode,
+      viewport_pass: viewportPass,
+      primary_touch_like: primaryTouchLike,
+      pointer_coarse: Boolean(pointerCoarse),
+      pointer_fine: Boolean(pointerFine),
+      mobile_like_user_agent: mobileLikeUA,
+      viewport_width: window.innerWidth,
+      viewport_height: window.innerHeight,
+      min_viewport_width: CONFIG.device_gate.min_viewport_width,
+      min_viewport_height: CONFIG.device_gate.min_viewport_height,
+      reasons
+    };
   }
 
   function hashString(text) {
@@ -386,7 +439,7 @@
     return condition === "K1_ONE_FLEET" ? "K1: one rectangle" : "K2: two rectangles";
   }
 
-  function buildScoredPlan(seedBase, mode) {
+  function buildScoredPlan(seedBase, mode, participantId = "") {
     if (mode === "B0") {
       return shuffle([
         { phase: "scored", condition: "K1_ONE_FLEET", K: 1, M: 128, repeat_idx: 0, seed_offset: 1000, budget: CONFIG.budget },
@@ -433,6 +486,30 @@
       }
       return shuffle(calibration, makeRng(seedBase + 1606));
     }
+    if (mode === "B1") {
+      const params = qs();
+      const seqRaw = params.get("sequence_index") || params.get("sequence") || params.get("order");
+      const parsedSeq = seqRaw !== null ? Number.parseInt(seqRaw, 10) : NaN;
+      const orderSeed = hashString(`${participantId}|${CONFIG.study_name}|order|${CONFIG.version}`);
+      const sequenceIndex = Number.isInteger(parsedSeq)
+        ? ((parsedSeq % CONFIG.b1_condition_sequences.length) + CONFIG.b1_condition_sequences.length) % CONFIG.b1_condition_sequences.length
+        : orderSeed % CONFIG.b1_condition_sequences.length;
+      const counts = { K1_ONE_FLEET: 0, K2_TWO_FLEETS: 0 };
+      return CONFIG.b1_condition_sequences[sequenceIndex].map((condition, i) => {
+        const repeat = counts[condition];
+        counts[condition] += 1;
+        return {
+          phase: "scored",
+          condition,
+          K: condition === "K1_ONE_FLEET" ? 1 : 2,
+          M: CONFIG.b1_m,
+          repeat_idx: repeat,
+          seed_offset: 3100 + i * 149 + sequenceIndex * 17,
+          budget: CONFIG.budget,
+          sequence_index: sequenceIndex
+        };
+      });
+    }
     const trials = [];
     let idx = 0;
     for (const M of CONFIG.m_values) {
@@ -464,7 +541,13 @@
     const completionUrl = params.get("completion_url") || params.get("completion") || "";
     const uploadUrl = params.get("upload_url") || params.get("datapipe_url") || params.get("DATAPIPE_URL") || "";
     const uploadMode = defaultUploadMode(uploadUrl, params.get("upload_mode") || params.get("uploadMode") || "");
-    const scored = buildScoredPlan(seedBase, mode);
+    const deviceGate = deviceEligibilityForMode(mode);
+    if (mode === "B1" && !deviceGate.pass) {
+      updateConsentButton();
+      alert(`This study is desktop/laptop only. Please use a larger non-touch-primary screen. (${deviceGate.reasons.join("; ")})`);
+      return false;
+    }
+    const scored = buildScoredPlan(seedBase, mode, participantId);
     const practice = CONFIG.practice_trials.map((t, i) => ({ ...t, repeat_idx: i }));
     hasDownloaded = false;
     hasUploaded = false;
@@ -492,10 +575,12 @@
       device: {
         user_agent: navigator.userAgent,
         language: navigator.language,
+        max_touch_points: navigator.maxTouchPoints || 0,
         screen_width: window.screen.width,
         screen_height: window.screen.height,
         viewport_width: window.innerWidth,
-        viewport_height: window.innerHeight
+        viewport_height: window.innerHeight,
+        device_gate: deviceGate
       },
       trials: [],
       plan: [...practice, ...scored],
@@ -511,6 +596,7 @@
     }
     document.getElementById("downloadBtn").disabled = false;
     autosaveSession();
+    return true;
   }
 
   function startCurrentTrial() {
@@ -2075,6 +2161,50 @@
       addMean(interpretableOverrideMeans, null, key, conflict.override_accuracy);
       addMean(interpretableTrapMeans, null, key, t.derived.per_stratum_accuracy?.trap?.accuracy);
     }
+    const finalizedInterpretableInference = finalizeMeanMap(interpretableInferenceMeans);
+    const finalizedRawInference = finalizeMeanMap(rawInferenceMeans);
+    const finalizedInterpretableSupport = finalizeMeanMap(interpretableSupportMeans);
+    const finalizedInterpretableOverride = finalizeMeanMap(interpretableOverrideMeans);
+    const finalizedInterpretableTrap = finalizeMeanMap(interpretableTrapMeans);
+    const finalizedRawSupport = finalizeMeanMap(rawSupportMeans);
+    const finalizedRawOverride = finalizeMeanMap(rawOverrideMeans);
+    const finalizedRawTrap = finalizeMeanMap(rawTrapMeans);
+    const b1K1Key = `K1_ONE_FLEET_M${CONFIG.b1_m}`;
+    const b1K2Key = `K2_TWO_FLEETS_M${CONFIG.b1_m}`;
+    const b1K1AnchorCards = scored
+      .filter(t => t.condition === "K1_ONE_FLEET" && t.M === CONFIG.b1_m)
+      .flatMap(t => t.strike_cards.filter(c => c.stratum_realized === "anchor"));
+    const b1K2AnchorCards = scored
+      .filter(t => t.condition === "K2_TWO_FLEETS" && t.M === CONFIG.b1_m)
+      .flatMap(t => t.strike_cards.filter(c => c.stratum_realized === "anchor"));
+    const b1K1AnchorCorrect = b1K1AnchorCards.filter(c => c.correct).length;
+    const b1K2AnchorCorrect = b1K2AnchorCards.filter(c => c.correct).length;
+    const allScoredInterpretable = scored.length > 0 && scored.every(t => t.derived.interpretable_for_K_comparison);
+    const meanUniqueClicks = scored.length ? scored.reduce((a, t) => a + t.derived.unique_clicks, 0) / scored.length : null;
+    const desktopGatePass = Boolean(session.device?.device_gate?.pass);
+    const b1DeltaInference = finalizedInterpretableInference[b1K1Key] !== undefined && finalizedInterpretableInference[b1K2Key] !== undefined
+      ? finalizedInterpretableInference[b1K1Key] - finalizedInterpretableInference[b1K2Key]
+      : null;
+    const k1AnchorAccuracy = b1K1AnchorCards.length ? b1K1AnchorCorrect / b1K1AnchorCards.length : null;
+    const k2AnchorAccuracy = b1K2AnchorCards.length ? b1K2AnchorCorrect / b1K2AnchorCards.length : null;
+    const b1AnchorGap = k1AnchorAccuracy !== null && k2AnchorAccuracy !== null
+      ? k1AnchorAccuracy - k2AnchorAccuracy
+      : null;
+    const anchorGapStatus = b1AnchorGap === null
+      ? null
+      : b1AnchorGap <= CONFIG.b1_lite_prereg.anchor_gap_clean_max
+        ? "clean"
+        : b1AnchorGap <= CONFIG.b1_lite_prereg.anchor_gap_caution_max
+          ? "caution"
+          : "visibility_confounded";
+    const includedByB1LiteRules = session.mode === "B1"
+      && scored.length === 6
+      && b1K1AnchorCorrect >= CONFIG.b1_lite_prereg.K1_anchor_correct_min
+      && b1K1AnchorCards.length === CONFIG.b1_lite_prereg.K1_anchor_total
+      && allScoredInterpretable
+      && meanUniqueClicks !== null
+      && meanUniqueClicks >= CONFIG.b1_lite_prereg.mean_unique_clicks_min
+      && desktopGatePass;
     return {
       n_trials_total: session.trials.length,
       n_scored_trials: scored.length,
@@ -2083,22 +2213,46 @@
       mean_inference_accuracy_by_condition_M: means,
       mean_override_accuracy_by_condition_M: overrideMeans,
       mean_support_accuracy_by_condition_M: supportMeans,
-      raw_mean_inference_accuracy_by_condition_M: finalizeMeanMap(rawInferenceMeans),
+      raw_mean_inference_accuracy_by_condition_M: finalizedRawInference,
       raw_n_by_condition_M: rawInferenceNs,
-      interpretable_mean_inference_accuracy_by_condition_M: finalizeMeanMap(interpretableInferenceMeans),
+      interpretable_mean_inference_accuracy_by_condition_M: finalizedInterpretableInference,
       interpretable_n_by_condition_M: interpretableInferenceNs,
-      raw_support_accuracy_by_condition_M: finalizeMeanMap(rawSupportMeans),
-      raw_override_accuracy_by_condition_M: finalizeMeanMap(rawOverrideMeans),
-      raw_trap_accuracy_by_condition_M: finalizeMeanMap(rawTrapMeans),
-      interpretable_support_accuracy_by_condition_M: finalizeMeanMap(interpretableSupportMeans),
-      interpretable_override_accuracy_by_condition_M: finalizeMeanMap(interpretableOverrideMeans),
-      interpretable_trap_accuracy_by_condition_M: finalizeMeanMap(interpretableTrapMeans),
+      raw_support_accuracy_by_condition_M: finalizedRawSupport,
+      raw_override_accuracy_by_condition_M: finalizedRawOverride,
+      raw_trap_accuracy_by_condition_M: finalizedRawTrap,
+      interpretable_support_accuracy_by_condition_M: finalizedInterpretableSupport,
+      interpretable_override_accuracy_by_condition_M: finalizedInterpretableOverride,
+      interpretable_trap_accuracy_by_condition_M: finalizedInterpretableTrap,
       interpretable_for_K_comparison_fraction: scored.length
         ? scored.filter(t => t.derived.interpretable_for_K_comparison).length / scored.length
         : null,
       missed_block_strike_trials: scored.filter(t => t.derived.missed_block_strike_flag).length,
       mean_repeat_fraction: scored.length ? scored.reduce((a, t) => a + t.derived.repeat_fraction, 0) / scored.length : null,
-      mean_unique_clicks: scored.length ? scored.reduce((a, t) => a + t.derived.unique_clicks, 0) / scored.length : null
+      mean_unique_clicks: meanUniqueClicks,
+      b1_lite_qc: {
+        applies: session.mode === "B1",
+        k1_anchor_correct: b1K1AnchorCorrect,
+        k1_anchor_total: b1K1AnchorCards.length,
+        k1_anchor_accuracy: k1AnchorAccuracy,
+        k2_anchor_correct: b1K2AnchorCorrect,
+        k2_anchor_total: b1K2AnchorCards.length,
+        k2_anchor_accuracy: k2AnchorAccuracy,
+        k1_anchor_pass: b1K1AnchorCorrect >= CONFIG.b1_lite_prereg.K1_anchor_correct_min
+          && b1K1AnchorCards.length === CONFIG.b1_lite_prereg.K1_anchor_total,
+        all_scored_trials_interpretable: allScoredInterpretable,
+        mean_unique_clicks_pass: meanUniqueClicks !== null && meanUniqueClicks >= CONFIG.b1_lite_prereg.mean_unique_clicks_min,
+        desktop_gate_pass: desktopGatePass,
+        included_by_prereg: includedByB1LiteRules
+      },
+      b1_lite_primary: {
+        applies: session.mode === "B1",
+        k1_inference: finalizedInterpretableInference[b1K1Key] ?? null,
+        k2_inference: finalizedInterpretableInference[b1K2Key] ?? null,
+        delta_inference: b1DeltaInference,
+        positive_delta: b1DeltaInference !== null ? b1DeltaInference > 0 : null,
+        anchor_gap: b1AnchorGap,
+        anchor_gap_status: anchorGapStatus
+      }
     };
   }
 
@@ -2195,7 +2349,23 @@
   }
 
   function updateConsentButton() {
-    const ok = document.getElementById("adultCheck").checked && document.getElementById("consentCheck").checked;
+    const mode = document.getElementById("taskMode").value;
+    const eligibility = deviceEligibilityForMode(mode);
+    const gate = document.getElementById("deviceGateMessage");
+    if (gate) {
+      if (mode === "B1" && !eligibility.pass) {
+        gate.classList.add("active");
+        gate.textContent = `B1-lite is desktop/laptop only. Please use a non-touch-primary window of at least ${CONFIG.device_gate.min_viewport_width}x${CONFIG.device_gate.min_viewport_height}. Current: ${eligibility.viewport_width}x${eligibility.viewport_height}.`;
+      } else {
+        gate.classList.remove("active");
+        gate.textContent = mode === "B1"
+          ? "Desktop/laptop screen check passed for B1-lite."
+          : "Desktop/laptop strongly recommended for calibration modes.";
+      }
+    }
+    const ok = document.getElementById("adultCheck").checked
+      && document.getElementById("consentCheck").checked
+      && eligibility.pass;
     document.getElementById("beginTutorialBtn").disabled = !ok;
   }
 
@@ -2213,22 +2383,34 @@
     const params = qs();
     const pid = params.get("PROLIFIC_PID") || params.get("participant") || "";
     if (pid) document.getElementById("participantId").value = pid;
-    const mode = params.get("mode");
-    if (mode && ["B0", "B0.5", "B0.6", "B1"].includes(mode.toUpperCase())) {
-      document.getElementById("taskMode").value = mode.toUpperCase();
+    const modeRaw = params.get("mode");
+    const modeAliases = {
+      B0: "B0",
+      "B0.5": "B0.5",
+      "B0.6": "B0.6",
+      B1: "B1",
+      B1LITE: "B1",
+      "B1-LITE": "B1",
+      "B1_LITE": "B1"
+    };
+    if (modeRaw) {
+      const normalizedMode = modeAliases[modeRaw.toUpperCase()];
+      if (normalizedMode) document.getElementById("taskMode").value = normalizedMode;
     }
     const hasUploadEndpoint = Boolean(params.get("upload_url") || params.get("datapipe_url") || params.get("DATAPIPE_URL"));
     document.getElementById("headerSub").textContent = hasUploadEndpoint
       ? `Adult feasibility task · upload endpoint configured · v${CONFIG.version}`
       : `Adult feasibility task · public static build · no server upload · v${CONFIG.version}`;
     updateRecoverButton();
+    updateConsentButton();
   }
 
   document.getElementById("adultCheck").addEventListener("change", updateConsentButton);
   document.getElementById("consentCheck").addEventListener("change", updateConsentButton);
+  document.getElementById("taskMode").addEventListener("change", updateConsentButton);
+  window.addEventListener("resize", updateConsentButton);
   document.getElementById("beginTutorialBtn").addEventListener("click", () => {
-    initSession();
-    show("tutorialScreen");
+    if (initSession()) show("tutorialScreen");
   });
   document.getElementById("startPracticeBtn").addEventListener("click", () => startCurrentTrial());
   document.getElementById("finishEarlyBtn").addEventListener("click", finishClicksNow);

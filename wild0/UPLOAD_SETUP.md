@@ -21,7 +21,7 @@ Use a Google Sheet + Apps Script receiver for lightweight calibration runs.
 Use:
 
 ```text
-https://occam.world/wild0/?mode=B0.6&upload_url=YOUR_WEB_APP_EXEC_URL&upload_mode=no_cors_form
+https://occam.world/wild0/?mode=B1&upload_url=YOUR_WEB_APP_EXEC_URL&upload_mode=no_cors_form
 ```
 
 If the URL contains special characters, encode it first and put the encoded
