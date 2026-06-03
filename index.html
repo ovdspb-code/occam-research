@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CRN Interactive — Occam Research</title>
-<meta name="description" content="Coherent Resonant Netting: interactive visualizations of noise-assisted transport across biological connectomes.">
+<title>Occam Research — Independent science across disciplines</title>
+<meta name="description" content="Occam Research — the independent practice of Oleg Dolgikh. Bold cross-disciplinary questions, held to evidence: peer-reviewed work, open data, and adversarial duels.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -20,12 +20,12 @@
     const next = cur === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     const btn = document.getElementById('themeBtn');
-    if(btn) btn.textContent = next === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
+    if(btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
     if(typeof renderAll === 'function') setTimeout(renderAll, 50);
   };
   window.addEventListener('DOMContentLoaded', ()=>{
     const btn = document.getElementById('themeBtn');
-    if(btn) btn.textContent = (document.documentElement.getAttribute('data-theme')==='dark') ? '\u2600\uFE0F' : '\uD83C\uDF19';
+    if(btn) btn.textContent = (document.documentElement.getAttribute('data-theme')==='dark') ? '☀️' : '🌙';
   });
 })();
 </script>
@@ -40,8 +40,10 @@
     Occam Research
   </a>
   <div class="nav-right">
-    <a href="https://github.com/ovdspb-code/CRN_4.1" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://doi.org/10.5281/zenodo.18249250" target="_blank" rel="noopener noreferrer">Paper</a>
+    <a href="#disputesSection">Duels</a>
+    <a href="#workSection">Work</a>
+    <a href="https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1813959/full" target="_blank" rel="noopener noreferrer">Paper</a>
+    <a href="https://github.com/ovdspb-code" target="_blank" rel="noopener noreferrer">GitHub</a>
     <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" title="Toggle dark/light mode" aria-label="Switch to dark mode">🌙</button>
   </div>
 </nav>
@@ -52,20 +54,71 @@
 <div class="wrap">
 
 <section class="hero hero-center">
-  <div class="hero-badge">● Live Research</div>
-  <h1>Coherent Resonant Netting<br>across <em>biological scales</em></h1>
-  <p class="hero-sub">Interactive visualizations of noise-assisted transport on real connectome data — from nematode to human. Each page shows GKSL open-system dynamics and the inverted-U selectivity window predicted by CRN theory.</p>
+  <div class="hero-badge">● Independent research</div>
+  <h1>Bold questions across the <em>sciences</em></h1>
+  <p class="hero-sub">Honest answers, or none. Occam Research is the independent practice of Oleg Dolgikh — chasing decidable questions across disciplines and holding every claim to evidence. Peer-reviewed work, open data, and, when a claim deserves a fight, a public duel.</p>
+  <div class="hero-actions">
+    <a class="btn" href="#disputesSection">Read the duels</a>
+    <a class="btn outline" href="https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1813959/full" target="_blank" rel="noopener noreferrer">Peer-reviewed paper →</a>
+  </div>
 </section>
 
-<div class="card-grid reveal" id="cardGrid"></div>
+<!-- FEATURED PAPER -->
+<div class="featured reveal">
+  <div class="feat-label">● Peer-reviewed · Frontiers in Computational Neuroscience</div>
+  <div class="feat-title">Coherent-resonant netting: disorder-enhanced selectivity from transient wave-like dynamics on biological connectomes</div>
+  <div class="feat-meta">Oleg Dolgikh · 2026 · doi:10.3389/fncom.2026.1813959</div>
+  <p class="feat-desc">The capstone of the CRN program: a falsifiable account of how moderate disorder can sharpen selective signal routing on real connectomes — tested, published, and peer-reviewed. The interactive companion lives below.</p>
+  <div class="pub-links">
+    <a href="https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1813959/full" target="_blank" rel="noopener noreferrer">Read in Frontiers</a>
+    <a href="https://doi.org/10.3389/fncom.2026.1813959" target="_blank" rel="noopener noreferrer">DOI</a>
+    <a href="#workSection">The CRN trophy ↓</a>
+  </div>
+</div>
 
-<!-- RESEARCH FOCUS -->
+<!-- APPROACH -->
 <section class="section reveal">
-  <h2>Research Focus</h2>
-  <p>Biological agents face an energy-information bottleneck: inference requires rapid exploration of large hypothesis spaces, yet high-gain spiking is metabolically expensive. CRN proposes a <strong>two-regime decision architecture</strong>:</p>
-  <p><strong>Stage-I (netting)</strong> — low-cost wave-like filtering via GKSL/Lindblad dynamics, with tunable dephasing κ and disorder ε, operating on the structural connectome to concentrate probability on target hypotheses.</p>
-  <p><strong>Stage-II (fixation)</strong> — expensive spiking commitment that broadcasts the winner. By filtering before firing, the brain reduces the number of costly O(N) broadcast events to O(1).</p>
-  <p>We test whether <strong>Disorder-Enhanced Selectivity (DES)</strong> — a signature where moderate disorder improves target selectivity — emerges on real connectomes and depends on native topology. Degree-preserving rewiring destroys the effect. Classical random walks cannot reproduce it.</p>
+  <h2>How the work goes</h2>
+  <div class="card-grid" style="margin-top:var(--space-6)">
+    <div class="card static">
+      <div class="card-icon" style="background:var(--accent-light)">🔭</div>
+      <h3>Scout</h3>
+      <p>Range across fields for questions sharp enough to be <em>decided</em> — where an independent researcher can still land a real result.</p>
+    </div>
+    <div class="card static">
+      <div class="card-icon" style="background:var(--teal-light)">🧪</div>
+      <h3>Test</h3>
+      <p>Attack the question with computation, real data, and explicit null models. No claim survives without evidence — and the nulls have to fail honestly.</p>
+    </div>
+    <div class="card static">
+      <div class="card-icon" style="background:var(--warm-light)">⚔️</div>
+      <h3>Duel</h3>
+      <p>Put the strongest version of a claim against its strongest objection, in the open, to a verdict. One of several formats — see Duellum Veritatis.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DUELLUM VERITATIS (loaded dynamically from disputes.json) -->
+<section class="section reveal" id="disputesSection">
+  <h2>Duellum Veritatis</h2>
+  <p class="disputes-meta" style="font-size:var(--text-xs);color:var(--text-3);margin-bottom:var(--space-4)">Loading digests…</p>
+  <div class="pub-list" id="disputesList"></div>
+</section>
+
+<!-- CRN — FOUNDING TROPHY -->
+<section class="section reveal" id="workSection">
+  <h2>CRN — the founding trophy</h2>
+  <p>Coherent Resonant Netting is, as an active program, closed. But it is the trophy that forged everything here: it set the method — falsifiable claims, real connectome data, honest null models — and it still shapes what I scout and how I fight. Peer-reviewed in <em>Frontiers in Computational Neuroscience</em>; below, the interactive companion across organisms.</p>
+  <div class="card-grid reveal" id="cardGrid"></div>
+
+  <details class="crn-details">
+    <summary>The CRN hypothesis, in brief</summary>
+    <p>Biological agents face an energy–information bottleneck: inference needs rapid exploration of large hypothesis spaces, yet high-gain spiking is metabolically expensive. CRN proposes a <strong>two-regime decision architecture</strong>. <strong>Stage-I (netting)</strong> — low-cost wave-like filtering via GKSL/Lindblad dynamics, with tunable dephasing κ and disorder ε on the structural connectome, concentrating probability on target hypotheses. <strong>Stage-II (fixation)</strong> — expensive spiking commitment that broadcasts the winner. By filtering before firing, the system cuts costly O(N) broadcast events to O(1). The testable signature is <strong>Disorder-Enhanced Selectivity</strong>: moderate disorder improves target selectivity on real connectomes and depends on native topology — degree-preserving rewiring destroys it, and classical random walks cannot reproduce it.</p>
+  </details>
+
+  <div class="disclaimer">
+    <strong>Note on scope.</strong> CRN is a testable computational hypothesis, not a claim of microscopic quantum coherence in neural tissue. The GKSL formalism is used as a functional proxy for wave-like dynamics with tunable damping.
+  </div>
 </section>
 
 <!-- SCORECARD -->
@@ -82,13 +135,6 @@
   <div class="pub-list" id="pubsList"></div>
 </section>
 
-<!-- DUELLUM VERITATIS (loaded dynamically from disputes.json) -->
-<section class="section reveal" id="disputesSection">
-  <h2>Duellum Veritatis</h2>
-  <p class="disputes-meta" style="font-size:var(--text-xs);color:var(--text-3);margin-bottom:var(--space-4)">Loading digests…</p>
-  <div class="pub-list" id="disputesList"></div>
-</section>
-
 <!-- OPEN RESOURCES -->
 <section class="section reveal">
   <h2>Open Resources</h2>
@@ -97,7 +143,7 @@
       <h3 style="font-size:var(--text-base)">GitHub</h3>
       <p style="font-size:var(--text-sm);margin-bottom:0">Simulation code, analysis pipelines, configuration files</p>
     </a>
-    <a href="https://doi.org/10.5281/zenodo.18249250" class="card" target="_blank" rel="noopener noreferrer" style="padding:var(--space-5)">
+    <a href="https://zenodo.org/records/20528910" class="card" target="_blank" rel="noopener noreferrer" style="padding:var(--space-5)">
       <h3 style="font-size:var(--text-base)">Zenodo</h3>
       <p style="font-size:var(--text-sm);margin-bottom:0">Preprints, datasets, DOI-archived releases</p>
     </a>
@@ -114,21 +160,18 @@
 
 <!-- PI -->
 <section class="section reveal">
-  <h2>Principal Investigator</h2>
+  <h2>The researcher</h2>
   <div class="pi-box">
     <div>
       <h3 class="pi-info" style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;margin-bottom:2px">Oleg Dolgikh</h3>
-      <div class="pi-role">Independent Researcher</div>
-      <p class="pi-bio">Background in applied optimization and distributed systems (20+ years). Since 2020, focused exclusively on theoretical neuroscience: Landauer bounds in biological networks, spectral graph theory, ENAQT regimes, and variational free energy minimization.</p>
+      <div class="pi-role">Independent Researcher · Occam Research</div>
+      <p class="pi-bio">Background in applied optimization and distributed systems (20+ years). Since 2020, in independent research — open quantum-systems formalisms, spectral graph theory, and thermodynamics of computation applied to biological networks, and increasingly to whichever decidable question across the sciences is worth the hunt.</p>
       <div class="contact-row">
         <div><div class="label">Location</div>Sant Cugat del Vallès, Barcelona</div>
         <div><div class="label">Affiliation</div>Occam Research</div>
         <div><div class="label">ORCID</div><a href="https://orcid.org/0009-0008-0159-1718" target="_blank" rel="noopener noreferrer">0009-0008-0159-1718</a></div>
       </div>
     </div>
-  </div>
-  <div class="disclaimer">
-    <strong>Note on scope.</strong> CRN is a testable computational hypothesis, not a claim of microscopic quantum coherence in neural tissue. The GKSL formalism is used as a functional proxy for wave-like dynamics with tunable damping. We actively seek critical feedback and experimental collaboration.
   </div>
 </section>
 
@@ -140,11 +183,11 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="footer-brand-name">Occam Research</div>
-      <div class="footer-brand-sub">Computational neuroscience at the intersection of open quantum systems and biological connectomics.</div>
+      <div class="footer-brand-sub">Independent science across disciplines — bold questions, held to evidence.</div>
     </div>
     <div class="footer-links">
       <div class="footer-col">
-        <h4>Organisms</h4>
+        <h4>CRN Trophy</h4>
         <a href="human.html">Human Connectome</a>
         <a href="elegans.html">C. elegans</a>
         <a href="drosophila.html">Drosophila</a>
@@ -152,15 +195,15 @@
       </div>
       <div class="footer-col">
         <h4>External</h4>
-        <a href="https://github.com/ovdspb-code/CRN_4.1" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://doi.org/10.5281/zenodo.18249250" target="_blank" rel="noopener noreferrer">Zenodo</a>
+        <a href="https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1813959/full" target="_blank" rel="noopener noreferrer">Frontiers paper</a>
+        <a href="https://github.com/ovdspb-code" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://orcid.org/0009-0008-0159-1718" target="_blank" rel="noopener noreferrer">ORCID</a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
     <span>&copy; 2026 Occam Research</span>
-    <span><a href="https://occam.world" target="_blank" rel="noopener noreferrer">occam.world</a> &middot; CRN Interactive v4.0</span>
+    <span><a href="https://occam.world" target="_blank" rel="noopener noreferrer">occam.world</a></span>
   </div>
 </div>
 </footer>
@@ -200,44 +243,62 @@ fetch('publications.json').then(r=>r.json()).then(data => {
   list.innerHTML = '';
 
   const statusLabels = {
+    journal: { label: 'Peer-reviewed', cls: 'review' },
     under_review: { label: 'Under Review', cls: 'review' },
     preprint: { label: 'Preprint', cls: 'preprint' },
     published: { label: 'Published', cls: 'dataset' }
   };
   const typeLabels = {
+    article: 'article',
     preprint: 'preprint',
     dataset: 'dataset',
     software: 'software'
   };
 
-  // Sort: under_review first, then preprints, then rest; within group by date desc
-  const order = { under_review: 0, preprint: 1, published: 2 };
+  // Sort: peer-reviewed journal first, then under_review, preprints, then rest; within group by date desc
+  const order = { journal: -1, under_review: 0, preprint: 1, published: 2 };
   const sorted = [...data.publications].sort((a, b) => {
     const oa = order[a.status] ?? 3, ob = order[b.status] ?? 3;
     if (oa !== ob) return oa - ob;
-    return b.date.localeCompare(a.date);
+    return (b.date||'').localeCompare(a.date||'');
   });
 
   sorted.forEach(pub => {
-    const st = statusLabels[pub.status] || { label: pub.status, cls: 'preprint' };
-    const typeCls = typeLabels[pub.type] || pub.type;
-    const tagCls = pub.type === 'preprint' ? st.cls : typeCls;
-    const tagLabel = pub.type === 'preprint' ? st.label : pub.type.charAt(0).toUpperCase() + pub.type.slice(1);
-    const year = pub.date ? pub.date.split('-')[0] : '';
+    let tagCls, tagLabel;
+    if (statusLabels[pub.status] && (pub.status === 'journal' || pub.status === 'under_review')) {
+      tagCls = statusLabels[pub.status].cls;
+      tagLabel = statusLabels[pub.status].label;
+    } else if (pub.type === 'preprint') {
+      const st = statusLabels[pub.status] || { label: 'Preprint', cls: 'preprint' };
+      tagCls = st.cls; tagLabel = st.label;
+    } else {
+      tagCls = typeLabels[pub.type] || pub.type || 'preprint';
+      const t = pub.type || 'work';
+      tagLabel = t.charAt(0).toUpperCase() + t.slice(1);
+    }
+    const year = pub.date ? pub.date.split('-')[0] : (pub.year || '');
     const venue = pub.venue ? ` · ${pub.venue}` : '';
+    const authors = Array.isArray(pub.authors) ? pub.authors.join(', ') : (pub.authors || 'O. Dolgikh');
 
-    const linksHTML = Object.entries(pub.links || {}).map(([name, url]) => {
-      const label = name.charAt(0).toUpperCase() + name.slice(1);
-      return `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`;
-    }).join('');
+    let linksArr = [];
+    if (Array.isArray(pub.links)) {
+      linksArr = pub.links.map(l => typeof l === 'string'
+        ? `<a href="${l}" target="_blank" rel="noopener noreferrer">Link</a>`
+        : `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${l.label||'Link'}</a>`);
+    } else if (pub.links && typeof pub.links === 'object') {
+      linksArr = Object.entries(pub.links).map(([name, url]) =>
+        `<a href="${url}" target="_blank" rel="noopener noreferrer">${name.charAt(0).toUpperCase()+name.slice(1)}</a>`);
+    } else if (pub.doi) {
+      linksArr = [`<a href="https://doi.org/${pub.doi}" target="_blank" rel="noopener noreferrer">DOI</a>`];
+    }
 
     const el = document.createElement('div');
     el.className = 'pub-item';
     el.innerHTML = `
       <span class="pub-tag ${tagCls}">${tagLabel}</span>
       <div class="pub-title">${pub.title}</div>
-      <div class="pub-meta">${pub.authors} · ${year}${venue}</div>
-      <div class="pub-links">${linksHTML}</div>
+      <div class="pub-meta">${authors} · ${year}${venue}</div>
+      <div class="pub-links">${linksArr.join('')}</div>
     `;
     list.appendChild(el);
   });
@@ -295,7 +356,6 @@ fetch('scorecard.json').then(r=>r.json()).then(sc => {
   sc.claims.forEach(c => {
     const cls = c.score >= 80 ? 'high' : c.score >= 60 ? 'mid' : 'low';
     const color = c.score >= 80 ? 'var(--teal)' : c.score >= 60 ? 'var(--warm)' : 'var(--coral)';
-    const gradEnd = c.score >= 80 ? 'var(--teal-light)' : c.score >= 60 ? 'var(--warm-light)' : 'var(--coral-light)';
     const el = document.createElement('div');
     el.className = 'sc-item';
     el.innerHTML = `

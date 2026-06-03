@@ -1146,6 +1146,131 @@ canvas {
 }
 
 /* ============================================
+   HERO ACTIONS (CTA row)
+   ============================================ */
+.hero-actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--space-8);
+}
+.hero-center .hero-actions { justify-content: center; }
+.hero-actions .btn {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-sm);
+}
+
+/* ============================================
+   FEATURED PAPER (flagship block)
+   ============================================ */
+.featured {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid #bd1e63;
+  border-radius: var(--radius);
+  padding: clamp(var(--space-6), 3vw, var(--space-8));
+  margin: var(--space-6) 0 clamp(var(--space-8), 4vw, var(--space-12));
+  box-shadow: var(--shadow-md);
+  transition: background .3s var(--ease), box-shadow var(--transition-fast);
+}
+.feat-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #bd1e63;
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+[data-theme="dark"] .feat-label { color: #e86498; }
+.feat-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text);
+  margin-bottom: var(--space-2);
+  max-width: 60ch;
+}
+.feat-meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-3);
+  margin-bottom: var(--space-4);
+  font-variant-numeric: tabular-nums;
+}
+.feat-desc {
+  font-size: var(--text-sm);
+  color: var(--text-2);
+  line-height: 1.75;
+  max-width: 68ch;
+  margin-bottom: var(--space-5);
+}
+
+/* ============================================
+   STATIC CARD (non-interactive, for Approach)
+   ============================================ */
+.card.static {
+  cursor: default;
+}
+.card.static:hover {
+  box-shadow: none;
+  transform: none;
+  border-color: var(--border);
+}
+.card.static p:last-child { margin-bottom: 0; }
+
+/* ============================================
+   CRN DETAILS (collapsible hypothesis)
+   ============================================ */
+.crn-details {
+  margin-top: var(--space-6);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0 var(--space-6);
+  transition: background .3s var(--ease);
+}
+.crn-details summary {
+  cursor: pointer;
+  list-style: none;
+  padding: var(--space-5) 0;
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.crn-details summary::-webkit-details-marker { display: none; }
+.crn-details summary::before {
+  content: '+';
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  color: #bd1e63;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform var(--transition-fast);
+}
+.crn-details[open] summary::before { content: '\2212'; }
+.crn-details summary:hover { color: #bd1e63; }
+.crn-details p {
+  font-size: var(--text-sm);
+  color: var(--text-2);
+  line-height: 1.8;
+  max-width: 78ch;
+  padding-bottom: var(--space-6);
+  margin: 0;
+}
+.crn-details strong { color: var(--text); font-weight: 600; }
+
+/* ============================================
    RESPONSIVE
    ============================================ */
 @media (max-width: 768px) {

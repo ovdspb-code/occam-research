@@ -1,7 +1,24 @@
 {
-  "updated": "2026-04-04",
+  "updated": "2026-06-03",
   "source": "ORCID 0009-0008-0159-1718 + manual curation",
   "publications": [
+    {
+      "title": "Coherent-resonant netting: disorder-enhanced selectivity from transient wave-like dynamics on biological connectomes",
+      "doi": "10.3389/fncom.2026.1813959",
+      "type": "article",
+      "status": "journal",
+      "venue": "Frontiers in Computational Neuroscience",
+      "date": "2026-05-13",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "links": [
+        { "label": "Frontiers", "url": "https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1813959/full" },
+        { "label": "DOI", "url": "https://doi.org/10.3389/fncom.2026.1813959" }
+      ],
+      "source": "manual",
+      "added": "2026-06-03"
+    },
     {
       "title": "Verace: A Deterministic Conflict Detection Pipeline Architecture for Enterprise Knowledge Bases",
       "doi": "10.5281/zenodo.19402811",
