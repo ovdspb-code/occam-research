@@ -2,6 +2,7 @@
   "updated": "2026-06-03",
   "series": "Duellum Veritatis",
   "subtitle": "Adversarial science digests — a thesis defended and attacked to a verdict, every claim backed by computation.",
+  "doi": "10.5281/zenodo.20528909",
   "disputes": [
     {
       "id": "2026-06-03-two-choirs-in-the-dark",
@@ -13,7 +14,7 @@
       "tags": ["synchronization", "Kuramoto", "identifiability"],
       "html": "disputes/2026-06-03-two-choirs-in-the-dark.html",
       "pdf": "disputes/2026-06-03-two-choirs-in-the-dark.pdf",
-      "doi": null
+      "doi": "10.5281/zenodo.20528909"
     }
   ]
 }

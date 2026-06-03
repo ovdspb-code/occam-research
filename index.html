@@ -252,7 +252,18 @@ fetch('disputes.json').then(r=>r.json()).then(data => {
   if(!sec) return;
   const meta = sec.querySelector('.disputes-meta');
   const n = data.disputes.length;
-  if(meta) meta.textContent = `${data.subtitle} · ${n} digest${n===1?'':'s'} · Updated ${data.updated}`;
+  if(meta){
+    let m = `${data.subtitle} · ${n} digest${n===1?'':'s'} · Updated ${data.updated}`;
+    if(data.doi) m += ` · DOI: `;
+    meta.textContent = m;
+    if(data.doi){
+      const a = document.createElement('a');
+      a.href = `https://doi.org/${data.doi}`;
+      a.target = '_blank'; a.rel = 'noopener noreferrer';
+      a.textContent = data.doi;
+      meta.appendChild(a);
+    }
+  }
   const list = document.getElementById('disputesList');
   list.innerHTML = '';
   [...data.disputes].sort((a,b)=>b.date.localeCompare(a.date)).forEach(d => {
