@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 13mm 0 12mm 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html,body { margin:0; padding:0; }
+  @media screen {
+    html { background:#1a2238; }
+    body { max-width:210mm; margin:0 auto; min-height:100vh;
+           box-shadow:0 0 60px rgba(0,0,0,0.45); padding:24mm 18mm; }
+  }
+  body {
+    font-family: "Georgia","Times New Roman",serif;
+    color:#f3efe4; background:#222d49;
+    font-size:10.5pt; line-height:1.49;
+    padding:0 18mm;
+    background-image:
+      radial-gradient(1100px 480px at 72% -8%, rgba(120,145,205,0.26), transparent 60%),
+      radial-gradient(900px 600px at -8% 108%, rgba(170,135,70,0.18), transparent 55%);
+  }
+  .page { }
+  h1 { font-size:25pt; line-height:1.08; margin:0 0 4px 0; color:#fbf6e8;
+       letter-spacing:0.3px; font-weight:700; }
+  h2 { font-size:13.5pt; margin:15px 0 6px 0; color:#f0c469;
+       border-bottom:1px solid rgba(240,196,105,0.42); padding-bottom:4px; font-weight:700; }
+  h3 { font-size:11pt; margin:13px 0 3px 0; color:#dde5f5; font-weight:700; }
+  p { margin:0 0 7px 0; text-align:justify; }
+  .kicker { color:#a9b8d8; font-size:9pt; letter-spacing:2.4px; text-transform:uppercase; margin:0 0 8px 0; }
+  .lede { font-size:11.6pt; color:#e3e8f3; font-style:italic; line-height:1.5; margin:6px 0 4px 0; }
+  .rule { height:1px; background:linear-gradient(90deg,transparent,rgba(240,196,105,0.7),transparent); margin:12px 0; }
+  .term { color:#f0c469; font-style:normal; font-weight:700; }
+  .gloss { display:block; background:rgba(160,180,220,0.14); border-left:3px solid #a9b8d8;
+           padding:7px 11px; margin:8px 0; font-size:9.4pt; color:#dfe5f2; line-height:1.44; }
+  .gloss b { color:#fbf6e8; }
+  .duel { display:flex; gap:12px; margin:10px 0; }
+  .card { flex:1; border:1px solid rgba(240,196,105,0.34); border-radius:6px; padding:10px 12px;
+          background:rgba(15,21,38,0.5); }
+  .card .who { font-size:9pt; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:4px; }
+  .pro .who { color:#8ec2f2; }
+  .con .who { color:#f2a07e; }
+  .card .stance { font-size:9.6pt; color:#e3e8f3; line-height:1.42; }
+  figure { margin:14px 0 8px 0; text-align:center; }
+  figcaption { font-size:8.8pt; color:#b3bdd4; margin-top:5px; font-style:italic; line-height:1.35; }
+  .chartbox { background:rgba(11,16,30,0.72); border:1px solid rgba(160,180,220,0.3);
+              border-radius:8px; padding:10px 8px 4px 8px; }
+  blockquote { margin:10px 0; padding:8px 14px; border-left:3px solid #f0c469;
+               background:rgba(240,196,105,0.1); font-style:italic; color:#fbf6e8; }
+  .verdict { border:1px solid rgba(240,196,105,0.6); border-radius:8px; padding:12px 16px;
+             background:linear-gradient(180deg, rgba(240,196,105,0.16), rgba(240,196,105,0.05)); margin:12px 0; }
+  .verdict .win { color:#f0c469; font-weight:700; font-size:12pt; }
+  .foot { margin-top:9px; padding-top:8px; border-top:1px solid rgba(160,180,220,0.28);
+          color:#9aa6c4; font-size:8.4pt; }
+  .meta { border:1px solid rgba(160,180,220,0.32); border-radius:7px; padding:8px 13px;
+          background:rgba(15,21,38,0.42); margin:10px 0 4px 0; font-size:9pt; line-height:1.5; }
+  .meta .row { display:flex; gap:8px; padding:1.5px 0; }
+  .meta .k { color:#a9b8d8; min-width:104px; flex:0 0 104px; text-transform:uppercase;
+             letter-spacing:0.6px; font-size:8.2pt; padding-top:1px; }
+  .meta .v { color:#eef2fa; }
+  .appendix { border-top:1px solid rgba(160,180,220,0.28); margin-top:14px; padding-top:8px; }
+  .appendix h3 { color:#f0c469; margin:0 0 5px 0; font-size:10pt; letter-spacing:0.4px; }
+  .appendix .ap { font-size:8.7pt; color:#c7cfe0; line-height:1.46; margin:0 0 4px 0; }
+  .appendix .ap b { color:#eef2fa; }
+  .ornament { text-align:center; margin:6px 0 2px 0; }
+  svg { display:block; }
+  .bars text { font-family:"Georgia",serif; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="ornament">
+<svg width="180" height="26" viewBox="0 0 180 26">
+  <g stroke="#d9b25b" stroke-width="1.4" fill="none" opacity="0.9">
+    <line x1="20" y1="6" x2="86" y2="20"/>
+    <line x1="160" y1="6" x2="94" y2="20"/>
+    <circle cx="20" cy="6" r="2.4" fill="#f0c469"/>
+    <circle cx="160" cy="6" r="2.4" fill="#f0c469"/>
+  </g>
+  <circle cx="90" cy="13" r="3" fill="#f0c469"/>
+</svg>
+</div>
+
+<p class="kicker">A nocturnal duel · science explainer</p>
+<h1>Two Choirs in the Dark</h1>
+<p class="lede">When two crowds clap in the same rhythm — are they hearing each other, or just both catching the same signal from outside? And can the two cases even be told apart by watching alone?</p>
+
+<div class="meta">
+  <div class="row"><div class="k">Date</div><div class="v">3 June 2026</div></div>
+  <div class="row"><div class="k">Topic</div><div class="v">Whether two mechanisms of synchronization can be told apart in principle from passive observation alone</div></div>
+  <div class="row"><div class="k">Models at issue</div><div class="v">A — synchronization by a shared external noise · B — synchronization by weak mutual coupling</div></div>
+  <div class="row"><div class="k">Sides</div><div class="v">Athos — defending the thesis · Aramis — refuting it</div></div>
+  <div class="row"><div class="k">Format</div><div class="v">six alternating moves; every claim backed by a computation; an independent final assessment</div></div>
+</div>
+
+<div class="rule"></div>
+
+<p>Picture two choirs singing in adjacent halls. At first each holds its own part, but a minute later you notice: they are singing in time. Their voices have synchronized. Then comes a deceptively simple question. There are two reasons this could have happened:</p>
+
+<div class="duel">
+  <div class="card pro">
+    <div class="who">Version A · shared signal</div>
+    <div class="stance">The choirs <b>cannot hear</b> each other. But the same metronome is running in both halls (or the same hum drifts in from the street). Each choir locks onto a <i>shared external</i> signal — and so they end up matching each other.</div>
+  </div>
+  <div class="card con">
+    <div class="who">Version B · mutual coupling</div>
+    <div class="stance">There is no shared metronome. But the wall is thin, and the choirs <b>faintly hear</b> each other. That weak mutual coupling is what draws them into a common rhythm.</div>
+  </div>
+</div>
+
+<p>From the outside both pictures look identical: two synchronized choirs. The question of the duel — <b>can you tell, from a recording of their singing alone, with no intervention, which of the two causes is the true one?</b> Or must you intervene — say, switch off the metronome and see whether the synchrony falls apart?</p>
+
+<span class="gloss"><b>What this is really about.</b> Physicists model such choirs as <span class="term">oscillators</span> — objects each carrying a <span class="term">phase</span> (where it currently sits in its cycle: inhale–exhale, step–step, beat). The classic equation for a large group of interacting oscillators is the <span class="term">Kuramoto model</span>. A "choir" here is a group of such oscillators, and its collective rhythm is captured by a single number — the <span class="term">order parameter</span>.</span>
+
+<h2>The stakes</h2>
+<p>Two step onto the stage. <b>Athos</b> defends a bold thesis; <b>Aramis</b> sets out to topple it. The thesis runs:</p>
+
+<blockquote>"Version A and version B are <span class="term">observationally equivalent</span>. No passive statistic computed from recordings of the rhythms will tell a shared signal from mutual coupling. To separate them, you need an intervention."</blockquote>
+
+<span class="gloss"><b>Two key terms.</b> A <span class="term">passive statistic</span> is any quantity you can compute just by looking at a recording, touching nothing (how alike the rhythms are, whether one lags the other, and so on). <span class="term">Observational equivalence</span> is when two different causes yield <i>indistinguishable</i> observations: the data are the same, the mechanism behind them differs. If that holds, a passive observer is powerless — an <span class="term">intervention</span> is needed, an active interference with the system.</span>
+
+<p>Athos (for the thesis) bets on <b>symmetry</b>: if both choirs are equal partners, neither leading the other, then the most obvious "clues" — who runs ahead of whom, which way the influence flows — cancel out for both versions at once. And if so, there is nothing left to tell them apart.</p>
+<p>Aramis (on the attack) replies: "It isn't the pair of choirs that's blind — only <i>your particular clue</i> is. There is another, subtler one, and it does tell them apart."</p>
+
+<div class="rule"></div>
+
+<h2>The duel: not rhetoric, but arithmetic</h2>
+<p>What set this duel apart: every blow was backed not by words but by a computation. The duelists took turns running an honest simulation of the two choirs and measuring their clues on it. And the opening thrusts exposed a trap that is easy to fall into.</p>
+
+<h3>The false-comparison trap</h3>
+<p>For the comparison to be fair, both choirs must be synchronized <i>equally strongly</i>. The strength of synchrony is measured by a number from 0 to 1 — this is the order parameter between the choirs.</p>
+
+<span class="gloss"><b>The synchrony measure (PLV).</b> If two rhythms keep the same phase difference throughout, this value is close to <b>1</b> (rigid synchrony). If the phase difference wanders at random, it is close to <b>0</b>. Formally this is the <span class="term">phase-locking value</span>. Mechanisms can only be compared at equal PLV — otherwise you are not comparing "shared signal versus coupling" but "weak synchrony versus strong."</span>
+
+<p>This is exactly where both repeatedly stumbled: in the simple model, mutual coupling drives synchrony almost instantly to the ceiling (PLV ≈ 1), whereas a shared signal holds it at an intermediate level. Equalizing the PLV of the two mechanisms never quite worked — and that in itself is a substantive fact, one the defender kept pointing to. So the decisive move had to find a difference that did <i>not</i> rely on the strength of synchrony.</p>
+
+<h3>The decisive thrust</h3>
+<p>Aramis measured not the rhythm itself but its <span class="term">instantaneous speed</span> — how sharply each choir speeds up and slows down from moment to moment — and asked: do these jolts coincide in the two choirs <i>at the very same instant</i>?</p>
+
+<span class="gloss"><b>Where the difference comes from — the physical core.</b> A shared signal strikes both choirs <i>at once</i>: the same metronome push accelerates both together. So their instantaneous jolts coincide <b>with no delay</b>. Under mutual coupling, by contrast, the choirs merely tune their overall rhythm to each other, while each keeps its <b>own</b> moment-to-moment jitter — the small jolts of one are not passed to the other instantly.</span>
+
+<p>And here is what makes the result especially convincing. In this run, coupling (B) is phase-synchronized even <i>more</i> strongly than the shared signal (PLV ≈ 0.97 against ≈ 0.72) — and yet its instantaneous jolts do <b>not</b> coincide at all. While the more weakly synchronized shared signal gives an almost perfect instantaneous match of jolts. So it is not the strength of synchrony that matters: the jolts reveal the <b>mechanism</b> itself, regardless of which choir is more tightly "locked."</p>
+
+<figure>
+<div class="chartbox">
+<svg class="bars" width="640" height="318" viewBox="0 0 640 318">
+  <!-- axes -->
+  <line x1="58" y1="22" x2="58" y2="254" stroke="#586079" stroke-width="1"/>
+  <line x1="58" y1="215.3" x2="602" y2="215.3" stroke="#586079" stroke-width="1"/>
+  <!-- y ticks -->
+  <g fill="#9aa6c0" font-size="9" text-anchor="end">
+    <text x="52" y="25">1.0</text>
+    <text x="52" y="121.7">0.5</text>
+    <text x="52" y="218.3">0.0</text>
+  </g>
+  <g stroke="#2b3550" stroke-width="0.8" stroke-dasharray="3,3">
+    <line x1="58" y1="22" x2="602" y2="22"/>
+    <line x1="58" y1="118.7" x2="602" y2="118.7"/>
+  </g>
+  <!-- x ticks -->
+  <g fill="#9aa6c0" font-size="9" text-anchor="middle">
+    <text x="58" y="270">-10</text>
+    <text x="194" y="270">-5</text>
+    <text x="330" y="270">0</text>
+    <text x="466" y="270">+5</text>
+    <text x="602" y="270">+10</text>
+  </g>
+  <text x="330" y="292" fill="#8fa0c4" font-size="9.5" text-anchor="middle" font-style="italic">time shift (lag), steps</text>
+  <text x="16" y="138" fill="#8fa0c4" font-size="9.5" text-anchor="middle" font-style="italic" transform="rotate(-90 16 138)">coincidence of jolts</text>
+  <!-- B curve (coupling): flat near zero -->
+  <polyline fill="none" stroke="#f2a07e" stroke-width="2"
+    points="58.0,216.9 85.2,216.8 112.4,215.6 139.6,216.9 166.8,215.0 194.0,216.5 221.2,216.0 248.4,216.0 275.6,216.3 302.8,214.8 330.0,215.7 357.2,215.1 384.4,215.7 411.6,215.8 438.8,215.2 466.0,215.8 493.2,214.4 520.4,214.8 547.6,216.4 574.8,215.1 602.0,215.4"/>
+  <!-- A curve (common noise): sharp spike at lag 0 -->
+  <polyline fill="none" stroke="#8ec2f2" stroke-width="2"
+    points="58.0,215.8 85.2,215.6 112.4,215.4 139.6,213.1 166.8,216.5 194.0,214.2 221.2,214.6 248.4,214.2 275.6,215.6 302.8,214.2 330.0,28.4 357.2,213.8 384.4,215.1 411.6,214.1 438.8,215.1 466.0,214.3 493.2,216.3 520.4,212.7 547.6,214.4 574.8,215.4 602.0,215.9"/>
+  <circle cx="330" cy="28.4" r="3.5" fill="#8ec2f2"/>
+  <!-- legend -->
+  <g font-size="9.5">
+    <rect x="372" y="40" width="222" height="50" rx="5" fill="rgba(10,15,26,0.7)" stroke="#2b3550"/>
+    <line x1="384" y1="56" x2="408" y2="56" stroke="#8ec2f2" stroke-width="2.5"/>
+    <text x="414" y="59" fill="#cfd6e6">A · shared signal</text>
+    <line x1="384" y1="76" x2="408" y2="76" stroke="#f2a07e" stroke-width="2.5"/>
+    <text x="414" y="79" fill="#cfd6e6">B · mutual coupling</text>
+  </g>
+</svg>
+</div>
+<figcaption>Coincidence of the two choirs' instantaneous jolts as a function of the time shift between them. The shared signal (blue) shows a sharp peak right at zero: the jolts coincide instantly (0.97). Mutual coupling (orange) stays an almost flat line near zero at any shift: there is a common rhythm, but the moment-to-moment jolts are independent. Both versions are in a strong-synchrony regime (PLV ≈ 0.72 and ≈ 0.97). Simulation parameters in the appendix.</figcaption>
+</figure>
+
+<p>The picture leaves no room for argument in this particular round: a simple automatic classifier given only the coarse synchrony measure confused the versions (accuracy ≈ 0.73 — barely better than a coin flip). The same classifier, handed the subtle clue about instantaneous jolts and their lag, separated the versions <b>flawlessly</b>.</p>
+
+<figure>
+<div class="chartbox">
+<svg width="560" height="194" viewBox="0 0 560 194">
+  <!-- scale: x0=70 (=0.0), 470 (=1.0); 400px per unit -->
+  <!-- random-guess baseline 0.5 at x=270 -->
+  <line x1="270" y1="20" x2="270" y2="140" stroke="#7f8aa8" stroke-width="0.9" stroke-dasharray="4,3"/>
+  <text x="270" y="14" fill="#a9b8d8" font-size="8.4" text-anchor="middle">random guessing · 0.5</text>
+  <!-- bar 1: PLV only 0.73 -> width 292 -->
+  <text x="70" y="46" fill="#dfe5f2" font-size="9.5">coarse synchrony measure only</text>
+  <rect x="70" y="52" width="292" height="22" rx="3" fill="#8a96b4"/>
+  <text x="370" y="68" fill="#dde5f5" font-size="10" font-weight="bold">0.73</text>
+  <!-- bar 2: phase dynamics 1.00 -> width 400 -->
+  <text x="70" y="100" fill="#dfe5f2" font-size="9.5">+ instantaneous jolts and their lag</text>
+  <rect x="70" y="106" width="400" height="22" rx="3" fill="#f0c469"/>
+  <text x="478" y="122" fill="#f0c469" font-size="10" font-weight="bold">1.00</text>
+  <!-- x axis -->
+  <line x1="70" y1="140" x2="470" y2="140" stroke="#586079" stroke-width="1"/>
+  <g fill="#9aa6c0" font-size="8.4" text-anchor="middle">
+    <line x1="70" y1="140" x2="70" y2="145" stroke="#586079"/>
+    <line x1="270" y1="140" x2="270" y2="145" stroke="#586079"/>
+    <line x1="470" y1="140" x2="470" y2="145" stroke="#586079"/>
+    <text x="70" y="157">0.0</text>
+    <text x="270" y="157">0.5</text>
+    <text x="470" y="157">1.0</text>
+  </g>
+  <text x="270" y="180" fill="#a9b8d8" font-size="9" text-anchor="middle" font-style="italic">fraction correct on new recordings</text>
+</svg>
+</div>
+<figcaption>Accuracy of recognizing the mechanism from a recording (fraction correct, leave-one-out validation; the random-guess baseline is 0.5). The coarse synchrony measure is nearly useless; the subtle clue about instantaneous jolts separates the versions completely.</figcaption>
+</figure>
+
+<h2>Verdict</h2>
+<div class="verdict">
+  <p><span class="win">Aramis wins</span> — the one attacking the thesis. On the quality of argument and on the decisive numerical result, he is closer to the truth: the universal claim that "nothing can tell them apart" proved <b>too strong</b>.</p>
+  <p style="margin-bottom:0">But a qualified win. Aramis himself at times compared choirs in different synchrony regimes, and his early clues were an artifact of that skew. The purely phase-based "directional" clues the defender bet on truly are blind — here Athos is right. The versions could be separated only by the finer statistic of instantaneous jolts.</p>
+</div>
+
+<h3>Where the defense held</h3>
+<p>The losing thesis kept an honest line of defense, and the duel laid it bare. The whole result rests on the "shared signal" being <i>simple</i>: the same instantaneous push to both choirs. Allow it to be richer — delayed, with its own structure, affecting the loudness of the singing too — and it begins to reproduce the very clues used to convict it. Then the boundary between "shared signal" and "mutual coupling" blurs again.</p>
+<p>So the precise statement of the conclusion is this: <b>within two simple, honestly posed versions, a passive fingerprint does exist</b> — the instantaneous jolts reveal the mechanism. But <b>the wider the class of admissible shared signals, the closer we come to the original thesis</b> of indistinguishability. Exactly where the boundary lies is an open question — and a more interesting one than the duel's outcome.</p>
+
+<p><b>Why this matters beyond the hall of choirs.</b> The same question arises wherever two systems "move in step": brain regions, market prices, populations, power grids. Seeing coordination, we want to know — do they influence each other, or are they simply driven by a shared invisible factor? An important caveat: the model examined here is two specific idealized versions, and no general law about all systems follows from it. But it poses the question cleanly: for each pair of "shared factor versus mutual influence," it is worth checking separately whether the mechanism leaves a passive fingerprint — or whether it can be distinguished only by intervention. Here a fingerprint was found for a simple shared factor; how far it survives added complexity is the matter for the next duel.</p>
+
+<div class="ornament" style="margin-top:7px">
+<svg width="160" height="20" viewBox="0 0 160 20">
+  <g stroke="#d9b25b" stroke-width="1.2" opacity="0.85">
+    <line x1="10" y1="10" x2="70" y2="10"/><line x1="90" y1="10" x2="150" y2="10"/>
+  </g>
+  <circle cx="80" cy="10" r="3" fill="#f0c469"/>
+</svg>
+</div>
+
+<div class="appendix">
+<h3>Appendix · simulation parameters</h3>
+<p class="ap"><b>Model.</b> Two groups of 120 phase oscillators each (Kuramoto model) with intra-group coupling; natural frequencies ~ normal (mean 1.0, spread 0.08), integration step dt = 0.05, series length 5000 steps (the first 1500 discarded as burn-in).</p>
+<p class="ap"><b>Version A (common noise).</b> The same random push is applied to both groups simultaneously (intensity 0.3) plus independent intra-group noise (0.6); no inter-group coupling.</p>
+<p class="ap"><b>Version B (mutual coupling).</b> Weak symmetric coupling between the groups (strength 0.02), no common noise; the same intra-group noise (0.6).</p>
+<p class="ap"><b>Operating point and averaging.</b> Both versions are in a strong-synchrony regime (PLV: A ≈ 0.72, B ≈ 0.97; perfect equality cannot be reached — see "the false-comparison trap"). The jolt-coincidence curve is averaged over 8 independent runs (random seeds 0–7).</p>
+<p class="ap"><b>Recognition (lower chart).</b> Accuracy obtained on the final move of the duel: a logistic classifier, leave-one-out validation, ~30 runs per version; the random-guess baseline is 0.5.</p>
+<p class="ap" style="color:#9aa6c4">The numbers are illustrative: they reproduce the duel's key result and do not claim to be a full paper. Full reproducibility requires the simulation source code.</p>
+</div>
+
+<div class="foot">
+The duel's direction was inspired by the paper <i>"Common Noise-Induced Group-Level Synchronization Between Uncoupled Groups of Oscillators"</i> (arXiv:2605.29529). The dispute was not about the paper itself but about a stronger hypothesis it suggests: the in-principle (in)distinguishability of common noise and weak coupling from passive observation. All numbers in the charts come from simulating the Kuramoto model for two groups of oscillators.
+<br><span style="color:#7f8aa8">© 2026 Occam Research · Licensed under CC BY-NC-ND 4.0</span>
+</div>
+
+</div>
+</body>
+</html>

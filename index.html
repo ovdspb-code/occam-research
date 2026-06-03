@@ -82,6 +82,13 @@
   <div class="pub-list" id="pubsList"></div>
 </section>
 
+<!-- DUELLUM VERITATIS (loaded dynamically from disputes.json) -->
+<section class="section reveal" id="disputesSection">
+  <h2>Duellum Veritatis</h2>
+  <p class="disputes-meta" style="font-size:var(--text-xs);color:var(--text-3);margin-bottom:var(--space-4)">Loading digests…</p>
+  <div class="pub-list" id="disputesList"></div>
+</section>
+
 <!-- OPEN RESOURCES -->
 <section class="section reveal">
   <h2>Open Resources</h2>
@@ -237,6 +244,35 @@ fetch('publications.json').then(r=>r.json()).then(data => {
 }).catch(() => {
   const s = document.getElementById('pubsSection');
   if(s) s.querySelector('.pubs-meta').textContent = 'Could not load publications.json';
+});
+
+// ===== DUELLUM VERITATIS from disputes.json =====
+fetch('disputes.json').then(r=>r.json()).then(data => {
+  const sec = document.getElementById('disputesSection');
+  if(!sec) return;
+  const meta = sec.querySelector('.disputes-meta');
+  const n = data.disputes.length;
+  if(meta) meta.textContent = `${data.subtitle} · ${n} digest${n===1?'':'s'} · Updated ${data.updated}`;
+  const list = document.getElementById('disputesList');
+  list.innerHTML = '';
+  [...data.disputes].sort((a,b)=>b.date.localeCompare(a.date)).forEach(d => {
+    const links = [];
+    links.push(`<a href="${d.html}">Read</a>`);
+    if(d.pdf) links.push(`<a href="${d.pdf}" target="_blank" rel="noopener noreferrer">PDF</a>`);
+    if(d.doi) links.push(`<a href="https://doi.org/${d.doi}" target="_blank" rel="noopener noreferrer">DOI</a>`);
+    const el = document.createElement('div');
+    el.className = 'pub-item';
+    el.innerHTML = `
+      <span class="pub-tag review">No. ${d.no} · ${d.date}</span>
+      <div class="pub-title">${d.title}</div>
+      <div class="pub-meta">${d.subtitle}${d.verdict ? ` · Verdict: ${d.verdict}` : ''}</div>
+      <div class="pub-links">${links.join('')}</div>
+    `;
+    list.appendChild(el);
+  });
+}).catch(() => {
+  const s = document.getElementById('disputesSection');
+  if(s){ const m = s.querySelector('.disputes-meta'); if(m) m.textContent = 'Could not load disputes.json'; }
 });
 
 // ===== SCORECARD from scorecard.json =====
