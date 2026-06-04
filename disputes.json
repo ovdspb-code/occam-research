@@ -1,9 +1,28 @@
 {
-  "updated": "2026-06-03",
+  "updated": "2026-06-04",
   "series": "Duellum Veritatis",
   "subtitle": "Adversarial science digests — a thesis defended and attacked to a verdict, every claim backed by computation.",
   "doi": "10.5281/zenodo.20528909",
   "disputes": [
+    {
+      "id": "2026-06-04-the-shrinking-yardstick",
+      "no": 2,
+      "title": "The Yardstick That Shrank",
+      "subtitle": "Does a method that compresses data to gain power secretly confirm too-simple theories — or does it just depend on where you measure the bar?",
+      "date": "2026-06-04",
+      "verdict": "Aramis wins: the strong thesis fails — under an honest full-space noise ceiling the false-confirmation rate is 0% at every rank; the apparent inflation was an artifact of estimating the ceiling in the compressed space.",
+      "tags": [
+        "representational-similarity",
+        "noise-ceiling",
+        "dimensionality",
+        "statistical-power",
+        "false-confirmation",
+        "neuroscience-AI"
+      ],
+      "html": "disputes/2026-06-04-the-shrinking-yardstick.html",
+      "pdf": "disputes/2026-06-04-the-shrinking-yardstick.pdf",
+      "doi": "10.5281/zenodo.20528909"
+    },
     {
       "id": "2026-06-03-two-choirs-in-the-dark",
       "no": 1,
@@ -11,7 +30,11 @@
       "subtitle": "Can a shared external signal be told from weak mutual coupling by passive observation alone?",
       "date": "2026-06-03",
       "verdict": "Thesis refuted (with qualification)",
-      "tags": ["synchronization", "Kuramoto", "identifiability"],
+      "tags": [
+        "synchronization",
+        "Kuramoto",
+        "identifiability"
+      ],
       "html": "disputes/2026-06-03-two-choirs-in-the-dark.html",
       "pdf": "disputes/2026-06-03-two-choirs-in-the-dark.pdf",
       "doi": "10.5281/zenodo.20528909"
