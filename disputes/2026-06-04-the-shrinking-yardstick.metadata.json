@@ -1,0 +1,49 @@
+{
+  "duel_id": "dv-0002",
+  "series": "Duellum Veritatis",
+  "status": "public_adversarial_ai_stress_test",
+  "claim": {
+    "text": "\"The compression method's advantage in confirmatory power is not a general property but a consequence of its built-in low-rank, non-negative prior. When the true representation is high-rank and resists compression, the method does not merely lose power — it systematically inflates the rate of false confirmations relative to comparing the similarity matrices directly.\"",
+    "frozen_at": "2026-06-04T06:23:12Z",
+    "claim_type": "mixed"
+  },
+  "sides": {
+    "public_names": [
+      "Athos",
+      "Aramis"
+    ],
+    "side_assignment_seed_hash": null,
+    "model_id_public": "withheld"
+  },
+  "arbiter": {
+    "identity_public": "independent_ai_arbiter",
+    "outside_duel_roster": true,
+    "blind_to_model_identity": true,
+    "order_swap_audit": {
+      "status": "NOT_RUN",
+      "waiver_reason": "retrospective_release_before_D1b"
+    },
+    "verbosity_confound_warning": false
+  },
+  "outcome": {
+    "enum": "CON",
+    "basis": "real_compute",
+    "confidence": null,
+    "arbitration_status": "NOT_RUN",
+    "protocol_status": "PARTIAL"
+  },
+  "reproducibility": {
+    "bundle_included": false,
+    "compute_manifest": null,
+    "rerun_status": "not_applicable"
+  },
+  "publication_gate": {
+    "status": "WAIVED",
+    "approved_sidecar_hash": null,
+    "prior_work_check": "not_applicable",
+    "third_party_text_handling": "not_applicable",
+    "errata": [
+      "2026-06-04: retroactive disclosure header and metadata added; original argument text unchanged."
+    ]
+  }
+}

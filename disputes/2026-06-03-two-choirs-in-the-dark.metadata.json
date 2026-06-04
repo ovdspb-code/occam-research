@@ -1,0 +1,49 @@
+{
+  "duel_id": "dv-0001",
+  "series": "Duellum Veritatis",
+  "status": "public_adversarial_ai_stress_test",
+  "claim": {
+    "text": "\"Version A (shared external signal) and version B (weak mutual coupling) are observationally equivalent. No passive statistic computed from recordings of the rhythms alone will tell a shared signal from mutual coupling; to separate them you need an intervention.\"",
+    "frozen_at": "2026-06-03T02:01:04Z",
+    "claim_type": "mixed"
+  },
+  "sides": {
+    "public_names": [
+      "Athos",
+      "Aramis"
+    ],
+    "side_assignment_seed_hash": null,
+    "model_id_public": "withheld"
+  },
+  "arbiter": {
+    "identity_public": "independent_ai_arbiter",
+    "outside_duel_roster": true,
+    "blind_to_model_identity": true,
+    "order_swap_audit": {
+      "status": "NOT_RUN",
+      "waiver_reason": "retrospective_release_before_D1b"
+    },
+    "verbosity_confound_warning": false
+  },
+  "outcome": {
+    "enum": "CON",
+    "basis": "real_compute",
+    "confidence": null,
+    "arbitration_status": "NOT_RUN",
+    "protocol_status": "PARTIAL"
+  },
+  "reproducibility": {
+    "bundle_included": false,
+    "compute_manifest": null,
+    "rerun_status": "not_applicable"
+  },
+  "publication_gate": {
+    "status": "WAIVED",
+    "approved_sidecar_hash": null,
+    "prior_work_check": "not_applicable",
+    "third_party_text_handling": "not_applicable",
+    "errata": [
+      "2026-06-04: retroactive disclosure header and metadata added; original argument text unchanged."
+    ]
+  }
+}

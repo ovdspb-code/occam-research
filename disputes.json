@@ -21,7 +21,15 @@
       ],
       "html": "disputes/2026-06-04-the-shrinking-yardstick.html",
       "pdf": "disputes/2026-06-04-the-shrinking-yardstick.pdf",
-      "doi": "10.5281/zenodo.20528909"
+      "doi": "10.5281/zenodo.20528909",
+      "metadata": "disputes/2026-06-04-the-shrinking-yardstick.metadata.json",
+      "claim_type": "mixed",
+      "outcome": "CON",
+      "basis": "real_compute",
+      "confidence": null,
+      "arbitration_status": "NOT_RUN",
+      "protocol_status": "PARTIAL",
+      "prior_work_check": "not_applicable"
     },
     {
       "id": "2026-06-03-two-choirs-in-the-dark",
@@ -37,7 +45,15 @@
       ],
       "html": "disputes/2026-06-03-two-choirs-in-the-dark.html",
       "pdf": "disputes/2026-06-03-two-choirs-in-the-dark.pdf",
-      "doi": "10.5281/zenodo.20528909"
+      "doi": "10.5281/zenodo.20528909",
+      "metadata": "disputes/2026-06-03-two-choirs-in-the-dark.metadata.json",
+      "claim_type": "mixed",
+      "outcome": "CON",
+      "basis": "real_compute",
+      "confidence": null,
+      "arbitration_status": "NOT_RUN",
+      "protocol_status": "PARTIAL",
+      "prior_work_check": "not_applicable"
     }
   ]
 }
