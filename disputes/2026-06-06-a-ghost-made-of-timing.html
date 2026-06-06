@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 13mm 0 12mm 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html,body { margin:0; padding:0; }
+  body {
+    font-family: "Georgia","Times New Roman",serif;
+    color:#f3efe4; background:#222d49;
+    font-size:10.5pt; line-height:1.49;
+    padding:0 18mm;
+    background-image:
+      radial-gradient(1100px 480px at 72% -8%, rgba(120,145,205,0.26), transparent 60%),
+      radial-gradient(900px 600px at -8% 108%, rgba(170,135,70,0.18), transparent 55%);
+  }
+  h1 { font-size:25pt; line-height:1.08; margin:0 0 4px 0; color:#fbf6e8;
+       letter-spacing:0.3px; font-weight:700; }
+  h2 { font-size:13.5pt; margin:15px 0 6px 0; color:#f0c469;
+       border-bottom:1px solid rgba(240,196,105,0.42); padding-bottom:4px; font-weight:700; }
+  h3 { font-size:11pt; margin:13px 0 3px 0; color:#dde5f5; font-weight:700; }
+  p { margin:0 0 7px 0; text-align:justify; }
+  .kicker { color:#a9b8d8; font-size:9pt; letter-spacing:2.4px; text-transform:uppercase; margin:0 0 8px 0; }
+  .lede { font-size:11.6pt; color:#e3e8f3; font-style:italic; line-height:1.5; margin:6px 0 4px 0; }
+  .rule { height:1px; background:linear-gradient(90deg,transparent,rgba(240,196,105,0.7),transparent); margin:12px 0; }
+  .term { color:#f0c469; font-style:normal; font-weight:700; }
+  .gloss { display:block; background:rgba(160,180,220,0.14); border-left:3px solid #a9b8d8;
+           padding:7px 11px; margin:8px 0; font-size:9.4pt; color:#dfe5f2; line-height:1.44; }
+  .gloss b { color:#fbf6e8; }
+  .disclaimer { border:1px solid rgba(242,160,126,0.55); border-radius:7px; padding:9px 13px;
+                background:rgba(242,160,126,0.10); margin:10px 0; font-size:9.3pt; color:#f6e9df; line-height:1.46; }
+  .disclaimer b { color:#f6c9b3; }
+  .duel { display:flex; gap:12px; margin:10px 0; }
+  .card { flex:1; border:1px solid rgba(240,196,105,0.34); border-radius:6px; padding:10px 12px;
+          background:rgba(15,21,38,0.5); }
+  .card .who { font-size:9pt; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:4px; }
+  .pro .who { color:#8ec2f2; }
+  .con .who { color:#f2a07e; }
+  .card .stance { font-size:9.6pt; color:#e3e8f3; line-height:1.42; }
+  figure { margin:14px 0 8px 0; text-align:center; }
+  figcaption { font-size:8.8pt; color:#b3bdd4; margin-top:5px; font-style:italic; line-height:1.35; }
+  .chartbox { background:rgba(11,16,30,0.72); border:1px solid rgba(160,180,220,0.3);
+              border-radius:8px; padding:10px 8px 4px 8px; }
+  blockquote { margin:10px 0; padding:8px 14px; border-left:3px solid #f0c469;
+               background:rgba(240,196,105,0.1); font-style:italic; color:#fbf6e8; }
+  .verdict { border:1px solid rgba(240,196,105,0.6); border-radius:8px; padding:12px 16px;
+             background:linear-gradient(180deg, rgba(240,196,105,0.16), rgba(240,196,105,0.05)); margin:12px 0; }
+  .verdict .win { color:#f0c469; font-weight:700; font-size:12pt; }
+  .meta { border:1px solid rgba(160,180,220,0.32); border-radius:7px; padding:8px 13px;
+          background:rgba(15,21,38,0.42); margin:10px 0 4px 0; font-size:9pt; line-height:1.5; }
+  .meta .row { display:flex; gap:8px; padding:1.5px 0; }
+  .meta .k { color:#a9b8d8; min-width:104px; flex:0 0 104px; text-transform:uppercase;
+             letter-spacing:0.6px; font-size:8.2pt; padding-top:1px; }
+  .meta .v { color:#eef2fa; }
+  .twocol { display:flex; gap:14px; }
+  .twocol > div { flex:1; }
+  .support { border:1px solid rgba(142,194,242,0.4); border-radius:7px; padding:8px 12px;
+             background:rgba(142,194,242,0.08); margin:6px 0; }
+  .support h3 { margin-top:2px; color:#8ec2f2; }
+  .nosupport { border:1px solid rgba(242,160,126,0.42); border-radius:7px; padding:8px 12px;
+               background:rgba(242,160,126,0.08); margin:6px 0; }
+  .nosupport h3 { margin-top:2px; color:#f2a07e; }
+  ul { margin:3px 0 7px 0; padding-left:18px; }
+  li { margin:2px 0; }
+  .appendix { border-top:1px solid rgba(160,180,220,0.28); margin-top:14px; padding-top:8px; }
+  .appendix h3 { color:#f0c469; margin:0 0 5px 0; font-size:10pt; letter-spacing:0.4px; }
+  .appendix .ap { font-size:8.4pt; color:#c7cfe0; line-height:1.46; margin:0 0 4px 0; word-break:break-all; }
+  .appendix .ap b { color:#eef2fa; }
+  .ornament { text-align:center; margin:6px 0 2px 0; }
+  svg { display:block; }
+  .bars text { font-family:"Georgia",serif; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="ornament">
+<svg width="180" height="26" viewBox="0 0 180 26">
+  <g stroke="#d9b25b" stroke-width="1.4" fill="none" opacity="0.9">
+    <line x1="20" y1="6" x2="86" y2="20"/>
+    <line x1="160" y1="6" x2="94" y2="20"/>
+    <circle cx="20" cy="6" r="2.4" fill="#f0c469"/>
+    <circle cx="160" cy="6" r="2.4" fill="#f0c469"/>
+  </g>
+  <circle cx="90" cy="13" r="3" fill="#f0c469"/>
+</svg>
+</div>
+
+<p class="kicker">A nocturnal duel · science explainer</p>
+<h1>A Ghost Made of Timing</h1>
+<p class="lede">A subtle brain signal that today's giant AI models seem to "forget" looks like a genuine three-way conversation between brain regions. But what if it is only the shadow that ordinary timing throws across a snapshot — a ghost we mistake for a mechanism?</p>
+
+<div class="meta">
+  <div class="row"><div class="k">Date</div><div class="v">6 June 2026</div></div>
+  <div class="row"><div class="k">Topic</div><div class="v">Whether a third-order "co-skewness" signal in static brain connectivity is a real instantaneous three-way mechanism, or mostly a static shadow of unmodeled directed/lagged structure</div></div>
+  <div class="row"><div class="k">Claim type</div><div class="v">Numeric — backed only by the attached reproducible compute bundle</div></div>
+  <div class="row"><div class="k">Sides</div><div class="v">Athos — defending the thesis · Aramis — refuting it · (public AI-generated sides; engine identities withheld)</div></div>
+  <div class="row"><div class="k">Format</div><div class="v">twelve alternating moves, every blow a simulation; an independent AI arbiter; an order-swap audit</div></div>
+</div>
+
+<div class="disclaimer" data-duellum="status-disclaimer">
+<b>Status:</b> public adversarial AI stress-test. This is not peer review, not a scientific proof, and not an endorsement of the claim. Two AI-generated sides argued a frozen claim under a fixed protocol; an independent AI arbiter issued a structured verdict. For numerical claims, the reported numbers come only from the attached reproducible compute bundle. Publication means the duel passed the release gate; it does not promote the claim to discovery status. <span data-duellum="gate-scope">Passing the release gate means automated structural, integrity and format checks passed — it is not human methodological review, peer review, or approval of the claim's substance.</span>
+</div>
+
+<div class="disclaimer" data-duellum="epistemic-status">
+<b>Epistemic status:</b> scout / protocol pilot — exploratory. This issue is a scouting duel, <b>not an established scientific result</b>. Its decisive test runs on a synthetic/proxy observable: it probes whether the proposed mechanism is <i>sufficient in principle</i>, not whether real brain data live in that regime. Treat the finding as a lead to investigate, not a confirmed claim about the seed paper's empirics.
+</div>
+
+<div class="rule"></div>
+
+<p>Brains are studied through their wiring in motion. Park a person in a scanner, record how active each region is moment to moment, and you can ask which regions rise and fall together. That table of togetherness — region by region — is called <span class="term">functional connectivity</span>, and it has become the workhorse fingerprint for telling one mind from another and predicting things like memory or reasoning scores.</p>
+
+<span class="gloss"><b>The toolkit in one breath.</b> <span class="term">Functional connectivity</span> (FC) usually means <i>second-order</i> structure: for every pair of regions, do they go up and down together? A recent line of work asks about <i>third-order</i> structure instead — <span class="term">co-skewness</span> — which looks at <b>triplets</b> of regions at once and asks whether they tend to spike together in a lopsided, asymmetric way. The seed paper reported that this triple-wise signal predicts cognition, and that today's large "foundation" models trained on brain data quietly throw it away.</span>
+
+<p>The seed paper's striking result: this triple-wise co-skewness carries real predictive power about cognition — and the billion-parameter models everyone is excited about seem blind to it. The paper reads that as a genuine higher-order brain mechanism the models "forgot." This duel does not dispute the measurement. It interrogates a different, riskier idea about <i>where that signal comes from</i>.</p>
+
+<span class="gloss"><b>The suspicion at the heart of the duel.</b> A snapshot statistic like co-skewness is taken across regions <i>at the same instant</i>. But the brain is not instantaneous: signals travel, and the scanner's slow blood-flow measurement smears every neural event across several seconds, region by region. So a single shared event can show up in three regions at slightly different times — and leave a triple-wise footprint in the static snapshot that has nothing to do with a true simultaneous three-way interaction.</span>
+
+<h2>The frozen claim</h2>
+<p>The thesis Athos was assigned to defend, fixed before the duel and not edited afterwards:</p>
+
+<blockquote>"The predictive power of third-order co-skewness of static functional connectivity for cognition is largely an identifiability artifact rather than a genuine instantaneous three-way mechanism: co-skewness serves as the leading channel that absorbs unmodeled directed/lagged (temporal) dependencies, so once directed lagged FC is explicitly accounted for, the incremental contribution of static co-skewness to predicting cognition falls almost to zero."</blockquote>
+
+<p>The falsifier both sides accepted: if, after explicitly modelling directed, time-lagged connectivity on the same data, static co-skewness still adds a substantial increment <i>above</i> the directed baseline, the thesis is wrong.</p>
+
+<div class="duel">
+  <div class="card pro">
+    <div class="who">Thesis · Athos</div>
+    <div class="stance">Co-skewness is a <b>static shadow of timing</b>. A shared, lopsided driver reaching regions at slightly different lags leaves a triple-wise footprint in the snapshot. Model the directed/lagged structure honestly and co-skewness's extra contribution <b>collapses</b> — it was a proxy all along.</div>
+  </div>
+  <div class="card con">
+    <div class="who">Counter · Aramis</div>
+    <div class="stance">Co-skewness is its <b>own irreducible signal</b>, not exhausted by directed connectivity. A shadow argument only works if you assume one common driver; a genuine <i>instantaneous</i> three-way coupling would survive the directed baseline. Show it does not on data that actually look like a brain.</div>
+  </div>
+</div>
+
+<div class="rule"></div>
+
+<h2>The duel: arithmetic, not rhetoric</h2>
+<p>Every move was a small simulated world with a <b>known</b> answer, so the two sides could see who was right rather than argue it. Three things got settled along the way, and one did not.</p>
+
+<h3>Cleared away: the shuffle test is degenerate</h3>
+<p>An obvious idea — scramble time to destroy lagged structure and see if co-skewness dies — turned out to prove nothing. Both sides agreed: scrambling each region's clock independently kills co-skewness in <i>every</i> scenario, real mechanism or shadow alike, so it cannot tell them apart. A tempting test, honestly retired by both.</p>
+
+<h3>Settled: the signal needs a shared, lopsided source</h3>
+<p>Repeatedly, when each region was given its <i>own independent</i> lopsided driver, co-skewness predicted cognition at essentially zero. The triple-wise signal only appears when regions share a common skewed source. That is the hinge: a shared source, spread out in time, is exactly what produces a shadow.</p>
+
+<h3>The decisive construction</h3>
+<p>Athos built the clean case: one common lopsided driver, handed to several regions smeared across a few time-steps (standing in for the brain's region-specific haemodynamic delays), with cognition controlling the <i>directed coupling</i>. By construction there is <b>no</b> genuine instantaneous three-way term anywhere — any co-skewness must be a shadow. The test: does a directed, lagged connectivity model absorb it?</p>
+
+<figure>
+<div class="chartbox">
+<svg class="bars" width="640" height="300" viewBox="0 0 640 300">
+  <line x1="180" y1="20" x2="180" y2="250" stroke="#586079" stroke-width="1"/>
+  <line x1="180" y1="250" x2="612" y2="250" stroke="#586079" stroke-width="1"/>
+  <!-- x scale 0..1.0 over 180..600 -->
+  <g stroke="#2b3550" stroke-width="0.8" stroke-dasharray="3,3">
+    <line x1="285" y1="20" x2="285" y2="250"/>
+    <line x1="390" y1="20" x2="390" y2="250"/>
+    <line x1="495" y1="20" x2="495" y2="250"/>
+    <line x1="600" y1="20" x2="600" y2="250"/>
+  </g>
+  <g fill="#9aa6c0" font-size="9" text-anchor="middle">
+    <text x="180" y="266">0.0</text>
+    <text x="285" y="266">0.25</text>
+    <text x="390" y="266">0.50</text>
+    <text x="495" y="266">0.75</text>
+    <text x="600" y="266">1.0</text>
+  </g>
+  <!-- bars: value*420 width from x=180 -->
+  <g>
+    <rect x="180" y="46" width="201" height="34" fill="#8ec2f2" opacity="0.9"/>
+    <rect x="180" y="110" width="251" height="34" fill="#a9b8d8" opacity="0.85"/>
+    <rect x="180" y="174" width="381" height="34" fill="#f0c469" opacity="0.9"/>
+  </g>
+  <g fill="#eef2fa" font-size="10" text-anchor="end">
+    <text x="172" y="68">Co-skewness alone</text>
+    <text x="172" y="132">Static (2nd-order) FC</text>
+    <text x="172" y="196">Directed lagged FC</text>
+  </g>
+  <g fill="#0c1322" font-size="9.5" font-weight="700" text-anchor="end">
+    <text x="375" y="68">0.478</text>
+    <text x="425" y="132">0.597</text>
+    <text x="555" y="196">0.908</text>
+  </g>
+  <text x="396" y="290" fill="#9aa6c0" font-size="9" text-anchor="middle">cross-validated R² predicting cognition (higher = more predictive)</text>
+</svg>
+</div>
+<figcaption>Fig. 1 — In the simulated world, all three views predict cognition; the directed lagged model is by far the strongest. Mean over 12 random seeds. Source: <b>2026-06-06_cc_data.json</b> (common-source condition).</figcaption>
+</figure>
+
+<p>So co-skewness genuinely predicts cognition here (R² ≈ 0.48) — the seed paper's puzzle is reproduced. The real question is what it adds <i>once you already have</i> a connectivity baseline. Against the ordinary <b>static</b> FC, co-skewness adds a small but real increment (it sees the lagged channel the snapshot blurs). Against the <b>directed, lagged</b> FC, its contribution vanishes — the directed model already contains the whole mechanism.</p>
+
+<figure>
+<div class="chartbox">
+<svg class="bars" width="640" height="270" viewBox="0 0 640 270">
+  <!-- y zero baseline; values small. x positions for 3 bars -->
+  <line x1="80" y1="30" x2="80" y2="210" stroke="#586079" stroke-width="1"/>
+  <!-- zero line at y=170 ; scale: 0.05 -> up 120px (so 1 unit R2 = 2400px... use 0.01 -> 24px) -->
+  <line x1="80" y1="170" x2="612" y2="170" stroke="#8a93ad" stroke-width="1"/>
+  <g stroke="#2b3550" stroke-width="0.8" stroke-dasharray="3,3">
+    <line x1="80" y1="122" x2="612" y2="122"/>
+    <line x1="80" y1="74" x2="612" y2="74"/>
+  </g>
+  <g fill="#9aa6c0" font-size="9" text-anchor="end">
+    <text x="74" y="173">0.00</text>
+    <text x="74" y="125">+0.02</text>
+    <text x="74" y="77">+0.04</text>
+  </g>
+  <!-- bar1: incr over static +0.027 -> 0.027*2400=64.8 up -->
+  <rect x="150" y="105" width="90" height="65" fill="#8ec2f2" opacity="0.9"/>
+  <text x="195" y="98" fill="#cfe0f4" font-size="10" font-weight="700" text-anchor="middle">+0.027</text>
+  <text x="195" y="188" fill="#dfe5f2" font-size="9" text-anchor="middle">co-skew increment</text>
+  <text x="195" y="200" fill="#dfe5f2" font-size="9" text-anchor="middle">over static FC</text>
+  <!-- bar2: incr over directed -0.001 -> ~ -2px, draw tiny -->
+  <rect x="320" y="170" width="90" height="3" fill="#f2a07e" opacity="0.9"/>
+  <text x="365" y="163" fill="#f4c3ac" font-size="10" font-weight="700" text-anchor="middle">-0.001</text>
+  <text x="365" y="188" fill="#dfe5f2" font-size="9" text-anchor="middle">co-skew increment</text>
+  <text x="365" y="200" fill="#dfe5f2" font-size="9" text-anchor="middle">over directed lagged FC</text>
+  <!-- bar3 control: independent-source co-skew alone -0.031 -> downward -->
+  <rect x="490" y="170" width="90" height="74" fill="#9aa6c0" opacity="0.55"/>
+  <text x="535" y="256" fill="#b9c2d8" font-size="10" font-weight="700" text-anchor="middle">-0.031</text>
+  <text x="535" y="150" fill="#dfe5f2" font-size="9" text-anchor="middle">control: co-skew alone,</text>
+  <text x="535" y="138" fill="#dfe5f2" font-size="9" text-anchor="middle">independent sources</text>
+</svg>
+</div>
+<figcaption>Fig. 2 — The crux. Co-skewness adds a small increment over the static snapshot (left), but essentially nothing over a directed lagged model (centre): it was a proxy for timing. Control (right): remove the shared driver and co-skewness predicts nothing at all. Mean over 12 seeds; run-to-run spread ≈ 0.01–0.02. Source: <b>2026-06-06_cc_data.json</b>.</figcaption>
+</figure>
+
+<h2>The verdict</h2>
+<div class="verdict">
+<p class="win" data-duellum="outcome"><b>Outcome (who argued better):</b> PRO — the thesis side prevailed on argumentation.</p>
+<p class="win" data-duellum="substantive-verdict"><b>Substantive verdict (was the claim true):</b> unclear.</p>
+<p style="margin:6px 0 0 0; font-size:9.5pt; color:#f0c469;" data-duellum="axis-divergence"><b>These two axes diverge.</b> A side won the debate; the claim's truth did not. Read "Outcome: PRO" as "the thesis was argued better here," not as "the claim is true."</p>
+<p style="margin:6px 0 0 0;">In this release the arbiter judged that the public side defending the thesis (Athos) argued better: it held the falsifier frame, repaired its own models when they broke, and cleanly separated a working demonstration from the real-data test still owed. The losing side several times offered invalid or off-target counter-examples. But <b>on the substance the question stays open</b>: the duel showed the shadow mechanism is <i>sufficient</i> to manufacture the puzzle — it did not show that real brain data actually live in that regime.</p>
+<p style="margin:6px 0 0 0; font-size:9pt; color:#dfe5f2;"><b>Basis:</b> real_compute (attached bundle) · <b>Protocol:</b> PASS (12 moves, clean arbiter verdict) · <b>Order-swap audit:</b> PASS (verdict stable when the side order was swapped) · <b>Arbiter confidence:</b> not assigned — substantive outcome marked unclear.</p>
+</div>
+
+<div class="twocol">
+  <div class="support">
+    <h3>What this supports</h3>
+    <ul>
+      <li>A purely lagged, shared, lopsided driver is <b>sufficient</b> to make static co-skewness predict cognition — reproducing the seed paper's puzzle with no genuine three-way term.</li>
+      <li>Where that shadow exists, a directed lagged-connectivity model <b>absorbs</b> co-skewness almost entirely (increment ≈ 0.00 in the bundle).</li>
+      <li>The signal genuinely requires a <b>shared</b> source: independent per-region drivers yield no predictive co-skewness.</li>
+    </ul>
+  </div>
+  <div class="nosupport" data-duellum="does-not-support">
+    <h3>What this does <u>not</u> support</h3>
+    <ul>
+      <li>It does <b>not</b> show real fMRI co-skewness <i>is</i> such an artifact. The model is synthetic; it proves possibility, not actuality.</li>
+      <li>It does <b>not</b> refute a genuine higher-order brain mechanism — no one could make a true instantaneous three-way term reproduce the puzzle stably, but absence here is not proof of absence in brains.</li>
+      <li>It does <b>not</b> deliver the decisive test: a multi-lag / VAR directed baseline on real HCP data. That remains owed.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Where the losing side still has a point</h2>
+<p>Aramis's strongest move came at the end and is fair: the thesis claimed the increment falls <i>almost to zero</i>, yet on richer, more realistic baselines the residual was small but <b>run-to-run unstable</b> — sometimes near zero, sometimes not. "Almost zero" is a quantitative promise, and it was not met <i>stably</i>. Aramis proposed concrete thresholds for the real-data referee: on full HCP with a proper directed baseline, an increment below 0.02 would confirm the thesis, above 0.05 would refute it, and the band between is genuine uncertainty. That is the honest next experiment — and it is not one a synthetic world can settle.</p>
+
+<h2>Prior-work note</h2>
+<p data-duellum="prior-work">This release makes <b>no originality claim</b>. The seed paper established that co-skewness predicts cognition and that foundation models discard it; the duel's contribution is a stress-test of one mechanistic <i>explanation</i> for that signal, not a new empirical finding. Novelty status: <span class="term">not an originality claim</span>. The real-data discriminator described above is, to the duel's knowledge, not yet reported.</p>
+
+<div class="appendix">
+<h3>Appendix · reproducibility</h3>
+<p class="ap">Numbers and figures come from the attached repro bundle. Script, data, hashes, environment and rerun instructions are recorded in <b>2026-06-06_compute_manifest.json</b>.</p>
+<p class="ap"><b>Model:</b> 320 simulated subjects · 4 nodes · 300 timepoints · one common centered-exponential (skewed) driver spread to receiver nodes over a shared lag-1..3 kernel (weights 0.6 / 0.3 / 0.1); cognition modulates the directed coupling; a symmetric, cognition-independent nuisance loads every receiver. No genuine instantaneous three-way term by construction.</p>
+<p class="ap"><b>Estimator:</b> ridge regression (alpha = 1.0), 5-fold cross-validated R²; mean ± std over 12 fixed seeds (0–11).</p>
+<p class="ap"><b>Environment:</b> Python 3.12.3 · numpy 2.4.4 · linux-x86_64.</p>
+<p class="ap"><b>Headline values (common-source):</b> co-skew alone R² = 0.478 (±0.046) · static FC alone = 0.597 (±0.054) · directed lagged FC alone = 0.908 (±0.013) · co-skew increment over static FC = +0.027 (±0.012) · over directed FC = −0.001 (±0.002). Control (independent sources): co-skew alone = −0.031 (±0.016).</p>
+<p class="ap"><b>script_sha256:</b> sha256:f8d9ebffa2d98d9b33022030cd664c5a30ad06316f44203e960264d4adf8675a</p>
+<p class="ap"><b>2026-06-06_cc_data.json sha256:</b> sha256:4efefeb98f085187ce1defccd9ac85dd137fbcbcf4c9fbba83ed17717a2054be</p>
+<p class="ap"><b>Rerun:</b> python3 2026-06-06_repro.py → writes 2026-06-06_cc_data.json</p>
+<p class="ap"><b>Errata / quarantine:</b> none.</p>
+</div>
+
+<div class="appendix refs">
+<h3>References</h3>
+<p class="ap" style="text-indent:-1.4em; margin-left:1.4em;">Marraffini, G., Mahuas, G., Borrell, T., Shevchenko, V., &amp; Wassermann, D. (2026). The variance brain foundation models forgot: Third-order statistics predict cognition where billion-parameter models fail (arXiv:2606.04010). arXiv. <a href="https://arxiv.org/abs/2606.04010" style="color:#8ec2f2;">https://arxiv.org/abs/2606.04010</a></p>
+<p class="ap" style="font-size:8.4pt; color:#a9b8d8; margin-top:-2px;"><i>Seed publication — the empirical finding the duel was built on.</i></p>
+<p class="ap" style="text-indent:-1.4em; margin-left:1.4em;">Safaai, H., &amp; Sabatini, B. L. (2026). Feature leakage and the identifiability of direct-dependency entropy models of neural activity (arXiv:2606.01661). arXiv. <a href="https://arxiv.org/abs/2606.01661" style="color:#8ec2f2;">https://arxiv.org/abs/2606.01661</a></p>
+<p class="ap" style="font-size:8.4pt; color:#a9b8d8; margin-top:-2px;"><i>Supporting — the feature-leakage mechanism the thesis transfers onto the seed paper's empirics.</i></p>
+<p class="ap" style="font-size:8.4pt; color:#8a93ad; margin-top:4px;">Citation style: APA 7. References ordered alphabetically by first author.</p>
+</div>
+
+<p style="margin-top:10px; font-size:8.4pt; color:#8a93ad; text-align:center;">Duellum Veritatis · a public adversarial AI stress-test of a frozen scientific claim · published by Occam Research · engine and arbiter identities withheld by design.</p>
+
+</div>
+</body>
+</html>

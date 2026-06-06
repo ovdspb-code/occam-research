@@ -1,0 +1,66 @@
+{
+  "task_id": "dv-no4-coskew-timing-2026-06-06",
+  "frozen_claim": "Предсказательная сила third-order co-skewness тензора статической FC в отношении cognition — это в основном identifiability-артефакт, а не самостоятельный мгновенный three-way механизм: co-skewness служит ведущим каналом поглощения немоделированных направленных/лаговых (temporal) зависимостей, поэтому при явном учёте directed lagged FC инкрементальный вклад статической co-skewness в предсказание cognition падает почти до нуля.",
+  "frozen_at": "2026-06-06T02:01:11Z",
+  "registered_before_compute": true,
+  "registered_at": "2026-06-06T02:01:11Z",
+  "registered_by": "b2b-20260606-020111 (duel generator session)",
+  "pre_compute_event_id": "b2b-20260606-020111",
+  "decisive": true,
+  "observable": {
+    "name": "incremental_cv_r2_coskewness_over_directed_fc",
+    "definition": "Cross-validated R^2 increment of static third-order co-skewness features over a directed/multi-lag functional-connectivity baseline when predicting a cognition target. On a synthetic generative model a single common skewed latent driver is spread to receiver nodes through a shared fixed HRF-like lag-1..3 kernel, and cognition modulates the directed coupling; NO genuine instantaneous three-way interaction term exists by construction. Predictors are fit with Ridge(alpha=1.0) under 5-fold CV; the increment is coskew-augmented model CV-R^2 minus baseline CV-R^2, reported as mean +/- std across 12 fixed seeds. Baselines: static linear FC (poor), few-lag directed FC (poor), and a 6-lag VAR-style directed FC (rich).",
+    "paper_faithful": false,
+    "evidence_basis": "simulation",
+    "source_ref": "arXiv:2606.04010 (Marraffini et al.) — seed empirical finding that static co-skewness predicts cognition; the duel tests a mechanistic alternative (leakage of unmodelled directed/temporal structure) on a synthetic sufficiency model, not on the paper's observable as measured on neural data."
+  },
+  "model": {
+    "generative": "A single common latent driver with skewed (asymmetric) marginal is spread to 4 receiver nodes via a shared fixed lag-1..3 kernel [[1,0.6],[2,0.3],[3,0.1]] (HRF-like); cognition modulates the directed coupling. A symmetric nuisance source adds shared variance with no skew. By construction there is no instantaneous three-way coupling term: any static co-skewness is induced by the lagged common skewed driver.",
+    "config": "subjects=320, timepoints=300, nodes=4, rich_lags=6, estimator=Ridge(alpha=1.0) with 5-fold CV R^2, 12 fixed seeds (0..11).",
+    "controls": "independent_source regime: same marginal skew but NO common driver, so a genuine-instantaneous-mechanism account would still predict cognition from co-skewness while the leakage account predicts ~0."
+  },
+  "comparators": [
+    { "name": "static_coskewness", "role": "other" },
+    { "name": "static_linear_fc", "role": "baseline" },
+    { "name": "directed_fc_poor_fewlag", "role": "baseline" },
+    { "name": "directed_fc_rich_6lag", "role": "baseline" },
+    { "name": "independent_source_no_common_driver", "role": "null_model" }
+  ],
+  "thresholds": {
+    "incr_over_directed_near_zero_band": 0.02,
+    "coskew_alone_predictive_min": 0.1,
+    "ci": "mean +/- std across 12 fixed seeds",
+    "decision_rule": "Mechanistic SUFFICIENCY is supported if, under a common skewed driver, co-skewness alone is clearly predictive (CV-R^2 well above 0, target >= 0.1) yet its incremental CV-R^2 over a directed/multi-lag FC baseline falls within +/- 0.02 of zero, AND in the independent-source control (no common driver) co-skewness carries no prediction (CV-R^2 ~ 0 or below)."
+  },
+  "metrics": [
+    { "name": "cv_r2_coskewness_alone", "variants": ["raw"] },
+    { "name": "incremental_cv_r2_over_directed_fc", "variants": ["raw"] }
+  ],
+  "seeds": {
+    "count": 12,
+    "level": "run",
+    "streams": ["data_generation", "cv_split"]
+  },
+  "nulls": [
+    "independent_source: same marginal skew but no common driver — co-skewness should carry no cognition prediction under the leakage account.",
+    "increment measured by nested cross-validation to avoid optimistic bias."
+  ],
+  "failure_modes": [
+    "Synthetic sufficiency cannot establish that real fMRI/BOLD data live in this regime (external validity) — the decisive limitation of this test.",
+    "Ridge alpha fixed at 1.0; co-skewness feature dimensionality could inflate or deflate the measured increment.",
+    "Only 4 nodes, a single common driver and one symmetric nuisance; a richer real covariance structure could leave a residual increment a directed baseline does not absorb.",
+    "Haemodynamic spread approximated by a shared fixed lag-1..3 kernel rather than region-specific HRFs.",
+    "The residual increment of co-skewness over a richer directed baseline was reported as small but run-to-run unstable in the transcript and is NOT resolved here."
+  ],
+  "accepted_evidence_criteria": "Sufficiency is supported if co-skewness alone predicts the cognition target (CV-R^2 well above 0) under a common skewed driver while its increment over a directed/multi-lag FC baseline collapses to ~0 (within +/- 0.02), and the no-common-driver control shows co-skewness carries no prediction.",
+  "rejected_evidence_criteria": "The thesis as a REAL-DATA claim is NOT established by this synthetic test even when sufficiency holds. It would be falsified on real data if static co-skewness retained a substantial, stable incremental CV-R^2 over a properly matched directed/VAR baseline on the same subjects (e.g. HCP), or if co-skewness prediction survived a temporal/phase shuffle that preserves instantaneous marginals.",
+  "sensitivity_grid": {
+    "source_regime": ["common_skewed_driver", "independent_source_no_common_driver"],
+    "directed_baselines": ["static_linear_fc", "directed_poor_fewlag", "directed_rich_6lag"],
+    "seeds": 12,
+    "nodes": [4],
+    "subjects": [320],
+    "timepoints": [300],
+    "ridge_alpha": [1.0]
+  }
+}

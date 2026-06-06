@@ -1,9 +1,41 @@
 {
-  "updated": "2026-06-04",
+  "updated": "2026-06-06",
   "series": "Duellum Veritatis",
   "subtitle": "Adversarial science digests — a thesis defended and attacked to a verdict, every claim backed by computation.",
   "doi": "10.5281/zenodo.20528909",
   "disputes": [
+    {
+      "id": "2026-06-06-a-ghost-made-of-timing",
+      "no": 4,
+      "title": "A Ghost Made of Timing",
+      "subtitle": "Is a brain co-skewness signal that foundation models 'forgot' a real instantaneous three-way mechanism, or just the static shadow of timing the analysis never modelled?",
+      "date": "2026-06-06",
+      "verdict": "PRO prevailed on argumentation; substantively unclear. A lagged, shared, skewed driver is sufficient to make static co-skewness predict cognition while a directed lagged-FC baseline absorbs it almost entirely (increment ~0.00 in the bundle); but synthetic sufficiency does not establish that real fMRI lives in that regime.",
+      "tags": [
+        "functional-connectivity",
+        "higher-order-statistics",
+        "co-skewness",
+        "directed-connectivity",
+        "identifiability-artifact",
+        "neuroscience-AI"
+      ],
+      "html": "disputes/2026-06-06-a-ghost-made-of-timing.html",
+      "pdf": "disputes/2026-06-06-a-ghost-made-of-timing.pdf",
+      "doi": "10.5281/zenodo.20528909",
+      "outcome": "PRO",
+      "basis": "real_compute",
+      "claim_type": "numeric",
+      "arbitration_status": "STABLE",
+      "protocol_status": "PASS",
+      "prior_work_check": "not_applicable",
+      "metadata": "disputes/2026-06-06-a-ghost-made-of-timing.metadata.json",
+      "methodology": {
+        "claim_evidence_matrix": "disputes/2026-06-06-a-ghost-made-of-timing.claim_evidence_matrix.json",
+        "arbiter_report": "disputes/2026-06-06-a-ghost-made-of-timing.arbiter_report.json",
+        "evidence_task": "disputes/2026-06-06-a-ghost-made-of-timing.evidence_task.json",
+        "order_swap_audit": "disputes/2026-06-06-a-ghost-made-of-timing.order_swap_audit.json"
+      }
+    },
     {
       "id": "2026-06-04-the-shrinking-yardstick",
       "no": 2,

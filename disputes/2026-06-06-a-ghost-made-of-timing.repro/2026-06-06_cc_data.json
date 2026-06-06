@@ -1,0 +1,98 @@
+{
+  "description": "Duellum Veritatis No.4 reproducible compute. Co-skewness vs directed-FC baselines under a single common skewed driver spread to receiver nodes over a shared lag-1..3 (HRF-like) kernel; cognition modulates the directed coupling. No genuine instantaneous three-way term exists by construction.",
+  "config": {
+    "subjects": 320,
+    "timepoints": 300,
+    "nodes": 4,
+    "spread_kernel": [
+      [
+        1,
+        0.6
+      ],
+      [
+        2,
+        0.3
+      ],
+      [
+        3,
+        0.1
+      ]
+    ],
+    "rich_lags": 6,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "estimator": "Ridge(alpha=1.0), 5-fold CV R2"
+  },
+  "common_source": {
+    "coskew_alone": {
+      "mean": 0.47754851355195244,
+      "std": 0.045731440388304734
+    },
+    "static_alone": {
+      "mean": 0.5965490721279681,
+      "std": 0.053867346916192285
+    },
+    "poor_alone": {
+      "mean": 0.9075612401782626,
+      "std": 0.012775777717572531
+    },
+    "rich_alone": {
+      "mean": 0.8876635207063321,
+      "std": 0.017435673565991006
+    },
+    "incr_over_static": {
+      "mean": 0.026541256949598014,
+      "std": 0.012473632827390543
+    },
+    "incr_over_poor": {
+      "mean": -0.000687653527144394,
+      "std": 0.001839345350554012
+    },
+    "incr_over_rich": {
+      "mean": -0.001066479908603322,
+      "std": 0.0017865670436194032
+    }
+  },
+  "independent_source": {
+    "coskew_alone": {
+      "mean": -0.031273952469825006,
+      "std": 0.015995789075346104
+    },
+    "static_alone": {
+      "mean": -0.055213189051013474,
+      "std": 0.041955036283713575
+    },
+    "poor_alone": {
+      "mean": 0.6209015435298565,
+      "std": 0.05234086680517789
+    },
+    "rich_alone": {
+      "mean": 0.4077901067883361,
+      "std": 0.09673273403581242
+    },
+    "incr_over_static": {
+      "mean": -0.021335234894373657,
+      "std": 0.0157667500755778
+    },
+    "incr_over_poor": {
+      "mean": -0.008923700213333977,
+      "std": 0.007438424073373782
+    },
+    "incr_over_rich": {
+      "mean": -0.009666028229711373,
+      "std": 0.010196609400051206
+    }
+  }
+}

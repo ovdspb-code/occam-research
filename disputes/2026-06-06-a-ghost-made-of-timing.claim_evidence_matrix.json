@@ -1,0 +1,83 @@
+{
+  "matrix_id": "dv-no4-coskew-timing-2026-06-06",
+  "claim_frozen_at": "2026-06-06T02:01:11Z",
+  "rows": [
+    {
+      "claim_id": "C1",
+      "evidence_id": "E1",
+      "claim": "Under a common skewed driver, static third-order co-skewness alone predicts the cognition target.",
+      "evidence": "2026-06-06_cc_data.json common_source.coskew_alone: CV-R2 mean 0.478 (std 0.046, 12 seeds)",
+      "diagnosticity": "high",
+      "direction": "supports",
+      "scope": "synthetic 4-node model with a single common skewed driver spread via a shared lag-1..3 HRF-like kernel; Ridge(alpha=1.0), 5-fold CV",
+      "evidence_status": "accepted",
+      "claim_status": "supported"
+    },
+    {
+      "claim_id": "C2",
+      "evidence_id": "E2",
+      "claim": "Co-skewness adds essentially nothing over a directed / multi-lag FC baseline: its incremental predictive power collapses to ~0.",
+      "evidence": "common_source.incr_over_poor mean -0.0007 (std 0.0018); common_source.incr_over_rich mean -0.0011 (std 0.0018) — both within noise of zero and slightly negative",
+      "diagnosticity": "high",
+      "direction": "supports",
+      "scope": "synthetic common-driver regime; few-lag (poor) and 6-lag VAR-style (rich) directed baselines",
+      "evidence_status": "accepted",
+      "claim_status": "supported"
+    },
+    {
+      "claim_id": "C3",
+      "evidence_id": "E3",
+      "claim": "Co-skewness retains only a small increment over a static LINEAR FC baseline (the increment that a directed baseline then absorbs).",
+      "evidence": "common_source.incr_over_static mean 0.0265 (std 0.0125): small positive over static FC, vanishing once directed lags are modelled",
+      "diagnosticity": "medium",
+      "direction": "neutral",
+      "scope": "synthetic common-driver regime; static linear FC baseline only",
+      "evidence_status": "accepted",
+      "claim_status": "supported"
+    },
+    {
+      "claim_id": "C4",
+      "evidence_id": "E4",
+      "claim": "The effect requires a shared skewed source: without a common driver, co-skewness carries no cognition prediction.",
+      "evidence": "independent_source.coskew_alone mean -0.031 (std 0.016); independent_source.incr_over_poor mean -0.0089 — at or below chance with no common driver",
+      "diagnosticity": "high",
+      "direction": "supports",
+      "scope": "synthetic null regime (same marginal skew, no common driver)",
+      "evidence_status": "accepted",
+      "claim_status": "supported"
+    },
+    {
+      "claim_id": "C5",
+      "evidence_id": "E5",
+      "claim": "A common skewed driver plus HRF-like lags is SUFFICIENT to produce cognition-predictive static co-skewness that a directed-FC baseline absorbs.",
+      "evidence": "the full common_source pattern: coskew predictive alone (0.478) but ~0 increment over directed FC (-0.0007/-0.0011), absent in the no-common-driver control",
+      "diagnosticity": "high",
+      "direction": "supports",
+      "scope": "synthetic sufficiency demonstration only; not a necessity or real-data claim",
+      "evidence_status": "accepted",
+      "claim_status": "supported"
+    },
+    {
+      "claim_id": "C6",
+      "evidence_id": "E6",
+      "claim": "Real fMRI/HCP co-skewness IS this identifiability artifact (the necessity / real-data version of the thesis).",
+      "evidence": "not tested — synthetic generative model only; no real BOLD data, no real directed/VAR baseline, no temporal/phase-shuffle test on data",
+      "diagnosticity": "none",
+      "direction": "untested",
+      "scope": "would require a directed/VAR baseline and a temporal-shuffle control on the paper's actual subjects (e.g. HCP); not run",
+      "evidence_status": "not_applicable",
+      "claim_status": "speculative"
+    },
+    {
+      "claim_id": "C7",
+      "evidence_id": "E7",
+      "claim": "The residual increment of co-skewness over a richer directed baseline on real data is negligible.",
+      "evidence": "reported small but run-to-run unstable in the duel transcript; not resolved by this compute",
+      "diagnosticity": "low",
+      "direction": "neutral",
+      "scope": "transcript discussion only; no stable real-data measurement",
+      "evidence_status": "quarantined",
+      "claim_status": "unsupported"
+    }
+  ]
+}

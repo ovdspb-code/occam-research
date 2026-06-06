@@ -1,0 +1,67 @@
+{
+  "report_id": "dv-no4-coskew-timing-2026-06-06",
+  "outcome_classification": "PRO",
+  "accepted_facts": [
+    "In a synthetic 4-node model with a single common skewed driver spread through a shared lag-1..3 HRF-like kernel (no instantaneous three-way term by construction), static co-skewness alone predicts the cognition target: CV-R2 0.478 (std 0.046, 12 seeds).",
+    "Its incremental CV-R2 over a directed / multi-lag FC baseline collapses to ~0: -0.0007 (std 0.0018) over a few-lag directed baseline and -0.0011 over a 6-lag VAR-style baseline.",
+    "Over a static LINEAR FC baseline co-skewness keeps only a small increment (0.0265, std 0.0125), which the directed baseline then absorbs.",
+    "Without a common driver (independent-source control) co-skewness carries no prediction (-0.031, std 0.016), so the effect requires a shared skewed source."
+  ],
+  "rejected_or_quarantined_evidence": [
+    "Several CON counterexamples were invalid or irrelevant: a model with no predictive co-skewness, a non-stationary VAR that overflowed, and a phase-randomization script that crashed.",
+    "The residual increment of co-skewness over a richer directed baseline on real data: reported small but run-to-run unstable in the transcript; quarantined as unresolved rather than treated as evidence either way."
+  ],
+  "argument_quality": "PRO held the original falsifier frame, iteratively repaired weak points in the generative model, and clearly separated the synthetic sufficiency demonstration from the real-data test the thesis actually needs. CON sharpened at the end (correctly flagging the instability of the last multi-lag result and proposing reasonable quantitative thresholds for a future HCP test), but within the transcript this refined the remaining uncertainty rather than refuting PRO.",
+  "protocol_conduct": "Decisive test pre-registered before compute and schema-valid; real compute with 12 fixed deterministic seeds; order-swap audit PASS (substantive call 'unclear' on both the natural and swapped runs); a verbosity-confound warning is flagged because CON was substantially longer than PRO.",
+  "evidence_quality": "Real, deterministic, rerunnable compute, but on a SYNTHETIC generative model rather than real fMRI/BOLD. The decisive observable is a proxy (not paper-faithful) and establishes SUFFICIENCY of the leakage mechanism, not its necessity in real data. Bounded by 4 nodes, one common driver, one symmetric nuisance, a shared fixed HRF kernel and Ridge alpha fixed at 1.0.",
+  "what_it_supports": [
+    {
+      "statement": "That a lagged, shared, skewed driver is SUFFICIENT to make static co-skewness predict cognition while a directed lagged-FC baseline absorbs almost all of that predictive power (increment ~0.00).",
+      "claim_id": "C5",
+      "evidence_id": "E5"
+    },
+    {
+      "statement": "That the effect requires a common skewed source: it vanishes in the no-common-driver control.",
+      "claim_id": "C4",
+      "evidence_id": "E4"
+    },
+    {
+      "statement": "That, in this regime, co-skewness behaves as a static proxy for unmodelled directed/temporal structure rather than as an irreducible instantaneous three-way interaction.",
+      "claim_id": "C2",
+      "evidence_id": "E2"
+    }
+  ],
+  "what_it_does_not_support": [
+    {
+      "statement": "That real BOLD co-skewness IS this identifiability artifact: synthetic sufficiency does not establish that real fMRI lives in this regime.",
+      "claim_id": "C6",
+      "evidence_id": "E6"
+    },
+    {
+      "statement": "Any discovery-level or data-level claim about the seed paper's empirics.",
+      "claim_id": "C6",
+      "evidence_id": "E6"
+    },
+    {
+      "statement": "That co-skewness carries no genuine higher-order signal in general — only that an artifactual route is sufficient to reproduce the reported predictive power here.",
+      "claim_id": "C7",
+      "evidence_id": "E7"
+    }
+  ],
+  "what_remains_open": [
+    "Whether static co-skewness retains a substantial, stable incremental CV-R2 over a properly matched directed/VAR baseline on the same subjects (e.g. HCP).",
+    "Whether co-skewness prediction survives a temporal/phase shuffle that preserves instantaneous marginals on real data.",
+    "Whether richer real covariance structure (more nodes, region-specific HRFs) leaves a residual increment a directed baseline does not absorb."
+  ],
+  "permitted_wording": [
+    "On a synthetic model, a lagged common skewed driver was sufficient to make static co-skewness predict cognition while a directed lagged-FC baseline absorbed almost all of it (increment ~0.00).",
+    "The duel showed the leakage mechanism is a plausible, sufficient explanation; it did not show that real BOLD co-skewness is this artifact.",
+    "PRO prevailed on argumentation; the substantive merits-call on the claim remains unclear pending a real-data test."
+  ],
+  "forbidden_wording": [
+    "Proven / demonstrated that co-skewness is just an artifact (the test is synthetic sufficiency, not real-data necessity).",
+    "Shown on fMRI / HCP data (no real data was used).",
+    "The seed paper's finding is refuted / co-skewness carries no real higher-order signal."
+  ],
+  "confidence_and_limitations": "Moderate confidence within a narrow scope: on the synthetic model the pre-registered sufficiency signature is cleanly realized (co-skewness predictive alone, ~0 increment over directed FC, absent without a common driver), and the order-swap audit is stable with a substantive call of 'unclear' on both runs. Out of scope: no real fMRI/BOLD test, no real directed/VAR baseline, no temporal-shuffle control on data; the decisive observable is a proxy, not paper-faithful. Genre: scout — a synthetic sufficiency probe, not a scientific_result."
+}

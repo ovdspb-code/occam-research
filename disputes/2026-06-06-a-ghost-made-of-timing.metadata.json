@@ -1,0 +1,75 @@
+{
+  "duel_id": "dv-0004",
+  "series": "Duellum Veritatis",
+  "status": "public_adversarial_ai_stress_test",
+  "claim": {
+    "text": "Предсказательная сила third-order co-skewness тензора статической FC в отношении cognition — это в основном identifiability-артефакт, а не самостоятельный мгновенный three-way механизм: co-skewness служит ведущим каналом поглощения немоделированных направленных/лаговых (temporal) зависимостей, поэтому при явном учёте directed lagged FC инкрементальный вклад статической co-skewness в предсказание cognition падает почти до нуля.",
+    "frozen_at": "2026-06-06T02:01:11Z",
+    "claim_type": "numeric"
+  },
+  "sides": {
+    "public_names": [
+      "Athos",
+      "Aramis"
+    ],
+    "athos_side": "PRO",
+    "side_assignment_seed_hash": "sha256:ef4a3422141f63945476798aa26d6c49b27f59392b00d1df1133233f8d203a84",
+    "model_id_public": "withheld"
+  },
+  "arbiter": {
+    "identity_public": "independent_ai_arbiter",
+    "outside_duel_roster": true,
+    "blind_to_model_identity": true,
+    "order_swap_audit": {
+      "status": "PASS",
+      "waiver_reason": null
+    },
+    "verbosity_confound_warning": true
+  },
+  "outcome": {
+    "enum": "PRO",
+    "substantive_verdict": "unclear",
+    "basis": "real_compute",
+    "confidence": null,
+    "arbitration_status": "STABLE",
+    "protocol_status": "PASS"
+  },
+  "reproducibility": {
+    "bundle_included": true,
+    "compute_manifest": "2026-06-06-a-ghost-made-of-timing.repro/compute_manifest.json",
+    "rerun_status": "not_rerun",
+    "script": "2026-06-06-a-ghost-made-of-timing.repro/2026-06-06_repro.py",
+    "outputs": [
+      "2026-06-06-a-ghost-made-of-timing.repro/2026-06-06_cc_data.json"
+    ]
+  },
+  "publication_gate": {
+    "status": "PASSED",
+    "approved_sidecar_hash": "sha256:b154c97729de08cf1083e708b5cd7866a4d05f9118513a413194494b1ef82a10",
+    "prior_work_check": "not_applicable",
+    "third_party_text_handling": "not_applicable",
+    "errata": []
+  },
+  "d8_handling": {
+    "trigger": "seed_publication=true",
+    "status": "waived_no_source_text_ingested",
+    "waiver_body_hash": "sha256:19b8ac9c5b00c4ab0d3d917f5a7553f353b67c274645b16c501446772c54db1f",
+    "public_attestation": "No source PDF/full text was ingested into the duel context; only bibliographic/search-result metadata and abstracts informed topic selection."
+  },
+  "epistemic_status": "scout",
+  "references": [
+    {
+      "ref": "Marraffini, G., Mahuas, G., Borrell, T., Shevchenko, V., & Wassermann, D. (2026). The variance brain foundation models forgot: Third-order statistics predict cognition where billion-parameter models fail (arXiv:2606.04010). arXiv. https://arxiv.org/abs/2606.04010",
+      "url": "https://arxiv.org/abs/2606.04010",
+      "role": "seed",
+      "note": "Seed empirical paper the duel was built on: reports that third-order co-skewness statistics of static functional connectivity predict cognition where billion-parameter foundation models fail."
+    },
+    {
+      "ref": "Safaai, H., & Sabatini, B. L. (2026). Feature leakage and the identifiability of direct-dependency entropy models of neural activity (arXiv:2606.01661). arXiv. https://arxiv.org/abs/2606.01661",
+      "url": "https://arxiv.org/abs/2606.01661",
+      "role": "supporting",
+      "note": "Supporting mechanism: feature leakage / identifiability — co-skewness as an explicit form of absorbing omitted interaction and temporal terms; the thesis transfers this mechanism onto the seed paper's empirics."
+    }
+  ],
+  "seed_publication": true
+}

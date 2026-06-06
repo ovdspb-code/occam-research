@@ -1,0 +1,45 @@
+{
+  "compute_kind": "real_compute",
+  "started_at": "2026-06-06T06:44:00Z",
+  "script": "2026-06-06_repro.py",
+  "script_sha256": "sha256:60862206350a2ff8b78caf87411673eb344f97c047685a53acd6861e8817f5ee",
+  "inputs": [],
+  "environment": {
+    "python": "Python 3.12.3",
+    "packages": "numpy 2.4.4",
+    "platform": "linux-x86_64"
+  },
+  "random_seed": "12 fixed seeds 0..11; mean +/- std reported across seeds",
+  "outputs": [
+    {
+      "path": "2026-06-06_cc_data.json",
+      "sha256": "sha256:4efefeb98f085187ce1defccd9ac85dd137fbcbcf4c9fbba83ed17717a2054be",
+      "metric": "common_source.incr_over_poor.mean (incremental CV-R2 of co-skewness over a directed-FC baseline)",
+      "value": -0.000687653527144394,
+      "tolerance": "+/- 0.02 (std 0.0018 across 12 seeds)"
+    },
+    {
+      "path": "2026-06-06_cc_data.json",
+      "sha256": "sha256:4efefeb98f085187ce1defccd9ac85dd137fbcbcf4c9fbba83ed17717a2054be",
+      "metric": "common_source.incr_over_static.mean (incremental CV-R2 of co-skewness over static linear FC)",
+      "value": 0.026541256949598014,
+      "tolerance": "+/- 0.02 (std 0.0125 across 12 seeds)"
+    },
+    {
+      "path": "2026-06-06_cc_data.json",
+      "sha256": "sha256:4efefeb98f085187ce1defccd9ac85dd137fbcbcf4c9fbba83ed17717a2054be",
+      "metric": "common_source.coskew_alone.mean (CV-R2 of co-skewness alone)",
+      "value": 0.47754851355195244,
+      "tolerance": "+/- 0.05 (std 0.0457 across 12 seeds)"
+    },
+    {
+      "path": "2026-06-06_cc_data.json",
+      "sha256": "sha256:4efefeb98f085187ce1defccd9ac85dd137fbcbcf4c9fbba83ed17717a2054be",
+      "metric": "independent_source.coskew_alone.mean (CV-R2 of co-skewness alone, no common driver)",
+      "value": -0.031273952469825006,
+      "tolerance": "+/- 0.05 (std 0.0160 across 12 seeds)"
+    }
+  ],
+  "rerun_instruction": "python3 2026-06-06_repro.py  # writes 2026-06-06_cc_data.json",
+  "known_limitations": "Synthetic generative model, not real fMRI/HCP. By construction it contains NO genuine instantaneous three-way coupling term; it demonstrates only that a lagged common skewed driver is SUFFICIENT to produce a cognition-predictive static co-skewness that a directed-FC baseline absorbs. It cannot establish which regime real BOLD data occupy. Ridge alpha fixed at 1.0; a single common driver and one symmetric nuisance; 4 nodes; haemodynamic spread approximated by a shared fixed lag-1..3 kernel rather than region-specific HRFs. The residual increment of co-skewness over a richer directed baseline on real data was reported as small but run-to-run unstable in the duel transcript and is NOT resolved here."
+}
