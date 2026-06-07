@@ -1,0 +1,45 @@
+{
+  "compute_kind": "real_compute",
+  "started_at": "2026-06-07T06:45:00Z",
+  "script": "2026-06-07_repro.py",
+  "script_sha256": "sha256:de638c37ef5bf847cbb4dd08d3129c6fc606616433af35181b35c4db07597605",
+  "inputs": [],
+  "environment": {
+    "python": "Python 3.12.3",
+    "packages": "numpy 2.4.4, scipy 1.17.1",
+    "platform": "Linux-6.8.0-111-generic-x86_64-with-glibc2.39"
+  },
+  "random_seed": "fixed seeds: probes A/B use seeds 0..5, probe C uses seeds 100..105; power-law input drawn with np.random.default_rng(7); mean +/- std reported across seeds",
+  "outputs": [
+    {
+      "path": "2026-06-07_cc_data.json",
+      "sha256": "sha256:425e7210952a5b3920b2ddc3adbb1d69a06f1ea22a6be73f5f9aa12896b01423",
+      "metric": "decisive_powerlaw_subcritical[0] (g=0.3): alpha under power-law input at subcritical g",
+      "value": 1.0891151409765094,
+      "tolerance": "alpha within +/-0.15 of 1.0 at lambda_max=-1.856 (sd 0.0054 across 6 seeds); falsifier(3) fires"
+    },
+    {
+      "path": "2026-06-07_cc_data.json",
+      "sha256": "sha256:425e7210952a5b3920b2ddc3adbb1d69a06f1ea22a6be73f5f9aa12896b01423",
+      "metric": "decisive_powerlaw_subcritical[2] (g=0.8): alpha under power-law input at subcritical g",
+      "value": 0.9868074314834661,
+      "tolerance": "alpha within +/-0.15 of 1.0 at lambda_max=-0.897 (sd 0.0035 across 6 seeds); subcritical alpha~1 confirmed"
+    },
+    {
+      "path": "2026-06-07_cc_data.json",
+      "sha256": "sha256:425e7210952a5b3920b2ddc3adbb1d69a06f1ea22a6be73f5f9aa12896b01423",
+      "metric": "g_sweep_spearman_lambda_alpha (monotone alpha(lambda_max) across g,seed, fixed low-dim input)",
+      "value": -0.9884932696482849,
+      "tolerance": "Spearman <= -0.9 (monotone decreasing alpha vs lambda WITHIN a fixed input ensemble; scoped sufficiency only)"
+    },
+    {
+      "path": "2026-06-07_cc_data.json",
+      "sha256": "sha256:425e7210952a5b3920b2ddc3adbb1d69a06f1ea22a6be73f5f9aa12896b01423",
+      "metric": "input_axis.spearman_sigma_lambda at fixed g=1.5 (input statistics sweep lambda over a wide range while alpha stays in a narrow band off the g-curve)",
+      "value": -1.0,
+      "tolerance": "lambda_max ranges -0.53..+0.03 across sigma_in while alpha stays ~1.5-2.6 and does NOT track the g-calibrated alpha(lambda) curve; alpha is not a function of lambda alone"
+    }
+  ],
+  "rerun_instruction": "python3 2026-06-07_repro.py  # writes 2026-06-07_cc_data.json",
+  "known_limitations": "Toy tanh recurrent reservoir, NOT cortical data and NOT trained task networks. Lyapunov exponent estimated from a single renormalised tangent vector (leading exponent only). alpha is a log-log slope of the covariance eigenspectrum over ranks [3, N/2], sensitive to the fit window and to spectral degeneracy (flagged by participation ratio PR). The g-sweep monotone alpha(lambda_max) holds only WITHIN a fixed low-dimensional input ensemble; it does not generalise across input statistics (probe B shows input is a second independent axis). The decisive probe C shows that supercriticality is NOT necessary for alpha~1 (power-law input geometry yields alpha~1 at lambda_max<0), but a random untrained reservoir cannot speak to trained biological networks or to the seed paper's DMFT/cortical measurement; it establishes only that the dynamical route is sufficient-and-scoped, not necessary or exclusive."
+}

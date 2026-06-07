@@ -1,0 +1,76 @@
+{
+  "duel_id": "dv-0005",
+  "series": "Duellum Veritatis",
+  "status": "public_adversarial_ai_stress_test",
+  "claim": {
+    "text": "Показатель степенного спада α собственного спектра нейронных репрезентаций есть монотонная, вычислимая функция максимального ляпуновского показателя λ_max сети; кортикальное значение α≈1 отвечает конкретному λ_max>0 (мягкая надкритичность), а НЕ краю хаоса (λ_max=0) и не результату оптимизации под задачу.",
+    "frozen_at": "2026-06-07T02:01:15Z",
+    "claim_type": "numeric"
+  },
+  "sides": {
+    "public_names": [
+      "Athos",
+      "Aramis"
+    ],
+    "athos_side": "PRO",
+    "side_assignment_seed_hash": "sha256:b9c9fb0a9c37a23cc534430a416349333b645b2429534b7174ef9bde003360d6",
+    "model_id_public": "withheld"
+  },
+  "arbiter": {
+    "identity_public": "independent_ai_arbiter",
+    "outside_duel_roster": true,
+    "blind_to_model_identity": true,
+    "order_swap_audit": {
+      "status": "PASS",
+      "waiver_reason": null
+    },
+    "verbosity_confound_warning": false
+  },
+  "outcome": {
+    "enum": "CON",
+    "substantive_verdict": "con",
+    "basis": "real_compute",
+    "confidence": 0.7,
+    "arbitration_status": "STABLE",
+    "protocol_status": "PASS"
+  },
+  "reproducibility": {
+    "bundle_included": true,
+    "compute_manifest": "2026-06-07-two-roads-to-one-number.repro/compute_manifest.json",
+    "rerun_status": "rerun_pass",
+    "script": "2026-06-07-two-roads-to-one-number.repro/2026-06-07_repro.py",
+    "outputs": [
+      "2026-06-07-two-roads-to-one-number.repro/2026-06-07_cc_data.json"
+    ]
+  },
+  "publication_gate": {
+    "status": "PASSED",
+    "approved_sidecar_hash": "sha256:d4ab30b8fef44f3cff3b195d57875f5cdf3d7f2a146efd7e12e55aa5a4e4f635",
+    "prior_work_check": "pass",
+    "third_party_text_handling": "not_applicable",
+    "errata": []
+  },
+  "d8_handling": {
+    "trigger": "seed_publication=true",
+    "status": "waived_no_source_text_ingested",
+    "waiver_body_hash": "sha256:b9e8514e35b2c1cd5dbeb7abd4e5082901af64a2889ba7de6405a1517c9a0593",
+    "public_attestation": "No source PDF/full text was ingested into the duel context; only bibliographic/search-result metadata and abstracts informed topic selection."
+  },
+  "epistemic_status": "scout",
+  "references": [
+    {
+      "ref": "Bauer, J., Keup, C., Kadmon, J., & Helias, M. (2026). Discrete signaling mediates chaotic regularization in recurrent neural networks (arXiv:2606.04426). arXiv.",
+      "url": "https://arxiv.org/abs/2606.04426",
+      "role": "seed"
+    },
+    {
+      "ref": "Stringer, C., Pachitariu, M., Steinmetz, N., Carandini, M., & Harris, K. D. (2019). High-dimensional geometry of population responses in visual cortex. Nature, 571(7765), 361-365.",
+      "url": "https://doi.org/10.1038/s41586-019-1346-5",
+      "note": "Competing stimulus-geometry account; the decisive test ends up supporting it."
+    }
+  ],
+  "seed_publication": true,
+  "not_applicable_reasons": {
+    "third_party_text_handling": "no_external_text_ingested"
+  }
+}

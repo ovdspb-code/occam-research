@@ -1,0 +1,64 @@
+{
+  "task_id": "dv-no5-alpha-lambda-2026-06-07",
+  "frozen_claim": "Показатель степенного спада alpha собственного спектра нейронных репрезентаций есть монотонная, вычислимая функция максимального ляпуновского показателя lambda_max сети; кортикальное значение alpha~1 отвечает конкретному lambda_max>0 (мягкая надкритичность), а НЕ краю хаоса (lambda_max=0) и не результату оптимизации под задачу.",
+  "frozen_at": "2026-06-07T02:01:15Z",
+  "registered_before_compute": true,
+  "registered_at": "2026-06-07T02:01:15Z",
+  "registered_by": "b2b-20260607-020115 (duel generator session)",
+  "pre_compute_event_id": "b2b-20260607-020115",
+  "decisive": true,
+  "observable": {
+    "name": "alpha_reachable_at_subcritical_lambda_via_input_geometry",
+    "definition": "On a tanh recurrent reservoir, jointly estimate (i) the maximal Lyapunov exponent lambda_max from a single renormalised tangent vector through the per-step Jacobian diag(1-x^2)*gW, and (ii) the power-law exponent alpha as the negative log-log slope of the sorted covariance eigenspectrum over ranks [3, N/2]. Three probes: (A) sweep gain g with a fixed low-dim input ensemble and test whether alpha(lambda_max) is monotone within that ensemble; (B) at fixed g sweep input statistics (sigma_in) and test whether alpha tracks the g-calibrated alpha(lambda_max) curve or moves independently; (C, DECISIVE) drive a SUBCRITICAL reservoir (lambda_max<0) with a power-law-covariance stimulus and test whether alpha~1 is reachable. The strong hypothesis predicts a single input-independent alpha(lambda_max) and that alpha~1 requires lambda_max>0; it is FALSIFIED if either input statistics move alpha off the curve at fixed g, or a subcritical (lambda_max<0) network reaches alpha~1 with a non-degenerate spectrum.",
+    "paper_faithful": false,
+    "evidence_basis": "simulation",
+    "source_ref": "arXiv:2606.04426 (Bauer, Keup, Kadmon & Helias) -- seed paper that chaos in RNNs induces cortical-like power-law representation spectra; the duel tests a SEPARATE strong hypothesis (alpha as a computable monotone function of lambda_max, soft supercriticality, displacing the Stringer optimisation account) on a toy reservoir, not the paper's DMFT/cortical observable."
+  },
+  "model": {
+    "generative": "tanh recurrent reservoir x_{t+1}=tanh(g*W x_t + sigma_in*Win u_t), W ~ N(0,1)/sqrt(N), N=200, T=2000, burn-in 300. Input ensembles: a fixed 3/5-channel sinusoidal set (probes A/B) and a 120-channel power-law-covariance Gaussian stimulus with per-channel scale k^{-1/2} (probe C). lambda_max via one renormalised tangent vector; alpha via log-log covariance-spectrum slope; spectral degeneracy flagged by participation ratio PR.",
+    "config": "N=200, T=2000, burn=300; probe A g in {0.7,0.9,1.0,1.2,1.5,2.0,2.5,3.0} fixed sigma_in=0.5 din=3; probe B g=1.5 sigma_in in {0.2,0.5,1.0,2.0} din=5; probe C g in {0.3,0.5,0.8} sigma_in=0.8 power-law din=120; 6 fixed seeds per cell (A/B seeds 0..5, C seeds 100..105; power-law input drawn with rng(7)).",
+    "controls": "participation ratio PR>8 required for an alpha to count as a non-degenerate power law; the edge-of-chaos point (lambda_max~0) included so 'alpha~1 at the edge' can be distinguished from 'alpha~1 supercritically'."
+  },
+  "comparators": [
+    { "name": "g_sweep_fixed_input", "role": "structured" },
+    { "name": "input_axis_fixed_g", "role": "other" },
+    { "name": "powerlaw_input_subcritical", "role": "null_model" },
+    { "name": "edge_of_chaos_point", "role": "baseline" }
+  ],
+  "thresholds": {
+    "monotone_spearman_max": -0.9,
+    "alpha_near_one_band": 0.15,
+    "participation_ratio_min": 8,
+    "decision_rule": "The STRONG hypothesis is FALSIFIED (CON) if EITHER (B) at fixed g the input-axis points fail to track the g-calibrated alpha(lambda_max) curve (alpha varies while lambda is held or swept independently), OR (C) a subcritical network (lambda_max<0) with power-law stimulus geometry reaches alpha within +/-0.15 of 1 with PR>8. The SCOPED-sufficiency reading survives if (A) within a fixed input ensemble Spearman(lambda,alpha) <= -0.9 and alpha~1 there sits at lambda_max>0."
+  },
+  "metrics": [
+    { "name": "spearman_lambda_alpha_within_ensemble", "variants": ["signed"] },
+    { "name": "alpha_at_subcritical_powerlaw_input", "variants": ["raw"] }
+  ],
+  "seeds": {
+    "count": 6,
+    "level": "run",
+    "streams": ["reservoir_W_Win", "tangent_vector", "powerlaw_input"]
+  },
+  "nulls": [
+    "powerlaw_input_subcritical: a subcritical reservoir should, under the strong hypothesis, be UNABLE to reach alpha~1; reaching it falsifies necessity of supercriticality.",
+    "participation-ratio gate rejects degenerate 1-2 mode spectra where alpha is ill-defined."
+  ],
+  "failure_modes": [
+    "A toy untrained reservoir cannot establish what real cortex or trained task networks do (external validity) -- the decisive limitation.",
+    "Leading-Lyapunov-only estimate; the full spectrum could matter for alpha.",
+    "alpha is a log-log slope sensitive to the [3, N/2] fit window and to spectral degeneracy; PR is used as a guard but the window is fixed.",
+    "The power-law stimulus exponent (k^{-1/2}) is chosen, not fitted to cortex; a different stimulus spectrum would shift the subcritical alpha.",
+    "Finite T=2000 and N=200 leave run-to-run spread, reported as std across 6 seeds."
+  ],
+  "accepted_evidence_criteria": "Falsification of the strong hypothesis is accepted if a subcritical (lambda_max<0) power-law-input network reaches alpha within +/-0.15 of 1 at PR>8, AND/OR the input-axis test shows alpha moving off the g-calibrated alpha(lambda_max) curve at fixed g. Scoped sufficiency is accepted if the within-ensemble g-sweep gives Spearman(lambda,alpha) <= -0.9 with alpha~1 at lambda_max>0.",
+  "rejected_evidence_criteria": "Degenerate-spectrum (PR<=8) fits are not admitted as alpha measurements. The strong hypothesis would have SURVIVED only if alpha had been a single input-independent function of lambda_max (input-axis points on the curve) AND alpha~1 had been unreachable at lambda_max<0 -- neither held. No real-cortex claim is admitted from this toy model regardless of outcome.",
+  "sensitivity_grid": {
+    "gain_g": [0.3, 0.5, 0.7, 0.8, 0.9, 1.0, 1.2, 1.5, 2.0, 2.5, 3.0],
+    "sigma_in": [0.2, 0.5, 0.8, 1.0, 2.0],
+    "input_ensemble": ["fixed_sinusoidal_din3", "fixed_sinusoidal_din5", "powerlaw_covariance_din120"],
+    "seeds": 6,
+    "N": [200],
+    "T": [2000]
+  }
+}

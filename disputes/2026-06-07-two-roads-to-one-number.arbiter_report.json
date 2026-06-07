@@ -1,0 +1,72 @@
+{
+  "report_id": "dv-no5-alpha-lambda-2026-06-07",
+  "outcome_classification": "CON",
+  "accepted_facts": [
+    "Within a fixed low-dimensional input ensemble, the covariance-spectrum exponent alpha falls monotonically with the maximal Lyapunov exponent lambda_max: alpha 4.74 -> 0.90 as lambda -0.59 -> +0.28 across gain g; Spearman(lambda,alpha) = -0.988 over g and 6 seeds.",
+    "In that bare-input ensemble alpha~1 is reached supercritically (g=2.5, lambda_max=+0.20, alpha=0.97, PR=27.9), not at the edge of chaos (g=1.5, lambda_max~0, alpha=2.03).",
+    "At fixed g=1.5, varying the input statistics (sigma_in) sweeps lambda_max across -0.53..+0.03 while alpha stays in a narrow 1.50..2.58 band off the g-calibrated curve: alpha is not a function of lambda_max alone -- input statistics is a second independent axis.",
+    "With a power-law stimulus-covariance input at SUBCRITICAL gain, alpha~1 is reached at lambda_max<0 (g=0.3: alpha=1.09 at lambda=-1.86, PR=25.3; g=0.5: alpha=1.05 at lambda=-1.35; g=0.8: alpha=0.99 at lambda=-0.90, PR=29.8), so supercriticality is not necessary for alpha~1."
+  ],
+  "rejected_or_quarantined_evidence": [
+    "Degenerate fits where the covariance spectrum collapses to 1-2 modes (very low participation ratio, e.g. PR~3 at small g with the bare input, or the high-sigma_in single-sinusoid corner) are not read as alpha measurements: in that regime alpha is ill-defined and must be flagged by PR, not interpreted as 'input moves alpha at fixed lambda'.",
+    "PRO's original strong reading of the within-ensemble monotone curve as a universal causal knob alpha(lambda_max) is rejected: it does not survive the input-axis test or the subcritical power-law construction."
+  ],
+  "argument_quality": "CON held the strong original hypothesis in frame and pressed exactly the three falsifiers, refusing to let PRO retreat to a weaker scoped claim while keeping the strong label. PRO ran honest compute and, decisively, executed the falsifying construction (probe C) in its own hands and accepted the result. The win is CON's, but it rests on numbers PRO itself produced.",
+  "protocol_conduct": "Six moves, clean arbiter verdict; decisive test pre-registered before compute and schema-valid; real deterministic compute with fixed seeds; order-swap audit PASS (substantive call 'con' on both natural and swapped runs). A verbosity-confound warning is flagged because PRO was substantially longer than CON (1852 vs 1147 words, ratio 0.62).",
+  "evidence_quality": "Real, deterministic, rerunnable compute, but on a TOY untrained tanh reservoir, not cortical data or trained task networks. The decisive observable (alpha reachable at lambda_max<0 via stimulus geometry) is a proxy for the seed paper's claim, not paper-faithful, and rests on finite-size simulation. It establishes that the dynamical route is sufficient-and-scoped and NOT necessary; it cannot establish which regime real cortex occupies.",
+  "what_it_supports": [
+    {
+      "statement": "Within a fixed low-dimensional input ensemble, alpha is a monotone decreasing function of lambda_max (Spearman -0.99).",
+      "claim_id": "C1",
+      "evidence_id": "E1"
+    },
+    {
+      "statement": "The dynamical/chaos route is sufficient, in a narrow scoped regime, to manufacture a clean power-law spectrum with a computable alpha.",
+      "claim_id": "C5",
+      "evidence_id": "E5"
+    },
+    {
+      "statement": "alpha is NOT a single input-independent function of lambda_max: at fixed g, input statistics move alpha across a wide lambda range off the calibrated curve, so input geometry is a second independent axis.",
+      "claim_id": "C3",
+      "evidence_id": "E3"
+    },
+    {
+      "statement": "Soft supercriticality is NOT necessary for alpha~1: a subcritical (lambda_max<0) network with power-law stimulus geometry reaches alpha~1.",
+      "claim_id": "C4",
+      "evidence_id": "E4"
+    }
+  ],
+  "what_it_does_not_support": [
+    {
+      "statement": "That alpha is a single computable function alpha(lambda_max) that displaces input/stimulus geometry as the determinant of the exponent.",
+      "claim_id": "C3",
+      "evidence_id": "E3"
+    },
+    {
+      "statement": "That soft supercriticality explains cortical alpha~1 or displaces the optimisation / stimulus-geometry account (Stringer et al.); the geometry route reaches alpha~1 independently at lambda_max<0.",
+      "claim_id": "C6",
+      "evidence_id": "E6"
+    },
+    {
+      "statement": "That real cortical or trained-network alpha~1 is set by lambda_max: the necessity / real-data version is untested here.",
+      "claim_id": "C7",
+      "evidence_id": "E7"
+    }
+  ],
+  "what_remains_open": [
+    "Whether trained task networks with lambda_max<=0 routinely reach alpha~1 (the Stringer optimisation route) on the same footing as the dynamical route.",
+    "Whether real cortical recordings sit in a supercritical, edge-of-chaos, or stimulus-geometry-dominated regime when alpha and lambda_max are measured jointly.",
+    "Whether a paper-faithful DMFT/large-N treatment yields an explicit alpha(lambda_max) within a fixed input ensemble, and how wide that ensemble can be before the function breaks."
+  ],
+  "permitted_wording": [
+    "On a toy reservoir, alpha falls monotonically with lambda_max within a fixed input ensemble, but input statistics form a second independent axis so alpha is not a single function of lambda_max.",
+    "A subcritical network (lambda_max<0) with power-law stimulus geometry reached alpha~1, so soft supercriticality is not necessary and the optimisation/geometry account is not displaced.",
+    "CON prevailed on argumentation; on the substance the strong hypothesis did not survive its own falsifier."
+  ],
+  "forbidden_wording": [
+    "Proven that alpha is/ is not a function of lambda_max in the brain (the test is a toy reservoir, not cortical data).",
+    "The seed paper is refuted / chaos does not regularise representations (the duel tests a separate strong hypothesis the paper did not make).",
+    "Model X beat model Y / an AI proved the exponent is set by stimulus geometry."
+  ],
+  "confidence_and_limitations": "Moderate confidence within a narrow scope: on the toy reservoir the three pre-registered signatures are cleanly realised -- a within-ensemble monotone alpha(lambda_max), a sign-independent input axis that breaks the single-knob claim, and a subcritical power-law-input construction reaching alpha~1 -- and the order-swap audit is stable with a substantive call of 'con' on both runs. Out of scope: no cortical data, no trained task networks, no paper-faithful DMFT measurement; the decisive observable is a proxy on finite-size simulation. Genre: scout -- a synthetic falsification probe, not a scientific_result."
+}

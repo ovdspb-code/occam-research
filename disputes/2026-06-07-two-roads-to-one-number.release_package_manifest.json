@@ -1,0 +1,57 @@
+{
+  "duel_id": "dv-0005",
+  "generated_at": "2026-06-07T00:00:00Z",
+  "package_status": "checked",
+  "files": [
+    {
+      "path": "2026-06-07-two-roads-to-one-number.arbiter_report.json",
+      "sha256": "sha256:3fa2d4b835f4226e9537fb7cc4bc22d2184192b82539e93d109a1c0fcc94ad5c",
+      "public": true
+    },
+    {
+      "path": "2026-06-07-two-roads-to-one-number.claim_evidence_matrix.json",
+      "sha256": "sha256:221507658861a5eae26753f6cb6115ff1e486beb7af4a7d0d77616e80c4ff311",
+      "public": true
+    },
+    {
+      "path": "2026-06-07-two-roads-to-one-number.evidence_task.json",
+      "sha256": "sha256:007b71dfb8a21bb1b23d4b4f6a4f1522eec61f2096153103a54062b54ab43326",
+      "public": true
+    },
+    {
+      "path": "2026-06-07-two-roads-to-one-number.html",
+      "sha256": "sha256:661271251ef7c7d58a38d97cdb54d1333929cd2a7128bdae76280ac7f13525fd",
+      "public": true
+    },
+    {
+      "path": "2026-06-07-two-roads-to-one-number.metadata.json",
+      "sha256": "sha256:5175d5ada8735ec139e6f80b0b39d5081c2e9257766b3c3c1a629ff203ca1450",
+      "public": true
+    },
+    {
+      "path": "2026-06-07-two-roads-to-one-number.order_swap_audit.json",
+      "sha256": "sha256:fe9ff74647370d0dde8813793497dd24d1c008e464012b5b0b422b065351ee66",
+      "public": true
+    },
+    {
+      "path": "2026-06-07-two-roads-to-one-number.pdf",
+      "sha256": "sha256:104c66d7c942b60c08b23a8ee437edb068a9d624753cc9439d7d730e79151271",
+      "public": true
+    },
+    {
+      "path": "2026-06-07-two-roads-to-one-number.repro/2026-06-07_cc_data.json",
+      "sha256": "sha256:425e7210952a5b3920b2ddc3adbb1d69a06f1ea22a6be73f5f9aa12896b01423",
+      "public": true
+    },
+    {
+      "path": "2026-06-07-two-roads-to-one-number.repro/2026-06-07_repro.py",
+      "sha256": "sha256:de638c37ef5bf847cbb4dd08d3129c6fc606616433af35181b35c4db07597605",
+      "public": true
+    },
+    {
+      "path": "2026-06-07-two-roads-to-one-number.repro/compute_manifest.json",
+      "sha256": "sha256:ad223a99ea38feb0e496069197f724ef5fb86894c740faa6f16074622f89f957",
+      "public": true
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "matrix_id": "dv-no5-alpha-lambda-2026-06-07",
+  "claim_frozen_at": "2026-06-07T02:01:15Z",
+  "rows": [
+    {
+      "claim_id": "C1",
+      "evidence_id": "E1",
+      "claim": "Within a fixed low-dimensional input ensemble, the power-law exponent alpha of the covariance eigenspectrum is a monotone decreasing function of the maximal Lyapunov exponent lambda_max.",
+      "evidence": "2026-06-07_cc_data.json g_sweep: alpha falls monotonically from 4.74 (lambda=-0.59) to 0.90 (lambda=+0.28) across g; Spearman(lambda,alpha) = -0.988 over g and 6 seeds.",
+      "diagnosticity": "high",
+      "direction": "supports",
+      "scope": "tanh reservoir N=200, fixed 3-channel sinusoidal input ensemble, sigma_in=0.5; leading-Lyapunov estimate; alpha = log-log slope over ranks [3, N/2].",
+      "evidence_status": "accepted",
+      "claim_status": "supported"
+    },
+    {
+      "claim_id": "C2",
+      "evidence_id": "E2",
+      "claim": "In that bare-input ensemble, alpha~1 sits at a positive lambda_max (soft supercriticality), not at the edge of chaos (lambda_max=0).",
+      "evidence": "g_sweep: at the edge (g=1.5, lambda=-0.01) alpha=2.03; alpha~1 is reached only supercritically (g=2.5, lambda=+0.20, alpha=0.97, PR=27.9).",
+      "diagnosticity": "medium",
+      "direction": "supports",
+      "scope": "valid ONLY within the fixed low-dim input ensemble; says nothing about other input statistics or real cortex.",
+      "evidence_status": "accepted",
+      "claim_status": "supported"
+    },
+    {
+      "claim_id": "C3",
+      "evidence_id": "E3",
+      "claim": "alpha is a single computable function alpha(lambda_max) in general (the strong, input-independent causal knob).",
+      "evidence": "input_axis at fixed g=1.5: varying sigma_in sweeps lambda_max across -0.53..+0.03 while alpha stays in a narrow band (1.50..2.58) and does NOT track the g-calibrated alpha(lambda) curve; alpha is not a function of lambda alone.",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "fixed g=1.5; input-statistics axis (sigma_in 0.2..2.0, din=5).",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C4",
+      "evidence_id": "E4",
+      "claim": "Soft supercriticality (lambda_max>0) is NECESSARY to reach cortical alpha~1.",
+      "evidence": "decisive_powerlaw_subcritical: with power-law stimulus covariance at SUBCRITICAL g, alpha~1 is reached at lambda_max<0 (g=0.3: alpha=1.09 at lambda=-1.86, PR=25.3; g=0.8: alpha=0.99 at lambda=-0.90, PR=29.8). falsifier(3) fires.",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "tanh reservoir driven by 120-channel power-law-covariance input; subcritical gains g in {0.3,0.5,0.8}; 6 seeds.",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C5",
+      "evidence_id": "E5",
+      "claim": "The dynamical/chaos route is SUFFICIENT, in a narrow scoped regime, to produce a clean power-law spectrum with a computable alpha.",
+      "evidence": "g_sweep yields non-degenerate power-law spectra at supercritical g (PR rising 12->46 as g 2.0->3.0) with a smooth monotone alpha(lambda); the dynamical route demonstrably manufactures the spectrum within scope.",
+      "diagnosticity": "medium",
+      "direction": "supports",
+      "scope": "supercritical regime of the fixed-input reservoir only; sufficiency, not necessity or exclusivity.",
+      "evidence_status": "accepted",
+      "claim_status": "supported"
+    },
+    {
+      "claim_id": "C6",
+      "evidence_id": "E6",
+      "claim": "The dynamical mechanism DISPLACES the optimisation / stimulus-geometry account of cortical alpha~1 (Stringer et al.).",
+      "evidence": "decisive_powerlaw_subcritical shows the geometry route (power-law stimulus covariance) independently reaches alpha~1 with NO supercriticality (lambda_max<0), so it is not displaced; the two routes coexist as independent sufficient paths.",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "synthetic comparison of dynamical vs stimulus-geometry routes in the same reservoir; not a real-data adjudication.",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C7",
+      "evidence_id": "E7",
+      "claim": "Real cortical (or trained task-network) alpha~1 IS set by lambda_max (the real-data / necessity version of the thesis).",
+      "evidence": "not tested -- a random untrained tanh reservoir only; no cortical recordings, no trained networks, no DMFT measurement of the seed paper's observable.",
+      "diagnosticity": "none",
+      "direction": "untested",
+      "scope": "would require trained task networks and/or cortical data with matched alpha and lambda_max estimates; not run.",
+      "evidence_status": "not_applicable",
+      "claim_status": "speculative"
+    }
+  ]
+}

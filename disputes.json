@@ -1,9 +1,42 @@
 {
-  "updated": "2026-06-06",
+  "updated": "2026-06-07",
   "series": "Duellum Veritatis",
   "subtitle": "Adversarial science digests — a thesis defended and attacked to a verdict, every claim backed by computation.",
   "doi": "10.5281/zenodo.20528909",
   "disputes": [
+    {
+      "id": "2026-06-07-two-roads-to-one-number",
+      "no": 5,
+      "title": "Two Roads to One Number",
+      "subtitle": "Is the cortex's near-1/n representation spectrum the fingerprint of a single tunable regime — one causal knob α(λ_max), soft supercriticality — or can two unrelated roads reach the same exponent?",
+      "date": "2026-06-07",
+      "verdict": "Aramis (CON) prevailed and was right on the merits: the strong hypothesis — a single causal knob α(λ_max) displacing the stimulus-geometry account — does not survive a toy counterexample where α≈1 is reachable subcritically (λ_max<0) via power-law input geometry. Within a fixed ensemble α does move monotonically with λ_max, but that is a property of the toy reservoir, not a cortical finding.",
+      "tags": [
+        "representation-spectrum",
+        "power-law-exponent",
+        "lyapunov-exponent",
+        "criticality",
+        "stimulus-geometry",
+        "neuroscience-AI"
+      ],
+      "html": "disputes/2026-06-07-two-roads-to-one-number.html",
+      "pdf": "disputes/2026-06-07-two-roads-to-one-number.pdf",
+      "doi": "10.5281/zenodo.20528909",
+      "outcome": "CON",
+      "basis": "real_compute",
+      "confidence": 0.7,
+      "claim_type": "numeric",
+      "arbitration_status": "STABLE",
+      "protocol_status": "PASS",
+      "prior_work_check": "pass",
+      "metadata": "disputes/2026-06-07-two-roads-to-one-number.metadata.json",
+      "methodology": {
+        "claim_evidence_matrix": "disputes/2026-06-07-two-roads-to-one-number.claim_evidence_matrix.json",
+        "arbiter_report": "disputes/2026-06-07-two-roads-to-one-number.arbiter_report.json",
+        "evidence_task": "disputes/2026-06-07-two-roads-to-one-number.evidence_task.json",
+        "order_swap_audit": "disputes/2026-06-07-two-roads-to-one-number.order_swap_audit.json"
+      }
+    },
     {
       "id": "2026-06-06-a-ghost-made-of-timing",
       "no": 4,

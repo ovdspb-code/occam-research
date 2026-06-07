@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 13mm 0 12mm 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html,body { margin:0; padding:0; }
+  body {
+    font-family: "Georgia","Times New Roman",serif;
+    color:#f3efe4; background:#222d49;
+    font-size:10pt; line-height:1.4;
+    padding:0 18mm;
+    background-image:
+      radial-gradient(1100px 480px at 72% -8%, rgba(120,145,205,0.26), transparent 60%),
+      radial-gradient(900px 600px at -8% 108%, rgba(170,135,70,0.18), transparent 55%);
+  }
+  h1 { font-size:25pt; line-height:1.08; margin:0 0 4px 0; color:#fbf6e8;
+       letter-spacing:0.3px; font-weight:700; }
+  h2 { font-size:13.5pt; margin:11px 0 5px 0; color:#f0c469;
+       border-bottom:1px solid rgba(240,196,105,0.42); padding-bottom:4px; font-weight:700; }
+  h3 { font-size:11pt; margin:9px 0 3px 0; color:#dde5f5; font-weight:700; }
+  p { margin:0 0 5px 0; text-align:justify; }
+  .kicker { color:#a9b8d8; font-size:9pt; letter-spacing:2.4px; text-transform:uppercase; margin:0 0 8px 0; }
+  .lede { font-size:11.6pt; color:#e3e8f3; font-style:italic; line-height:1.5; margin:6px 0 4px 0; }
+  .rule { height:1px; background:linear-gradient(90deg,transparent,rgba(240,196,105,0.7),transparent); margin:12px 0; }
+  .term { color:#f0c469; font-style:normal; font-weight:700; }
+  .gloss { display:block; background:rgba(160,180,220,0.14); border-left:3px solid #a9b8d8;
+           padding:6px 10px; margin:6px 0; font-size:9.4pt; color:#dfe5f2; line-height:1.44; }
+  .gloss b { color:#fbf6e8; }
+  .disclaimer { border:1px solid rgba(242,160,126,0.55); border-radius:7px; padding:7px 12px;
+                background:rgba(242,160,126,0.10); margin:7px 0; font-size:9.3pt; color:#f6e9df; line-height:1.46; }
+  .disclaimer b { color:#f6c9b3; }
+  .duel { display:flex; gap:12px; margin:10px 0; }
+  .card { flex:1; border:1px solid rgba(240,196,105,0.34); border-radius:6px; padding:10px 12px;
+          background:rgba(15,21,38,0.5); }
+  .card .who { font-size:9pt; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:4px; }
+  .pro .who { color:#8ec2f2; }
+  .con .who { color:#f2a07e; }
+  .card .stance { font-size:9.6pt; color:#e3e8f3; line-height:1.42; }
+  figure { margin:9px 0 6px 0; text-align:center; }
+  figcaption { font-size:8.8pt; color:#b3bdd4; margin-top:5px; font-style:italic; line-height:1.35; }
+  .chartbox { background:rgba(11,16,30,0.72); border:1px solid rgba(160,180,220,0.3);
+              border-radius:8px; padding:10px 8px 4px 8px; }
+  blockquote { margin:10px 0; padding:8px 14px; border-left:3px solid #f0c469;
+               background:rgba(240,196,105,0.1); font-style:italic; color:#fbf6e8; }
+  .verdict { border:1px solid rgba(240,196,105,0.6); border-radius:8px; padding:12px 16px;
+             background:linear-gradient(180deg, rgba(240,196,105,0.16), rgba(240,196,105,0.05)); margin:12px 0; }
+  .verdict .win { color:#f0c469; font-weight:700; font-size:12pt; }
+  .meta { border:1px solid rgba(160,180,220,0.32); border-radius:7px; padding:8px 13px;
+          background:rgba(15,21,38,0.42); margin:10px 0 4px 0; font-size:9pt; line-height:1.5; }
+  .meta .row { display:flex; gap:8px; padding:1.5px 0; }
+  .meta .k { color:#a9b8d8; min-width:104px; flex:0 0 104px; text-transform:uppercase;
+             letter-spacing:0.6px; font-size:8.2pt; padding-top:1px; }
+  .meta .v { color:#eef2fa; }
+  .twocol { display:flex; gap:14px; }
+  .twocol > div { flex:1; }
+  .support { border:1px solid rgba(142,194,242,0.4); border-radius:7px; padding:8px 12px;
+             background:rgba(142,194,242,0.08); margin:6px 0; }
+  .support h3 { margin-top:2px; color:#8ec2f2; }
+  .nosupport { border:1px solid rgba(242,160,126,0.42); border-radius:7px; padding:8px 12px;
+               background:rgba(242,160,126,0.08); margin:6px 0; }
+  .nosupport h3 { margin-top:2px; color:#f2a07e; }
+  ul { margin:3px 0 7px 0; padding-left:18px; }
+  li { margin:2px 0; }
+  .appendix { border-top:1px solid rgba(160,180,220,0.28); margin-top:14px; padding-top:8px; }
+  .appendix h3 { color:#f0c469; margin:0 0 5px 0; font-size:10pt; letter-spacing:0.4px; }
+  .appendix .ap { font-size:8.4pt; color:#c7cfe0; line-height:1.46; margin:0 0 4px 0; word-break:break-all; }
+  .appendix .ap b { color:#eef2fa; }
+  .ornament { text-align:center; margin:6px 0 2px 0; }
+  svg { display:block; }
+  .bars text { font-family:"Georgia",serif; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="ornament">
+<svg width="180" height="26" viewBox="0 0 180 26">
+  <g stroke="#d9b25b" stroke-width="1.4" fill="none" opacity="0.9">
+    <line x1="20" y1="6" x2="86" y2="20"/>
+    <line x1="160" y1="6" x2="94" y2="20"/>
+    <circle cx="20" cy="6" r="2.4" fill="#f0c469"/>
+    <circle cx="160" cy="6" r="2.4" fill="#f0c469"/>
+  </g>
+  <circle cx="90" cy="13" r="3" fill="#f0c469"/>
+</svg>
+</div>
+
+<p class="kicker">A nocturnal duel · science explainer</p>
+<h1>Two Roads to One Number</h1>
+<p class="lede">The cortex leaves a strange signature: the eigenspectrum of its representations decays almost exactly as 1/n. It is tempting to read that number as the fingerprint of one regime — soft chaos, a single knob you can turn. But what if two utterly different roads lead to the very same number, and the elegant curve on which we read off a "law" was only one slice of a far wider surface?</p>
+
+<div class="meta">
+  <div class="row"><div class="k">Date</div><div class="v">7 June 2026</div></div>
+  <div class="row"><div class="k">Topic</div><div class="v">Whether the power-law decay exponent α of the eigenspectrum of neural representations is a monotone, computable function of the maximal Lyapunov exponent λ_max (cortical α≈1 = soft supercriticality), or α is multicausal and not derivable from λ_max alone</div></div>
+  <div class="row"><div class="k">Claim type</div><div class="v">Numeric — backed by the attached reproducible compute bundle (repro script + manifest with hashes and environment)</div></div>
+  <div class="row"><div class="k">Sides</div><div class="v">Athos — defending the thesis · Aramis — refuting it · (public AI-generated sides; engine identities withheld)</div></div>
+  <div class="row"><div class="k">Format</div><div class="v">alternating moves, every blow a simulation; an independent AI arbiter; an order-swap audit</div></div>
+</div>
+
+<div class="disclaimer" data-duellum="status-disclaimer">
+<b>Status:</b> public adversarial AI stress-test. This is not peer review, not a scientific proof, and not an endorsement of the claim. Two AI-generated sides argued a frozen claim under a fixed protocol; an independent AI arbiter issued a structured verdict. For numerical claims, the reported numbers come only from the attached reproducible compute bundle (script, data, hashes, environment). Publication means the duel passed the release gate; it does not promote the claim to discovery status. <span data-duellum="gate-scope">Passing the release gate means automated structural, integrity and format checks passed — it is not human methodological review, peer review, or approval of the claim's substance.</span>
+</div>
+
+<div class="disclaimer" data-duellum="epistemic-status">
+<b>Epistemic status:</b> scout / protocol pilot — exploratory. This issue is a scouting duel, <b>not an established scientific result</b>. Its decisive tests run on random <i>untrained</i> reservoirs with synthetic inputs: they probe whether a mechanism is <i>sufficient in principle</i>, not which regime real cortical data or trained, biologically realistic networks actually occupy. Treat the finding as a lead to investigate, not a confirmed claim about the brain.
+</div>
+
+<div class="rule"></div>
+
+<p>The cortex has a number that has become something of a talisman in recent years. Record many neurons at once and look at the <span class="term">eigenspectrum</span> of their representations — how variance is spread across the principal axes — and it falls off as a power law: the n-th axis carries roughly 1/nᵃ of the variance, and in visual cortex the exponent α comes out close to one. This is not an accident: α≈1 is exactly the edge where a code is both rich in detail and smooth, differentiable. Where the brain gets that particular value is an open question.</p>
+
+<span class="gloss"><b>The toolkit in one breath.</b> <span class="term">α</span> is the power-law decay exponent of the eigenspectrum: the smaller α, the "flatter" the spectrum and the more axes truly carry signal (higher dimensionality). <span class="term">λ_max</span> (the maximal Lyapunov exponent) measures how chaotic the network's dynamics are: λ&gt;0 is chaos (nearby trajectories diverge), λ=0 is the <i>edge of chaos</i>, λ&lt;0 decays to rest. <span class="term">Supercriticality</span> is λ&gt;0, the regime past the edge. <span class="term">PR</span> (participation ratio) flags a non-degenerate spectrum: PR&gt;8 means many axes really carry signal and the slope α can be read as a law. The seed paper showed that chaos in recurrent networks structurally <i>generates</i> power-law spectra resembling the cortical one.</span>
+
+<p>This duel is not a retelling of the paper. The sides were handed a candidate hypothesis the paper merely suggested, and asked to test it with numbers. The hypothesis is risky: it turns the soft "chaos somehow yields a power-law spectrum" into the hard "there is a specific computable knob α(λ_max), and cortical α≈1 corresponds to a definite supercriticality."</p>
+
+<span class="gloss"><b>The suspicion at the heart of the duel.</b> What if α is set not only by the dynamical regime but also by the <i>geometry of the inputs</i> — the structure of the stimulus manifold (the Stringer et al. line)? Then λ_max and α are not "knob and reading" but two consequences of a shared kitchen: they can be moved apart. A curve α(λ_max) found in one slice would be the projection of a two-dimensional surface onto a single axis — and it would collapse the moment you touch the second axis.</span>
+
+<h2>The frozen claim</h2>
+<p>The thesis Athos was assigned to defend, fixed before the duel and not edited afterwards:</p>
+
+<blockquote>"The power-law decay exponent α of the eigenspectrum of neural representations is a monotone, computable function of the network's maximal Lyapunov exponent λ_max; the cortical value α≈1 corresponds to a specific λ_max&gt;0 (soft supercriticality), NOT to the edge of chaos (λ_max=0) and not to task optimisation."</blockquote>
+
+<p>The falsifier both sides accepted is threefold. The thesis is wrong if: <b>(1)</b> at fixed gain, input statistics move α and λ_max independently so that α does not lie on the calibrated curve; <b>OR (2)</b> cortical α≈1 is reached at the edge of chaos (λ_max≈0) rather than at λ_max&gt;0; <b>OR (3)</b> α≈1 is robustly reachable without supercriticality (λ_max&lt;0) — i.e. the exponent is set by stimulus geometry, not the dynamical regime.</p>
+
+<div class="duel">
+  <div class="card pro">
+    <div class="who">Thesis · Athos</div>
+    <div class="stance">α is a <b>monotone computable knob</b> of λ_max. Read α off λ_max; cortical α≈1 sits in <b>soft supercriticality</b> (λ&gt;0), not at the edge of chaos and not at task optimisation. The dynamical regime sets the exponent.</div>
+  </div>
+  <div class="card con">
+    <div class="who">Counter · Aramis</div>
+    <div class="stance">α is <b>multicausal</b>. Input-manifold geometry moves α independently of λ_max; the same α≈1 is reachable at λ&lt;0 too. So λ and α are two consequences of a shared kitchen, not a "cause→reading" pair. The α(λ) curve is a surface projected onto one axis.</div>
+  </div>
+</div>
+
+<div class="rule"></div>
+
+<h2>The duel: arithmetic, not rhetoric</h2>
+<p>Every move was a small simulated world with a measurable answer: a reservoir network (tanh, N=200), a run, λ_max measured from a tangent vector and α from the log-log slope of the eigenspectrum. Three things became clear along the way, and one was decisive — and the decisive blow was struck by the thesis's own defender.</p>
+
+<h3>The slice where the law looked real</h3>
+<p>Within a <i>fixed</i> input ensemble α does fall smoothly and monotonically as λ_max rises — Spearman ρ ≈ −0.99 across this gain grid (averaged over 6 seeds; the per-point λ spread across seeds is small, sd ≤ 0.02). But there is a caveat: at low gain the spectrum is degenerate (PR ≈ 3), and α cannot be read as a law there — a genuine power-law decay appears only where PR&gt;8. And here is the key: at the edge of chaos (λ≈0) the spectrum is still too steep (α≈2.0), while cortical α≈1 is reached well past it — at λ≈+0.20 (gain g=2.5; PR≈28), clearly supercritical. In this slice the core of the thesis holds. An elegant curve. The temptation is to call it a law.</p>
+
+<figure>
+<div class="chartbox">
+<svg class="bars" width="640" height="312" viewBox="0 0 640 312">
+  <line x1="110" y1="40" x2="110" y2="250" stroke="#586079" stroke-width="1"/>
+  <line x1="110" y1="250" x2="600" y2="250" stroke="#586079" stroke-width="1"/>
+  <line x1="428.5" y1="40" x2="428.5" y2="250" stroke="#2b3550" stroke-width="0.9" stroke-dasharray="3,3"/>
+  <line x1="110" y1="239.8" x2="600" y2="239.8" stroke="#f0c469" stroke-width="0.9" stroke-dasharray="5,4" opacity="0.8"/>
+  <g fill="#9aa6c0" font-size="9" text-anchor="middle">
+    <text x="183.5" y="266">-0.5</text>
+    <text x="428.5" y="266">0.0</text>
+    <text x="551" y="266">+0.25</text>
+  </g>
+  <text x="355" y="290" fill="#9aa6c0" font-size="9.5" text-anchor="middle">maximal Lyapunov exponent λ_max  (←decay · chaos→)</text>
+  <g fill="#9aa6c0" font-size="9" text-anchor="end">
+    <text x="103" y="89">4</text>
+    <text x="103" y="140">3</text>
+    <text x="103" y="191">2</text>
+    <text x="103" y="243">1</text>
+  </g>
+  <text x="90" y="48" fill="#9aa6c0" font-size="9" text-anchor="middle">α</text>
+  <text x="424" y="54" fill="#a9b8d8" font-size="8.6" text-anchor="end">edge of chaos</text>
+  <text x="596" y="235" fill="#f0c469" font-size="8.6" text-anchor="end">α ≈ 1</text>
+  <polyline points="137,49 247,73 288,87 356,117 422,187 479,235 528,241 566,245"
+            fill="none" stroke="#8ec2f2" stroke-width="2" opacity="0.85"/>
+  <g fill="#f0c469">
+    <circle cx="137" cy="49" r="3.4"/>
+    <circle cx="247" cy="73" r="3.4"/>
+    <circle cx="288" cy="87" r="3.4"/>
+    <circle cx="356" cy="117" r="3.4"/>
+    <circle cx="422" cy="187" r="3.4"/>
+    <circle cx="479" cy="235" r="3.4"/>
+    <circle cx="528" cy="241" r="4.6" stroke="#fbf6e8" stroke-width="1.5"/>
+    <circle cx="566" cy="245" r="3.4"/>
+  </g>
+  <text x="300" y="78" fill="#9aa6c0" font-size="8.2" text-anchor="start">PR≈3 (spectrum degenerate)</text>
+  <text x="520" y="227" fill="#fbf6e8" font-size="8.6" text-anchor="end">α≈1 at λ≈+0.20, PR≈28</text>
+  <text x="430" y="180" fill="#cfe0f4" font-size="8.4" text-anchor="start">at the edge α≈2</text>
+</svg>
+</div>
+<figcaption>Fig. 1 — The fixed-input slice: α falls monotonically with λ_max (Spearman ρ ≈ −0.99). On the left the spectrum is degenerate (PR≈3) — α is not a law there. Cortical α≈1 sits not at the edge of chaos (λ=0, where α≈2.0) but deeper, at λ≈+0.20 (g=2.5, PR≈28) — clearly supercritical. Source: <b>2026-06-07_cc_data.json</b> (mean over 6 seeds; per-point λ spread sd ≤ 0.02).</figcaption>
+</figure>
+
+<h3>Retired by the defender himself: the input axis is a second, independent knob</h3>
+<p>Next Athos put the curve to the test of a second axis. At fixed gain (g=1.5) he varied the input statistics — and the picture fell apart. Input amplitude drives λ_max across a wide range (from +0.03 to −0.53; Spearman(σ,λ)=−1), yet α <b>does not follow</b> the calibrated curve: it stays in a narrow band ≈1.5–2.6, where the curve would have predicted quite different, steep values. So α is not a function of λ_max alone; the input forms a second, independent axis. Athos honestly conceded the strong version: there is no single knob α(λ_max) that works for any input. The result is directional — a matched-λ sweep would sharpen it.</p>
+
+<p>What remained was a narrow core — "with a poor input, the only available road to α≈1 is supercritical." And Athos put it to the decisive test: can α≈1 be reached under <b>subcritical</b> dynamics (λ&lt;0) by input geometry alone — a power-law stimulus covariance, the Stringer route?</p>
+
+<h3>The decisive test — a knockout in his own hands</h3>
+<p>The defender built subcritical networks (λ_max deeply negative) and drove them with a power-law-covariance input (120 channels). The result went straight through the thesis: α came out ≈1 at λ_max from −0.9 to −1.9 — with no chaos, no supercriticality, at a high and healthy dimensionality (PR ≈ 25–30, spectrum non-degenerate). This is a toy realisation compatible with the stimulus-geometry account (the Stringer line) — inside PRO's own model, and not on cortical data. Falsifier (3) fired — in the hands of the very side defending the thesis.</p>
+
+<figure>
+<div class="chartbox">
+<svg class="bars" width="640" height="250" viewBox="0 0 640 250">
+  <line x1="120" y1="40" x2="120" y2="190" stroke="#586079" stroke-width="1"/>
+  <line x1="120" y1="190" x2="600" y2="190" stroke="#586079" stroke-width="1"/>
+  <line x1="523" y1="40" x2="523" y2="190" stroke="#2b3550" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <line x1="120" y1="110" x2="600" y2="110" stroke="#f0c469" stroke-width="0.9" stroke-dasharray="5,4" opacity="0.85"/>
+  <g fill="#9aa6c0" font-size="9" text-anchor="middle">
+    <text x="139" y="206">-2.0</text>
+    <text x="331" y="206">-1.0</text>
+    <text x="523" y="206">0.0</text>
+  </g>
+  <text x="360" y="230" fill="#9aa6c0" font-size="9.5" text-anchor="middle">maximal Lyapunov exponent λ_max</text>
+  <text x="527" y="52" fill="#a9b8d8" font-size="8.6" text-anchor="start">edge of chaos (λ=0)</text>
+  <text x="124" y="104" fill="#f0c469" font-size="9" text-anchor="start">cortical target signature: α ≈ 1</text>
+  <line x1="167" y1="110" x2="167" y2="190" stroke="#8ec2f2" stroke-width="0.8" stroke-dasharray="2,3" opacity="0.6"/>
+  <line x1="264" y1="110" x2="264" y2="190" stroke="#8ec2f2" stroke-width="0.8" stroke-dasharray="2,3" opacity="0.6"/>
+  <line x1="351" y1="110" x2="351" y2="190" stroke="#8ec2f2" stroke-width="0.8" stroke-dasharray="2,3" opacity="0.6"/>
+  <circle cx="167" cy="110" r="6.5" fill="#8ec2f2"/>
+  <circle cx="264" cy="110" r="6.5" fill="#8ec2f2"/>
+  <circle cx="351" cy="110" r="6.5" fill="#8ec2f2"/>
+  <text x="264" y="134" fill="#cfe0f4" font-size="9" text-anchor="middle">power-law input geometry</text>
+  <text x="264" y="146" fill="#cfe0f4" font-size="9" text-anchor="middle">λ from −0.9 to −1.9 · subcritical · PR 25–30</text>
+  <line x1="562" y1="110" x2="562" y2="190" stroke="#f2a07e" stroke-width="0.8" stroke-dasharray="2,3" opacity="0.6"/>
+  <circle cx="562" cy="110" r="6.5" fill="#f2a07e"/>
+  <text x="560" y="76" fill="#f4c3ac" font-size="9" text-anchor="middle">supercritical dynamics</text>
+  <text x="560" y="88" fill="#f4c3ac" font-size="9" text-anchor="middle">λ≈+0.20 · poor input</text>
+</svg>
+</div>
+<figcaption>Fig. 2 — Two roads to one number. The same α≈1 is reached by two independent paths: supercritical dynamics with a poor input (right, λ&gt;0) OR pure power-law input geometry in a deeply subcritical network (left, λ from −0.9 to −1.9). The strong version — a single causal knob α(λ_max) — does not survive this toy counterexample. Source: <b>2026-06-07_cc_data.json</b> (probes A and C).</figcaption>
+</figure>
+
+<h2>The verdict</h2>
+<div class="verdict">
+<p class="win" data-duellum="outcome"><b>Outcome (who argued better):</b> CON — the refuting side (Aramis) prevailed on argumentation.</p>
+<p class="win" data-duellum="substantive-verdict"><b>Substantive verdict (was the claim true):</b> CON — the strong version of the hypothesis was refuted on the merits.</p>
+<p style="margin:6px 0 0 0; font-size:9.5pt; color:#f0c469;" data-duellum="axis-divergence"><b>Here the two axes converge.</b> Unlike cases where "argued better" and "claim is true" diverge, here they point the same way: CON both argued more strongly and was right on the substance. The strong formulation (a single causal knob α(λ_max) that displaces the stimulus-geometry account) did not survive.</p>
+<p style="margin:6px 0 0 0;">The arbiter judged that CON held the original strong thesis in frame more precisely and pressed the falsifiers in a disciplined way, correctly turning PRO's own numbers against the thesis. PRO earned a point for intellectual honesty — it ran the decisive test itself and accepted the outcome — but over the course of the duel narrowed the thesis to a weaker version than the one declared. What survived: the dynamical road to a power-law spectrum is <i>sufficient</i> and, within a fixed ensemble, parameterisable. What collapsed: its <i>necessity</i> and <i>exclusivity</i>. α is multicausal.</p>
+<p style="margin:6px 0 0 0; font-size:9pt; color:#dfe5f2;"><b>Basis:</b> real_compute (attached bundle) · <b>Protocol:</b> PASS (clean arbiter verdict) · <b>Order-swap audit:</b> PASS (substantive "con" stable when the side order was swapped) · <b>Verbosity caveat:</b> PRO wrote substantially more than CON (1852 vs 1147 words, imbalance 0.62) — but the wordier side <i>lost</i>, so "whoever talked more won" does not apply here.</p>
+</div>
+
+<div class="twocol">
+  <div class="support">
+    <h3>What this supports</h3>
+    <ul>
+      <li>The dynamical road is <b>sufficient</b>: a chaotic reservoir really does yield a power-law spectrum, and within a fixed input ensemble α(λ_max) is monotone and computable (ρ≈−0.99).</li>
+      <li>A <b>second, independent</b> sufficient path exists: power-law input geometry yields α≈1 in a deeply subcritical network (λ from −0.9 to −1.9, PR&gt;8) — a Stringer-type mechanism reproduced.</li>
+      <li>The input axis is <b>independent</b>: at fixed g the input drives λ_max across −0.53..+0.03 while α stays in a 1.5–2.6 band off the calibrated curve — α lives on a two-dimensional surface, not a curve.</li>
+    </ul>
+  </div>
+  <div class="nosupport" data-duellum="does-not-support">
+    <h3>What this does <u>not</u> support</h3>
+    <ul>
+      <li>It does <b>not</b> show that cortical α≈1 results from supercriticality: the real brain may live on either road or a mixture.</li>
+      <li>It does <b>not</b> establish a single causal knob α(λ_max) — varying the input breaks the relation; the exponent is not uniquely derivable from λ_max.</li>
+      <li>It does <b>not</b> transfer to the empirics: the models are random <i>untrained</i> reservoirs on synthetic inputs; trained, biologically realistic networks and real cortical data were not tested.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Where the losing side still has a point</h2>
+<p>The thesis's defender lost, but left a genuine result behind, not empty rhetoric. First, the dynamical road really is <i>sufficient</i> and, in a narrow regime, parameterisable — a computable monotone α(λ_max) with ρ≈−0.99 is not trivial: chaos does generate a power-law spectrum with a predictable exponent. Second, the methodological lesson PRO articulated itself is valuable and transferable: "found monotonicity in a slice, declared it a law" is a classic trap. A curve found at a fixed second variable can be the projection of a surface onto one axis; you must test a dependence by moving <i>all</i> the axes, not one. It was CON's pressure that forced the decisive test — and both sides converged on the honest picture.</p>
+
+<h2>Prior-work note</h2>
+<p data-duellum="prior-work">This release makes <b>no originality claim</b>. The seed paper established that chaos in recurrent networks structurally generates cortex-like power-law spectra; the Stringer et al. line showed the cortical exponent α≈1 and its link to stimulus-manifold geometry. The duel's contribution is a stress-test of one mechanistic <i>candidate hypothesis</i> (α as a computable function of λ_max), not a new empirical finding. Nor is it a dispute with the seed paper itself: it does not contest that paper's result (chaos yields power-law spectra) — it tests a separate strong superstructure built on top of it. Novelty status: <span class="term">not an originality claim</span>.</p>
+
+<div class="appendix">
+<h3>Appendix · reproducibility</h3>
+<p class="ap">All numbers and figures come from the attached reproducible bundle (numpy/scipy; no network). Script, data, hashes, environment and rerun instructions are recorded in <b>2026-06-07_compute_manifest.json</b>.</p>
+<p class="ap"><b>Model:</b> recurrent reservoir (tanh), N=200, T=2000, burn-in 300; W ~ N(0,1)/√N with gain g; λ_max from the growth of a renormalised tangent vector through the Jacobian diag(1−x²)·gW (a finite-time estimate of the leading exponent under input drive, not the asymptotic autonomous one); α the negative log-log slope of the covariance eigenspectrum over ranks [3, N/2]; PR=(Σλ)²/Σλ² as a non-degeneracy indicator. Inputs: a fixed sinusoidal ensemble (probes A/B) and a 120-channel power-law-covariance input (probe C). 6 fixed seeds per cell.</p>
+<p class="ap"><b>Probe A (fixed input), mean over 6 seeds:</b> g=0.7 → λ=−0.59 α=4.73 PR=3.0 · g=1.0 → λ=−0.29 α=3.98 PR=3.1 · g=1.5 → λ=−0.01 α=2.03 PR=4.3 · g=2.0 → λ=+0.10 α=1.10 PR=12.0 · g=2.5 → λ=+0.20 α=0.97 PR=27.9 · g=3.0 → λ=+0.28 α=0.90 PR=46.0. Spearman(λ,α)=−0.99. At g≤1.5 the spectrum is degenerate (PR&lt;8) — α is not a law there.</p>
+<p class="ap"><b>Probe C (power-law input geometry, subcritical):</b> g=0.3 → λ=−1.86 α=1.09 PR=25.3 · g=0.5 → λ=−1.35 α=1.05 PR=26.6 · g=0.8 → λ=−0.90 α=0.99 PR=29.8. α≈1 reached at λ&lt;0, PR&gt;8.</p>
+<p class="ap"><b>Input axis (g=1.5, input dim 5):</b> rising input amplitude shifts λ from +0.03 to −0.53 (Spearman(σ,λ)=−1), while α stays in a ≈1.5–2.6 band and does not follow the calibrated curve — a second independent axis.</p>
+<p class="ap"><b>Environment:</b> Python 3.12.3 · numpy 2.4.4 · scipy 1.17.1 · linux-x86_64.</p>
+<p class="ap"><b>script_sha256:</b> sha256:de638c37ef5bf847cbb4dd08d3129c6fc606616433af35181b35c4db07597605</p>
+<p class="ap"><b>2026-06-07_cc_data.json sha256:</b> sha256:425e7210952a5b3920b2ddc3adbb1d69a06f1ea22a6be73f5f9aa12896b01423</p>
+<p class="ap"><b>Rerun:</b> python3 2026-06-07_repro.py → writes 2026-06-07_cc_data.json</p>
+<p class="ap"><b>Order-swap audit:</b> 2026-06-07_no5_order_swap_audit.json — natural "con", swapped "con", status PASS.</p>
+<p class="ap"><b>Errata / quarantine:</b> none.</p>
+</div>
+
+<div class="appendix refs">
+<h3>References</h3>
+<p class="ap" style="text-indent:-1.4em; margin-left:1.4em;">Bauer, J., Keup, C., Kadmon, J., &amp; Helias, M. (2026). Discrete signaling mediates chaotic regularization in recurrent neural networks (arXiv:2606.04426). arXiv. <a href="https://arxiv.org/abs/2606.04426" style="color:#8ec2f2;">https://arxiv.org/abs/2606.04426</a></p>
+<p class="ap" style="font-size:8.4pt; color:#a9b8d8; margin-top:-2px;"><i>Seed paper — it only suggested the candidate hypothesis and was not itself the subject of the duel.</i></p>
+<p class="ap" style="text-indent:-1.4em; margin-left:1.4em;">Stringer, C., Pachitariu, M., Steinmetz, N., Carandini, M., &amp; Harris, K. D. (2019). High-dimensional geometry of population responses in visual cortex. <i>Nature, 571</i>(7765), 361–365. <a href="https://doi.org/10.1038/s41586-019-1346-5" style="color:#8ec2f2;">https://doi.org/10.1038/s41586-019-1346-5</a></p>
+<p class="ap" style="font-size:8.4pt; color:#a9b8d8; margin-top:-2px;"><i>Competing account — cortical α≈1 via stimulus-manifold geometry; exactly the account CON upheld with the decisive test.</i></p>
+<p class="ap" style="font-size:8.4pt; color:#8a93ad; margin-top:4px;">Citation style: APA 7. References ordered alphabetically by first author.</p>
+</div>
+
+<p style="margin-top:10px; font-size:8.4pt; color:#8a93ad; text-align:center;">Duellum Veritatis · a public adversarial AI stress-test of a frozen scientific claim · published by Occam Research · engine and arbiter identities withheld by design.</p>
+
+</div>
+</body>
+</html>
