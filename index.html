@@ -7,28 +7,11 @@
 <meta name="description" content="Occam Research — the independent practice of Oleg Dolgikh. Bold cross-disciplinary questions, held to evidence: peer-reviewed work, open data, and adversarial duels.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Cutive+Mono&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIzMjE1NiIgc3Ryb2tlLXdpZHRoPSIzIi8+PGVsbGlwc2UgY3g9IjI0IiBjeT0iMjQiIHJ4PSIxMSIgcnk9IjIxIiBmaWxsPSJub25lIiBzdHJva2U9IiMyMzIxNTYiIHN0cm9rZS13aWR0aD0iMi41IiB0cmFuc2Zvcm09InJvdGF0ZSgtMzAgMjQgMjQpIi8+PGVsbGlwc2UgY3g9IjI0IiBjeT0iMjQiIHJ4PSIxMSIgcnk9IjIxIiBmaWxsPSJub25lIiBzdHJva2U9IiNiZDFlNjMiIHN0cm9rZS13aWR0aD0iMi41IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAyNCAyNCkiLz48cGF0aCBkPSJNNCAyMFEyNCAxNiA0NCAyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTA2YmIyIiBzdHJva2Utd2lkdGg9IjEuOCIvPjxwYXRoIGQ9Ik00IDI4UTI0IDMyIDQ0IDI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM1MDZiYjIiIHN0cm9rZS13aWR0aD0iMS44Ii8+PC9zdmc+Cg==">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="icon" href="favicon.ico">
-<link rel="stylesheet" href="style.css">
-<script>
-(function(){
-  if(window.matchMedia('(prefers-color-scheme:dark)').matches) document.documentElement.setAttribute('data-theme','dark');
-  window.toggleTheme = function(){
-    const cur = document.documentElement.getAttribute('data-theme');
-    const next = cur === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    const btn = document.getElementById('themeBtn');
-    if(btn) btn.textContent = next === 'dark' ? '☀️' : '🌙';
-    if(typeof renderAll === 'function') setTimeout(renderAll, 50);
-  };
-  window.addEventListener('DOMContentLoaded', ()=>{
-    const btn = document.getElementById('themeBtn');
-    if(btn) btn.textContent = (document.documentElement.getAttribute('data-theme')==='dark') ? '☀️' : '🌙';
-  });
-})();
-</script>
+<link rel="stylesheet" href="manuscript.css">
 </head>
 <body>
 
@@ -44,7 +27,6 @@
     <a href="#workSection">Work</a>
     <a href="https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1813959/full" target="_blank" rel="noopener noreferrer">Paper</a>
     <a href="https://github.com/ovdspb-code" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" title="Toggle dark/light mode" aria-label="Switch to dark mode">🌙</button>
   </div>
 </nav>
 </div>
@@ -81,17 +63,17 @@
   <h2>How the work goes</h2>
   <div class="card-grid" style="margin-top:var(--space-6)">
     <div class="card static">
-      <div class="card-icon" style="background:var(--accent-light)">🔭</div>
+      <div class="card-icon" style="background:var(--accent-light)">I</div>
       <h3>Scout</h3>
       <p>Range across fields for questions sharp enough to be <em>decided</em> — where an independent researcher can still land a real result.</p>
     </div>
     <div class="card static">
-      <div class="card-icon" style="background:var(--teal-light)">🧪</div>
+      <div class="card-icon" style="background:var(--teal-light)">II</div>
       <h3>Test</h3>
       <p>Attack the question with computation, real data, and explicit null models. No claim survives without evidence — and the nulls have to fail honestly.</p>
     </div>
     <div class="card static">
-      <div class="card-icon" style="background:var(--warm-light)">⚔️</div>
+      <div class="card-icon" style="background:var(--warm-light)">III</div>
       <h3>Duel</h3>
       <p>Put the strongest version of a claim against its strongest objection, in the open, to a verdict. One of several formats — see Duellum Veritatis.</p>
     </div>
@@ -210,20 +192,20 @@
 
 <script>
 const icons = {
-  human:     {emoji:'🧠', bg:'var(--accent-light)'},
-  drosophila:{emoji:'🪰', bg:'var(--teal-light)'},
-  elegans:   {emoji:'🪱', bg:'var(--warm-light)'},
-  mouse:     {emoji:'🐭', bg:'var(--coral-light)'},
+  human:     {letter:'H', bg:'var(--accent-light)'},
+  drosophila:{letter:'D', bg:'var(--teal-light)'},
+  elegans:   {letter:'C', bg:'var(--warm-light)'},
+  mouse:     {letter:'M', bg:'var(--coral-light)'},
 };
 fetch('pages.json').then(r=>r.json()).then(pages => {
   const grid = document.getElementById('cardGrid');
   pages.forEach(p => {
-    const ic = icons[p.id] || {emoji:'📊', bg:'var(--surface-alt)'};
+    const ic = icons[p.id] || {letter:'·', bg:'var(--surface-alt)'};
     const card = document.createElement('a');
     card.href = p.id + '.html';
     card.className = 'card';
     card.innerHTML = `
-      <div class="card-icon" style="background:${ic.bg}">${ic.emoji}</div>
+      <div class="card-icon" style="background:${ic.bg}">${ic.letter}</div>
       <h3>${p.title}</h3>
       <p>${p.desc}</p>
       <div class="card-meta">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
