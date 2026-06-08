@@ -1,0 +1,83 @@
+{
+  "matrix_id": "dv-no6-neural-chaos-2026-06-08",
+  "claim_frozen_at": "2026-06-08T02:01:21Z",
+  "rows": [
+    {
+      "claim_id": "C1",
+      "evidence_id": "E1",
+      "claim": "The 'rigid syllable order, variable low-CV durations' phenomenology REQUIRES deterministic chaotic itinerancy (a positive leading Lyapunov exponent) and discriminates it from a noise-driven account.",
+      "evidence": "2026-06-08_cc_data.json stable_adaptation_chain: a 5-link chain clocked by an adaptation threshold with Gaussian timing noise gives duration CV = 0.0801 with 0 order errors -- inside the observed 5-15% band -- so the phenomenology is reproduced WITHOUT any positive Lyapunov exponent.",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "synthetic 5-link adaptation-clocked chain, tau=150 ms, sigma=12 ms, 8000 trials; calibrated to zebra-finch HVC duration-CV literature; not neural data.",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C2",
+      "evidence_id": "E2",
+      "claim": "Any noise/metastable account predicts an exponential interval distribution with CV ~ 1, far above the observed CV ~ 0.1, so the noise account is refuted.",
+      "evidence": "poisson_escape: independent Poisson escape gives CV = 0.998 ~ 1, but that is a CARICATURE; the real noise account is an adaptation CLOCK (C1) whose CV is 0.08. The CV~1 figure refutes only the straw man, not the adaptation-chain hypothesis.",
+      "diagnosticity": "medium",
+      "direction": "contradicts",
+      "scope": "analytic exponential-escape model (rate 1/150 ms, 4e5 draws) used only to show the discriminator PRO invoked targets a straw man.",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C3",
+      "evidence_id": "E3",
+      "claim": "A positive leading Lyapunov exponent is the SOURCE of the sub-millisecond timing variability measured across the song.",
+      "evidence": "jitter_full_song: with the noise budget calibrated so lambda=0 gives 1.0 ms end-of-song jitter, raising lambda gives 3.7 ms at 2/s and 46.9 ms at 5/s. Observed HVC spike timing is sub-millisecond across the whole song (Hahnloser et al., 2002) and HVC cooling slows the song uniformly (Long & Fee, 2008) -- the contraction signature of lambda_1 <= 0. A positive exponent is an AMPLIFIER of noise, not its source.",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "1-D linear-noise timing-variance budget V(T)=D(e^{2 lambda T}-1)/(2 lambda), T=1 s, D fixed so lambda=0 -> 1 ms; bounded by literature sub-ms precision, not a full E-I network simulation.",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C4",
+      "evidence_id": "E4",
+      "claim": "The saddle-exit attractor geometry supplies a chaos-specific timing-dispersion signature, distinct from injected noise.",
+      "evidence": "saddle_exit: for the normal-form exit time tau=(1/lambda) ln(a/x0) with x0=eps|z|, the variance decomposes exactly as Var(tau)=Var(ln|z|)/lambda^2 (Var(ln|z|)=1.235), INDEPENDENT of the noise scale eps; and the eps->0 sweep drives timing std -> 0 at any lambda. The dispersion is log-compressed initial-condition NOISE, not an attractor fingerprint.",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "Monte-Carlo of the 1-D saddle-exit normal form, 5e6 draws for Var(ln|z|); eps sweep 1e-2..0 at lambda=5/s, separatrix a=0.1.",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C5",
+      "evidence_id": "E5",
+      "claim": "The saddle-exit mechanism can match the observed mean and CV of transition times AND preserve sub-millisecond spike-timing precision simultaneously.",
+      "evidence": "lambda_lock: mean and CV jointly fix lambda = std(ln|z|)/(CV*mean). Reproducing a 50 ms interval at CV 0.15 demands lambda ~ 148/s, whose per-window amplification ~1.6e3 would obliterate the conceded sub-ms precision; 222/s at CV 0.10. The two falsifier arms cannot be satisfied at once.",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "closed-form lock lambda=std(ln|z|)/(CV*mean) over (mean,CV) in {(50,0.15),(150,0.15),(50,0.10)} ms; amplification exp(lambda*mean).",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C6",
+      "evidence_id": "E6",
+      "claim": "A stable sequential chain (lambda_1 <= 0) clocked by adaptation, plus noise, is SUFFICIENT to produce rigid transition order together with variable, low-CV transition times.",
+      "evidence": "stable_adaptation_chain reproduces CV 0.080 with 0 order errors: a graph/structure sets the order (no positive exponent needed) while a biophysical clock plus noise sets the times. The falsifier arm (b) the duel accepted is satisfied.",
+      "diagnosticity": "high",
+      "direction": "supports",
+      "scope": "same synthetic chain as C1; demonstrates sufficiency of the stable-chain alternative, NOT a measurement on real circuits.",
+      "evidence_status": "accepted",
+      "claim_status": "supported"
+    },
+    {
+      "claim_id": "C7",
+      "evidence_id": "E7",
+      "claim": "Real neural trajectories (zebra-finch HVC, hippocampal replay, cortical preparatory sequences) have a non-positive local Lyapunov exponent everywhere -- the strong claim is settled on real data.",
+      "evidence": "not tested: no direct local-Lyapunov estimate from neural trajectories was made; the decisive observable is synthetic/analytic (paper_faithful=false). Replay and cortical preparatory sequences were not touched quantitatively. The seed paper's existence result for SCO in abstract E-I TLNs is not contested.",
+      "diagnosticity": "none",
+      "direction": "untested",
+      "scope": "would require local-Lyapunov estimation on neural state trajectories and a likelihood/surrogate comparison on large datasets; not run in this scout.",
+      "evidence_status": "not_applicable",
+      "claim_status": "speculative"
+    }
+  ]
+}

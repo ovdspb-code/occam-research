@@ -1,0 +1,132 @@
+{
+  "task_id": "dv-no6-neural-chaos-2026-06-08",
+  "frozen_claim": "Реальные нейронные последовательности (HVC-пение, гиппокампальный replay, кортикальные preparatory-последовательности) генерируются ДЕТЕРМИНИРОВАННОЙ хаотической итинерацией SCO-типа — траектория живёт на strange-аттракторе с малым положительным старшим показателем Ляпунова — а НЕ шум-индуцированными переходами между устойчивыми метастабильными состояниями; поэтому ПОРЯДОК переходов почти детерминирован (задан графом), тогда как ВРЕМЕНА переходов чувствительно зависят от начальных условий.",
+  "frozen_at": "2026-06-08T02:01:21Z",
+  "registered_before_compute": true,
+  "registered_at": "2026-06-08T02:01:21Z",
+  "registered_by": "b2b-20260608-020121 (duel generator session)",
+  "pre_compute_event_id": "b2b-20260608-020121",
+  "decisive": true,
+  "observable": {
+    "name": "stable_chain_sufficiency_and_lyapunov_bound_on_hvc_timing",
+    "definition": "On synthetic models calibrated to zebra-finch HVC literature (order stereotypy >99%, duration CV 5-15%, sub-ms spike-timing precision over a ~1 s song), test whether deterministic chaotic itinerancy (lambda_1>0) is NECESSARY as the source of timing variability, via four probes: (A) a stable K-link adaptation-clocked chain with Gaussian timing noise -- does it reproduce rigid order (0 errors) AND low duration CV (5-15%)? (B) a 1-D continuous-noise timing-variance budget V(T)=D(e^{2 lambda T}-1)/(2 lambda), calibrated so lambda=0 gives the observed 1 ms end-of-song jitter -- how large does end-point jitter grow as lambda rises, versus the sub-ms observation? (C, DECISIVE) the saddle-exit normal form tau=(1/lambda) ln(a/x0), x0=eps|z| -- is Var(tau)=Var(ln|z|)/lambda^2 independent of the noise scale, and does timing dispersion vanish as eps->0 at any lambda? (D) the mean/CV lambda-lock lambda=std(ln|z|)/(CV*mean) -- does a realistic (mean,CV) force a lambda whose amplification destroys sub-ms precision? The strong thesis is FALSIFIED if (a) the timing precision implies lambda_1<=0 on the flagship example AND (b) the stable noise+adaptation model matches the order and CV statistics at least as well.",
+    "paper_faithful": false,
+    "evidence_basis": "simulation",
+    "source_ref": "arXiv:2606.00373 (Zang & Curto, Sequential chaotic oscillations in excitatory-inhibitory threshold-linear networks) -- seed paper that proves SCO EXIST in abstract E-I TLNs and that a graph predicts transition order; the duel tests a SEPARATE strong hypothesis (chaos as the SOURCE of timing variability in REAL neural sequences) on synthetic HVC-calibrated toys, not the paper's existence theorem."
+  },
+  "model": {
+    "generative": "Four synthetic/analytic toys (numpy): (A) stable adaptation chain, interval = tau + sigma*N(0,1), K=5 links, tau=150 ms, sigma=12 ms, 8000 trials; (B) timing-variance budget V(T)=D(e^{2 lambda T}-1)/(2 lambda) with D=1e-6 s^2/s so sqrt(D*T)=1 ms at T=1 s, lambda=0; (C) saddle-exit normal form tau=(1/lambda) ln(a/x0), x0=eps|z|, z~N(0,1), 5e6 draws for Var(ln|z|); (D) lambda-lock lambda=std(ln|z|)/(CV*mean).",
+    "config": "chain K=5 tau=0.15 s sigma=0.012 s N=8000 seed=0; poisson-escape rate=1/0.15 n=4e5 seed=11; jitter T in {1.0,0.05} s lambda in {0,0.5,1,2,5,10}/s D=1e-6; saddle-exit z~N(0,1) 5e6 draws seed=7, eps sweep {1e-2,1e-4,1e-8,0} at lambda=5/s a=0.1; lambda-lock (mean_ms,CV) in {(50,0.15),(150,0.15),(50,0.10)}.",
+    "controls": "Poisson-escape arm included to show the CV~1 discriminator targets a straw man, not the adaptation-clock account; eps=0 arm shows the saddle-exit dispersion vanishes with no initial-condition noise at any lambda, isolating noise (not chaos) as the source."
+  },
+  "comparators": [
+    {
+      "name": "stable_adaptation_chain",
+      "role": "structured"
+    },
+    {
+      "name": "poisson_escape_caricature",
+      "role": "other"
+    },
+    {
+      "name": "saddle_exit_eps_to_zero",
+      "role": "null_model"
+    },
+    {
+      "name": "jitter_lambda_zero_baseline",
+      "role": "baseline"
+    }
+  ],
+  "thresholds": {
+    "duration_cv_observed_band": [
+      0.05,
+      0.15
+    ],
+    "order_errors_max": 0,
+    "subms_precision_ms": 1.0,
+    "decision_rule": "The STRONG thesis is FALSIFIED (CON) if (A) the stable chain reaches duration CV within [0.05,0.15] at 0 order errors (phenomenology reproduced without chaos) AND (B/C/D) reproducing the observed timing requires either a lambda whose end-of-song jitter far exceeds the sub-ms observation, or a saddle-exit dispersion that is shown to be noise-scale-set (Var(tau)=Var(ln|z|)/lambda^2, vanishing as eps->0), or a mean/CV lambda-lock forcing an amplification that destroys sub-ms precision. The thesis would SURVIVE only if the stable chain failed to match the statistics AND a positive lambda were required to reach sub-ms jitter."
+  },
+  "metrics": [
+    {
+      "name": "duration_cv_and_order_errors_stable_chain",
+      "variants": [
+        "raw"
+      ]
+    },
+    {
+      "name": "end_of_song_jitter_vs_lambda",
+      "variants": [
+        "raw"
+      ]
+    },
+    {
+      "name": "var_ln_abs_z_saddle_exit",
+      "variants": [
+        "raw"
+      ]
+    },
+    {
+      "name": "lambda_required_from_mean_cv_lock",
+      "variants": [
+        "raw"
+      ]
+    }
+  ],
+  "seeds": {
+    "count": 3,
+    "level": "run",
+    "streams": [
+      "adaptation_chain",
+      "saddle_exit_z",
+      "poisson_escape"
+    ]
+  },
+  "nulls": [
+    "saddle_exit_eps_to_zero: with no initial-condition noise the saddle-exit dispersion must vanish at ANY lambda; it does (std->0), so chaos is not the source of the variability -- noise is.",
+    "jitter_lambda_zero_baseline: at lambda=0 the calibrated end-of-song jitter is exactly the observed 1 ms, so any excess at lambda>0 is pure amplification."
+  ],
+  "failure_modes": [
+    "All models are synthetic/analytic toys calibrated to textbook HVC values; no neural data are touched, so the decisive observable is a proxy, not paper-faithful (the central limitation).",
+    "The lambda-budget V(T) is a 1-D linear-noise model of timing dispersion, not a full E-I threshold-linear network simulation.",
+    "The saddle-exit variance identity Var(tau)=Var(ln|z|)/lambda^2 holds for the 1-D normal-form exit and may not transfer to a multi-dimensional strange attractor with structured initial-condition geometry.",
+    "Only the songbird flagship is addressed; hippocampal replay and cortical preparatory sequences are untested.",
+    "Direct local-Lyapunov estimates from neural trajectories remain absent, so the real-data sign of lambda_1 is not measured."
+  ],
+  "accepted_evidence_criteria": "Falsification of the strong thesis is accepted if the stable adaptation chain reaches duration CV in [0.05,0.15] at 0 order errors (phenomenology reproduced without a positive exponent) AND the timing-precision arms show a positive lambda either smears end-of-song jitter far beyond the sub-ms observation, or that the saddle-exit dispersion is noise-scale-set and vanishes as eps->0, or that the mean/CV lambda-lock forces a precision-destroying amplification.",
+  "rejected_evidence_criteria": "The Poisson-escape CV~1 result is not admitted as a discriminator (it refutes a straw man). No real-neural-data claim about the local Lyapunov sign is admitted from these synthetic/analytic toys regardless of outcome; the seed paper's existence theorem for SCO is not adjudicated.",
+  "sensitivity_grid": {
+    "lambda_per_s": [
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0
+    ],
+    "window_s": [
+      1.0,
+      0.05
+    ],
+    "eps": [
+      0.01,
+      0.0001,
+      1e-08,
+      0.0
+    ],
+    "mean_cv": [
+      [
+        50,
+        0.15
+      ],
+      [
+        150,
+        0.15
+      ],
+      [
+        50,
+        0.1
+      ]
+    ],
+    "seeds": 3
+  }
+}

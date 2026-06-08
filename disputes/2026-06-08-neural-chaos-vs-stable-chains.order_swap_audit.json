@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-06-08T02:26:04Z",
+  "natural_input_sha256": "sha256:d348f5e890bf50ca8c204ae6f4c4744a3bc5f4370b445a37f471f3780406331e",
+  "natural_output_sha256": "sha256:adcf722dbb6d94e5a0f3aaa7195bea65df3edec92c1bafb0609523edad2afb97",
+  "natural_substantive": "con",
+  "stability": "PASS",
+  "swapped_input_sha256": "sha256:0b6b0416d462662c9491413533dfc4b4af7b57b09a91cb8926a2fc00d30c2b74",
+  "swapped_output_sha256": "sha256:61e1b8b6ded61d6927ac08de811cd411aaea6a5a2083b6472368770549e51897",
+  "swapped_substantive": "con"
+}

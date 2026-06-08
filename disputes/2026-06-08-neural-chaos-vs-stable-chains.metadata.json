@@ -1,0 +1,94 @@
+{
+  "duel_id": "dv-0006",
+  "series": "Duellum Veritatis",
+  "status": "public_adversarial_ai_stress_test",
+  "claim": {
+    "text": "Реальные нейронные последовательности (HVC-пение, гиппокампальный replay, кортикальные preparatory-последовательности) генерируются ДЕТЕРМИНИРОВАННОЙ хаотической итинерацией SCO-типа — траектория живёт на strange-аттракторе с малым положительным старшим показателем Ляпунова — а НЕ шум-индуцированными переходами между устойчивыми метастабильными состояниями; поэтому ПОРЯДОК переходов почти детерминирован (задан графом), тогда как ВРЕМЕНА переходов чувствительно зависят от начальных условий.",
+    "frozen_at": "2026-06-08T02:01:21Z",
+    "claim_type": "numeric"
+  },
+  "sides": {
+    "public_names": [
+      "Athos",
+      "Aramis"
+    ],
+    "athos_side": "CON",
+    "side_assignment_seed_hash": "sha256:38ba1ba460574e019659cb5172ed3c291f480e94f47dc87dccbaa0f51b733be9",
+    "model_id_public": "withheld"
+  },
+  "arbiter": {
+    "identity_public": "independent_ai_arbiter",
+    "outside_duel_roster": true,
+    "blind_to_model_identity": true,
+    "order_swap_audit": {
+      "status": "PASS",
+      "waiver_reason": null
+    },
+    "verbosity_confound_warning": true
+  },
+  "outcome": {
+    "enum": "CON",
+    "substantive_verdict": "con",
+    "basis": "real_compute",
+    "confidence": null,
+    "arbitration_status": "STABLE",
+    "protocol_status": "PASS"
+  },
+  "reproducibility": {
+    "bundle_included": true,
+    "compute_manifest": "2026-06-08-neural-chaos-vs-stable-chains.repro/compute_manifest.json",
+    "rerun_status": "not_rerun",
+    "script": "2026-06-08-neural-chaos-vs-stable-chains.repro/2026-06-08_repro.py",
+    "outputs": [
+      "2026-06-08-neural-chaos-vs-stable-chains.repro/2026-06-08_cc_data.json"
+    ]
+  },
+  "publication_gate": {
+    "status": "PASSED",
+    "approved_sidecar_hash": "sha256:b42fc8e1820c61df8005c9a67ddef6bd3c7bad60276edc7ef802af86ccda97fb",
+    "prior_work_check": "not_applicable",
+    "third_party_text_handling": "not_applicable",
+    "errata": []
+  },
+  "d8_handling": {
+    "trigger": "seed_publication=true",
+    "status": "waived_no_source_text_ingested",
+    "waiver_body_hash": "sha256:217a24974907b368eb3b45f5be9a56758215896d510c2ec8a5930de8db1e853c",
+    "public_attestation": "No source PDF/full text was ingested into the duel context; only bibliographic/search-result metadata and abstracts informed topic selection."
+  },
+  "epistemic_status": "scout",
+  "references": [
+    {
+      "ref": "Glaze, C. M., & Troyer, T. W. (2006). Temporal structure in zebra finch song: Implications for motor coding. The Journal of Neuroscience, 26(3), 991-1005.",
+      "url": "https://doi.org/10.1523/jneurosci.3387-05.2006",
+      "role": "supporting"
+    },
+    {
+      "ref": "Hahnloser, R. H. R., Kozhevnikov, A. A., & Fee, M. S. (2002). An ultra-sparse code underlies the generation of neural sequences in a songbird. Nature, 419(6902), 65-70.",
+      "url": "https://doi.org/10.1038/nature00974",
+      "role": "supporting"
+    },
+    {
+      "ref": "Long, M. A., & Fee, M. S. (2008). Using temperature to analyse temporal dynamics in the songbird motor pathway. Nature, 456(7219), 189-194.",
+      "url": "https://doi.org/10.1038/nature07448",
+      "role": "supporting"
+    },
+    {
+      "ref": "Zang, J., & Curto, C. (2026). Sequential chaotic oscillations in excitatory-inhibitory threshold-linear networks (arXiv:2606.00373). arXiv.",
+      "url": "https://arxiv.org/abs/2606.00373",
+      "role": "seed"
+    }
+  ],
+  "seed_publication": true,
+  "not_applicable_reasons": {
+    "third_party_text_handling": "no_external_text_ingested",
+    "prior_work_check": "scout_pilot"
+  },
+  "release_identity": {
+    "duel_id": "dv-0006",
+    "claim_hash": "sha256:6c33046e80a1721094f993f380fcc2d165586cddc5654ace3567982d7d22e96d",
+    "source_session_hash": "sha256:93ecc5377d4b90c6b5c571b1fe1667edae36beecd0f61cb413aba9ca6d5d90d0",
+    "frozen_at": "2026-06-08T02:01:21Z",
+    "compound_hash": "sha256:2839eeed6d5ad3081ed9378d3a0651268cf634ddcf1d7c4ad102c47c9fe18a94"
+  }
+}

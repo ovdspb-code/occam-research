@@ -1,0 +1,59 @@
+{
+  "compute_kind": "real_compute",
+  "script": "2026-06-08_repro.py",
+  "script_sha256": "sha256:d3df08a8985daa0777cb7abc82d4b36c399174184cd4fd6ef68299119bd06c86",
+  "inputs": [],
+  "environment": {
+    "python": "3.12.3",
+    "packages": "numpy 2.4.4",
+    "platform": "linux-x86_64"
+  },
+  "random_seed": "fixed per-routine numpy default_rng seeds (0, 7, 11)",
+  "outputs": [
+    {
+      "path": "2026-06-08_cc_data.json",
+      "sha256": "sha256:c42e47a4cb95a05551f08db93e3e6a32a606c3fdf9530782fe78e886d84e8cb6",
+      "metric": "stable_adaptation_chain.cv_intervals",
+      "value": 0.0801,
+      "tolerance": "+/- 0.005 across seeds"
+    },
+    {
+      "path": "2026-06-08_cc_data.json",
+      "sha256": "sha256:c42e47a4cb95a05551f08db93e3e6a32a606c3fdf9530782fe78e886d84e8cb6",
+      "metric": "stable_adaptation_chain.order_errors",
+      "value": 0,
+      "tolerance": "exact (0 by construction at sigma << tau)"
+    },
+    {
+      "path": "2026-06-08_cc_data.json",
+      "sha256": "sha256:c42e47a4cb95a05551f08db93e3e6a32a606c3fdf9530782fe78e886d84e8cb6",
+      "metric": "jitter_full_song.lambda=5_per_s.jitter_ms",
+      "value": 46.93,
+      "tolerance": "analytic, exact given calibration D=1e-6"
+    },
+    {
+      "path": "2026-06-08_cc_data.json",
+      "sha256": "sha256:c42e47a4cb95a05551f08db93e3e6a32a606c3fdf9530782fe78e886d84e8cb6",
+      "metric": "jitter_transition_window.lambda=10_per_s.jitter_ms",
+      "value": 0.293,
+      "tolerance": "analytic, exact given calibration D=1e-6"
+    },
+    {
+      "path": "2026-06-08_cc_data.json",
+      "sha256": "sha256:c42e47a4cb95a05551f08db93e3e6a32a606c3fdf9530782fe78e886d84e8cb6",
+      "metric": "saddle_exit.var_ln_abs_z",
+      "value": 1.2354,
+      "tolerance": "+/- 0.01 (Monte Carlo, 5e6 draws)"
+    },
+    {
+      "path": "2026-06-08_cc_data.json",
+      "sha256": "sha256:c42e47a4cb95a05551f08db93e3e6a32a606c3fdf9530782fe78e886d84e8cb6",
+      "metric": "lambda_lock.mean=50ms_CV=0.15.lambda_req_per_s",
+      "value": 148.2,
+      "tolerance": "+/- 2 /s (depends on Monte-Carlo std(ln|z|))"
+    }
+  ],
+  "started_at": "2026-06-08T08:31:00Z",
+  "rerun_instruction": "python3 2026-06-08_repro.py  ->  writes 2026-06-08_cc_data.json and prints all headline numbers (requires numpy 2.4.4)",
+  "known_limitations": "All models are synthetic / analytic toys calibrated to textbook zebra-finch HVC values (order stereotypy > 99%, syllable-duration CV ~ 5-15%, sub-ms spike-timing precision over a ~1 s song); NO neural data are touched, so the decisive observable is a proxy, not paper-faithful. The lambda-budget V(T)=D*(exp(2*lambda*T)-1)/(2*lambda) is a 1-D linear-noise model of timing dispersion, not a full E-I threshold-linear network simulation. The saddle-exit variance identity Var(tau)=Var(ln|z|)/lambda^2 holds for the 1-D normal-form exit tau=(1/lambda)ln(a/x0) and may not transfer to a multi-dimensional strange attractor with structured initial-condition geometry. The lambda-lock argument shows the strong (single deterministic strange-attractor, lambda_1>0 as the SOURCE of variability) form is unsupported on the flagship HVC example; it does not test hippocampal replay or cortical preparatory sequences, and direct local-Lyapunov estimates from neural trajectories remain absent."
+}

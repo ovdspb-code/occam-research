@@ -1,0 +1,76 @@
+{
+  "report_id": "dv-no6-neural-chaos-2026-06-08",
+  "outcome_classification": "CON",
+  "accepted_facts": [
+    "A stable 5-link adaptation-clocked chain with Gaussian timing noise reproduces the songbird phenomenology -- duration CV = 0.080 with 0 order errors -- inside the observed 5-15% band, with no positive Lyapunov exponent.",
+    "The CV ~ 1 figure PRO attributed to the noise account comes only from an independent-Poisson-escape caricature (CV = 0.998); the adaptation-clock noise account gives CV ~ 0.08, so CV does not discriminate the hypotheses.",
+    "With the timing-noise budget calibrated so lambda=0 gives 1 ms end-of-song jitter, a positive exponent amplifies it to 3.7 ms (lambda=2/s) and 46.9 ms (lambda=5/s); observed HVC precision is sub-millisecond and cooling slows the song uniformly, the contraction signature of lambda_1 <= 0.",
+    "In PRO's own saddle-exit model the exit-time variance is Var(tau)=Var(ln|z|)/lambda^2 (Var(ln|z|)=1.235), independent of the noise scale, and vanishes as the initial-condition noise eps->0 at any lambda -- the dispersion is log-compressed noise, not an attractor signature.",
+    "Mean and CV jointly fix lambda = std(ln|z|)/(CV*mean): a 50 ms interval at CV 0.15 forces lambda ~ 148/s with per-window amplification ~1.6e3, which would destroy the sub-millisecond precision PRO conceded."
+  ],
+  "rejected_or_quarantined_evidence": [
+    "The independent-Poisson-escape CV ~ 1 result is not admitted as a discriminator between the hypotheses: it refutes a straw-man noise model, not the adaptation-clock account actually in play.",
+    "Any reading of the saddle-exit dispersion as an attractor-geometry fingerprint is rejected: the closed-form decomposition shows it is initial-condition noise, scale-set by eps, not by chaos."
+  ],
+  "argument_quality": "CON held the falsifier frame the two sides agreed on, reproduced the phenomenology with a stable chain, and closed each PRO retreat -- localising the chaos to 50 ms windows (where even lambda=10/s adds 0.29 ms) and then to a saddle-exit geometry -- with a clean closed-form identity. PRO conceded cleanly and named the breaking point: the thesis needed lambda_1 as the SOURCE of variability but it is only an amplifier.",
+  "protocol_conduct": "Twelve alternating moves, clean arbiter verdict; the decisive test was pre-registered before compute and is schema-valid; real deterministic numpy compute with fixed seeds; order-swap audit PASS (substantive call 'con' on both the natural and swapped runs). A verbosity-confound warning is flagged.",
+  "evidence_quality": "Real, deterministic, rerunnable compute, but on synthetic/analytic toy models calibrated to zebra-finch HVC literature values, not neural data; the decisive observable is a proxy (paper_faithful=false). It establishes that deterministic chaos is NOT necessary to reproduce the songbird numbers and that the strong source-of-variability form is unsupported on the flagship example; it cannot establish the local Lyapunov sign of any real neural trajectory.",
+  "what_it_supports": [
+    {
+      "statement": "A stable adaptation-clocked chain (lambda_1 <= 0) plus noise reproduces rigid order and variable low-CV durations at once (CV 0.080, 0 order errors).",
+      "claim_id": "C6",
+      "evidence_id": "E6"
+    },
+    {
+      "statement": "Sub-millisecond HVC timing precision is consistent with contracting (lambda_1 <= 0) dynamics and inconsistent with a chaotic source, which would smear timing to tens of ms.",
+      "claim_id": "C3",
+      "evidence_id": "E3"
+    },
+    {
+      "statement": "In the saddle-exit model the timing dispersion is exactly Var(ln|z|)/lambda^2 -- log-compressed initial-condition noise, not attractor geometry.",
+      "claim_id": "C4",
+      "evidence_id": "E4"
+    },
+    {
+      "statement": "A realistic mean and CV force a Lyapunov exponent whose amplification destroys the conceded sub-millisecond precision; the two falsifier arms cannot both be satisfied.",
+      "claim_id": "C5",
+      "evidence_id": "E5"
+    }
+  ],
+  "what_it_does_not_support": [
+    {
+      "statement": "That real neural trajectories have a non-positive local Lyapunov exponent everywhere -- no direct estimate from neural data was made; the test is synthetic and analytic.",
+      "claim_id": "C7",
+      "evidence_id": "E7"
+    },
+    {
+      "statement": "That the 'rigid order, variable timing' phenomenology by itself discriminates the chaotic from the stable-chain hypothesis.",
+      "claim_id": "C1",
+      "evidence_id": "E1"
+    },
+    {
+      "statement": "That the seed paper is refuted: it proves SCO exist in abstract E-I threshold-linear networks; only the strong biological transfer is unsupported.",
+      "claim_id": "C2",
+      "evidence_id": "E2"
+    }
+  ],
+  "what_remains_open": [
+    "Direct local-Lyapunov estimation from neural state trajectories, which neither side performed -- the key empirical gap.",
+    "A likelihood/surrogate comparison of an SCO model against an adaptation chain on large neural datasets.",
+    "Whether hippocampal replay or cortical preparatory sequences, untouched here, behave like the songbird flagship."
+  ],
+  "permitted_wording": [
+    "On synthetic models calibrated to HVC literature, a stable adaptation chain reproduces the rigid-order / variable-timing phenomenology without a positive Lyapunov exponent.",
+    "Sub-millisecond timing precision bounds the leading Lyapunov exponent at or below zero on the flagship example, so chaos is an amplifier of noise, not its source.",
+    "CON prevailed on argumentation and, on the available flagship evidence, the strong chaotic-itinerancy thesis is not supported -- a scouting result, not a settled fact."
+  ],
+  "forbidden_wording": [
+    "Do not say this proves the claim that the brain is or is not chaotic: the test is synthetic/analytic, not a measurement on neural data (доказывает тезис).",
+    "Do not say this establishes the claim about real neural sequences on real data (устанавливает истинность тезиса).",
+    "Do not say this confirms the claim that lambda_1 <= 0 in any real circuit (подтверждает истинность тезиса).",
+    "Do not say this settles the question of deterministic chaos vs noise-driven sequencing in the brain (окончательно решает вопрос).",
+    "Do not say this definitively shows the seed paper is wrong: it proves SCO exist in abstract networks; only the strong biological transfer is unsupported (неопровержимо показывает).",
+    "Do not write 'an AI proved' or 'model X beat model Y'; the sides are public roles and engine identities are withheld."
+  ],
+  "confidence_and_limitations": "Moderate confidence within a narrow synthetic scope: the three pre-registered signatures are cleanly realised -- a stable chain matching the phenomenology, a calibrated jitter budget that makes a chaotic source smear timing by tens of ms against sub-ms data, and a closed-form saddle-exit decomposition plus a mean/CV lambda-lock -- and the order-swap audit is stable with a substantive call of 'con' on both runs. Out of scope: no neural data, no direct local-Lyapunov estimate, only the songbird flagship; the decisive observable is a proxy on synthetic/analytic toy models. Genre: scout -- an in-principle necessity probe, not a scientific_result."
+}

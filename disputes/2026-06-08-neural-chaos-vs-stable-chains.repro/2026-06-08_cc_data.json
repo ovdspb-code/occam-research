@@ -1,0 +1,127 @@
+{
+  "_about": "Duellum Veritatis No.6 reproducible compute. Synthetic/analytic toy models calibrated to zebra-finch HVC literature values; probes in-principle sufficiency/necessity, NOT neural-data measurement. paper_faithful=false.",
+  "stable_adaptation_chain": {
+    "K_links": 5,
+    "mean_interval_ms": 150.02716008433922,
+    "sigma_ms": 12.0,
+    "n_trials": 8000,
+    "cv_intervals": 0.08013433205307288,
+    "order_errors": 0
+  },
+  "poisson_escape": {
+    "cv_poisson_escape": 0.9984181064876029
+  },
+  "jitter_full_song": {
+    "window_s": 1.0,
+    "label": "full song ~1 s",
+    "calibration_D": 1e-06,
+    "rows": [
+      {
+        "lambda_per_s": 0.0,
+        "jitter_ms": 1.0
+      },
+      {
+        "lambda_per_s": 0.5,
+        "jitter_ms": 1.310832494432086
+      },
+      {
+        "lambda_per_s": 1.0,
+        "jitter_ms": 1.7873242709327608
+      },
+      {
+        "lambda_per_s": 2.0,
+        "jitter_ms": 3.6605378714454053
+      },
+      {
+        "lambda_per_s": 5.0,
+        "jitter_ms": 46.93129637545368
+      },
+      {
+        "lambda_per_s": 10.0,
+        "jitter_ms": 4925.267477050308
+      }
+    ]
+  },
+  "jitter_transition_window": {
+    "window_s": 0.05,
+    "label": "single transition ~50 ms",
+    "calibration_D": 1e-06,
+    "rows": [
+      {
+        "lambda_per_s": 0.0,
+        "jitter_ms": 0.22360679774997896
+      },
+      {
+        "lambda_per_s": 0.5,
+        "jitter_ms": 0.2264312177594426
+      },
+      {
+        "lambda_per_s": 1.0,
+        "jitter_ms": 0.22931519582841398
+      },
+      {
+        "lambda_per_s": 2.0,
+        "jitter_ms": 0.23526727256472044
+      },
+      {
+        "lambda_per_s": 5.0,
+        "jitter_ms": 0.25470007277190326
+      },
+      {
+        "lambda_per_s": 10.0,
+        "jitter_ms": 0.2931110564665759
+      }
+    ]
+  },
+  "saddle_exit": {
+    "var_ln_abs_z": 1.2354281567913388,
+    "std_ln_abs_z": 1.111498158699032,
+    "lambda_for_eps_sweep": 5.0,
+    "separatrix_a": 0.1,
+    "eps_rows": [
+      {
+        "eps": 0.01,
+        "mean_ms": 586.9356289758954,
+        "std_ms": 222.1945365770241
+      },
+      {
+        "eps": 0.0001,
+        "mean_ms": 1508.796451163653,
+        "std_ms": 222.2185045274494
+      },
+      {
+        "eps": 1e-08,
+        "mean_ms": 3350.6057155677904,
+        "std_ms": 222.12074661280158
+      },
+      {
+        "eps": 0.0,
+        "mean_ms": 921.0340371976183,
+        "std_ms": 1.1102230246251565e-13
+      }
+    ]
+  },
+  "lambda_lock": [
+    {
+      "mean_ms": 50,
+      "cv": 0.15,
+      "lambda_req_per_s": 148.19975449320427,
+      "amplification_over_window": 1652.4060628941,
+      "implied_jitter_ms": 7.5
+    },
+    {
+      "mean_ms": 150,
+      "cv": 0.15,
+      "lambda_req_per_s": 49.39991816440143,
+      "amplification_over_window": 1652.4060628941,
+      "implied_jitter_ms": 22.5
+    },
+    {
+      "mean_ms": 50,
+      "cv": 0.1,
+      "lambda_req_per_s": 222.29963173980636,
+      "amplification_over_window": 67169.97237496,
+      "implied_jitter_ms": 5.000000000000001
+    }
+  ]
+}

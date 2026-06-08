@@ -1,9 +1,48 @@
 {
-  "updated": "2026-06-07",
+  "updated": "2026-06-08",
   "series": "Duellum Veritatis",
   "subtitle": "Adversarial science digests — a thesis defended and attacked to a verdict, every claim backed by computation.",
   "doi": "10.5281/zenodo.20528909",
   "disputes": [
+    {
+      "id": "2026-06-08-neural-chaos-vs-stable-chains",
+      "no": 6,
+      "title": "The Song and the Strange Attractor",
+      "subtitle": "Can a stereotyped neural sequence be the signature of deterministic chaos with a positive Lyapunov exponent -- or does a stable, noise-driven adaptation chain reproduce the same phenomenology while the timing precision forbids the chaotic source?",
+      "date": "2026-06-08",
+      "verdict": "CON prevailed and was right on the merits: on synthetic models calibrated to zebra-finch HVC, a stable adaptation-clocked chain reproduces rigid order and low-CV variable timing (CV 0.080, 0 errors) with no positive Lyapunov exponent, while sub-millisecond timing precision plus the saddle-exit identity Var(tau)=Var(ln|z|)/lambda^2 and a mean/CV lambda-lock show a positive exponent would be an amplifier of noise, not its source. The strong chaotic-itinerancy thesis is unsupported on the flagship example; the seed paper's existence result is untouched.",
+      "tags": [
+        "chaotic-itinerancy",
+        "lyapunov-exponent",
+        "birdsong-HVC",
+        "neural-sequences",
+        "adaptation-chain",
+        "neuroscience"
+      ],
+      "html": "disputes/2026-06-08-neural-chaos-vs-stable-chains.html",
+      "pdf": "disputes/2026-06-08-neural-chaos-vs-stable-chains.pdf",
+      "doi": "10.5281/zenodo.20528909",
+      "outcome": "CON",
+      "basis": "real_compute",
+      "claim_type": "numeric",
+      "arbitration_status": "STABLE",
+      "protocol_status": "PASS",
+      "prior_work_check": "not_applicable",
+      "release_identity": {
+        "duel_id": "dv-0006",
+        "claim_hash": "sha256:6c33046e80a1721094f993f380fcc2d165586cddc5654ace3567982d7d22e96d",
+        "source_session_hash": "sha256:93ecc5377d4b90c6b5c571b1fe1667edae36beecd0f61cb413aba9ca6d5d90d0",
+        "frozen_at": "2026-06-08T02:01:21Z",
+        "compound_hash": "sha256:2839eeed6d5ad3081ed9378d3a0651268cf634ddcf1d7c4ad102c47c9fe18a94"
+      },
+      "metadata": "disputes/2026-06-08-neural-chaos-vs-stable-chains.metadata.json",
+      "methodology": {
+        "claim_evidence_matrix": "disputes/2026-06-08-neural-chaos-vs-stable-chains.claim_evidence_matrix.json",
+        "arbiter_report": "disputes/2026-06-08-neural-chaos-vs-stable-chains.arbiter_report.json",
+        "evidence_task": "disputes/2026-06-08-neural-chaos-vs-stable-chains.evidence_task.json",
+        "order_swap_audit": "disputes/2026-06-08-neural-chaos-vs-stable-chains.order_swap_audit.json"
+      }
+    },
     {
       "id": "2026-06-07-two-roads-to-one-number",
       "no": 5,

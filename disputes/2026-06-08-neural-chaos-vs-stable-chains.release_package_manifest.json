@@ -1,0 +1,57 @@
+{
+  "duel_id": "dv-0006",
+  "generated_at": "2026-06-08T00:00:00Z",
+  "package_status": "checked",
+  "files": [
+    {
+      "path": "2026-06-08-neural-chaos-vs-stable-chains.arbiter_report.json",
+      "sha256": "sha256:6aee83e2e4b31b04162578e7c89d5a21b37d502fd7bdd39b3fe1a5381741afe9",
+      "public": true
+    },
+    {
+      "path": "2026-06-08-neural-chaos-vs-stable-chains.claim_evidence_matrix.json",
+      "sha256": "sha256:da94b4632b1e3e4d82ad8e45d84ae6635752ef15202f87fe8811bf46226687ec",
+      "public": true
+    },
+    {
+      "path": "2026-06-08-neural-chaos-vs-stable-chains.evidence_task.json",
+      "sha256": "sha256:053eb14844fed89424fd6730d362d76b12a551a29fff2975eb82579c89f22ed3",
+      "public": true
+    },
+    {
+      "path": "2026-06-08-neural-chaos-vs-stable-chains.html",
+      "sha256": "sha256:01ec6985b075343ee5af833682fa05fdc4c86f37076e914a09e97aea54d3df31",
+      "public": true
+    },
+    {
+      "path": "2026-06-08-neural-chaos-vs-stable-chains.metadata.json",
+      "sha256": "sha256:e4aeee485e4d75ac90b86e588388d83c7869d94872e4aa79057d7d4e67b7f684",
+      "public": true
+    },
+    {
+      "path": "2026-06-08-neural-chaos-vs-stable-chains.order_swap_audit.json",
+      "sha256": "sha256:d53f665bbc1c2444249cb3cb47793c3fd876c726a02053b81a1ac698f14d8b3e",
+      "public": true
+    },
+    {
+      "path": "2026-06-08-neural-chaos-vs-stable-chains.pdf",
+      "sha256": "sha256:61b15e82545eb4cc67c10ab8dfee589fc82308a167606f756619d62452f1a0ca",
+      "public": true
+    },
+    {
+      "path": "2026-06-08-neural-chaos-vs-stable-chains.repro/2026-06-08_cc_data.json",
+      "sha256": "sha256:c42e47a4cb95a05551f08db93e3e6a32a606c3fdf9530782fe78e886d84e8cb6",
+      "public": true
+    },
+    {
+      "path": "2026-06-08-neural-chaos-vs-stable-chains.repro/2026-06-08_repro.py",
+      "sha256": "sha256:d3df08a8985daa0777cb7abc82d4b36c399174184cd4fd6ef68299119bd06c86",
+      "public": true
+    },
+    {
+      "path": "2026-06-08-neural-chaos-vs-stable-chains.repro/compute_manifest.json",
+      "sha256": "sha256:6ccf9397a48432e687f645f4012da4246c04540164422514a4c057515f0851c6",
+      "public": true
+    }
+  ]
+}
