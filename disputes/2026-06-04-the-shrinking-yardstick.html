@@ -3,89 +3,156 @@
 <head>
 <meta charset="utf-8">
 <style>
-  @page { size: A4; margin: 13mm 0 12mm 0; }
+  @page { size: A4; margin: 14mm 0 13mm 0; }
   * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   html,body { margin:0; padding:0; }
-  body {
-    font-family: "Georgia","Times New Roman",serif;
-    color:#f3efe4; background:#222d49;
-    font-size:10.5pt; line-height:1.49;
-    padding:0 18mm;
-    background-image:
-      radial-gradient(1100px 480px at 72% -8%, rgba(120,145,205,0.26), transparent 60%),
-      radial-gradient(900px 600px at -8% 108%, rgba(170,135,70,0.18), transparent 55%);
+
+  :root{
+    --paper:#f7f3e8; --ink:#241b0d; --ink-soft:#6a5c43;
+    --ox:#7a1717; --ox-br:#8f2020; --sepia:#bcae8b; --sepia-d:#9c8a5e;
+    --blue:#243c66; --terra:#9c4a22; --tint:#ede4cd; --chart:#fbf7ec;
   }
-  .page { }
-  h1 { font-size:25pt; line-height:1.08; margin:0 0 4px 0; color:#fbf6e8;
-       letter-spacing:0.3px; font-weight:700; }
-  h2 { font-size:13.5pt; margin:15px 0 6px 0; color:#f0c469;
-       border-bottom:1px solid rgba(240,196,105,0.42); padding-bottom:4px; font-weight:700; }
-  h3 { font-size:11pt; margin:13px 0 3px 0; color:#dde5f5; font-weight:700; }
-  p { margin:0 0 7px 0; text-align:justify; }
-  .kicker { color:#a9b8d8; font-size:9pt; letter-spacing:2.4px; text-transform:uppercase; margin:0 0 8px 0; }
-  .lede { font-size:11.6pt; color:#e3e8f3; font-style:italic; line-height:1.5; margin:6px 0 4px 0; }
-  .rule { height:1px; background:linear-gradient(90deg,transparent,rgba(240,196,105,0.7),transparent); margin:12px 0; }
-  .term { color:#f0c469; font-style:normal; font-weight:700; }
-  .gloss { display:block; background:rgba(160,180,220,0.14); border-left:3px solid #a9b8d8;
-           padding:7px 11px; margin:8px 0; font-size:9.4pt; color:#dfe5f2; line-height:1.44; }
-  .gloss b { color:#fbf6e8; }
-  .duel { display:flex; gap:12px; margin:10px 0; }
-  .card { flex:1; border:1px solid rgba(240,196,105,0.34); border-radius:6px; padding:10px 12px;
-          background:rgba(15,21,38,0.5); }
-  .card .who { font-size:9pt; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:4px; }
-  .pro .who { color:#8ec2f2; }
-  .con .who { color:#f2a07e; }
-  .card .stance { font-size:9.6pt; color:#e3e8f3; line-height:1.42; }
-  figure { margin:14px 0 8px 0; text-align:center; }
-  figcaption { font-size:8.8pt; color:#b3bdd4; margin-top:5px; font-style:italic; line-height:1.35; }
-  .chartbox { background:rgba(11,16,30,0.72); border:1px solid rgba(160,180,220,0.3);
-              border-radius:8px; padding:10px 8px 4px 8px; }
-  blockquote { margin:10px 0; padding:8px 14px; border-left:3px solid #f0c469;
-               background:rgba(240,196,105,0.1); font-style:italic; color:#fbf6e8; }
-  .disclaimer { border:1px solid rgba(240,196,105,0.45); border-radius:8px;
-                background:rgba(240,196,105,0.07); padding:11px 15px; margin:14px 0 4px 0;
-                font-size:9pt; line-height:1.5; color:#e7e0cf; }
-  .disclaimer p { margin:0 0 7px 0; }
-  .disclaimer p:last-child { margin-bottom:0; }
-  .disclaimer .retro { color:#a9b8d8; font-size:8.6pt; }
-  .verdict { border:1px solid rgba(240,196,105,0.6); border-radius:8px; padding:12px 16px;
-             background:linear-gradient(180deg, rgba(240,196,105,0.16), rgba(240,196,105,0.05)); margin:12px 0; }
-  .verdict .win { color:#f0c469; font-weight:700; font-size:12pt; }
-  .foot { margin-top:9px; padding-top:8px; border-top:1px solid rgba(160,180,220,0.28);
-          color:#9aa6c4; font-size:8.4pt; }
-  .meta { border:1px solid rgba(160,180,220,0.32); border-radius:7px; padding:8px 13px;
-          background:rgba(15,21,38,0.42); margin:10px 0 4px 0; font-size:9pt; line-height:1.5; }
-  .meta .row { display:flex; gap:8px; padding:1.5px 0; }
-  .meta .k { color:#a9b8d8; min-width:104px; flex:0 0 104px; text-transform:uppercase;
-             letter-spacing:0.6px; font-size:8.2pt; padding-top:1px; }
-  .meta .v { color:#eef2fa; }
-  .appendix { border-top:1px solid rgba(160,180,220,0.28); margin-top:14px; padding-top:8px; }
-  .appendix h3 { color:#f0c469; margin:0 0 5px 0; font-size:10pt; letter-spacing:0.4px; }
-  .appendix .ap { font-size:8.7pt; color:#c7cfe0; line-height:1.46; margin:0 0 4px 0; }
-  .appendix .ap b { color:#eef2fa; }
-  .ornament { text-align:center; margin:6px 0 2px 0; }
-  svg { display:block; }
-  .bars text { font-family:"Georgia",serif; }
+
+  body {
+    font-family:"EB Garamond 12","Georgia",serif;
+    color:var(--ink); background-color:var(--paper);
+    font-size:11.4pt; line-height:1.52;
+    padding:0 19mm;
+    font-feature-settings:"onum" 1,"liga" 1,"kern" 1;
+    /* aged, unevenly toned paper: brown grain + scattered foxing + edge vignette */
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.33 0 0 0 0 0.17 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+      radial-gradient(160px 120px at 16% 20%, rgba(150,120,68,0.07), transparent 70%),
+      radial-gradient(210px 150px at 84% 32%, rgba(150,120,68,0.06), transparent 70%),
+      radial-gradient(150px 130px at 62% 74%, rgba(140,108,58,0.055), transparent 72%),
+      radial-gradient(230px 180px at 28% 90%, rgba(150,120,68,0.05), transparent 72%),
+      radial-gradient(130px 110px at 90% 84%, rgba(140,108,58,0.05), transparent 70%),
+      radial-gradient(1500px 1000px at 50% 46%, transparent 58%, rgba(86,66,36,0.07) 100%);
+    background-repeat:repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+  }
+  .page{ counter-reset: sec; }
+
+  /* running head + folio */
+  .runhead{ text-align:center; font-family:"EB Garamond SC","EB Garamond 12",serif;
+            font-variant:small-caps; letter-spacing:3px; font-size:8.4pt;
+            color:var(--ox); margin:0 0 2px 0; }
+  .folio{ text-align:center; color:var(--ink-soft); font-size:9pt; margin-top:10px;
+          font-style:italic; }
+  .folio .sep{ color:var(--sepia-d); margin:0 7px; }
+
+  h1{ font-family:"EB Garamond 12","Georgia",serif; font-size:30pt; line-height:1.05;
+      margin:2px 0 6px 0; color:#120b03; font-weight:700; text-align:center;
+      letter-spacing:0.2px; }
+  h1 .em{ color:var(--ox); font-style:italic; font-weight:500; }
+
+  h2{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+      font-size:14pt; letter-spacing:1.2px; margin:20px 0 7px 0; color:var(--ox);
+      font-weight:600; padding-bottom:5px;
+      border-bottom:1px solid var(--sepia); }
+  h2::before{ counter-increment:sec; content:counter(sec,decimal-leading-zero);
+      font-family:"EB Garamond SC",serif; font-size:9.5pt; color:var(--ox-br);
+      letter-spacing:1px; margin-right:11px; vertical-align:1.5px;
+      border-bottom:none; }
+
+  h3{ font-family:"EB Garamond 12","Georgia",serif; font-size:12pt; font-style:italic;
+      margin:14px 0 3px 0; color:#3a2c1b; font-weight:600; }
+
+  p{ margin:0 0 8px 0; text-align:justify; hyphens:auto; }
+
+  .kicker{ text-align:center; color:var(--ink-soft); font-size:9pt; letter-spacing:3.4px;
+           text-transform:uppercase; margin:8px 0 6px 0;
+           font-family:"EB Garamond SC","EB Garamond 12",serif; }
+
+  .lede{ font-size:12.6pt; color:#3a2c1b; font-style:italic; line-height:1.5;
+         margin:8px 4mm 6px 4mm; text-align:center; }
+
+  /* drop cap on the first body paragraph */
+  .drop::first-letter{ font-family:"EB Garamond Initials","EB Garamond 12",serif;
+      float:left; font-size:52pt; line-height:0.82; padding:4px 8px 0 0;
+      color:var(--ox); font-weight:600; }
+
+  .rule{ height:0; border:none; text-align:center; margin:14px 0; color:var(--ox); }
+  .rule::before{ content:"\2766"; font-size:13pt; color:var(--ox);
+      display:inline-block; }
+  .rule.line{ border-top:1px solid var(--sepia); margin:13px 0; }
+  .rule.line::before{ content:""; }
+
+  .term{ color:var(--ox); font-style:italic; }
+
+  .gloss{ display:block; background:var(--tint); border-left:3px solid var(--ox);
+          padding:8px 13px; margin:9px 0; font-size:10.2pt; color:#3b2e1d;
+          line-height:1.46; }
+  .gloss b{ color:var(--ox); font-weight:600; }
+
+  .duel{ display:flex; gap:13px; margin:11px 0; }
+  .card{ flex:1; border:1px solid var(--sepia); padding:11px 13px; background:#fbf5e6; }
+  .card .who{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+              font-size:10pt; letter-spacing:1.2px; margin-bottom:4px; font-weight:600; }
+  .pro .who{ color:var(--blue); }
+  .con .who{ color:var(--terra); }
+  .pro{ border-top:2.5px solid var(--blue); }
+  .con{ border-top:2.5px solid var(--terra); }
+  .card .stance{ font-size:10.4pt; color:#34281a; line-height:1.45; }
+
+  figure{ margin:15px 0 9px 0; text-align:center; }
+  figcaption{ font-size:9.2pt; color:var(--ink-soft); margin-top:6px; font-style:italic;
+              line-height:1.4; padding:0 6mm; }
+  .chartbox{ background:var(--chart); border:1px solid var(--sepia);
+             padding:11px 9px 5px 9px; }
+
+  blockquote{ margin:11px 6mm; padding:6px 16px; border-left:3px solid var(--ox);
+              font-style:italic; color:#3a2c1b; font-size:11.6pt; }
+
+  .disclaimer{ border:1px solid var(--sepia); border-radius:0;
+               background:var(--tint); padding:11px 15px; margin:14px 0 4px 0;
+               font-size:9pt; line-height:1.5; color:#3b2e1d; }
+  .disclaimer p{ margin:0 0 7px 0; }
+  .disclaimer p:last-child{ margin-bottom:0; }
+  .disclaimer .retro{ color:var(--ink-soft); font-size:8.6pt; }
+
+  .verdict{ border-top:2px solid var(--ox); border-bottom:2px solid var(--ox);
+            padding:12px 16px; margin:14px 0; background:#fbf3e0; }
+  .verdict .win{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+                 color:var(--ox); font-weight:600; font-size:13pt; letter-spacing:0.8px; }
+
+  .meta{ border:1px solid var(--sepia); padding:9px 14px; background:#fbf5e6;
+         margin:11px 0 6px 0; font-size:10pt; line-height:1.5; }
+  .meta .row{ display:flex; gap:10px; padding:2px 0; }
+  .meta .k{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+            color:var(--ox); min-width:118px; flex:0 0 118px; letter-spacing:0.5px;
+            font-size:9.6pt; }
+  .meta .v{ color:var(--ink); }
+
+  .appendix{ border-top:1px solid var(--sepia); margin-top:15px; padding-top:9px; }
+  .appendix h3{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+                color:var(--ox); margin:0 0 6px 0; font-size:11pt; font-style:normal;
+                letter-spacing:0.6px; }
+  .appendix .ap{ font-size:9.4pt; color:#473722; line-height:1.48; margin:0 0 5px 0; }
+  .appendix .ap b{ color:var(--ox); }
+
+  .ornament{ text-align:center; margin:8px 0 2px 0; color:var(--ox); }
+  .ornament .fleuron{ font-size:17pt; color:var(--ox); letter-spacing:6px; }
+
+  .foot{ margin-top:11px; padding-top:9px; border-top:1px solid var(--sepia);
+         color:var(--ink-soft); font-size:9pt; line-height:1.46; font-style:italic; }
+  svg{ display:block; }
+  .bars text{ font-family:"EB Garamond 12","Georgia",serif; }
 </style>
 </head>
 <body>
 <div class="page">
 
-<div class="ornament">
-<svg width="180" height="26" viewBox="0 0 180 26">
-  <g stroke="#d9b25b" stroke-width="1.4" fill="none" opacity="0.9">
-    <line x1="20" y1="6" x2="86" y2="20"/>
-    <line x1="160" y1="6" x2="94" y2="20"/>
-    <circle cx="20" cy="6" r="2.4" fill="#f0c469"/>
-    <circle cx="160" cy="6" r="2.4" fill="#f0c469"/>
-  </g>
-  <circle cx="90" cy="13" r="3" fill="#f0c469"/>
-</svg>
-</div>
+<p class="runhead">Duellum Veritatis &middot; nightly duel</p>
+<div class="ornament"><span class="fleuron">&#10086;&#10087;&#10086;</span></div>
 
 <p class="kicker">A nocturnal duel · science explainer</p>
-<h1>The Yardstick That Shrank</h1>
+<h1>The Yardstick <span class="em">That Shrank</span></h1>
 <p class="lede">A popular shortcut for comparing how minds organize the world seemed to be cheating — declaring too-simple theories "complete." But was the method lying, or was the measuring stick quietly shrinking along with the data?</p>
+
+<figure style="margin:18px 0 12px 0;">
+  <img src="art/no4-cover.jpg" alt="An antique yardstick and calipers shrinking against a scattered point cloud, sepia engraving" style="width:100%; max-width:680px; border:1px solid var(--sepia); box-shadow:0 1px 0 #fff inset, 0 2px 8px rgba(60,44,20,.12);" />
+  <figcaption>The yardstick dwindles as it measures: when the ruler shrinks along with the data, a too-simple theory can be declared "complete."</figcaption>
+</figure>
 
 <div class="disclaimer" role="note">
   <p><b>Статус:</b> публичный состязательный AI stress-test. Это не peer review, не научное доказательство и не подтверждение тезиса. Две AI-стороны спорили о заранее зафиксированном утверждении по фиксированному протоколу; независимый AI-арбитр вынес структурный вердикт. Для числовых утверждений опубликованные числа происходят только из приложенного воспроизводимого compute bundle. Публикация означает, что выпуск прошёл release gate; она не повышает статус утверждения до открытия.</p>
@@ -103,7 +170,7 @@
 
 <div class="rule"></div>
 
-<p>Suppose you want to know whether a brain, a behavior, or an AI model organizes a set of images the same way you think it does. You can't open the head and read it off. So you do something indirect: for every pair of images you ask "how alike does this system treat them?" and lay the answers out in a grid. That grid — a <span class="term">similarity matrix</span> — is the system's fingerprint. Compare two fingerprints and you compare two minds.</p>
+<p class="drop">Suppose you want to know whether a brain, a behavior, or an AI model organizes a set of images the same way you think it does. You can't open the head and read it off. So you do something indirect: for every pair of images you ask "how alike does this system treat them?" and lay the answers out in a grid. That grid — a <span class="term">similarity matrix</span> — is the system's fingerprint. Compare two fingerprints and you compare two minds.</p>
 
 <span class="gloss"><b>The toolkit in one breath.</b> A <span class="term">representation</span> is the internal arrangement of items inside a system. Its <span class="term">similarity matrix</span> records, for each pair of items, how close together the system places them. Comparing matrices is how neuroscientists put brains, behavior and AI on the same footing — the trade this duel was drawn from.</span>
 
@@ -115,10 +182,12 @@
 
 <div class="duel">
   <div class="card pro">
+    <img src="art/athos.jpg" alt="Athos, engraved portrait" style="display:block; width:96px; height:96px; margin:2px auto 9px auto; border:1px solid var(--sepia); border-radius:2px;" />
     <div class="who">Thesis · Athos</div>
     <div class="stance">The power is <b>bought, not free</b>. Squeezing a rich, high-dimensional representation into a few dimensions throws away exactly the structure on which a too-simple theory <i>ought</i> to fail. So the method declares incomplete theories "complete" more often. Not merely lost power — <b>inflated false confirmations</b>.</div>
   </div>
   <div class="card con">
+    <img src="art/aramis.jpg" alt="Aramis, engraved portrait" style="display:block; width:96px; height:96px; margin:2px auto 9px auto; border:1px solid var(--sepia); border-radius:2px;" />
     <div class="who">Counter · Aramis</div>
     <div class="stance">If the method ever says "yes" wrongly, it is because the analyst measured the <i>bar</i> in the compressed space too. The method itself does not inflate anything — a <b>carelessly shrunk yardstick</b> does. Measure the ceiling honestly and the false "yes" disappears.</div>
   </div>
@@ -133,7 +202,7 @@
 
 <p>Both agreed on the only honest way to settle it: build worlds with a <b>known</b> answer. Make data whose candidate theory is deliberately <i>incomplete</i> — it knows five dimensions, but the data carry more — and count how often each method wrongly blesses the theory as complete.</p>
 
-<div class="rule"></div>
+<div class="rule line"></div>
 
 <h2>The duel: not rhetoric, but arithmetic</h2>
 <p>Every blow landed as a simulation, not a sentence. And the opening exchanges cleared away two tempting mistakes before the real fault line appeared.</p>
@@ -156,16 +225,16 @@
 <div class="chartbox">
 <svg class="bars" width="640" height="336" viewBox="0 0 640 336">
   <!-- axes -->
-  <line x1="70" y1="22" x2="70" y2="250" stroke="#586079" stroke-width="1"/>
-  <line x1="70" y1="250" x2="608" y2="250" stroke="#586079" stroke-width="1"/>
+  <line x1="70" y1="22" x2="70" y2="250" stroke="#9c8a5e" stroke-width="1"/>
+  <line x1="70" y1="250" x2="608" y2="250" stroke="#9c8a5e" stroke-width="1"/>
   <!-- y gridlines + ticks: 0,25,50,75,100 at y 250,195,140,85,30 -->
-  <g stroke="#2b3550" stroke-width="0.8" stroke-dasharray="3,3">
+  <g stroke="#d8c9a3" stroke-width="0.8" stroke-dasharray="3,3">
     <line x1="70" y1="30" x2="608" y2="30"/>
     <line x1="70" y1="85" x2="608" y2="85"/>
     <line x1="70" y1="140" x2="608" y2="140"/>
     <line x1="70" y1="195" x2="608" y2="195"/>
   </g>
-  <g fill="#9aa6c0" font-size="9" text-anchor="end">
+  <g fill="#6b5d45" font-size="9" text-anchor="end">
     <text x="64" y="33">100</text>
     <text x="64" y="88">75</text>
     <text x="64" y="143">50</text>
@@ -173,53 +242,53 @@
     <text x="64" y="253">0</text>
   </g>
   <!-- region divider: rank=5 (complete) vs rank>5 (any yes is false) -->
-  <line x1="136" y1="22" x2="136" y2="250" stroke="#7f8aa8" stroke-width="0.9" stroke-dasharray="4,3"/>
-  <text x="103" y="17" fill="#a9b8d8" font-size="8" text-anchor="middle">rank = 5</text>
-  <text x="103" y="27" fill="#8aa0c0" font-size="7.6" text-anchor="middle">(complete)</text>
-  <text x="372" y="17" fill="#f0c469" font-size="8.4" text-anchor="middle">true rank &gt; 5 &nbsp;·&nbsp; here any &ldquo;yes&rdquo; is a FALSE confirmation</text>
+  <line x1="136" y1="22" x2="136" y2="250" stroke="#9c8a5e" stroke-width="0.9" stroke-dasharray="4,3"/>
+  <text x="103" y="17" fill="#6b5d45" font-size="8" text-anchor="middle">rank = 5</text>
+  <text x="103" y="27" fill="#6b5d45" font-size="7.6" text-anchor="middle">(complete)</text>
+  <text x="372" y="17" fill="#7a1717" font-size="8.4" text-anchor="middle">true rank &gt; 5 &nbsp;·&nbsp; here any &ldquo;yes&rdquo; is a FALSE confirmation</text>
   <!-- x ticks at 70,202.5,335,467.5,600 -->
-  <g fill="#9aa6c0" font-size="9" text-anchor="middle">
+  <g fill="#6b5d45" font-size="9" text-anchor="middle">
     <text x="70" y="266">5</text>
     <text x="202.5" y="266">8</text>
     <text x="335" y="266">12</text>
     <text x="467.5" y="266">20</text>
     <text x="600" y="266">30</text>
   </g>
-  <text x="339" y="288" fill="#8fa0c4" font-size="9.5" text-anchor="middle" font-style="italic">true rank of the data &nbsp;(theory keeps only k = 5 dimensions)</text>
-  <text x="18" y="136" fill="#8fa0c4" font-size="9.5" text-anchor="middle" font-style="italic" transform="rotate(-90 18 136)">false-confirmation rate (%)</text>
-  <!-- A: compressed-space ceiling (orange) -->
-  <polyline fill="none" stroke="#f2a07e" stroke-width="2.4"
+  <text x="339" y="288" fill="#7a6a4c" font-size="9.5" text-anchor="middle" font-style="italic">true rank of the data &nbsp;(theory keeps only k = 5 dimensions)</text>
+  <text x="18" y="136" fill="#7a6a4c" font-size="9.5" text-anchor="middle" font-style="italic" transform="rotate(-90 18 136)">false-confirmation rate (%)</text>
+  <!-- A: compressed-space ceiling (terra — the "bad" ceiling that inflates) -->
+  <polyline fill="none" stroke="#9c4a22" stroke-width="2.4"
     points="70,30 202.5,79.5 335,211.5 467.5,250 600,244.5"/>
-  <g fill="#f2a07e">
+  <g fill="#9c4a22">
     <circle cx="70" cy="30" r="3.4"/>
     <circle cx="202.5" cy="79.5" r="3.4"/>
     <circle cx="335" cy="211.5" r="3.4"/>
     <circle cx="467.5" cy="250" r="3.4"/>
     <circle cx="600" cy="244.5" r="3.4"/>
   </g>
-  <text x="210" y="73" fill="#f2a07e" font-size="9" font-weight="bold" text-anchor="start">77.5%</text>
-  <!-- B: honest full-space ceiling (gold) -->
-  <polyline fill="none" stroke="#f0c469" stroke-width="2.4"
+  <text x="210" y="73" fill="#9c4a22" font-size="9" font-weight="bold" text-anchor="start">77.5%</text>
+  <!-- B: honest full-space ceiling (blue — the sound/correct answer, 0% everywhere) -->
+  <polyline fill="none" stroke="#27406b" stroke-width="2.4"
     points="70,250 202.5,250 335,250 467.5,250 600,250"/>
-  <g fill="#f0c469">
+  <g fill="#27406b">
     <circle cx="70" cy="250" r="3.4"/>
     <circle cx="202.5" cy="250" r="3.4"/>
     <circle cx="335" cy="250" r="3.4"/>
     <circle cx="467.5" cy="250" r="3.4"/>
     <circle cx="600" cy="250" r="3.4"/>
   </g>
-  <text x="335" y="243" fill="#f0c469" font-size="9" font-weight="bold" text-anchor="middle">honest ceiling: 0% at every rank</text>
+  <text x="335" y="243" fill="#27406b" font-size="9" font-weight="bold" text-anchor="middle">honest ceiling: 0% at every rank</text>
   <!-- legend -->
   <g font-size="9.3">
-    <rect x="356" y="40" width="246" height="50" rx="5" fill="rgba(10,15,26,0.72)" stroke="#2b3550"/>
-    <line x1="368" y1="56" x2="392" y2="56" stroke="#f2a07e" stroke-width="2.6"/>
-    <text x="398" y="59" fill="#cfd6e6">bar measured in compressed space</text>
-    <line x1="368" y1="76" x2="392" y2="76" stroke="#f0c469" stroke-width="2.6"/>
-    <text x="398" y="79" fill="#cfd6e6">bar measured honestly (full space)</text>
+    <rect x="356" y="40" width="246" height="50" rx="3" fill="#fbf5e6" stroke="#c9b78c"/>
+    <line x1="368" y1="56" x2="392" y2="56" stroke="#9c4a22" stroke-width="2.6"/>
+    <text x="398" y="59" fill="#3a2c1b">bar measured in compressed space</text>
+    <line x1="368" y1="76" x2="392" y2="76" stroke="#27406b" stroke-width="2.6"/>
+    <text x="398" y="79" fill="#3a2c1b">bar measured honestly (full space)</text>
   </g>
 </svg>
 </div>
-<figcaption>The same compression method judged against two yardsticks. With the noise ceiling measured in the shrunken compressed space (orange), the method falsely confirms a known-incomplete theory in a band just above its dimension count — a phantom peak of 77.5% at rank 8 that then decays. With an honest full-space ceiling (gold) the false-confirmation rate is 0% at every rank. The "inflation" lived entirely in the yardstick. (Direct matrix comparison: also ≈0% throughout.) All numbers from the simulation in the appendix.</figcaption>
+<figcaption>The same compression method judged against two yardsticks. With the noise ceiling measured in the shrunken compressed space (terra-red), the method falsely confirms a known-incomplete theory in a band just above its dimension count — a phantom peak of 77.5% at rank 8 that then decays. With an honest full-space ceiling (blue) the false-confirmation rate is 0% at every rank. The "inflation" lived entirely in the yardstick. (Direct matrix comparison: also ≈0% throughout.) All numbers from the simulation in the appendix.</figcaption>
 </figure>
 
 <p>The verdict was in the numbers, not the speeches. Zoom in on the worst case — true rank 8, where the phantom peak is highest — and the two yardsticks give opposite answers from identical data and an identical, genuinely incomplete theory:</p>
@@ -229,27 +298,27 @@
 <svg width="560" height="194" viewBox="0 0 560 194">
   <!-- scale: x0=70 (0%), 470 (100%); 4px per % -->
   <!-- correct-answer baseline at 0% -->
-  <line x1="70" y1="20" x2="70" y2="140" stroke="#7f8aa8" stroke-width="0.9" stroke-dasharray="4,3"/>
-  <text x="70" y="14" fill="#a9b8d8" font-size="8.4" text-anchor="start">correct answer: reject · 0%</text>
-  <!-- bar 1: compressed ceiling 77.5% -> width 310 -->
-  <text x="70" y="46" fill="#dfe5f2" font-size="9.5">bar in compressed space</text>
-  <rect x="70" y="52" width="310" height="22" rx="3" fill="#f2a07e"/>
-  <text x="388" y="68" fill="#f2a07e" font-size="10" font-weight="bold">77.5%</text>
-  <!-- bar 2: honest ceiling 0% -->
-  <text x="70" y="100" fill="#dfe5f2" font-size="9.5">honest full-space bar</text>
-  <rect x="70" y="106" width="3" height="22" rx="1.5" fill="#f0c469"/>
-  <text x="80" y="122" fill="#f0c469" font-size="10" font-weight="bold">0%</text>
+  <line x1="70" y1="20" x2="70" y2="140" stroke="#9c8a5e" stroke-width="0.9" stroke-dasharray="4,3"/>
+  <text x="70" y="14" fill="#6b5d45" font-size="8.4" text-anchor="start">correct answer: reject · 0%</text>
+  <!-- bar 1: compressed ceiling 77.5% -> width 310 (terra — bad/false) -->
+  <text x="70" y="46" fill="#3a2c1b" font-size="9.5">bar in compressed space</text>
+  <rect x="70" y="52" width="310" height="22" rx="2" fill="#9c4a22"/>
+  <text x="388" y="68" fill="#9c4a22" font-size="10" font-weight="bold">77.5%</text>
+  <!-- bar 2: honest ceiling 0% (blue — sound/correct) -->
+  <text x="70" y="100" fill="#3a2c1b" font-size="9.5">honest full-space bar</text>
+  <rect x="70" y="106" width="3" height="22" rx="1.5" fill="#27406b"/>
+  <text x="80" y="122" fill="#27406b" font-size="10" font-weight="bold">0%</text>
   <!-- x axis -->
-  <line x1="70" y1="140" x2="470" y2="140" stroke="#586079" stroke-width="1"/>
-  <g fill="#9aa6c0" font-size="8.4" text-anchor="middle">
-    <line x1="70" y1="140" x2="70" y2="145" stroke="#586079"/>
-    <line x1="270" y1="140" x2="270" y2="145" stroke="#586079"/>
-    <line x1="470" y1="140" x2="470" y2="145" stroke="#586079"/>
+  <line x1="70" y1="140" x2="470" y2="140" stroke="#9c8a5e" stroke-width="1"/>
+  <g fill="#6b5d45" font-size="8.4" text-anchor="middle">
+    <line x1="70" y1="140" x2="70" y2="145" stroke="#9c8a5e"/>
+    <line x1="270" y1="140" x2="270" y2="145" stroke="#9c8a5e"/>
+    <line x1="470" y1="140" x2="470" y2="145" stroke="#9c8a5e"/>
     <text x="70" y="157">0</text>
     <text x="270" y="157">50</text>
     <text x="470" y="157">100</text>
   </g>
-  <text x="270" y="180" fill="#a9b8d8" font-size="9" text-anchor="middle" font-style="italic">false-confirmation rate at true rank 8 (% of runs blessing an incomplete theory)</text>
+  <text x="270" y="180" fill="#6b5d45" font-size="9" text-anchor="middle" font-style="italic">false-confirmation rate at true rank 8 (% of runs blessing an incomplete theory)</text>
 </svg>
 </div>
 <figcaption>One method, one dataset, one incomplete theory, two ways of setting the "good enough" bar. Measure the bar inside the compressed space and the incomplete theory is wrongly confirmed in 77.5% of runs; measure it honestly in the full data space and it is correctly rejected every time (0%). The flaw was never the method — it was where the yardstick was held.</figcaption>
@@ -267,14 +336,7 @@
 
 <p><b>Why this matters beyond the simulation.</b> Confirmatory tests with a noise ceiling are everywhere a field asks "is my model complete?" — neuroscience, psychology, the comparison of AI systems to human minds. The lesson is unglamorous and portable: when you compress your data to gain power, do not compress the bar you judge it against. Hold the yardstick in the full space, or you will keep confirming theories that a fuller look would reject. Where exactly the compressed-space trap bites hardest, and how much power honest testing really costs, is the matter for the next duel.</p>
 
-<div class="ornament" style="margin-top:7px">
-<svg width="160" height="20" viewBox="0 0 160 20">
-  <g stroke="#d9b25b" stroke-width="1.2" opacity="0.85">
-    <line x1="10" y1="10" x2="70" y2="10"/><line x1="90" y1="10" x2="150" y2="10"/>
-  </g>
-  <circle cx="80" cy="10" r="3" fill="#f0c469"/>
-</svg>
-</div>
+<div class="ornament"><span class="fleuron">&#10086;&#10087;&#10086;</span></div>
 
 <div class="appendix">
 <h3>Appendix · simulation parameters</h3>
@@ -282,13 +344,15 @@
 <p class="ap"><b>Compression method.</b> A non-negative matrix factorization to 5 components (multiplicative updates, 200 iterations) stands in for the real method's low-rank non-negative prior. Similarity matrices use 1&nbsp;&minus;&nbsp;correlation over item pairs.</p>
 <p class="ap"><b>Confirmatory test.</b> For each run, a paired t-test compares each subject's fit-to-theory against a leave-one-out lower-bound noise ceiling; the theory is "rejected as incomplete" when fit is significantly below the ceiling (p &lt; 0.05). A "false confirmation" is failing to reject when the true rank exceeds 5. Ceiling A is computed in the compressed space; ceiling B in the full data space. Rates are over 40 repetitions per rank.</p>
 <p class="ap"><b>Numbers shown.</b> Compressed-ceiling false-confirmation rate by true rank (5/8/12/20/30): 100 / 77.5 / 17.5 / 0 / 2.5 %. Honest-ceiling: 0 % throughout. At rank 5 the model is genuinely complete, so a "yes" there is correct, not false.</p>
-<p class="ap" style="color:#9aa6c4">The numbers are illustrative: they reproduce the duel's key result and do not claim to be a full study. Full reproducibility requires the simulation source code.</p>
+<p class="ap" style="color:#6b5d45">The numbers are illustrative: they reproduce the duel's key result and do not claim to be a full study. Full reproducibility requires the simulation source code.</p>
 </div>
 
 <div class="foot">
 The duel's direction was inspired by the paper <i>"Revealing the core dimensions underlying representations in brains, behavior and AI"</i> (arXiv:2605.26921). The dispute was not about the paper itself but about a stronger hypothesis it suggests: that the confirmatory-power advantage of low-rank, non-negative factorization is bought at the price of inflated false confirmations in high-rank data. All numbers in the charts come from a controlled simulation with ground-truth representations of known rank.
-<br><span style="color:#7f8aa8">© 2026 Occam Research · Licensed under CC BY-NC-ND 4.0</span>
+<br><span style="color:#6a5c43">© 2026 Occam Research · Licensed under CC BY-NC-ND 4.0</span>
 </div>
+
+<div class="folio">Duellum Veritatis<span class="sep">&#10086;</span>occam.world</div>
 
 </div>
 </body>

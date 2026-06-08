@@ -3,93 +3,165 @@
 <head>
 <meta charset="utf-8">
 <style>
-  @page { size: A4; margin: 13mm 0 12mm 0; }
+  @page { size: A4; margin: 14mm 0 13mm 0; }
   * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   html,body { margin:0; padding:0; }
-  body {
-    font-family: "Georgia","Times New Roman",serif;
-    color:#f3efe4; background:#222d49;
-    font-size:10.5pt; line-height:1.49;
-    padding:0 18mm;
-    background-image:
-      radial-gradient(1100px 480px at 72% -8%, rgba(120,145,205,0.26), transparent 60%),
-      radial-gradient(900px 600px at -8% 108%, rgba(170,135,70,0.18), transparent 55%);
+
+  :root{
+    --paper:#f7f3e8; --ink:#241b0d; --ink-soft:#6a5c43;
+    --ox:#7a1717; --ox-br:#8f2020; --sepia:#bcae8b; --sepia-d:#9c8a5e;
+    --blue:#243c66; --terra:#9c4a22; --tint:#ede4cd; --chart:#fbf7ec;
   }
-  h1 { font-size:25pt; line-height:1.08; margin:0 0 4px 0; color:#fbf6e8;
-       letter-spacing:0.3px; font-weight:700; }
-  h2 { font-size:13.5pt; margin:15px 0 6px 0; color:#f0c469;
-       border-bottom:1px solid rgba(240,196,105,0.42); padding-bottom:4px; font-weight:700; }
-  h3 { font-size:11pt; margin:13px 0 3px 0; color:#dde5f5; font-weight:700; }
-  p { margin:0 0 7px 0; text-align:justify; }
-  .kicker { color:#a9b8d8; font-size:9pt; letter-spacing:2.4px; text-transform:uppercase; margin:0 0 8px 0; }
-  .lede { font-size:11.6pt; color:#e3e8f3; font-style:italic; line-height:1.5; margin:6px 0 4px 0; }
-  .rule { height:1px; background:linear-gradient(90deg,transparent,rgba(240,196,105,0.7),transparent); margin:12px 0; }
-  .term { color:#f0c469; font-style:normal; font-weight:700; }
-  .gloss { display:block; background:rgba(160,180,220,0.14); border-left:3px solid #a9b8d8;
-           padding:7px 11px; margin:8px 0; font-size:9.4pt; color:#dfe5f2; line-height:1.44; }
-  .gloss b { color:#fbf6e8; }
-  .disclaimer { border:1px solid rgba(242,160,126,0.55); border-radius:7px; padding:9px 13px;
-                background:rgba(242,160,126,0.10); margin:10px 0; font-size:9.3pt; color:#f6e9df; line-height:1.46; }
-  .disclaimer b { color:#f6c9b3; }
-  .duel { display:flex; gap:12px; margin:10px 0; }
-  .card { flex:1; border:1px solid rgba(240,196,105,0.34); border-radius:6px; padding:10px 12px;
-          background:rgba(15,21,38,0.5); }
-  .card .who { font-size:9pt; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:4px; }
-  .pro .who { color:#8ec2f2; }
-  .con .who { color:#f2a07e; }
-  .card .stance { font-size:9.6pt; color:#e3e8f3; line-height:1.42; }
-  figure { margin:14px 0 8px 0; text-align:center; }
-  figcaption { font-size:8.8pt; color:#b3bdd4; margin-top:5px; font-style:italic; line-height:1.35; }
-  .chartbox { background:rgba(11,16,30,0.72); border:1px solid rgba(160,180,220,0.3);
-              border-radius:8px; padding:10px 8px 4px 8px; }
-  blockquote { margin:10px 0; padding:8px 14px; border-left:3px solid #f0c469;
-               background:rgba(240,196,105,0.1); font-style:italic; color:#fbf6e8; }
-  .verdict { border:1px solid rgba(240,196,105,0.6); border-radius:8px; padding:12px 16px;
-             background:linear-gradient(180deg, rgba(240,196,105,0.16), rgba(240,196,105,0.05)); margin:12px 0; }
-  .verdict .win { color:#f0c469; font-weight:700; font-size:12pt; }
-  .meta { border:1px solid rgba(160,180,220,0.32); border-radius:7px; padding:8px 13px;
-          background:rgba(15,21,38,0.42); margin:10px 0 4px 0; font-size:9pt; line-height:1.5; }
-  .meta .row { display:flex; gap:8px; padding:1.5px 0; }
-  .meta .k { color:#a9b8d8; min-width:104px; flex:0 0 104px; text-transform:uppercase;
-             letter-spacing:0.6px; font-size:8.2pt; padding-top:1px; }
-  .meta .v { color:#eef2fa; }
-  .twocol { display:flex; gap:14px; }
-  .twocol > div { flex:1; }
-  .support { border:1px solid rgba(142,194,242,0.4); border-radius:7px; padding:8px 12px;
-             background:rgba(142,194,242,0.08); margin:6px 0; }
-  .support h3 { margin-top:2px; color:#8ec2f2; }
-  .nosupport { border:1px solid rgba(242,160,126,0.42); border-radius:7px; padding:8px 12px;
-               background:rgba(242,160,126,0.08); margin:6px 0; }
-  .nosupport h3 { margin-top:2px; color:#f2a07e; }
-  ul { margin:3px 0 7px 0; padding-left:18px; }
-  li { margin:2px 0; }
-  .appendix { border-top:1px solid rgba(160,180,220,0.28); margin-top:14px; padding-top:8px; }
-  .appendix h3 { color:#f0c469; margin:0 0 5px 0; font-size:10pt; letter-spacing:0.4px; }
-  .appendix .ap { font-size:8.4pt; color:#c7cfe0; line-height:1.46; margin:0 0 4px 0; word-break:break-all; }
-  .appendix .ap b { color:#eef2fa; }
-  .ornament { text-align:center; margin:6px 0 2px 0; }
-  svg { display:block; }
-  .bars text { font-family:"Georgia",serif; }
+
+  body {
+    font-family:"EB Garamond 12","Georgia",serif;
+    color:var(--ink); background-color:var(--paper);
+    font-size:11.4pt; line-height:1.52;
+    padding:0 19mm;
+    font-feature-settings:"onum" 1,"liga" 1,"kern" 1;
+    /* aged, unevenly toned paper: brown grain + scattered foxing + edge vignette */
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.33 0 0 0 0 0.17 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+      radial-gradient(160px 120px at 16% 20%, rgba(150,120,68,0.07), transparent 70%),
+      radial-gradient(210px 150px at 84% 32%, rgba(150,120,68,0.06), transparent 70%),
+      radial-gradient(150px 130px at 62% 74%, rgba(140,108,58,0.055), transparent 72%),
+      radial-gradient(230px 180px at 28% 90%, rgba(150,120,68,0.05), transparent 72%),
+      radial-gradient(130px 110px at 90% 84%, rgba(140,108,58,0.05), transparent 70%),
+      radial-gradient(1500px 1000px at 50% 46%, transparent 58%, rgba(86,66,36,0.07) 100%);
+    background-repeat:repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+  }
+  .page{ counter-reset: sec; }
+
+  /* running head + folio */
+  .runhead{ text-align:center; font-family:"EB Garamond SC","EB Garamond 12",serif;
+            font-variant:small-caps; letter-spacing:3px; font-size:8.4pt;
+            color:var(--ox); margin:0 0 2px 0; }
+  .folio{ text-align:center; color:var(--ink-soft); font-size:9pt; margin-top:10px;
+          font-style:italic; }
+  .folio .sep{ color:var(--sepia-d); margin:0 7px; }
+
+  h1{ font-family:"EB Garamond 12","Georgia",serif; font-size:30pt; line-height:1.05;
+      margin:2px 0 6px 0; color:#120b03; font-weight:700; text-align:center;
+      letter-spacing:0.2px; }
+  h1 .em{ color:var(--ox); font-style:italic; font-weight:500; }
+
+  h2{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+      font-size:14pt; letter-spacing:1.2px; margin:20px 0 7px 0; color:var(--ox);
+      font-weight:600; padding-bottom:5px;
+      border-bottom:1px solid var(--sepia); }
+  h2::before{ counter-increment:sec; content:counter(sec,decimal-leading-zero);
+      font-family:"EB Garamond SC",serif; font-size:9.5pt; color:var(--ox-br);
+      letter-spacing:1px; margin-right:11px; vertical-align:1.5px;
+      border-bottom:none; }
+
+  h3{ font-family:"EB Garamond 12","Georgia",serif; font-size:12pt; font-style:italic;
+      margin:14px 0 3px 0; color:#3a2c1b; font-weight:600; }
+
+  p{ margin:0 0 8px 0; text-align:justify; hyphens:auto; }
+
+  .kicker{ text-align:center; color:var(--ink-soft); font-size:9pt; letter-spacing:3.4px;
+           text-transform:uppercase; margin:8px 0 6px 0;
+           font-family:"EB Garamond SC","EB Garamond 12",serif; }
+
+  .lede{ font-size:12.6pt; color:#3a2c1b; font-style:italic; line-height:1.5;
+         margin:8px 4mm 6px 4mm; text-align:center; }
+
+  /* drop cap on the first body paragraph */
+  .drop::first-letter{ font-family:"EB Garamond Initials","EB Garamond 12",serif;
+      float:left; font-size:52pt; line-height:0.82; padding:4px 8px 0 0;
+      color:var(--ox); font-weight:600; }
+
+  .rule{ height:0; border:none; text-align:center; margin:14px 0; color:var(--ox); }
+  .rule::before{ content:"\2766"; font-size:13pt; color:var(--ox);
+      display:inline-block; }
+  .rule.line{ border-top:1px solid var(--sepia); margin:13px 0; }
+  .rule.line::before{ content:""; }
+
+  .term{ color:var(--ox); font-style:italic; }
+
+  .gloss{ display:block; background:var(--tint); border-left:3px solid var(--ox);
+          padding:8px 13px; margin:9px 0; font-size:10.2pt; color:#3b2e1d;
+          line-height:1.46; }
+  .gloss b{ color:var(--ox); font-weight:600; }
+
+  .disclaimer{ border:1px solid var(--sepia); border-radius:4px; padding:9px 13px;
+               background:#fbf5e6; margin:10px 0; font-size:9.3pt; color:#3b2e1d; line-height:1.46; }
+  .disclaimer b{ color:var(--ox); }
+
+  .duel{ display:flex; gap:13px; margin:11px 0; }
+  .card{ flex:1; border:1px solid var(--sepia); padding:11px 13px; background:#fbf5e6; }
+  .card .who{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+              font-size:10pt; letter-spacing:1.2px; margin-bottom:4px; font-weight:600; }
+  .pro .who{ color:var(--blue); }
+  .con .who{ color:var(--terra); }
+  .pro{ border-top:2.5px solid var(--blue); }
+  .con{ border-top:2.5px solid var(--terra); }
+  .card .stance{ font-size:10.4pt; color:#34281a; line-height:1.45; }
+
+  figure{ margin:15px 0 9px 0; text-align:center; }
+  figcaption{ font-size:9.2pt; color:var(--ink-soft); margin-top:6px; font-style:italic;
+              line-height:1.4; padding:0 6mm; }
+  .chartbox{ background:var(--chart); border:1px solid var(--sepia);
+             padding:11px 9px 5px 9px; }
+
+  blockquote{ margin:11px 6mm; padding:6px 16px; border-left:3px solid var(--ox);
+              font-style:italic; color:#3a2c1b; font-size:11.6pt; }
+
+  .verdict{ border-top:2px solid var(--ox); border-bottom:2px solid var(--ox);
+            padding:12px 16px; margin:14px 0; background:#fbf3e0; }
+  .verdict .win{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+                 color:var(--ox); font-weight:600; font-size:13pt; letter-spacing:0.8px; }
+
+  .meta{ border:1px solid var(--sepia); padding:9px 14px; background:#fbf5e6;
+         margin:11px 0 6px 0; font-size:10pt; line-height:1.5; }
+  .meta .row{ display:flex; gap:10px; padding:2px 0; }
+  .meta .k{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+            color:var(--ox); min-width:118px; flex:0 0 118px; letter-spacing:0.5px;
+            font-size:9.6pt; }
+  .meta .v{ color:var(--ink); }
+
+  .twocol{ display:flex; gap:14px; }
+  .twocol > div{ flex:1; }
+  .support{ border:1px solid var(--sepia); border-top:2.5px solid var(--blue);
+            padding:8px 12px; background:#fbf5e6; margin:6px 0; }
+  .support h3{ margin-top:2px; color:var(--blue); }
+  .nosupport{ border:1px solid var(--sepia); border-top:2.5px solid var(--terra);
+              padding:8px 12px; background:#fbf5e6; margin:6px 0; }
+  .nosupport h3{ margin-top:2px; color:var(--terra); }
+
+  ul{ margin:3px 0 7px 0; padding-left:18px; }
+  li{ margin:2px 0; }
+
+  .appendix{ border-top:1px solid var(--sepia); margin-top:15px; padding-top:9px; }
+  .appendix h3{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+                color:var(--ox); margin:0 0 6px 0; font-size:11pt; font-style:normal;
+                letter-spacing:0.6px; }
+  .appendix .ap{ font-size:9.4pt; color:#473722; line-height:1.48; margin:0 0 5px 0; }
+  .appendix .ap b{ color:var(--ox); }
+
+  .ornament{ text-align:center; margin:8px 0 2px 0; color:var(--ox); }
+  .ornament .fleuron{ font-size:17pt; color:var(--ox); letter-spacing:6px; }
+
+  .foot{ margin-top:11px; padding-top:9px; border-top:1px solid var(--sepia);
+         color:var(--ink-soft); font-size:9pt; line-height:1.46; font-style:italic; }
+  svg{ display:block; }
+  .bars text{ font-family:"EB Garamond 12","Georgia",serif; }
 </style>
 </head>
 <body>
 <div class="page">
 
-<div class="ornament">
-<svg width="180" height="26" viewBox="0 0 180 26">
-  <g stroke="#d9b25b" stroke-width="1.4" fill="none" opacity="0.9">
-    <line x1="20" y1="6" x2="86" y2="20"/>
-    <line x1="160" y1="6" x2="94" y2="20"/>
-    <circle cx="20" cy="6" r="2.4" fill="#f0c469"/>
-    <circle cx="160" cy="6" r="2.4" fill="#f0c469"/>
-  </g>
-  <circle cx="90" cy="13" r="3" fill="#f0c469"/>
-</svg>
-</div>
+<p class="runhead">Duellum Veritatis &middot; nightly duel</p>
+<div class="ornament"><span class="fleuron">&#10086;&#10087;&#10086;</span></div>
 
 <p class="kicker">A nocturnal duel · science explainer</p>
-<h1>A Ghost Made of Timing</h1>
+<h1>A Ghost Made of <span class="em">Timing</span></h1>
 <p class="lede">A subtle brain signal that today's giant AI models seem to "forget" looks like a genuine three-way conversation between brain regions. But what if it is only the shadow that ordinary timing throws across a snapshot — a ghost we mistake for a mechanism?</p>
+
+<figure style="margin:18px 0 12px 0;">
+  <img src="art/no4b-cover.jpg" alt="A ghostly apparition above a clock, gears and a timing waveform, sepia engraving" style="width:100%; max-width:680px; border:1px solid var(--sepia); box-shadow:0 1px 0 #fff inset, 0 2px 8px rgba(60,44,20,.12);" />
+  <figcaption>A ghost made of timing: an apparition of three-way structure rising from clockwork and waveform — the shadow that ordinary timing throws across a static snapshot.</figcaption>
+</figure>
 
 <div class="meta">
   <div class="row"><div class="k">Date</div><div class="v">6 June 2026</div></div>
@@ -107,9 +179,9 @@
 <b>Epistemic status:</b> scout / protocol pilot — exploratory. This issue is a scouting duel, <b>not an established scientific result</b>. Its decisive test runs on a synthetic/proxy observable: it probes whether the proposed mechanism is <i>sufficient in principle</i>, not whether real brain data live in that regime. Treat the finding as a lead to investigate, not a confirmed claim about the seed paper's empirics.
 </div>
 
-<div class="rule"></div>
+<div class="rule line"></div>
 
-<p>Brains are studied through their wiring in motion. Park a person in a scanner, record how active each region is moment to moment, and you can ask which regions rise and fall together. That table of togetherness — region by region — is called <span class="term">functional connectivity</span>, and it has become the workhorse fingerprint for telling one mind from another and predicting things like memory or reasoning scores.</p>
+<p class="drop">Brains are studied through their wiring in motion. Park a person in a scanner, record how active each region is moment to moment, and you can ask which regions rise and fall together. That table of togetherness — region by region — is called <span class="term">functional connectivity</span>, and it has become the workhorse fingerprint for telling one mind from another and predicting things like memory or reasoning scores.</p>
 
 <span class="gloss"><b>The toolkit in one breath.</b> <span class="term">Functional connectivity</span> (FC) usually means <i>second-order</i> structure: for every pair of regions, do they go up and down together? A recent line of work asks about <i>third-order</i> structure instead — <span class="term">co-skewness</span> — which looks at <b>triplets</b> of regions at once and asks whether they tend to spike together in a lopsided, asymmetric way. The seed paper reported that this triple-wise signal predicts cognition, and that today's large "foundation" models trained on brain data quietly throw it away.</span>
 
@@ -126,16 +198,18 @@
 
 <div class="duel">
   <div class="card pro">
+    <img src="art/athos.jpg" alt="Athos, engraved portrait" style="display:block; width:96px; height:96px; margin:2px auto 9px auto; border:1px solid var(--sepia); border-radius:2px;" />
     <div class="who">Thesis · Athos</div>
     <div class="stance">Co-skewness is a <b>static shadow of timing</b>. A shared, lopsided driver reaching regions at slightly different lags leaves a triple-wise footprint in the snapshot. Model the directed/lagged structure honestly and co-skewness's extra contribution <b>collapses</b> — it was a proxy all along.</div>
   </div>
   <div class="card con">
+    <img src="art/aramis.jpg" alt="Aramis, engraved portrait" style="display:block; width:96px; height:96px; margin:2px auto 9px auto; border:1px solid var(--sepia); border-radius:2px;" />
     <div class="who">Counter · Aramis</div>
     <div class="stance">Co-skewness is its <b>own irreducible signal</b>, not exhausted by directed connectivity. A shadow argument only works if you assume one common driver; a genuine <i>instantaneous</i> three-way coupling would survive the directed baseline. Show it does not on data that actually look like a brain.</div>
   </div>
 </div>
 
-<div class="rule"></div>
+<div class="rule line"></div>
 
 <h2>The duel: arithmetic, not rhetoric</h2>
 <p>Every move was a small simulated world with a <b>known</b> answer, so the two sides could see who was right rather than argue it. Three things got settled along the way, and one did not.</p>
@@ -152,16 +226,16 @@
 <figure>
 <div class="chartbox">
 <svg class="bars" width="640" height="300" viewBox="0 0 640 300">
-  <line x1="180" y1="20" x2="180" y2="250" stroke="#586079" stroke-width="1"/>
-  <line x1="180" y1="250" x2="612" y2="250" stroke="#586079" stroke-width="1"/>
+  <line x1="180" y1="20" x2="180" y2="250" stroke="#9c8a5e" stroke-width="1"/>
+  <line x1="180" y1="250" x2="612" y2="250" stroke="#9c8a5e" stroke-width="1"/>
   <!-- x scale 0..1.0 over 180..600 -->
-  <g stroke="#2b3550" stroke-width="0.8" stroke-dasharray="3,3">
+  <g stroke="#d8c9a3" stroke-width="0.8" stroke-dasharray="3,3">
     <line x1="285" y1="20" x2="285" y2="250"/>
     <line x1="390" y1="20" x2="390" y2="250"/>
     <line x1="495" y1="20" x2="495" y2="250"/>
     <line x1="600" y1="20" x2="600" y2="250"/>
   </g>
-  <g fill="#9aa6c0" font-size="9" text-anchor="middle">
+  <g fill="#6b5d45" font-size="9" text-anchor="middle">
     <text x="180" y="266">0.0</text>
     <text x="285" y="266">0.25</text>
     <text x="390" y="266">0.50</text>
@@ -170,21 +244,21 @@
   </g>
   <!-- bars: value*420 width from x=180 -->
   <g>
-    <rect x="180" y="46" width="201" height="34" fill="#8ec2f2" opacity="0.9"/>
-    <rect x="180" y="110" width="251" height="34" fill="#a9b8d8" opacity="0.85"/>
-    <rect x="180" y="174" width="381" height="34" fill="#f0c469" opacity="0.9"/>
+    <rect x="180" y="46" width="201" height="34" fill="#27406b" opacity="0.9"/>
+    <rect x="180" y="110" width="251" height="34" fill="#b9a577" opacity="0.85"/>
+    <rect x="180" y="174" width="381" height="34" fill="#7a1717" opacity="0.9"/>
   </g>
-  <g fill="#eef2fa" font-size="10" text-anchor="end">
+  <g fill="#3a2c1b" font-size="10" text-anchor="end">
     <text x="172" y="68">Co-skewness alone</text>
     <text x="172" y="132">Static (2nd-order) FC</text>
     <text x="172" y="196">Directed lagged FC</text>
   </g>
-  <g fill="#0c1322" font-size="9.5" font-weight="700" text-anchor="end">
+  <g fill="#fbf3e0" font-size="9.5" font-weight="700" text-anchor="end">
     <text x="375" y="68">0.478</text>
     <text x="425" y="132">0.597</text>
     <text x="555" y="196">0.908</text>
   </g>
-  <text x="396" y="290" fill="#9aa6c0" font-size="9" text-anchor="middle">cross-validated R² predicting cognition (higher = more predictive)</text>
+  <text x="396" y="290" fill="#6b5d45" font-size="9" text-anchor="middle">cross-validated R² predicting cognition (higher = more predictive)</text>
 </svg>
 </div>
 <figcaption>Fig. 1 — In the simulated world, all three views predict cognition; the directed lagged model is by far the strongest. Mean over 12 random seeds. Source: <b>2026-06-06_cc_data.json</b> (common-source condition).</figcaption>
@@ -196,33 +270,33 @@
 <div class="chartbox">
 <svg class="bars" width="640" height="270" viewBox="0 0 640 270">
   <!-- y zero baseline; values small. x positions for 3 bars -->
-  <line x1="80" y1="30" x2="80" y2="210" stroke="#586079" stroke-width="1"/>
+  <line x1="80" y1="30" x2="80" y2="210" stroke="#9c8a5e" stroke-width="1"/>
   <!-- zero line at y=170 ; scale: 0.05 -> up 120px (so 1 unit R2 = 2400px... use 0.01 -> 24px) -->
-  <line x1="80" y1="170" x2="612" y2="170" stroke="#8a93ad" stroke-width="1"/>
-  <g stroke="#2b3550" stroke-width="0.8" stroke-dasharray="3,3">
+  <line x1="80" y1="170" x2="612" y2="170" stroke="#9c8a5e" stroke-width="1"/>
+  <g stroke="#d8c9a3" stroke-width="0.8" stroke-dasharray="3,3">
     <line x1="80" y1="122" x2="612" y2="122"/>
     <line x1="80" y1="74" x2="612" y2="74"/>
   </g>
-  <g fill="#9aa6c0" font-size="9" text-anchor="end">
+  <g fill="#6b5d45" font-size="9" text-anchor="end">
     <text x="74" y="173">0.00</text>
     <text x="74" y="125">+0.02</text>
     <text x="74" y="77">+0.04</text>
   </g>
   <!-- bar1: incr over static +0.027 -> 0.027*2400=64.8 up -->
-  <rect x="150" y="105" width="90" height="65" fill="#8ec2f2" opacity="0.9"/>
-  <text x="195" y="98" fill="#cfe0f4" font-size="10" font-weight="700" text-anchor="middle">+0.027</text>
-  <text x="195" y="188" fill="#dfe5f2" font-size="9" text-anchor="middle">co-skew increment</text>
-  <text x="195" y="200" fill="#dfe5f2" font-size="9" text-anchor="middle">over static FC</text>
+  <rect x="150" y="105" width="90" height="65" fill="#27406b" opacity="0.9"/>
+  <text x="195" y="98" fill="#3a2c1b" font-size="10" font-weight="700" text-anchor="middle">+0.027</text>
+  <text x="195" y="188" fill="#3a2c1b" font-size="9" text-anchor="middle">co-skew increment</text>
+  <text x="195" y="200" fill="#3a2c1b" font-size="9" text-anchor="middle">over static FC</text>
   <!-- bar2: incr over directed -0.001 -> ~ -2px, draw tiny -->
-  <rect x="320" y="170" width="90" height="3" fill="#f2a07e" opacity="0.9"/>
-  <text x="365" y="163" fill="#f4c3ac" font-size="10" font-weight="700" text-anchor="middle">-0.001</text>
-  <text x="365" y="188" fill="#dfe5f2" font-size="9" text-anchor="middle">co-skew increment</text>
-  <text x="365" y="200" fill="#dfe5f2" font-size="9" text-anchor="middle">over directed lagged FC</text>
+  <rect x="320" y="170" width="90" height="3" fill="#9c4a22" opacity="0.9"/>
+  <text x="365" y="163" fill="#3a2c1b" font-size="10" font-weight="700" text-anchor="middle">-0.001</text>
+  <text x="365" y="188" fill="#3a2c1b" font-size="9" text-anchor="middle">co-skew increment</text>
+  <text x="365" y="200" fill="#3a2c1b" font-size="9" text-anchor="middle">over directed lagged FC</text>
   <!-- bar3 control: independent-source co-skew alone -0.031 -> downward -->
-  <rect x="490" y="170" width="90" height="74" fill="#9aa6c0" opacity="0.55"/>
-  <text x="535" y="256" fill="#b9c2d8" font-size="10" font-weight="700" text-anchor="middle">-0.031</text>
-  <text x="535" y="150" fill="#dfe5f2" font-size="9" text-anchor="middle">control: co-skew alone,</text>
-  <text x="535" y="138" fill="#dfe5f2" font-size="9" text-anchor="middle">independent sources</text>
+  <rect x="490" y="170" width="90" height="74" fill="#b9a577" opacity="0.75"/>
+  <text x="535" y="256" fill="#3a2c1b" font-size="10" font-weight="700" text-anchor="middle">-0.031</text>
+  <text x="535" y="150" fill="#3a2c1b" font-size="9" text-anchor="middle">control: co-skew alone,</text>
+  <text x="535" y="138" fill="#3a2c1b" font-size="9" text-anchor="middle">independent sources</text>
 </svg>
 </div>
 <figcaption>Fig. 2 — The crux. Co-skewness adds a small increment over the static snapshot (left), but essentially nothing over a directed lagged model (centre): it was a proxy for timing. Control (right): remove the shared driver and co-skewness predicts nothing at all. Mean over 12 seeds; run-to-run spread ≈ 0.01–0.02. Source: <b>2026-06-06_cc_data.json</b>.</figcaption>
@@ -232,9 +306,9 @@
 <div class="verdict">
 <p class="win" data-duellum="outcome"><b>Outcome (who argued better):</b> PRO — the thesis side prevailed on argumentation.</p>
 <p class="win" data-duellum="substantive-verdict"><b>Substantive verdict (was the claim true):</b> unclear.</p>
-<p style="margin:6px 0 0 0; font-size:9.5pt; color:#f0c469;" data-duellum="axis-divergence"><b>These two axes diverge.</b> A side won the debate; the claim's truth did not. Read "Outcome: PRO" as "the thesis was argued better here," not as "the claim is true."</p>
+<p style="margin:6px 0 0 0; font-size:9.5pt; color:#7a1717;" data-duellum="axis-divergence"><b>These two axes diverge.</b> A side won the debate; the claim's truth did not. Read "Outcome: PRO" as "the thesis was argued better here," not as "the claim is true."</p>
 <p style="margin:6px 0 0 0;">In this release the arbiter judged that the public side defending the thesis (Athos) argued better: it held the falsifier frame, repaired its own models when they broke, and cleanly separated a working demonstration from the real-data test still owed. The losing side several times offered invalid or off-target counter-examples. But <b>on the substance the question stays open</b>: the duel showed the shadow mechanism is <i>sufficient</i> to manufacture the puzzle — it did not show that real brain data actually live in that regime.</p>
-<p style="margin:6px 0 0 0; font-size:9pt; color:#dfe5f2;"><b>Basis:</b> real_compute (attached bundle) · <b>Protocol:</b> PASS (12 moves, clean arbiter verdict) · <b>Order-swap audit:</b> PASS (verdict stable when the side order was swapped) · <b>Arbiter confidence:</b> not assigned — substantive outcome marked unclear.</p>
+<p style="margin:6px 0 0 0; font-size:9pt; color:#3a2c1b;"><b>Basis:</b> real_compute (attached bundle) · <b>Protocol:</b> PASS (12 moves, clean arbiter verdict) · <b>Order-swap audit:</b> PASS (verdict stable when the side order was swapped) · <b>Arbiter confidence:</b> not assigned — substantive outcome marked unclear.</p>
 </div>
 
 <div class="twocol">
@@ -262,6 +336,8 @@
 <h2>Prior-work note</h2>
 <p data-duellum="prior-work">This release makes <b>no originality claim</b>. The seed paper established that co-skewness predicts cognition and that foundation models discard it; the duel's contribution is a stress-test of one mechanistic <i>explanation</i> for that signal, not a new empirical finding. Novelty status: <span class="term">not an originality claim</span>. The real-data discriminator described above is, to the duel's knowledge, not yet reported.</p>
 
+<div class="ornament"><span class="fleuron">&#10086;&#10087;&#10086;</span></div>
+
 <div class="appendix">
 <h3>Appendix · reproducibility</h3>
 <p class="ap">Numbers and figures come from the attached repro bundle. Script, data, hashes, environment and rerun instructions are recorded in <b>2026-06-06_compute_manifest.json</b>.</p>
@@ -277,14 +353,16 @@
 
 <div class="appendix refs">
 <h3>References</h3>
-<p class="ap" style="text-indent:-1.4em; margin-left:1.4em;">Marraffini, G., Mahuas, G., Borrell, T., Shevchenko, V., &amp; Wassermann, D. (2026). The variance brain foundation models forgot: Third-order statistics predict cognition where billion-parameter models fail (arXiv:2606.04010). arXiv. <a href="https://arxiv.org/abs/2606.04010" style="color:#8ec2f2;">https://arxiv.org/abs/2606.04010</a></p>
-<p class="ap" style="font-size:8.4pt; color:#a9b8d8; margin-top:-2px;"><i>Seed publication — the empirical finding the duel was built on.</i></p>
-<p class="ap" style="text-indent:-1.4em; margin-left:1.4em;">Safaai, H., &amp; Sabatini, B. L. (2026). Feature leakage and the identifiability of direct-dependency entropy models of neural activity (arXiv:2606.01661). arXiv. <a href="https://arxiv.org/abs/2606.01661" style="color:#8ec2f2;">https://arxiv.org/abs/2606.01661</a></p>
-<p class="ap" style="font-size:8.4pt; color:#a9b8d8; margin-top:-2px;"><i>Supporting — the feature-leakage mechanism the thesis transfers onto the seed paper's empirics.</i></p>
-<p class="ap" style="font-size:8.4pt; color:#8a93ad; margin-top:4px;">Citation style: APA 7. References ordered alphabetically by first author.</p>
+<p class="ap" style="text-indent:-1.4em; margin-left:1.4em;">Marraffini, G., Mahuas, G., Borrell, T., Shevchenko, V., &amp; Wassermann, D. (2026). The variance brain foundation models forgot: Third-order statistics predict cognition where billion-parameter models fail (arXiv:2606.04010). arXiv. <a href="https://arxiv.org/abs/2606.04010" style="color:#27406b;">https://arxiv.org/abs/2606.04010</a></p>
+<p class="ap" style="font-size:8.4pt; color:#6b5d45; margin-top:-2px;"><i>Seed publication — the empirical finding the duel was built on.</i></p>
+<p class="ap" style="text-indent:-1.4em; margin-left:1.4em;">Safaai, H., &amp; Sabatini, B. L. (2026). Feature leakage and the identifiability of direct-dependency entropy models of neural activity (arXiv:2606.01661). arXiv. <a href="https://arxiv.org/abs/2606.01661" style="color:#27406b;">https://arxiv.org/abs/2606.01661</a></p>
+<p class="ap" style="font-size:8.4pt; color:#6b5d45; margin-top:-2px;"><i>Supporting — the feature-leakage mechanism the thesis transfers onto the seed paper's empirics.</i></p>
+<p class="ap" style="font-size:8.4pt; color:#9c8a5e; margin-top:4px;">Citation style: APA 7. References ordered alphabetically by first author.</p>
 </div>
 
-<p style="margin-top:10px; font-size:8.4pt; color:#8a93ad; text-align:center;">Duellum Veritatis · a public adversarial AI stress-test of a frozen scientific claim · published by Occam Research · engine and arbiter identities withheld by design.</p>
+<p style="margin-top:10px; font-size:8.4pt; color:#9c8a5e; text-align:center;">Duellum Veritatis · a public adversarial AI stress-test of a frozen scientific claim · published by Occam Research · engine and arbiter identities withheld by design.</p>
+
+<div class="folio">Duellum Veritatis<span class="sep">&#10086;</span>occam.world</div>
 
 </div>
 </body>

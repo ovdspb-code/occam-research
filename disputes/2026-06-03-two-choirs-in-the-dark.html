@@ -3,94 +3,156 @@
 <head>
 <meta charset="utf-8">
 <style>
-  @page { size: A4; margin: 13mm 0 12mm 0; }
+  @page { size: A4; margin: 14mm 0 13mm 0; }
   * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   html,body { margin:0; padding:0; }
-  @media screen {
-    html { background:#1a2238; }
-    body { max-width:210mm; margin:0 auto; min-height:100vh;
-           box-shadow:0 0 60px rgba(0,0,0,0.45); padding:24mm 18mm; }
+
+  :root{
+    --paper:#f7f3e8; --ink:#241b0d; --ink-soft:#6a5c43;
+    --ox:#7a1717; --ox-br:#8f2020; --sepia:#bcae8b; --sepia-d:#9c8a5e;
+    --blue:#243c66; --terra:#9c4a22; --tint:#ede4cd; --chart:#fbf7ec;
   }
+
   body {
-    font-family: "Georgia","Times New Roman",serif;
-    color:#f3efe4; background:#222d49;
-    font-size:10.5pt; line-height:1.49;
-    padding:0 18mm;
+    font-family:"EB Garamond 12","Georgia",serif;
+    color:var(--ink); background-color:var(--paper);
+    font-size:11.4pt; line-height:1.52;
+    padding:0 19mm;
+    font-feature-settings:"onum" 1,"liga" 1,"kern" 1;
+    /* aged, unevenly toned paper: brown grain + scattered foxing + edge vignette */
     background-image:
-      radial-gradient(1100px 480px at 72% -8%, rgba(120,145,205,0.26), transparent 60%),
-      radial-gradient(900px 600px at -8% 108%, rgba(170,135,70,0.18), transparent 55%);
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.33 0 0 0 0 0.17 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+      radial-gradient(160px 120px at 16% 20%, rgba(150,120,68,0.07), transparent 70%),
+      radial-gradient(210px 150px at 84% 32%, rgba(150,120,68,0.06), transparent 70%),
+      radial-gradient(150px 130px at 62% 74%, rgba(140,108,58,0.055), transparent 72%),
+      radial-gradient(230px 180px at 28% 90%, rgba(150,120,68,0.05), transparent 72%),
+      radial-gradient(130px 110px at 90% 84%, rgba(140,108,58,0.05), transparent 70%),
+      radial-gradient(1500px 1000px at 50% 46%, transparent 58%, rgba(86,66,36,0.07) 100%);
+    background-repeat:repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
   }
-  .page { }
-  h1 { font-size:25pt; line-height:1.08; margin:0 0 4px 0; color:#fbf6e8;
-       letter-spacing:0.3px; font-weight:700; }
-  h2 { font-size:13.5pt; margin:15px 0 6px 0; color:#f0c469;
-       border-bottom:1px solid rgba(240,196,105,0.42); padding-bottom:4px; font-weight:700; }
-  h3 { font-size:11pt; margin:13px 0 3px 0; color:#dde5f5; font-weight:700; }
-  p { margin:0 0 7px 0; text-align:justify; }
-  .kicker { color:#a9b8d8; font-size:9pt; letter-spacing:2.4px; text-transform:uppercase; margin:0 0 8px 0; }
-  .lede { font-size:11.6pt; color:#e3e8f3; font-style:italic; line-height:1.5; margin:6px 0 4px 0; }
-  .rule { height:1px; background:linear-gradient(90deg,transparent,rgba(240,196,105,0.7),transparent); margin:12px 0; }
-  .term { color:#f0c469; font-style:normal; font-weight:700; }
-  .gloss { display:block; background:rgba(160,180,220,0.14); border-left:3px solid #a9b8d8;
-           padding:7px 11px; margin:8px 0; font-size:9.4pt; color:#dfe5f2; line-height:1.44; }
-  .gloss b { color:#fbf6e8; }
-  .duel { display:flex; gap:12px; margin:10px 0; }
-  .card { flex:1; border:1px solid rgba(240,196,105,0.34); border-radius:6px; padding:10px 12px;
-          background:rgba(15,21,38,0.5); }
-  .card .who { font-size:9pt; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:4px; }
-  .pro .who { color:#8ec2f2; }
-  .con .who { color:#f2a07e; }
-  .card .stance { font-size:9.6pt; color:#e3e8f3; line-height:1.42; }
-  figure { margin:14px 0 8px 0; text-align:center; }
-  figcaption { font-size:8.8pt; color:#b3bdd4; margin-top:5px; font-style:italic; line-height:1.35; }
-  .chartbox { background:rgba(11,16,30,0.72); border:1px solid rgba(160,180,220,0.3);
-              border-radius:8px; padding:10px 8px 4px 8px; }
-  blockquote { margin:10px 0; padding:8px 14px; border-left:3px solid #f0c469;
-               background:rgba(240,196,105,0.1); font-style:italic; color:#fbf6e8; }
-  .disclaimer { border:1px solid rgba(240,196,105,0.45); border-radius:8px;
-                background:rgba(240,196,105,0.07); padding:11px 15px; margin:14px 0 4px 0;
-                font-size:9pt; line-height:1.5; color:#e7e0cf; }
-  .disclaimer p { margin:0 0 7px 0; }
-  .disclaimer p:last-child { margin-bottom:0; }
-  .disclaimer .retro { color:#a9b8d8; font-size:8.6pt; }
-  .verdict { border:1px solid rgba(240,196,105,0.6); border-radius:8px; padding:12px 16px;
-             background:linear-gradient(180deg, rgba(240,196,105,0.16), rgba(240,196,105,0.05)); margin:12px 0; }
-  .verdict .win { color:#f0c469; font-weight:700; font-size:12pt; }
-  .foot { margin-top:9px; padding-top:8px; border-top:1px solid rgba(160,180,220,0.28);
-          color:#9aa6c4; font-size:8.4pt; }
-  .meta { border:1px solid rgba(160,180,220,0.32); border-radius:7px; padding:8px 13px;
-          background:rgba(15,21,38,0.42); margin:10px 0 4px 0; font-size:9pt; line-height:1.5; }
-  .meta .row { display:flex; gap:8px; padding:1.5px 0; }
-  .meta .k { color:#a9b8d8; min-width:104px; flex:0 0 104px; text-transform:uppercase;
-             letter-spacing:0.6px; font-size:8.2pt; padding-top:1px; }
-  .meta .v { color:#eef2fa; }
-  .appendix { border-top:1px solid rgba(160,180,220,0.28); margin-top:14px; padding-top:8px; }
-  .appendix h3 { color:#f0c469; margin:0 0 5px 0; font-size:10pt; letter-spacing:0.4px; }
-  .appendix .ap { font-size:8.7pt; color:#c7cfe0; line-height:1.46; margin:0 0 4px 0; }
-  .appendix .ap b { color:#eef2fa; }
-  .ornament { text-align:center; margin:6px 0 2px 0; }
-  svg { display:block; }
-  .bars text { font-family:"Georgia",serif; }
+  .page{ counter-reset: sec; }
+
+  /* running head + folio */
+  .runhead{ text-align:center; font-family:"EB Garamond SC","EB Garamond 12",serif;
+            font-variant:small-caps; letter-spacing:3px; font-size:8.4pt;
+            color:var(--ox); margin:0 0 2px 0; }
+  .folio{ text-align:center; color:var(--ink-soft); font-size:9pt; margin-top:10px;
+          font-style:italic; }
+  .folio .sep{ color:var(--sepia-d); margin:0 7px; }
+
+  h1{ font-family:"EB Garamond 12","Georgia",serif; font-size:30pt; line-height:1.05;
+      margin:2px 0 6px 0; color:#120b03; font-weight:700; text-align:center;
+      letter-spacing:0.2px; }
+  h1 .em{ color:var(--ox); font-style:italic; font-weight:500; }
+
+  h2{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+      font-size:14pt; letter-spacing:1.2px; margin:20px 0 7px 0; color:var(--ox);
+      font-weight:600; padding-bottom:5px;
+      border-bottom:1px solid var(--sepia); }
+  h2::before{ counter-increment:sec; content:counter(sec,decimal-leading-zero);
+      font-family:"EB Garamond SC",serif; font-size:9.5pt; color:var(--ox-br);
+      letter-spacing:1px; margin-right:11px; vertical-align:1.5px;
+      border-bottom:none; }
+
+  h3{ font-family:"EB Garamond 12","Georgia",serif; font-size:12pt; font-style:italic;
+      margin:14px 0 3px 0; color:#3a2c1b; font-weight:600; }
+
+  p{ margin:0 0 8px 0; text-align:justify; hyphens:auto; }
+
+  .kicker{ text-align:center; color:var(--ink-soft); font-size:9pt; letter-spacing:3.4px;
+           text-transform:uppercase; margin:8px 0 6px 0;
+           font-family:"EB Garamond SC","EB Garamond 12",serif; }
+
+  .lede{ font-size:12.6pt; color:#3a2c1b; font-style:italic; line-height:1.5;
+         margin:8px 4mm 6px 4mm; text-align:center; }
+
+  /* drop cap on the first body paragraph */
+  .drop::first-letter{ font-family:"EB Garamond Initials","EB Garamond 12",serif;
+      float:left; font-size:52pt; line-height:0.82; padding:4px 8px 0 0;
+      color:var(--ox); font-weight:600; }
+
+  .rule{ height:0; border:none; text-align:center; margin:14px 0; color:var(--ox); }
+  .rule::before{ content:"\2766"; font-size:13pt; color:var(--ox);
+      display:inline-block; }
+  .rule.line{ border-top:1px solid var(--sepia); margin:13px 0; }
+  .rule.line::before{ content:""; }
+
+  .term{ color:var(--ox); font-style:italic; }
+
+  .gloss{ display:block; background:var(--tint); border-left:3px solid var(--ox);
+          padding:8px 13px; margin:9px 0; font-size:10.2pt; color:#3b2e1d;
+          line-height:1.46; }
+  .gloss b{ color:var(--ox); font-weight:600; }
+
+  .duel{ display:flex; gap:13px; margin:11px 0; }
+  .card{ flex:1; border:1px solid var(--sepia); padding:11px 13px; background:#fbf5e6; }
+  .card .who{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+              font-size:10pt; letter-spacing:1.2px; margin-bottom:4px; font-weight:600; }
+  .pro .who{ color:var(--blue); }
+  .con .who{ color:var(--terra); }
+  .pro{ border-top:2.5px solid var(--blue); }
+  .con{ border-top:2.5px solid var(--terra); }
+  .card .stance{ font-size:10.4pt; color:#34281a; line-height:1.45; }
+
+  figure{ margin:15px 0 9px 0; text-align:center; }
+  figcaption{ font-size:9.2pt; color:var(--ink-soft); margin-top:6px; font-style:italic;
+              line-height:1.4; padding:0 6mm; }
+  .chartbox{ background:var(--chart); border:1px solid var(--sepia);
+             padding:11px 9px 5px 9px; }
+
+  blockquote{ margin:11px 6mm; padding:6px 16px; border-left:3px solid var(--ox);
+              font-style:italic; color:#3a2c1b; font-size:11.6pt; }
+
+  .disclaimer{ border:1px solid var(--sepia); border-radius:4px;
+               background:var(--tint); padding:11px 15px; margin:14px 0 4px 0;
+               font-size:9pt; line-height:1.5; color:#473722; }
+  .disclaimer p{ margin:0 0 7px 0; }
+  .disclaimer p:last-child{ margin-bottom:0; }
+  .disclaimer .retro{ color:var(--ink-soft); font-size:8.6pt; font-style:italic; }
+
+  .verdict{ border-top:2px solid var(--ox); border-bottom:2px solid var(--ox);
+            padding:12px 16px; margin:14px 0; background:#fbf3e0; }
+  .verdict .win{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+                 color:var(--ox); font-weight:600; font-size:13pt; letter-spacing:0.8px; }
+
+  .meta{ border:1px solid var(--sepia); padding:9px 14px; background:#fbf5e6;
+         margin:11px 0 6px 0; font-size:10pt; line-height:1.5; }
+  .meta .row{ display:flex; gap:10px; padding:2px 0; }
+  .meta .k{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+            color:var(--ox); min-width:118px; flex:0 0 118px; letter-spacing:0.5px;
+            font-size:9.6pt; }
+  .meta .v{ color:var(--ink); }
+
+  .appendix{ border-top:1px solid var(--sepia); margin-top:15px; padding-top:9px; }
+  .appendix h3{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+                color:var(--ox); margin:0 0 6px 0; font-size:11pt; font-style:normal;
+                letter-spacing:0.6px; }
+  .appendix .ap{ font-size:9.4pt; color:#473722; line-height:1.48; margin:0 0 5px 0; }
+  .appendix .ap b{ color:var(--ox); }
+
+  .ornament{ text-align:center; margin:8px 0 2px 0; color:var(--ox); }
+  .ornament .fleuron{ font-size:17pt; color:var(--ox); letter-spacing:6px; }
+
+  .foot{ margin-top:11px; padding-top:9px; border-top:1px solid var(--sepia);
+         color:var(--ink-soft); font-size:9pt; line-height:1.46; font-style:italic; }
+  svg{ display:block; }
+  .bars text{ font-family:"EB Garamond 12","Georgia",serif; }
 </style>
 </head>
 <body>
 <div class="page">
 
-<div class="ornament">
-<svg width="180" height="26" viewBox="0 0 180 26">
-  <g stroke="#d9b25b" stroke-width="1.4" fill="none" opacity="0.9">
-    <line x1="20" y1="6" x2="86" y2="20"/>
-    <line x1="160" y1="6" x2="94" y2="20"/>
-    <circle cx="20" cy="6" r="2.4" fill="#f0c469"/>
-    <circle cx="160" cy="6" r="2.4" fill="#f0c469"/>
-  </g>
-  <circle cx="90" cy="13" r="3" fill="#f0c469"/>
-</svg>
-</div>
+<p class="runhead">Duellum Veritatis &middot; nightly duel</p>
+<div class="ornament"><span class="fleuron">&#10086;&#10087;&#10086;</span></div>
 
 <p class="kicker">A nocturnal duel · science explainer</p>
-<h1>Two Choirs in the Dark</h1>
+<h1>Two Choirs <span class="em">in the Dark</span></h1>
 <p class="lede">When two crowds clap in the same rhythm — are they hearing each other, or just both catching the same signal from outside? And can the two cases even be told apart by watching alone?</p>
+
+<figure style="margin:18px 0 12px 0;">
+  <img src="art/no3-cover.jpg" alt="Two choirs facing each other in the dark, sound waves between them and a beacon above, sepia engraving" style="width:100%; max-width:680px; border:1px solid var(--sepia); box-shadow:0 1px 0 #fff inset, 0 2px 8px rgba(60,44,20,.12);" />
+  <figcaption>Two choirs fall into the same rhythm in the dark — locked to one signal from above, or only to each other? Telling those apart from watching alone is the whole duel.</figcaption>
+</figure>
 
 <div class="disclaimer" role="note">
   <p><b>Статус:</b> публичный состязательный AI stress-test. Это не peer review, не научное доказательство и не подтверждение тезиса. Две AI-стороны спорили о заранее зафиксированном утверждении по фиксированному протоколу; независимый AI-арбитр вынес структурный вердикт. Для числовых утверждений опубликованные числа происходят только из приложенного воспроизводимого compute bundle. Публикация означает, что выпуск прошёл release gate; она не повышает статус утверждения до открытия.</p>
@@ -108,7 +170,7 @@
 
 <div class="rule"></div>
 
-<p>Picture two choirs singing in adjacent halls. At first each holds its own part, but a minute later you notice: they are singing in time. Their voices have synchronized. Then comes a deceptively simple question. There are two reasons this could have happened:</p>
+<p class="drop">Picture two choirs singing in adjacent halls. At first each holds its own part, but a minute later you notice: they are singing in time. Their voices have synchronized. Then comes a deceptively simple question. There are two reasons this could have happened:</p>
 
 <div class="duel">
   <div class="card pro">
@@ -135,7 +197,7 @@
 <p>Athos (for the thesis) bets on <b>symmetry</b>: if both choirs are equal partners, neither leading the other, then the most obvious "clues" — who runs ahead of whom, which way the influence flows — cancel out for both versions at once. And if so, there is nothing left to tell them apart.</p>
 <p>Aramis (on the attack) replies: "It isn't the pair of choirs that's blind — only <i>your particular clue</i> is. There is another, subtler one, and it does tell them apart."</p>
 
-<div class="rule"></div>
+<div class="rule line"></div>
 
 <h2>The duel: not rhetoric, but arithmetic</h2>
 <p>What set this duel apart: every blow was backed not by words but by a computation. The duelists took turns running an honest simulation of the two choirs and measuring their clues on it. And the opening thrusts exposed a trap that is easy to fall into.</p>
@@ -158,42 +220,42 @@
 <div class="chartbox">
 <svg class="bars" width="640" height="318" viewBox="0 0 640 318">
   <!-- axes -->
-  <line x1="58" y1="22" x2="58" y2="254" stroke="#586079" stroke-width="1"/>
-  <line x1="58" y1="215.3" x2="602" y2="215.3" stroke="#586079" stroke-width="1"/>
+  <line x1="58" y1="22" x2="58" y2="254" stroke="#9c8a5e" stroke-width="1"/>
+  <line x1="58" y1="215.3" x2="602" y2="215.3" stroke="#9c8a5e" stroke-width="1"/>
   <!-- y ticks -->
-  <g fill="#9aa6c0" font-size="9" text-anchor="end">
+  <g fill="#6b5d45" font-size="9" text-anchor="end">
     <text x="52" y="25">1.0</text>
     <text x="52" y="121.7">0.5</text>
     <text x="52" y="218.3">0.0</text>
   </g>
-  <g stroke="#2b3550" stroke-width="0.8" stroke-dasharray="3,3">
+  <g stroke="#d8c9a3" stroke-width="0.8" stroke-dasharray="3,3">
     <line x1="58" y1="22" x2="602" y2="22"/>
     <line x1="58" y1="118.7" x2="602" y2="118.7"/>
   </g>
   <!-- x ticks -->
-  <g fill="#9aa6c0" font-size="9" text-anchor="middle">
+  <g fill="#6b5d45" font-size="9" text-anchor="middle">
     <text x="58" y="270">-10</text>
     <text x="194" y="270">-5</text>
     <text x="330" y="270">0</text>
     <text x="466" y="270">+5</text>
     <text x="602" y="270">+10</text>
   </g>
-  <text x="330" y="292" fill="#8fa0c4" font-size="9.5" text-anchor="middle" font-style="italic">time shift (lag), steps</text>
-  <text x="16" y="138" fill="#8fa0c4" font-size="9.5" text-anchor="middle" font-style="italic" transform="rotate(-90 16 138)">coincidence of jolts</text>
+  <text x="330" y="292" fill="#7a6a4c" font-size="9.5" text-anchor="middle" font-style="italic">time shift (lag), steps</text>
+  <text x="16" y="138" fill="#7a6a4c" font-size="9.5" text-anchor="middle" font-style="italic" transform="rotate(-90 16 138)">coincidence of jolts</text>
   <!-- B curve (coupling): flat near zero -->
-  <polyline fill="none" stroke="#f2a07e" stroke-width="2"
+  <polyline fill="none" stroke="#9c4a22" stroke-width="2"
     points="58.0,216.9 85.2,216.8 112.4,215.6 139.6,216.9 166.8,215.0 194.0,216.5 221.2,216.0 248.4,216.0 275.6,216.3 302.8,214.8 330.0,215.7 357.2,215.1 384.4,215.7 411.6,215.8 438.8,215.2 466.0,215.8 493.2,214.4 520.4,214.8 547.6,216.4 574.8,215.1 602.0,215.4"/>
   <!-- A curve (common noise): sharp spike at lag 0 -->
-  <polyline fill="none" stroke="#8ec2f2" stroke-width="2"
+  <polyline fill="none" stroke="#27406b" stroke-width="2"
     points="58.0,215.8 85.2,215.6 112.4,215.4 139.6,213.1 166.8,216.5 194.0,214.2 221.2,214.6 248.4,214.2 275.6,215.6 302.8,214.2 330.0,28.4 357.2,213.8 384.4,215.1 411.6,214.1 438.8,215.1 466.0,214.3 493.2,216.3 520.4,212.7 547.6,214.4 574.8,215.4 602.0,215.9"/>
-  <circle cx="330" cy="28.4" r="3.5" fill="#8ec2f2"/>
+  <circle cx="330" cy="28.4" r="3.5" fill="#27406b"/>
   <!-- legend -->
   <g font-size="9.5">
-    <rect x="372" y="40" width="222" height="50" rx="5" fill="rgba(10,15,26,0.7)" stroke="#2b3550"/>
-    <line x1="384" y1="56" x2="408" y2="56" stroke="#8ec2f2" stroke-width="2.5"/>
-    <text x="414" y="59" fill="#cfd6e6">A · shared signal</text>
-    <line x1="384" y1="76" x2="408" y2="76" stroke="#f2a07e" stroke-width="2.5"/>
-    <text x="414" y="79" fill="#cfd6e6">B · mutual coupling</text>
+    <rect x="372" y="40" width="222" height="50" rx="3" fill="#fbf5e6" stroke="#c9b78c"/>
+    <line x1="384" y1="56" x2="408" y2="56" stroke="#27406b" stroke-width="2.5"/>
+    <text x="414" y="59" fill="#3a2c1b">A · shared signal</text>
+    <line x1="384" y1="76" x2="408" y2="76" stroke="#9c4a22" stroke-width="2.5"/>
+    <text x="414" y="79" fill="#3a2c1b">B · mutual coupling</text>
   </g>
 </svg>
 </div>
@@ -207,27 +269,27 @@
 <svg width="560" height="194" viewBox="0 0 560 194">
   <!-- scale: x0=70 (=0.0), 470 (=1.0); 400px per unit -->
   <!-- random-guess baseline 0.5 at x=270 -->
-  <line x1="270" y1="20" x2="270" y2="140" stroke="#7f8aa8" stroke-width="0.9" stroke-dasharray="4,3"/>
-  <text x="270" y="14" fill="#a9b8d8" font-size="8.4" text-anchor="middle">random guessing · 0.5</text>
+  <line x1="270" y1="20" x2="270" y2="140" stroke="#9c8a5e" stroke-width="0.9" stroke-dasharray="4,3"/>
+  <text x="270" y="14" fill="#6b5d45" font-size="8.4" text-anchor="middle">random guessing · 0.5</text>
   <!-- bar 1: PLV only 0.73 -> width 292 -->
-  <text x="70" y="46" fill="#dfe5f2" font-size="9.5">coarse synchrony measure only</text>
-  <rect x="70" y="52" width="292" height="22" rx="3" fill="#8a96b4"/>
-  <text x="370" y="68" fill="#dde5f5" font-size="10" font-weight="bold">0.73</text>
+  <text x="70" y="46" fill="#3a2c1b" font-size="9.5">coarse synchrony measure only</text>
+  <rect x="70" y="52" width="292" height="22" rx="2" fill="#b9a577"/>
+  <text x="370" y="68" fill="#3a2c1b" font-size="10" font-weight="bold">0.73</text>
   <!-- bar 2: phase dynamics 1.00 -> width 400 -->
-  <text x="70" y="100" fill="#dfe5f2" font-size="9.5">+ instantaneous jolts and their lag</text>
-  <rect x="70" y="106" width="400" height="22" rx="3" fill="#f0c469"/>
-  <text x="478" y="122" fill="#f0c469" font-size="10" font-weight="bold">1.00</text>
+  <text x="70" y="100" fill="#3a2c1b" font-size="9.5">+ instantaneous jolts and their lag</text>
+  <rect x="70" y="106" width="400" height="22" rx="2" fill="#7a1717"/>
+  <text x="478" y="122" fill="#7a1717" font-size="10" font-weight="bold">1.00</text>
   <!-- x axis -->
-  <line x1="70" y1="140" x2="470" y2="140" stroke="#586079" stroke-width="1"/>
-  <g fill="#9aa6c0" font-size="8.4" text-anchor="middle">
-    <line x1="70" y1="140" x2="70" y2="145" stroke="#586079"/>
-    <line x1="270" y1="140" x2="270" y2="145" stroke="#586079"/>
-    <line x1="470" y1="140" x2="470" y2="145" stroke="#586079"/>
+  <line x1="70" y1="140" x2="470" y2="140" stroke="#9c8a5e" stroke-width="1"/>
+  <g fill="#6b5d45" font-size="8.4" text-anchor="middle">
+    <line x1="70" y1="140" x2="70" y2="145" stroke="#9c8a5e"/>
+    <line x1="270" y1="140" x2="270" y2="145" stroke="#9c8a5e"/>
+    <line x1="470" y1="140" x2="470" y2="145" stroke="#9c8a5e"/>
     <text x="70" y="157">0.0</text>
     <text x="270" y="157">0.5</text>
     <text x="470" y="157">1.0</text>
   </g>
-  <text x="270" y="180" fill="#a9b8d8" font-size="9" text-anchor="middle" font-style="italic">fraction correct on new recordings</text>
+  <text x="270" y="180" fill="#6b5d45" font-size="9" text-anchor="middle" font-style="italic">fraction correct on new recordings</text>
 </svg>
 </div>
 <figcaption>Accuracy of recognizing the mechanism from a recording (fraction correct, leave-one-out validation; the random-guess baseline is 0.5). The coarse synchrony measure is nearly useless; the subtle clue about instantaneous jolts separates the versions completely.</figcaption>
@@ -245,14 +307,7 @@
 
 <p><b>Why this matters beyond the hall of choirs.</b> The same question arises wherever two systems "move in step": brain regions, market prices, populations, power grids. Seeing coordination, we want to know — do they influence each other, or are they simply driven by a shared invisible factor? An important caveat: the model examined here is two specific idealized versions, and no general law about all systems follows from it. But it poses the question cleanly: for each pair of "shared factor versus mutual influence," it is worth checking separately whether the mechanism leaves a passive fingerprint — or whether it can be distinguished only by intervention. Here a fingerprint was found for a simple shared factor; how far it survives added complexity is the matter for the next duel.</p>
 
-<div class="ornament" style="margin-top:7px">
-<svg width="160" height="20" viewBox="0 0 160 20">
-  <g stroke="#d9b25b" stroke-width="1.2" opacity="0.85">
-    <line x1="10" y1="10" x2="70" y2="10"/><line x1="90" y1="10" x2="150" y2="10"/>
-  </g>
-  <circle cx="80" cy="10" r="3" fill="#f0c469"/>
-</svg>
-</div>
+<div class="ornament"><span class="fleuron">&#10086;&#10087;&#10086;</span></div>
 
 <div class="appendix">
 <h3>Appendix · simulation parameters</h3>
@@ -261,13 +316,15 @@
 <p class="ap"><b>Version B (mutual coupling).</b> Weak symmetric coupling between the groups (strength 0.02), no common noise; the same intra-group noise (0.6).</p>
 <p class="ap"><b>Operating point and averaging.</b> Both versions are in a strong-synchrony regime (PLV: A ≈ 0.72, B ≈ 0.97; perfect equality cannot be reached — see "the false-comparison trap"). The jolt-coincidence curve is averaged over 8 independent runs (random seeds 0–7).</p>
 <p class="ap"><b>Recognition (lower chart).</b> Accuracy obtained on the final move of the duel: a logistic classifier, leave-one-out validation, ~30 runs per version; the random-guess baseline is 0.5.</p>
-<p class="ap" style="color:#9aa6c4">The numbers are illustrative: they reproduce the duel's key result and do not claim to be a full paper. Full reproducibility requires the simulation source code.</p>
+<p class="ap" style="color:#6b5d45">The numbers are illustrative: they reproduce the duel's key result and do not claim to be a full paper. Full reproducibility requires the simulation source code.</p>
 </div>
 
 <div class="foot">
 The duel's direction was inspired by the paper <i>"Common Noise-Induced Group-Level Synchronization Between Uncoupled Groups of Oscillators"</i> (arXiv:2605.29529). The dispute was not about the paper itself but about a stronger hypothesis it suggests: the in-principle (in)distinguishability of common noise and weak coupling from passive observation. All numbers in the charts come from simulating the Kuramoto model for two groups of oscillators.
-<br><span style="color:#7f8aa8">© 2026 Occam Research · Licensed under CC BY-NC-ND 4.0</span>
+<br><span style="color:#6a5c43">© 2026 Occam Research · Licensed under CC BY-NC-ND 4.0</span>
 </div>
+
+<div class="folio">Duellum Veritatis<span class="sep">&#10086;</span>occam.world</div>
 
 </div>
 </body>
