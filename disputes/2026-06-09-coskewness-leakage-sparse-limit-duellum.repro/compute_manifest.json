@@ -1,0 +1,45 @@
+{
+  "compute_kind": "real_compute",
+  "started_at": "2026-06-09T11:40:00Z",
+  "script": "2026-06-09_repro.py",
+  "script_sha256": "sha256:96b75e723ed1ee112feaaf526f2527a986ad53716e08129aa9ab9943a171759b",
+  "inputs": [],
+  "environment": {
+    "python": "Python 3.12.3",
+    "packages": "numpy 2.4.4, scipy 1.17.1",
+    "platform": "Linux-6.8.0-111-generic-x86_64"
+  },
+  "random_seed": "none: deterministic exact 2^N state enumeration and convex MaxEnt fits; no RNG used",
+  "outputs": [
+    {
+      "path": "2026-06-09_cc_data.json",
+      "sha256": "sha256:d81626872f4f3016d6072d2e1704070ccebaf0b7cdb441310f20b76062589a4a",
+      "metric": "test_A.explained_entropy_max_abs_deviation_bits (max deviation of pairwise explained entropy S1-S2 across the coskewness sweep, sign change included)",
+      "value": 0.0,
+      "tolerance": "exact: explained entropy is a function of first and second moments only, held fixed across the sweep"
+    },
+    {
+      "path": "2026-06-09_cc_data.json",
+      "sha256": "sha256:d81626872f4f3016d6072d2e1704070ccebaf0b7cdb441310f20b76062589a4a",
+      "metric": "test_A.true_entropy_swing_bits (range of the TRUE entropy S_N over the same coskewness sweep)",
+      "value": 0.17533644345490385,
+      "tolerance": "exact enumeration; coskewness moves S_N (and the residual S2-S_N) while S1-S2 stays fixed"
+    },
+    {
+      "path": "2026-06-09_cc_data.json",
+      "sha256": "sha256:d81626872f4f3016d6072d2e1704070ccebaf0b7cdb441310f20b76062589a4a",
+      "metric": "test_B.hof_max (largest higher-order entropy fraction 1-capt across p_obs 0.30..0.005 in the dichotomized-Gaussian family)",
+      "value": 0.0586353794105291,
+      "tolerance": "exact enumeration; bounded well below 1, monotone but saturating"
+    },
+    {
+      "path": "2026-06-09_cc_data.json",
+      "sha256": "sha256:d81626872f4f3016d6072d2e1704070ccebaf0b7cdb441310f20b76062589a4a",
+      "metric": "test_B.capt_min (smallest fraction of multi-information captured by the pairwise model at p_obs=0.005)",
+      "value": 0.9413646205894709,
+      "tolerance": "exact enumeration; stays >0.94 down to p_obs~0.005"
+    }
+  ],
+  "rerun_instruction": "python3 2026-06-09_repro.py  # writes 2026-06-09_cc_data.json (requires numpy 2.4.4)",
+  "known_limitations": "Exact computation, but on small synthetic ensembles, not neural recordings. TEST A is an exact 3-spin enumeration: it establishes the definitional point (the pairwise MaxEnt explained entropy S1-S2 is a function of first and second moments only, so coskewness cannot enter it) and is exhaustive for that point. TEST B is a finite-N (N=5) equicorrelated dichotomized-Gaussian sparse family with latent correlation rho=0.30; it shows the higher-order entropy fraction stays bounded (<0.06) down to p_obs~0.005 rather than rising to 1, the falsifier the thesis itself requested, but it does not enumerate every biologically plausible sparse model (e.g. heavy-tailed shared-gain families with genuine tail dependence may move HOF higher, though never into S1-S2). The MaxEnt fits are L-BFGS-B on the convex dual; deep-sparse points beyond p_obs~0.005 were excluded because orthant probabilities and the optimiser become numerically fragile there (the duel transcript saw exactly such breakage at p~1e-5)."
+}

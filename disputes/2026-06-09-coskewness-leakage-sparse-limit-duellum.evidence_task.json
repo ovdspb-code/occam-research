@@ -1,0 +1,105 @@
+{
+  "task_id": "dv-no7-coskewness-leakage-2026-06-09",
+  "frozen_claim": "В биологически реалистичном sparse-режиме coskewness-driven leakage не просто присутствует, а доминирует асимптотически: при p→0 (средняя активность к нулю) при фиксированной парной корреляционной структуре доля энтропии, ошибочно приписанная first-order параметрам через information projection, монотонно растёт к 1, так что 'объяснённая энтропия' парной MaxEnt-модели сходится к величине, задаваемой целиком higher-order coskewness, а не подлинным парным механизмом — следовательно в sparse-пределе этот показатель асимптотически неинформативен о механизме без временных/state-диагностик.",
+  "frozen_at": "2026-06-09T02:01:18Z",
+  "registered_before_compute": true,
+  "registered_at": "2026-06-09T02:01:18Z",
+  "registered_by": "b2b-20260609-020118 (duel generator session)",
+  "pre_compute_event_id": "b2b-20260609-020118",
+  "decisive": true,
+  "observable": {
+    "name": "explained_entropy_invariance_to_coskewness_and_dg_higher_order_bound",
+    "definition": "Two exact probes on small binary ensembles. (A, DECISIVE) Definitional invariance: hold the first moments (means) and the second moments (pairwise correlations) of a 3-spin binary distribution fixed and sweep the third moment / connected coskewness over the widest feasible window, including a sign change; the pairwise MaxEnt explained entropy S1-S2 is a function of those constrained moments alone, so it must be invariant to the third moment. Measure the maximum absolute deviation of S1-S2 across the sweep against the swing of the TRUE entropy S_N (where the residual S2-S_N, in which coskewness actually lives, moves). (B) Falsifier family: an equicorrelated dichotomized-Gaussian sparse ensemble (N=5, latent rho=0.30); as the threshold pushes mean activity p toward zero (0.30..0.005), measure the higher-order fraction HOF = 1 - (S1-S2)/(S1-S_N). The STRONG thesis (HOF -> 1 as p -> 0, explained entropy becoming asymptotically uninformative) is FALSIFIED if (a) S1-S2 is invariant to coskewness at fixed first/second moments (max abs deviation ~ 0 while S_N swings) AND (b) HOF stays bounded well below 1 down to the sparsest tested p rather than rising to 1.",
+    "paper_faithful": false,
+    "evidence_basis": "semi_analytic",
+    "source_ref": "arXiv:2606.01661 (Safaai & Sabatini, Feature leakage and the identifiability of direct-dependency entropy models of neural activity) -- seed paper establishing that feature leakage exists and has a coskewness form for sparse correlated binary inputs; the duel tests a SEPARATE strong scaling claim (coskewness-leakage dominating asymptotically so explained entropy becomes uninformative in the sparse limit) on synthetic exactly-enumerable ensembles, not the paper's leakage-existence result."
+  },
+  "model": {
+    "generative": "Exact, deterministic (numpy/scipy). (A) Unique 3-spin joint matching means m, pairwise E[xi xj] and triple moment t solved as 8 linear constraints over 8 states; sweep t over the feasible window (41 grid points), refit pairwise (S2) and independent (S1) MaxEnt by exact 2^3 enumeration on the convex dual. (B) Equicorrelated dichotomized Gaussian, N=5, latent rho=0.30; exact state probabilities by inclusion-exclusion over orthant probabilities; fit pairwise/independent MaxEnt by exact 2^5 enumeration.",
+    "config": "TEST A: p0=0.18, pairwise rho=0.20, t-grid 41 points across feasible window, coskewness c3 from -0.022 to +0.040 (sign change). TEST B: N=5, latent rho=0.30, p_target in {0.30,0.15,0.08,0.04,0.02,0.01,0.005}. MaxEnt fits: L-BFGS-B on the convex dual, ftol=1e-15, gtol=1e-12.",
+    "controls": "TEST A holds first and second moments fixed while only the third moment moves, isolating the definitional claim that S1-S2 cannot depend on coskewness. TEST B is the falsifier family the thesis itself requested: a standard sparse latent spike model where, by Sibuya (1960) tail independence, the triple correlation fades faster than the pairwise one."
+  },
+  "comparators": [
+    {
+      "name": "coskewness_sweep_fixed_first_second_moments",
+      "role": "structured"
+    },
+    {
+      "name": "dichotomized_gaussian_sparse_family",
+      "role": "null_model"
+    },
+    {
+      "name": "true_entropy_S_N_swing",
+      "role": "baseline"
+    }
+  ],
+  "thresholds": {
+    "explained_entropy_deviation_max_bits": 0.001,
+    "dg_higher_order_fraction_ceiling": 0.9,
+    "decision_rule": "The STRONG thesis is FALSIFIED (CON) if (A) the pairwise MaxEnt explained entropy S1-S2 deviates by less than 0.001 bits across the full coskewness sweep (sign change included) while the true entropy S_N swings by a non-trivial amount -- showing coskewness cannot enter S1-S2 -- AND (B) the dichotomized-Gaussian higher-order fraction stays below 0.9 (in fact bounded well under it) down to p ~ 0.005 instead of rising toward 1. The thesis would SURVIVE only if S1-S2 moved with coskewness at fixed first/second moments, or HOF rose toward 1 as p -> 0."
+  },
+  "metrics": [
+    {
+      "name": "explained_entropy_max_abs_deviation_bits",
+      "variants": [
+        "raw"
+      ]
+    },
+    {
+      "name": "true_entropy_swing_bits",
+      "variants": [
+        "raw"
+      ]
+    },
+    {
+      "name": "dg_higher_order_fraction_vs_p",
+      "variants": [
+        "raw"
+      ]
+    }
+  ],
+  "seeds": {
+    "count": 0,
+    "level": "run",
+    "streams": [
+      "none: exact 2^N state enumeration and deterministic convex MaxEnt (L-BFGS-B) fits; no RNG used"
+    ]
+  },
+  "nulls": [
+    "coskewness_sweep_fixed_first_second_moments: with first and second moments held fixed, the pairwise MaxEnt explained entropy S1-S2 must be constant; it is (max abs deviation 0.000 bits to machine precision), so coskewness cannot make explained entropy higher-order.",
+    "dichotomized_gaussian_sparse_family: as p -> 0 the higher-order fraction must rise to 1 for the thesis to hold; instead it stays below 0.06 down to p ~ 0.005, so leakage FALLS rather than dominates in this standard sparse family."
+  ],
+  "failure_modes": [
+    "Exact computation but on small synthetic ensembles, not neural recordings; the decisive observable is synthetic (paper_faithful=false).",
+    "TEST A is an exhaustive 3-spin enumeration of a definitional point; it does not address dynamics or larger N.",
+    "TEST B is a finite-N (N=5) equicorrelated dichotomized-Gaussian family; it does not enumerate every biologically plausible sparse model -- heavy-tailed shared-gain families with genuine tail dependence may move HOF higher (though never into S1-S2).",
+    "Deep-sparse points beyond p ~ 0.005 were excluded because orthant probabilities and the optimiser become numerically fragile there.",
+    "The phrase 'coskewness-driven leakage' was never given a precise definition by the thesis; the duel resolves the explained-entropy reading, not every conceivable sense of the phrase."
+  ],
+  "accepted_evidence_criteria": "Falsification of the strong thesis is accepted if (A) the explained-entropy max abs deviation across the coskewness sweep is < 0.001 bits while S_N swings non-trivially (coskewness cannot enter S1-S2), AND (B) the dichotomized-Gaussian higher-order fraction stays below 0.9 down to p ~ 0.005, demonstrating a sparse family where leakage falls rather than dominates.",
+  "rejected_evidence_criteria": "The opening 'leakage fraction -> 1' demonstration at p=0.05 is not admitted: it was a 0/0 numerical artifact of the pairwise model collapsing to a near-zero-entropy state, not a scaling law. No real-neural-data claim about coskewness leakage is admitted from these synthetic ensembles regardless of outcome; the seed paper's leakage-existence result is not contested.",
+  "sensitivity_grid": {
+    "p0_mean_activity": [
+      0.18
+    ],
+    "pairwise_rho": [
+      0.2
+    ],
+    "triple_moment_grid_points": [
+      41
+    ],
+    "dg_p_target": [
+      0.3,
+      0.15,
+      0.08,
+      0.04,
+      0.02,
+      0.01,
+      0.005
+    ],
+    "dg_latent_rho": [
+      0.3
+    ],
+    "seeds": 0
+  }
+}

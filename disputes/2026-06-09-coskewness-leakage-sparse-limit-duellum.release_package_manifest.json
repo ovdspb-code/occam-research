@@ -1,0 +1,57 @@
+{
+  "duel_id": "dv-0007",
+  "generated_at": "2026-06-09T00:00:00Z",
+  "package_status": "checked",
+  "files": [
+    {
+      "path": "2026-06-09-coskewness-leakage-sparse-limit-duellum.arbiter_report.json",
+      "sha256": "sha256:aa79b573388de34b6f32ad05a91f41927f86f3276a90bd8ca4cd76af5c79636c",
+      "public": true
+    },
+    {
+      "path": "2026-06-09-coskewness-leakage-sparse-limit-duellum.claim_evidence_matrix.json",
+      "sha256": "sha256:7f7b7a1dd4816bb47858980f5c983f5ea79f84720557ec53e3255df8ead8343b",
+      "public": true
+    },
+    {
+      "path": "2026-06-09-coskewness-leakage-sparse-limit-duellum.evidence_task.json",
+      "sha256": "sha256:0fd48a2c7d9bfdc4aa183894f1a4b9f7193c49b2ee7bffabe3f0e77461c565f7",
+      "public": true
+    },
+    {
+      "path": "2026-06-09-coskewness-leakage-sparse-limit-duellum.html",
+      "sha256": "sha256:fd8360f6699cffdc93e0c6b2c42e5a7ff02759e30c8ae717b6bba97d1c3ea23f",
+      "public": true
+    },
+    {
+      "path": "2026-06-09-coskewness-leakage-sparse-limit-duellum.metadata.json",
+      "sha256": "sha256:2951a98d1abe610a67099890cda400908a057803b5325274e23a63e2e8fa0b88",
+      "public": true
+    },
+    {
+      "path": "2026-06-09-coskewness-leakage-sparse-limit-duellum.order_swap_audit.json",
+      "sha256": "sha256:f44b996a21bf570fa119991f52220f4bfed37ff871fea813f119fbf90b986095",
+      "public": true
+    },
+    {
+      "path": "2026-06-09-coskewness-leakage-sparse-limit-duellum.pdf",
+      "sha256": "sha256:565dfb8ea681f24c1a2cacf7c116b1d5a72af88ac107c340d0f8d5fa9599a019",
+      "public": true
+    },
+    {
+      "path": "2026-06-09-coskewness-leakage-sparse-limit-duellum.repro/2026-06-09_cc_data.json",
+      "sha256": "sha256:d81626872f4f3016d6072d2e1704070ccebaf0b7cdb441310f20b76062589a4a",
+      "public": true
+    },
+    {
+      "path": "2026-06-09-coskewness-leakage-sparse-limit-duellum.repro/2026-06-09_repro.py",
+      "sha256": "sha256:96b75e723ed1ee112feaaf526f2527a986ad53716e08129aa9ab9943a171759b",
+      "public": true
+    },
+    {
+      "path": "2026-06-09-coskewness-leakage-sparse-limit-duellum.repro/compute_manifest.json",
+      "sha256": "sha256:7a5e9a5f7f2d74009bce15563746bcc3242c1e5762555abe876ca3cec0c4a0a6",
+      "public": true
+    }
+  ]
+}

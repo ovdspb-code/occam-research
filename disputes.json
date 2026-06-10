@@ -1,9 +1,47 @@
 {
-  "updated": "2026-06-08",
+  "updated": "2026-06-09",
   "series": "Duellum Veritatis",
   "subtitle": "Adversarial science digests — a thesis defended and attacked to a verdict, every claim backed by computation.",
   "doi": "10.5281/zenodo.20528909",
   "disputes": [
+    {
+      "id": "2026-06-09-coskewness-leakage-sparse-limit-duellum",
+      "no": 7,
+      "title": "When Triple Correlations Fall Silent",
+      "subtitle": "A frozen sparse-limit claim that coskewness leakage hijacks a pairwise model's 'explained entropy' until the number means nothing, stress-tested on exactly-enumerable binary ensembles: can a third-order moment move a yardstick built from first and second moments?",
+      "date": "2026-06-09",
+      "verdict": "CON: the strong sparse-limit claim is not supported. The pairwise MaxEnt explained entropy S1-S2 is a function of first and second moments only, so coskewness cannot make it higher-order while those moments are fixed; and in a standard dichotomized-Gaussian sparse family the higher-order fraction stays below 0.06 down to p~0.005 rather than rising to 1.",
+      "tags": [
+        "maximum-entropy",
+        "higher-order-correlations",
+        "coskewness",
+        "sparse-neural-codes",
+        "information-theory"
+      ],
+      "html": "disputes/2026-06-09-coskewness-leakage-sparse-limit-duellum.html",
+      "pdf": "disputes/2026-06-09-coskewness-leakage-sparse-limit-duellum.pdf",
+      "doi": "10.5281/zenodo.20528909",
+      "outcome": "CON",
+      "basis": "real_compute",
+      "claim_type": "numeric",
+      "arbitration_status": "STABLE",
+      "protocol_status": "FAIL",
+      "prior_work_check": "not_applicable",
+      "release_identity": {
+        "duel_id": "dv-0007",
+        "claim_hash": "sha256:cedc4e3d8b823a54079fcd81d301e418e82a5777a2b2b75e678049b6448bb5ef",
+        "source_session_hash": "sha256:e46b3ee585a40cd43ba16239720c64410a856a4e347e584bbc79899f0770daf1",
+        "frozen_at": "2026-06-09T02:01:18Z",
+        "compound_hash": "sha256:4d3364fa3f314476c0d7ce40504565e720a663991423b69907d70d9ec8a4a1ba"
+      },
+      "metadata": "disputes/2026-06-09-coskewness-leakage-sparse-limit-duellum.metadata.json",
+      "methodology": {
+        "claim_evidence_matrix": "disputes/2026-06-09-coskewness-leakage-sparse-limit-duellum.claim_evidence_matrix.json",
+        "arbiter_report": "disputes/2026-06-09-coskewness-leakage-sparse-limit-duellum.arbiter_report.json",
+        "evidence_task": "disputes/2026-06-09-coskewness-leakage-sparse-limit-duellum.evidence_task.json",
+        "order_swap_audit": "disputes/2026-06-09-coskewness-leakage-sparse-limit-duellum.order_swap_audit.json"
+      }
+    },
     {
       "id": "2026-06-08-neural-chaos-vs-stable-chains",
       "no": 6,

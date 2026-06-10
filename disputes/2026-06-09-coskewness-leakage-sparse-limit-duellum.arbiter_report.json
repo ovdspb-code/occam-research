@@ -1,0 +1,70 @@
+{
+  "report_id": "dv-no7-coskewness-leakage-2026-06-09",
+  "outcome_classification": "CON",
+  "accepted_facts": [
+    "Holding the first moments (p0=0.18) and pairwise correlations (rho=0.20) of a 3-spin distribution fixed and sweeping the connected coskewness across a sign change (c3 from -0.022 to +0.040), the pairwise MaxEnt explained entropy S1-S2 deviates by 0.000 bits (machine precision) while the true entropy S_N swings by 0.175 bits; the residual S2-S_N moves by up to 0.175 bits. S1-S2 is a function of the constrained first and second moments alone.",
+    "In an equicorrelated dichotomized Gaussian (N=5, latent rho=0.30), the higher-order fraction 1-(S1-S2)/(S1-S_N) stays below 0.06 (max 0.0586) as mean activity p falls from 0.30 to 0.005; the pairwise model still captures 0.941-0.996 of the multi-information at the sparsest tested point.",
+    "The opening 'leakage fraction -> 1' demonstration at p=0.05 was a 0/0 artifact: the pairwise model collapsed to a near-zero-entropy state and the fraction was read as a ratio of two near-zeros, not a scaling law.",
+    "By Sibuya (1960) asymptotic independence of Gaussian tails, the triple correlation of a dichotomized Gaussian decays exponentially faster than the pairwise one under sparsification, consistent with the exact test_B numbers."
+  ],
+  "rejected_or_quarantined_evidence": [
+    "The opening leakage-fraction -> 1 figure is not admitted as evidence of higher-order dominance: it is an optimiser breakdown (near-zero / near-zero), not an asymptotic law.",
+    "Any reading of the dichotomized-Gaussian result as proof about real neural ensembles is rejected: the test is synthetic/exact, not a measurement on neural data."
+  ],
+  "argument_quality": "CON held the frozen quantifiable thesis, caught the 0/0 artifact in PRO's opening computation, supplied the falsifier family the thesis itself requested (a dichotomized Gaussian where the triple term fades faster than the pairwise one), and kept the dispute on the named quantity -- the explained entropy S1-S2 -- where the decisive definitional argument applies. PRO's strongest surviving point is that 'coskewness-driven leakage' was never precisely defined and that exotic shared-gain ensembles might carry genuine tail dependence; that is a question about the residual and about specific families, not about the S1-S2 yardstick the thesis named.",
+  "protocol_conduct": "Six alternating moves, clean arbiter verdict; the decisive test is pre-registered before compute and schema-valid; real deterministic numpy/scipy compute by exact 2^N enumeration and convex MaxEnt fits with no RNG; order-swap audit PASS (substantive call 'con' on both the natural and swapped runs). A verbosity-confound warning is flagged.",
+  "evidence_quality": "Real, deterministic, rerunnable exact computation, but on small synthetic ensembles calibrated to a sparse correlated-binary setting, not neural data; the decisive observable is synthetic (paper_faithful=false). It shows that the pairwise explained entropy S1-S2 cannot be made higher-order by coskewness at fixed first and second moments, and that in a standard sparse latent model the higher-order fraction stays bounded well below 1 rather than rising to 1. It cannot adjudicate whether some exotic biologically realistic ensemble carries genuine tail dependence in its residual.",
+  "what_it_supports": [
+    {
+      "statement": "The pairwise MaxEnt explained entropy S1-S2 is set by first and second moments only, so coskewness cannot make it higher-order while those moments are held fixed.",
+      "claim_id": "C1",
+      "evidence_id": "E1"
+    },
+    {
+      "statement": "In a standard dichotomized-Gaussian sparse model the higher-order fraction stays below 0.06 down to p ~ 0.005; leakage falls rather than dominates.",
+      "claim_id": "C2",
+      "evidence_id": "E2"
+    },
+    {
+      "statement": "Higher-order correlations fade faster than pairwise ones as p -> 0 in this family, consistent with Sibuya (1960) tail independence.",
+      "claim_id": "C4",
+      "evidence_id": "E4"
+    }
+  ],
+  "what_it_does_not_support": [
+    {
+      "statement": "That coskewness-driven leakage is universally dominant across all biologically realistic sparse regimes -- not all sparse ensembles were enumerated.",
+      "claim_id": "C5",
+      "evidence_id": "E5"
+    },
+    {
+      "statement": "That leakage does not exist or cannot bias the pairwise couplings J_ij -- only that it cannot capture the explained-entropy yardstick in the named limit.",
+      "claim_id": "C2",
+      "evidence_id": "E2"
+    },
+    {
+      "statement": "Any claim about real neural data: the tests are exact but synthetic, establishing a possibility and a definitional bound, not actuality.",
+      "claim_id": "C1",
+      "evidence_id": "E1"
+    }
+  ],
+  "what_remains_open": [
+    "Whether any biologically realistic ensemble carries genuine tail dependence -- absent from the dichotomized Gaussian -- in its residual S2-S_N.",
+    "A precise definition of 'coskewness-driven leakage' beyond the explained-entropy reading the duel resolved.",
+    "The behaviour of specific sparse families with structured bias and coupling, a question about parameters rather than about the named entropy-fraction limit."
+  ],
+  "permitted_wording": [
+    "At fixed first and second moments, the pairwise MaxEnt explained entropy is invariant to coskewness; coskewness moves the unexplained residual, not the explained part.",
+    "In a standard dichotomized-Gaussian sparse model the higher-order fraction stays bounded well below 1 down to p ~ 0.005, so leakage falls rather than dominates -- a scouting result, not a settled fact.",
+    "CON prevailed on argumentation and, on the available synthetic evidence, the strong universal-dominance thesis is not supported."
+  ],
+  "forbidden_wording": [
+    "Do not say this proves the thesis about coskewness leakage in real neural ensembles: the test is synthetic, not a measurement on neural data (доказывает тезис).",
+    "Do not say this establishes the truth of the sparse-limit dominance claim on real data (устанавливает истинность тезиса).",
+    "Do not say this confirms that explained entropy is uninformative about mechanism in general (подтверждает истинность тезиса).",
+    "Do not say this settles the question of higher-order leakage in sparse neural codes (окончательно решает вопрос).",
+    "Do not say this definitively shows or is a definitive refutation of the seed paper: it establishes that leakage exists; only the strong scaling extension is unsupported (неопровержимо / definitive / definitively shows).",
+    "Do not write 'an AI proved' or 'model X beat model Y'; the sides are public roles and engine identities are withheld."
+  ],
+  "confidence_and_limitations": "Moderate confidence within a narrow synthetic scope. Two pre-registered probes are cleanly realised: an exact 3-spin enumeration showing the explained entropy S1-S2 is invariant to coskewness (0.000 bits deviation across a sign change) while the true entropy swings 0.175 bits, and an exact dichotomized-Gaussian sweep showing the higher-order fraction stays under 0.06 down to p ~ 0.005; the order-swap audit is stable with a substantive call of 'con' on both runs. Out of scope: no neural data, only a finite-N (N=5) dichotomized-Gaussian family plus a 3-spin definitional check; deep-sparse points beyond p ~ 0.005 are numerically fragile; exotic shared-gain families with genuine tail dependence are untested. Genre: scout -- an in-principle sufficiency probe, not a scientific_result."
+}

@@ -1,0 +1,61 @@
+{
+  "matrix_id": "dv-no7-coskewness-leakage-2026-06-09",
+  "claim_frozen_at": "2026-06-09T02:01:18Z",
+  "rows": [
+    {
+      "claim_id": "C1",
+      "evidence_id": "E1",
+      "claim": "In the sparse limit p->0, with the pairwise correlation structure fixed, the fraction of entropy mis-attributed to first-order parameters rises monotonically to 1, so the pairwise MaxEnt 'explained entropy' S1-S2 converges to a quantity set entirely by higher-order coskewness.",
+      "evidence": "2026-06-09_cc_data.json test_A: holding first moments (p0=0.18) and pairwise correlations (rho=0.20) fixed and sweeping the third moment / connected coskewness across a sign change (c3 from -0.022 to +0.040, 41 grid points), the explained entropy S1-S2 deviates by 0.000 bits (max abs deviation, machine precision) while the true entropy S_N swings by 0.175 bits. S1-S2 is a function of the constrained first and second moments alone, so coskewness cannot enter it.",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "exact 3-spin enumeration; first and second moments fixed, third moment swept over the full feasible window including a coskewness sign change; definitional, not a measurement on neural data.",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C2",
+      "evidence_id": "E2",
+      "claim": "In a biologically realistic sparse family the higher-order (coskewness) leakage dominates asymptotically, so the higher-order fraction approaches 1 as mean activity p -> 0.",
+      "evidence": "2026-06-09_cc_data.json test_B: in an equicorrelated dichotomized Gaussian (N=5, latent rho=0.30) the higher-order fraction stays below 0.06 (max 0.0586) as p falls from 0.30 to 0.005, and the pairwise model still captures 0.941-0.996 of the multi-information at the sparsest point. The fraction does NOT approach 1; in this standard sparse model leakage falls rather than dominates.",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "exact 2^5 enumeration of an equicorrelated dichotomized-Gaussian sparse family down to p ~ 0.005; one standard latent spike model, not an exhaustive sweep of all sparse ensembles.",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C3",
+      "evidence_id": "E3",
+      "claim": "The opening demonstration that the leakage fraction races to 1 at p=0.05 shows higher-order dominance taking hold in the sparse regime.",
+      "evidence": "The opening figure was a 0/0 numerical artifact: the pairwise model collapsed to a near-zero-entropy state and the leakage fraction was read as the ratio of two near-zeros. An optimiser breakdown reported as 'dominance' is not a scaling law -- it requires a stability check before interpretation.",
+      "diagnosticity": "medium",
+      "direction": "contradicts",
+      "scope": "diagnosis of the PRO opening computation; illustrates that near-zero/near-zero ratios must be stability-checked, not read as asymptotics.",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C4",
+      "evidence_id": "E4",
+      "claim": "In standard sparse correlated binary models, higher-order correlations fade faster than pairwise ones as p -> 0.",
+      "evidence": "By Sibuya (1960) asymptotic independence of Gaussian tails, the triple correlation of a dichotomized Gaussian decays exponentially faster than the pairwise one under sparsification; the exact test_B numbers (HOF < 0.06, capture > 0.94 at p ~ 0.005) realise this -- a family where leakage decreases.",
+      "diagnosticity": "high",
+      "direction": "supports",
+      "scope": "dichotomized-Gaussian family with latent rho=0.30; demonstrates the existence of a sparse regime where the triple term fades faster, not that every sparse ensemble behaves so.",
+      "evidence_status": "accepted",
+      "claim_status": "supported"
+    },
+    {
+      "claim_id": "C5",
+      "evidence_id": "E5",
+      "claim": "Coskewness-driven leakage is universally dominant across all biologically realistic sparse regimes, making the pairwise explained-entropy yardstick asymptotically uninformative about mechanism in general.",
+      "evidence": "not tested: the result establishes a definitional bound (S1-S2 cannot be higher-order at fixed first/second moments) and one falsifier family (DG, where leakage falls), but does not enumerate all sparse ensembles. Exotic shared-gain families with genuine tail dependence -- absent from the dichotomized Gaussian -- are not tested and could move the residual differently, though never the S1-S2 yardstick.",
+      "diagnosticity": "none",
+      "direction": "untested",
+      "scope": "would require enumerating heavy-tailed shared-gain sparse families with genuine tail dependence and real neural ensembles; not run in this scout.",
+      "evidence_status": "not_applicable",
+      "claim_status": "speculative"
+    }
+  ]
+}

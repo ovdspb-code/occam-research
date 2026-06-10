@@ -1,0 +1,92 @@
+{
+  "duel": "Duellum Veritatis No.7",
+  "date": "2026-06-09",
+  "test_A_definitional_invariance": {
+    "p0_mean_activity": 0.18,
+    "pairwise_corr_rho": 0.2,
+    "triple_moment_grid_min": 1e-06,
+    "triple_moment_grid_max": 0.061803511278195486,
+    "coskewness_c3_min": -0.021771800000000004,
+    "coskewness_c3_max": 0.0400307112781955,
+    "coskewness_sign_change": true,
+    "coskewness_fold_range": -284.06480458849455,
+    "explained_entropy_mean_bits": 0.06762406862106785,
+    "explained_entropy_max_abs_deviation_bits": 0.0,
+    "true_entropy_min_bits": 1.7972217906372312,
+    "true_entropy_max_bits": 1.972558234092135,
+    "true_entropy_swing_bits": 0.17533644345490385,
+    "unexplained_residual_S2_minus_SN_min_bits": 4.88344719709044e-05,
+    "unexplained_residual_S2_minus_SN_max_bits": 0.17538527792687475,
+    "n_grid_points": 41
+  },
+  "test_B_dg_falsifier_family": {
+    "N": 5,
+    "latent_corr_rho": 0.3,
+    "rows": [
+      {
+        "p_obs": 0.3000203535693955,
+        "p_target": 0.3,
+        "captured_by_pairwise": 0.9960340528241253,
+        "higher_order_fraction": 0.003965947175874729,
+        "multi_information_bits": 0.17497098812938017
+      },
+      {
+        "p_obs": 0.15005478012837484,
+        "p_target": 0.15,
+        "captured_by_pairwise": 0.986999302764186,
+        "higher_order_fraction": 0.013000697235813985,
+        "multi_information_bits": 0.10958966939151216
+      },
+      {
+        "p_obs": 0.0799908350737896,
+        "p_target": 0.08,
+        "captured_by_pairwise": 0.9784222095372073,
+        "higher_order_fraction": 0.021577790462792734,
+        "multi_information_bits": 0.06322861388311596
+      },
+      {
+        "p_obs": 0.04001363843141328,
+        "p_target": 0.04,
+        "captured_by_pairwise": 0.9703417766842585,
+        "higher_order_fraction": 0.029658223315741528,
+        "multi_information_bits": 0.0319085795461207
+      },
+      {
+        "p_obs": 0.0199730220620549,
+        "p_target": 0.02,
+        "captured_by_pairwise": 0.9612595703777934,
+        "higher_order_fraction": 0.038740429622206585,
+        "multi_information_bits": 0.014762603910996486
+      },
+      {
+        "p_obs": 0.010001345068650058,
+        "p_target": 0.01,
+        "captured_by_pairwise": 0.9525699507546648,
+        "higher_order_fraction": 0.047430049245335226,
+        "multi_information_bits": 0.006711827330937503
+      },
+      {
+        "p_obs": 0.004998443930612856,
+        "p_target": 0.005,
+        "captured_by_pairwise": 0.9413646205894709,
+        "higher_order_fraction": 0.0586353794105291,
+        "multi_information_bits": 0.0028500782246962675
+      }
+    ],
+    "capt_min": 0.9413646205894709,
+    "capt_max": 0.9960340528241253,
+    "hof_max": 0.0586353794105291,
+    "hof_approaches_one": false
+  },
+  "headline": {
+    "explained_entropy_max_abs_deviation_bits": 0.0,
+    "true_entropy_swing_bits": 0.17533644345490385,
+    "coskewness_sign_change": true,
+    "dg_higher_order_fraction_max": 0.0586353794105291,
+    "dg_capt_range": [
+      0.9413646205894709,
+      0.9960340528241253
+    ],
+    "dg_hof_approaches_one": false
+  }
+}

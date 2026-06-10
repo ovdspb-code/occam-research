@@ -1,0 +1,89 @@
+{
+  "duel_id": "dv-0007",
+  "series": "Duellum Veritatis",
+  "status": "public_adversarial_ai_stress_test",
+  "claim": {
+    "text": "В биологически реалистичном sparse-режиме coskewness-driven leakage не просто присутствует, а доминирует асимптотически: при p→0 (средняя активность к нулю) при фиксированной парной корреляционной структуре доля энтропии, ошибочно приписанная first-order параметрам через information projection, монотонно растёт к 1, так что 'объяснённая энтропия' парной MaxEnt-модели сходится к величине, задаваемой целиком higher-order coskewness, а не подлинным парным механизмом — следовательно в sparse-пределе этот показатель асимптотически неинформативен о механизме без временных/state-диагностик.",
+    "frozen_at": "2026-06-09T02:01:18Z",
+    "claim_type": "numeric"
+  },
+  "sides": {
+    "public_names": [
+      "Athos",
+      "Aramis"
+    ],
+    "athos_side": "CON",
+    "side_assignment_seed_hash": "sha256:c82504948ff44e978c81c99f4de38156a2105fb875f09fb617dc3d7399b608e5",
+    "model_id_public": "withheld"
+  },
+  "arbiter": {
+    "identity_public": "independent_ai_arbiter",
+    "outside_duel_roster": true,
+    "blind_to_model_identity": true,
+    "order_swap_audit": {
+      "status": "PASS",
+      "waiver_reason": null
+    },
+    "verbosity_confound_warning": true
+  },
+  "outcome": {
+    "enum": "CON",
+    "substantive_verdict": "con",
+    "basis": "real_compute",
+    "confidence": null,
+    "arbitration_status": "STABLE",
+    "protocol_status": "FAIL"
+  },
+  "reproducibility": {
+    "bundle_included": true,
+    "compute_manifest": "2026-06-09-coskewness-leakage-sparse-limit-duellum.repro/compute_manifest.json",
+    "rerun_status": "not_rerun",
+    "script": "2026-06-09-coskewness-leakage-sparse-limit-duellum.repro/2026-06-09_repro.py",
+    "outputs": [
+      "2026-06-09-coskewness-leakage-sparse-limit-duellum.repro/2026-06-09_cc_data.json"
+    ]
+  },
+  "publication_gate": {
+    "status": "PASSED",
+    "approved_sidecar_hash": "sha256:a320850dff1c72740686041452d2b29a843010eb1a0fc9aa2bf080f62af4f05a",
+    "prior_work_check": "not_applicable",
+    "third_party_text_handling": "not_applicable",
+    "errata": []
+  },
+  "d8_handling": {
+    "trigger": "seed_publication=true",
+    "status": "waived_no_source_text_ingested",
+    "waiver_body_hash": "sha256:3f441f0c25e6459c86ce1508bd32c7df433c33237f005fa2e8715deced6d97c3",
+    "public_attestation": "No source PDF/full text was ingested into the duel context; only bibliographic/search-result metadata and abstracts informed topic selection."
+  },
+  "epistemic_status": "scout",
+  "references": [
+    {
+      "ref": "Macke, J. H., Berens, P., Ecker, A. S., Tolias, A. S., & Bethge, M. (2009). Generating spike trains with specified correlation coefficients. Neural Computation, 21(2), 397-423.",
+      "url": "https://doi.org/10.1162/neco.2008.02-08-713",
+      "role": "supporting"
+    },
+    {
+      "ref": "Safaai, H., & Sabatini, B. L. (2026). Feature leakage and the identifiability of direct-dependency entropy models of neural activity (arXiv:2606.01661). arXiv.",
+      "url": "https://arxiv.org/abs/2606.01661",
+      "role": "seed"
+    },
+    {
+      "ref": "Sibuya, M. (1960). Bivariate extreme statistics, I. Annals of the Institute of Statistical Mathematics, 11(2), 195-210.",
+      "url": "https://doi.org/10.1007/BF01682329",
+      "role": "supporting"
+    }
+  ],
+  "seed_publication": true,
+  "not_applicable_reasons": {
+    "prior_work_check": "no_novelty_claim",
+    "third_party_text_handling": "no_external_text_ingested"
+  },
+  "release_identity": {
+    "duel_id": "dv-0007",
+    "claim_hash": "sha256:cedc4e3d8b823a54079fcd81d301e418e82a5777a2b2b75e678049b6448bb5ef",
+    "source_session_hash": "sha256:e46b3ee585a40cd43ba16239720c64410a856a4e347e584bbc79899f0770daf1",
+    "frozen_at": "2026-06-09T02:01:18Z",
+    "compound_hash": "sha256:4d3364fa3f314476c0d7ce40504565e720a663991423b69907d70d9ec8a4a1ba"
+  }
+}

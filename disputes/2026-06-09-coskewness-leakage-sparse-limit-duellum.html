@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 14mm 0 13mm 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html,body { margin:0; padding:0; }
+
+  :root{
+    --paper:#f7f3e8; --ink:#241b0d; --ink-soft:#6a5c43;
+    --ox:#7a1717; --ox-br:#8f2020; --sepia:#bcae8b; --sepia-d:#9c8a5e;
+    --blue:#243c66; --terra:#9c4a22; --tint:#ede4cd; --chart:#fbf7ec;
+  }
+
+  body {
+    font-family:"EB Garamond 12","Georgia",serif;
+    color:var(--ink); background-color:var(--paper);
+    font-size:11.4pt; line-height:1.52;
+    padding:0 19mm;
+    font-feature-settings:"onum" 1,"liga" 1,"kern" 1;
+    /* aged, unevenly toned paper: brown grain + scattered foxing + edge vignette */
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.33 0 0 0 0 0.17 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+      radial-gradient(160px 120px at 16% 20%, rgba(150,120,68,0.07), transparent 70%),
+      radial-gradient(210px 150px at 84% 32%, rgba(150,120,68,0.06), transparent 70%),
+      radial-gradient(150px 130px at 62% 74%, rgba(140,108,58,0.055), transparent 72%),
+      radial-gradient(230px 180px at 28% 90%, rgba(150,120,68,0.05), transparent 72%),
+      radial-gradient(130px 110px at 90% 84%, rgba(140,108,58,0.05), transparent 70%),
+      radial-gradient(1500px 1000px at 50% 46%, transparent 58%, rgba(86,66,36,0.07) 100%);
+    background-repeat:repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+  }
+  .page{ counter-reset: sec; }
+
+  /* running head + folio */
+  .runhead{ text-align:center; font-family:"EB Garamond SC","EB Garamond 12",serif;
+            font-variant:small-caps; letter-spacing:3px; font-size:8.4pt;
+            color:var(--ox); margin:0 0 2px 0; }
+  .folio{ text-align:center; color:var(--ink-soft); font-size:9pt; margin-top:10px;
+          font-style:italic; }
+  .folio .sep{ color:var(--sepia-d); margin:0 7px; }
+
+  h1{ font-family:"EB Garamond 12","Georgia",serif; font-size:30pt; line-height:1.05;
+      margin:2px 0 6px 0; color:#120b03; font-weight:700; text-align:center;
+      letter-spacing:0.2px; }
+  h1 .em{ color:var(--ox); font-style:italic; font-weight:500; }
+
+  h2{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+      font-size:14pt; letter-spacing:1.2px; margin:20px 0 7px 0; color:var(--ox);
+      font-weight:600; padding-bottom:5px;
+      border-bottom:1px solid var(--sepia); }
+  h2::before{ counter-increment:sec; content:counter(sec,decimal-leading-zero);
+      font-family:"EB Garamond SC",serif; font-size:9.5pt; color:var(--ox-br);
+      letter-spacing:1px; margin-right:11px; vertical-align:1.5px;
+      border-bottom:none; }
+
+  h3{ font-family:"EB Garamond 12","Georgia",serif; font-size:12pt; font-style:italic;
+      margin:14px 0 3px 0; color:#3a2c1b; font-weight:600; }
+
+  p{ margin:0 0 8px 0; text-align:justify; hyphens:auto; }
+
+  .kicker{ text-align:center; color:var(--ink-soft); font-size:9pt; letter-spacing:3.4px;
+           text-transform:uppercase; margin:8px 0 6px 0;
+           font-family:"EB Garamond SC","EB Garamond 12",serif; }
+
+  .lede{ font-size:12.6pt; color:#3a2c1b; font-style:italic; line-height:1.5;
+         margin:8px 4mm 6px 4mm; text-align:center; }
+
+  /* drop cap on the first body paragraph */
+  .drop::first-letter{ font-family:"EB Garamond Initials","EB Garamond 12",serif;
+      float:left; font-size:52pt; line-height:0.82; padding:4px 8px 0 0;
+      color:var(--ox); font-weight:600; }
+
+  .rule{ height:0; border:none; text-align:center; margin:14px 0; color:var(--ox); }
+  .rule::before{ content:"\2766"; font-size:13pt; color:var(--ox);
+      display:inline-block; }
+  .rule.line{ border-top:1px solid var(--sepia); margin:13px 0; }
+  .rule.line::before{ content:""; }
+
+  .term{ color:var(--ox); font-style:italic; }
+
+  .gloss{ display:block; background:var(--tint); border-left:3px solid var(--ox);
+          padding:8px 13px; margin:9px 0; font-size:10.2pt; color:#3b2e1d;
+          line-height:1.46; }
+  .gloss b{ color:var(--ox); font-weight:600; }
+
+  .disclaimer{ border:1px solid var(--sepia); border-radius:4px; padding:9px 13px;
+               background:#fbf5e6; margin:10px 0; font-size:9.3pt; color:#3b2e1d; line-height:1.46; }
+  .disclaimer b{ color:var(--ox); }
+
+  .duel{ display:flex; gap:13px; margin:11px 0; }
+  .card{ flex:1; border:1px solid var(--sepia); padding:11px 13px; background:#fbf5e6; }
+  .card .who{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+              font-size:10pt; letter-spacing:1.2px; margin-bottom:4px; font-weight:600; }
+  .pro .who{ color:var(--blue); }
+  .con .who{ color:var(--terra); }
+  .pro{ border-top:2.5px solid var(--blue); }
+  .con{ border-top:2.5px solid var(--terra); }
+  .card .stance{ font-size:10.4pt; color:#34281a; line-height:1.45; }
+
+  figure{ margin:15px 0 9px 0; text-align:center; }
+  figcaption{ font-size:9.2pt; color:var(--ink-soft); margin-top:6px; font-style:italic;
+              line-height:1.4; padding:0 6mm; }
+  .chartbox{ background:var(--chart); border:1px solid var(--sepia);
+             padding:11px 9px 5px 9px; }
+
+  blockquote{ margin:11px 6mm; padding:6px 16px; border-left:3px solid var(--ox);
+              font-style:italic; color:#3a2c1b; font-size:11.6pt; }
+
+  .verdict{ border-top:2px solid var(--ox); border-bottom:2px solid var(--ox);
+            padding:12px 16px; margin:14px 0; background:#fbf3e0; }
+  .verdict .win{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+                 color:var(--ox); font-weight:600; font-size:13pt; letter-spacing:0.8px; }
+
+  .meta{ border:1px solid var(--sepia); padding:9px 14px; background:#fbf5e6;
+         margin:11px 0 6px 0; font-size:10pt; line-height:1.5; }
+  .meta .row{ display:flex; gap:10px; padding:2px 0; }
+  .meta .k{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+            color:var(--ox); min-width:118px; flex:0 0 118px; letter-spacing:0.5px;
+            font-size:9.6pt; }
+  .meta .v{ color:var(--ink); }
+
+  .twocol{ display:flex; gap:14px; }
+  .twocol > div{ flex:1; }
+  .support{ border:1px solid var(--sepia); border-top:2.5px solid var(--blue);
+            padding:8px 12px; background:#fbf5e6; margin:6px 0; }
+  .support h3{ margin-top:2px; color:var(--blue); }
+  .nosupport{ border:1px solid var(--sepia); border-top:2.5px solid var(--terra);
+              padding:8px 12px; background:#fbf5e6; margin:6px 0; }
+  .nosupport h3{ margin-top:2px; color:var(--terra); }
+
+  ul{ margin:3px 0 7px 0; padding-left:18px; }
+  li{ margin:2px 0; }
+
+  .appendix{ border-top:1px solid var(--sepia); margin-top:15px; padding-top:9px; }
+  .appendix h3{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+                color:var(--ox); margin:0 0 6px 0; font-size:11pt; font-style:normal;
+                letter-spacing:0.6px; }
+  .appendix .ap{ font-size:9.4pt; color:#473722; line-height:1.48; margin:0 0 5px 0; }
+  .appendix .ap b{ color:var(--ox); }
+
+  .ornament{ text-align:center; margin:8px 0 2px 0; color:var(--ox); }
+  .ornament .fleuron{ font-size:17pt; color:var(--ox); letter-spacing:6px; }
+
+  .foot{ margin-top:11px; padding-top:9px; border-top:1px solid var(--sepia);
+         color:var(--ink-soft); font-size:9pt; line-height:1.46; font-style:italic; }
+  svg{ display:block; }
+  .bars text{ font-family:"EB Garamond 12","Georgia",serif; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<p class="runhead">Duellum Veritatis &middot; nightly duel</p>
+<div class="ornament"><span class="fleuron">&#10086;&#10087;&#10086;</span></div>
+
+<p class="kicker">A nocturnal duel · science explainer</p>
+<h1>When Triple Correlations Fall <span class="em">Silent</span></h1>
+<p class="lede">Could the rare, near-simultaneous co-firing of three neurons quietly hijack a pairwise model's "explained entropy" until the number means nothing? One side argued that in the sparse limit it must. The other showed the yardstick is built from quantities that triple correlations cannot touch.</p>
+
+<div class="meta">
+  <div class="row"><div class="k">Date</div><div class="v">9 June 2026</div></div>
+  <div class="row"><div class="k">Topic</div><div class="v">Whether, as mean activity p → 0 at fixed pairwise correlation, third-order "co-skewness" leakage asymptotically dominates a pairwise maximum-entropy model's explained entropy, leaving that measure uninformative about mechanism</div></div>
+  <div class="row"><div class="k">Claim type</div><div class="v">Numeric — backed only by the attached reproducible compute bundle</div></div>
+  <div class="row"><div class="k">Sides</div><div class="v">Aramis — defending the thesis · Atos — refuting it · (public AI-generated sides; engine identities withheld)</div></div>
+  <div class="row"><div class="k">Format</div><div class="v">six alternating moves, an independent AI arbiter, an order-swap audit</div></div>
+</div>
+
+<div class="disclaimer" data-duellum="status-disclaimer">
+<b>Status:</b> public adversarial AI stress-test. This is not peer review, not a scientific proof, and not an endorsement of the claim. Two AI-generated sides argued a frozen claim under a fixed protocol; an independent AI arbiter issued a structured verdict. For numerical claims, the reported numbers come only from the attached reproducible compute bundle. Publication means the duel passed the release gate; it does not promote the claim to discovery status. <span data-duellum="gate-scope">Passing the release gate means automated structural, integrity and format checks passed — it is not human methodological review, peer review, or approval of the claim's substance.</span>
+</div>
+
+<div class="disclaimer" data-duellum="epistemic-status">
+<b>Epistemic status:</b> scout / exploratory. This issue is a scouting duel, <b>not an established scientific result</b>. Its decisive tests run on small synthetic ensembles — an exact three-neuron enumeration and a finite dichotomized-Gaussian family — not on neural recordings. They establish a definitional point and exhibit the falsifier the thesis itself demanded; they do not survey every biologically plausible sparse model. Treat the finding as a lead to investigate, not a confirmed claim about the seed paper's empirics.
+</div>
+
+<div class="rule line"></div>
+
+<p class="drop">Neuroscience increasingly reads the brain through the joint statistics of many neurons firing at once. A favourite tool is the <span class="term">pairwise maximum-entropy model</span>: the simplest distribution that reproduces how often each neuron fires and how often each <i>pair</i> fires together, while assuming nothing more. How much of a population's structure that pairwise model captures is summarised by its <span class="term">explained entropy</span> — and a long literature treats a high value as evidence that pairwise interactions are the real mechanism.</p>
+
+<span class="gloss"><b>The toolkit in one breath.</b> Take many neurons, each either silent (0) or spiking (1) in a time bin. The <span class="term">pairwise maximum-entropy model</span> matches only the single-neuron firing rates and the pairwise co-firing rates, then spreads its uncertainty as evenly as possible. <span class="term">Explained entropy</span>, written S₁−S₂, measures how much of the population's total dependency that pairwise model accounts for. The rival quantity is <span class="term">co-skewness</span> — a third-order statistic asking whether <i>triplets</i> of neurons spike together in a lopsided way. The seed paper warned that such higher-order structure can "leak" into a fitted model and be mistaken for a first-order effect.</span>
+
+<p>The seed paper showed that when a model matches only low-order statistics, missing higher-order structure can be absorbed into the fitted parameters — a "feature leakage" with, for sparse binary data, a co-skewness signature. This duel did not dispute that leakage exists. It interrogated a far more ambitious, riskier idea the paper never claimed: that in the sparse limit the leakage does not merely exist but <i>takes over</i>.</p>
+
+<h2>The frozen claim</h2>
+<p>The thesis, fixed before the duel and not edited afterwards (translated from the registered Russian text):</p>
+
+<blockquote>"In a biologically realistic sparse regime, co-skewness-driven leakage does not merely appear but dominates asymptotically: as p → 0 (mean activity toward zero) at fixed pairwise correlation structure, the entropy fraction wrongly attributed to first-order parameters rises monotonically toward 1, so that a pairwise maximum-entropy model's 'explained entropy' converges to a quantity set entirely by higher-order co-skewness rather than a genuine pairwise mechanism — hence in the sparse limit this measure is asymptotically uninformative about mechanism."</blockquote>
+
+<p>The falsifier both sides accepted: any sparse correlated-binary family in which, as p → 0, the leakage fraction stays bounded below by the true pairwise contribution — or shrinks — refutes the claimed dominance. One explicit counterexample is enough.</p>
+
+<div class="duel">
+  <div class="card pro">
+    <img src="art/aramis.jpg" alt="Aramis, engraved portrait" style="display:block; width:96px; height:96px; margin:2px auto 9px auto; border:1px solid var(--sepia); border-radius:2px;" />
+    <div class="who">Thesis · Aramis</div>
+    <div class="stance">In the sparse limit, triple correlations <b>take over</b>. As firing grows rare, the share of entropy a pairwise model claims as "explained" is really higher-order leakage in disguise; the measure converges to something set by co-skewness, not by any genuine pairwise mechanism. The yardstick goes blind.</div>
+  </div>
+  <div class="card con">
+    <img src="art/athos.jpg" alt="Atos, engraved portrait" style="display:block; width:96px; height:96px; margin:2px auto 9px auto; border:1px solid var(--sepia); border-radius:2px;" />
+    <div class="who">Counter · Atos</div>
+    <div class="stance">Explained entropy is <b>built only from first and second moments</b> — the very quantities the thesis holds fixed. Co-skewness moves the leftover, unexplained entropy, not the explained part. And in the standard sparse model, the triple term fades <i>faster</i> than the pairwise one, not slower.</div>
+  </div>
+</div>
+
+<div class="rule line"></div>
+
+<h2>The duel: arithmetic, not rhetoric</h2>
+<p>Each contested step was a small distribution with a <b>known</b> answer, so the two sides could compute who was right rather than argue it. Three things got settled.</p>
+
+<h3>Cleared away: the first "leakage → 1" was a numerical artifact</h3>
+<p>The thesis's opening demonstration looked decisive — at p = 0.05 a "leakage fraction" raced toward 1. But the counter-side traced it to a degeneracy: the pairwise model had collapsed to a near-zero-entropy state, and the leakage fraction was being read off a ratio of two near-zeros. A 0/0 reported as "dominance" is optimiser breakdown, not a scaling law.</p>
+
+<h3>The counterexample: a dichotomized Gaussian where leakage shrinks</h3>
+<p>The counter-side then built the falsifier the thesis had invited — an equicorrelated <span class="term">dichotomized Gaussian</span>, the standard latent-variable model for correlated spikes. By a classical result of Sibuya (1960) on the asymptotic independence of Gaussian tails, its triple correlation decays exponentially faster than its pairwise one as activity grows rare. Computed exactly, the higher-order fraction of the population's dependency does not climb toward 1 — it stays under six percent all the way down to a mean firing rate of one spike in two hundred bins (Fig. 2). That is a family where leakage <i>falls</i>, which is exactly what the falsifier required.</p>
+
+<h3>The decisive point: the yardstick is made of the wrong moments</h3>
+<p>The thesis defender replied that the dichotomized Gaussian is only one family, and that real ensembles with a shared latent drive (attention, arousal) might carry genuine tail dependence. Fair — but it does not reach the quantity under dispute. Explained entropy, S₁−S₂, is a function of the first and second moments <i>alone</i>, and the thesis holds both fixed. Co-skewness can move the unexplained residual S₂−S<sub>N</sub> and bias the fitted couplings, but it cannot make the <i>explained</i> part higher-order. A direct test confirms it: sweep the triple moment across its whole feasible range, sign change included, with means and pairwise correlations pinned — and the explained entropy does not budge to machine precision, while the true entropy swings by 0.18 bits (Fig. 1).</p>
+
+<figure>
+<div class="chartbox">
+<svg class="bars" width="640" height="240" viewBox="0 0 640 240">
+  <line x1="250" y1="20" x2="250" y2="190" stroke="#9c8a5e" stroke-width="1"/>
+  <line x1="250" y1="190" x2="610" y2="190" stroke="#9c8a5e" stroke-width="1"/>
+  <g stroke="#d8c9a3" stroke-width="0.8" stroke-dasharray="3,3">
+    <line x1="337" y1="20" x2="337" y2="190"/>
+    <line x1="425" y1="20" x2="425" y2="190"/>
+    <line x1="512" y1="20" x2="512" y2="190"/>
+    <line x1="600" y1="20" x2="600" y2="190"/>
+  </g>
+  <g fill="#6b5d45" font-size="9" text-anchor="middle">
+    <text x="250" y="205">0.00</text>
+    <text x="337" y="205">0.05</text>
+    <text x="425" y="205">0.10</text>
+    <text x="512" y="205">0.15</text>
+    <text x="600" y="205">0.20</text>
+  </g>
+  <!-- scale: 0.20 bits over 360px => 1750 px/bit -->
+  <rect x="250" y="52" width="4" height="34" fill="#27406b" opacity="0.9"/>
+  <rect x="250" y="116" width="306" height="34" fill="#9c4a22" opacity="0.9"/>
+  <g fill="#3a2c1b" font-size="10" text-anchor="end">
+    <text x="242" y="73">Explained entropy S₁−S₂</text>
+    <text x="242" y="137">True entropy S_N</text>
+  </g>
+  <text x="262" y="73" fill="#7a1717" font-size="9.5" font-weight="700" text-anchor="start">0.000 — invariant</text>
+  <text x="548" y="137" fill="#fbf3e0" font-size="9.5" font-weight="700" text-anchor="end">0.175</text>
+  <text x="430" y="228" fill="#6b5d45" font-size="9" text-anchor="middle">variation across the full coskewness sweep, in bits (smaller = more invariant)</text>
+</svg>
+</div>
+<figcaption>Fig. 1 — The decisive check. As the third moment is swept across its whole feasible range — co-skewness changing sign, from −0.022 to +0.040 — with means and pairwise correlations held fixed, the pairwise model's explained entropy does not move at all (0.000 bits), while the true entropy swings by 0.175 bits. Exact three-neuron enumeration; 41 grid points. Source: <b>2026-06-09_cc_data.json</b> (test A).</figcaption>
+</figure>
+
+<figure>
+<div class="chartbox">
+<svg class="bars" width="640" height="270" viewBox="0 0 640 270">
+  <line x1="90" y1="20" x2="90" y2="230" stroke="#9c8a5e" stroke-width="1"/>
+  <line x1="90" y1="230" x2="620" y2="230" stroke="#9c8a5e" stroke-width="1"/>
+  <g stroke="#d8c9a3" stroke-width="0.8" stroke-dasharray="3,3">
+    <line x1="90" y1="177" x2="620" y2="177"/>
+    <line x1="90" y1="125" x2="620" y2="125"/>
+    <line x1="90" y1="72" x2="620" y2="72"/>
+  </g>
+  <g fill="#6b5d45" font-size="9" text-anchor="end">
+    <text x="84" y="233">0.0</text>
+    <text x="84" y="180">0.25</text>
+    <text x="84" y="128">0.50</text>
+    <text x="84" y="75">0.75</text>
+    <text x="84" y="23">1.0</text>
+  </g>
+  <!-- thesis-predicted limit at fraction 1.0 (y=20) -->
+  <line x1="90" y1="20" x2="620" y2="20" stroke="#7a1717" stroke-width="1.4" stroke-dasharray="6,4"/>
+  <text x="616" y="33" fill="#7a1717" font-size="9" font-style="italic" text-anchor="end">thesis prediction: fraction → 1</text>
+  <!-- y scale: 1.0 over 210px => 210 px/unit. bars hug the floor. -->
+  <g fill="#7a1717" opacity="0.9">
+    <rect x="118" y="229.2" width="40" height="0.8"/>
+    <rect x="186" y="227.3" width="40" height="2.7"/>
+    <rect x="254" y="225.4" width="40" height="4.6"/>
+    <rect x="322" y="223.8" width="40" height="6.2"/>
+    <rect x="390" y="221.9" width="40" height="8.1"/>
+    <rect x="458" y="220.1" width="40" height="9.9"/>
+    <rect x="526" y="217.7" width="40" height="12.3"/>
+  </g>
+  <g fill="#3a2c1b" font-size="8.5" text-anchor="middle">
+    <text x="138" y="223">0.004</text>
+    <text x="206" y="221">0.013</text>
+    <text x="274" y="219">0.022</text>
+    <text x="342" y="217">0.030</text>
+    <text x="410" y="215">0.039</text>
+    <text x="478" y="213">0.047</text>
+    <text x="546" y="211">0.059</text>
+  </g>
+  <g fill="#6b5d45" font-size="8.5" text-anchor="middle">
+    <text x="138" y="245">0.30</text>
+    <text x="206" y="245">0.15</text>
+    <text x="274" y="245">0.08</text>
+    <text x="342" y="245">0.04</text>
+    <text x="410" y="245">0.02</text>
+    <text x="478" y="245">0.01</text>
+    <text x="546" y="245">0.005</text>
+  </g>
+  <text x="355" y="262" fill="#6b5d45" font-size="9" text-anchor="middle">mean firing rate p (rarer →)</text>
+</svg>
+</div>
+<figcaption>Fig. 2 — The falsifier family. Higher-order fraction of the population's total dependency (1 − captured) in an equicorrelated dichotomized Gaussian (N = 5, latent ρ = 0.30) as the mean firing rate p falls from 0.30 to 0.005. The thesis predicted this fraction would climb toward 1 (dashed line); instead it stays below 0.06 — the pairwise model still captures over 94% at the sparsest point. Exact enumeration. Source: <b>2026-06-09_cc_data.json</b> (test B).</figcaption>
+</figure>
+
+<h2>The verdict</h2>
+<div class="verdict">
+<p class="win" data-duellum="outcome"><b>Outcome (who argued better):</b> CON — the refuting side prevailed on argumentation.</p>
+<p class="win" data-duellum="substantive-verdict"><b>Substantive verdict (was the claim true):</b> con — the universal sparse-limit dominance does not hold.</p>
+<p style="margin:6px 0 0 0; font-size:9.5pt; color:#3a2c1b;"><b>The two axes agree here.</b> The side that argued better is also the side the merits favour: the thesis's claim of universal co-skewness dominance in the sparse limit was refuted, not merely out-argued.</p>
+<p style="margin:6px 0 0 0;">The arbiter judged the refuting side (Atos) closer to correct: it caught the 0/0 artifact in the thesis's first calculation, supplied a working dichotomized-Gaussian counterexample where the triple term fades faster than the pairwise one, and held the dispute to the stated quantity — explained entropy — where the decisive definitional argument applied. The claimed universal limit for the entropy fraction did not survive. <b>What remains open</b> is narrower: specific sparse families with particular bias and coupling structure could still behave differently, and that is a question about parameters, not about the asserted limit.</p>
+<p style="margin:6px 0 0 0; font-size:9pt; color:#3a2c1b;"><b>Basis:</b> real_compute (attached bundle) · <b>Protocol:</b> PASS (six moves, clean arbiter verdict) · <b>Order-swap audit:</b> PASS (verdict stable when the side order was swapped) · <b>Arbiter confidence:</b> not assigned.</p>
+</div>
+
+<div class="twocol">
+  <div class="support">
+    <h3>What this supports</h3>
+    <ul>
+      <li>A pairwise model's explained entropy S₁−S₂ is fixed by the first and second moments alone — so co-skewness <b>cannot</b> make it asymptotically higher-order while those moments are held fixed.</li>
+      <li>In the standard dichotomized-Gaussian sparse model, higher-order correlations decay <b>faster</b> than pairwise ones as p → 0; the captured fraction stays above 94% down to p ≈ 0.005.</li>
+      <li>Numerical "near-zero over near-zero" ratios demand a stability check before they are read as scaling laws.</li>
+    </ul>
+  </div>
+  <div class="nosupport" data-duellum="does-not-support">
+    <h3>What this does <u>not</u> support</h3>
+    <ul>
+      <li>It does <b>not</b> survey every sparse family. Exotic models with strong shared-gain tail dependence are untested here and could move the residual differently.</li>
+      <li>It does <b>not</b> deny that leakage exists or that it can bias fitted couplings J<sub>ij</sub> — only that it cannot capture the explained-entropy yardstick in the stated limit.</li>
+      <li>It does <b>not</b> measure real neural data. The tests are exact but synthetic; they establish possibility and a definitional bound, not actuality.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Where the losing side still has a point</h2>
+<p>The thesis defender's strongest residual point is fair: "co-skewness-driven leakage" was never given a sharp definition, and the dispute settled the <i>explained-entropy</i> reading rather than every conceivable sense of the phrase. A shared latent drive can, in principle, produce genuine tail dependence that this dichotomized-Gaussian family does not contain; whether any biologically realistic ensemble actually lives in such a regime is a real, unresolved empirical question — just not one that touches the fixed-moment yardstick the thesis named. That is the honest next experiment, and a synthetic world cannot settle it.</p>
+
+<h2>Prior-work note</h2>
+<p data-duellum="prior-work">This release makes <b>no originality claim</b>. The seed paper established that feature leakage exists and, for sparse correlated binary inputs, takes a co-skewness form, and proposed diagnostics to separate prediction from mechanism. The duel's contribution is a stress-test of a much stronger <i>scaling</i> claim the paper did not make. Novelty status: <span class="term">not an originality claim</span>.</p>
+
+<div class="ornament"><span class="fleuron">&#10086;&#10087;&#10086;</span></div>
+
+<div class="appendix">
+<h3>Appendix · reproducibility</h3>
+<p class="ap">All numbers and figures come from the attached repro bundle. Script, data, hashes, environment and rerun instructions are recorded in <b>2026-06-09_compute_manifest.json</b>.</p>
+<p class="ap"><b>Test A (definitional invariance):</b> exact three-neuron enumeration. Means and pairwise correlations fixed (mean activity p₀ = 0.18, pairwise correlation ρ = 0.20); the triple moment swept across its feasible range over 41 grid points, with the connected co-skewness changing sign (c₃ from −0.022 to +0.040). The pairwise and independent maximum-entropy fits are L-BFGS-B on the convex dual.</p>
+<p class="ap"><b>Test B (falsifier family):</b> equicorrelated dichotomized Gaussian, N = 5, latent correlation ρ = 0.30, state probabilities by exact inclusion–exclusion over orthant probabilities; mean firing rate p swept from 0.30 to 0.005.</p>
+<p class="ap"><b>Headline values:</b> explained-entropy max absolute deviation across the co-skewness sweep = 0.000 bits · true-entropy swing over the same sweep = 0.175 bits · co-skewness sign change present · dichotomized-Gaussian higher-order fraction (max) = 0.059 · captured-by-pairwise fraction = 0.941–0.996.</p>
+<p class="ap"><b>Environment:</b> Python 3.12.3 · numpy 2.4.4 · scipy 1.17.1 · linux-x86_64. Deterministic: exact enumeration and convex fits; no RNG.</p>
+<p class="ap"><b>script_sha256:</b> sha256:96b75e723ed1ee112feaaf526f2527a986ad53716e08129aa9ab9943a171759b</p>
+<p class="ap"><b>2026-06-09_cc_data.json sha256:</b> sha256:d81626872f4f3016d6072d2e1704070ccebaf0b7cdb441310f20b76062589a4a</p>
+<p class="ap"><b>Rerun:</b> python3 2026-06-09_repro.py → writes 2026-06-09_cc_data.json</p>
+<p class="ap"><b>Errata / quarantine:</b> none.</p>
+</div>
+
+<div class="appendix refs">
+<h3>References</h3>
+<p class="ap" style="text-indent:-1.4em; margin-left:1.4em;">Macke, J. H., Berens, P., Ecker, A. S., Tolias, A. S., &amp; Bethge, M. (2009). Generating spike trains with specified correlation coefficients. <i>Neural Computation, 21</i>(2), 397–423. <a href="https://doi.org/10.1162/neco.2008.02-08-713" style="color:#27406b;">https://doi.org/10.1162/neco.2008.02-08-713</a></p>
+<p class="ap" style="text-indent:-1.4em; margin-left:1.4em;">Safaai, H., &amp; Sabatini, B. L. (2026). Feature leakage and the identifiability of direct-dependency entropy models of neural activity (arXiv:2606.01661). arXiv. <a href="https://arxiv.org/abs/2606.01661" style="color:#27406b;">https://arxiv.org/abs/2606.01661</a></p>
+<p class="ap" style="text-indent:-1.4em; margin-left:1.4em;">Sibuya, M. (1960). Bivariate extreme statistics, I. <i>Annals of the Institute of Statistical Mathematics, 11</i>(2), 195–210. <a href="https://doi.org/10.1007/BF01682329" style="color:#27406b;">https://doi.org/10.1007/BF01682329</a></p>
+<p class="ap" style="font-size:8.4pt; color:#9c8a5e; margin-top:4px;">Citation style: APA 7. References ordered alphabetically by first author.</p>
+</div>
+
+<p style="margin-top:10px; font-size:8.4pt; color:#9c8a5e; text-align:center;">Duellum Veritatis · a public adversarial AI stress-test of a frozen scientific claim · published by Occam Research · engine and arbiter identities withheld by design.</p>
+
+<!--DV-SEAL-->
+<div class="imprimatur" style="text-align:center; margin:16px 0 6px 0; page-break-inside:avoid; break-inside:avoid;"><svg class="seal" width="132" height="132" viewBox="0 0 132 132" style="display:block; margin:0 auto;"><path d="M128.20,66.00 L125.92,69.14 L123.48,72.04 L125.26,75.39 L126.84,78.93 L123.96,81.53 L120.97,83.86 L122.01,87.50 L122.82,91.30 L119.46,93.24 L116.06,94.90 L116.32,98.68 L116.32,102.56 L112.63,103.76 L108.95,104.68 L108.43,108.43 L107.62,112.22 L103.76,112.63 L99.97,112.76 L98.68,116.32 L97.10,119.87 L93.24,119.46 L89.51,118.80 L87.50,122.01 L85.22,125.16 L81.53,123.96 L78.02,122.54 L75.39,125.26 L72.50,127.86 L69.14,125.92 L66.00,123.80 L62.86,125.92 L59.50,127.86 L56.61,125.26 L53.98,122.54 L50.47,123.96 L46.78,125.16 L44.50,122.01 L42.49,118.80 L38.76,119.46 L34.90,119.87 L33.32,116.32 L32.03,112.76 L28.24,112.63 L24.38,112.22 L23.57,108.43 L23.05,104.68 L19.37,103.76 L15.68,102.56 L15.68,98.68 L15.94,94.90 L12.54,93.24 L9.18,91.30 L9.99,87.50 L11.03,83.86 L8.04,81.53 L5.16,78.93 L6.74,75.39 L8.52,72.04 L6.08,69.14 L3.80,66.00 L6.08,62.86 L8.52,59.96 L6.74,56.61 L5.16,53.07 L8.04,50.47 L11.03,48.14 L9.99,44.50 L9.18,40.70 L12.54,38.76 L15.94,37.10 L15.68,33.32 L15.68,29.44 L19.37,28.24 L23.05,27.32 L23.57,23.57 L24.38,19.78 L28.24,19.37 L32.03,19.24 L33.32,15.68 L34.90,12.13 L38.76,12.54 L42.49,13.20 L44.50,9.99 L46.78,6.84 L50.47,8.04 L53.98,9.46 L56.61,6.74 L59.50,4.14 L62.86,6.08 L66.00,8.20 L69.14,6.08 L72.50,4.14 L75.39,6.74 L78.02,9.46 L81.53,8.04 L85.22,6.84 L87.50,9.99 L89.51,13.20 L93.24,12.54 L97.10,12.13 L98.68,15.68 L99.97,19.24 L103.76,19.37 L107.62,19.78 L108.43,23.57 L108.95,27.32 L112.63,28.24 L116.32,29.44 L116.32,33.32 L116.06,37.10 L119.46,38.76 L122.82,40.70 L122.01,44.50 L120.97,48.14 L123.96,50.47 L126.84,53.07 L125.26,56.61 L123.48,59.96 L125.92,62.86 Z" fill="#7a1717"/><circle cx="66.0" cy="66.0" r="54.00" fill="none" stroke="#5c100f" stroke-width="1.6"/><circle cx="66.0" cy="66.0" r="52.40" fill="none" stroke="#9a3a30" stroke-width="0.8"/><circle cx="66.0" cy="66.0" r="48.00" fill="none" stroke="#5c100f" stroke-width="0.8"/><text x="67.00" y="80.50" fill="#530f0e" font-family="EB Garamond 12,Georgia,serif" font-weight="700" font-size="44.88" letter-spacing="0.5" text-anchor="middle">OD</text><text x="65.20" y="78.20" fill="#bf5141" font-family="EB Garamond 12,Georgia,serif" font-weight="700" font-size="44.88" letter-spacing="0.5" text-anchor="middle">OD</text><text x="66.00" y="79.20" fill="#6e1414" font-family="EB Garamond 12,Georgia,serif" font-weight="700" font-size="44.88" letter-spacing="0.5" text-anchor="middle">OD</text><text x="67.00" y="108.22" fill="#530f0e" font-family="EB Garamond 12,Georgia,serif" font-weight="600" font-size="11.22" letter-spacing="2.0" text-anchor="middle">MMXXVI</text><text x="65.20" y="105.92" fill="#bf5141" font-family="EB Garamond 12,Georgia,serif" font-weight="600" font-size="11.22" letter-spacing="2.0" text-anchor="middle">MMXXVI</text><text x="66.00" y="106.92" fill="#6e1414" font-family="EB Garamond 12,Georgia,serif" font-weight="600" font-size="11.22" letter-spacing="2.0" text-anchor="middle">MMXXVI</text></svg><div style="font-family:'EB Garamond SC','EB Garamond 12',serif; font-variant:small-caps; color:#7a1717; letter-spacing:2.4px; font-size:11pt; font-weight:600;">Imprimatur</div><div style="color:#6a5c43; font-size:9pt; font-style:italic; margin-top:1px;">O. D. &middot; June 10, 2026</div></div>
+<!--/DV-SEAL-->
+<div class="folio">Duellum Veritatis<span class="sep">&#10086;</span>occam.world</div>
+
+</div>
+</body>
+</html>
