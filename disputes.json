@@ -1,9 +1,49 @@
 {
-  "updated": "2026-06-09",
+  "updated": "2026-06-11",
   "series": "Duellum Veritatis",
   "subtitle": "Adversarial science digests — a thesis defended and attacked to a verdict, every claim backed by computation.",
   "doi": "10.5281/zenodo.20528909",
   "disputes": [
+    {
+      "id": "2026-06-11-avalanche-power-law-false-positive-criticality",
+      "no": 9,
+      "title": "When the Detector Catches Its Own Shadow",
+      "subtitle": "Is a standard avalanche power-law + crackling pipeline a diagnostic detector of network criticality, or a measurement that cries 'critical' at matched subcritical noise?",
+      "date": "2026-06-11",
+      "verdict": "CON prevailed on argumentation and on the merits. At literature-typical sample sizes a fully validated avalanche power-law + crackling pipeline raised false positives of 0.39-0.47 on a matched subcritical control — above its own registered 0.20 falsifier — while the critical positive control passed (TPR 0.82-0.98); the false-positive rate met the 0.05 diagnostic target only at n>=2500. Synthetic branching model, not real cortical data.",
+      "tags": [
+        "neuronal-avalanches",
+        "criticality",
+        "power-law",
+        "crackling-relation",
+        "false-positive-rate",
+        "statistical-physics",
+        "neurophysiology"
+      ],
+      "html": "disputes/2026-06-11-avalanche-power-law-false-positive-criticality.html",
+      "pdf": "disputes/2026-06-11-avalanche-power-law-false-positive-criticality.pdf",
+      "doi": "10.5281/zenodo.20639140",
+      "outcome": "CON",
+      "basis": "real_compute",
+      "claim_type": "numeric",
+      "arbitration_status": "STABLE",
+      "protocol_status": "PASS",
+      "prior_work_check": "not_applicable",
+      "release_identity": {
+        "duel_id": "dv-0009",
+        "claim_hash": "sha256:bc12e0cb637b3f503efb5f4ab185075a8bf2d1b13486d82ca6c87f13013ebdc9",
+        "source_session_hash": "sha256:9a50a84a4e691fbe72cc9678310c07d7fa9cf5b4fb55874855160f9ab6eee366",
+        "frozen_at": "2026-06-11T02:00:07Z",
+        "compound_hash": "sha256:65e4302093170c1836f72e7c85923a1869ebfdd26e5bb60eb293124618d55832"
+      },
+      "metadata": "disputes/2026-06-11-avalanche-power-law-false-positive-criticality.metadata.json",
+      "methodology": {
+        "claim_evidence_matrix": "disputes/2026-06-11-avalanche-power-law-false-positive-criticality.claim_evidence_matrix.json",
+        "arbiter_report": "disputes/2026-06-11-avalanche-power-law-false-positive-criticality.arbiter_report.json",
+        "evidence_task": "disputes/2026-06-11-avalanche-power-law-false-positive-criticality.evidence_task.json",
+        "order_swap_audit": "disputes/2026-06-11-avalanche-power-law-false-positive-criticality.order_swap_audit.json"
+      }
+    },
     {
       "id": "2026-06-09-coskewness-leakage-sparse-limit-duellum",
       "no": 7,

@@ -1,0 +1,57 @@
+{
+  "duel_id": "dv-0009",
+  "generated_at": "2026-06-11T00:00:00Z",
+  "package_status": "checked",
+  "files": [
+    {
+      "path": "2026-06-11-avalanche-power-law-false-positive-criticality.arbiter_report.json",
+      "sha256": "sha256:886dccab971c2cab43364b6913a9cbc91341be8340cca859ae62043760ee3869",
+      "public": true
+    },
+    {
+      "path": "2026-06-11-avalanche-power-law-false-positive-criticality.claim_evidence_matrix.json",
+      "sha256": "sha256:bb66952d44c890ba99af1dd5d6a5f07e202ac93da015298802e5b4cf03091539",
+      "public": true
+    },
+    {
+      "path": "2026-06-11-avalanche-power-law-false-positive-criticality.evidence_task.json",
+      "sha256": "sha256:c8f1ce0c84837320ac9e661d113e95fd09e3d2bf4dc6e78af415cd68f98b50af",
+      "public": true
+    },
+    {
+      "path": "2026-06-11-avalanche-power-law-false-positive-criticality.html",
+      "sha256": "sha256:e0c4b123d528fc7c4ccc623fadb16413e758982047b0c31572037d9a87de2e87",
+      "public": true
+    },
+    {
+      "path": "2026-06-11-avalanche-power-law-false-positive-criticality.metadata.json",
+      "sha256": "sha256:3492bb8990533815755c2e3c3f463129a608f12a8189ccdb8be53254b4afcf72",
+      "public": true
+    },
+    {
+      "path": "2026-06-11-avalanche-power-law-false-positive-criticality.order_swap_audit.json",
+      "sha256": "sha256:d8515040a0b8dc665ee92d77acf86c6111fb042c3b9f7726f98cf23bb4d6f950",
+      "public": true
+    },
+    {
+      "path": "2026-06-11-avalanche-power-law-false-positive-criticality.pdf",
+      "sha256": "sha256:5230103226cf46731659379527ce12ff2f5f64237617579e9ccf7b2a5c105137",
+      "public": true
+    },
+    {
+      "path": "2026-06-11-avalanche-power-law-false-positive-criticality.repro/2026-06-11_cc_data.json",
+      "sha256": "sha256:b130ef470124e5401fe90a01f09f9b2eed0a51bbf523304209c723664b68bde1",
+      "public": true
+    },
+    {
+      "path": "2026-06-11-avalanche-power-law-false-positive-criticality.repro/2026-06-11_repro.py",
+      "sha256": "sha256:078a535713cb17d116cfe684732d61ef05750102dd0b794547481df860997938",
+      "public": true
+    },
+    {
+      "path": "2026-06-11-avalanche-power-law-false-positive-criticality.repro/compute_manifest.json",
+      "sha256": "sha256:794ea1e617fa095788b30896bf283266e8d7a0654e6cd35d006d475bbb5ff3aa",
+      "public": true
+    }
+  ]
+}

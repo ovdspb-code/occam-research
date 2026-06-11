@@ -1,0 +1,73 @@
+{
+  "report_id": "dv-no9-avalanche-criticality-fpr-2026-06-11",
+  "outcome_classification": "CON",
+  "accepted_facts": [
+    "On a synthetic critical (m=1.0) Galton-Watson positive control the validated pipeline calls 'critical' at a high rate: true-positive rate 0.817 (Wilson 95% CI [0.738, 0.876]) at n_aval=300, staying 0.93-0.98 up to n=2500 — the pipeline does detect genuine criticality.",
+    "On a matched subcritical (m=0.9) control at literature-typical sample sizes the same pipeline raises false positives far above the registered 0.20 falsifier: false-positive rate 0.408 [0.325, 0.498] at n=300, 0.467 [0.380, 0.556] at n=500, 0.392 [0.309, 0.481] at n=800; the lower confidence bound clears 0.20 at every one of these sizes.",
+    "The false-positive rate only falls below the 0.05 diagnostic target outside the literature-typical regime: 0.100 at n=1500, 0.042 [0.018, 0.094] at n=2500, 0.008 at n=4000.",
+    "Both detection tests (discrete power-law fit and crackling relation) are passed by the subcritical control at these false-positive rates, so the pipeline cannot separate matched subcriticality from criticality at the sample sizes real avalanche experiments use."
+  ],
+  "rejected_or_quarantined_evidence": [
+    "The counter-side's exotic surrogates (AR(1) and shot-noise counterexamples) did not reproduce on rerun and are quarantined; the decisive evidence is the thesis side's own matched-subcritical false-positive table, not these surrogates.",
+    "At the single intermediate size n=1500 the falsifier did not literally fire (FPR 0.100, upper CI 0.17 < 0.20); the counter-side had momentarily misread the CI upper bound as the estimate. This rescued the letter of the test only at one size, not the registered thesis stated for literature-typical n.",
+    "Large-n positive-control TPR erosion (0.900 at n=4000, as KS-minimised x_min trims short avalanches intrinsic to the critical distribution) is a separate finite-size/estimator tension, quarantined as not part of the headline FPR claim."
+  ],
+  "argument_quality": "CON held the registered observable — false-positive rate on matched non-critical controls — and refused to drift into the unanswerable question of whether the brain is critical. Its decisive blow came not from its own surrogates but from the thesis side's own tables, where a subcritical process passed both detection tests at literature-typical sample sizes while the 0.05 target failed. The thesis side repaired the pipeline in the open and ultimately conceded defeat on the letter of its own falsifier.",
+  "protocol_conduct": "Decisive test pre-registered before compute and schema-valid; real deterministic compute under a single fixed master seed (20260611), 120 trials per condition per sample size; order-swap audit PASS (substantive call 'con' on both the natural and swapped runs). A verbosity-confound warning is flagged because CON was substantially longer than PRO, though the decisive evidence was PRO's own numbers.",
+  "evidence_quality": "Real, deterministic, rerunnable compute, but on a SYNTHETIC Galton-Watson branching process rather than real cortical recordings. The decisive observable is a proxy (not paper-faithful) and establishes that ONE standard validated power-law + crackling pipeline has a high false-positive rate on ONE matched subcritical surrogate at literature-typical sample sizes; it does not establish that every literature pipeline behaves identically, nor decide whether real cortex is critical. Bounded by Poisson offspring, a single subcritical control (m=0.9), one fixed detection and fitting pipeline, and a single sample-size scan.",
+  "what_it_supports": [
+    {
+      "statement": "That at literature-typical sample sizes (n_aval ~ 300-800) a fully validated avalanche power-law + crackling pipeline raises false positives of 0.39-0.47 on a matched subcritical control, far above the registered 0.20 falsifier — so the pipeline is not diagnostic there.",
+      "claim_id": "C2",
+      "evidence_id": "E2"
+    },
+    {
+      "statement": "That the sub-0.05 false-positive regime is a property of sample size, beginning only at n_aval >= 2500, not a property the pipeline carries at the sizes real experiments use.",
+      "claim_id": "C3",
+      "evidence_id": "E3"
+    },
+    {
+      "statement": "That the pipeline does correctly detect genuine criticality on a critical positive control (TPR 0.82-0.98), so the failure is specifically a false-positive problem, not a blanket failure to detect.",
+      "claim_id": "C1",
+      "evidence_id": "E1"
+    }
+  ],
+  "what_it_does_not_support": [
+    {
+      "statement": "Whether real cortical dynamics are critical or whether real avalanche recordings are misdiagnosed: only a synthetic branching process was tested, with no real data.",
+      "claim_id": "C6",
+      "evidence_id": "E6"
+    },
+    {
+      "statement": "That every avalanche-criticality pipeline in the literature behaves identically: a single fixed detection and fitting pipeline against a single matched subcritical surrogate was tested; richer schemes (multi-channel binning, explicit model comparison) were not.",
+      "claim_id": "C6",
+      "evidence_id": "E6"
+    },
+    {
+      "statement": "That the counter-side's exotic surrogates carry the result: its AR(1) and shot-noise counterexamples did not reproduce — the case stands on the matched-subcritical numbers.",
+      "claim_id": "C5",
+      "evidence_id": "E5"
+    }
+  ],
+  "what_remains_open": [
+    "Whether the high false-positive rate persists for richer real detection schemes (multi-channel binning, explicit alternative-model comparison) rather than the single fixed pipeline tested here.",
+    "Whether real cortical avalanche data, with matched empirical controls, fall in the same false-positive regime as this synthetic surrogate.",
+    "How to set sample-size or estimator standards so that avalanche power-law + crackling diagnostics reach the 0.05 target without the n>=2500 counts that real recordings rarely provide."
+  ],
+  "permitted_wording": [
+    "On a synthetic branching model, one fully validated avalanche power-law + crackling pipeline had a false-positive rate of 0.39-0.47 on a matched subcritical control at literature-typical sample sizes, above its own registered 0.20 falsifier.",
+    "The duel showed that power-law plus crackling-relation criteria alone do not reliably separate criticality from matched subcriticality at the sample sizes real avalanche experiments use; the false-positive rate only meets the 0.05 target at n >= 2500.",
+    "CON prevailed on argumentation and on the merits; the result is about a measurement pipeline, not a biological claim about whether the cortex is critical."
+  ],
+  "forbidden_wording": [
+    "proves the claim",
+    "establishes the claim",
+    "confirms the claim",
+    "settles the question",
+    "definitively shows",
+    "Proven / definitively shows that avalanche criticality is an artifact or that the brain is not critical (the test is a synthetic false-positive probe, not a real-data finding).",
+    "Demonstrated on real neural / cortical recordings (no real data was used).",
+    "Every avalanche-criticality pipeline in the literature is invalid (a single fixed pipeline and one matched surrogate were tested)."
+  ],
+  "confidence_and_limitations": "High confidence within a narrow scope: on the synthetic model the pre-registered decisive observable is cleanly realized — the matched subcritical control passes both detection tests with a false-positive rate of 0.39-0.47 at literature-typical sample sizes (lower CI above 0.20 at every such size), the positive control passes (TPR 0.82-0.98), and the false-positive rate meets the 0.05 target only at n >= 2500. The order-swap audit is stable with a substantive call of 'con' on both runs. Out of scope: no real cortical data, one matched subcritical surrogate, one fixed detection/fitting pipeline; the decisive observable is a proxy, not paper-faithful. Genre: scout — a synthetic sufficiency probe of a measurement pipeline, not a scientific_result about neural criticality."
+}

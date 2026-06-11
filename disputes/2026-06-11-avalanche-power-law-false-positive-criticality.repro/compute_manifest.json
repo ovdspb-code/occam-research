@@ -1,0 +1,59 @@
+{
+  "compute_kind": "real_compute",
+  "started_at": "2026-06-11T07:20:00Z",
+  "script": "2026-06-11_repro.py",
+  "script_sha256": "sha256:078a535713cb17d116cfe684732d61ef05750102dd0b794547481df860997938",
+  "inputs": [],
+  "environment": {
+    "python": "Python 3.12.3",
+    "packages": "numpy 2.4.4, scipy 1.17.1",
+    "platform": "linux-x86_64"
+  },
+  "random_seed": "single fixed master seed 20260611 (numpy default_rng); 120 trials per condition per sample size",
+  "outputs": [
+    {
+      "path": "2026-06-11_cc_data.json",
+      "sha256": "sha256:b130ef470124e5401fe90a01f09f9b2eed0a51bbf523304209c723664b68bde1",
+      "metric": "scan[n=300].subcrit_FPR (false-positive rate of the validated power-law + crackling pipeline on a matched subcritical m=0.9 control at a literature-typical sample size)",
+      "value": 0.408,
+      "tolerance": "Wilson 95% CI [0.325, 0.498]; rejection threshold for the thesis is FPR >= 0.20"
+    },
+    {
+      "path": "2026-06-11_cc_data.json",
+      "sha256": "sha256:b130ef470124e5401fe90a01f09f9b2eed0a51bbf523304209c723664b68bde1",
+      "metric": "scan[n=500].subcrit_FPR",
+      "value": 0.467,
+      "tolerance": "Wilson 95% CI [0.380, 0.556]"
+    },
+    {
+      "path": "2026-06-11_cc_data.json",
+      "sha256": "sha256:b130ef470124e5401fe90a01f09f9b2eed0a51bbf523304209c723664b68bde1",
+      "metric": "scan[n=800].subcrit_FPR",
+      "value": 0.392,
+      "tolerance": "Wilson 95% CI [0.309, 0.481]"
+    },
+    {
+      "path": "2026-06-11_cc_data.json",
+      "sha256": "sha256:b130ef470124e5401fe90a01f09f9b2eed0a51bbf523304209c723664b68bde1",
+      "metric": "scan[n=300].crit_TPR (true-positive rate on the critical m=1.0 positive control at the same sample size)",
+      "value": 0.817,
+      "tolerance": "Wilson 95% CI [0.738, 0.876]; positive control must pass for a valid (non-DRAW) outcome"
+    },
+    {
+      "path": "2026-06-11_cc_data.json",
+      "sha256": "sha256:b130ef470124e5401fe90a01f09f9b2eed0a51bbf523304209c723664b68bde1",
+      "metric": "scan[n=2500].subcrit_FPR (FPR only falls below the 0.05 diagnostic target outside the literature-typical regime)",
+      "value": 0.042,
+      "tolerance": "Wilson 95% CI [0.018, 0.094]"
+    },
+    {
+      "path": "2026-06-11_cc_data.json",
+      "sha256": "sha256:b130ef470124e5401fe90a01f09f9b2eed0a51bbf523304209c723664b68bde1",
+      "metric": "scan[n=4000].crit_TPR (TPR begins to erode as fit_xmin trims short avalanches at large n)",
+      "value": 0.900,
+      "tolerance": "Wilson 95% CI [0.833, 0.942]"
+    }
+  ],
+  "rerun_instruction": "python3 2026-06-11_repro.py  # writes 2026-06-11_cc_data.json",
+  "known_limitations": "Synthetic Galton-Watson branching process, not real neural recordings. The subcritical control is one specific matched surrogate (Poisson offspring, m=0.9); a single fixed avalanche-detection and fitting pipeline is used. The result establishes that ONE standard, carefully validated power-law + crackling pipeline has a high false-positive rate (~0.30-0.47) on a matched subcritical control at literature-typical sample sizes (n_aval ~ 300-800), and that this rate only falls below the 0.05 diagnostic target at n_aval >= 2500. It does NOT decide whether real cortical dynamics are critical, nor that every literature pipeline behaves identically; more elaborate detection schemes (multi-channel binning, model comparison against explicit alternatives) were not tested. At very large n the positive-control TPR itself begins to erode because the KS-minimised x_min trims short avalanches that are intrinsic to the critical distribution — a separate finite-size/estimator tension, not part of the headline FPR claim."
+}

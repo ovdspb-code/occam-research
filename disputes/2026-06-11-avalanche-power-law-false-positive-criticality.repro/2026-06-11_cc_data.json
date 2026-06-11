@@ -1,0 +1,101 @@
+{
+  "description": "Duellum Veritatis No.9 \u2014 diagnostic FPR/TPR of a validated avalanche power-law + crackling pipeline on Galton-Watson critical (m=1.0) vs matched subcritical (m=0.9) controls.",
+  "master_seed": 20260611,
+  "trials_per_condition": 120,
+  "n_aval_gate": 150,
+  "rejection_threshold_FPR": 0.2,
+  "diagnostic_target_FPR": 0.05,
+  "pipeline": "discrete Hurwitz-zeta MLE; KS-minimised x_min over 1..8; asymptotic KS threshold 1.36/sqrt(n_tail); crackling slope via log-binned <S>(T) vs (alpha-1)/(tau-1) within 20%; both tests must pass.",
+  "scan": [
+    {
+      "n_aval": 300,
+      "crit_TPR": 0.8167,
+      "crit_TPR_ci95": [
+        0.738,
+        0.8757
+      ],
+      "crit_admitted": 120,
+      "subcrit_FPR": 0.4083,
+      "subcrit_FPR_ci95": [
+        0.3246,
+        0.4978
+      ],
+      "subcrit_admitted": 120
+    },
+    {
+      "n_aval": 500,
+      "crit_TPR": 0.9583,
+      "crit_TPR_ci95": [
+        0.9062,
+        0.9821
+      ],
+      "crit_admitted": 120,
+      "subcrit_FPR": 0.4667,
+      "subcrit_FPR_ci95": [
+        0.3798,
+        0.5556
+      ],
+      "subcrit_admitted": 120
+    },
+    {
+      "n_aval": 800,
+      "crit_TPR": 0.975,
+      "crit_TPR_ci95": [
+        0.9291,
+        0.9915
+      ],
+      "crit_admitted": 120,
+      "subcrit_FPR": 0.3917,
+      "subcrit_FPR_ci95": [
+        0.309,
+        0.4811
+      ],
+      "subcrit_admitted": 120
+    },
+    {
+      "n_aval": 1500,
+      "crit_TPR": 0.975,
+      "crit_TPR_ci95": [
+        0.9291,
+        0.9915
+      ],
+      "crit_admitted": 120,
+      "subcrit_FPR": 0.1,
+      "subcrit_FPR_ci95": [
+        0.0581,
+        0.1667
+      ],
+      "subcrit_admitted": 120
+    },
+    {
+      "n_aval": 2500,
+      "crit_TPR": 0.9333,
+      "crit_TPR_ci95": [
+        0.8739,
+        0.9658
+      ],
+      "crit_admitted": 120,
+      "subcrit_FPR": 0.0417,
+      "subcrit_FPR_ci95": [
+        0.0179,
+        0.0938
+      ],
+      "subcrit_admitted": 120
+    },
+    {
+      "n_aval": 4000,
+      "crit_TPR": 0.9,
+      "crit_TPR_ci95": [
+        0.8333,
+        0.9419
+      ],
+      "crit_admitted": 120,
+      "subcrit_FPR": 0.0083,
+      "subcrit_FPR_ci95": [
+        0.0015,
+        0.0457
+      ],
+      "subcrit_admitted": 120
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "matrix_id": "dv-no9-avalanche-criticality-fpr-2026-06-11",
+  "claim_frozen_at": "2026-06-11T02:00:07Z",
+  "rows": [
+    {
+      "claim_id": "C1",
+      "evidence_id": "E1",
+      "claim": "The validated pipeline genuinely detects true criticality: on a critical (m=1.0) Galton-Watson positive control it calls 'critical' at a high rate.",
+      "evidence": "2026-06-11_cc_data.json scan[n=300].crit_TPR = 0.817 (Wilson 95% CI [0.738, 0.876]); TPR stays 0.93-0.98 across n=500..2500",
+      "diagnosticity": "high",
+      "direction": "supports",
+      "scope": "synthetic Galton-Watson critical branching process (Poisson offspring m=1.0); single fixed pipeline (discrete Hurwitz-zeta MLE, KS-minimised x_min, asymptotic KS threshold, crackling band 20%, n_aval>=150 gate)",
+      "evidence_status": "accepted",
+      "claim_status": "supported"
+    },
+    {
+      "claim_id": "C2",
+      "evidence_id": "E2",
+      "claim": "At literature-typical sample sizes the same pipeline is a diagnostic detector of criticality, i.e. it does NOT raise false positives on matched non-critical controls (registered falsifier: FPR < 0.20).",
+      "evidence": "2026-06-11_cc_data.json matched subcritical m=0.9: scan[n=300].subcrit_FPR = 0.408 [0.325, 0.498]; n=500 = 0.467 [0.380, 0.556]; n=800 = 0.392 [0.309, 0.481] — lower CI bound at every n is well above the 0.20 rejection threshold",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "matched subcritical Galton-Watson control (m=0.9) at n_aval = 300/500/800, the literature-typical regime; passes power-law AND crackling tests at these false-positive rates",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C3",
+      "evidence_id": "E3",
+      "claim": "The diagnosticity claimed for the pipeline is a property of the pipeline, holding at the sample sizes real avalanche experiments use.",
+      "evidence": "FPR only falls below the 0.05 diagnostic target outside the literature-typical regime: scan[n=1500].subcrit_FPR = 0.100 [0.06,0.17]; scan[n=2500] = 0.042 [0.018, 0.094]; n=4000 = 0.008",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "sample-size scan 300..4000; the sub-0.05 regime begins only at n_aval >= 2500, an order of magnitude above typical avalanche counts",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C4",
+      "evidence_id": "E4",
+      "claim": "At the single intermediate size n=1500 the registered falsifier did not literally fire (FPR < 0.20), the point on which the thesis side was briefly correct.",
+      "evidence": "scan[n=1500].subcrit_FPR = 0.100 [0.06, 0.17]; point estimate and upper CI both below the 0.20 trigger — the counter-side had read the CI upper bound as the estimate",
+      "diagnosticity": "medium",
+      "direction": "neutral",
+      "scope": "one intermediate sample size only; does not rescue the registered thesis, which is stated for literature-typical n where FPR is 0.39-0.47",
+      "evidence_status": "accepted",
+      "claim_status": "supported"
+    },
+    {
+      "claim_id": "C5",
+      "evidence_id": "E5",
+      "claim": "The counter-side's exotic surrogates (AR(1), shot-noise) are what defeat the pipeline.",
+      "evidence": "not reproduced — the counter-side's AR(1) and shot-noise counterexamples failed to replicate on rerun; the decisive evidence is the thesis side's OWN matched-subcritical FPR table, not these surrogates",
+      "diagnosticity": "low",
+      "direction": "neutral",
+      "scope": "transcript surrogates outside the decisive repro; quarantined as non-reproducing",
+      "evidence_status": "quarantined",
+      "claim_status": "unsupported"
+    },
+    {
+      "claim_id": "C6",
+      "evidence_id": "E6",
+      "claim": "Real cortical dynamics are (or are not) critical; real avalanche data are misdiagnosed by this pipeline.",
+      "evidence": "not tested — synthetic Galton-Watson branching process only; no real neural recordings, no real detection/binning pipeline, no empirical control",
+      "diagnosticity": "none",
+      "direction": "untested",
+      "scope": "would require running the pipeline on real cortical avalanche recordings with matched empirical controls; not run",
+      "evidence_status": "not_applicable",
+      "claim_status": "speculative"
+    },
+    {
+      "claim_id": "C7",
+      "evidence_id": "E7",
+      "claim": "The positive-control true-positive rate is itself stable across all sample sizes.",
+      "evidence": "scan[n=4000].crit_TPR = 0.900 [0.833, 0.942]: TPR begins to erode at large n because the KS-minimised x_min trims short avalanches intrinsic to the critical distribution — a separate finite-size/estimator tension",
+      "diagnosticity": "low",
+      "direction": "neutral",
+      "scope": "large-n positive control only; not part of the headline FPR claim",
+      "evidence_status": "quarantined",
+      "claim_status": "unsupported"
+    }
+  ]
+}

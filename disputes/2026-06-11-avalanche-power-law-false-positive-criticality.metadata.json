@@ -1,0 +1,65 @@
+{
+  "duel_id": "dv-0009",
+  "series": "Duellum Veritatis",
+  "status": "public_adversarial_ai_stress_test",
+  "claim": {
+    "text": "A standard neuronal-avalanche power-law pipeline is a diagnostic detector of network criticality rather than a high-false-positive measurement pipeline.",
+    "frozen_at": "2026-06-11T02:00:07Z",
+    "claim_type": "numeric"
+  },
+  "sides": {
+    "public_names": [
+      "Athos",
+      "Aramis"
+    ],
+    "athos_side": "PRO",
+    "side_assignment_seed_hash": "sha256:97eb4b67e60444e092cbdad329dc1641f83d719888db350c3f1b259ecc321bb4",
+    "model_id_public": "withheld"
+  },
+  "arbiter": {
+    "identity_public": "independent_ai_arbiter",
+    "outside_duel_roster": true,
+    "blind_to_model_identity": true,
+    "order_swap_audit": {
+      "status": "PASS",
+      "waiver_reason": null
+    },
+    "verbosity_confound_warning": true
+  },
+  "outcome": {
+    "enum": "CON",
+    "substantive_verdict": "con",
+    "basis": "real_compute",
+    "confidence": null,
+    "arbitration_status": "STABLE",
+    "protocol_status": "PASS"
+  },
+  "reproducibility": {
+    "bundle_included": true,
+    "compute_manifest": "2026-06-11-avalanche-power-law-false-positive-criticality.repro/compute_manifest.json",
+    "rerun_status": "not_rerun",
+    "script": "2026-06-11-avalanche-power-law-false-positive-criticality.repro/2026-06-11_repro.py",
+    "outputs": [
+      "2026-06-11-avalanche-power-law-false-positive-criticality.repro/2026-06-11_cc_data.json"
+    ]
+  },
+  "publication_gate": {
+    "status": "PASSED",
+    "approved_sidecar_hash": "sha256:bbcf7c5f27a12932ed02409ce321aeb0da74743f7a07560ff2bf7a27fe515983",
+    "prior_work_check": "not_applicable",
+    "third_party_text_handling": "not_applicable",
+    "errata": []
+  },
+  "epistemic_status": "scout",
+  "not_applicable_reasons": {
+    "third_party_text_handling": "no_external_text_ingested",
+    "prior_work_check": "scout_pilot"
+  },
+  "release_identity": {
+    "duel_id": "dv-0009",
+    "claim_hash": "sha256:bc12e0cb637b3f503efb5f4ab185075a8bf2d1b13486d82ca6c87f13013ebdc9",
+    "source_session_hash": "sha256:9a50a84a4e691fbe72cc9678310c07d7fa9cf5b4fb55874855160f9ab6eee366",
+    "frozen_at": "2026-06-11T02:00:07Z",
+    "compound_hash": "sha256:65e4302093170c1836f72e7c85923a1869ebfdd26e5bb60eb293124618d55832"
+  }
+}

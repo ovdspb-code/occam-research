@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 14mm 0 13mm 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html,body { margin:0; padding:0; }
+
+  :root{
+    --paper:#f7f3e8; --ink:#241b0d; --ink-soft:#6a5c43;
+    --ox:#7a1717; --ox-br:#8f2020; --sepia:#bcae8b; --sepia-d:#9c8a5e;
+    --blue:#243c66; --terra:#9c4a22; --tint:#ede4cd; --chart:#fbf7ec;
+  }
+
+  body {
+    font-family:"EB Garamond 12","Georgia",serif;
+    color:var(--ink); background-color:var(--paper);
+    font-size:11.4pt; line-height:1.52;
+    padding:0 19mm;
+    font-feature-settings:"onum" 1,"liga" 1,"kern" 1;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.33 0 0 0 0 0.17 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+      radial-gradient(160px 120px at 16% 20%, rgba(150,120,68,0.07), transparent 70%),
+      radial-gradient(210px 150px at 84% 32%, rgba(150,120,68,0.06), transparent 70%),
+      radial-gradient(150px 130px at 62% 74%, rgba(140,108,58,0.055), transparent 72%),
+      radial-gradient(230px 180px at 28% 90%, rgba(150,120,68,0.05), transparent 72%),
+      radial-gradient(130px 110px at 90% 84%, rgba(140,108,58,0.05), transparent 70%),
+      radial-gradient(1500px 1000px at 50% 46%, transparent 58%, rgba(86,66,36,0.07) 100%);
+    background-repeat:repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+  }
+  .page{ counter-reset: sec; }
+
+  .runhead{ text-align:center; font-family:"EB Garamond SC","EB Garamond 12",serif;
+            font-variant:small-caps; letter-spacing:3px; font-size:8.4pt;
+            color:var(--ox); margin:0 0 2px 0; }
+  .folio{ text-align:center; color:var(--ink-soft); font-size:9pt; margin-top:10px;
+          font-style:italic; }
+  .folio .sep{ color:var(--sepia-d); margin:0 7px; }
+
+  h1{ font-family:"EB Garamond 12","Georgia",serif; font-size:30pt; line-height:1.05;
+      margin:2px 0 6px 0; color:#120b03; font-weight:700; text-align:center;
+      letter-spacing:0.2px; }
+  h1 .em{ color:var(--ox); font-style:italic; font-weight:500; }
+
+  h2{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+      font-size:14pt; letter-spacing:1.2px; margin:20px 0 7px 0; color:var(--ox);
+      font-weight:600; padding-bottom:5px;
+      border-bottom:1px solid var(--sepia); }
+  h2::before{ counter-increment:sec; content:counter(sec,decimal-leading-zero);
+      font-family:"EB Garamond SC",serif; font-size:9.5pt; color:var(--ox-br);
+      letter-spacing:1px; margin-right:11px; vertical-align:1.5px;
+      border-bottom:none; }
+
+  h3{ font-family:"EB Garamond 12","Georgia",serif; font-size:12pt; font-style:italic;
+      margin:14px 0 3px 0; color:#3a2c1b; font-weight:600; }
+
+  p{ margin:0 0 8px 0; text-align:justify; hyphens:auto; }
+
+  .kicker{ text-align:center; color:var(--ink-soft); font-size:9pt; letter-spacing:3.4px;
+           text-transform:uppercase; margin:8px 0 6px 0;
+           font-family:"EB Garamond SC","EB Garamond 12",serif; }
+
+  .lede{ font-size:12.6pt; color:#3a2c1b; font-style:italic; line-height:1.5;
+         margin:8px 4mm 6px 4mm; text-align:center; }
+
+  .drop::first-letter{ font-family:"EB Garamond Initials","EB Garamond 12",serif;
+      float:left; font-size:52pt; line-height:0.82; padding:4px 8px 0 0;
+      color:var(--ox); font-weight:600; }
+
+  .rule{ height:0; border:none; text-align:center; margin:14px 0; color:var(--ox); }
+  .rule::before{ content:"\2766"; font-size:13pt; color:var(--ox);
+      display:inline-block; }
+  .rule.line{ border-top:1px solid var(--sepia); margin:13px 0; }
+  .rule.line::before{ content:""; }
+
+  .term{ color:var(--ox); font-style:italic; }
+
+  .gloss{ display:block; background:var(--tint); border-left:3px solid var(--ox);
+          padding:8px 13px; margin:9px 0; font-size:10.2pt; color:#3b2e1d;
+          line-height:1.46; }
+  .gloss b{ color:var(--ox); font-weight:600; }
+
+  .disclaimer{ border:1px solid var(--sepia); border-radius:4px; padding:9px 13px;
+               background:#fbf5e6; margin:10px 0; font-size:9.3pt; color:#3b2e1d; line-height:1.46; }
+  .disclaimer b{ color:var(--ox); }
+
+  .duel{ display:flex; gap:13px; margin:11px 0; }
+  .card{ flex:1; border:1px solid var(--sepia); padding:11px 13px; background:#fbf5e6; }
+  .card .who{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+              font-size:10pt; letter-spacing:1.2px; margin-bottom:4px; font-weight:600; }
+  .pro .who{ color:var(--blue); }
+  .con .who{ color:var(--terra); }
+  .pro{ border-top:2.5px solid var(--blue); }
+  .con{ border-top:2.5px solid var(--terra); }
+  .card .stance{ font-size:10.4pt; color:#34281a; line-height:1.45; }
+
+  figure{ margin:15px 0 9px 0; text-align:center; }
+  figcaption{ font-size:9.2pt; color:var(--ink-soft); margin-top:6px; font-style:italic;
+              line-height:1.4; padding:0 6mm; }
+  .chartbox{ background:var(--chart); border:1px solid var(--sepia);
+             padding:11px 9px 5px 9px; }
+
+  blockquote{ margin:11px 6mm; padding:6px 16px; border-left:3px solid var(--ox);
+              font-style:italic; color:#3a2c1b; font-size:11.6pt; }
+
+  .verdict{ border-top:2px solid var(--ox); border-bottom:2px solid var(--ox);
+            padding:12px 16px; margin:14px 0; background:#fbf3e0; }
+  .verdict .win{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+                 color:var(--ox); font-weight:600; font-size:13pt; letter-spacing:0.8px; }
+
+  .meta{ border:1px solid var(--sepia); padding:9px 14px; background:#fbf5e6;
+         margin:11px 0 6px 0; font-size:10pt; line-height:1.5; }
+  .meta .row{ display:flex; gap:10px; padding:2px 0; }
+  .meta .k{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+            color:var(--ox); min-width:118px; flex:0 0 118px; letter-spacing:0.5px;
+            font-size:9.6pt; }
+  .meta .v{ color:var(--ink); }
+
+  .twocol{ display:flex; gap:14px; }
+  .twocol > div{ flex:1; }
+  .support{ border:1px solid var(--sepia); border-top:2.5px solid var(--blue);
+            padding:8px 12px; background:#fbf5e6; margin:6px 0; }
+  .support h3{ margin-top:2px; color:var(--blue); }
+  .nosupport{ border:1px solid var(--sepia); border-top:2.5px solid var(--terra);
+              padding:8px 12px; background:#fbf5e6; margin:6px 0; }
+  .nosupport h3{ margin-top:2px; color:var(--terra); }
+
+  ul{ margin:3px 0 7px 0; padding-left:18px; }
+  li{ margin:2px 0; }
+
+  .appendix{ border-top:1px solid var(--sepia); margin-top:15px; padding-top:9px; }
+  .appendix h3{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+                color:var(--ox); margin:0 0 6px 0; font-size:11pt; font-style:normal;
+                letter-spacing:0.6px; }
+  .appendix .ap{ font-size:9.4pt; color:#473722; line-height:1.48; margin:0 0 5px 0; }
+  .appendix .ap b{ color:var(--ox); }
+
+  .ornament{ text-align:center; margin:8px 0 2px 0; color:var(--ox); }
+  .ornament .fleuron{ font-size:17pt; color:var(--ox); letter-spacing:6px; }
+
+  .foot{ margin-top:11px; padding-top:9px; border-top:1px solid var(--sepia);
+         color:var(--ink-soft); font-size:9pt; line-height:1.46; font-style:italic; }
+  svg{ display:block; }
+  .bars text{ font-family:"EB Garamond 12","Georgia",serif; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<p class="runhead">Duellum Veritatis &middot; nightly duel</p>
+<div class="ornament"><span class="fleuron">&#10086;&#10087;&#10086;</span></div>
+
+<p class="kicker">A nocturnal duel · science explainer</p>
+<h1>When the Detector Catches Its Own <span class="em">Shadow</span></h1>
+<p class="lede">A favourite move in neuroscience: catch "avalanches" of activity, show their sizes follow a power law, and declare the brain poised at criticality. This duel tested a bolder promise — that the full pipeline is a reliable detector, not a machine that cries criticality at noise. The promise did not survive.</p>
+
+<div class="meta">
+  <div class="row"><div class="k">Date</div><div class="v">11 June 2026</div></div>
+  <div class="row"><div class="k">Topic</div><div class="v">Whether a standard neuronal-avalanche power-law + crackling-relation pipeline is a diagnostic detector of network criticality, or a measurement pipeline with a high false-positive rate on matched non-critical controls</div></div>
+  <div class="row"><div class="k">Claim type</div><div class="v">Numeric — backed only by the attached reproducible compute bundle</div></div>
+  <div class="row"><div class="k">Sides</div><div class="v">Athos — defending the thesis · Aramis — refuting it · (public AI-generated sides; engine identities withheld)</div></div>
+  <div class="row"><div class="k">Format</div><div class="v">twelve alternating moves, the decisive blows simulated; an independent AI arbiter; an order-swap audit</div></div>
+</div>
+
+<div class="disclaimer" data-duellum="status-disclaimer">
+<b>Status:</b> public adversarial AI stress-test. This is not peer review, not a scientific proof, and not an endorsement of the claim. Two AI-generated sides argued a frozen claim under a fixed protocol; an independent AI arbiter issued a structured verdict. For numerical claims, the reported numbers come only from the attached reproducible compute bundle. Publication means the duel passed the release gate; it does not promote the claim to discovery status. <span data-duellum="gate-scope">Passing the release gate means automated structural, integrity and format checks passed — it is not human methodological review, peer review, or approval of the claim's substance.</span>
+</div>
+
+<div class="disclaimer" data-duellum="epistemic-status">
+<b>Epistemic status:</b> scout / protocol pilot — exploratory. This issue is a scouting duel, <b>not an established scientific result</b>. Its decisive test runs on synthetic branching-process data, not on real neural recordings: it probes the false-positive behaviour of one measurement pipeline <i>in principle</i>, not the criticality of any real brain. Treat the finding as a methodological lead, not a confirmed claim about the literature.
+</div>
+
+<div class="rule line"></div>
+
+<p class="drop">For two decades, a single picture has anchored the claim that the brain sits at a critical point. Record a patch of cortex, mark the bursts of activity that physicists call <span class="term">avalanches</span>, tabulate their sizes, and you find no typical scale: small bursts and rare enormous ones, sizes spread along a <span class="term">power law</span>. Criticality — the knife-edge between order and chaos — produces exactly such scale-free statistics. The inference seems irresistible: power-law avalanches, therefore a critical brain.</p>
+
+<span class="gloss"><b>The catch everyone already knows.</b> A power-law fit on its own proves very little — noise, fat-tailed distributions and mundane mechanisms can all fake one. So the modern pipeline adds a second, supposedly independent gate: the <span class="term">crackling relation</span>, which checks that three separately measured exponents agree (the average avalanche size should scale with its duration at a rate the size- and duration-exponents jointly predict). The thesis on trial was not "power laws prove criticality." It was the subtler, stronger claim that the <b>joint</b> test — power law <i>and</i> crackling — is genuinely <b>diagnostic</b>: real criticality clears both gates, while imitations fail the second.</span>
+
+<h2>The frozen claim</h2>
+<p>The thesis Athos was assigned to defend, fixed before any computation and not edited afterwards:</p>
+
+<blockquote>"A standard neuronal-avalanche power-law pipeline is a diagnostic detector of network criticality rather than a high-false-positive measurement pipeline."</blockquote>
+
+<p>The falsifier both sides accepted, stated by the thesis side itself: if a matched non-critical or subsampling-confounded surrogate clears <i>both</i> the power-law and the crackling test with a false-positive rate of 0.20 or more — while the positive control (a genuinely critical process) still passes — the thesis falls. The registered observable carried a crucial qualifier: the false-positive rate is to be measured <b>at literature-typical sample sizes</b>.</p>
+
+<div class="duel">
+  <div class="card pro">
+    <img src="art/athos.jpg" alt="Athos, engraved portrait" style="display:block; width:96px; height:96px; margin:2px auto 9px auto; border:1px solid var(--sepia); border-radius:2px;" />
+    <div class="who">Thesis · Athos</div>
+    <div class="stance">The power law alone is a known trap, but the <b>joint</b> pipeline is diagnostic. A genuine critical process clears both the power-law and the crackling gate; a matched subcritical or subsampled control breaks the crackling relation. Run the gauntlet of controls and the false-positive rate stays low.</div>
+  </div>
+  <div class="card con">
+    <img src="art/aramis.jpg" alt="Aramis, engraved portrait" style="display:block; width:96px; height:96px; margin:2px auto 9px auto; border:1px solid var(--sepia); border-radius:2px;" />
+    <div class="who">Counter · Aramis</div>
+    <div class="stance">A matched subcritical control clears <i>both</i> gates often enough that avalanche power laws plus crackling are <b>not</b> diagnostic on their own. At the sample sizes real experiments actually use, the pipeline waves through non-critical data far more than 5% of the time. Show me the false-positive rate, not the rhetoric.</div>
+  </div>
+</div>
+
+<div class="rule line"></div>
+
+<h2>The duel: arithmetic, not rhetoric</h2>
+<p>Almost every move was a small simulated world with a <b>known</b> answer — a critical or a deliberately non-critical process — so the two sides could measure who was right instead of asserting it. The early rounds were messy on both sides, and that mess is part of the honest story.</p>
+
+<h3>The embarrassment that cleared the air: the positive control kept failing</h3>
+<p>The thesis side opened with code, not declaration — and its own <i>positive</i> control, a genuinely critical branching process that must pass by construction, passed in 0% of runs. Not once: zero. A "diagnostic detector" that cannot recognise the very thing it is built to detect is no detector at all. The cause was a shared implementation bug both sides had inherited — a biased exponent estimate and a goodness-of-fit threshold pulled from thin air. The thesis side rewrote the pipeline twice in the open: a discrete maximum-likelihood exponent via the Hurwitz zeta function, a sample-size-aware Kolmogorov–Smirnov cutoff, a log-binned crackling estimate. Methodologically clean work — but each rewrite quietly conceded that the "standard" pipeline is not something you can pull off a shelf and trust.</p>
+
+<h3>The decisive measurement</h3>
+<p>Once the estimator was fixed — a KS-minimised lower cutoff for both size and duration, the asymptotic 5% threshold, an admissibility gate requiring at least 150 avalanches — the positive control finally passed. Now the real question could be asked cleanly: across a realistic range of sample sizes, how often does a <b>matched subcritical</b> control (a branching process with mean offspring 0.9 instead of 1.0) clear both gates? That false-positive rate, set against the true-positive rate of the critical control, is the whole ballgame.</p>
+
+<figure>
+<div class="chartbox">
+<svg class="bars" width="640" height="312" viewBox="0 0 640 312">
+  <!-- literature-typical shaded band: n=300..800 -->
+  <rect x="110" y="30" width="190" height="220" fill="#9c4a22" opacity="0.06"/>
+  <text x="205" y="44" fill="#9c4a22" font-size="8.5" text-anchor="middle" font-style="italic">literature-typical n</text>
+  <!-- axes -->
+  <line x1="80" y1="30" x2="80" y2="250" stroke="#9c8a5e" stroke-width="1"/>
+  <line x1="80" y1="250" x2="612" y2="250" stroke="#9c8a5e" stroke-width="1"/>
+  <!-- y gridlines 0,0.25,0.5,0.75,1.0 -->
+  <g stroke="#d8c9a3" stroke-width="0.8" stroke-dasharray="3,3">
+    <line x1="80" y1="195" x2="612" y2="195"/>
+    <line x1="80" y1="140" x2="612" y2="140"/>
+    <line x1="80" y1="85" x2="612" y2="85"/>
+    <line x1="80" y1="30" x2="612" y2="30"/>
+  </g>
+  <g fill="#6b5d45" font-size="9" text-anchor="end">
+    <text x="74" y="253">0.0</text>
+    <text x="74" y="198">0.25</text>
+    <text x="74" y="143">0.50</text>
+    <text x="74" y="88">0.75</text>
+    <text x="74" y="33">1.0</text>
+  </g>
+  <!-- rejection threshold 0.20 (red dashed) and diagnostic target 0.05 (grey) -->
+  <line x1="80" y1="206" x2="612" y2="206" stroke="#9c4a22" stroke-width="1.1" stroke-dasharray="6,3"/>
+  <text x="608" y="202" fill="#9c4a22" font-size="8.5" text-anchor="end">rejection trigger FPR = 0.20</text>
+  <line x1="80" y1="239" x2="612" y2="239" stroke="#6b5d45" stroke-width="0.9" stroke-dasharray="2,3"/>
+  <text x="608" y="235" fill="#6b5d45" font-size="8.5" text-anchor="end">diagnostic target FPR = 0.05</text>
+  <!-- x labels at 110,205,300,395,490,585 -->
+  <g fill="#6b5d45" font-size="9" text-anchor="middle">
+    <text x="110" y="266">300</text>
+    <text x="205" y="266">500</text>
+    <text x="300" y="266">800</text>
+    <text x="395" y="266">1500</text>
+    <text x="490" y="266">2500</text>
+    <text x="585" y="266">4000</text>
+  </g>
+  <text x="346" y="284" fill="#6b5d45" font-size="9" text-anchor="middle">avalanches per condition (sample size)</text>
+  <!-- TPR series (blue): critical positive control -->
+  <polyline fill="none" stroke="#243c66" stroke-width="2"
+    points="110,70.3 205,39.2 300,35.5 395,35.5 490,44.7 585,52.0"/>
+  <g fill="#243c66">
+    <circle cx="110" cy="70.3" r="3.2"/><circle cx="205" cy="39.2" r="3.2"/>
+    <circle cx="300" cy="35.5" r="3.2"/><circle cx="395" cy="35.5" r="3.2"/>
+    <circle cx="490" cy="44.7" r="3.2"/><circle cx="585" cy="52.0" r="3.2"/>
+  </g>
+  <text x="120" y="64" fill="#243c66" font-size="8.5">TPR (critical) ≈ 0.82–0.98</text>
+  <!-- FPR series (oxblood): matched subcritical control -->
+  <polyline fill="none" stroke="#7a1717" stroke-width="2"
+    points="110,160.2 205,147.3 300,163.8 395,228.0 490,240.8 585,248.2"/>
+  <g fill="#7a1717">
+    <circle cx="110" cy="160.2" r="3.2"/><circle cx="205" cy="147.3" r="3.2"/>
+    <circle cx="300" cy="163.8" r="3.2"/><circle cx="395" cy="228.0" r="3.2"/>
+    <circle cx="490" cy="240.8" r="3.2"/><circle cx="585" cy="248.2" r="3.2"/>
+  </g>
+  <g fill="#7a1717" font-size="8.5" font-weight="700" text-anchor="middle">
+    <text x="110" y="153">0.41</text><text x="205" y="140">0.47</text>
+    <text x="300" y="157">0.39</text><text x="395" y="221">0.10</text>
+    <text x="490" y="234">0.04</text><text x="585" y="241">0.01</text>
+  </g>
+  <text x="430" y="180" fill="#7a1717" font-size="8.5">FPR (matched subcritical)</text>
+</svg>
+</div>
+<figcaption>Fig. 1 — The diagnostic claim measured. Blue: true-positive rate of the validated pipeline on a critical control. Oxblood: false-positive rate on a matched subcritical (m = 0.9) control, across sample size. At literature-typical sizes (n ≈ 300–800, shaded) the false-positive rate sits at 0.39–0.47 — far above the 0.20 rejection trigger and an order of magnitude above the 0.05 diagnostic target — while the critical control passes. The rate only falls below target at n ≥ 2500. Single fixed seed, 120 trials per point. Source: <b>2026-06-11_cc_data.json</b>.</figcaption>
+</figure>
+
+<p>The figure is the verdict in one glance. At the sample sizes real avalanche experiments actually report — hundreds of avalanches per condition, in cultures and in vivo — a matched subcritical process sails through both the power-law and the crackling gate between 39% and 47% of the time, while the genuinely critical control passes. A detector that misfires on non-critical data nearly half the time is not diagnostic; it is mostly detecting "has a heavy enough tail," a property the imposter shares.</p>
+
+<figure>
+<div class="chartbox">
+<svg class="bars" width="640" height="286" viewBox="0 0 640 286">
+  <!-- y axis: value 0..0.6, y(v)=250 - v*366.67 -->
+  <line x1="100" y1="30" x2="100" y2="250" stroke="#9c8a5e" stroke-width="1"/>
+  <line x1="100" y1="250" x2="600" y2="250" stroke="#9c8a5e" stroke-width="1"/>
+  <g stroke="#d8c9a3" stroke-width="0.8" stroke-dasharray="3,3">
+    <line x1="100" y1="213.3" x2="600" y2="213.3"/>
+    <line x1="100" y1="176.7" x2="600" y2="176.7"/>
+    <line x1="100" y1="140.0" x2="600" y2="140.0"/>
+    <line x1="100" y1="103.3" x2="600" y2="103.3"/>
+    <line x1="100" y1="66.7" x2="600" y2="66.7"/>
+  </g>
+  <g fill="#6b5d45" font-size="9" text-anchor="end">
+    <text x="94" y="253">0.0</text>
+    <text x="94" y="216">0.1</text>
+    <text x="94" y="180">0.2</text>
+    <text x="94" y="143">0.3</text>
+    <text x="94" y="107">0.4</text>
+    <text x="94" y="70">0.5</text>
+  </g>
+  <!-- rejection 0.20 (red dashed) + target 0.05 (grey) -->
+  <line x1="100" y1="176.7" x2="600" y2="176.7" stroke="#9c4a22" stroke-width="1.2" stroke-dasharray="6,3"/>
+  <text x="596" y="172" fill="#9c4a22" font-size="8.5" text-anchor="end">rejection trigger 0.20</text>
+  <line x1="100" y1="231.7" x2="600" y2="231.7" stroke="#6b5d45" stroke-width="0.9" stroke-dasharray="2,3"/>
+  <text x="596" y="227.5" fill="#6b5d45" font-size="8.5" text-anchor="end">diagnostic target 0.05</text>
+  <!-- bars at x centres 200,350,500 ; tan base + oxblood bar + Wilson whiskers -->
+  <!-- n=300: FPR 0.408 -> y=100.4 ; CI[0.325,0.498]->lo130.8 hi67.4 -->
+  <rect x="165" y="100.4" width="70" height="149.6" fill="#7a1717" opacity="0.88"/>
+  <line x1="200" y1="67.4" x2="200" y2="130.8" stroke="#3a2c1b" stroke-width="1.4"/>
+  <line x1="192" y1="67.4" x2="208" y2="67.4" stroke="#3a2c1b" stroke-width="1.4"/>
+  <line x1="192" y1="130.8" x2="208" y2="130.8" stroke="#3a2c1b" stroke-width="1.4"/>
+  <text x="200" y="93" fill="#3a2c1b" font-size="10.5" font-weight="700" text-anchor="middle">0.41</text>
+  <text x="200" y="266" fill="#3a2c1b" font-size="9.5" text-anchor="middle">n = 300</text>
+  <!-- n=500: FPR 0.467 -> y=78.8 ; CI[0.380,0.556]->lo110.7 hi46.1 -->
+  <rect x="315" y="78.8" width="70" height="171.2" fill="#7a1717" opacity="0.88"/>
+  <line x1="350" y1="46.1" x2="350" y2="110.7" stroke="#3a2c1b" stroke-width="1.4"/>
+  <line x1="342" y1="46.1" x2="358" y2="46.1" stroke="#3a2c1b" stroke-width="1.4"/>
+  <line x1="342" y1="110.7" x2="358" y2="110.7" stroke="#3a2c1b" stroke-width="1.4"/>
+  <text x="350" y="71" fill="#3a2c1b" font-size="10.5" font-weight="700" text-anchor="middle">0.47</text>
+  <text x="350" y="266" fill="#3a2c1b" font-size="9.5" text-anchor="middle">n = 500</text>
+  <!-- n=800: FPR 0.392 -> y=106.3 ; CI[0.309,0.481]->lo136.7 hi73.6 -->
+  <rect x="465" y="106.3" width="70" height="143.7" fill="#7a1717" opacity="0.88"/>
+  <line x1="500" y1="73.6" x2="500" y2="136.7" stroke="#3a2c1b" stroke-width="1.4"/>
+  <line x1="492" y1="73.6" x2="508" y2="73.6" stroke="#3a2c1b" stroke-width="1.4"/>
+  <line x1="492" y1="136.7" x2="508" y2="136.7" stroke="#3a2c1b" stroke-width="1.4"/>
+  <text x="500" y="99" fill="#3a2c1b" font-size="10.5" font-weight="700" text-anchor="middle">0.39</text>
+  <text x="500" y="266" fill="#3a2c1b" font-size="9.5" text-anchor="middle">n = 800</text>
+  <text x="350" y="282" fill="#6b5d45" font-size="9" text-anchor="middle">matched subcritical false-positive rate at literature-typical sample sizes (whiskers: Wilson 95% CI)</text>
+</svg>
+</div>
+<figcaption>Fig. 2 — The rejection trigger, fired. In the regime where avalanche experiments live, the matched subcritical false-positive rate is 0.39–0.47 with the <i>lower</i> end of every 95% confidence interval well above the 0.20 rejection threshold. This is not a small-sample fluctuation; it is a clean, repeated triggering of the thesis side's own falsifier. Source: <b>2026-06-11_cc_data.json</b>.</figcaption>
+</figure>
+
+<h2>The verdict</h2>
+<div class="verdict">
+<p class="win" data-duellum="outcome"><b>Outcome (who argued better):</b> CON — the refuting side prevailed on argumentation.</p>
+<p class="win" data-duellum="substantive-verdict"><b>Substantive verdict (was the claim true):</b> con — as registered, the claim does not hold.</p>
+<p style="margin:6px 0 0 0; font-size:9.5pt; color:#3a2c1b;" data-duellum="axis-agreement"><b>Here the two axes agree.</b> The refuting side both argued better and was substantively closer to right: at literature-typical sample sizes the pipeline is not diagnostic.</p>
+<p style="margin:6px 0 0 0;">The refuting side held one line throughout — the false-positive rate on matched, properly-built non-critical controls — and refused to be drawn into the unanswerable question of whether the brain is critical. Its decisive blow was landed not with its own surrogate but with the thesis side's <i>own</i> tables, where a subcritical process at typical sample sizes cleared both gates while the 0.05 criterion failed. The thesis side, to its credit, repaired its pipeline in the open and ultimately conceded by the letter of its own falsifier. Both axes point the same way: <b>at the sample sizes real experiments use, a power law plus crackling relation does not separate criticality from matched subcriticality.</b></p>
+<p style="margin:6px 0 0 0; font-size:9pt; color:#3a2c1b;"><b>Basis:</b> real_compute (attached bundle) · <b>Protocol:</b> PASS (12 moves, clean arbiter verdict) · <b>Order-swap audit:</b> PASS (verdict stable when the side order was swapped) · <b>Arbiter confidence:</b> not assigned. <b>Note:</b> the refuting side was substantially more verbose than the thesis side — a verbosity-confound warning is flagged, though the decisive evidence was the thesis side's own numbers.</p>
+</div>
+
+<div class="twocol">
+  <div class="support">
+    <h3>What this supports</h3>
+    <ul>
+      <li>At literature-typical sample sizes (n ≈ 300–800), a matched subcritical control clears the joint power-law + crackling pipeline with a <b>false-positive rate of 0.39–0.47</b> — the thesis side's own rejection trigger (≥ 0.20).</li>
+      <li>The false-positive rate only falls below the 0.05 diagnostic target at <b>n ≥ 2500</b>, outside the regime real avalanche experiments occupy.</li>
+      <li>Even a carefully validated estimator (discrete MLE, KS-minimised cutoff, crackling check) does not rescue diagnosticity at typical sample sizes — the failure is not a single coding bug.</li>
+    </ul>
+  </div>
+  <div class="nosupport" data-duellum="does-not-support">
+    <h3>What this does <u>not</u> support</h3>
+    <ul>
+      <li>It does <b>not</b> show the brain is non-critical, or that any specific published criticality result is wrong — the duel is about a measurement tool, not biology.</li>
+      <li>It does <b>not</b> show that <i>every</i> avalanche pipeline behaves identically: richer schemes (explicit model comparison, multi-channel methods) were not tested.</li>
+      <li>It does <b>not</b> vindicate the refuting side's surrogates: its showcased AR(1) and shot-noise counter-examples did <b>not</b> reproduce on rerun. The case rests on the matched-subcritical numbers, not on those.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Where the losing side still had the better of it earlier</h2>
+<p>The thesis side was right on a narrower point that briefly looked decisive. At one intermediate sample size (n = 1500) the false-positive rate was about 0.10 — below the 0.20 trigger — and the refuting side had over-read the upper edge of a confidence interval as if it were the estimate, the very error it had pinned on its opponent. By the letter, the trigger did not fire at n = 1500. But that rescue only relocated the question to where the registered claim actually lived — "at literature-typical sample sizes" — and there, at n = 300–800, the false-positive rate is 0.39–0.47 with confidence intervals clear of 0.20. The thesis side acknowledged this in the end: the diagnosticity it had defended turned out to be a property of the <i>sample size</i>, appearing only at n ≥ 2500, not a property of the pipeline.</p>
+
+<h2>Prior-work note</h2>
+<p data-duellum="prior-work">This release makes <b>no originality claim</b>. That avalanche power laws alone do not establish criticality, and that goodness-of-fit and lower-cutoff estimation are easy to get wrong, are long-standing cautions in the statistical-physics and neurophysiology literatures; the crackling relation as a sharper criterion is likewise established. The duel's contribution is a self-contained, reproducible stress-test of the <i>joint</i> pipeline's false-positive behaviour as a function of sample size — a methodological illustration, not a new empirical finding about any organism. Novelty status: <span class="term">not an originality claim</span>.</p>
+
+<div class="ornament"><span class="fleuron">&#10086;&#10087;&#10086;</span></div>
+
+<div class="appendix">
+<h3>Appendix · reproducibility</h3>
+<p class="ap">Numbers and figures come from the attached repro bundle. Script, data, hashes, environment and rerun instructions are recorded in <b>2026-06-11_compute_manifest.json</b>.</p>
+<p class="ap"><b>Model:</b> Galton-Watson branching avalanches with Poisson offspring mean m (critical m = 1.0; matched subcritical control m = 0.9), each avalanche giving a (size, duration) pair. Sample sizes scanned: 300, 500, 800, 1500, 2500, 4000 avalanches per condition; 120 trials per point.</p>
+<p class="ap"><b>Pipeline (final, validated):</b> discrete power-law exponent by Hurwitz-zeta maximum likelihood; KS-minimised lower cutoff x<sub>min</sub> over 1..8 for size and duration separately; asymptotic 5% Kolmogorov–Smirnov threshold 1.36/√n<sub>tail</sub>; crackling relation via log-binned ⟨S⟩(T) slope versus (α−1)/(τ−1), accepted within 20%; an admissibility gate requiring ≥ 150 avalanches. A condition is called "critical" only if both the power-law and the crackling tests pass.</p>
+<p class="ap"><b>Environment:</b> Python 3.12.3 · numpy 2.4.4 · scipy 1.17.1 · linux-x86_64 · single fixed master seed 20260611.</p>
+<p class="ap"><b>Headline values (matched subcritical false-positive rate, Wilson 95% CI):</b> n=300 → 0.41 [0.33, 0.50]; n=500 → 0.47 [0.38, 0.56]; n=800 → 0.39 [0.31, 0.48]; n=1500 → 0.10 [0.06, 0.17]; n=2500 → 0.04 [0.02, 0.09]; n=4000 → 0.01 [0.00, 0.05]. Critical positive-control true-positive rate over the same grid: 0.82, 0.96, 0.98, 0.98, 0.93, 0.90.</p>
+<p class="ap"><b>script_sha256:</b> sha256:078a535713cb17d116cfe684732d61ef05750102dd0b794547481df860997938</p>
+<p class="ap"><b>2026-06-11_cc_data.json sha256:</b> sha256:b130ef470124e5401fe90a01f09f9b2eed0a51bbf523304209c723664b68bde1</p>
+<p class="ap"><b>Rerun:</b> python3 2026-06-11_repro.py → writes 2026-06-11_cc_data.json</p>
+<p class="ap"><b>Errata / quarantine:</b> none.</p>
+</div>
+
+<p style="margin-top:10px; font-size:8.4pt; color:#9c8a5e; text-align:center;">Duellum Veritatis · a public adversarial AI stress-test of a frozen scientific claim · published by Occam Research · engine and arbiter identities withheld by design.</p>
+
+<!--DV-SEAL-->
+<div class="imprimatur" style="text-align:center; margin:16px 0 6px 0; page-break-inside:avoid; break-inside:avoid;"><svg class="seal" width="132" height="132" viewBox="0 0 132 132" style="display:block; margin:0 auto;"><path d="M128.20,66.00 L125.92,69.14 L123.48,72.04 L125.26,75.39 L126.84,78.93 L123.96,81.53 L120.97,83.86 L122.01,87.50 L122.82,91.30 L119.46,93.24 L116.06,94.90 L116.32,98.68 L116.32,102.56 L112.63,103.76 L108.95,104.68 L108.43,108.43 L107.62,112.22 L103.76,112.63 L99.97,112.76 L98.68,116.32 L97.10,119.87 L93.24,119.46 L89.51,118.80 L87.50,122.01 L85.22,125.16 L81.53,123.96 L78.02,122.54 L75.39,125.26 L72.50,127.86 L69.14,125.92 L66.00,123.80 L62.86,125.92 L59.50,127.86 L56.61,125.26 L53.98,122.54 L50.47,123.96 L46.78,125.16 L44.50,122.01 L42.49,118.80 L38.76,119.46 L34.90,119.87 L33.32,116.32 L32.03,112.76 L28.24,112.63 L24.38,112.22 L23.57,108.43 L23.05,104.68 L19.37,103.76 L15.68,102.56 L15.68,98.68 L15.94,94.90 L12.54,93.24 L9.18,91.30 L9.99,87.50 L11.03,83.86 L8.04,81.53 L5.16,78.93 L6.74,75.39 L8.52,72.04 L6.08,69.14 L3.80,66.00 L6.08,62.86 L8.52,59.96 L6.74,56.61 L5.16,53.07 L8.04,50.47 L11.03,48.14 L9.99,44.50 L9.18,40.70 L12.54,38.76 L15.94,37.10 L15.68,33.32 L15.68,29.44 L19.37,28.24 L23.05,27.32 L23.57,23.57 L24.38,19.78 L28.24,19.37 L32.03,19.24 L33.32,15.68 L34.90,12.13 L38.76,12.54 L42.49,13.20 L44.50,9.99 L46.78,6.84 L50.47,8.04 L53.98,9.46 L56.61,6.74 L59.50,4.14 L62.86,6.08 L66.00,8.20 L69.14,6.08 L72.50,4.14 L75.39,6.74 L78.02,9.46 L81.53,8.04 L85.22,6.84 L87.50,9.99 L89.51,13.20 L93.24,12.54 L97.10,12.13 L98.68,15.68 L99.97,19.24 L103.76,19.37 L107.62,19.78 L108.43,23.57 L108.95,27.32 L112.63,28.24 L116.32,29.44 L116.32,33.32 L116.06,37.10 L119.46,38.76 L122.82,40.70 L122.01,44.50 L120.97,48.14 L123.96,50.47 L126.84,53.07 L125.26,56.61 L123.48,59.96 L125.92,62.86 Z" fill="#7a1717"/><circle cx="66.0" cy="66.0" r="54.00" fill="none" stroke="#5c100f" stroke-width="1.6"/><circle cx="66.0" cy="66.0" r="52.40" fill="none" stroke="#9a3a30" stroke-width="0.8"/><circle cx="66.0" cy="66.0" r="48.00" fill="none" stroke="#5c100f" stroke-width="0.8"/><text x="67.00" y="80.50" fill="#530f0e" font-family="EB Garamond 12,Georgia,serif" font-weight="700" font-size="44.88" letter-spacing="0.5" text-anchor="middle">OD</text><text x="65.20" y="78.20" fill="#bf5141" font-family="EB Garamond 12,Georgia,serif" font-weight="700" font-size="44.88" letter-spacing="0.5" text-anchor="middle">OD</text><text x="66.00" y="79.20" fill="#6e1414" font-family="EB Garamond 12,Georgia,serif" font-weight="700" font-size="44.88" letter-spacing="0.5" text-anchor="middle">OD</text><text x="67.00" y="108.22" fill="#530f0e" font-family="EB Garamond 12,Georgia,serif" font-weight="600" font-size="11.22" letter-spacing="2.0" text-anchor="middle">MMXXVI</text><text x="65.20" y="105.92" fill="#bf5141" font-family="EB Garamond 12,Georgia,serif" font-weight="600" font-size="11.22" letter-spacing="2.0" text-anchor="middle">MMXXVI</text><text x="66.00" y="106.92" fill="#6e1414" font-family="EB Garamond 12,Georgia,serif" font-weight="600" font-size="11.22" letter-spacing="2.0" text-anchor="middle">MMXXVI</text></svg><div style="font-family:'EB Garamond SC','EB Garamond 12',serif; font-variant:small-caps; color:#7a1717; letter-spacing:2.4px; font-size:11pt; font-weight:600;">Imprimatur</div><div style="color:#6a5c43; font-size:9pt; font-style:italic; margin-top:1px;">O. D. &middot; June 11, 2026</div></div>
+<!--/DV-SEAL-->
+<div class="folio">Duellum Veritatis<span class="sep">&#10086;</span>occam.world</div>
+
+</div>
+</body>
+</html>
