@@ -1,0 +1,51 @@
+{
+  "compute_kind": "real_compute",
+  "script": "2026-06-10_repro.py",
+  "script_sha256": "sha256:4f231c9e0a5ad81a16f1db9630d81c366ceea18b761bbff0f143e64ccd51f255",
+  "inputs": [],
+  "environment": {
+    "python": "Python 3.12.3",
+    "packages": "numpy 2.4.4",
+    "platform": "Linux-6.8.0-111-generic-x86_64-with-glibc2.39"
+  },
+  "random_seed": 17,
+  "outputs": [
+    {
+      "path": "2026-06-10_cc_data.json",
+      "sha256": "sha256:5635fe4b700a7a0ccbd9183b36d148161b624fdde5d726a88861f63689f749da",
+      "metric": "transient_amplification_at_fixed_spectrum_sup_norm",
+      "value": 994964.141,
+      "tolerance": "exact within float64; deterministic seed=17. sup_t||A^t||_2 at fixed spectral radius 0.85, departure 27.04 (Experiment A, s=6)"
+    },
+    {
+      "path": "2026-06-10_cc_data.json",
+      "sha256": "sha256:5635fe4b700a7a0ccbd9183b36d148161b624fdde5d726a88861f63689f749da",
+      "metric": "spectral_radius_invariance_max_abs_deviation",
+      "value": 0.0,
+      "tolerance": "spectral radius held at 0.8500 across all 7 non-normality levels (strictly block-upper perturbation preserves the diagonal Schur blocks exactly)"
+    },
+    {
+      "path": "2026-06-10_cc_data.json",
+      "sha256": "sha256:5635fe4b700a7a0ccbd9183b36d148161b624fdde5d726a88861f63689f749da",
+      "metric": "r2_log_sup_transient_on_log_kreiss_constant",
+      "value": 0.991,
+      "tolerance": "+/- 0.01 across reasonable Kreiss grid resolutions; 16 pooled operators varying both spectrum and non-normality (Experiment B)"
+    },
+    {
+      "path": "2026-06-10_cc_data.json",
+      "sha256": "sha256:5635fe4b700a7a0ccbd9183b36d148161b624fdde5d726a88861f63689f749da",
+      "metric": "r2_log_sup_transient_on_spectral_radius",
+      "value": 0.091,
+      "tolerance": "+/- 0.02; same 16-operator pool. Eigenvalue spectral radius is a near-useless predictor of transient amplification (Experiment B)"
+    },
+    {
+      "path": "2026-06-10_cc_data.json",
+      "sha256": "sha256:5635fe4b700a7a0ccbd9183b36d148161b624fdde5d726a88861f63689f749da",
+      "metric": "memory_capacity_normal_vs_chain_identical_spectrum",
+      "value": 26.27,
+      "tolerance": "normal operator MC=33.82, chain (delay-line, departure 5.94) MC=26.27 at IDENTICAL spectrum rho=0.9; demonstrates spectrum is not a sufficient statistic for memory, but non-normality does not monotonically raise it (Experiment C)"
+    }
+  ],
+  "rerun_instruction": "python3 2026-06-10_repro.py  # writes 2026-06-10_cc_data.json (deterministic, seed=17)",
+  "known_limitations": "Synthetic operators built in a real Schur basis with strictly block-upper non-normal perturbations; this is a controlled construction, not a biologically sampled sparse synaptic matrix, and realistic sparsity-induced non-normality may behave differently. The Kreiss constant is approximated on a finite grid of z outside the unit circle (24 radii x 72 angles); the reported value is a lower bound on the true supremum, sufficient for the rank-ordering and regression used here. Transient amplification sup_t||A^t|| is computed over a finite horizon (t=1..400 in Experiment A, 300 in B); for spectral radius < 1 the peak is captured well before decay. Memory capacity is measured in a simplified noisy linear reservoir (single fixed input vector, Ridge readout, noise 1e-2); input direction, readout structure and nonlinearity can change the picture, and the memory result is contested in the duel and is NOT a clean confirmation of the thesis. Experiment C uses one specific chain construction; it shows memory differs at identical spectrum but does not establish that non-normality monotonically governs memory."
+}

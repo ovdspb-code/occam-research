@@ -1,0 +1,57 @@
+{
+  "duel_id": "dv-0008",
+  "generated_at": "2026-06-10T00:00:00Z",
+  "package_status": "checked",
+  "files": [
+    {
+      "path": "2026-06-10-ten-spectra-nonhermitian-transient-duellum.arbiter_report.json",
+      "sha256": "sha256:60c9f4f91b0f7a52454fe8c210ed3a6c1cbceb52013db15a8a9b610850fd83df",
+      "public": true
+    },
+    {
+      "path": "2026-06-10-ten-spectra-nonhermitian-transient-duellum.claim_evidence_matrix.json",
+      "sha256": "sha256:8b6ebe2fe0b652fd7266e1144b76f099753ed6c4e8a02d5d65afd04af4c9ca08",
+      "public": true
+    },
+    {
+      "path": "2026-06-10-ten-spectra-nonhermitian-transient-duellum.evidence_task.json",
+      "sha256": "sha256:d422e3187ac7368c4bda5cd2ca5f59fd7cb182bcc0ec133041255e6a055c234a",
+      "public": true
+    },
+    {
+      "path": "2026-06-10-ten-spectra-nonhermitian-transient-duellum.html",
+      "sha256": "sha256:8565d4702cc41d43dca58de93fbc5bee61e6a5158e1ec9984f47bd4bbb56e5ef",
+      "public": true
+    },
+    {
+      "path": "2026-06-10-ten-spectra-nonhermitian-transient-duellum.metadata.json",
+      "sha256": "sha256:8c40bca45229e45e8e9a23eb71ae812c27a14f082c31e381571eb808a45d9514",
+      "public": true
+    },
+    {
+      "path": "2026-06-10-ten-spectra-nonhermitian-transient-duellum.order_swap_audit.json",
+      "sha256": "sha256:65fed457665c9f937f4efe40984fb809a0d854c2228f9fbd186a0ef2ed009931",
+      "public": true
+    },
+    {
+      "path": "2026-06-10-ten-spectra-nonhermitian-transient-duellum.pdf",
+      "sha256": "sha256:589f77ed9317b7e31053a3930dad433ea80caf80a21c0c791f2ae3d805535a7f",
+      "public": true
+    },
+    {
+      "path": "2026-06-10-ten-spectra-nonhermitian-transient-duellum.repro/2026-06-10_cc_data.json",
+      "sha256": "sha256:5635fe4b700a7a0ccbd9183b36d148161b624fdde5d726a88861f63689f749da",
+      "public": true
+    },
+    {
+      "path": "2026-06-10-ten-spectra-nonhermitian-transient-duellum.repro/2026-06-10_repro.py",
+      "sha256": "sha256:4f231c9e0a5ad81a16f1db9630d81c366ceea18b761bbff0f143e64ccd51f255",
+      "public": true
+    },
+    {
+      "path": "2026-06-10-ten-spectra-nonhermitian-transient-duellum.repro/compute_manifest.json",
+      "sha256": "sha256:415b6fac3d21c8f9ebbf5b5a7d151f51731742b185bd74790e3d58585c51d950",
+      "public": true
+    }
+  ]
+}
