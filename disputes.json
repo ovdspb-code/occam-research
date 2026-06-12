@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-10",
+  "updated": "2026-06-12",
   "series": "Duellum Veritatis",
   "subtitle": "Adversarial science digests — a thesis defended and attacked to a verdict, every claim backed by computation.",
   "doi": "10.5281/zenodo.20528909",
@@ -81,45 +81,6 @@
         "arbiter_report": "disputes/2026-06-11-avalanche-power-law-false-positive-criticality.arbiter_report.json",
         "evidence_task": "disputes/2026-06-11-avalanche-power-law-false-positive-criticality.evidence_task.json",
         "order_swap_audit": "disputes/2026-06-11-avalanche-power-law-false-positive-criticality.order_swap_audit.json"
-      }
-    },
-    {
-      "id": "2026-06-10-ten-spectra-nonhermitian-transient-duellum",
-      "no": 8,
-      "title": "The Shadow of a Spectrum",
-      "subtitle": "Could you predict how long a sparse neural network holds an echo of its past just by reading off the eigenvalues of its wiring? For the long-run fate — yes. For the violent transients in between — the eigenvalues lie, and the truth hides in the operator's shadow.",
-      "date": "2026-06-10",
-      "verdict": "PRO prevailed on argumentation; substantively unclear. At a fixed eigenvalue spectrum, transient amplification is governed by non-normality — the Kreiss constant explains 99% of the log transient variance versus 9% for the spectral radius; but the memory half overreaches (a non-normal chain remembered less, 26.3 vs 33.8, at an identical spectrum), and synthetic sufficiency does not establish that real sparse synaptic matrices live in this regime.",
-      "tags": [
-        "non-normal-dynamics",
-        "pseudospectrum",
-        "kreiss-constant",
-        "transient-amplification",
-        "memory-capacity",
-        "neuroscience-AI"
-      ],
-      "html": "disputes/2026-06-10-ten-spectra-nonhermitian-transient-duellum.html",
-      "pdf": "disputes/2026-06-10-ten-spectra-nonhermitian-transient-duellum.pdf",
-      "doi": "10.5281/zenodo.20662871",
-      "outcome": "PRO",
-      "basis": "real_compute",
-      "claim_type": "numeric",
-      "arbitration_status": "STABLE",
-      "protocol_status": "FAIL",
-      "prior_work_check": "not_applicable",
-      "release_identity": {
-        "duel_id": "dv-0008",
-        "claim_hash": "sha256:90cc7ca912248269f71d4dbb4edd4ef492be20caa8d8fde32a3438b36d16f8fc",
-        "source_session_hash": "sha256:7e8de4f7e9c07e75a778ff8c8fd822f1f79ed4c4770b4fdb5416c144460801fb",
-        "frozen_at": "2026-06-10T02:01:11Z",
-        "compound_hash": "sha256:d680c59227512efcee0af4f854b8f7400354f3dd1e61082b1aa6b6e3c9255132"
-      },
-      "metadata": "disputes/2026-06-10-ten-spectra-nonhermitian-transient-duellum.metadata.json",
-      "methodology": {
-        "claim_evidence_matrix": "disputes/2026-06-10-ten-spectra-nonhermitian-transient-duellum.claim_evidence_matrix.json",
-        "arbiter_report": "disputes/2026-06-10-ten-spectra-nonhermitian-transient-duellum.arbiter_report.json",
-        "evidence_task": "disputes/2026-06-10-ten-spectra-nonhermitian-transient-duellum.evidence_task.json",
-        "order_swap_audit": "disputes/2026-06-10-ten-spectra-nonhermitian-transient-duellum.order_swap_audit.json"
       }
     },
     {
