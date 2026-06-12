@@ -1,0 +1,66 @@
+{
+  "report_id": "dv-no10-controllability-degree-2026-06-12",
+  "outcome_classification": "CON",
+  "accepted_facts": [
+    "On a synthetic modular stochastic-block connectome (n=200, 8 modules) with 25 planted connector hubs chosen to be maximally favourable to the thesis, a degree+strength model detects the planted hubs with held-out AUC 0.9933, while the full model adding average and modal controllability reaches 0.9929 - an increment of -0.0003 with bootstrap 95% CI [-0.0019, +0.0026] that straddles zero.",
+    "In rank terms average controllability tracks strength with Spearman 0.937, modal controllability is its near-inverse (-0.934), and the two controllability scores are mirror images (-0.993); the thirty highest-strength and thirty highest-average-controllability nodes overlap in 21 of 30.",
+    "A degree-preserving null (40 double-edge-swap rewirings with the empirical weight multiset re-attached) reproduces the same near-zero increment; the observed increment sits at the 40th percentile of the null distribution.",
+    "Across all substrates tried in the transcript (random, modular, planted-hub, dynamic-energy target) degree/strength matched the full model within +/-0.02 AUC and never reached the registered +0.05 acceptance threshold."
+  ],
+  "rejected_or_quarantined_evidence": [
+    "The thesis side's opening run used a circular target (predicting top-quartile-by-controllability from controllability itself) and an erroneous modal-controllability formula (dividing by the square of an eigenvector component, producing values up to ~5.9e9); both were corrected before any score counted and the pre-correction numbers were discarded.",
+    "The real-data version of the claim (incremental value on an empirical HCP/Glasser connectome with a pre-registered behavioural target) was not tested by any compute and is treated as untested rather than as evidence either way."
+  ],
+  "argument_quality": "CON tied every number - delta AUC, bootstrap interval, degree-preserving null, the +/-0.02 threshold - to the pre-registered acceptance and rejection rules, and proposed substrates more favourable to PRO rather than winning on a featureless graph. PRO honestly conceded its circular target and broken formula and moved to an external target, but shifted that target several times post hoc, weakening pre-registration discipline. Within the transcript CON held the falsifier frame and PRO did not meet its own acceptance bar.",
+  "protocol_conduct": "Decisive observable pre-registered before compute and schema-valid; real, deterministic compute at fixed seed 11; order-swap audit PASS (substantive call 'con' on both the natural and swapped runs). A verbosity-confound warning is flagged because PRO wrote substantially more than CON (3983 vs 2053 words); the verdict rests on the numbers, not the word count.",
+  "evidence_quality": "Real, deterministic, rerunnable compute, but on a SYNTHETIC generative substrate rather than a real connectome. The decisive observable is a proxy (not paper-faithful): the target is a planted hub set on a stochastic-block graph, not an empirical parcellation with a behavioural target. The result bounds the class of synthetic topologies tested (including ones built to favour the thesis) and establishes that controllability adds no incremental ranking value there; it does not measure real brain networks.",
+  "what_it_supports": [
+    {
+      "statement": "On a synthetic substrate built to favour the thesis, adding average and modal controllability did not improve held-out hub ranking over degree and strength (increment -0.0003 AUC, 95% CI straddling zero, far short of the registered +0.05 bar).",
+      "claim_id": "C1",
+      "evidence_id": "E1"
+    },
+    {
+      "statement": "Average and modal controllability are rank-redundant with node strength (Spearman 0.937 and -0.934; top-30 overlap 21/30), so they re-rank almost nothing the strength ordering did not already encode.",
+      "claim_id": "C2",
+      "evidence_id": "E2"
+    },
+    {
+      "statement": "Degree-preserving null networks reproduce the near-zero increment, so the (non-)effect is a property of the degree/strength sequence rather than unique controllability structure.",
+      "claim_id": "C3",
+      "evidence_id": "E3"
+    }
+  ],
+  "what_it_does_not_support": [
+    {
+      "statement": "That controllability carries no incremental target-ranking value on a REAL empirical connectome with a pre-registered behavioural or functional target - that case was not tested here.",
+      "claim_id": "C4",
+      "evidence_id": "E4"
+    },
+    {
+      "statement": "Any population-level or discovery-level claim about real brain networks; the duel weighed argumentation and substance within the transcript and its synthetic compute only.",
+      "claim_id": "C4",
+      "evidence_id": "E4"
+    }
+  ],
+  "what_remains_open": [
+    "Whether controllability retains a small, stable incremental AUC over a matched degree/strength baseline on an empirical connectome (HCP, Glasser-360) with a directed behavioural target fixed in advance.",
+    "Whether richer real geometry (true fibre lengths, region-specific structure) leaves a residual increment that degree-preserving nulls do not absorb."
+  ],
+  "permitted_wording": [
+    "On synthetic substrates, including ones built to favour the thesis, controllability added no incremental ranking value over degree and strength (increment within +/-0.02 of zero, never reaching the registered +0.05 bar).",
+    "In rank terms average/modal controllability are near-redundant with node strength on the substrates tested.",
+    "CON prevailed on argumentation; within the tested scope the claim was not supported, while its real-data version remains untested."
+  ],
+  "forbidden_wording": [
+    "proves the claim that controllability is useless in the brain",
+    "establishes the claim on a real empirical connectome",
+    "confirms the claim is false on real connectomes",
+    "settles the question for network control theory",
+    "definitively shows controllability carries no information",
+    "a definitive refutation of controllability metrics",
+    "shown on real fMRI / HCP data (no real connectome was used)",
+    "model X beat model Y (engine identities withheld)"
+  ],
+  "confidence_and_limitations": "Moderate-to-high confidence within a narrow synthetic scope: on substrates chosen to favour the thesis, the pre-registered acceptance signature (>= +0.05 AUC, CI off zero, null broken) is cleanly absent, the rank redundancy is large, and the order-swap audit is stable with a substantive call of 'con' on both runs. Out of scope: no real connectome, no empirical behavioural target, no pre-registered real-data ranking task; the decisive observable is a proxy, not paper-faithful. Genre: scout - a synthetic sufficiency probe of the negative case, not a scientific_result."
+}

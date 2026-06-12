@@ -1,9 +1,48 @@
 {
-  "updated": "2026-06-11",
+  "updated": "2026-06-12",
   "series": "Duellum Veritatis",
   "subtitle": "Adversarial science digests — a thesis defended and attacked to a verdict, every claim backed by computation.",
   "doi": "10.5281/zenodo.20528909",
   "disputes": [
+    {
+      "id": "2026-06-12-controllable-or-well-connected",
+      "no": 10,
+      "title": "Controllable, or Just Well-Connected?",
+      "subtitle": "Network control theory promises that a node's controllability tells you which parts of the brain are the levers. On synthetic connectomes built to favour that claim — including ones with planted bridging hubs — controllability turns out to be node strength wearing a costume: it re-ranks almost nothing.",
+      "date": "2026-06-12",
+      "verdict": "CON prevailed on argumentation, and within scope the claim was not supported. On a thesis-friendly modular connectome with planted connector hubs, adding average and modal controllability moved held-out hub ranking by -0.0003 AUC (95% CI [-0.0019, +0.0026], inside the +/-0.02 reject band, far short of the registered +0.05 bar); controllability is rank-redundant with strength (Spearman 0.937 / -0.934; top-30 overlap 21/30) and a degree-preserving null reproduces the non-effect. Bounded to synthetic substrates; the real-data version remains untested.",
+      "tags": [
+        "network-control-theory",
+        "connectomics",
+        "graph-theory",
+        "controllability",
+        "node-strength",
+        "neuroscience-AI"
+      ],
+      "html": "disputes/2026-06-12-controllable-or-well-connected.html",
+      "pdf": "disputes/2026-06-12-controllable-or-well-connected.pdf",
+      "doi": "10.5281/zenodo.20528909",
+      "outcome": "CON",
+      "basis": "real_compute",
+      "claim_type": "numeric",
+      "arbitration_status": "STABLE",
+      "protocol_status": "PASS",
+      "prior_work_check": "not_applicable",
+      "release_identity": {
+        "duel_id": "dv-0010",
+        "claim_hash": "sha256:464b793e36c8823db0cc6b1851a91386d496ae7d1497a397378db2465a457700",
+        "source_session_hash": "sha256:7fcdbda5477d099af5e5a09d7a113e4fe7a34de4cfeb740d11a871a075810104",
+        "frozen_at": "2026-06-12T02:00:17Z",
+        "compound_hash": "sha256:d1a43864ba44c14d735159a299217a941a72c218c212a6da11c1c2f33b300374"
+      },
+      "metadata": "disputes/2026-06-12-controllable-or-well-connected.metadata.json",
+      "methodology": {
+        "claim_evidence_matrix": "disputes/2026-06-12-controllable-or-well-connected.claim_evidence_matrix.json",
+        "arbiter_report": "disputes/2026-06-12-controllable-or-well-connected.arbiter_report.json",
+        "evidence_task": "disputes/2026-06-12-controllable-or-well-connected.evidence_task.json",
+        "order_swap_audit": "disputes/2026-06-12-controllable-or-well-connected.order_swap_audit.json"
+      }
+    },
     {
       "id": "2026-06-11-avalanche-power-law-false-positive-criticality",
       "no": 9,

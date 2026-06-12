@@ -1,0 +1,65 @@
+{
+  "duel_id": "dv-0010",
+  "series": "Duellum Veritatis",
+  "status": "public_adversarial_ai_stress_test",
+  "claim": {
+    "text": "Connectome controllability metrics carry target-ranking information beyond degree and strength.",
+    "frozen_at": "2026-06-12T02:00:17Z",
+    "claim_type": "numeric"
+  },
+  "sides": {
+    "public_names": [
+      "Athos",
+      "Aramis"
+    ],
+    "athos_side": "CON",
+    "side_assignment_seed_hash": "sha256:702d4c2472fee0698234296410f54bbdb1cbefb41e5f481fa5d7d5f45eaebd21",
+    "model_id_public": "withheld"
+  },
+  "arbiter": {
+    "identity_public": "independent_ai_arbiter",
+    "outside_duel_roster": true,
+    "blind_to_model_identity": true,
+    "order_swap_audit": {
+      "status": "PASS",
+      "waiver_reason": null
+    },
+    "verbosity_confound_warning": true
+  },
+  "outcome": {
+    "enum": "CON",
+    "substantive_verdict": "con",
+    "basis": "real_compute",
+    "confidence": null,
+    "arbitration_status": "STABLE",
+    "protocol_status": "PASS"
+  },
+  "reproducibility": {
+    "bundle_included": true,
+    "compute_manifest": "2026-06-12-controllable-or-well-connected.repro/compute_manifest.json",
+    "rerun_status": "not_rerun",
+    "script": "2026-06-12-controllable-or-well-connected.repro/2026-06-12_repro.py",
+    "outputs": [
+      "2026-06-12-controllable-or-well-connected.repro/2026-06-12_cc_data.json"
+    ]
+  },
+  "publication_gate": {
+    "status": "PASSED",
+    "approved_sidecar_hash": "sha256:68b6feebcc5034ddf39eccf1d89dd133d5d8483fd771c60ba2104f6f2268a499",
+    "prior_work_check": "not_applicable",
+    "third_party_text_handling": "not_applicable",
+    "errata": []
+  },
+  "epistemic_status": "scout",
+  "not_applicable_reasons": {
+    "prior_work_check": "no_novelty_claim",
+    "third_party_text_handling": "no_external_text_ingested"
+  },
+  "release_identity": {
+    "duel_id": "dv-0010",
+    "claim_hash": "sha256:464b793e36c8823db0cc6b1851a91386d496ae7d1497a397378db2465a457700",
+    "source_session_hash": "sha256:7fcdbda5477d099af5e5a09d7a113e4fe7a34de4cfeb740d11a871a075810104",
+    "frozen_at": "2026-06-12T02:00:17Z",
+    "compound_hash": "sha256:d1a43864ba44c14d735159a299217a941a72c218c212a6da11c1c2f33b300374"
+  }
+}

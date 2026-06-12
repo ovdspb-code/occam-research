@@ -1,0 +1,73 @@
+{
+  "compute_kind": "real_compute",
+  "script": "2026-06-12_repro.py",
+  "script_sha256": "sha256:95b83327baec7873ee9c506c75d9e4945785d2d8c143af00a5752a19babbc4da",
+  "inputs": [],
+  "environment": {
+    "python": "3.12.3",
+    "packages": "numpy 2.4.4, scipy 1.17.1, scikit-learn 1.9.0, networkx 3.6.1",
+    "platform": "linux-x86_64"
+  },
+  "random_seed": 11,
+  "outputs": [
+    {
+      "path": "2026-06-12_cc_data.json",
+      "sha256": "sha256:1be4565b61af876233342ba45773e6e45b0e2f3c6533c30991d3d872bd6ee7ad",
+      "metric": "spearman_avg_ctrl_vs_strength",
+      "value": 0.937,
+      "tolerance": "+/-0.02 over re-runs at fixed seed"
+    },
+    {
+      "path": "2026-06-12_cc_data.json",
+      "sha256": "sha256:1be4565b61af876233342ba45773e6e45b0e2f3c6533c30991d3d872bd6ee7ad",
+      "metric": "spearman_modal_ctrl_vs_strength",
+      "value": -0.934,
+      "tolerance": "+/-0.02 over re-runs at fixed seed"
+    },
+    {
+      "path": "2026-06-12_cc_data.json",
+      "sha256": "sha256:1be4565b61af876233342ba45773e6e45b0e2f3c6533c30991d3d872bd6ee7ad",
+      "metric": "top30_overlap_strength_vs_avg_ctrl",
+      "value": 21,
+      "tolerance": "integer count out of 30; +/-2 over re-runs"
+    },
+    {
+      "path": "2026-06-12_cc_data.json",
+      "sha256": "sha256:1be4565b61af876233342ba45773e6e45b0e2f3c6533c30991d3d872bd6ee7ad",
+      "metric": "auc_degree_strength_planted_hubs",
+      "value": 0.9933,
+      "tolerance": "+/-0.01 (10x5 repeated CV)"
+    },
+    {
+      "path": "2026-06-12_cc_data.json",
+      "sha256": "sha256:1be4565b61af876233342ba45773e6e45b0e2f3c6533c30991d3d872bd6ee7ad",
+      "metric": "auc_full_with_controllability_planted_hubs",
+      "value": 0.9929,
+      "tolerance": "+/-0.01 (10x5 repeated CV)"
+    },
+    {
+      "path": "2026-06-12_cc_data.json",
+      "sha256": "sha256:1be4565b61af876233342ba45773e6e45b0e2f3c6533c30991d3d872bd6ee7ad",
+      "metric": "delta_auc_full_minus_degree_strength",
+      "value": -0.0003,
+      "tolerance": "+/-0.01; registered decision band is +/-0.02 (reject) vs >=0.05 (accept)"
+    },
+    {
+      "path": "2026-06-12_cc_data.json",
+      "sha256": "sha256:1be4565b61af876233342ba45773e6e45b0e2f3c6533c30991d3d872bd6ee7ad",
+      "metric": "delta_auc_bootstrap_ci95",
+      "value": "[-0.0019, 0.0026]",
+      "tolerance": "95% percentile bootstrap (500 resamples); CI includes zero"
+    },
+    {
+      "path": "2026-06-12_cc_data.json",
+      "sha256": "sha256:1be4565b61af876233342ba45773e6e45b0e2f3c6533c30991d3d872bd6ee7ad",
+      "metric": "degree_preserving_null_empirical_above_null_fraction",
+      "value": 0.4,
+      "tolerance": "40 rewired null graphs; observed delta lies inside the null distribution (no excess signal)"
+    }
+  ],
+  "rerun_instruction": "python3 2026-06-12_repro.py  -> writes 2026-06-12_cc_data.json (runtime ~3 min)",
+  "known_limitations": "Synthetic substrate only: a modular stochastic-block connectome (n=200) with planted connector hubs, chosen to be MAXIMALLY favourable to the PRO mechanism, not an empirical HCP connectome. No real parcellation, no behavioural/functional target, no pre-registered real-data ranking task. The ground-truth target is the planted hub set; results bound the class of synthetic topologies tested, not real brain networks. Controllability uses linear time-invariant dynamics; nonlinear/stochastic regimes untested. Generalisation to real connectomes (HCP, Glasser-360, sub-parcellations) remains open.",
+  "started_at": "2026-06-12T07:30:00Z"
+}

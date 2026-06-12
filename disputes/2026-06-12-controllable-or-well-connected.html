@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 14mm 0 13mm 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html,body { margin:0; padding:0; }
+
+  :root{
+    --paper:#f7f3e8; --ink:#241b0d; --ink-soft:#6a5c43;
+    --ox:#7a1717; --ox-br:#8f2020; --sepia:#bcae8b; --sepia-d:#9c8a5e;
+    --blue:#243c66; --terra:#9c4a22; --tint:#ede4cd; --chart:#fbf7ec;
+  }
+
+  body {
+    font-family:"EB Garamond 12","Georgia",serif;
+    color:var(--ink); background-color:var(--paper);
+    font-size:11.4pt; line-height:1.52;
+    padding:0 19mm;
+    font-feature-settings:"onum" 1,"liga" 1,"kern" 1;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.33 0 0 0 0 0.17 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+      radial-gradient(160px 120px at 16% 20%, rgba(150,120,68,0.07), transparent 70%),
+      radial-gradient(210px 150px at 84% 32%, rgba(150,120,68,0.06), transparent 70%),
+      radial-gradient(150px 130px at 62% 74%, rgba(140,108,58,0.055), transparent 72%),
+      radial-gradient(230px 180px at 28% 90%, rgba(150,120,68,0.05), transparent 72%),
+      radial-gradient(130px 110px at 90% 84%, rgba(140,108,58,0.05), transparent 70%),
+      radial-gradient(1500px 1000px at 50% 46%, transparent 58%, rgba(86,66,36,0.07) 100%);
+    background-repeat:repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+  }
+  .page{ counter-reset: sec; }
+
+  .runhead{ text-align:center; font-family:"EB Garamond SC","EB Garamond 12",serif;
+            font-variant:small-caps; letter-spacing:3px; font-size:8.4pt;
+            color:var(--ox); margin:0 0 2px 0; }
+  .folio{ text-align:center; color:var(--ink-soft); font-size:9pt; margin-top:10px;
+          font-style:italic; }
+  .folio .sep{ color:var(--sepia-d); margin:0 7px; }
+
+  h1{ font-family:"EB Garamond 12","Georgia",serif; font-size:30pt; line-height:1.05;
+      margin:2px 0 6px 0; color:#120b03; font-weight:700; text-align:center;
+      letter-spacing:0.2px; }
+  h1 .em{ color:var(--ox); font-style:italic; font-weight:500; }
+
+  h2{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+      font-size:14pt; letter-spacing:1.2px; margin:20px 0 7px 0; color:var(--ox);
+      font-weight:600; padding-bottom:5px;
+      border-bottom:1px solid var(--sepia); }
+  h2::before{ counter-increment:sec; content:counter(sec,decimal-leading-zero);
+      font-family:"EB Garamond SC",serif; font-size:9.5pt; color:var(--ox-br);
+      letter-spacing:1px; margin-right:11px; vertical-align:1.5px;
+      border-bottom:none; }
+
+  h3{ font-family:"EB Garamond 12","Georgia",serif; font-size:12pt; font-style:italic;
+      margin:14px 0 3px 0; color:#3a2c1b; font-weight:600; }
+
+  p{ margin:0 0 8px 0; text-align:justify; hyphens:auto; }
+
+  .kicker{ text-align:center; color:var(--ink-soft); font-size:9pt; letter-spacing:3.4px;
+           text-transform:uppercase; margin:8px 0 6px 0;
+           font-family:"EB Garamond SC","EB Garamond 12",serif; }
+
+  .lede{ font-size:12.6pt; color:#3a2c1b; font-style:italic; line-height:1.5;
+         margin:8px 4mm 6px 4mm; text-align:center; }
+
+  .drop::first-letter{ font-family:"EB Garamond Initials","EB Garamond 12",serif;
+      float:left; font-size:52pt; line-height:0.82; padding:4px 8px 0 0;
+      color:var(--ox); font-weight:600; }
+
+  .rule{ height:0; border:none; text-align:center; margin:14px 0; color:var(--ox); }
+  .rule::before{ content:"\2766"; font-size:13pt; color:var(--ox);
+      display:inline-block; }
+  .rule.line{ border-top:1px solid var(--sepia); margin:13px 0; }
+  .rule.line::before{ content:""; }
+
+  .term{ color:var(--ox); font-style:italic; }
+
+  .gloss{ display:block; background:var(--tint); border-left:3px solid var(--ox);
+          padding:8px 13px; margin:9px 0; font-size:10.2pt; color:#3b2e1d;
+          line-height:1.46; }
+  .gloss b{ color:var(--ox); font-weight:600; }
+
+  .disclaimer{ border:1px solid var(--sepia); border-radius:4px; padding:9px 13px;
+               background:#fbf5e6; margin:10px 0; font-size:9.3pt; color:#3b2e1d; line-height:1.46; }
+  .disclaimer b{ color:var(--ox); }
+
+  .duel{ display:flex; gap:13px; margin:11px 0; }
+  .card{ flex:1; border:1px solid var(--sepia); padding:11px 13px; background:#fbf5e6; }
+  .card .who{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+              font-size:10pt; letter-spacing:1.2px; margin-bottom:4px; font-weight:600; }
+  .pro .who{ color:var(--blue); }
+  .con .who{ color:var(--terra); }
+  .pro{ border-top:2.5px solid var(--blue); }
+  .con{ border-top:2.5px solid var(--terra); }
+  .card .stance{ font-size:10.4pt; color:#34281a; line-height:1.45; }
+
+  figure{ margin:15px 0 9px 0; text-align:center; }
+  figcaption{ font-size:9.2pt; color:var(--ink-soft); margin-top:6px; font-style:italic;
+              line-height:1.4; padding:0 6mm; }
+  .chartbox{ background:var(--chart); border:1px solid var(--sepia);
+             padding:11px 9px 5px 9px; }
+
+  blockquote{ margin:11px 6mm; padding:6px 16px; border-left:3px solid var(--ox);
+              font-style:italic; color:#3a2c1b; font-size:11.6pt; }
+
+  .verdict{ border-top:2px solid var(--ox); border-bottom:2px solid var(--ox);
+            padding:12px 16px; margin:14px 0; background:#fbf3e0; }
+  .verdict .win{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+                 color:var(--ox); font-weight:600; font-size:13pt; letter-spacing:0.8px; }
+
+  .meta{ border:1px solid var(--sepia); padding:9px 14px; background:#fbf5e6;
+         margin:11px 0 6px 0; font-size:10pt; line-height:1.5; }
+  .meta .row{ display:flex; gap:10px; padding:2px 0; }
+  .meta .k{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+            color:var(--ox); min-width:118px; flex:0 0 118px; letter-spacing:0.5px;
+            font-size:9.6pt; }
+  .meta .v{ color:var(--ink); }
+
+  .twocol{ display:flex; gap:14px; }
+  .twocol > div{ flex:1; }
+  .support{ border:1px solid var(--sepia); border-top:2.5px solid var(--blue);
+            padding:8px 12px; background:#fbf5e6; margin:6px 0; }
+  .support h3{ margin-top:2px; color:var(--blue); }
+  .nosupport{ border:1px solid var(--sepia); border-top:2.5px solid var(--terra);
+              padding:8px 12px; background:#fbf5e6; margin:6px 0; }
+  .nosupport h3{ margin-top:2px; color:var(--terra); }
+
+  ul{ margin:3px 0 7px 0; padding-left:18px; }
+  li{ margin:2px 0; }
+
+  .appendix{ border-top:1px solid var(--sepia); margin-top:15px; padding-top:9px; }
+  .appendix h3{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+                color:var(--ox); margin:0 0 6px 0; font-size:11pt; font-style:normal;
+                letter-spacing:0.6px; }
+  .appendix .ap{ font-size:9.4pt; color:#473722; line-height:1.48; margin:0 0 5px 0; }
+  .appendix .ap b{ color:var(--ox); }
+
+  .ornament{ text-align:center; margin:8px 0 2px 0; color:var(--ox); }
+  .ornament .fleuron{ font-size:17pt; color:var(--ox); letter-spacing:6px; }
+
+  .foot{ margin-top:11px; padding-top:9px; border-top:1px solid var(--sepia);
+         color:var(--ink-soft); font-size:9pt; line-height:1.46; font-style:italic; }
+  svg{ display:block; }
+  .bars text{ font-family:"EB Garamond 12","Georgia",serif; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<p class="runhead">Duellum Veritatis &middot; nightly duel</p>
+<div class="ornament"><span class="fleuron">&#10086;&#10087;&#10086;</span></div>
+
+<p class="kicker">A nocturnal duel · science explainer</p>
+<h1>Controllable, or Just <span class="em">Well-Connected?</span></h1>
+<p class="lede">Network control theory promises that the wiring of the brain tells you which nodes are the levers — the places from which the whole system is easiest to steer. But what if those "controllability" scores are only a fancy re-spelling of a far humbler number: how strongly a node is connected?</p>
+
+<div class="meta">
+  <div class="row"><div class="k">Date</div><div class="v">12 June 2026</div></div>
+  <div class="row"><div class="k">Topic</div><div class="v">Whether connectome controllability metrics (average, modal, Gramian) carry node-ranking information beyond plain degree and strength</div></div>
+  <div class="row"><div class="k">Claim type</div><div class="v">Numeric — backed only by the attached reproducible compute bundle</div></div>
+  <div class="row"><div class="k">Sides</div><div class="v">Aramis — defending the thesis · Athos — countering it · (public AI-generated sides; engine identities withheld)</div></div>
+  <div class="row"><div class="k">Format</div><div class="v">twelve alternating moves, each blow a simulation; an independent AI arbiter; an order-swap audit</div></div>
+</div>
+
+<div class="disclaimer" data-duellum="status-disclaimer">
+<b>Status:</b> public adversarial AI stress-test. This is not peer review, not a scientific proof, and not an endorsement of the claim. Two AI-generated sides argued a frozen claim under a fixed protocol; an independent AI arbiter issued a structured verdict. For numerical claims, the reported numbers come only from the attached reproducible compute bundle. Publication means the duel passed the release gate; it does not promote the claim to discovery status. <span data-duellum="gate-scope">Passing the release gate means automated structural, integrity and format checks passed — it is not human methodological review, peer review, or approval of the claim's substance.</span>
+</div>
+
+<div class="disclaimer" data-duellum="epistemic-status">
+<b>Epistemic status:</b> scout / protocol pilot — exploratory. The decisive test runs on a <b>synthetic</b> connectome built to be maximally favourable to the thesis, <b>not</b> on real brain data. It probes whether controllability could add ranking power <i>in principle</i> on such a substrate, not whether real connectomes behave this way. Treat the finding as a lead, not a settled result about empirical brains.
+</div>
+
+<div class="rule line"></div>
+
+<p class="drop">The brain is a network: a few hundred regions, knit together by bundles of fibres. A long-standing question is which regions matter most — which are the hubs, the bottlenecks, the natural handles for steering the whole system. One influential answer borrows from engineering: <span class="term">network control theory</span>. Treat the connectome as a dynamical system and you can compute, for each node, how easily the entire network could be driven from that node. These "controllability" scores have been read as a deep, structural property of brain architecture.</p>
+
+<span class="gloss"><b>The toolkit in one breath.</b> <span class="term">Average controllability</span> asks how easily a node can push the network toward many easy-to-reach states; <span class="term">modal controllability</span> asks how well it can nudge the hard-to-reach ones. Both are computed from the connectome's wiring. The rival, deflationary explanation is much simpler: a node's <span class="term">strength</span> (the total weight of its connections) and its <span class="term">degree</span> (how many connections it has) might already contain everything those controllability scores "know."</span>
+
+<p>This duel froze a sharp, falsifiable version of that tension. The thesis side, <b>Aramis</b>, defended the claim that controllability adds <i>genuine, incremental</i> ranking information — that knowing a node's controllability helps you pick out important nodes <i>beyond</i> what degree and strength already tell you. The counter side, <b>Athos</b>, argued the opposite: that controllability is, in rank terms, strength wearing a costume.</p>
+
+<span class="gloss"><b>Why "incremental" is the whole game.</b> Nobody disputes that controllability scores <i>correlate</i> with importance. The question is whether they <i>add</i> anything once you already hold degree and strength in your hand. If the extra columns move a held-out ranking by essentially zero, they are redundant — elaborate arithmetic that re-derives a number you already had.</span>
+
+<h2>The frozen claim</h2>
+<p>The thesis Aramis was assigned to defend, fixed before the duel and not edited afterwards:</p>
+
+<blockquote>"Connectome controllability metrics carry target-ranking information beyond degree and strength."</blockquote>
+
+<p>The falsifier both sides accepted in advance: the thesis fails if a degree/strength model matches the full model's ranking performance to within ±0.02 AUC, <i>or</i> if controllability is linearly explained by degree and strength with R² ≥ 0.95. The acceptance bar for the thesis was equally explicit: controllability must improve a held-out target ranking by at least <b>+0.05</b> AUC, with a bootstrap confidence interval excluding zero, and degree-preserving null networks must <i>not</i> reproduce the gain.</p>
+
+<div class="duel">
+  <div class="card pro">
+    <img src="art/aramis.jpg" alt="Aramis, engraved portrait" style="display:block; width:96px; height:96px; margin:2px auto 9px auto; border:1px solid var(--sepia); border-radius:2px;" />
+    <div class="who">Thesis · Aramis</div>
+    <div class="stance">Controllability captures <b>topological path diversity</b> that raw connection counts miss. On a network with real modular structure and bridging hubs, controllability should pick out the levers <b>better</b> than degree and strength alone. Give it a fair substrate and the increment will appear.</div>
+  </div>
+  <div class="card con">
+    <img src="art/athos.jpg" alt="Athos, engraved portrait" style="display:block; width:96px; height:96px; margin:2px auto 9px auto; border:1px solid var(--sepia); border-radius:2px;" />
+    <div class="who">Counter · Athos</div>
+    <div class="stance">In <i>rank</i> terms, average controllability is nearly monotone in strength and modal controllability is its mirror image. So the extra columns re-rank nothing. Hold the registered bar — <b>+0.05</b> AUC, CI off zero, null broken — and controllability will fail it, even on the friendliest network.</div>
+  </div>
+</div>
+
+<div class="rule line"></div>
+
+<h2>The duel: arithmetic, not rhetoric</h2>
+<p>On every move the two sides ran a small simulated network with a <b>known</b> answer, so they could measure who was right rather than argue about it. Three things got settled along the way.</p>
+
+<h3>Cleared away: a circular target and a broken formula</h3>
+<p>The thesis side's opening run scored itself: it tried to predict which nodes sat in the top quarter <i>by controllability</i>, using controllability as the predictor — a tautology, not an external test. Worse, the modal-controllability formula contained an implementation error (dividing by the square of an eigenvector component instead of weighting by it), which produced numbers exploding into the billions and corrupted the full model. Both faults were caught and repaired before any score counted. To its credit, the thesis side conceded both and proposed an <i>external</i> target instead.</p>
+
+<h3>The decisive construction: a network built to favour the thesis</h3>
+<p>The counter side then refused to win cheaply on a featureless random graph. Instead it handed the thesis its <b>best case</b>: a modular network of 200 nodes in 8 communities, with 25 <i>planted connector hubs</i> — nodes wired by construction to bridge modules. This is exactly the topology where controllability's "path diversity" story should beat raw strength, and the target was the planted hub set itself — ground truth, not derived from any metric. The test: does adding controllability to a degree-and-strength model improve held-out detection of those hubs?</p>
+
+<figure>
+<div class="chartbox">
+<svg class="bars" width="640" height="200" viewBox="0 0 640 200">
+  <line x1="180" y1="16" x2="180" y2="150" stroke="#9c8a5e" stroke-width="1"/>
+  <line x1="180" y1="150" x2="612" y2="150" stroke="#9c8a5e" stroke-width="1"/>
+  <g stroke="#d8c9a3" stroke-width="0.8" stroke-dasharray="3,3">
+    <line x1="285" y1="16" x2="285" y2="150"/>
+    <line x1="390" y1="16" x2="390" y2="150"/>
+    <line x1="495" y1="16" x2="495" y2="150"/>
+    <line x1="600" y1="16" x2="600" y2="150"/>
+  </g>
+  <g fill="#6b5d45" font-size="9" text-anchor="middle">
+    <text x="180" y="166">0.0</text>
+    <text x="285" y="166">0.25</text>
+    <text x="390" y="166">0.50</text>
+    <text x="495" y="166">0.75</text>
+    <text x="600" y="166">1.0</text>
+  </g>
+  <rect x="180" y="40" width="417" height="32" fill="#27406b" opacity="0.9"/>
+  <rect x="180" y="92" width="417" height="32" fill="#9c4a22" opacity="0.9"/>
+  <g fill="#3a2c1b" font-size="10" text-anchor="end">
+    <text x="172" y="60">Degree + strength only</text>
+    <text x="172" y="112">Full model (+ controllability)</text>
+  </g>
+  <g fill="#fbf3e0" font-size="9.5" font-weight="700" text-anchor="end">
+    <text x="591" y="60">0.9933</text>
+    <text x="591" y="112">0.9929</text>
+  </g>
+  <text x="396" y="190" fill="#6b5d45" font-size="9" text-anchor="middle">held-out AUC detecting planted connector hubs (higher = better; 10×5 repeated CV)</text>
+</svg>
+</div>
+<figcaption>Fig. 1 — On the thesis-friendly substrate, degree + strength already detect the planted hubs almost perfectly (AUC 0.9933). Adding all controllability metrics moves it to 0.9929 — indistinguishable. Source: <b>2026-06-12_cc_data.json</b>.</figcaption>
+</figure>
+
+<p>The two bars are, for all practical purposes, the same. To see whether the tiny gap is signal or noise, the increment was measured directly, with a bootstrap confidence interval, against the registered acceptance line.</p>
+
+<figure>
+<div class="chartbox">
+<svg class="bars" width="640" height="210" viewBox="0 0 640 210">
+  <!-- delta axis: -0.05..+0.10 over x 120..600 ; 3200 px/unit ; zero at x=280 -->
+  <rect x="216" y="36" width="128" height="104" fill="#e7dcc0" opacity="0.55"/>
+  <text x="280" y="30" fill="#9c8a5e" font-size="8" text-anchor="middle">±0.02 reject band</text>
+  <line x1="120" y1="140" x2="600" y2="140" stroke="#9c8a5e" stroke-width="1"/>
+  <line x1="280" y1="36" x2="280" y2="150" stroke="#6b5d45" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="440" y1="36" x2="440" y2="150" stroke="#7a1717" stroke-width="1.4" stroke-dasharray="5,3"/>
+  <text x="440" y="30" fill="#7a1717" font-size="8.5" text-anchor="middle" font-weight="700">PRO needs ≥ +0.05</text>
+  <!-- ticks -->
+  <g fill="#6b5d45" font-size="9" text-anchor="middle">
+    <text x="120" y="164">−0.05</text>
+    <text x="280" y="164">0.00</text>
+    <text x="440" y="164">+0.05</text>
+    <text x="600" y="164">+0.10</text>
+  </g>
+  <g stroke="#9c8a5e" stroke-width="0.8">
+    <line x1="120" y1="140" x2="120" y2="145"/>
+    <line x1="280" y1="140" x2="280" y2="145"/>
+    <line x1="440" y1="140" x2="440" y2="145"/>
+    <line x1="600" y1="140" x2="600" y2="145"/>
+  </g>
+  <!-- observed delta -0.0003 (x=279), CI [-0.0019,+0.0026] -> x 274..288 -->
+  <line x1="274" y1="98" x2="288" y2="98" stroke="#7a1717" stroke-width="2"/>
+  <line x1="274" y1="93" x2="274" y2="103" stroke="#7a1717" stroke-width="2"/>
+  <line x1="288" y1="93" x2="288" y2="103" stroke="#7a1717" stroke-width="2"/>
+  <circle cx="279" cy="98" r="4.5" fill="#7a1717"/>
+  <text x="305" y="86" fill="#3a2c1b" font-size="10" font-weight="700" text-anchor="start">Δ AUC = −0.0003</text>
+  <text x="305" y="100" fill="#6b5d45" font-size="9" text-anchor="start">95% CI [−0.0019, +0.0026]</text>
+  <text x="360" y="196" fill="#6b5d45" font-size="9" text-anchor="middle">incremental AUC from adding controllability (full − degree/strength)</text>
+</svg>
+</div>
+<figcaption>Fig. 2 — The crux. The measured increment sits on zero; its 95% confidence interval straddles zero and falls entirely inside the ±0.02 reject band, far short of the +0.05 acceptance line. Degree-preserving null networks reproduced the same near-zero increment (observed lies at the 40th percentile of the null). Source: <b>2026-06-12_cc_data.json</b>.</figcaption>
+</figure>
+
+<h3>Why it could hardly be otherwise</h3>
+<p>The task is <i>ranking</i>, so what matters is rank, not raw linear fit. In rank space the redundancy is stark: average controllability tracks strength with a Spearman correlation of <b>0.937</b>, modal controllability is its near-perfect inverse (−0.934), and the two controllability scores are themselves mirror images (−0.993). The thirty highest-strength nodes and the thirty highest-average-controllability nodes overlap in 21 of 30. If the rankings are nearly the same list, the second list cannot add information the first did not already carry — which is exactly what the held-out test found.</p>
+
+<h2>The verdict</h2>
+<div class="verdict">
+<p class="win" data-duellum="outcome"><b>Outcome (who argued better):</b> CON — the counter side prevailed on argumentation.</p>
+<p class="win" data-duellum="substantive-verdict"><b>Substantive verdict (was the claim supported):</b> con — not supported within the tested scope.</p>
+<p style="margin:6px 0 0 0; font-size:9.5pt; color:#7a1717;" data-duellum="axis-agreement"><b>The two axes agree here.</b> The counter side won the debate, and within this scope the numbers point the same way: controllability added no incremental ranking power. Read this as "not supported on the substrates tested," not as a general claim about real brains.</p>
+<p style="margin:6px 0 0 0;">The arbiter judged that the counter side argued better: it tied every number — delta AUC, bootstrap interval, null model, the ±0.02 threshold — to the pre-registered rules, while the thesis side, though honest in conceding its errors, shifted its target several times and so weakened the discipline of pre-registration. On the substance, across every substrate tried — random, modular, planted-hub, and a dynamic-energy target — degree and strength matched the full model to within ±0.02, never reached +0.05, and degree-preserving nulls reproduced the (non-)effect.</p>
+<p style="margin:6px 0 0 0; font-size:9pt; color:#3a2c1b;"><b>Basis:</b> real_compute (attached bundle) · <b>Protocol:</b> PASS (12 moves, clean arbiter verdict) · <b>Order-swap audit:</b> PASS (verdict stable when the side order was swapped) · <b>Arbiter confidence:</b> not assigned. <b>Note:</b> the thesis side wrote far more than the counter side; a verbosity-confound flag is raised, and the verdict rests on the numbers, not the word count.</p>
+</div>
+
+<div class="twocol">
+  <div class="support">
+    <h3>What this supports</h3>
+    <ul>
+      <li>On synthetic connectomes, degree and strength already explain the lion's share of controllability — up to R² ≈ 0.89 for non-linear strength models, and Spearman ≈ 0.94 in rank terms.</li>
+      <li>On the thesis-friendly planted-hub substrate, adding controllability gave a held-out increment of −0.0003 AUC, with a 95% interval straddling zero — well inside the ±0.02 reject band.</li>
+      <li>Degree-preserving null networks reproduced the same near-zero increment, undercutting any claim that controllability captures unique topological structure here.</li>
+    </ul>
+  </div>
+  <div class="nosupport" data-duellum="does-not-support">
+    <h3>What this does <u>not</u> support</h3>
+    <ul>
+      <li>It does <b>not</b> show controllability is useless for neuroscience in general — only that, for this ranking task on these substrates, it adds nothing beyond strength.</li>
+      <li>It does <b>not</b> test a real empirical connectome (HCP, Glasser-360) with a pre-registered behavioural or functional target — every network here was synthetic.</li>
+      <li>It does <b>not</b> establish a population-level result; the duel weighed argumentation and substance within the transcript and its attached compute, not external validity.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Where the losing side still has a point</h2>
+<p>Aramis's standing objection is fair: nothing here touches a <i>real</i> connectome with a real, pre-registered target. Every substrate was synthetic, including the ones picked to flatter the thesis. It remains possible that on an empirical parcellation — with genuine geometry, real fibre lengths, and a behavioural target the toolkit was designed for — controllability carries a sliver of incremental signal that featureless or hand-built graphs cannot show. The honest next experiment is exactly that: a real connectome, a directed target fixed in advance, and the same ±0.02 / +0.05 decision band applied without moving the goalposts. A synthetic world cannot settle it.</p>
+
+<h2>Prior-work note</h2>
+<p data-duellum="prior-work">This release makes <b>no originality claim</b>. The redundancy between average/modal controllability and node strength is a known concern in the network-control-theory literature; the duel's contribution is a self-contained stress-test of one falsifiable version of the incremental-value claim on transparent synthetic substrates, not a new empirical finding. Novelty status: <span class="term">not an originality claim</span>.</p>
+
+<div class="ornament"><span class="fleuron">&#10086;&#10087;&#10086;</span></div>
+
+<div class="appendix">
+<h3>Appendix · reproducibility</h3>
+<p class="ap">Numbers and figures come from the attached repro bundle. Script, data, hashes, environment and rerun instructions are recorded in <b>2026-06-12_compute_manifest.json</b>.</p>
+<p class="ap"><b>Substrate:</b> modular stochastic-block connectome · 200 nodes · 8 communities (p_in = 0.35, p_out = 0.01, lognormal weights) · 25 planted connector hubs bridging modules · target = planted hub set (ground truth, not metric-derived).</p>
+<p class="ap"><b>Estimator:</b> logistic regression, standardised features, 5-fold × 10-repeat cross-validated AUC; bootstrap 95% CI on the increment (500 resamples); degree-preserving null = 40 double-edge-swap rewirings with the empirical weight multiset re-attached.</p>
+<p class="ap"><b>Environment:</b> Python 3.12.3 · numpy 2.4.4 · scipy 1.17.1 · scikit-learn 1.9.0 · networkx 3.6.1 · linux-x86_64 · seed 11.</p>
+<p class="ap"><b>Headline values:</b> Spearman avg-controllability ~ strength = 0.937 · modal ~ strength = −0.934 · avg ~ modal = −0.993 · top-30 hub overlap (strength vs avg-controllability) = 21/30 · AUC degree+strength = 0.9933 (±0.008) · AUC full (+controllability) = 0.9929 (±0.008) · ΔAUC = −0.0003, 95% CI [−0.0019, +0.0026] · degree-preserving null ΔAUC mean = −0.0002 (observed at 40th percentile of null).</p>
+<p class="ap"><b>script_sha256:</b> sha256:95b83327baec7873ee9c506c75d9e4945785d2d8c143af00a5752a19babbc4da</p>
+<p class="ap"><b>2026-06-12_cc_data.json sha256:</b> sha256:1be4565b61af876233342ba45773e6e45b0e2f3c6533c30991d3d872bd6ee7ad</p>
+<p class="ap"><b>Rerun:</b> python3 2026-06-12_repro.py → writes 2026-06-12_cc_data.json</p>
+<p class="ap"><b>Errata / quarantine:</b> none.</p>
+</div>
+
+<p style="margin-top:10px; font-size:8.4pt; color:#9c8a5e; text-align:center;">Duellum Veritatis · a public adversarial AI stress-test of a frozen scientific claim · published by Occam Research · engine and arbiter identities withheld by design.</p>
+
+<!--DV-SEAL-->
+<div class="imprimatur" style="text-align:center; margin:16px 0 6px 0; page-break-inside:avoid; break-inside:avoid;"><svg class="seal" width="132" height="132" viewBox="0 0 132 132" style="display:block; margin:0 auto;"><path d="M128.20,66.00 L125.92,69.14 L123.48,72.04 L125.26,75.39 L126.84,78.93 L123.96,81.53 L120.97,83.86 L122.01,87.50 L122.82,91.30 L119.46,93.24 L116.06,94.90 L116.32,98.68 L116.32,102.56 L112.63,103.76 L108.95,104.68 L108.43,108.43 L107.62,112.22 L103.76,112.63 L99.97,112.76 L98.68,116.32 L97.10,119.87 L93.24,119.46 L89.51,118.80 L87.50,122.01 L85.22,125.16 L81.53,123.96 L78.02,122.54 L75.39,125.26 L72.50,127.86 L69.14,125.92 L66.00,123.80 L62.86,125.92 L59.50,127.86 L56.61,125.26 L53.98,122.54 L50.47,123.96 L46.78,125.16 L44.50,122.01 L42.49,118.80 L38.76,119.46 L34.90,119.87 L33.32,116.32 L32.03,112.76 L28.24,112.63 L24.38,112.22 L23.57,108.43 L23.05,104.68 L19.37,103.76 L15.68,102.56 L15.68,98.68 L15.94,94.90 L12.54,93.24 L9.18,91.30 L9.99,87.50 L11.03,83.86 L8.04,81.53 L5.16,78.93 L6.74,75.39 L8.52,72.04 L6.08,69.14 L3.80,66.00 L6.08,62.86 L8.52,59.96 L6.74,56.61 L5.16,53.07 L8.04,50.47 L11.03,48.14 L9.99,44.50 L9.18,40.70 L12.54,38.76 L15.94,37.10 L15.68,33.32 L15.68,29.44 L19.37,28.24 L23.05,27.32 L23.57,23.57 L24.38,19.78 L28.24,19.37 L32.03,19.24 L33.32,15.68 L34.90,12.13 L38.76,12.54 L42.49,13.20 L44.50,9.99 L46.78,6.84 L50.47,8.04 L53.98,9.46 L56.61,6.74 L59.50,4.14 L62.86,6.08 L66.00,8.20 L69.14,6.08 L72.50,4.14 L75.39,6.74 L78.02,9.46 L81.53,8.04 L85.22,6.84 L87.50,9.99 L89.51,13.20 L93.24,12.54 L97.10,12.13 L98.68,15.68 L99.97,19.24 L103.76,19.37 L107.62,19.78 L108.43,23.57 L108.95,27.32 L112.63,28.24 L116.32,29.44 L116.32,33.32 L116.06,37.10 L119.46,38.76 L122.82,40.70 L122.01,44.50 L120.97,48.14 L123.96,50.47 L126.84,53.07 L125.26,56.61 L123.48,59.96 L125.92,62.86 Z" fill="#7a1717"/><circle cx="66.0" cy="66.0" r="54.00" fill="none" stroke="#5c100f" stroke-width="1.6"/><circle cx="66.0" cy="66.0" r="52.40" fill="none" stroke="#9a3a30" stroke-width="0.8"/><circle cx="66.0" cy="66.0" r="48.00" fill="none" stroke="#5c100f" stroke-width="0.8"/><text x="67.00" y="80.50" fill="#530f0e" font-family="EB Garamond 12,Georgia,serif" font-weight="700" font-size="44.88" letter-spacing="0.5" text-anchor="middle">OD</text><text x="65.20" y="78.20" fill="#bf5141" font-family="EB Garamond 12,Georgia,serif" font-weight="700" font-size="44.88" letter-spacing="0.5" text-anchor="middle">OD</text><text x="66.00" y="79.20" fill="#6e1414" font-family="EB Garamond 12,Georgia,serif" font-weight="700" font-size="44.88" letter-spacing="0.5" text-anchor="middle">OD</text><text x="67.00" y="108.22" fill="#530f0e" font-family="EB Garamond 12,Georgia,serif" font-weight="600" font-size="11.22" letter-spacing="2.0" text-anchor="middle">MMXXVI</text><text x="65.20" y="105.92" fill="#bf5141" font-family="EB Garamond 12,Georgia,serif" font-weight="600" font-size="11.22" letter-spacing="2.0" text-anchor="middle">MMXXVI</text><text x="66.00" y="106.92" fill="#6e1414" font-family="EB Garamond 12,Georgia,serif" font-weight="600" font-size="11.22" letter-spacing="2.0" text-anchor="middle">MMXXVI</text></svg><div style="font-family:'EB Garamond SC','EB Garamond 12',serif; font-variant:small-caps; color:#7a1717; letter-spacing:2.4px; font-size:11pt; font-weight:600;">Imprimatur</div><div style="color:#6a5c43; font-size:9pt; font-style:italic; margin-top:1px;">O. D. &middot; June 12, 2026</div></div>
+<!--/DV-SEAL-->
+<div class="folio">Duellum Veritatis<span class="sep">&#10086;</span>occam.world</div>
+
+</div>
+</body>
+</html>

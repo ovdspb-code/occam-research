@@ -1,0 +1,50 @@
+{
+  "matrix_id": "dv-no10-controllability-degree-2026-06-12",
+  "claim_frozen_at": "2026-06-12T02:00:17Z",
+  "rows": [
+    {
+      "claim_id": "C1",
+      "evidence_id": "E1",
+      "claim": "Controllability metrics improve held-out target ranking by >= 0.05 AUC over degree and strength, with a bootstrap CI excluding zero.",
+      "evidence": "2026-06-12_cc_data.json auc_planted_hub_target: degree+strength 0.9933, full(+controllability) 0.9929; delta_auc -0.0003 with bootstrap 95% CI [-0.0019, +0.0026] (CI includes zero).",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "synthetic modular SBM (n=200, 8 modules) with 25 planted connector hubs as ground-truth target; logistic regression, 10x5 repeated CV AUC",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C2",
+      "evidence_id": "E2",
+      "claim": "Controllability carries rank information not already contained in node strength.",
+      "evidence": "rank_redundancy: Spearman avg-controllability ~ strength = 0.937, modal ~ strength = -0.934, avg ~ modal = -0.993; top-30 node overlap (strength vs avg-controllability) = 21/30.",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "rank space on the planted-hub substrate; controllability is near-monotone in strength so re-ranks almost nothing",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C3",
+      "evidence_id": "E3",
+      "claim": "Any incremental controllability signal reflects unique topological structure, not a degree/strength artifact.",
+      "evidence": "degree_preserving_null: 40 double-edge-swap rewirings with empirical weight multiset re-attached reproduce the near-zero increment (null delta mean -0.0002); observed delta lies at the 40th percentile of the null distribution.",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "synthetic degree-preserving null on the planted-hub substrate",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C4",
+      "evidence_id": "E4",
+      "claim": "On a real empirical connectome (e.g. HCP / Glasser-360) with a pre-registered behavioural or functional target, controllability carries incremental target-ranking value beyond degree and strength.",
+      "evidence": "not tested - all substrates are synthetic (random, modular SBM, planted hubs, dynamic-energy target); no real parcellation, no real behavioural/functional target, no pre-registered real-data ranking task.",
+      "diagnosticity": "none",
+      "direction": "untested",
+      "scope": "would require an empirical connectome with a directed target fixed in advance; not run in this duel",
+      "evidence_status": "not_applicable",
+      "claim_status": "speculative"
+    }
+  ]
+}

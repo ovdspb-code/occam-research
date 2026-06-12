@@ -1,0 +1,37 @@
+{
+  "substrate": "modular_SBM_planted_connector_hubs",
+  "n_nodes": 200,
+  "n_modules": 8,
+  "n_planted_hubs": 25,
+  "seed": 11,
+  "rank_redundancy": {
+    "spearman_avg_ctrl_vs_strength": 0.937,
+    "spearman_modal_ctrl_vs_strength": -0.934,
+    "spearman_avg_vs_modal": -0.993,
+    "top30_overlap_strength_vs_avg_ctrl": 21
+  },
+  "auc_planted_hub_target": {
+    "degree_strength_mean": 0.9933,
+    "degree_strength_std": 0.008,
+    "strength_nonlinear_mean": 0.9933,
+    "strength_nonlinear_std": 0.0088,
+    "full_with_controllability_mean": 0.9929,
+    "full_with_controllability_std": 0.0082,
+    "delta_auc_full_minus_degstr": -0.0003,
+    "delta_auc_bootstrap_ci95": [
+      -0.0019,
+      0.0026
+    ],
+    "ci_excludes_zero": false
+  },
+  "degree_preserving_null": {
+    "n_null_graphs": 40,
+    "null_delta_mean": -0.0002,
+    "null_delta_std": 0.002,
+    "empirical_above_null_fraction": 0.4
+  },
+  "registered_thresholds": {
+    "pro_accept": "delta >= 0.05 AUC AND bootstrap 95% CI excludes zero AND null does not reproduce",
+    "pro_reject": "degree/strength matches full within +/-0.02 OR R2(ctrl ~ deg+str) >= 0.95"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "duel_id": "dv-0010",
+  "generated_at": "2026-06-12T00:00:00Z",
+  "package_status": "checked",
+  "files": [
+    {
+      "path": "2026-06-12-controllable-or-well-connected.arbiter_report.json",
+      "sha256": "sha256:da24a097b2ba6308d2963ae819166044ba64d1471131319850268fadc4268ff4",
+      "public": true
+    },
+    {
+      "path": "2026-06-12-controllable-or-well-connected.claim_evidence_matrix.json",
+      "sha256": "sha256:b420fd63185a8a7ceb30ef998d6ddb263b1b3956464a9c512e0170da8959fb13",
+      "public": true
+    },
+    {
+      "path": "2026-06-12-controllable-or-well-connected.evidence_task.json",
+      "sha256": "sha256:3709f0c9134a88a9bc3a09dee6ab942c5af1d8e85b7666b804d4cee9a9217c44",
+      "public": true
+    },
+    {
+      "path": "2026-06-12-controllable-or-well-connected.html",
+      "sha256": "sha256:1c89400e08c5b390fbb860e8f4c4ea8b9a2d5bd5c0831ca5a195191f7e5d2300",
+      "public": true
+    },
+    {
+      "path": "2026-06-12-controllable-or-well-connected.metadata.json",
+      "sha256": "sha256:ee7921e046b79157b70468262d89a34d12e6f0d4a170e463104c1f4112e60ae2",
+      "public": true
+    },
+    {
+      "path": "2026-06-12-controllable-or-well-connected.order_swap_audit.json",
+      "sha256": "sha256:d89d1bfa58dbcb42ad32c6c0600783a38c80bb5494a941e8623fd735dab6f9c7",
+      "public": true
+    },
+    {
+      "path": "2026-06-12-controllable-or-well-connected.pdf",
+      "sha256": "sha256:9b61ee2dcd7a544421aaf8900095cac38472e0105dc6558e34e03287b95ef533",
+      "public": true
+    },
+    {
+      "path": "2026-06-12-controllable-or-well-connected.repro/2026-06-12_cc_data.json",
+      "sha256": "sha256:1be4565b61af876233342ba45773e6e45b0e2f3c6533c30991d3d872bd6ee7ad",
+      "public": true
+    },
+    {
+      "path": "2026-06-12-controllable-or-well-connected.repro/2026-06-12_repro.py",
+      "sha256": "sha256:95b83327baec7873ee9c506c75d9e4945785d2d8c143af00a5752a19babbc4da",
+      "public": true
+    },
+    {
+      "path": "2026-06-12-controllable-or-well-connected.repro/compute_manifest.json",
+      "sha256": "sha256:7b6189bcc933d62955865d742ebb834f3b4e4bdaf3b43ff93ebc8b91aa6417de",
+      "public": true
+    }
+  ]
+}

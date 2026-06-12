@@ -1,0 +1,64 @@
+{
+  "task_id": "dv-no10-controllability-degree-2026-06-12",
+  "frozen_claim": "Connectome controllability metrics carry target-ranking information beyond degree and strength.",
+  "frozen_at": "2026-06-12T02:00:17Z",
+  "registered_before_compute": true,
+  "registered_at": "2026-06-12T02:00:17Z",
+  "registered_by": "b2b-20260612-020017 (duel generator session)",
+  "pre_compute_event_id": "b2b-20260612-020017",
+  "decisive": true,
+  "observable": {
+    "name": "incremental_auc_controllability_over_degree_strength",
+    "definition": "Held-out AUC increment of a model that adds average and modal controllability features to a degree+strength baseline, when ranking nodes for a declared target. On a synthetic modular stochastic-block connectome (n=200, 8 communities, p_in=0.35, p_out=0.01, lognormal weights) with 25 planted connector hubs, the target is the planted hub set (ground truth, not metric-derived). Predictors are standardised and fit with logistic regression under 5-fold x 10-repeat cross-validation; the increment is full-model AUC minus degree+strength AUC, with a bootstrap 95% CI (500 resamples). A degree-preserving null (double-edge-swap rewiring with the empirical weight multiset re-attached) is run for comparison.",
+    "paper_faithful": false,
+    "evidence_basis": "simulation",
+    "source_ref": null
+  },
+  "model": {
+    "generative": "Modular SBM: 200 nodes in 8 equal communities, within-module edge probability 0.35 and between-module 0.01, lognormal edge weights. 25 randomly chosen nodes are planted as connector hubs by adding cross-module edges, making them bridge modules by construction. Connectivity is enforced via a minimum spanning tree if needed.",
+    "config": "n=200, K=8, planted_hubs=25, estimator=LogisticRegression(max_iter=2000) with StandardScaler, 5-fold x 10-repeat CV AUC, bootstrap=500, null_graphs=40, seed=11.",
+    "controls": "degree-preserving null: the edge topology is rewired by double-edge-swap (preserving the degree sequence) and the empirical weight multiset is re-attached; if controllability captured unique structure the observed increment would exceed the null, which it does not (40th percentile)."
+  },
+  "comparators": [
+    { "name": "degree_strength_only_predictor", "role": "baseline" },
+    { "name": "strength_nonlinear_predictor", "role": "baseline" },
+    { "name": "full_with_controllability", "role": "structured" },
+    { "name": "degree_preserving_rewire_null", "role": "null_model" }
+  ],
+  "thresholds": {
+    "pro_accept_min_delta_auc": 0.05,
+    "pro_reject_match_band": 0.02,
+    "ci": "bootstrap 95% percentile interval, 500 resamples",
+    "decision_rule": "PRO is accepted only if controllability improves held-out AUC by >= 0.05 over degree+strength AND the bootstrap 95% CI excludes zero AND the degree-preserving null does not reproduce the gain. PRO is rejected if degree/strength matches the full model within +/-0.02 AUC OR controllability is linearly explained by degree+strength with R^2 >= 0.95."
+  },
+  "metrics": [
+    { "name": "auc_degree_strength", "variants": ["raw"] },
+    { "name": "auc_full_with_controllability", "variants": ["raw"] },
+    { "name": "incremental_auc_over_degree_strength", "variants": ["raw"] }
+  ],
+  "seeds": {
+    "count": 1,
+    "level": "run",
+    "streams": ["graph_generation", "cv_split", "bootstrap"]
+  },
+  "nulls": [
+    "degree_preserving_rewire: double-edge-swap preserving the degree sequence with the empirical weight multiset re-attached; controllability should not beat degree+strength on rewired graphs if its signal is just degree/strength.",
+    "increment measured by repeated cross-validation to limit optimistic bias."
+  ],
+  "failure_modes": [
+    "Synthetic substrate only: cannot establish what controllability does on a real empirical connectome (HCP, Glasser-360) with a real behavioural/functional target - the decisive external-validity limitation.",
+    "A single graph realization at seed 11; planted-hub target is very easy (hubs have high degree), compressing AUC near the ceiling and limiting headroom for any metric.",
+    "Controllability computed for linear time-invariant dynamics; nonlinear or stochastic regimes untested.",
+    "Logistic regression with a fixed feature set; a different learner or richer controllability featurization could shift the measured increment."
+  ],
+  "accepted_evidence_criteria": "The thesis is supported on this substrate only if the controllability-augmented model improves held-out AUC by >= 0.05 over degree+strength with a bootstrap 95% CI excluding zero and the degree-preserving null failing to reproduce the gain.",
+  "rejected_evidence_criteria": "The thesis is rejected on this substrate if degree/strength matches the full model within +/-0.02 AUC, or if controllability is linearly explained by degree+strength with R^2 >= 0.95. This synthetic test cannot establish the REAL-DATA version of the claim even when the thesis fails here; that would require an empirical connectome with a pre-registered directed target.",
+  "sensitivity_grid": {
+    "substrate": ["modular_sbm_planted_connector_hubs"],
+    "nodes": [200],
+    "modules": [8],
+    "planted_hubs": [25],
+    "seeds": [11],
+    "estimator": ["logistic_regression"]
+  }
+}
