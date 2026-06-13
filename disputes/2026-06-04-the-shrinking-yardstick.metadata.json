@@ -43,7 +43,8 @@
     "prior_work_check": "not_applicable",
     "third_party_text_handling": "not_applicable",
     "errata": [
-      "2026-06-04: retroactive disclosure header and metadata added; original argument text unchanged."
+      "2026-06-04: retroactive disclosure header and metadata added; original argument text unchanged.",
+      "2026-06-13: epistemic reclassification (scout, not a scientific result) and quarantine note added per ADR-0012 line decision (argument-only: no compute bundle, arbitration NOT_RUN, protocol PARTIAL). Original argument text unchanged; DOI retained."
     ]
   }
 }

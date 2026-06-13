@@ -48,7 +48,9 @@
     "approved_sidecar_hash": "sha256:a320850dff1c72740686041452d2b29a843010eb1a0fc9aa2bf080f62af4f05a",
     "prior_work_check": "not_applicable",
     "third_party_text_handling": "not_applicable",
-    "errata": []
+    "errata": [
+      "2026-06-13: quarantine note added per ADR-0012 line decision — this release was published with protocol_status=FAIL. Original argument text unchanged; DOI retained."
+    ]
   },
   "d8_handling": {
     "trigger": "seed_publication=true",
