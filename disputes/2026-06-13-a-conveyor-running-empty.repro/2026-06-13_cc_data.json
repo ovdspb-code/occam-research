@@ -1,0 +1,63 @@
+{
+  "control_full_box": {
+    "rho": 0.511,
+    "rank_top10_meanrank": 0.642,
+    "rank_bot10_meanrank": 0.15,
+    "rank_reversal": false,
+    "n": 30000,
+    "desc": "Q,E,K all log-uniform 10^[-1,1]; PRO threshold rho>=0.8"
+  },
+  "pvs_conduit_bottleneck": {
+    "rho": 1.0,
+    "frac_g_gt_Q": 1.0,
+    "n": 30000,
+    "desc": "E,K >> Q so g>>Q; conduit is rate-limiting; proxy expected to hold"
+  },
+  "vascular_uptake_bottleneck": {
+    "rho": 0.038,
+    "rank_top10_meanrank": 0.501,
+    "rank_bot10_meanrank": 0.476,
+    "rank_reversal": false,
+    "n": 30000,
+    "desc": "K log-uniform 10^[-2.5,-1.5]; Q,E normal; named single-mechanism bottleneck"
+  },
+  "interstitial_exchange_bottleneck": {
+    "rho": 0.04,
+    "rank_top10_meanrank": 0.507,
+    "rank_bot10_meanrank": 0.471,
+    "rank_reversal": false,
+    "n": 30000,
+    "desc": "E log-uniform 10^[-2.5,-1.5]; Q,K normal; named single-mechanism bottleneck"
+  },
+  "egress_depth_scan": [
+    {
+      "shift_decades": 0.0,
+      "rho": 0.51
+    },
+    {
+      "shift_decades": -0.5,
+      "rho": 0.313
+    },
+    {
+      "shift_decades": -1.0,
+      "rho": 0.171
+    },
+    {
+      "shift_decades": -1.5,
+      "rho": 0.078
+    },
+    {
+      "shift_decades": -2.0,
+      "rho": 0.022
+    }
+  ],
+  "_meta": {
+    "model": "steady-state series conductance: influx=Q*C0, g=E*K/(E+K), C_p=Q*C0/(Q+g), clearance=g*C_p",
+    "C0": 1.0,
+    "N": 30000,
+    "seed": 11,
+    "pe_substrate": "Pe in [0.1,10] log-uniform, preserved across all regimes",
+    "pro_threshold_rho": 0.8,
+    "con_threshold_rho": 0.3
+  }
+}

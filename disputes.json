@@ -1,9 +1,48 @@
 {
-  "updated": "2026-06-12",
+  "updated": "2026-06-13",
   "series": "Duellum Veritatis",
   "subtitle": "Adversarial science digests — a thesis defended and attacked to a verdict, every claim backed by computation.",
   "doi": "10.5281/zenodo.20528909",
   "disputes": [
+    {
+      "id": "2026-06-13-a-conveyor-running-empty",
+      "no": 11,
+      "title": "A Conveyor Running Empty",
+      "subtitle": "Imaging shows tracer pouring into perivascular spaces, and it is tempting to read that influx as a meter of how much solute the brain clears. But if the rate-limiting step is interstitial exchange or vascular egress rather than the imaged conduit, influx and net clearance come apart. In a steady-state series-conductance model holding a neutral Peclet substrate, a physiologically plausible egress bottleneck drops the influx-clearance Spearman correlation from 0.51 across the full plausible box to 0.04.",
+      "date": "2026-06-13",
+      "verdict": "CON prevailed on argumentation, and within scope the claim was not supported. In a steady-state series-conductance model holding the neutral Peclet substrate, the full plausible box gives a Spearman influx-clearance correlation of only 0.51, and a physiologically plausible vascular-egress or interstitial-exchange bottleneck drops it to 0.04 (below the registered 0.30 reject line and far short of the 0.80 pass bar), while a conduit-limited regime keeps the proxy near-perfect (1.00). Bounded to synthetic substrates; the in vivo decisive test remains unresolved.",
+      "tags": [
+        "glymphatic-clearance",
+        "perivascular-spaces",
+        "solute-transport",
+        "tracer-imaging",
+        "neurophysiology",
+        "neuroscience-AI"
+      ],
+      "html": "disputes/2026-06-13-a-conveyor-running-empty.html",
+      "pdf": "disputes/2026-06-13-a-conveyor-running-empty.pdf",
+      "doi": "10.5281/zenodo.20679393",
+      "outcome": "CON",
+      "basis": "real_compute",
+      "claim_type": "numeric",
+      "arbitration_status": "STABLE",
+      "protocol_status": "PASS",
+      "prior_work_check": "not_applicable",
+      "release_identity": {
+        "duel_id": "dv-0011",
+        "claim_hash": "sha256:ace7965172254e70f9b2b7f4e8b5794efac060df7a48933d2db15f48471ece1d",
+        "source_session_hash": "sha256:d95a6e0eed6eee79b4ff92d0d77310ca05dd1b18748c823d29d70b7ac3a65b21",
+        "frozen_at": "2026-06-13T02:00:27Z",
+        "compound_hash": "sha256:286ecd7f5a90f841e2c857da359c89f6c1bab486e582e09468333634d4ec62ba"
+      },
+      "metadata": "disputes/2026-06-13-a-conveyor-running-empty.metadata.json",
+      "methodology": {
+        "claim_evidence_matrix": "disputes/2026-06-13-a-conveyor-running-empty.claim_evidence_matrix.json",
+        "arbiter_report": "disputes/2026-06-13-a-conveyor-running-empty.arbiter_report.json",
+        "evidence_task": "disputes/2026-06-13-a-conveyor-running-empty.evidence_task.json",
+        "order_swap_audit": "disputes/2026-06-13-a-conveyor-running-empty.order_swap_audit.json"
+      }
+    },
     {
       "id": "2026-06-12-controllable-or-well-connected",
       "no": 10,

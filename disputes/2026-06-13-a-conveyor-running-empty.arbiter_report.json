@@ -1,0 +1,66 @@
+{
+  "report_id": "dv-no11-pvs-influx-clearance-2026-06-13",
+  "outcome_classification": "CON",
+  "accepted_facts": [
+    "In a steady-state series-conductance transport model with independent log-uniform through-flow Q, exchange E and egress K, holding the in-channel Peclet number in [0.1,10], the Spearman correlation between imaged perivascular influx (Q*C0) and net parenchymal clearance (g*C_p) across the full plausible box is only rho = 0.511 - below the registered 0.80 acceptance bar.",
+    "A physiologically plausible vascular-egress bottleneck (K log-uniform 10^[-2.5,-1.5]) drives the influx-clearance correlation to rho = 0.038, and an interstitial-exchange bottleneck (E log-uniform 10^[-2.5,-1.5]) to rho = 0.040 - both at or below the 0.30 rejection line, while the neutral Peclet substrate is preserved.",
+    "An egress depth scan that depresses the K band by 0, 0.5, 1.0, 1.5 and 2.0 decades drops the correlation monotonically through 0.511, 0.313, 0.171, 0.078 and 0.022.",
+    "In the conduit-limited positive control (E,K log-uniform 10^[1.5,2.5] so the series conductance g>>Q), influx remains a near-perfect proxy for clearance at rho = 1.000, bounding the claim's validity to the regime where the imaged step is itself rate-limiting."
+  ],
+  "rejected_or_quarantined_evidence": [
+    "The thesis side's broad move of blurring the correlation by four symmetric decades of exchange/egress variation was treated as a statement about the prior rather than the mechanism and was withdrawn before it counted; the decision rests on the narrow physiologically realistic prior (Q,E,K within ~2 orders) and the named single-mechanism bottlenecks.",
+    "The real-data version of the claim - whether in vivo influx and net clearance stay coupled under a documented egress bottleneck with the true Q,E,K covariance - was not tested by any compute and is treated as untested rather than as evidence either way."
+  ],
+  "argument_quality": "CON tied every number - the full-box rho of 0.511, the bottleneck collapses to 0.038 and 0.040, the monotone depth scan, and the conduit-limited control at 1.000 - to the pre-registered acceptance and rejection rules, and narrowed the case to a targeted, named bottleneck instead of leaning on a broad prior-blurring argument. The thesis side conceded each factual point in turn, including that its own realistic-prior run never reached the 0.80 pass bar. The decisive move was conceptual: conservation of mass binds influx to clearance only if no tracer escapes along the perivascular space, and a perivenous-efflux route breaks exactly that assumption. Within the transcript CON held the falsifier frame and PRO did not meet its own acceptance bar.",
+  "protocol_conduct": "Decisive observable pre-registered before compute and schema-valid; real, deterministic compute at fixed seed 11; order-swap audit PASS (substantive call 'con' on both the natural and swapped runs). A verbosity-confound warning is flagged because the thesis side wrote substantially more than the refuting side; the verdict rests on the numbers, not the word count.",
+  "evidence_quality": "Real, deterministic, rerunnable compute, but on a SYNTHETIC steady-state two-compartment substrate rather than in vivo imaging. The decisive observable is a proxy (not paper-faithful): a Monte-Carlo box of independent conductances, not a measured brain under a documented bottleneck. The result establishes sufficiency - that a physiologically plausible egress or exchange bottleneck is enough to decouple influx from net clearance while preserving the neutral imaging substrate - and bounds the regime where the proxy holds; it does not measure real glymphatic transport.",
+  "what_it_supports": [
+    {
+      "statement": "Across the full plausible box of independent transport conductances, perivascular influx ranks net clearance only weakly (Spearman rho = 0.511), far short of the registered 0.80 proxy-validity bar.",
+      "claim_id": "C1",
+      "evidence_id": "E1"
+    },
+    {
+      "statement": "A single physiologically plausible bottleneck - depressed vascular egress (rho = 0.038) or interstitial exchange (rho = 0.040) - is sufficient to break the influx-to-clearance rank ordering while holding the neutral Peclet substrate fixed.",
+      "claim_id": "C2",
+      "evidence_id": "E2"
+    },
+    {
+      "statement": "When the imaged PVS conduit is itself rate-limiting (g>>Q), influx remains a near-perfect proxy (rho = 1.000), so the claim's validity is regime-dependent rather than general.",
+      "claim_id": "C3",
+      "evidence_id": "E3"
+    }
+  ],
+  "what_it_does_not_support": [
+    {
+      "statement": "That perivascular influx fails as a proxy for net clearance in the living brain - the in vivo case, with real physiological ranges and covariances of Q, E and K, was not tested here.",
+      "claim_id": "C4",
+      "evidence_id": "E4"
+    },
+    {
+      "statement": "Any population-level or discovery-level claim about real glymphatic clearance; the duel weighed argumentation and substance within the transcript and its synthetic compute only.",
+      "claim_id": "C4",
+      "evidence_id": "E4"
+    }
+  ],
+  "what_remains_open": [
+    "Whether in vivo perivascular influx and net parenchymal clearance decouple under a documented egress bottleneck (ageing, IIH, AQP4 loss) when measured directly, rather than in a synthetic box.",
+    "Whether real covariation of through-flow, exchange and egress (e.g. all rising with arterial pulsatility or pressure) restores a coupling that the independent-draw model breaks."
+  ],
+  "permitted_wording": [
+    "In a steady-state series-conductance model, a physiologically plausible egress or exchange bottleneck is sufficient to drop the influx-clearance correlation from 0.51 across the plausible box to 0.04, while a conduit-limited regime keeps the proxy near-perfect.",
+    "On this synthetic substrate the proxy's validity is regime-dependent: it holds when the imaged conduit is rate-limiting and breaks when exchange or egress is.",
+    "CON prevailed on argumentation; within the tested scope the claim was not supported, while its in vivo version remains untested."
+  ],
+  "forbidden_wording": [
+    "proves the claim that perivascular influx is not a proxy for net clearance",
+    "establishes the claim is false in the living brain",
+    "confirms the claim that influx and clearance decouple in vivo",
+    "settles the question of glymphatic proxy validity",
+    "definitively shows perivascular influx fails as a clearance measure",
+    "a definitive refutation of perivascular influx as a clearance measure",
+    "shown on real tracer / MRI data (no in vivo data were used)",
+    "model X beat model Y (engine identities withheld)"
+  ],
+  "confidence_and_limitations": "Moderate-to-high confidence within a narrow synthetic scope: on a neutral-Peclet substrate the full-box correlation is weak (0.511), named single-mechanism bottlenecks cleanly cross the 0.30 reject line (0.038 and 0.040), the depth scan is monotone, and the order-swap audit is stable with a substantive call of 'con' on both runs. Out of scope: no in vivo imaging, no measured physiological ranges or covariances of Q, E and K, no transient dynamics; the decisive observable is a proxy, not paper-faithful, and independence of the conductances is assumed. Genre: scout - a synthetic sufficiency probe of the decoupling case, not a scientific_result."
+}

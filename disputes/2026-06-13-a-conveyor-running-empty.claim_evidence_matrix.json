@@ -1,0 +1,50 @@
+{
+  "matrix_id": "dv-no11-pvs-influx-clearance-2026-06-13",
+  "claim_frozen_at": "2026-06-13T02:00:27Z",
+  "rows": [
+    {
+      "claim_id": "C1",
+      "evidence_id": "E1",
+      "claim": "Perivascular influx ranks net parenchymal clearance tightly (Spearman rho >= 0.8) across the full plausible range of transport parameters.",
+      "evidence": "2026-06-13_cc_data.json control_full_box: with Q, E, K independent log-uniform over 10^[-1,1] and the Peclet substrate held in [0.1,10], the Spearman correlation between influx (Q*C0) and net clearance (g*C_p) is only rho = 0.511 - well below the registered 0.80 acceptance bar.",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "synthetic steady-state series-conductance box, N=30000, seed=11; independent Q,E,K",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C2",
+      "evidence_id": "E2",
+      "claim": "No physiologically plausible single-mechanism bottleneck breaks the influx-to-clearance rank ordering.",
+      "evidence": "2026-06-13_cc_data.json: a vascular-egress bottleneck (K log-uniform 10^[-2.5,-1.5]) gives rho = 0.038 and an interstitial-exchange bottleneck (E log-uniform 10^[-2.5,-1.5]) gives rho = 0.040 - both at or below the 0.30 reject line; the egress depth scan falls monotonically 0.511 -> 0.313 -> 0.171 -> 0.078 -> 0.022 as the egress band is depressed by 0 to 2.0 decades.",
+      "diagnosticity": "high",
+      "direction": "contradicts",
+      "scope": "named single-mechanism bottleneck regimes on the same substrate, neutral Peclet preserved",
+      "evidence_status": "accepted",
+      "claim_status": "contradicted"
+    },
+    {
+      "claim_id": "C3",
+      "evidence_id": "E3",
+      "claim": "When the imaged PVS conduit itself is the rate-limiting step, influx remains a near-perfect proxy for clearance.",
+      "evidence": "2026-06-13_cc_data.json pvs_conduit_bottleneck: with E,K log-uniform 10^[1.5,2.5] so the series conductance g>>Q, the conduit is rate-limiting and the influx-clearance correlation is rho = 1.000 - the proxy holds exactly in this regime.",
+      "diagnosticity": "high",
+      "direction": "supports",
+      "scope": "conduit-limited positive control; bounds the claim's validity to the regime where the imaged step is rate-limiting",
+      "evidence_status": "accepted",
+      "claim_status": "supported"
+    },
+    {
+      "claim_id": "C4",
+      "evidence_id": "E4",
+      "claim": "In the living brain, perivascular tracer influx and net parenchymal clearance stay tightly coupled under a documented egress or exchange bottleneck (e.g. ageing, IIH, AQP4 loss).",
+      "evidence": "not tested - no in vivo tracer or imaging data were used; the true physiological ranges and covariances of Q, E and K are unknown, and covariation (e.g. Q and E rising together with pressure) could restore coupling. The decisive real-data discriminator was not run in this duel.",
+      "diagnosticity": "none",
+      "direction": "untested",
+      "scope": "would require in vivo measurement of influx and net clearance under a documented bottleneck with real Q,E,K covariance; not run here",
+      "evidence_status": "not_applicable",
+      "claim_status": "speculative"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "duel_id": "dv-0011",
+  "generated_at": "2026-06-13T00:00:00Z",
+  "package_status": "checked",
+  "files": [
+    {
+      "path": "2026-06-13-a-conveyor-running-empty.arbiter_report.json",
+      "sha256": "sha256:51713758b90decf14315344c1d21f7155b7a6eeb34f5529118c33a4bd3d5d1f5",
+      "public": true
+    },
+    {
+      "path": "2026-06-13-a-conveyor-running-empty.claim_evidence_matrix.json",
+      "sha256": "sha256:40d11fcaba5d894e621b717d2b5775e18d1ca0cc56855b4aa5e8847e3744b4f1",
+      "public": true
+    },
+    {
+      "path": "2026-06-13-a-conveyor-running-empty.evidence_task.json",
+      "sha256": "sha256:597453358aca4513f98c324d33ba7a5dbd8824a2253fe36017d1d51858694a56",
+      "public": true
+    },
+    {
+      "path": "2026-06-13-a-conveyor-running-empty.html",
+      "sha256": "sha256:d46eea73d2b941f302b81f03d0167df77e32ecc00ce61d2a5875d9e844b3e6d4",
+      "public": true
+    },
+    {
+      "path": "2026-06-13-a-conveyor-running-empty.metadata.json",
+      "sha256": "sha256:8cba83f8c5b60d4721284302107e17f892baeb688cb98b737bd62ffc65b74e0e",
+      "public": true
+    },
+    {
+      "path": "2026-06-13-a-conveyor-running-empty.order_swap_audit.json",
+      "sha256": "sha256:a45e139a6f616497ef1f88fabb4c42e95bc239dbd02d70b5bd710ee6d65f8894",
+      "public": true
+    },
+    {
+      "path": "2026-06-13-a-conveyor-running-empty.pdf",
+      "sha256": "sha256:2a5aa153d38e0359dc5e28f4ad46d7f6da7bf7f8101646f83f801ab941450f4e",
+      "public": true
+    },
+    {
+      "path": "2026-06-13-a-conveyor-running-empty.repro/2026-06-13_cc_data.json",
+      "sha256": "sha256:5f8c165f3e3e7ab51797083cb7d91e127baf2aae51b227fe46f118c6e8aac94d",
+      "public": true
+    },
+    {
+      "path": "2026-06-13-a-conveyor-running-empty.repro/2026-06-13_repro.py",
+      "sha256": "sha256:aab7aabe33734c511ffcba52510ff3366de80610cfe40598512eb35cf731acab",
+      "public": true
+    },
+    {
+      "path": "2026-06-13-a-conveyor-running-empty.repro/compute_manifest.json",
+      "sha256": "sha256:6fdb7bd3558d5cc309740641c4508a5e756f770081784e988db1954f91746d23",
+      "public": true
+    }
+  ]
+}

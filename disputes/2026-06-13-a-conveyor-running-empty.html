@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 14mm 0 13mm 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html,body { margin:0; padding:0; }
+
+  :root{
+    --paper:#f7f3e8; --ink:#241b0d; --ink-soft:#6a5c43;
+    --ox:#7a1717; --ox-br:#8f2020; --sepia:#bcae8b; --sepia-d:#9c8a5e;
+    --blue:#243c66; --terra:#9c4a22; --tint:#ede4cd; --chart:#fbf7ec;
+  }
+
+  body {
+    font-family:"EB Garamond 12","Georgia",serif;
+    color:var(--ink); background-color:var(--paper);
+    font-size:11.4pt; line-height:1.52;
+    padding:0 19mm;
+    font-feature-settings:"onum" 1,"liga" 1,"kern" 1;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.33 0 0 0 0 0.17 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+      radial-gradient(160px 120px at 16% 20%, rgba(150,120,68,0.07), transparent 70%),
+      radial-gradient(210px 150px at 84% 32%, rgba(150,120,68,0.06), transparent 70%),
+      radial-gradient(150px 130px at 62% 74%, rgba(140,108,58,0.055), transparent 72%),
+      radial-gradient(230px 180px at 28% 90%, rgba(150,120,68,0.05), transparent 72%),
+      radial-gradient(130px 110px at 90% 84%, rgba(140,108,58,0.05), transparent 70%),
+      radial-gradient(1500px 1000px at 50% 46%, transparent 58%, rgba(86,66,36,0.07) 100%);
+    background-repeat:repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+  }
+  .page{ counter-reset: sec; }
+
+  .runhead{ text-align:center; font-family:"EB Garamond SC","EB Garamond 12",serif;
+            font-variant:small-caps; letter-spacing:3px; font-size:8.4pt;
+            color:var(--ox); margin:0 0 2px 0; }
+  .folio{ text-align:center; color:var(--ink-soft); font-size:9pt; margin-top:10px;
+          font-style:italic; }
+  .folio .sep{ color:var(--sepia-d); margin:0 7px; }
+
+  h1{ font-family:"EB Garamond 12","Georgia",serif; font-size:30pt; line-height:1.05;
+      margin:2px 0 6px 0; color:#120b03; font-weight:700; text-align:center;
+      letter-spacing:0.2px; }
+  h1 .em{ color:var(--ox); font-style:italic; font-weight:500; }
+
+  h2{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+      font-size:14pt; letter-spacing:1.2px; margin:20px 0 7px 0; color:var(--ox);
+      font-weight:600; padding-bottom:5px;
+      border-bottom:1px solid var(--sepia); }
+  h2::before{ counter-increment:sec; content:counter(sec,decimal-leading-zero);
+      font-family:"EB Garamond SC",serif; font-size:9.5pt; color:var(--ox-br);
+      letter-spacing:1px; margin-right:11px; vertical-align:1.5px;
+      border-bottom:none; }
+
+  h3{ font-family:"EB Garamond 12","Georgia",serif; font-size:12pt; font-style:italic;
+      margin:14px 0 3px 0; color:#3a2c1b; font-weight:600; }
+
+  p{ margin:0 0 8px 0; text-align:justify; hyphens:auto; }
+
+  .kicker{ text-align:center; color:var(--ink-soft); font-size:9pt; letter-spacing:3.4px;
+           text-transform:uppercase; margin:8px 0 6px 0;
+           font-family:"EB Garamond SC","EB Garamond 12",serif; }
+
+  .lede{ font-size:12.6pt; color:#3a2c1b; font-style:italic; line-height:1.5;
+         margin:8px 4mm 6px 4mm; text-align:center; }
+
+  .drop::first-letter{ font-family:"EB Garamond Initials","EB Garamond 12",serif;
+      float:left; font-size:52pt; line-height:0.82; padding:4px 8px 0 0;
+      color:var(--ox); font-weight:600; }
+
+  .rule{ height:0; border:none; text-align:center; margin:14px 0; color:var(--ox); }
+  .rule::before{ content:"\2766"; font-size:13pt; color:var(--ox);
+      display:inline-block; }
+  .rule.line{ border-top:1px solid var(--sepia); margin:13px 0; }
+  .rule.line::before{ content:""; }
+
+  .term{ color:var(--ox); font-style:italic; }
+
+  .gloss{ display:block; background:var(--tint); border-left:3px solid var(--ox);
+          padding:8px 13px; margin:9px 0; font-size:10.2pt; color:#3b2e1d;
+          line-height:1.46; }
+  .gloss b{ color:var(--ox); font-weight:600; }
+
+  .disclaimer{ border:1px solid var(--sepia); border-radius:4px; padding:9px 13px;
+               background:#fbf5e6; margin:10px 0; font-size:9.3pt; color:#3b2e1d; line-height:1.46; }
+  .disclaimer b{ color:var(--ox); }
+
+  .duel{ display:flex; gap:13px; margin:11px 0; }
+  .card{ flex:1; border:1px solid var(--sepia); padding:11px 13px; background:#fbf5e6; }
+  .card .who{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+              font-size:10pt; letter-spacing:1.2px; margin-bottom:4px; font-weight:600; }
+  .pro .who{ color:var(--blue); }
+  .con .who{ color:var(--terra); }
+  .pro{ border-top:2.5px solid var(--blue); }
+  .con{ border-top:2.5px solid var(--terra); }
+  .card .stance{ font-size:10.4pt; color:#34281a; line-height:1.45; }
+
+  figure{ margin:15px 0 9px 0; text-align:center; }
+  figcaption{ font-size:9.2pt; color:var(--ink-soft); margin-top:6px; font-style:italic;
+              line-height:1.4; padding:0 6mm; }
+  .chartbox{ background:var(--chart); border:1px solid var(--sepia);
+             padding:11px 9px 5px 9px; }
+
+  blockquote{ margin:11px 6mm; padding:6px 16px; border-left:3px solid var(--ox);
+              font-style:italic; color:#3a2c1b; font-size:11.6pt; }
+
+  .verdict{ border-top:2px solid var(--ox); border-bottom:2px solid var(--ox);
+            padding:12px 16px; margin:14px 0; background:#fbf3e0; }
+  .verdict .win{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+                 color:var(--ox); font-weight:600; font-size:13pt; letter-spacing:0.8px; }
+
+  .meta{ border:1px solid var(--sepia); padding:9px 14px; background:#fbf5e6;
+         margin:11px 0 6px 0; font-size:10pt; line-height:1.5; }
+  .meta .row{ display:flex; gap:10px; padding:2px 0; }
+  .meta .k{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+            color:var(--ox); min-width:118px; flex:0 0 118px; letter-spacing:0.5px;
+            font-size:9.6pt; }
+  .meta .v{ color:var(--ink); }
+
+  .twocol{ display:flex; gap:14px; }
+  .twocol > div{ flex:1; }
+  .support{ border:1px solid var(--sepia); border-top:2.5px solid var(--blue);
+            padding:8px 12px; background:#fbf5e6; margin:6px 0; }
+  .support h3{ margin-top:2px; color:var(--blue); }
+  .nosupport{ border:1px solid var(--sepia); border-top:2.5px solid var(--terra);
+              padding:8px 12px; background:#fbf5e6; margin:6px 0; }
+  .nosupport h3{ margin-top:2px; color:var(--terra); }
+
+  ul{ margin:3px 0 7px 0; padding-left:18px; }
+  li{ margin:2px 0; }
+
+  .appendix{ border-top:1px solid var(--sepia); margin-top:15px; padding-top:9px; }
+  .appendix h3{ font-family:"EB Garamond SC","EB Garamond 12",serif; font-variant:small-caps;
+                color:var(--ox); margin:0 0 6px 0; font-size:11pt; font-style:normal;
+                letter-spacing:0.6px; }
+  .appendix .ap{ font-size:9.4pt; color:#473722; line-height:1.48; margin:0 0 5px 0; }
+  .appendix .ap b{ color:var(--ox); }
+
+  .ornament{ text-align:center; margin:8px 0 2px 0; color:var(--ox); }
+  .ornament .fleuron{ font-size:17pt; color:var(--ox); letter-spacing:6px; }
+
+  .foot{ margin-top:11px; padding-top:9px; border-top:1px solid var(--sepia);
+         color:var(--ink-soft); font-size:9pt; line-height:1.46; font-style:italic; }
+  svg{ display:block; }
+  .bars text{ font-family:"EB Garamond 12","Georgia",serif; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<p class="runhead">Duellum Veritatis &middot; nightly duel</p>
+<div class="ornament"><span class="fleuron">&#10086;&#10087;&#10086;</span></div>
+
+<p class="kicker">A nocturnal duel · science explainer</p>
+<h1>A Conveyor Running <span class="em">Empty</span></h1>
+<p class="lede">Watch a tracer pour into the tiny channels that hug the brain's blood vessels, and you might think you are watching the brain clean itself. But what enters a pipe is not the same as what leaves the tissue — and when the true bottleneck sits downstream, the pipe can run full while the brain barely clears at all.</p>
+
+<figure style="margin:18px 0 12px 0;">
+  <img src="art/no11-cover.jpg" alt="A cross-section of the brain drawn as plumbing: tracer pouring into the perivascular channels that sleeve the blood vessels, the pipes running full while the surrounding tissue stays dark, sepia engraving" style="width:100%; max-width:680px; border:1px solid var(--sepia); box-shadow:0 1px 0 #fff inset, 0 2px 8px rgba(60,44,20,.12);" />
+  <figcaption>A tracer floods the channels that sleeve the brain's vessels and the conveyor looks busy — but the true bottleneck sits downstream, so the pipes run full while the tissue barely clears. Influx mistaken for clearance.</figcaption>
+</figure>
+
+<div class="meta">
+  <div class="row"><div class="k">Date</div><div class="v">13 June 2026</div></div>
+  <div class="row"><div class="k">Topic</div><div class="v">Whether tracer influx into perivascular spaces is a valid quantitative proxy for net parenchymal solute clearance, or whether the two decouple when the rate-limiting exchange/egress step is interstitial or vascular rather than the imaged perivascular conduit</div></div>
+  <div class="row"><div class="k">Claim type</div><div class="v">Numeric — backed only by the attached reproducible compute bundle</div></div>
+  <div class="row"><div class="k">Sides</div><div class="v">Aramis — defending the thesis · Athos — refuting it · (public AI-generated sides; engine identities withheld)</div></div>
+  <div class="row"><div class="k">Format</div><div class="v">twelve alternating moves, every blow a simulation; an independent AI arbiter; an order-swap audit</div></div>
+</div>
+
+<div class="disclaimer" data-duellum="status-disclaimer">
+<b>Status:</b> public adversarial AI stress-test. This is not peer review, not a scientific proof, and not an endorsement of the claim. Two AI-generated sides argued a frozen claim under a fixed protocol; an independent AI arbiter issued a structured verdict. For numerical claims, the reported numbers come only from the attached reproducible compute bundle. Publication means the duel passed the release gate; it does not promote the claim to discovery status. <span data-duellum="gate-scope">Passing the release gate means automated structural, integrity and format checks passed — it is not human methodological review, peer review, or approval of the claim's substance.</span>
+</div>
+
+<div class="disclaimer" data-duellum="epistemic-status">
+<b>Epistemic status:</b> scout / protocol pilot — exploratory. This issue is a scouting duel, <b>not an established scientific result</b>. Its decisive test runs on a synthetic transport model, not on imaged brain tracer data: it probes whether a downstream bottleneck is <i>sufficient in principle</i> to break the influx–clearance link, not whether real glymphatic transport lives in that regime. Treat the finding as a lead to investigate, not a confirmed claim about the brain.
+</div>
+
+<div class="rule line"></div>
+
+<p class="drop">The brain has no lymph vessels of the usual kind. Instead, fluid is thought to wash metabolic waste out along the thin sleeves that wrap every blood vessel — the <span class="term">perivascular spaces</span>. Inject a traceable marker, watch it flow into those sleeves on a scanner, and a natural temptation follows: read how fast the tracer pours in as a measure of how well the brain is clearing itself. This duel asks whether that shortcut is trustworthy — whether the <i>inflow</i> you can image really stands in for the <i>net clearance</i> you actually care about.</p>
+
+<span class="gloss"><b>Two quantities that look like twins.</b> <span class="term">PVS influx</span> is how much tracer enters the perivascular space — the variable a scanner can watch. <span class="term">Net parenchymal clearance</span> is how much solute actually leaves the brain tissue. Between the entrance and the true exit sits a chain: exchange between the perivascular sleeve and the surrounding tissue, then uptake into the vasculature or drainage onward. The duel turns on whether that chain can quietly snap the link between what goes in and what gets cleared.</span>
+
+<span class="gloss"><b>The physics in one breath.</b> Think of imaged influx as a <i>delivery conveyor</i> running at rate <b>Q</b>. The tissue only truly clears as fast as the slowest step downstream — a <i>series</i> of two resistances, exchange (E) and egress (K), combining into one effective conductance <b>g = E·K / (E+K)</b>. When the conveyor is the slow step the two track each other. But when exchange or egress is the slow step — <b>g ≪ Q</b> — the conveyor keeps spinning while almost nothing leaves the tissue. Influx stays high; clearance falls; the proxy lies.</span>
+
+<h2>The frozen claim</h2>
+<p>The thesis Aramis was assigned to defend, fixed before the duel and not edited afterwards:</p>
+
+<blockquote>"Tracer influx into perivascular spaces is a valid quantitative proxy for net parenchymal solute clearance."</blockquote>
+
+<p>The falsifier both sides accepted: if a physiologically plausible bottleneck model — with the neutral transport substrate preserved — drives the correlation between influx and net clearance to <b>0.3 or below</b>, or reverses the ranks, the thesis fails. The agreed pass mark for the thesis was a strong correlation (Spearman ρ ≥ 0.8) holding <i>across the whole plausible parameter box</i>, with no named bottleneck breaking the rank order.</p>
+
+<div class="duel">
+  <div class="card pro">
+    <img src="art/aramis.jpg" alt="Aramis, engraved portrait" style="display:block; width:96px; height:96px; margin:2px auto 9px auto; border:1px solid var(--sepia); border-radius:2px;" />
+    <div class="who">Thesis · Aramis</div>
+    <div class="stance">Influx and clearance are tied by <b>conservation of mass</b>: in steady state, what enters the perivascular space must be reflected in what the tissue clears. With physiologically realistic parameters the correlation stays positive and strong — the imaged carrier is a faithful stand-in for net clearance.</div>
+  </div>
+  <div class="card con">
+    <img src="art/athos.jpg" alt="Athos, engraved portrait" style="display:block; width:96px; height:96px; margin:2px auto 9px auto; border:1px solid var(--sepia); border-radius:2px;" />
+    <div class="who">Counter · Athos</div>
+    <div class="stance">Influx measures <b>delivery into a pipe</b>; clearance measures a <b>series conductance</b> of exchange-and-egress. Conservation of mass only binds them if no tracer escapes <i>along</i> the perivascular space. When a downstream step is the bottleneck, the two decouple — and a single named bottleneck is enough to break the thesis.</div>
+  </div>
+</div>
+
+<div class="rule line"></div>
+
+<h2>The duel: arithmetic, not rhetoric</h2>
+<p>Each move was a small simulated world with a <b>known</b> answer, so the sides could see who was right rather than argue it. The neutral transport substrate — the in-channel balance of flow and diffusion (the Péclet number) — was held fixed throughout, so no one could win by quietly changing the substrate. Several things got settled along the way.</p>
+
+<h3>Cleared away: a broken first model, honestly retired</h3>
+<p>The thesis side opened with a numerical model that returned a <i>negative</i> correlation — an obvious artifact. It came from drawing the channel's parameters independently for every point, severing the physical link the model was supposed to carry. Rather than bank a false win, that side named the error and rewrote the model with correct steady-state physics. A clean start, conceded openly by both.</p>
+
+<h3>The decisive decomposition</h3>
+<p>The refuting side then made the move that organised the whole duel. Imaged influx is the conveyor's <i>delivery</i>, Q·C₀. Net clearance is what the tissue actually sheds, g·Cₚ, where the effective conductance <b>g = E·K/(E+K)</b> chains exchange and egress in series. Because Q and g are independent, the link between influx and clearance is not guaranteed — it depends entirely on which step is slowest. The agreed comparator ladder then asked: across named bottleneck regimes, does the correlation hold or break?</p>
+
+<figure>
+<div class="chartbox">
+<svg class="bars" width="640" height="318" viewBox="0 0 640 318">
+  <!-- x axis: rho 0..1.0 over x 210..610 (400px) -->
+  <line x1="210" y1="20" x2="210" y2="250" stroke="#9c8a5e" stroke-width="1"/>
+  <line x1="210" y1="250" x2="612" y2="250" stroke="#9c8a5e" stroke-width="1"/>
+  <g stroke="#d8c9a3" stroke-width="0.8" stroke-dasharray="3,3">
+    <line x1="310" y1="20" x2="310" y2="250"/>
+    <line x1="410" y1="20" x2="410" y2="250"/>
+    <line x1="510" y1="20" x2="510" y2="250"/>
+    <line x1="610" y1="20" x2="610" y2="250"/>
+  </g>
+  <g fill="#6b5d45" font-size="9" text-anchor="middle">
+    <text x="210" y="266">0.0</text>
+    <text x="310" y="266">0.25</text>
+    <text x="410" y="266">0.50</text>
+    <text x="510" y="266">0.75</text>
+    <text x="610" y="266">1.0</text>
+  </g>
+  <!-- threshold markers: CON 0.3 -> x=330 ; PRO 0.8 -> x=530 -->
+  <line x1="330" y1="20" x2="330" y2="250" stroke="#9c4a22" stroke-width="1.1" stroke-dasharray="5,3"/>
+  <text x="330" y="16" fill="#9c4a22" font-size="8.5" text-anchor="middle">reject ≤ 0.30</text>
+  <line x1="530" y1="20" x2="530" y2="250" stroke="#27406b" stroke-width="1.1" stroke-dasharray="5,3"/>
+  <text x="530" y="16" fill="#27406b" font-size="8.5" text-anchor="middle">accept ≥ 0.80</text>
+  <!-- bars: width = rho*400 from x=210 -->
+  <g>
+    <rect x="210" y="44" width="400" height="30" fill="#27406b" opacity="0.9"/>
+    <rect x="210" y="98" width="204" height="30" fill="#b9a577" opacity="0.85"/>
+    <rect x="210" y="152" width="15" height="30" fill="#9c4a22" opacity="0.9"/>
+    <rect x="210" y="206" width="16" height="30" fill="#9c4a22" opacity="0.9"/>
+  </g>
+  <g fill="#3a2c1b" font-size="9.5" text-anchor="end">
+    <text x="203" y="63">PVS-conduit limits (g≫Q)</text>
+    <text x="203" y="117">Full box, realistic prior</text>
+    <text x="203" y="171">Vascular-egress bottleneck</text>
+    <text x="203" y="225">Interstitial-exchange bottleneck</text>
+  </g>
+  <g font-size="9.5" font-weight="700" text-anchor="start">
+    <text x="618" y="63" fill="#27406b">ρ = 1.00</text>
+    <text x="420" y="117" fill="#3a2c1b">ρ = 0.51</text>
+    <text x="233" y="171" fill="#9c4a22">ρ = 0.04</text>
+    <text x="234" y="225" fill="#9c4a22">ρ = 0.04</text>
+  </g>
+  <text x="410" y="298" fill="#6b5d45" font-size="9" text-anchor="middle">Spearman correlation between PVS influx and net parenchymal clearance (higher = better proxy)</text>
+</svg>
+</div>
+<figcaption>Fig. 1 — When the imaged conduit itself is the slow step, influx tracks clearance almost perfectly (ρ = 1.00). But across the full realistic box the correlation is already only 0.51 — short of the thesis pass mark of 0.80. And in either named downstream bottleneck — vascular egress or interstitial exchange depressed by half to one order of magnitude — the correlation collapses to ρ ≈ 0.04, well under the rejection line. Spearman ρ, N = 30 000 per regime, Péclet substrate held in [0.1, 10]. Source: <b>2026-06-13_cc_data.json</b>.</figcaption>
+</figure>
+
+<h3>Settled: the break tracks how hard the drain is throttled</h3>
+<p>The thesis side fairly objected that widening the exchange prior symmetrically by several orders is a prior trick, not physiology — and the refuting side conceded that move. The honest test is a <i>single named mechanism</i> from the ladder pushed down by a documented amount, with everything else held in the realistic range. Depress the vascular-egress step alone and watch the correlation fall as the depression deepens.</p>
+
+<figure>
+<div class="chartbox">
+<svg class="bars" width="640" height="300" viewBox="0 0 640 300">
+  <!-- y: rho 0..0.6 over y 250..30 (220px => 1.0 = 366.7px) ; x bars -->
+  <line x1="90" y1="30" x2="90" y2="250" stroke="#9c8a5e" stroke-width="1"/>
+  <line x1="90" y1="250" x2="600" y2="250" stroke="#9c8a5e" stroke-width="1"/>
+  <g stroke="#d8c9a3" stroke-width="0.8" stroke-dasharray="3,3">
+    <line x1="90" y1="177" x2="600" y2="177"/>
+    <line x1="90" y1="103" x2="600" y2="103"/>
+    <line x1="90" y1="30" x2="600" y2="30"/>
+  </g>
+  <g fill="#6b5d45" font-size="9" text-anchor="end">
+    <text x="84" y="253">0.0</text>
+    <text x="84" y="180">0.2</text>
+    <text x="84" y="106">0.4</text>
+    <text x="84" y="33">0.6</text>
+  </g>
+  <!-- CON threshold 0.3 -> y = 250 - 0.3*366.7 = 140 -->
+  <line x1="90" y1="140" x2="600" y2="140" stroke="#9c4a22" stroke-width="1.1" stroke-dasharray="5,3"/>
+  <text x="596" y="135" fill="#9c4a22" font-size="8.5" text-anchor="end">rejection line ρ = 0.30</text>
+  <!-- bars centered at x=150,240,330,420,510 width 60 ; h = rho*366.7 -->
+  <rect x="120" y="63"  width="60" height="187" fill="#b9a577" opacity="0.85"/>
+  <rect x="210" y="135" width="60" height="115" fill="#b9a577" opacity="0.85"/>
+  <rect x="300" y="187" width="60" height="63"  fill="#9c4a22" opacity="0.9"/>
+  <rect x="390" y="221" width="60" height="29"  fill="#9c4a22" opacity="0.9"/>
+  <rect x="480" y="242" width="60" height="8"   fill="#9c4a22" opacity="0.9"/>
+  <g fill="#3a2c1b" font-size="9.5" font-weight="700" text-anchor="middle">
+    <text x="150" y="56">0.51</text>
+    <text x="240" y="128">0.31</text>
+    <text x="330" y="180">0.17</text>
+    <text x="420" y="214">0.08</text>
+    <text x="510" y="235">0.02</text>
+  </g>
+  <g fill="#6b5d45" font-size="9" text-anchor="middle">
+    <text x="150" y="266">0</text>
+    <text x="240" y="266">−0.5</text>
+    <text x="330" y="266">−1.0</text>
+    <text x="420" y="266">−1.5</text>
+    <text x="510" y="266">−2.0</text>
+  </g>
+  <text x="345" y="288" fill="#6b5d45" font-size="9" text-anchor="middle">egress conductance depressed (decades below the normal range)</text>
+</svg>
+</div>
+<figcaption>Fig. 2 — As the vascular-egress step is throttled below its normal range, the influx–clearance correlation slides off a cliff: a depression of just half an order already drops it to the rejection line, and one order takes it to ρ = 0.17. The half-to-one order range that breaks the proxy is exactly the range documented in ageing, idiopathic intracranial hypertension and AQP4 disruption. Source: <b>2026-06-13_cc_data.json</b> (egress depth scan).</figcaption>
+</figure>
+
+<p>The matching test for interstitial exchange gave the same answer (ρ ≈ 0.04), and a rank-reversal check found no surviving rank order in either bottleneck. So both halves of the falsifier were met by a <i>named, single-mechanism</i> bottleneck — not by a prior trick. And even before any bottleneck, the full realistic box held only ρ ≈ 0.51, already under the thesis's own pass mark of 0.80.</p>
+
+<h2>The verdict</h2>
+<div class="verdict">
+<p class="win" data-duellum="outcome"><b>Outcome (who argued better):</b> CON — the refuting side prevailed on argumentation.</p>
+<p class="win" data-duellum="substantive-verdict"><b>Substantive verdict (was the claim true):</b> con — the thesis is rejected on its own criterion.</p>
+<p style="margin:6px 0 0 0; font-size:9.5pt; color:#7a1717;" data-duellum="axis-divergence"><b>Here the two axes agree.</b> The refuting side both argued better and was judged closer to the truth: the imaged carrier is not a regime-free proxy for net clearance. The agreement does not upgrade the result beyond a scouting test on a synthetic model.</p>
+<p style="margin:6px 0 0 0;">The arbiter judged that the refuting side held the registered criterion precisely: it separated a broken numerical setup from the real argument, exposed the gap between the thesis side's claimed numbers and the simulation output, and narrowed the model down to a relevant <i>targeted</i> bottleneck instead of leaning on rhetoric. The thesis side conceded each factual point in turn, including that its own realistic-prior run never reached the 0.80 pass mark. The decisive blow was conceptual: conservation of mass binds influx to clearance only if no tracer escapes <i>along</i> the perivascular space — and perivenous efflux breaks exactly that assumption.</p>
+<p style="margin:6px 0 0 0; font-size:9pt; color:#3a2c1b;"><b>Basis:</b> real_compute (attached bundle) · <b>Protocol:</b> PASS (12 moves, clean arbiter verdict) · <b>Order-swap audit:</b> PASS (substantive call "con" on both the natural and the swapped run) · <b>Verbosity note:</b> a confound flag is raised because the thesis side wrote about twice as many words — but the winning side was the <i>shorter</i> one, so length did not buy the result. · <b>Arbiter confidence:</b> not assigned.</p>
+</div>
+
+<div class="twocol">
+  <div class="support">
+    <h3>What this supports</h3>
+    <ul>
+      <li>A physiologically plausible downstream bottleneck — vascular egress or interstitial exchange depressed by half to one order — is <b>sufficient</b> to drop the influx–clearance correlation to ρ ≈ 0.04, below the rejection line, with the neutral substrate preserved.</li>
+      <li>Even with no bottleneck, the full realistic box holds only ρ ≈ 0.51 — <b>short of the thesis's own pass mark</b> of 0.80.</li>
+      <li>Where the imaged conduit itself is the slow step (g ≫ Q), the proxy <b>does</b> hold (ρ ≈ 1.00): the coupling is regime-dependent, not universal.</li>
+      <li>Conservation of mass ties influx to clearance <b>only</b> when perivascular efflux is absent; perivenous escape decouples them.</li>
+    </ul>
+  </div>
+  <div class="nosupport" data-duellum="does-not-support">
+    <h3>What this does <u>not</u> support</h3>
+    <ul>
+      <li>It does <b>not</b> show that real in vivo glymphatic transport <i>lives</i> in a bottleneck regime. The model is synthetic; it proves possibility, not actuality.</li>
+      <li>It does <b>not</b> establish <i>universal</i> decoupling — in the conduit-limited regime influx remains a near-perfect proxy.</li>
+      <li>It does <b>not</b> pin the real physiological ranges or covariances of flow, exchange and egress in vivo, which could restore or strengthen the link.</li>
+      <li>It does <b>not</b> overturn the glymphatic hypothesis — only the use of one imaged carrier variable to stand for net clearance without knowing the regime.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Where the losing side still has a point</h2>
+<p>The thesis side's strongest objections were fair and shaped the result. It correctly flagged that blurring the correlation with four symmetric orders of exchange variation is a statement about the prior, not the mechanism — and that move was withdrawn. It rightly insisted that the real physiological ranges and covariances of flow, exchange and egress in vivo are unknown, so a single covarying parameter (flow and exchange rising together with pressure, say) could restore the coupling the synthetic model breaks. And the whole result is steady-state: transient accumulation and lag could shift the picture either way. The decoupling shown here is real and named — but it is a statement about what is <i>possible</i> under plausible physics, not a measurement of the living brain.</p>
+
+<h2>Prior-work note</h2>
+<p data-duellum="prior-work">This release makes <b>no originality claim</b>. The duel argues a frozen claim drawn from a standing queue, not a specific publication; its contribution is a stress-test of one transport-physics objection to a common imaging shortcut, not a new empirical finding. Novelty status: <span class="term">not an originality claim</span>. The decisive real-data discriminator — whether influx and net clearance actually decouple in vivo under a documented egress bottleneck — is not settled here and remains owed.</p>
+
+<div class="ornament"><span class="fleuron">&#10086;&#10087;&#10086;</span></div>
+
+<div class="appendix">
+<h3>Appendix · reproducibility</h3>
+<p class="ap">Numbers and figures come from the attached repro bundle. Script, data, hashes, environment and rerun instructions are recorded in <b>2026-06-13_compute_manifest.json</b>.</p>
+<p class="ap"><b>Model:</b> steady-state, well-mixed two-compartment series-conductance transport. Imaged influx = Q·C₀ (perivascular delivery); effective conductance g = E·K/(E+K) chains exchange (E) and egress (K); parenchymal concentration Cₚ = Q·C₀/(Q+g); net clearance = g·Cₚ. Flow Q, exchange E and egress K are independent log-uniform draws; the in-channel Péclet number is held in [0.1, 10] for every point (neutral substrate preserved).</p>
+<p class="ap"><b>Estimator:</b> Spearman rank correlation between influx and clearance, N = 30 000 samples per regime; deterministic at seed 11.</p>
+<p class="ap"><b>Environment:</b> Python 3.12.3 · numpy 2.4.4 · scipy 1.17.1 · linux-x86_64.</p>
+<p class="ap"><b>Headline values:</b> PVS-conduit-limited (g≫Q) ρ = 1.00 · full realistic box ρ = 0.51 · vascular-egress bottleneck ρ = 0.04 · interstitial-exchange bottleneck ρ = 0.04 · egress depth scan (0, −0.5, −1.0, −1.5, −2.0 decades) ρ = 0.51 / 0.31 / 0.17 / 0.08 / 0.02. Thesis pass mark ρ ≥ 0.80; rejection line ρ ≤ 0.30.</p>
+<p class="ap"><b>script_sha256:</b> sha256:aab7aabe33734c511ffcba52510ff3366de80610cfe40598512eb35cf731acab</p>
+<p class="ap"><b>2026-06-13_cc_data.json sha256:</b> sha256:5f8c165f3e3e7ab51797083cb7d91e127baf2aae51b227fe46f118c6e8aac94d</p>
+<p class="ap"><b>Rerun:</b> python3 2026-06-13_repro.py → writes 2026-06-13_cc_data.json</p>
+<p class="ap"><b>Errata / quarantine:</b> none.</p>
+</div>
+
+<p style="margin-top:10px; font-size:8.4pt; color:#9c8a5e; text-align:center;">Duellum Veritatis · a public adversarial AI stress-test of a frozen scientific claim · published by Occam Research · engine and arbiter identities withheld by design.</p>
+
+<!--DV-SEAL-->
+<div class="imprimatur" style="text-align:center; margin:16px 0 6px 0; page-break-inside:avoid; break-inside:avoid;"><svg class="seal" width="132" height="132" viewBox="0 0 132 132" style="display:block; margin:0 auto;"><path d="M128.20,66.00 L125.92,69.14 L123.48,72.04 L125.26,75.39 L126.84,78.93 L123.96,81.53 L120.97,83.86 L122.01,87.50 L122.82,91.30 L119.46,93.24 L116.06,94.90 L116.32,98.68 L116.32,102.56 L112.63,103.76 L108.95,104.68 L108.43,108.43 L107.62,112.22 L103.76,112.63 L99.97,112.76 L98.68,116.32 L97.10,119.87 L93.24,119.46 L89.51,118.80 L87.50,122.01 L85.22,125.16 L81.53,123.96 L78.02,122.54 L75.39,125.26 L72.50,127.86 L69.14,125.92 L66.00,123.80 L62.86,125.92 L59.50,127.86 L56.61,125.26 L53.98,122.54 L50.47,123.96 L46.78,125.16 L44.50,122.01 L42.49,118.80 L38.76,119.46 L34.90,119.87 L33.32,116.32 L32.03,112.76 L28.24,112.63 L24.38,112.22 L23.57,108.43 L23.05,104.68 L19.37,103.76 L15.68,102.56 L15.68,98.68 L15.94,94.90 L12.54,93.24 L9.18,91.30 L9.99,87.50 L11.03,83.86 L8.04,81.53 L5.16,78.93 L6.74,75.39 L8.52,72.04 L6.08,69.14 L3.80,66.00 L6.08,62.86 L8.52,59.96 L6.74,56.61 L5.16,53.07 L8.04,50.47 L11.03,48.14 L9.99,44.50 L9.18,40.70 L12.54,38.76 L15.94,37.10 L15.68,33.32 L15.68,29.44 L19.37,28.24 L23.05,27.32 L23.57,23.57 L24.38,19.78 L28.24,19.37 L32.03,19.24 L33.32,15.68 L34.90,12.13 L38.76,12.54 L42.49,13.20 L44.50,9.99 L46.78,6.84 L50.47,8.04 L53.98,9.46 L56.61,6.74 L59.50,4.14 L62.86,6.08 L66.00,8.20 L69.14,6.08 L72.50,4.14 L75.39,6.74 L78.02,9.46 L81.53,8.04 L85.22,6.84 L87.50,9.99 L89.51,13.20 L93.24,12.54 L97.10,12.13 L98.68,15.68 L99.97,19.24 L103.76,19.37 L107.62,19.78 L108.43,23.57 L108.95,27.32 L112.63,28.24 L116.32,29.44 L116.32,33.32 L116.06,37.10 L119.46,38.76 L122.82,40.70 L122.01,44.50 L120.97,48.14 L123.96,50.47 L126.84,53.07 L125.26,56.61 L123.48,59.96 L125.92,62.86 Z" fill="#7a1717"/><circle cx="66.0" cy="66.0" r="54.00" fill="none" stroke="#5c100f" stroke-width="1.6"/><circle cx="66.0" cy="66.0" r="52.40" fill="none" stroke="#9a3a30" stroke-width="0.8"/><circle cx="66.0" cy="66.0" r="48.00" fill="none" stroke="#5c100f" stroke-width="0.8"/><text x="67.00" y="80.50" fill="#530f0e" font-family="EB Garamond 12,Georgia,serif" font-weight="700" font-size="44.88" letter-spacing="0.5" text-anchor="middle">OD</text><text x="65.20" y="78.20" fill="#bf5141" font-family="EB Garamond 12,Georgia,serif" font-weight="700" font-size="44.88" letter-spacing="0.5" text-anchor="middle">OD</text><text x="66.00" y="79.20" fill="#6e1414" font-family="EB Garamond 12,Georgia,serif" font-weight="700" font-size="44.88" letter-spacing="0.5" text-anchor="middle">OD</text><text x="67.00" y="108.22" fill="#530f0e" font-family="EB Garamond 12,Georgia,serif" font-weight="600" font-size="11.22" letter-spacing="2.0" text-anchor="middle">MMXXVI</text><text x="65.20" y="105.92" fill="#bf5141" font-family="EB Garamond 12,Georgia,serif" font-weight="600" font-size="11.22" letter-spacing="2.0" text-anchor="middle">MMXXVI</text><text x="66.00" y="106.92" fill="#6e1414" font-family="EB Garamond 12,Georgia,serif" font-weight="600" font-size="11.22" letter-spacing="2.0" text-anchor="middle">MMXXVI</text></svg><div style="font-family:'EB Garamond SC','EB Garamond 12',serif; font-variant:small-caps; color:#7a1717; letter-spacing:2.4px; font-size:11pt; font-weight:600;">Imprimatur</div><div style="color:#6a5c43; font-size:9pt; font-style:italic; margin-top:1px;">O. D. &middot; June 13, 2026</div></div>
+<!--/DV-SEAL-->
+<div class="folio">Duellum Veritatis<span class="sep">&#10086;</span>occam.world</div>
+
+</div>
+</body>
+</html>

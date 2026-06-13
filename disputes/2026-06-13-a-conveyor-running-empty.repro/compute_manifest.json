@@ -1,0 +1,23 @@
+{
+  "compute_kind": "real_compute",
+  "script": "2026-06-13_repro.py",
+  "script_sha256": "sha256:aab7aabe33734c511ffcba52510ff3366de80610cfe40598512eb35cf731acab",
+  "inputs": [],
+  "environment": {
+    "python": "3.12.3",
+    "packages": "numpy 2.4.4, scipy 1.17.1",
+    "platform": "linux-x86_64"
+  },
+  "random_seed": 11,
+  "outputs": [
+    {
+      "path": "2026-06-13_cc_data.json",
+      "sha256": "sha256:5f8c165f3e3e7ab51797083cb7d91e127baf2aae51b227fe46f118c6e8aac94d",
+      "metric": "spearman_rho_influx_vs_clearance",
+      "value": "control_full_box=0.511; pvs_conduit_bottleneck=1.000; vascular_uptake_bottleneck=0.038; interstitial_exchange_bottleneck=0.040; egress_depth_scan[-1.0,-1.5,-2.0]=0.171,0.078,0.022",
+      "tolerance": "absolute 0.01 across seeds; deterministic at seed=11"
+    }
+  ],
+  "rerun_instruction": "python3 2026-06-13_repro.py  -> writes 2026-06-13_cc_data.json (numpy/scipy; deterministic at seed=11)",
+  "known_limitations": "Steady-state, well-mixed two-compartment series-conductance model with three independent log-uniform conductances (Q, E, K). It tests SUFFICIENCY: that a physiologically plausible vascular-egress or interstitial-exchange bottleneck is enough to drop the influx<->clearance Spearman correlation below 0.3 while preserving the neutral Pe substrate. It does NOT establish that real in vivo glymphatic transport lives in a bottleneck regime: the true physiological ranges and covariances of Q, E and K in vivo are unknown; covariation (e.g. Q and E rising together with pressure) could restore coupling; transient/accumulation effects are not modelled; and the perivenous PVS-efflux pathway that breaks the conservation-of-mass argument is represented only structurally, not calibrated to data. No real BOLD/tracer imaging data were used."
+}
