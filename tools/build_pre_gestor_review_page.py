@@ -496,15 +496,18 @@ FACT_WORDS = {
         "documents": "документы",
         "domicile": "домициль",
         "deadline": "срок",
+        "direct": "прямая",
         "economic": "экономический",
         "employee": "работник",
         "employer": "работодатель",
         "employed": "самозанятый",
+        "establishment": "представительство",
         "event": "событие",
         "evidence": "доказательство",
         "eligibility": "право на применение",
         "expected": "ожидаемый",
         "expense": "расход",
+        "expenses": "расходы",
         "family": "семья",
         "filing": "подача",
         "fiscal": "налоговый",
@@ -512,6 +515,7 @@ FACT_WORDS = {
         "form": "форма",
         "from": "из",
         "guarantee": "гарантия",
+        "has": "имеет",
         "health": "медицинский",
         "identity": "личность",
         "immigration": "иммиграционный",
@@ -530,10 +534,13 @@ FACT_WORDS = {
         "outcome": "результат",
         "period": "период",
         "place": "место",
+        "permanent": "постоянное",
         "professional": "профессиональный",
         "rate": "ставка",
         "procedure": "процедура",
         "property": "недвижимость",
+        "real": "недвижимость",
+        "regime": "режим",
         "remote": "удалённый",
         "remotely": "удалённо",
         "requested": "запрошенный",
@@ -545,6 +552,7 @@ FACT_WORDS = {
         "scope": "охват",
         "separate": "отдельный",
         "self": "сам",
+        "seller": "продавец",
         "share": "доля",
         "signal": "признак",
         "social": "социальный",
@@ -563,6 +571,7 @@ FACT_WORDS = {
         "value": "стоимость",
         "visa": "виза",
         "with": "с",
+        "withholdings": "удержания",
         "work": "работа",
         "worker": "работник",
         "performed": "выполняется",
@@ -604,15 +613,18 @@ FACT_WORDS = {
         "documents": "documentos",
         "domicile": "domicilio",
         "deadline": "plazo",
+        "direct": "directa",
         "economic": "económico",
         "employee": "empleado",
         "employer": "empleador",
         "employed": "autónomo",
+        "establishment": "establecimiento",
         "event": "hecho",
         "evidence": "prueba",
         "eligibility": "derecho de aplicación",
         "expected": "esperado",
         "expense": "gasto",
+        "expenses": "gastos",
         "family": "familia",
         "filing": "presentación",
         "fiscal": "fiscal",
@@ -620,6 +632,7 @@ FACT_WORDS = {
         "form": "modelo",
         "from": "desde",
         "guarantee": "garantía",
+        "has": "tiene",
         "health": "salud",
         "identity": "identidad",
         "immigration": "inmigración",
@@ -638,10 +651,13 @@ FACT_WORDS = {
         "outcome": "resultado",
         "period": "periodo",
         "place": "lugar",
+        "permanent": "permanente",
         "professional": "profesional",
         "rate": "tipo",
         "procedure": "procedimiento",
         "property": "inmueble",
+        "real": "inmobiliario",
+        "regime": "régimen",
         "remote": "remoto",
         "remotely": "en remoto",
         "requested": "solicitado",
@@ -653,6 +669,7 @@ FACT_WORDS = {
         "scope": "alcance",
         "separate": "separado",
         "self": "propio",
+        "seller": "vendedor",
         "share": "porcentaje",
         "signal": "señal",
         "social": "social",
@@ -671,6 +688,7 @@ FACT_WORDS = {
         "value": "valor",
         "visa": "visado",
         "with": "con",
+        "withholdings": "retenciones",
         "work": "trabajo",
         "worker": "trabajador",
         "performed": "realizado",
@@ -685,6 +703,16 @@ FACT_LABELS = {
         "es": "territorio fiscal aplicable",
         "ru": "применимая налоговая территория",
         "en": "applicable tax territory",
+    },
+    "taxpayer_identity": {
+        "es": "identidad del contribuyente",
+        "ru": "идентификация налогоплательщика",
+        "en": "taxpayer identity",
+    },
+    "taxpayer_type": {
+        "es": "tipo de contribuyente",
+        "ru": "тип налогоплательщика",
+        "en": "taxpayer type",
     },
     "taxpayer_type_or_status": {
         "es": "tipo y estado fiscal del contribuyente",
@@ -726,6 +754,51 @@ FACT_LABELS = {
         "es": "existencia de establecimiento permanente en España",
         "ru": "наличие постоянного представительства в Испании",
         "en": "Spanish permanent establishment status",
+    },
+    "activity_start_or_change_date": {
+        "es": "fecha de inicio o modificación de actividad",
+        "ru": "дата начала или изменения деятельности",
+        "en": "activity start or change date",
+    },
+    "activity_start_date": {
+        "es": "fecha de inicio de actividad",
+        "ru": "дата начала деятельности",
+        "en": "activity start date",
+    },
+    "personal_data_change_only": {
+        "es": "solo cambio de datos personales",
+        "ru": "только изменение личных данных",
+        "en": "personal-data change only",
+    },
+    "irpf_activity_regime": {
+        "es": "régimen de actividad en IRPF",
+        "ru": "режим деятельности в IRPF",
+        "en": "IRPF activity regime",
+    },
+    "period_income_expenses_and_withholdings": {
+        "es": "periodo, ingresos, gastos y retenciones",
+        "ru": "период, доходы, расходы и удержания",
+        "en": "period, income, expenses and withholdings",
+    },
+    "seller_residence_status": {
+        "es": "residencia fiscal del vendedor",
+        "ru": "налоговое резидентство продавца",
+        "en": "seller tax-residence status",
+    },
+    "seller_has_spanish_permanent_establishment": {
+        "es": "si el vendedor actúa mediante establecimiento permanente en España",
+        "ru": "действует ли продавец через постоянное представительство в Испании",
+        "en": "whether the seller has a Spanish permanent establishment",
+    },
+    "asset_type": {
+        "es": "tipo de activo",
+        "ru": "тип актива",
+        "en": "asset type",
+    },
+    "operation_type": {
+        "es": "tipo de operación",
+        "ru": "тип операции",
+        "en": "operation type",
     },
     "immigration_route": {
         "es": "tipo de visado o autorización de residencia",
@@ -772,7 +845,260 @@ FACT_LABELS = {
         "ru": "территория уже отнесена к другой администрации",
         "en": "territory already assigned to another authority",
     },
+    "no_business_or_withholding_activity": {
+        "es": "no existe actividad económica ni obligación de retener",
+        "ru": "нет экономической деятельности и обязанности удерживать налог",
+        "en": "no business activity or withholding obligation",
+    },
+    "withholding_exception_not_reviewed": {
+        "es": "no se ha revisado una posible excepción de retención",
+        "ru": "не проверено возможное исключение из обязанности удержания",
+        "en": "withholding exception has not been reviewed",
+    },
+    "business_activity_registration_needed": {
+        "es": "alta o modificación censal de actividad económica",
+        "ru": "регистрация или изменение экономической деятельности в налоговом реестре",
+        "en": "business activity census registration or change",
+    },
+    "personal_tax_data_or_address_change": {
+        "es": "cambio de datos personales o domicilio fiscal",
+        "ru": "изменение личных налоговых данных или налогового адреса",
+        "en": "personal tax data or tax-address change",
+    },
+    "no_intracommunity_operation": {
+        "es": "no hay operación intracomunitaria",
+        "ru": "нет внутрисоюзной операции",
+        "en": "no intra-community transaction",
+    },
+    "work_performed_in_or_from_spain": {
+        "es": "trabajo realizado en España o desde España",
+        "ru": "работа выполняется в Испании или из Испании",
+        "en": "work performed in or from Spain",
+    },
+    "worker_status": {
+        "es": "situación del trabajador",
+        "ru": "статус работника",
+        "en": "worker status",
+    },
+    "coverage_document_type": {
+        "es": "tipo de documento de cobertura",
+        "ru": "тип документа о покрытии",
+        "en": "coverage-document type",
+    },
+    "certificate_or_application_type": {
+        "es": "tipo de certificado o solicitud",
+        "ru": "тип сертификата или заявления",
+        "en": "certificate or application type",
+    },
+    "period_type": {
+        "es": "tipo de periodo",
+        "ru": "тип периода",
+        "en": "period type",
+    },
+    "iva_subject_activity": {
+        "es": "actividad sujeta a IVA",
+        "ru": "деятельность, облагаемая IVA",
+        "en": "IVA-subject activity",
+    },
+    "foral_iva_competence_unresolved": {
+        "es": "competencia foral de IVA no resuelta",
+        "ru": "foral-компетенция по IVA ещё не определена",
+        "en": "foral IVA competence unresolved",
+    },
+    "intracommunity_operation_type": {
+        "es": "tipo de operación intracomunitaria",
+        "ru": "тип внутрисоюзной операции",
+        "en": "intra-community transaction type",
+    },
+    "roi_vies_status": {
+        "es": "estado ROI/VIES",
+        "ru": "статус ROI/VIES",
+        "en": "ROI/VIES status",
+    },
+    "counterparty_outside_eu_vat_scope": {
+        "es": "contraparte fuera del ámbito IVA de la UE",
+        "ru": "контрагент вне зоны VAT/IVA ЕС",
+        "en": "counterparty outside EU VAT scope",
+    },
+    "iae_or_cnae_activity": {
+        "es": "actividad IAE o CNAE",
+        "ru": "деятельность по IAE или CNAE",
+        "en": "IAE or CNAE activity",
+    },
+    "country_coordination_route": {
+        "es": "ruta de coordinación con otro país",
+        "ru": "маршрут координации с другой страной",
+        "en": "country coordination route",
+    },
+    "a1_expected_to_be_filled_by_worker_instead_of_issued_by_tgss": {
+        "es": "A1 esperado como formulario del trabajador en vez de certificado TGSS",
+        "ru": "A1 ожидается как заполненная работником форма, а не сертификат TGSS",
+        "en": "A1 expected as worker-filled form instead of TGSS certificate",
+    },
+    "no_certificate_for_spain_work_period": {
+        "es": "no hay certificado para el periodo de trabajo en España",
+        "ru": "нет сертификата на период работы в Испании",
+        "en": "no certificate for the Spain work period",
+    },
+    "wrong_country_coordination_route": {
+        "es": "ruta de coordinación con país incorrecto",
+        "ru": "маршрут координации выбран не для той страны",
+        "en": "wrong country coordination route",
+    },
 }
+
+FACT_LABELS.update({
+    "investor_residence_route_requested": {
+        "es": "ruta de residencia de inversor solicitada",
+        "ru": "запрошенный маршрут резиденции инвестора",
+        "en": "requested investor-residence route",
+    },
+    "application_or_authorization_status": {
+        "es": "estado de la solicitud o autorización",
+        "ru": "статус заявления или разрешения",
+        "en": "application or authorization status",
+    },
+    "application_or_renewal_date": {
+        "es": "fecha de solicitud o renovación",
+        "ru": "дата заявления или продления",
+        "en": "application or renewal date",
+    },
+    "new_investor_residence_application_date": {
+        "es": "fecha de solicitud de residencia por inversión nueva",
+        "ru": "дата заявления на новое разрешение инвестора",
+        "en": "new investor residence-application date",
+    },
+    "no_preexisting_investor_authorization_or_pending_file": {
+        "es": "sin autorización de inversor previa ni expediente pendiente",
+        "ru": "нет действующего разрешения инвестора или ожидающего дела",
+        "en": "no pre-existing investor authorization or pending file",
+    },
+    "new_investor_route_closed_from": {
+        "es": "cierre de nuevas solicitudes de residencia de inversor desde",
+        "ru": "закрытие новых заявлений на резиденцию инвестора с",
+        "en": "new investor route closed from",
+    },
+    "economic_center_country": {
+        "es": "país del centro de intereses económicos",
+        "ru": "страна центра экономических интересов",
+        "en": "economic-center country",
+    },
+    "days_in_spain": {
+        "es": "días de presencia en España",
+        "ru": "дни присутствия в Испании",
+        "en": "days in Spain",
+    },
+    "attempt_to_split_spanish_residence_by_month_without_treaty": {
+        "es": "intento de dividir la residencia española por meses sin aplicar convenio",
+        "ru": "попытка делить испанское резидентство по месяцам без проверки соглашения",
+        "en": "attempt to split Spanish residence by month without a treaty review",
+    },
+    "dual_residence_claim_without_certificate_or_treaty_review": {
+        "es": "alegación de doble residencia sin certificado ni revisión de convenio",
+        "ru": "заявление о двойном резидентстве без сертификата и проверки соглашения",
+        "en": "dual-residence claim without certificate or treaty review",
+    },
+    "ordinary_nonresident_without_spanish_pe": {
+        "es": "no residente ordinario sin establecimiento permanente español",
+        "ru": "обычный нерезидент без постоянного представительства в Испании",
+        "en": "ordinary nonresident without a Spanish permanent establishment",
+    },
+    "asset_category": {
+        "es": "categoría del activo",
+        "ru": "категория актива",
+        "en": "asset category",
+    },
+    "asset_value_eur_by_block": {
+        "es": "valor del activo en euros por bloque",
+        "ru": "стоимость актива в евро по каждому блоку",
+        "en": "asset value in euros by block",
+    },
+    "virtual_currency_reported_inside_modelo_720": {
+        "es": "moneda virtual declarada dentro del Modelo 720",
+        "ru": "виртуальная валюта уже отражена в Modelo 720",
+        "en": "virtual currency reported inside Modelo 720",
+    },
+    "coverage_claim_based_only_on_visa_or_health_insurance": {
+        "es": "cobertura alegada solo por visado o seguro médico",
+        "ru": "покрытие заявлено только по визе или медицинской страховке",
+        "en": "coverage claim based only on visa or health insurance",
+    },
+    "certificate_dates_do_not_cover_spain_work_period": {
+        "es": "fechas del certificado no cubren el periodo de trabajo en España",
+        "ru": "даты сертификата не покрывают период работы в Испании",
+        "en": "certificate dates do not cover the Spain work period",
+    },
+    "authority_notice_or_request_type": {
+        "es": "tipo de notificación o solicitud de la administración",
+        "ru": "тип уведомления или запроса от органа",
+        "en": "authority notice or request type",
+    },
+    "notification_or_event_date": {
+        "es": "fecha de notificación o del hecho relevante",
+        "ru": "дата уведомления или события",
+        "en": "notice or event date",
+    },
+    "deadline_or_procedure_status_unavailable": {
+        "es": "plazo o estado del procedimiento no disponible",
+        "ru": "срок или статус процедуры не указан",
+        "en": "deadline or procedure status unavailable",
+    },
+    "disputed_tax_issue": {
+        "es": "cuestión fiscal discutida",
+        "ru": "спорный налоговый вопрос",
+        "en": "disputed tax issue",
+    },
+    "evidence_gap_or_authority_challenge": {
+        "es": "falta de prueba o controversia con la administración",
+        "ru": "пробел в доказательствах или спор с органом",
+        "en": "evidence gap or authority challenge",
+    },
+    "user_requests_final_outcome_from_doctrine_only": {
+        "es": "el usuario pide una conclusión final basada solo en doctrina",
+        "ru": "пользователь просит финальный вывод только на основании практики",
+        "en": "user requests a final outcome from doctrine only",
+    },
+    "landlord_residence_status": {
+        "es": "residencia fiscal del arrendador",
+        "ru": "налоговое резидентство арендодателя",
+        "en": "landlord tax-residence status",
+    },
+    "employee_only_relationship_without_self_employed_activity": {
+        "es": "relación laboral sin actividad autónoma propia",
+        "ru": "только трудовые отношения без собственной деятельности autónomo",
+        "en": "employee-only relationship without self-employed activity",
+    },
+    "module_parameters": {
+        "es": "parámetros del régimen de módulos",
+        "ru": "параметры режима módulos",
+        "en": "module-regime parameters",
+    },
+    "module_eligibility_unresolved": {
+        "es": "derecho al régimen de módulos no resuelto",
+        "ru": "право на режим módulos ещё не определено",
+        "en": "module-regime eligibility unresolved",
+    },
+    "counterparty_annual_total_eur": {
+        "es": "importe anual por contraparte en euros",
+        "ru": "годовая сумма по контрагенту в евро",
+        "en": "annual total in euros per counterparty",
+    },
+    "eu_counterparty_vat_id": {
+        "es": "NIF-IVA de la contraparte de la UE",
+        "ru": "VAT/NIF-IVA контрагента из ЕС",
+        "en": "EU counterparty VAT ID",
+    },
+    "valid_foreign_coverage_displaces_spanish_reta_for_period": {
+        "es": "cobertura extranjera válida desplaza RETA español durante el periodo",
+        "ru": "действующее иностранное покрытие заменяет испанский RETA на этот период",
+        "en": "valid foreign coverage displaces Spanish RETA for the period",
+    },
+    "operation_reported_under_exclusion_or_sii": {
+        "es": "operación ya declarada bajo exclusión o SII",
+        "ru": "операция уже отражена через исключение или SII",
+        "en": "operation reported under exclusion or SII",
+    },
+})
 
 
 RISK_CODE_LABELS = {
@@ -816,7 +1142,775 @@ RISK_CODE_LABELS = {
         "ru": "надбавка и санкция зависят от статуса уведомления",
         "en": "surcharge and sanction depend on notice status",
     },
+    "withholding_reconciliation_required": {
+        "es": "hay que cuadrar retenciones periódicas y resumen anual",
+        "ru": "нужно сверить периодические удержания и годовую сводку",
+        "en": "periodic withholdings and annual summary must reconcile",
+    },
+    "rent_withholding_exemption_check": {
+        "es": "hay que comprobar si procede una excepción de retención por alquiler urbano",
+        "ru": "нужно проверить исключение из удержания по городской аренде",
+        "en": "urban-rent withholding exemption must be checked",
+    },
+    "withholding_on_price_not_gain": {
+        "es": "la retención se calcula sobre el precio, no sobre la ganancia",
+        "ru": "удержание считается от цены, а не от прироста",
+        "en": "withholding is on the price, not the gain",
+    },
+    "withholding_rate_fact_pattern_required": {
+        "es": "la tarifa de retención depende del tipo de pago y del rol de la persona",
+        "ru": "ставка удержания зависит от типа выплаты и роли человека",
+        "en": "withholding rate depends on payment type and the person's role",
+    },
+    "related_party_value_and_role_required": {
+        "es": "hay que confirmar el valor de la operación y el rol de la persona vinculada",
+        "ru": "нужно подтвердить сумму операции и роль связанного лица",
+        "en": "transaction value and related-party role must be confirmed",
+    },
 }
+
+RISK_CODE_LABELS.update({
+    "digital_nomad_tax_not_automatic": {
+        "es": "el visado de teletrabajo no decide automáticamente la fiscalidad",
+        "ru": "виза удалённого работника не решает налоги автоматически",
+        "en": "a digital-nomad visa does not automatically decide tax treatment",
+    },
+    "golden_visa_new_route_unavailable": {
+        "es": "la nueva ruta de golden visa ya no está disponible",
+        "ru": "новый маршрут golden visa больше недоступен",
+        "en": "the new golden-visa route is no longer available",
+    },
+    "near_183_day_threshold": {
+        "es": "el caso está cerca del umbral de 183 días",
+        "ru": "случай близок к порогу 183 дней",
+        "en": "the case is near the 183-day threshold",
+    },
+    "treaty_source_required": {
+        "es": "hace falta fuente de convenio aplicable",
+        "ru": "нужен источник по применимому соглашению",
+        "en": "an applicable treaty source is required",
+    },
+    "modelo_720_not_abolished": {
+        "es": "el Modelo 720 no está derogado",
+        "ru": "Modelo 720 не отменён",
+        "en": "Modelo 720 has not been abolished",
+    },
+    "crypto_custody_review": {
+        "es": "hay que revisar custodia de criptoactivos",
+        "ru": "нужно проверить хранение криптоактивов",
+        "en": "crypto-asset custody must be reviewed",
+    },
+    "social_security_not_tax": {
+        "es": "Seguridad Social no es un impuesto",
+        "ru": "социальное страхование не является налогом",
+        "en": "social security is not a tax",
+    },
+    "notice_deadline_first": {
+        "es": "primero hay que fijar fecha de notificación y plazo",
+        "ru": "сначала нужно определить дату уведомления и срок",
+        "en": "notice date and deadline must be fixed first",
+    },
+    "prior_request_changes_late_filing_route": {
+        "es": "una solicitud previa puede cambiar la vía de presentación tardía",
+        "ru": "предыдущий запрос может изменить маршрут просроченной подачи",
+        "en": "a prior request may change the late-filing route",
+    },
+    "deferral_nondeferrable_debt_check": {
+        "es": "hay que descartar deuda no aplazable",
+        "ru": "нужно исключить долг, который нельзя отсрочить",
+        "en": "non-deferrable debt must be ruled out",
+    },
+    "appeal_or_sanction_tradeoff_review": {
+        "es": "recurrir puede afectar reducciones o sanciones",
+        "ru": "жалоба может повлиять на снижения или санкции",
+        "en": "appeal choices may affect reductions or sanctions",
+    },
+    "prescription_requires_full_timeline": {
+        "es": "la prescripción exige revisar toda la cronología",
+        "ru": "для давности нужна полная хронология",
+        "en": "prescription requires the full timeline",
+    },
+    "negative_certificate_needs_evidence_workflow": {
+        "es": "un certificado negativo exige ruta de prueba",
+        "ru": "отрицательный сертификат требует маршрута доказательств",
+        "en": "a negative certificate needs an evidence workflow",
+    },
+    "census_profile_first": {
+        "es": "primero hay que revisar el perfil censal",
+        "ru": "сначала нужно проверить налоговый профиль",
+        "en": "the census profile must be checked first",
+    },
+    "personal_census_not_business_activity": {
+        "es": "los datos censales personales no son alta de actividad",
+        "ru": "личные данные в налоговом реестре не являются регистрацией деятельности",
+        "en": "personal census data is not business registration",
+    },
+    "territorial_first_before_iva": {
+        "es": "antes de IVA hay que resolver territorio",
+        "ru": "до вывода по IVA нужно решить территорию",
+        "en": "territory must be resolved before IVA",
+    },
+    "irpf_regime_required": {
+        "es": "hay que confirmar régimen de IRPF",
+        "ru": "нужно подтвердить режим IRPF",
+        "en": "IRPF regime must be confirmed",
+    },
+    "modules_regime_confirmation_required": {
+        "es": "hay que confirmar el régimen de módulos",
+        "ru": "нужно подтвердить режим módulos",
+        "en": "modules regime must be confirmed",
+    },
+    "model_347_threshold_per_counterparty": {
+        "es": "el umbral del Modelo 347 se revisa por contraparte",
+        "ru": "порог Modelo 347 проверяется по каждому контрагенту",
+        "en": "Modelo 347 threshold is checked per counterparty",
+    },
+    "model_390_exclusion_check_required": {
+        "es": "hay que comprobar exclusiones del Modelo 390",
+        "ru": "нужно проверить исключения из Modelo 390",
+        "en": "Modelo 390 exclusions must be checked",
+    },
+    "intracommunity_vat_id_validation_required": {
+        "es": "hay que validar NIF-IVA intracomunitario",
+        "ru": "нужно проверить внутрисоюзный VAT/NIF-IVA",
+        "en": "intra-community VAT ID must be validated",
+    },
+    "accounting_close_required_before_model_200": {
+        "es": "el cierre contable es previo al Modelo 200",
+        "ru": "бухгалтерское закрытие нужно до Modelo 200",
+        "en": "accounting close is required before Modelo 200",
+    },
+    "corporate_rate_thresholds_need_accounts": {
+        "es": "los umbrales de tipo requieren cuentas",
+        "ru": "для порогов ставки нужны бухгалтерские данные",
+        "en": "rate thresholds require accounts",
+    },
+    "corporate_accounting_evidence_required": {
+        "es": "hay que confirmar prueba contable de la sociedad",
+        "ru": "нужно подтвердить бухгалтерские доказательства компании",
+        "en": "corporate accounting evidence is required",
+    },
+    "doctrine_residence_evidence_escalation": {
+        "es": "residencia y prueba requieren revisión doctrinal",
+        "ru": "резидентство и доказательства требуют проверки практики",
+        "en": "residence and evidence require doctrine review",
+    },
+    "doctrine_art93_fact_bound": {
+        "es": "Art. 93 depende de hechos concretos y doctrina",
+        "ru": "Art. 93 зависит от конкретных фактов и практики",
+        "en": "Art. 93 is fact-bound and doctrine-sensitive",
+    },
+    "doctrine_modelo720_legacy_sanction": {
+        "es": "las sanciones históricas del Modelo 720 requieren cautela",
+        "ru": "старые санкции Modelo 720 требуют осторожности",
+        "en": "legacy Modelo 720 sanctions require caution",
+    },
+    "doctrine_invoice_fact_bound": {
+        "es": "la deducibilidad de factura depende de hechos y prueba",
+        "ru": "вычет по счёту зависит от фактов и доказательств",
+        "en": "invoice deductibility is fact-bound",
+    },
+    "doctrine_home_vehicle_fact_bound": {
+        "es": "vivienda y vehículo dependen de hechos y prueba",
+        "ru": "домашний офис и автомобиль зависят от фактов и доказательств",
+        "en": "home-office and vehicle treatment is fact-bound",
+    },
+    "doctrine_high_risk_structure": {
+        "es": "estructura de alto riesgo: revisar doctrina antes de responder",
+        "ru": "структура высокого риска: нужна проверка практики до ответа",
+        "en": "high-risk structure: review doctrine before answering",
+    },
+    "invoice_label_not_enough": {
+        "es": "la etiqueta de la factura no basta por sí sola",
+        "ru": "одной подписи на счёте недостаточно",
+        "en": "the invoice label alone is not enough",
+    },
+    "territorial_first_required": {
+        "es": "primero hay que resolver territorio",
+        "ru": "сначала нужно решить территорию",
+        "en": "territory must be resolved first",
+    },
+    "annual_reconciliation_required": {
+        "es": "hace falta conciliación anual",
+        "ru": "нужна годовая сверка",
+        "en": "annual reconciliation is required",
+    },
+    "special_regime_not_normal_303": {
+        "es": "el régimen especial no es el Modelo 303 ordinario",
+        "ru": "специальный режим не равен обычному Modelo 303",
+        "en": "the special regime is not the normal Modelo 303 route",
+    },
+    "non_established_not_303_by_default": {
+        "es": "un no establecido no va al Modelo 303 por defecto",
+        "ru": "нерезидент без учреждения не попадает в Modelo 303 по умолчанию",
+        "en": "a non-established taxpayer is not on Modelo 303 by default",
+    },
+    "irpf_vs_irnr_gate_required": {
+        "es": "primero hay que separar IRPF e IRNR",
+        "ru": "сначала нужно разделить IRPF и IRNR",
+        "en": "IRPF and IRNR must be separated first",
+    },
+    "non_eu_expense_deduction_block": {
+        "es": "los gastos de fuera de la UE pueden bloquear deducción",
+        "ru": "расходы вне ЕС могут блокировать вычет",
+        "en": "non-EU expenses may block deduction",
+    },
+    "treaty_certificate_required_for_reduced_irnr": {
+        "es": "el tipo reducido de IRNR exige certificado de convenio",
+        "ru": "для сниженной ставки IRNR нужен сертификат по соглашению",
+        "en": "reduced IRNR rate requires a treaty certificate",
+    },
+    "ordinary_nonresident_no_720_721": {
+        "es": "el no residente ordinario no entra por Modelos 720/721",
+        "ru": "обычный нерезидент не идёт по Modelos 720/721",
+        "en": "ordinary nonresident is not a Modelo 720/721 case",
+    },
+    "modelo_720_crypto_separate_721": {
+        "es": "criptoactivos pueden ir separados en Modelo 721",
+        "ru": "криптоактивы могут идти отдельно через Modelo 721",
+        "en": "crypto assets may be separate under Modelo 721",
+    },
+    "irpf_regime_math_required": {
+        "es": "el cálculo exige confirmar régimen de IRPF",
+        "ru": "для расчёта нужно подтвердить режим IRPF",
+        "en": "calculation requires the IRPF regime",
+    },
+    "expense_three_part_test": {
+        "es": "el gasto exige prueba de afectación, registro y justificación",
+        "ru": "расход требует проверки связи с деятельностью, учёта и документов",
+        "en": "expense requires business link, accounting and proof",
+    },
+    "home_office_area_formula_required": {
+        "es": "la vivienda exige fórmula de superficie afectada",
+        "ru": "для домашнего офиса нужна формула площади",
+        "en": "home-office area formula is required",
+    },
+    "vehicle_mixed_use_review": {
+        "es": "el uso mixto del vehículo requiere revisión",
+        "ru": "смешанное использование автомобиля требует проверки",
+        "en": "mixed vehicle use requires review",
+    },
+    "residence_is_calendar_year_gate": {
+        "es": "la residencia se decide por año natural",
+        "ru": "резидентство определяется по календарному году",
+        "en": "residence is a calendar-year gate",
+    },
+    "crypto_swap_taxable_event": {
+        "es": "el intercambio de criptoactivos puede ser hecho imponible",
+        "ru": "обмен криптоактивов может быть налогооблагаемым событием",
+        "en": "crypto swap may be a taxable event",
+    },
+    "ccaa_table_required": {
+        "es": "hay que revisar tabla de la comunidad autónoma",
+        "ru": "нужно проверить таблицу автономного сообщества",
+        "en": "CCAA table must be checked",
+    },
+    "family_benefit_certificate_dates_required": {
+        "es": "beneficios familiares exigen certificados y fechas",
+        "ru": "для семейных льгот нужны сертификаты и даты",
+        "en": "family benefits require certificates and dates",
+    },
+    "municipal_ordinance_required": {
+        "es": "hace falta ordenanza municipal",
+        "ru": "нужен муниципальный регламент",
+        "en": "municipal ordinance is required",
+    },
+    "local_event_tax_ordinance_required": {
+        "es": "el hecho imponible local exige ordenanza",
+        "ru": "для местного налога нужен муниципальный регламент",
+        "en": "local taxable event requires an ordinance",
+    },
+    "iae_epigraph_profile_required": {
+        "es": "hay que confirmar epígrafe IAE y perfil",
+        "ru": "нужно подтвердить эпиграф IAE и профиль",
+        "en": "IAE epigraph and profile must be confirmed",
+    },
+    "vat_itp_ajd_boundary_review": {
+        "es": "hay que separar IVA, ITP y AJD",
+        "ru": "нужно разделить IVA, ITP и AJD",
+        "en": "VAT, ITP and AJD boundary must be reviewed",
+    },
+    "isd_ccaa_connection_point_required": {
+        "es": "ISD exige punto de conexión autonómico",
+        "ru": "для ISD нужна привязка к автономному сообществу",
+        "en": "ISD requires a CCAA connection point",
+    },
+    "wealth_current_campaign_refresh_required": {
+        "es": "patrimonio exige campaña vigente actualizada",
+        "ru": "для patrimonio нужна актуальная кампания",
+        "en": "wealth-tax campaign must be current",
+    },
+    "procedure_deadline_required": {
+        "es": "hay que fijar el plazo del procedimiento",
+        "ru": "нужно определить процессуальный срок",
+        "en": "procedure deadline must be fixed",
+    },
+    "rectification_procedure_conflict_check": {
+        "es": "hay que revisar conflicto con procedimiento de rectificación",
+        "ru": "нужно проверить конфликт с процедурой исправления",
+        "en": "rectification procedure conflict must be checked",
+    },
+    "ccaa_deductions_year_specific": {
+        "es": "las deducciones autonómicas dependen del año",
+        "ru": "региональные вычеты зависят от года",
+        "en": "CCAA deductions are year-specific",
+    },
+    "local_ordinance_required": {
+        "es": "hace falta ordenanza local",
+        "ru": "нужен местный регламент",
+        "en": "local ordinance is required",
+    },
+    "tax_alta_not_reta": {
+        "es": "alta fiscal no equivale a alta RETA",
+        "ru": "налоговая регистрация не равна регистрации в RETA",
+        "en": "tax registration is not RETA registration",
+    },
+    "reta_regularization_future_adjustment": {
+        "es": "RETA puede regularizarse con ajuste posterior",
+        "ru": "RETA может корректироваться последующей регуляризацией",
+        "en": "RETA may be regularized later",
+    },
+    "foreign_coverage_scope_check": {
+        "es": "hay que revisar alcance de cobertura extranjera",
+        "ru": "нужно проверить охват иностранного покрытия",
+        "en": "foreign coverage scope must be checked",
+    },
+    "visa_not_social_security": {
+        "es": "el visado no decide Seguridad Social",
+        "ru": "виза не решает социальное страхование",
+        "en": "visa does not decide social security",
+    },
+    "igic_not_mainland_iva": {
+        "es": "IGIC no es IVA peninsular",
+        "ru": "IGIC не является материковым IVA",
+        "en": "IGIC is not mainland IVA",
+    },
+    "ticketbai_batuz_layered_obligation": {
+        "es": "TicketBAI/Batuz puede añadir obligación propia",
+        "ru": "TicketBAI/Batuz может добавлять отдельную обязанность",
+        "en": "TicketBAI/Batuz may add a separate obligation",
+    },
+    "ipsi_not_iva": {
+        "es": "IPSI no es IVA",
+        "ru": "IPSI не является IVA",
+        "en": "IPSI is not IVA",
+    },
+})
+
+
+SOURCE_PREFIX_LABELS = {
+    "aeat": "AEAT",
+    "boe": "BOE",
+    "teac": "TEAC",
+    "dgt": "DGT",
+    "tgss": "TGSS",
+    "segsoc": "Seguridad Social",
+    "uge": "UGE",
+    "atc": "Agencia Tributaria Canaria",
+    "bizkaia": "Bizkaia",
+    "gipuzkoa": "Gipuzkoa",
+    "araba": "Araba",
+    "navarra": "Hacienda Foral Navarra",
+    "madrid": "Madrid",
+    "cjeu": "TJUE",
+    "curia": "TJUE",
+    "poderjudicial": "Poder Judicial",
+    "importass": "Importass",
+    "moncloa": "Moncloa",
+}
+
+SOURCE_TOKEN_LABELS = {
+    "es": {
+        "a1": "A1",
+        "admin": "administrador",
+        "administrative": "administrativo",
+        "affectation": "afectación",
+        "amounts": "importes",
+        "appeals": "recursos",
+        "art": "art.",
+        "art93": "Art. 93",
+        "asset": "activos",
+        "autonomicas": "autonómicas",
+        "autonomo": "autónomo",
+        "bases": "bases",
+        "benefits": "beneficios",
+        "bilateral": "bilaterales",
+        "calendar": "calendario",
+        "canarias": "Canarias",
+        "capital": "ganancia patrimonial",
+        "ccaa": "CCAA",
+        "ceuta": "Ceuta",
+        "certificate": "certificado",
+        "ch": "Suiza",
+        "claim": "reclamación",
+        "claims": "reclamaciones",
+        "code": "Código",
+        "commerce": "Comercio",
+        "concierto": "Concierto Económico",
+        "contribution": "cotización",
+        "count": "cómputo",
+        "current": "estar al corriente",
+        "day": "días",
+        "days": "días",
+        "deductible": "deducible",
+        "deductions": "deducciones",
+        "dehu": "DEHú",
+        "docs": "documentación",
+        "double": "doble",
+        "economic": "económico",
+        "eea": "EEE",
+        "employee": "empleado",
+        "employer": "empleador",
+        "end": "fin",
+        "equivalencia": "equivalencia",
+        "estate": "inmobiliario",
+        "eu": "UE",
+        "evidence": "prueba",
+        "excluded": "excluidos",
+        "exonerados": "exonerados",
+        "expense": "gasto",
+        "facturacion": "facturación",
+        "family": "familia",
+        "faq": "FAQ",
+        "foral": "foral",
+        "foreign": "exterior",
+        "forms": "modelos",
+        "framework": "marco",
+        "fractional": "fraccionados",
+        "gain": "ganancia",
+        "golden": "golden",
+        "guarantee": "garantía",
+        "guidance": "guía",
+        "home": "vivienda",
+        "hub": "portal",
+        "icex": "ICEX",
+        "image": "imagen",
+        "impatriados": "impatriados",
+        "income": "renta",
+        "instructions": "instrucciones",
+        "interest": "interés",
+        "international": "internacional",
+        "local": "locales",
+        "management": "gestión",
+        "main": "habitual",
+        "melilla": "Melilla",
+        "modelos": "modelos",
+        "monedas": "monedas",
+        "navarra": "Navarra",
+        "no": "sin",
+        "nonresident": "no residente",
+        "normal": "normal",
+        "notifications": "notificaciones",
+        "obligation": "obligación",
+        "obligados": "obligados",
+        "objective": "objetiva",
+        "office": "vivienda",
+        "order": "orden",
+        "party": "vinculadas",
+        "payment": "pago",
+        "payments": "pagos",
+        "pe": "establecimiento permanente",
+        "person": "persona física",
+        "presentation": "presentación",
+        "procedure": "procedimiento",
+        "property": "inmuebles",
+        "rates": "tipos",
+        "recargo": "recargo",
+        "recaudacion": "recaudación",
+        "reduction": "reducción",
+        "refunds": "devoluciones",
+        "regimen": "régimen",
+        "regulation": "reglamento",
+        "related": "vinculadas",
+        "rent": "alquiler",
+        "rental": "alquiler",
+        "repeal": "derogación",
+        "residence": "residencia",
+        "retention": "retenciones",
+        "review": "revisión",
+        "revision": "revisión",
+        "rights": "derechos",
+        "routes": "vías",
+        "sale": "venta",
+        "security": "Seguridad Social",
+        "simplified": "simplificada",
+        "social": "social",
+        "solar": "solar",
+        "solidarity": "solidaridad",
+        "startup": "startup",
+        "startups": "startups",
+        "summary": "resumen",
+        "supplies": "suministros",
+        "suspension": "suspensión",
+        "tai": "territorio IVA",
+        "tariffs": "tarifas",
+        "tax": "tributario",
+        "taxes": "impuestos",
+        "telework": "teletrabajo",
+        "threshold": "umbral",
+        "treaties": "convenios",
+        "types": "tipos",
+        "vat": "IVA",
+        "visa": "visa",
+        "withholding": "retenciones",
+        "without": "sin",
+    },
+    "ru": {
+        "a1": "A1",
+        "admin": "администратор",
+        "administrative": "административная процедура",
+        "affectation": "привязка к деятельности",
+        "amounts": "суммы",
+        "appeals": "обжалования",
+        "art": "ст.",
+        "art93": "Art. 93",
+        "asset": "активы",
+        "autonomicas": "региональные",
+        "autonomo": "autónomo",
+        "bases": "базы",
+        "benefits": "льготы",
+        "bilateral": "двусторонние соглашения",
+        "calendar": "календарь",
+        "canarias": "Canarias",
+        "capital": "прирост капитала",
+        "ccaa": "CCAA",
+        "ceuta": "Ceuta",
+        "certificate": "сертификат",
+        "ch": "Швейцария",
+        "claim": "жалоба",
+        "claims": "жалобы",
+        "code": "Кодекс",
+        "commerce": "торговля",
+        "concierto": "Concierto Económico",
+        "contribution": "взносы",
+        "count": "подсчёт",
+        "current": "статус исполнения обязанностей",
+        "day": "дни",
+        "days": "дни",
+        "deductible": "вычитаемый",
+        "deductions": "вычеты",
+        "dehu": "DEHú",
+        "docs": "документация",
+        "double": "двойное",
+        "economic": "экономическая",
+        "eea": "ЕЭЗ",
+        "employee": "работник",
+        "employer": "работодатель",
+        "end": "закрытие",
+        "equivalencia": "equivalencia",
+        "estate": "недвижимость",
+        "eu": "ЕС",
+        "evidence": "доказательства",
+        "excluded": "исключения",
+        "exonerados": "освобождённые от подачи",
+        "expense": "расход",
+        "facturacion": "выставление счетов",
+        "family": "семья",
+        "faq": "FAQ",
+        "foral": "foral",
+        "foreign": "иностранные",
+        "forms": "формы",
+        "framework": "рамочное соглашение",
+        "fractional": "авансовые",
+        "gain": "прирост",
+        "golden": "golden",
+        "guarantee": "гарантия",
+        "guidance": "разъяснение",
+        "home": "домашний офис",
+        "hub": "раздел",
+        "icex": "ICEX",
+        "image": "имиджевые права",
+        "impatriados": "impatriados",
+        "income": "доход",
+        "instructions": "инструкции",
+        "interest": "проценты",
+        "international": "международный",
+        "local": "местные",
+        "management": "управление",
+        "main": "основное жильё",
+        "melilla": "Melilla",
+        "modelos": "формы",
+        "monedas": "валюты",
+        "navarra": "Navarra",
+        "no": "без",
+        "nonresident": "нерезидент",
+        "normal": "обычная",
+        "notifications": "уведомления",
+        "obligation": "обязанность",
+        "obligados": "обязанные лица",
+        "objective": "объективная",
+        "office": "домашний офис",
+        "order": "приказ",
+        "party": "связанные стороны",
+        "payment": "платёж",
+        "payments": "платежи",
+        "pe": "постоянное представительство",
+        "person": "физических лиц",
+        "presentation": "подача",
+        "procedure": "процедура",
+        "property": "недвижимость",
+        "rates": "ставки",
+        "recargo": "надбавка",
+        "recaudacion": "взыскание",
+        "reduction": "снижение",
+        "refunds": "возвраты",
+        "regimen": "режим",
+        "regulation": "регламент",
+        "related": "связанные стороны",
+        "rent": "аренда",
+        "rental": "аренда",
+        "repeal": "отмена",
+        "residence": "резидентство",
+        "retention": "удержания",
+        "review": "пересмотр",
+        "revision": "пересмотр",
+        "rights": "права",
+        "routes": "маршруты",
+        "sale": "продажа",
+        "security": "социальное страхование",
+        "simplified": "упрощённая",
+        "social": "социальное",
+        "solar": "солнечная энергия",
+        "solidarity": "солидарность",
+        "startup": "стартап",
+        "startups": "стартапы",
+        "summary": "сводка",
+        "supplies": "коммунальные расходы",
+        "suspension": "приостановка",
+        "tai": "территория IVA",
+        "tariffs": "тарифы",
+        "tax": "налоговое",
+        "taxes": "налоги",
+        "telework": "удалённая работа",
+        "threshold": "порог",
+        "treaties": "соглашения",
+        "types": "типы",
+        "vat": "IVA",
+        "visa": "виза",
+        "withholding": "удержания",
+        "without": "без",
+    },
+}
+
+SOURCE_TOKEN_LABELS["es"].update({
+    "accounting": "contabilidad",
+    "agreements": "convenios",
+    "bonus": "bonificación",
+    "crypto": "criptoactivos",
+    "c788": "C-788/19",
+    "census": "censo",
+    "deducciones": "deducciones",
+    "direct": "estimación directa",
+    "estimation": "estimación",
+    "extension": "prórroga",
+    "fortunes": "grandes fortunas",
+    "guide": "guía",
+    "imputed": "renta imputada",
+    "invoice": "factura",
+    "law38": "Ley 38/2022",
+    "litpajd": "TR LITPAJD",
+    "lpac": "LPAC 39/2015",
+    "modelo720": "Modelo 720",
+    "modalities": "modalidades",
+    "obligations": "obligaciones",
+    "pais": "País",
+    "pdf": "PDF",
+    "prescription": "prescripción",
+    "periodicity": "periodicidad",
+    "real": "inmueble",
+    "recurso": "recurso",
+    "requirements": "requisitos",
+    "rg": "RG",
+    "teletrabajadores": "teletrabajadores",
+    "ticketbai": "TicketBAI",
+    "batuz": "Batuz",
+    "vasco": "Vasco",
+})
+SOURCE_TOKEN_LABELS["ru"].update({
+    "accounting": "бухгалтерский учёт",
+    "agreements": "соглашения",
+    "bonus": "льгота",
+    "crypto": "криптоактивы",
+    "c788": "C-788/19",
+    "census": "налоговый реестр",
+    "deducciones": "вычеты",
+    "direct": "прямая оценка",
+    "estimation": "оценка",
+    "extension": "продление",
+    "fortunes": "крупные состояния",
+    "guide": "инструкция",
+    "imputed": "вменённый доход",
+    "invoice": "счёт-фактура",
+    "law38": "Ley 38/2022",
+    "litpajd": "TR LITPAJD",
+    "lpac": "LPAC 39/2015",
+    "modelo720": "Modelo 720",
+    "modalities": "методики",
+    "obligations": "обязанности",
+    "pais": "País",
+    "pdf": "PDF",
+    "prescription": "давность",
+    "periodicity": "периодичность",
+    "real": "недвижимость",
+    "recurso": "обжалование",
+    "requirements": "требования",
+    "rg": "RG",
+    "teletrabajadores": "удалённые работники",
+    "ticketbai": "TicketBAI",
+    "batuz": "Batuz",
+    "vasco": "Vasco",
+})
+
+
+def _source_public_title(source_id: str, source: dict[str, Any], lang: str) -> str:
+    original = _string(source.get("support_anchor") or source.get("title") or source_id)
+    if lang == "en":
+        return original
+    parts = [part for part in source_id.split("_") if part]
+    prefix = SOURCE_PREFIX_LABELS.get(parts[0], parts[0].upper() if parts else "")
+    body = parts[1:] if parts and parts[0] in SOURCE_PREFIX_LABELS else parts
+    labels = SOURCE_TOKEN_LABELS[lang]
+    rendered: list[str] = []
+    skip_count = 0
+    for idx, token in enumerate(body):
+        if skip_count:
+            skip_count -= 1
+            continue
+        low = token.lower()
+        next_token = body[idx + 1].lower() if idx + 1 < len(body) else ""
+        year_token = body[idx + 2].lower() if idx + 2 < len(body) else ""
+        if low == "modelo" and next_token:
+            rendered.append(f"Modelo {body[idx + 1].upper()}")
+            skip_count = 1
+            continue
+        if low == "ley" and next_token.isdigit() and year_token.isdigit():
+            rendered.append(f"Ley {next_token}/{year_token}")
+            skip_count = 2
+            continue
+        law_match = re.fullmatch(r"l(\d+)", low)
+        if law_match and next_token.isdigit():
+            rendered.append(f"Ley {law_match.group(1)}/{next_token}")
+            skip_count = 1
+            continue
+        if low in {"rd", "rdl", "lo"} and next_token.isdigit() and year_token.isdigit():
+            rendered.append(f"{low.upper()} {next_token}/{year_token}")
+            skip_count = 2
+            continue
+        if low in {"hfp", "hac"} and next_token.isdigit() and year_token.isdigit():
+            rendered.append(f"Orden {low.upper()}/{next_token}/{year_token}")
+            skip_count = 2
+            continue
+        if low in {"l", "rd", "rdl", "lo", "hfp", "hac", "rgat", "riva", "lirpf", "rirpf", "liva", "lgt", "lis", "lisd", "lip", "tr", "trlirnr", "trlrhl", "itpajd", "iaej", "sii", "oss", "iva", "igic", "irpf", "irnr", "ipi", "ipsi", "iae", "ibi", "itsgf", "reta", "ta300"}:
+            rendered.append(low.upper())
+            continue
+        if low.isdigit():
+            rendered.append(low)
+            continue
+        rendered.append(labels.get(low, low.replace("-", " ")))
+    title = " ".join(rendered).strip()
+    if not title:
+        return original
+    return f"{prefix}: {title}" if prefix else title
 
 
 def _risk_public_text(code: str, severity: str, lang: str) -> str:
@@ -864,6 +1958,21 @@ def _format_value(value: Any, lang: str = "en") -> str:
     text = _string(value)
     translations = {
         "calendar_year": {"es": "año natural", "ru": "календарный год", "en": "calendar year"},
+        "business_professional_or_withholder_census": {
+            "es": "censo de empresarios, profesionales y retenedores",
+            "ru": "реестр предпринимателей, профессионалов и удерживающих налог",
+            "en": "business, professional and withholder census",
+        },
+        "personal_census_data": {
+            "es": "datos censales personales",
+            "ru": "личные данные в налоговом реестре",
+            "en": "personal census data",
+        },
+        "intracommunity_operations": {
+            "es": "operaciones intracomunitarias",
+            "ru": "внутрисоюзные операции",
+            "en": "intra-community operations",
+        },
         "move_year_plus_five_following_tax_periods": {
             "es": "año de traslado y cinco periodos fiscales siguientes",
             "ru": "год переезда и пять следующих налоговых периодов",
@@ -910,7 +2019,7 @@ def _value_label(key: str, lang: str) -> str:
         "period_basis": {"es": "base temporal", "ru": "основа периода", "en": "period basis"},
         "new_investor_route_closed_from": {
             "es": "cierre de nuevas solicitudes de inversor desde",
-            "ru": "закрытие новых investor-route заявлений с",
+            "ru": "закрытие новых заявлений инвестора с",
             "en": "new investor route closed from",
         },
         "repeal_instrument": {"es": "norma derogatoria", "ru": "отменяющий акт", "en": "repeal instrument"},
@@ -981,7 +2090,7 @@ def _condition_items(recommendation: dict[str, Any], lang: str) -> tuple[list[st
 
 
 def _source_public(source: dict[str, Any], lang: str) -> dict[str, str]:
-    title = source.get("support_anchor") or source.get("title") or source.get("source_id")
+    title = _source_public_title(source.get("source_id", ""), source, lang)
     meta = " · ".join(item for item in (source.get("jurisdiction"), source.get("last_checked")) if item)
     if "unverifiable" in source.get("review_status", ""):
         notes = {
@@ -1013,7 +2122,7 @@ def _source_public(source: dict[str, Any], lang: str) -> dict[str, str]:
 
 
 def _legal_basis(sources: list[dict[str, Any]], lang: str) -> str:
-    anchors = [_string(source.get("support_anchor") or source.get("title")) for source in sources[:5]]
+    anchors = [_source_public_title(source.get("source_id", ""), source, lang) for source in sources[:5]]
     anchors = [anchor for anchor in anchors if anchor]
     if not anchors:
         return {
@@ -1124,6 +2233,35 @@ def _client_request_items(
     return base[:5]
 
 
+PUBLIC_TERM_REPLACEMENTS = {
+    "ru": [
+        (re.compile(r"\bcensus-данные\b", re.IGNORECASE), "данные налогового реестра"),
+        (re.compile(r"\bcensus-статус\b", re.IGNORECASE), "статус в налоговом реестре"),
+        (re.compile(r"\bcensus\b", re.IGNORECASE), "налоговый реестр"),
+    ],
+    "es": [
+        (re.compile(r"\bcensus\b", re.IGNORECASE), "censo"),
+    ],
+}
+
+
+def _clean_public_text(value: Any, lang: str) -> str:
+    text = _string(value)
+    for pattern, replacement in PUBLIC_TERM_REPLACEMENTS.get(lang, []):
+        text = pattern.sub(replacement, text)
+    return text
+
+
+def _clean_brief(brief: dict[str, Any], lang: str) -> dict[str, Any]:
+    cleaned = dict(brief)
+    for field in PUBLIC_TEXT_FIELDS:
+        if field in cleaned:
+            cleaned[field] = _clean_public_text(cleaned[field], lang)
+    for field in ("verify", "request"):
+        cleaned[field] = [_clean_public_text(item, lang) for item in _as_list(cleaned.get(field))]
+    return cleaned
+
+
 def _build_briefs(
     rule: dict[str, Any],
     recommendation: dict[str, Any],
@@ -1139,7 +2277,7 @@ def _build_briefs(
             brief = dict(manual[lang])
             brief["request"] = _client_request_items(recommendation, structured_values, domain_id, lang)
             brief["source_intro"] = brief.get("law") or _legal_basis(sources, lang)
-            briefs[lang] = brief
+            briefs[lang] = _clean_brief(brief, lang)
             continue
         scope = _public_scope(rule, recommendation, structured_values, lang)
         domain = _domain_label(domain_id, lang)
@@ -1153,7 +2291,7 @@ def _build_briefs(
         else:
             why = {
                 "es": f"Sirve para {why}",
-                "ru": f"Это нужно, чтобы {why}",
+                "ru": f"Цель проверки: {why}",
                 "en": f"It is needed {why}",
             }[lang]
         question = {
@@ -1171,7 +2309,7 @@ def _build_briefs(
             "ru": "Выберите итог, подтвердите поддержку источниками и напишите обязательную правку, если что-то нужно изменить до публикации.",
             "en": "Choose the outcome, confirm source support and write the required fix if anything must change before publication.",
         }[lang]
-        briefs[lang] = {
+        briefs[lang] = _clean_brief({
             "short_title": scope or rule_id,
             "question": question,
             "why": why,
@@ -1181,7 +2319,7 @@ def _build_briefs(
             "boundary": boundary,
             "expected": expected,
             "source_intro": _legal_basis(sources, lang),
-        }
+        }, lang)
     return briefs
 
 
@@ -1277,10 +2415,7 @@ def _build_dataset(data_dir: Path, source_label: str, source_commit: str) -> dic
                         for lang in LANGS
                     },
                     "domain_label": _domain_label(domain_id, "en"),
-                    "scenario": _string(rule.get("scenario")),
                     "priority": rule.get("priority"),
-                    "confidence": rule.get("confidence"),
-                    "gestor_review_state": _string(rule.get("gestor_review_state") or "unreviewed"),
                     "high_stakes": bool(logic.get("high_stakes")),
                     "rule_type": _string(logic.get("rule_type")),
                     "valid_from": _string((rule.get("triggers") or {}).get("period_scope", {}).get("valid_from") or pack.get("valid_from")),
@@ -1333,6 +2468,189 @@ def _build_dataset(data_dir: Path, source_label: str, source_commit: str) -> dic
         },
         "rules": rules,
     }
+
+
+PUBLIC_TEXT_FIELDS = ("short_title", "question", "why", "law", "boundary", "expected", "source_intro")
+COMMON_FORBIDDEN_PUBLIC_PATTERNS = [
+    r"\babolished\b",
+    r"\baccounting\b",
+    r"\baccounts\b",
+    r"\badjustment\b",
+    r"\bappeal\b",
+    r"\battempt\b",
+    r"\bauthorization\b",
+    r"\bbenefit\b",
+    r"\bbonus\b",
+    r"\bbound\b",
+    r"\bcensus\b",
+    r"\bcheck\b",
+    r"\bconfirmation\b",
+    r"\bcoordination\b",
+    r"\bcover\b",
+    r"\bcrypto\b",
+    r"\bcustody\b",
+    r"\bdeduction\b",
+    r"\bdefault\b",
+    r"\bdeferral\b",
+    r"\bdirect\b",
+    r"\bdisputed\b",
+    r"\bdoctrine\b",
+    r"\benough\b",
+    r"\bescalation\b",
+    r"\bestimation\b",
+    r"\bextension\b",
+    r"\bfirst\b",
+    r"\bfortunes\b",
+    r"\bfull\b",
+    r"\bfuture\b",
+    r"\bgap\b",
+    r"\bguide\b",
+    r"\binvestor-route\b",
+    r"\binvestor\b",
+    r"\binstead\b",
+    r"\bintracommunity\b",
+    r"\binvoice\b",
+    r"\bissue\b",
+    r"\blandlord\b",
+    r"\bmainland\b",
+    r"\bmath\b",
+    r"\bmodel\b",
+    r"\bmodalities\b",
+    r"\bmodule\b",
+    r"\bmodules\b",
+    r"\bnear\b",
+    r"\bneeds\b",
+    r"\bnegative\b",
+    r"\bnew\b",
+    r"\bnondeferrable\b",
+    r"\bnotification\b",
+    r"\bobjective\b",
+    r"\bonly\b",
+    r"\border\b",
+    r"\bordinary nonresident\b",
+    r"\bordinary\b",
+    r"\bordinance\b",
+    r"\boutside\b",
+    r"\bpending\b",
+    r"\bperiodicity\b",
+    r"\bper\b",
+    r"\bprescription\b",
+    r"\bprofile\b",
+    r"\breconciliation\b",
+    r"\brefresh\b",
+    r"\brequest\b",
+    r"\brequests\b",
+    r"\brequires\b",
+    r"\breported\b",
+    r"\bsanction\b",
+    r"\bsecurity\b",
+    r"\bspecific\b",
+    r"\bsplit\b",
+    r"\bsubject\b",
+    r"\bswap\b",
+    r"\btable\b",
+    r"\bthresholds\b",
+    r"\btimeline\b",
+    r"\btradeoff\b",
+    r"\bunavailable\b",
+    r"\buser\b",
+    r"\bvalidation\b",
+    r"\bvalid\b",
+    r"\bvehicle\b",
+    r"\bwithout\b",
+    r"\bworkflow\b",
+    r"\bannual total\b",
+    r"\basset category\b",
+    r"\beconomic center\b",
+    r"\bno certificate\b",
+    r"\bpending file\b",
+    r"\bto be filled\b",
+    r"\bvat id\b",
+    r"\bvirtual currency\b",
+]
+FORBIDDEN_PUBLIC_PATTERNS = {
+    "ru": COMMON_FORBIDDEN_PUBLIC_PATTERNS + [
+        r"\bsource_id\b",
+        r"\bgestor_verified\b",
+        r"\bconfidence\b",
+        r"\bunreviewed\b",
+        r"\bwithholding\b",
+        r"\bdeadline\b",
+        r"\bpayment\b",
+        r"\bprocedure\b",
+        r"\bcalendar\b",
+        r"\bcurrent obligations\b",
+        r"\btax residence\b",
+        r"\bfor individuals\b",
+        r"\bposting forms\b",
+        r"\bsource attention\b",
+        r"\bnot final eligibility\b",
+    ],
+    "es": COMMON_FORBIDDEN_PUBLIC_PATTERNS + [
+        r"\bsource_id\b",
+        r"\bgestor_verified\b",
+        r"\bconfidence\b",
+        r"\bunreviewed\b",
+        r"\bwithholding\b",
+        r"\bdeadline\b",
+        r"\bpayment\b",
+        r"\bprocedure\b",
+        r"\bcalendar\b",
+        r"\bcurrent obligations\b",
+        r"\btax residence\b",
+        r"\bfor individuals\b",
+        r"\bposting forms\b",
+        r"\bsource attention\b",
+        r"\bnot final eligibility\b",
+    ],
+}
+
+
+def _public_text_values(rule: dict[str, Any], lang: str) -> list[tuple[str, str]]:
+    values: list[tuple[str, str]] = []
+    brief = (rule.get("briefs") or {}).get(lang) or {}
+    for field in PUBLIC_TEXT_FIELDS:
+        values.append((f"briefs.{lang}.{field}", _string(brief.get(field))))
+    for field in ("verify", "request"):
+        for index, item in enumerate(_as_list(brief.get(field))):
+            values.append((f"briefs.{lang}.{field}[{index}]", _string(item)))
+    for source_index, source in enumerate(_as_list(rule.get("sources"))):
+        public = (source.get("public") or {}).get(lang) or {}
+        for field in ("title", "note", "support"):
+            values.append((f"sources[{source_index}].public.{lang}.{field}", _string(public.get(field))))
+    for risk_index, risk in enumerate(_as_list(rule.get("risk_flags"))):
+        values.append((f"risk_flags[{risk_index}].public.{lang}", _string((risk.get("public") or {}).get(lang))))
+    return values
+
+
+def _validate_dataset(dataset: dict[str, Any]) -> None:
+    errors: list[str] = []
+    rules = _as_list(dataset.get("rules"))
+    if len(rules) != dataset.get("source", {}).get("rule_count"):
+        errors.append("rule_count mismatch")
+    snake_re = re.compile(r"\b[a-z][a-z0-9]+(?:_[a-z0-9]+)+\b")
+    for rule in rules:
+        rule_id = _string(rule.get("rule_id"))
+        for lang in LANGS:
+            brief = (rule.get("briefs") or {}).get(lang) or {}
+            for field in PUBLIC_TEXT_FIELDS:
+                if not _string(brief.get(field)):
+                    errors.append(f"{rule_id}: missing briefs.{lang}.{field}")
+            for field in ("verify", "request"):
+                if not _as_list(brief.get(field)):
+                    errors.append(f"{rule_id}: empty briefs.{lang}.{field}")
+        for lang in ("ru", "es"):
+            for path, text in _public_text_values(rule, lang):
+                if not text:
+                    continue
+                if snake_re.search(text):
+                    errors.append(f"{rule_id}: snake_case in {path}: {text[:120]}")
+                for pattern in FORBIDDEN_PUBLIC_PATTERNS[lang]:
+                    if re.search(pattern, text, flags=re.IGNORECASE):
+                        errors.append(f"{rule_id}: forbidden '{pattern}' in {path}: {text[:120]}")
+    if errors:
+        sample = "\n".join(errors[:30])
+        raise ValueError(f"Pre-Gestor review page public text validation failed ({len(errors)} issues):\n{sample}")
 
 
 def _page_template(dataset_json: str, generated_at: str) -> str:
@@ -1834,7 +3152,7 @@ def _page_template(dataset_json: str, generated_at: str) -> str:
         verified: "Confirmar tal cual", needs_fix: "Confirmar tras corrección", reject: "Rechazar / incorrecto", out_of_scope: "No es mi área", yes: "Sí", partial: "Parcial", no: "No", unclear: "No claro", na: "No aplica",
         saved: "Guardado en este navegador.", exported: "JSON descargado.", imported: "JSON importado.", copied: "Resumen copiado.", noResults: "No hay preguntas con estos filtros.", completeRequired: "Para completar: resultado, fuentes, formulación, territorio/periodo y corrección si hay problema.",
         noFocus: "Revisar hechos, fuentes y condiciones antes de aprobar la tarjeta.", noSources: "No hay fuentes declaradas.", noRisks: "No hay riesgos adicionales declarados.",
-        completedDetail: "1 euro por pregunta completada", sourceStatus: "Estado", support: "Soporte", card: "Tarjeta", period: "Periodo", technicalId: "ID técnico", confidence: "Confianza", reviewState: "Estado interno", sourceAttentionBadge: "Revisar fuente", highStakesBadge: "Riesgo alto", priorityBadge: "Prioridad gestor", unreviewedBadge: "Sin revisar"
+        completedDetail: "1 euro por pregunta completada", sourceStatus: "Estado", support: "Soporte", card: "Tarjeta", period: "Periodo", sourceAttentionBadge: "Revisar fuente", highStakesBadge: "Riesgo alto", priorityBadge: "Prioridad gestor", unreviewedBadge: "Sin revisar"
       }},
       ru: {{
         appTitle: "Экспертная проверка Pre-Gestor", subtitle: "Проверяйте по одному фискальному вопросу. Каждый завершённый вопрос считается как один кредит проверки.",
@@ -1847,7 +3165,7 @@ def _page_template(dataset_json: str, generated_at: str) -> str:
         verified: "Подтвердить как есть", needs_fix: "Подтвердить после правки", reject: "Отклонить / неверно", out_of_scope: "Не моя область", yes: "Да", partial: "Частично", no: "Нет", unclear: "Неясно", na: "Не применимо",
         saved: "Сохранено в этом браузере.", exported: "JSON скачан.", imported: "JSON импортирован.", copied: "Резюме скопировано.", noResults: "Нет вопросов с такими фильтрами.", completeRequired: "Для завершения нужны итог, источники, формулировка, территория/период и правка, если есть проблема.",
         noFocus: "Сверить факты, источники и условия перед одобрением карточки.", noSources: "Источники не указаны.", noRisks: "Дополнительные риски не указаны.",
-        completedDetail: "1 евро за завершённый вопрос", sourceStatus: "Статус", support: "Поддержка", card: "Карточка", period: "Период", technicalId: "Технический ID", confidence: "Уверенность", reviewState: "Внутренний статус", sourceAttentionBadge: "Проверить источник", highStakesBadge: "Высокий риск", priorityBadge: "Приоритет гестора", unreviewedBadge: "Не проверено"
+        completedDetail: "1 евро за завершённый вопрос", sourceStatus: "Статус", support: "Поддержка", card: "Карточка", period: "Период", sourceAttentionBadge: "Проверить источник", highStakesBadge: "Высокий риск", priorityBadge: "Приоритет гестора", unreviewedBadge: "Не проверено"
       }},
       en: {{
         appTitle: "Pre-Gestor Expert Review", subtitle: "Validate one fiscal question at a time. Each completed question counts as one review credit.",
@@ -1860,7 +3178,7 @@ def _page_template(dataset_json: str, generated_at: str) -> str:
         verified: "Confirm as-is", needs_fix: "Confirm after fix", reject: "Reject / incorrect", out_of_scope: "Not my area", yes: "Yes", partial: "Partial", no: "No", unclear: "Unclear", na: "N/A",
         saved: "Saved in this browser.", exported: "JSON downloaded.", imported: "JSON imported.", copied: "Summary copied.", noResults: "No questions match these filters.", completeRequired: "To complete: outcome, sources, wording, territory/period and required fix when there is a problem.",
         noFocus: "Review facts, sources and conditions before approving the card.", noSources: "No sources declared.", noRisks: "No additional risks declared.",
-        completedDetail: "1 euro per completed question", sourceStatus: "Status", support: "Support", card: "Card", period: "Period", technicalId: "Technical ID", confidence: "Confidence", reviewState: "Internal status", sourceAttentionBadge: "Review source", highStakesBadge: "High risk", priorityBadge: "Gestor priority", unreviewedBadge: "Unreviewed"
+        completedDetail: "1 euro per completed question", sourceStatus: "Status", support: "Support", card: "Card", period: "Period", sourceAttentionBadge: "Review source", highStakesBadge: "High risk", priorityBadge: "Gestor priority", unreviewedBadge: "Unreviewed"
       }}
     }};
     const CHOICES = {{
@@ -1924,7 +3242,7 @@ def _page_template(dataset_json: str, generated_at: str) -> str:
         const r = review(rule);
         const b = brief(rule);
         const text = [
-          rule.rule_id, domainLabel(rule), rule.scenario,
+          rule.rule_id, domainLabel(rule),
           b.short_title, b.question, b.why, b.law,
           rule.texts.en.summary, rule.texts.es.summary, rule.texts.ru.summary
         ].join(" ").toLowerCase();
@@ -2015,10 +3333,9 @@ def _page_template(dataset_json: str, generated_at: str) -> str:
       document.getElementById("nextBtn").disabled = current >= visible.length - 1;
     }}
     function badges(rule, r) {{
-      const items = [
-        {{ text: t("unreviewedBadge"), cls: "ok" }},
-        {{ text: rule.valid_from ? `${{t("period")}} ${{rule.valid_from}}${{rule.valid_until ? " → " + rule.valid_until : ""}}` : "", cls: "" }}
-      ];
+      const items = [];
+      if (!r.verdict) items.push({{ text: t("unreviewedBadge"), cls: "ok" }});
+      items.push({{ text: rule.valid_from ? `${{t("period")}} ${{rule.valid_from}}${{rule.valid_until ? " → " + rule.valid_until : ""}}` : "", cls: "" }});
       if (rule.tags.includes("gestor_queue")) items.push({{ text: t("priorityBadge"), cls: "queue" }});
       if (rule.high_stakes) items.push({{ text: t("highStakesBadge"), cls: "high" }});
       if (rule.tags.includes("source_attention")) items.push({{ text: t("sourceAttentionBadge"), cls: "source" }});
@@ -2069,13 +3386,10 @@ def _page_template(dataset_json: str, generated_at: str) -> str:
     }}
     function renderTechnical(rule) {{
       const rows = [
-        [t("technicalId"), rule.rule_id],
-        [t("reviewState"), rule.gestor_review_state],
-        [t("confidence"), rule.confidence],
+        [t("card"), String(rule.index)],
+        ["Dataset", DATASET.dataset_id],
         ["Commit", DATASET.source.commit],
-        ["Pack", rule.pack_file],
-        ["Scenario", rule.scenario],
-        ["Source IDs", (rule.sources || []).map(source => source.source_id).join(", ")]
+        [t("sources"), String((rule.sources || []).length)]
       ];
       document.getElementById("technicalDetails").innerHTML = rows
         .filter(([, value]) => value !== undefined && value !== null && String(value).trim())
@@ -2210,6 +3524,7 @@ def _page_template(dataset_json: str, generated_at: str) -> str:
 
 def build(data_dir: Path, out_path: Path, source_label: str, source_commit: str) -> None:
     dataset = _build_dataset(data_dir, source_label, source_commit)
+    _validate_dataset(dataset)
     generated_at = dataset["generated_at"]
     dataset_json = json.dumps(dataset, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     page = _page_template(dataset_json, generated_at)
