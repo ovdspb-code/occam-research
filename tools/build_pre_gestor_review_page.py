@@ -1861,11 +1861,72 @@ SOURCE_TOKEN_LABELS["ru"].update({
     "vasco": "Vasco",
 })
 
+SOURCE_TITLE_OVERRIDES = {
+    "aeat_is_tax_rates_2026": {
+        "es": "AEAT: Impuesto sobre Sociedades - tipos 2026",
+        "ru": "AEAT: налог на прибыль компаний - ставки 2026",
+    },
+    "aeat_is_payment_modalities": {
+        "es": "AEAT: Impuesto sobre Sociedades - modalidades de pago fraccionado",
+        "ru": "AEAT: налог на прибыль компаний - методы авансового платежа",
+    },
+    "aeat_irnr_sale_real_estate": {
+        "es": "AEAT: IRNR - venta de inmueble en España",
+        "ru": "AEAT: IRNR - продажа недвижимости в Испании",
+    },
+    "boe_tr_litpajd_1993": {
+        "es": "BOE: TR LITPAJD 1993",
+        "ru": "BOE: TR LITPAJD 1993",
+    },
+    "boe_rdl_3_2026_social_security": {
+        "es": "BOE: RDL 3/2026 - medidas de Seguridad Social",
+        "ru": "BOE: RDL 3/2026 - меры по социальному страхованию",
+    },
+    "uge_teletrabajadores_social_security": {
+        "es": "UGE: teletrabajadores - Seguridad Social",
+        "ru": "UGE: удалённые работники - социальное страхование",
+    },
+    "boe_navarra_convenio_iva": {
+        "es": "BOE: Convenio Económico de Navarra - reparto IVA",
+        "ru": "BOE: Convenio Económico de Navarra - распределение IVA",
+    },
+    "navarra_hacienda_iva": {
+        "es": "Hacienda Foral Navarra: IVA",
+        "ru": "Hacienda Foral Navarra: IVA",
+    },
+    "gipuzkoa_ticketbai_orden_foral_608_2021": {
+        "es": "Gipuzkoa: Orden Foral 608/2021 TicketBAI",
+        "ru": "Gipuzkoa: Orden Foral 608/2021 TicketBAI",
+    },
+}
+
+SOURCE_TITLE_POLISH = {
+    "es": [
+        ("TR TR LITPAJD", "TR LITPAJD"),
+        ("social Seguridad Social", "Seguridad Social"),
+        ("inmueble inmobiliario", "inmueble"),
+    ],
+    "ru": [
+        ("TR TR LITPAJD", "TR LITPAJD"),
+        ("социальное социальное страхование", "социальное страхование"),
+        ("недвижимость недвижимость", "недвижимость"),
+    ],
+}
+
+
+def _polish_source_title(title: str, lang: str) -> str:
+    for needle, replacement in SOURCE_TITLE_POLISH.get(lang, []):
+        title = title.replace(needle, replacement)
+    return " ".join(title.split())
+
 
 def _source_public_title(source_id: str, source: dict[str, Any], lang: str) -> str:
     original = _string(source.get("support_anchor") or source.get("title") or source_id)
     if lang == "en":
         return original
+    override = SOURCE_TITLE_OVERRIDES.get(source_id, {}).get(lang)
+    if override:
+        return override
     parts = [part for part in source_id.split("_") if part]
     prefix = SOURCE_PREFIX_LABELS.get(parts[0], parts[0].upper() if parts else "")
     body = parts[1:] if parts and parts[0] in SOURCE_PREFIX_LABELS else parts
@@ -1907,7 +1968,7 @@ def _source_public_title(source_id: str, source: dict[str, Any], lang: str) -> s
             rendered.append(low)
             continue
         rendered.append(labels.get(low, low.replace("-", " ")))
-    title = " ".join(rendered).strip()
+    title = _polish_source_title(" ".join(rendered).strip(), lang)
     if not title:
         return original
     return f"{prefix}: {title}" if prefix else title
