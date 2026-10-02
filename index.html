@@ -146,6 +146,15 @@
       </div>
     </div>
   </div>
+  <div class="pub-item" style="margin-top:var(--space-5)">
+    <span class="pub-tag software">Technical note · 2026</span>
+    <div class="pub-title">Verace: A Deterministic Conflict Detection Pipeline Architecture for Enterprise Knowledge Bases</div>
+    <div class="pub-meta">Oleg Dolgikh · v1.1 · DOI 10.5281/zenodo.19402813</div>
+    <div class="pub-links">
+      <a href="https://zenodo.org/records/19402813" target="_blank" rel="noopener noreferrer">Technical note</a>
+      <a href="https://doi.org/10.5281/zenodo.19402813" target="_blank" rel="noopener noreferrer">Version DOI</a>
+    </div>
+  </div>
 </section>
 
 <!-- OPEN RESOURCES -->
@@ -254,7 +263,7 @@ fetch('pages.json').then(r=>r.json()).then(pages => {
 });
 
 // ===== PUBLICATIONS from publications.json =====
-fetch('publications.json?v=2026-10-02-r2').then(r=>r.json()).then(data => {
+fetch('publications.json?v=2026-10-02-r3').then(r=>r.json()).then(data => {
   const meta = document.querySelector('.pubs-meta');
   meta.textContent = `Updated ${data.updated} · ${data.publications.length} works · Source: ${data.source}`;
   const list = document.getElementById('pubsList');
@@ -287,7 +296,7 @@ fetch('publications.json?v=2026-10-02-r2').then(r=>r.json()).then(data => {
       tagCls = statusLabels[pub.status].cls;
       tagLabel = statusLabels[pub.status].label;
     } else if (pub.type === 'preprint') {
-      const st = { label: 'Preprint', cls: 'preprint' };
+      const st = { label: pub.historical ? 'Historical preprint' : 'Preprint', cls: 'preprint' };
       tagCls = st.cls; tagLabel = st.label;
     } else {
       tagCls = typeLabels[pub.type] || pub.type || 'preprint';
@@ -326,14 +335,14 @@ fetch('publications.json?v=2026-10-02-r2').then(r=>r.json()).then(data => {
 });
 
 // ===== DUELLUM VERITATIS from disputes.json =====
-fetch('disputes.json').then(r=>r.json()).then(data => {
+fetch('disputes.json?v=2026-10-02-r2').then(r=>r.json()).then(data => {
   const sec = document.getElementById('disputesSection');
   if(!sec) return;
   const meta = sec.querySelector('.disputes-meta');
   const n = data.disputes.length;
   if(meta){
     let m = `${data.subtitle} · ${n} digest${n===1?'':'s'} · Updated ${data.updated}`;
-    if(data.doi) m += ` · DOI: `;
+    if(data.doi) m += ` · ${data.doi_label || 'DOI'}: `;
     meta.textContent = m;
     if(data.doi){
       const a = document.createElement('a');
@@ -348,7 +357,8 @@ fetch('disputes.json').then(r=>r.json()).then(data => {
   [...data.disputes].sort((a,b)=>b.date.localeCompare(a.date)).forEach(d => {
     const links = [];
     links.push(`<a href="${d.html}">Read</a>`);
-    if(d.pdf) links.push(`<a href="${d.pdf}" target="_blank" rel="noopener noreferrer">PDF</a>`);
+    if(d.pdf) links.push(`<a href="${d.pdf}" target="_blank" rel="noopener noreferrer">${d.archived_pdf ? "Website PDF" : "PDF"}</a>`);
+    if(d.archived_pdf) links.push(`<a href="${d.archived_pdf}" target="_blank" rel="noopener noreferrer">Archived PDF</a>`);
     if(d.doi) links.push(`<a href="https://doi.org/${d.doi}" target="_blank" rel="noopener noreferrer">DOI</a>`);
     const el = document.createElement('div');
     el.className = 'pub-item';

@@ -41,7 +41,8 @@
         "arbiter_report": "disputes/2026-06-13-a-conveyor-running-empty.arbiter_report.json",
         "evidence_task": "disputes/2026-06-13-a-conveyor-running-empty.evidence_task.json",
         "order_swap_audit": "disputes/2026-06-13-a-conveyor-running-empty.order_swap_audit.json"
-      }
+      },
+      "archived_pdf": "https://zenodo.org/api/records/20679393/files/2026-06-13-a-conveyor-running-empty.pdf/content"
     },
     {
       "id": "2026-06-12-controllable-or-well-connected",
@@ -60,7 +61,6 @@
       ],
       "html": "disputes/2026-06-12-controllable-or-well-connected.html",
       "pdf": "disputes/2026-06-12-controllable-or-well-connected.pdf",
-      "doi": "10.5281/zenodo.20528909",
       "outcome": "CON",
       "basis": "real_compute",
       "claim_type": "numeric",
@@ -120,7 +120,8 @@
         "arbiter_report": "disputes/2026-06-11-avalanche-power-law-false-positive-criticality.arbiter_report.json",
         "evidence_task": "disputes/2026-06-11-avalanche-power-law-false-positive-criticality.evidence_task.json",
         "order_swap_audit": "disputes/2026-06-11-avalanche-power-law-false-positive-criticality.order_swap_audit.json"
-      }
+      },
+      "archived_pdf": "https://zenodo.org/api/records/20639140/files/2026-06-11-avalanche-power-law-false-positive-criticality.pdf/content"
     },
     {
       "id": "2026-06-09-coskewness-leakage-sparse-limit-duellum",
@@ -158,7 +159,8 @@
         "arbiter_report": "disputes/2026-06-09-coskewness-leakage-sparse-limit-duellum.arbiter_report.json",
         "evidence_task": "disputes/2026-06-09-coskewness-leakage-sparse-limit-duellum.evidence_task.json",
         "order_swap_audit": "disputes/2026-06-09-coskewness-leakage-sparse-limit-duellum.order_swap_audit.json"
-      }
+      },
+      "archived_pdf": "https://zenodo.org/api/records/20626415/files/2026-06-09-coskewness-leakage-sparse-limit-duellum.pdf/content"
     },
     {
       "id": "2026-06-08-neural-chaos-vs-stable-chains",
@@ -197,7 +199,8 @@
         "arbiter_report": "disputes/2026-06-08-neural-chaos-vs-stable-chains.arbiter_report.json",
         "evidence_task": "disputes/2026-06-08-neural-chaos-vs-stable-chains.evidence_task.json",
         "order_swap_audit": "disputes/2026-06-08-neural-chaos-vs-stable-chains.order_swap_audit.json"
-      }
+      },
+      "archived_pdf": "https://zenodo.org/api/records/20591402/files/2026-06-08-neural-chaos-vs-stable-chains.pdf/content"
     },
     {
       "id": "2026-06-07-two-roads-to-one-number",
@@ -230,7 +233,8 @@
         "arbiter_report": "disputes/2026-06-07-two-roads-to-one-number.arbiter_report.json",
         "evidence_task": "disputes/2026-06-07-two-roads-to-one-number.evidence_task.json",
         "order_swap_audit": "disputes/2026-06-07-two-roads-to-one-number.order_swap_audit.json"
-      }
+      },
+      "archived_pdf": "https://zenodo.org/api/records/20582447/files/2026-06-07-two-roads-to-one-number.pdf/content"
     },
     {
       "id": "2026-06-06-a-ghost-made-of-timing",
@@ -262,7 +266,8 @@
         "arbiter_report": "disputes/2026-06-06-a-ghost-made-of-timing.arbiter_report.json",
         "evidence_task": "disputes/2026-06-06-a-ghost-made-of-timing.evidence_task.json",
         "order_swap_audit": "disputes/2026-06-06-a-ghost-made-of-timing.order_swap_audit.json"
-      }
+      },
+      "archived_pdf": "https://zenodo.org/api/records/20582445/files/2026-06-06-a-ghost-made-of-timing.pdf/content"
     },
     {
       "id": "2026-06-04-the-shrinking-yardstick",
@@ -289,7 +294,8 @@
       "confidence": null,
       "arbitration_status": "NOT_RUN",
       "protocol_status": "PARTIAL",
-      "prior_work_check": "not_applicable"
+      "prior_work_check": "not_applicable",
+      "archived_pdf": "https://zenodo.org/api/records/20626412/files/2026-06-04-the-shrinking-yardstick.pdf/content"
     },
     {
       "id": "2026-06-03-two-choirs-in-the-dark",
@@ -313,7 +319,9 @@
       "confidence": null,
       "arbitration_status": "NOT_RUN",
       "protocol_status": "PARTIAL",
-      "prior_work_check": "not_applicable"
+      "prior_work_check": "not_applicable",
+      "archived_pdf": "https://zenodo.org/api/records/20626404/files/2026-06-03-two-choirs-in-the-dark.pdf/content"
     }
-  ]
+  ],
+  "doi_label": "Founding digest archive"
 }

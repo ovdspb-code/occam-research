@@ -27,11 +27,16 @@
     },
     {
       "title": "Verace: A Deterministic Conflict Detection Pipeline Architecture for Enterprise Knowledge Bases",
-      "doi": "10.5281/zenodo.19402811",
-      "type": "preprint",
+      "doi": "10.5281/zenodo.19402813",
+      "type": "report",
       "source": "orcid",
       "added": "2026-04-04",
-      "date": "2026-04-03"
+      "date": "2026-04-03",
+      "status": "published",
+      "venue": "Technical note · v1.1",
+      "links": {
+        "zenodo": "https://zenodo.org/records/19402813"
+      }
     },
     {
       "title": "Parameter A as a Motif-Scale Transport Coordinate: Target Vulnerability and Central-Path Modulation on Human Routing Motifs",
@@ -115,7 +120,8 @@
         "https://doi.org/10.5281/zenodo.18133404",
         "https://zenodo.org/records/18133404",
         "https://doi.org/10.5281/zenodo.18133403"
-      ]
+      ],
+      "historical": true
     },
     {
       "id": "lindblad-preprint",
@@ -130,7 +136,8 @@
       "links": {
         "zenodo": "https://doi.org/10.5281/zenodo.18189550",
         "researchgate": "https://www.researchgate.net/publication/399528998"
-      }
+      },
+      "historical": true
     },
     {
       "id": "crn-sim",
@@ -160,7 +167,8 @@
       "links": {
         "zenodo": "https://doi.org/10.5281/zenodo.18249250",
         "researchgate": "https://www.researchgate.net/publication/399867871"
-      }
+      },
+      "historical": true
     },
     {
       "id": "crn-sim-r12",
