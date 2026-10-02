@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-03",
-  "source": "ORCID 0009-0008-0159-1718 + manual curation",
+  "updated": "2026-10-02",
+  "source": "Curated publication records and verified DOI metadata",
   "publications": [
     {
       "title": "Coherent-resonant netting: disorder-enhanced selectivity from transient wave-like dynamics on biological connectomes",
@@ -13,8 +13,14 @@
         "Oleg Dolgikh"
       ],
       "links": [
-        { "label": "Frontiers", "url": "https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1813959/full" },
-        { "label": "DOI", "url": "https://doi.org/10.3389/fncom.2026.1813959" }
+        {
+          "label": "Frontiers",
+          "url": "https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1813959/full"
+        },
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.3389/fncom.2026.1813959"
+        }
       ],
       "source": "manual",
       "added": "2026-06-03"
@@ -24,7 +30,8 @@
       "doi": "10.5281/zenodo.19402811",
       "type": "preprint",
       "source": "orcid",
-      "added": "2026-04-04"
+      "added": "2026-04-04",
+      "date": "2026-04-03"
     },
     {
       "title": "Parameter A as a Motif-Scale Transport Coordinate: Target Vulnerability and Central-Path Modulation on Human Routing Motifs",
@@ -34,27 +41,32 @@
       "authors": [
         "Oleg Dolgikh"
       ],
-      "source": "ORCID"
+      "source": "ORCID",
+      "date": "2026-03-30"
     },
     {
       "title": "Parameter A as a Motif-Scale Transport Coordinate: Target Vulnerability and Central-Path Modulation on Human Routing Motifs",
       "doi": "10.5281/zenodo.19331897",
-      "type": "preprint",
+      "type": "dataset",
       "year": null,
       "authors": [
         "Oleg Dolgikh"
       ],
-      "source": "ORCID"
+      "source": "ORCID",
+      "status": "published",
+      "date": "2026-03-30"
     },
     {
-      "title": "Entropy-Informed Coherence Costs on Connectome Routing Motifs: A Markovian Reference Surface for Dephasing-Assisted Transport",
+      "title": "CRN Paper 3 — Companion Dataset (v2): Coherence-Cost Landscape for Dephasing-Assisted Transport on Connectome Routing Motifs",
       "doi": "10.5281/zenodo.19340280",
-      "type": "preprint",
+      "type": "dataset",
       "year": null,
       "authors": [
         "Oleg Dolgikh"
       ],
-      "source": "ORCID"
+      "source": "ORCID",
+      "status": "published",
+      "metadata_date_under_review": true
     },
     {
       "id": "crn-ssrn",
@@ -225,12 +237,11 @@
     {
       "id": "icc-paper",
       "type": "preprint",
-      "status": "under_review",
+      "status": "preprint",
       "title": "Hidden Pseudoreplication in Disorder-Averaged Transport Simulations on Parcellated Connectomes",
       "short": "ICC Paper",
       "authors": "O. Dolgikh",
       "date": "2026-02-07",
-      "venue": "NBDT (Neurons, Behavior, Data and Theory)",
       "doi": "10.5281/zenodo.18520884",
       "links": {
         "zenodo": "https://doi.org/10.5281/zenodo.18520884",
@@ -398,7 +409,43 @@
     },
     {
       "title": "From Whole-Brain Nulls to Motif-Scale Mechanisms: Structural Regimes of Coherent Transport Advantage in Human Connectomes",
-      "doi": "10.5281/zenodo.19222236"
+      "doi": "10.5281/zenodo.19222236",
+      "type": "preprint",
+      "date": "2026-03-25"
+    },
+    {
+      "id": "sfp-sci006b",
+      "title": "Certificates of Joint Training and Learnability Preservation in Resistive Networks",
+      "doi": "10.5281/zenodo.23080791",
+      "type": "preprint",
+      "status": "preprint",
+      "date": "2026-10-01",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "version": "0.3",
+      "links": {
+        "zenodo": "https://zenodo.org/records/23080791",
+        "overview": "https://occam.world/works/joint-training-learnability.html"
+      },
+      "source": "verified Zenodo API"
+    },
+    {
+      "id": "vcs-core",
+      "title": "Structural Safety of Local Physical Learning: Initial-data certificates, topology-changing convergence, and boundary-response stability in resistor networks",
+      "doi": "10.5281/zenodo.23032195",
+      "type": "preprint",
+      "status": "preprint",
+      "date": "2026-09-29",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "version": "0.2.1",
+      "links": {
+        "zenodo": "https://zenodo.org/records/23032195",
+        "overview": "https://occam.world/works/structural-safety.html"
+      },
+      "source": "verified Zenodo API"
     }
   ]
 }

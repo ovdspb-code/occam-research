@@ -59,6 +59,15 @@
   </div>
 </div>
 
+<section class="section reveal" id="researchDirections">
+  <h2>Current research</h2>
+  <div class="card-grid" style="margin-top:var(--space-6)">
+    <div class="card static"><h3>Transport and computation</h3><p>CRN studies how topology, disorder and readout shape transport on biological connectomes. The Frontiers article is peer-reviewed; supporting preprints and datasets are identified separately.</p><a href="https://doi.org/10.3389/fncom.2026.1813959">Journal article</a></div>
+    <div class="card static"><h3>Structural safety of learning</h3><p>When can local physical learning preserve the conducting structure required by its own task? VCS gives sufficient certificates within a stated resistor-network model.</p><a href="https://doi.org/10.5281/zenodo.23032195">VCS preprint v0.2.1</a></div>
+    <div class="card static"><h3>Learning and learnability</h3><p>Recent work gives sufficient certificates for joint voltage training and preservation of learnability. Assumptions, admissible targets and limitations are stated explicitly.</p><a href="https://doi.org/10.5281/zenodo.23080791">SCI-006B preprint v0.3</a></div>
+  </div>
+</section>
+
 <!-- APPROACH -->
 <section class="section reveal">
   <h2>How the work goes</h2>
@@ -106,7 +115,8 @@
 
 <!-- SCORECARD -->
 <section class="scorecard section reveal" id="scorecardSection">
-  <h2>Evidence Scorecard</h2>
+  <h2>Historical CRN scorecard</h2>
+  <p>This is the March 2026 working assessment, preserved for provenance. Its scores are internal assessments, not probabilities, independent peer-review ratings, or the current status of every research claim. Consult the dated publications for their stated findings and limitations.</p>
   <p class="scorecard-meta">Loading scorecard…</p>
   <div id="scorecardGrid"></div>
 </section>
@@ -114,6 +124,7 @@
 <!-- PUBLICATIONS (loaded dynamically from publications.json) -->
 <section class="section reveal" id="pubsSection">
   <h2>Publications &amp; Data</h2>
+  <p>Recent preprints: <a href="works/structural-safety.html">Structural Safety</a> · <a href="works/joint-training-learnability.html">Joint Training and Learnability Preservation</a></p>
   <p class="pubs-meta" style="font-size:var(--text-xs);color:var(--text-3);margin-bottom:var(--space-4)">Loading publications…</p>
   <div class="pub-list" id="pubsList"></div>
 </section>
@@ -167,7 +178,7 @@
     <div>
       <h3 class="pi-info" style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;margin-bottom:2px">Oleg Dolgikh</h3>
       <div class="pi-role">Independent Researcher · Occam Research</div>
-      <p class="pi-bio">Background in applied optimization and distributed systems (20+ years). Since 2020, in independent research — open quantum-systems formalisms, spectral graph theory, and thermodynamics of computation applied to biological networks, and increasingly to whichever decidable question across the sciences is worth the hunt.</p>
+      <p class="pi-bio">Oleg Dolgikh is an independent researcher working on computation, transport, and learning in networks. His research spans computational neuroscience, open-system models of biological connectomes, and mathematical guarantees for local physical learning. Through Occam Research, he shares research with explicit assumptions, reproducible materials, and clear limits on each claim.</p>
       <div class="contact-row">
         <div><div class="label">Location</div>Sant Cugat del Vallès, Barcelona</div>
         <div><div class="label">Affiliation</div>Occam Research</div>
@@ -271,7 +282,7 @@ fetch('publications.json').then(r=>r.json()).then(data => {
       tagCls = statusLabels[pub.status].cls;
       tagLabel = statusLabels[pub.status].label;
     } else if (pub.type === 'preprint') {
-      const st = statusLabels[pub.status] || { label: 'Preprint', cls: 'preprint' };
+      const st = { label: 'Preprint', cls: 'preprint' };
       tagCls = st.cls; tagLabel = st.label;
     } else {
       tagCls = typeLabels[pub.type] || pub.type || 'preprint';

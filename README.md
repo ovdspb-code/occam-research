@@ -1,8 +1,12 @@
-# CRN Interactive — Occam Research
+# Occam Research — research portfolio and CRN companions
 
-Interactive visualizations of **Coherent Resonant Netting** dynamics across biological connectomes.
+Public research portfolio of Oleg Dolgikh / Occam Research: publications, preprints, reproducible resources, and interactive companions for **Coherent Resonant Netting**.
 
-🌐 **Live site:** [GitHub Pages link]
+**Live site:** https://occam.world
+
+**Author:** Oleg Dolgikh · Independent Researcher · [ORCID](https://orcid.org/0009-0008-0159-1718)
+
+The catalogue distinguishes journal articles, preprints, datasets, software, and explanatory materials. Publication on an archive does not imply journal peer review.
 
 ## Pages
 
@@ -10,8 +14,8 @@ Interactive visualizations of **Coherent Resonant Netting** dynamics across biol
 |---|---|---|
 | 🧠 Human | Basal ganglia (T2) / Motor relay (T3) | ✅ Live |
 | 🪰 Drosophila | Mushroom body (PN→KC→MBON) | ✅ Live |
-| 🪱 C. elegans | Touch circuit | 🔜 Coming |
-| 🐭 Mouse | Cortex proxy | 🔜 Coming |
+| 🪱 C. elegans | Touch circuit | [Page](https://occam.world/elegans.html) |
+| 🐭 Mouse | Synthetic cortex proxy | [Page](https://occam.world/mouse.html) |
 
 ## Adding a new page
 
@@ -31,6 +35,8 @@ Quick summary:
 - Works offline, deploys to any static host
 
 ## References
+
+- Dolgikh (2026). *Coherent-resonant netting: disorder-enhanced selectivity from transient wave-like dynamics on biological connectomes.* Frontiers in Computational Neuroscience. [doi:10.3389/fncom.2026.1813959](https://doi.org/10.3389/fncom.2026.1813959)
 
 - Dolgikh (2026). *CRN Framework.* [doi:10.5281/zenodo.18249250](https://doi.org/10.5281/zenodo.18249250)
 - [CRN Simulation Code](https://github.com/ovdspb-code/CRN_4.1)
