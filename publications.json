@@ -159,7 +159,6 @@
       "doi": "10.5281/zenodo.18249250",
       "links": {
         "zenodo": "https://doi.org/10.5281/zenodo.18249250",
-        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6150569",
         "researchgate": "https://www.researchgate.net/publication/399867871"
       }
     },
@@ -408,10 +407,15 @@
       ]
     },
     {
-      "title": "From Whole-Brain Nulls to Motif-Scale Mechanisms: Structural Regimes of Coherent Transport Advantage in Human Connectomes",
-      "doi": "10.5281/zenodo.19222236",
+      "title": "Coherent Transport Advantage in Human Connectomes Re-emerges on Routing Motifs but Not at Whole-Brain Scale",
+      "doi": "10.5281/zenodo.19222237",
       "type": "preprint",
-      "date": "2026-03-25"
+      "date": "2026-03-25",
+      "authors": "Oleg Dolgikh",
+      "links": {
+        "zenodo": "https://zenodo.org/records/19222237",
+        "researchgate": "https://www.researchgate.net/publication/403296918"
+      }
     },
     {
       "id": "sfp-sci006b",

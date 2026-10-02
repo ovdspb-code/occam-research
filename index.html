@@ -254,7 +254,7 @@ fetch('pages.json').then(r=>r.json()).then(pages => {
 });
 
 // ===== PUBLICATIONS from publications.json =====
-fetch('publications.json?v=2026-10-02').then(r=>r.json()).then(data => {
+fetch('publications.json?v=2026-10-02-r2').then(r=>r.json()).then(data => {
   const meta = document.querySelector('.pubs-meta');
   meta.textContent = `Updated ${data.updated} · ${data.publications.length} works · Source: ${data.source}`;
   const list = document.getElementById('pubsList');
