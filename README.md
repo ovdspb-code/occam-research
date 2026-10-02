@@ -6,6 +6,8 @@ Public research portfolio of Oleg Dolgikh / Occam Research: publications, prepri
 
 **Author:** Oleg Dolgikh · Independent Researcher · [ORCID](https://orcid.org/0009-0008-0159-1718)
 
+**Bibliography:** [Google Scholar](https://scholar.google.com/citations?user=6wxP_EkAAAAJ&hl=en). The owner profile was verified on 2026-10-02; profile entries and search indexing are separate states.
+
 The catalogue distinguishes journal articles, preprints, datasets, software, and explanatory materials. Publication on an archive does not imply journal peer review.
 
 ## Pages
