@@ -308,6 +308,18 @@
       "sha256": "df2bd57d195704cb058099218cd8d9b97acf3c6f18536873ecfd2392a8d1c098",
       "lines": 59
     },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/03_loading.tex": {
+      "sha256": "351b75bdb0fbd6556e38b69bb83d46f9228a15a155aad707610105b5df1098db",
+      "lines": 104
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Атлас SFP/Критерий компенсации — результат.md": {
+      "sha256": "9a6755fda4a87e59d8b387f483d17f40671cd5058ffa0d8553562f70a7736423",
+      "lines": 112
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Критерий компенсации — этап 2/Вывод критерия.md": {
+      "sha256": "5d2fd5f1e0d064c5fda7960f4aacfc957e3ed590423a2dd958afda49e019dfcc",
+      "lines": 159
+    },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
       "lines": 128
@@ -315,6 +327,14 @@
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CROSS_SYNTHESIS_20261103/SYNTHESIS_RU.md": {
       "sha256": "cdf00b9902bc6a630ce9438505f3845184b0e02866b59f37e692699f35730ed5",
       "lines": 239
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/04_transfer.tex": {
+      "sha256": "2bf85815f2b0e1c796aeb1fe98f594038c242973dee446932b3c8a401a85c7b7",
+      "lines": 136
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/06_endpoint.tex": {
+      "sha256": "7d08cf482b9e1dd1c3e2b71fbe12f0a7235f8a2bf0bb079b819d492a68fe324f",
+      "lines": 106
     }
   },
   "sources_read": [
@@ -743,6 +763,36 @@
       "coverage": "full",
       "notes": "Прочитаны формулировка, доказательство и границы, строки 1–59; источник узла — сама научная записка.",
       "sha256": "df2bd57d195704cb058099218cd8d9b97acf3c6f18536873ecfd2392a8d1c098"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Атлас SFP/Критерий компенсации — результат.md",
+      "coverage": "sections",
+      "notes": "Адресно сверены диапазоны, указанные в узлах и связях этапа 2; не полный повторный аудит работы.",
+      "sha256": "9a6755fda4a87e59d8b387f483d17f40671cd5058ffa0d8553562f70a7736423"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Критерий компенсации — этап 2/Вывод критерия.md",
+      "coverage": "sections",
+      "notes": "Адресно сверены диапазоны, указанные в узлах и связях этапа 2; не полный повторный аудит работы.",
+      "sha256": "5d2fd5f1e0d064c5fda7960f4aacfc957e3ed590423a2dd958afda49e019dfcc"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/03_loading.tex",
+      "coverage": "sections",
+      "notes": "Адресно сверены диапазоны, указанные в узлах и связях этапа 2; не полный повторный аудит работы.",
+      "sha256": "351b75bdb0fbd6556e38b69bb83d46f9228a15a155aad707610105b5df1098db"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/04_transfer.tex",
+      "coverage": "sections",
+      "notes": "Адресно сверены диапазоны, указанные в узлах и связях этапа 2; не полный повторный аудит работы.",
+      "sha256": "2bf85815f2b0e1c796aeb1fe98f594038c242973dee446932b3c8a401a85c7b7"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/06_endpoint.tex",
+      "coverage": "sections",
+      "notes": "Адресно сверены диапазоны, указанные в узлах и связях этапа 2; не полный повторный аудит работы.",
+      "sha256": "7d08cf482b9e1dd1c3e2b71fbe12f0a7235f8a2bf0bb079b819d492a68fe324f"
     }
   ],
   "exclusions": [

@@ -2,6 +2,22 @@
   "method": "Graphify cluster / score_all on source-extracted links only; undirected analysis; NOT a theorem or novelty score",
   "communities": {
     "0": [
+      "m05_closure_null",
+      "m05_finite_history",
+      "m05_future_equivalence",
+      "m05_history_action",
+      "m05_metric_sign",
+      "m05_reversal_parity",
+      "m07_family_weak_benefit",
+      "m07_matrix_programming",
+      "m08_cost_crossover",
+      "m08_equal_response_different_price",
+      "m08_prefix_transfer",
+      "stage1_natural_balance_no_dominance",
+      "stage2_common_criterion_gap",
+      "stage2_loading_balance_exchange"
+    ],
+    "1": [
       "context_equivalence_failure",
       "cumulative_old_coordinates",
       "deficit_safety_failure",
@@ -15,44 +31,30 @@
       "static_joint_goal_unreachable",
       "weak_load_nonvanishing_time"
     ],
-    "1": [
-      "m05_closure_null",
-      "m05_finite_history",
-      "m05_future_equivalence",
-      "m05_history_action",
-      "m05_metric_sign",
-      "m05_reversal_parity",
-      "m07_family_weak_benefit",
-      "m07_matrix_programming",
-      "m08_cost_crossover",
-      "m08_equal_response_different_price",
-      "m08_prefix_transfer",
-      "stage1_natural_balance_no_dominance"
-    ],
     "2": [
-      "compression_hard_boundary",
-      "finite_diagnostic_code",
+      "active_physical_reduction",
+      "conditional_closure",
+      "history_cost_transfer",
       "inherited_port_execution",
       "loaded_hold_failure",
       "m10_mobility_defect",
       "m10_paid_repeated_reduction",
       "m10_stagewise_error",
       "m10_two_readings",
-      "mixed_sensor_two_reads",
       "moving_neighbor_synthesis",
-      "nonlinear_interval_memory"
+      "port_jet_composition"
     ],
     "3": [
-      "active_physical_reduction",
       "bracket_two_three",
-      "conditional_closure",
+      "compression_hard_boundary",
       "exact_information_factor",
+      "finite_diagnostic_code",
       "hidden_guards_obstruction",
-      "history_cost_transfer",
+      "mixed_sensor_two_reads",
       "no_order_ceiling",
       "noise_information_price",
-      "nonlinear_quartic",
-      "port_jet_composition"
+      "nonlinear_interval_memory",
+      "nonlinear_quartic"
     ],
     "4": [
       "aq_balance_not_kinetics",
@@ -194,10 +196,10 @@
     ]
   },
   "cohesion": {
-    "0": 0.16666666666666666,
+    "0": 0.14285714285714285,
     "1": 0.16666666666666666,
-    "2": 0.18181818181818182,
-    "3": 0.2222222222222222,
+    "2": 0.2,
+    "3": 0.2,
     "4": 0.2857142857142857,
     "5": 0.2857142857142857,
     "6": 0.5,
