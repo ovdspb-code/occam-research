@@ -1,0 +1,772 @@
+{
+  "cited_files": {
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m01/SFP-M01_v2.1.tex": {
+      "sha256": "e8263d3aa536649af02b20a9824ed50b7093010b31b2a895c275de063e712b42",
+      "lines": 986
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m02/SFP-M02_v0.5.tex": {
+      "sha256": "6767c55a1112d2ecb98041b332f3b924fc349fc45c5d21bbad715dacb2cf5c86",
+      "lines": 1172
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m03/SFP-M03_v0.3.tex": {
+      "sha256": "837585a3ffdf685d653d9ced342c414bed113b4df604c4799b4bfccb8bab194f",
+      "lines": 902
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m04/SFP-M04_v0.2.tex": {
+      "sha256": "cbe660d0ffe2f1cd82881018cd46b1ec95a60c7c3c867c8160427df4fb0588d2",
+      "lines": 335
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/mechanism.tex": {
+      "sha256": "5bee4b307ddd0f2be5b79fbd7d098ce82048a6faa531acd5931013476cd4b051",
+      "lines": 63
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/equivalence.tex": {
+      "sha256": "558d281c6040408fc8f8a1e64e97e7a33c1561e6f496be040055bf7db9aa6815",
+      "lines": 64
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/parity_theorem.tex": {
+      "sha256": "6522776d1636646d97e5cfab91b948775afa03694f91e7d7ed990d4f7cb9a7fb",
+      "lines": 100
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/metric_prediction.tex": {
+      "sha256": "c76777a100e5988ad6a6acc58f183efaf436becf54c6fbd925df5b2fd89df504",
+      "lines": 88
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/neural.tex": {
+      "sha256": "d3bfd24b93053265594e4068d714a69a09a22935c710f6d8f5468e9cd3cca6a9",
+      "lines": 61
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m06/sections/02_model.tex": {
+      "sha256": "01395d72c13e7d84b66c196eacdbf820c7ac4b6a1e228f0cdc45f739d1ee7efb",
+      "lines": 99
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m06/sections/03_results.tex": {
+      "sha256": "eabc8b8a1a8b5c2217234d63c1c13f3dfbba2bee07c9fc12d53350e08d2aa831",
+      "lines": 34
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m06/sections/04_sensitivity.tex": {
+      "sha256": "c103da81714fae14ab055d14754fc85f4fe30751cd0aced152bb0850674ec57d",
+      "lines": 69
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/02_model_results.tex": {
+      "sha256": "313c02e6709de8f5ab2af6a74b3814378e79f0fa9c1215dd3fa4c932de09cd7f",
+      "lines": 107
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PLASTICITY_COST_CLASSES_20261101/PREPRINT_READY_v0_2/manuscript/model.tex": {
+      "sha256": "a48165fba4aff31376821719e98d7b61bb6591bef736b01b6dc08e29ac7e72b4",
+      "lines": 84
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PLASTICITY_COST_CLASSES_20261101/PREPRINT_READY_v0_2/manuscript/cost.tex": {
+      "sha256": "997eb623e6790a430b316cef1ec9afe48bd6b7cc9a7e5a274653655398752cd2",
+      "lines": 96
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SFP_M09_OBSERVATION_ACCESS_20261102/SICON_SUBMISSION_PREPARATION_20261102/SOURCE/manuscript/main_result.tex": {
+      "sha256": "35d4b718b0239b5f153f39147ba4e917e1c57b78520e1e21be78644000223149",
+      "lines": 61
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SFP_M09_OBSERVATION_ACCESS_20261102/SICON_SUBMISSION_PREPARATION_20261102/SOURCE/manuscript/conditions.tex": {
+      "sha256": "9680053362d07d868351998fc5c57bfec72ac4811e6f4eaf2b55d0b415a5143f",
+      "lines": 83
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m10/sections/04_ports.tex": {
+      "sha256": "9b0f6de8becdd9ce9a10fc1b716b31805dc9820986bfa4af35714ead2e4bd573",
+      "lines": 169
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m10/sections/05_composition.tex": {
+      "sha256": "05812ee6399530f786dcbe799062c65141a27bc008b566cc75c8cfe095b601a4",
+      "lines": 131
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/RECURSIVE_AND_LOADED_20261103/SYNTHESIS_RU.md": {
+      "sha256": "4e92b3fa985951be90e5f9f211d533e28e611691e96b64ca1b95a26280456f73",
+      "lines": 214
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m10/sections/06_lower_limits.tex": {
+      "sha256": "01a37f359d3b5cd0350b4d3e2de74fe5cbebbd9dfeb912adede043462011737a",
+      "lines": 169
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMPOSITION_REDUCTION_20261102/composition/CR_C3_RU.md": {
+      "sha256": "23e01975eb96fb2ff2a8e1a78d8bca9f771c867de80055ac29340e639381f0bc",
+      "lines": 151
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_REDUCTION_20261102/construction/FR_C2_RU.md": {
+      "sha256": "58fbf114633d7067000eeeb614d00a805631f52d3dafdcca1d3c6358e97076b9",
+      "lines": 131
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/MINIMUM_RESOURCE_20261102/SYNTHESIS_RU.md": {
+      "sha256": "d568eef29e02566e815d1a5172df0570f09497686279b89315281a4413dd5162",
+      "lines": 153
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/STRUCTURAL_CRITERION_20261102/SYNTHESIS_RU.md": {
+      "sha256": "ca5d6f4729c819f407a7ccf285939e32e20bae5549e38d4be01367eba12c79fa",
+      "lines": 227
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/NONLINEAR_CRITERION_20261102/SYNTHESIS_RU.md": {
+      "sha256": "ef4043fde8d345fca2934c7117416d0e431cc81bfb9335158eb2eb8e5bd95f5f",
+      "lines": 225
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/NONLINEAR_CRITERION_20261102/bounds/NC_ORDER_LIMIT_CHECK_RU.md": {
+      "sha256": "850f73d02c9a6abe961cc591491c00e0032bada40efb349bd3c66883b4a88caa",
+      "lines": 93
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/GEOMETRIC_RULE_20261102/SYNTHESIS_RU.md": {
+      "sha256": "3949c22b698afa09d3bfca61915c64f6bf732cec3c649c5f84fb4ea36d2895c9",
+      "lines": 209
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_STATE_20261102/SYNTHESIS_RU.md": {
+      "sha256": "be3f64fb08e395bffe36a0e737a03f90c947f3dc58167e4ee7332c55ca06551e",
+      "lines": 196
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_STATE_20261102/bounds/IS_S1_RU.md": {
+      "sha256": "33df2159063e114a9861f2c8b21f1ce099d5e035a9d1e21cc947976a8743b1ae",
+      "lines": 240
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_STATE_20261102/bounds/IS_NOISE_LOWER_RU.md": {
+      "sha256": "2536449c429f9af637666b31e8fbf9eb10b3fbc0722d4b57e82284ccea8d0d1f",
+      "lines": 152
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_COMPRESSION_20261102/SYNTHESIS_RU.md": {
+      "sha256": "97c374cf52c4c68604a6cb108d820bdb79970937dffa2f26aadc694391d34049",
+      "lines": 215
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/NONLINEAR_COMPRESSION_20261103/SYNTHESIS_RU.md": {
+      "sha256": "c69e7c62b1f8e0e5c18b77cb5256807f9a3c615f286b4b3a8c3482963506a15c",
+      "lines": 122
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/QUANTITATIVE_COMPOSITION_20261103/SYNTHESIS_RU.md": {
+      "sha256": "50508ac2394ed76b8dc587409316f275e5174ae90b3ce69fed5349985cf8c68e",
+      "lines": 126
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LOADED_TARGET_20261103/SYNTHESIS_RU.md": {
+      "sha256": "ca668fcec129f3f0f488a84a8c05444513859402028cbcfb9966f6d1c0eb20e2",
+      "lines": 201
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CROSS_SYNTHESIS_20261103/CROSS_C1_RU.md": {
+      "sha256": "265565c6110f7fe3cc493071ef717aee4ae594dfe7d83caad9df61107976253a",
+      "lines": 300
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LOADED_LOCAL_SYNTHESIS_20261103/SYNTHESIS_RU.md": {
+      "sha256": "57daae8af6f1cba91e394fc6692b3672017e6341ede1c8dda04330e051e83508",
+      "lines": 158
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INHERITED_EXECUTION_20261103/SYNTHESIS_RU.md": {
+      "sha256": "f1928272daa461e5d7dc3770f172e1453e3ae10b868554a9aa456ad04f3ed1fe",
+      "lines": 199
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/OBSERVED_TASK_INTERFACE_20261103/SYNTHESIS_RU.md": {
+      "sha256": "d3c2bdf6d3a9f9ecbe0bbca33ac7e5d9c6e2d5ff54896ef9d44843af3fe50c93",
+      "lines": 188
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/FIXED_LOAD_COMPENSATION_20261103/SYNTHESIS_RU.md": {
+      "sha256": "a5a76e34189d7754ede68ae32f3bc8f59d804bf8c6407740d42775c4ee217806",
+      "lines": 180
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMPENSATION_REDUCTION_RULE_20261103/SYNTHESIS_RU.md": {
+      "sha256": "1ac5ac4186dedf3f088e7842ee0a8e61c447b1ff3a46045d9d5d93667416f2fc",
+      "lines": 214
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/STATE_COST_TRANSFER_20261103/SYNTHESIS_RU.md": {
+      "sha256": "16885e6c4e406f9cb7f468bfa713b3ca56d8150fe6a1a5b5c5351a458fe93499",
+      "lines": 182
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SOURCE_WEAK_LOAD_PRICE_20261103/SYNTHESIS_RU.md": {
+      "sha256": "b3802c30da7f3b3e798e0b79943fdb0de4ad514285f1423142cd112ad11c6307",
+      "lines": 197
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_DEFICIT_CRITERION_20261103/SYNTHESIS_RU.md": {
+      "sha256": "15d344abed9d22abbe8b0678f75c2cf2113550acac716ee788a7d021e4ba9c8d",
+      "lines": 198
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CRITERION_COMPOSITION_20261103/construction/COMPOSITION_GEOMETRY_RU.md": {
+      "sha256": "62251767223c3dd097e164c1b57e1057d4c9817f60fb238393249c547ff5f13f",
+      "lines": 138
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CRITERION_COMPOSITION_20261103/obstruction/MATCHING_GRAPH_COROLLARY_RU.md": {
+      "sha256": "6c9d2e8bbd820b4031a5932514a76932fe4f52e9497b15ca369adb66d08ac7a0",
+      "lines": 105
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CUMULATIVE_FUNCTIONS_20261103/SYNTHESIS_RU.md": {
+      "sha256": "10109b01b1cb22c4449e9181bc2d9b9bb7db12e948083f9a22e9f4bb87bae602",
+      "lines": 175
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CURRENT_WITH_VOLTAGE_PROTECTION_20261103/SYNTHESIS_RU.md": {
+      "sha256": "548cd98ddbe070a0ed545ea2c93babfe32e5932db2d658a39b8cf261942e57f6",
+      "lines": 194
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CLASS_LAW_MILESTONE_20261103/MILESTONE_RU.md": {
+      "sha256": "35a3fd2be1b4cbbdbb6ae4e0e7334e3de36c2595c6540c1d27aec841cd16e371",
+      "lines": 180
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CENTRAL_PHYSICAL_PRINCIPLE_20261103/SYNTHESIS_RU.md": {
+      "sha256": "f3401ea9251062d143573c0f77a81959b8c5299f964531d8c6506623fe244935",
+      "lines": 99
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_ALIGNMENT_EXISTENCE_20261104/challenge/INDEPENDENT_PHYSICS_RU.md": {
+      "sha256": "1e86361a1a9246ddb5721d0f16c99ca2e9778f9d64db001bbbaddd339a0f5461",
+      "lines": 151
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LEARNED_ALIGNMENT_20261104/challenge/INDEPENDENT_MECHANISM_RU.md": {
+      "sha256": "36a10fced854ff98c9bdb2229aaf7a5e9984815a4cdde4c498a3e7e3e2c6b293",
+      "lines": 165
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_RULE_ACQUISITION_20261104/SYNTHESIS_RU.md": {
+      "sha256": "f8a820a6eeca27307a902764cd170d2a953ddcf032db3b1b69fd759804346c26",
+      "lines": 80
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/MOBILITY_MATERIAL_BALANCE_20261104/synthesis/MATERIAL_DERIVATION_RU.md": {
+      "sha256": "cf039830e5051d92cecfd9d8e8c1d69762a0e290368f9603e0d04ebced92e090",
+      "lines": 150
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/MOBILITY_MATERIAL_BALANCE_20261104/review/COORDINATOR_CHECK_RU.md": {
+      "sha256": "be5e5fa2499c9301b6afbcd94f74c964982f1d2ade7031770457a6b1d3379917",
+      "lines": 55
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_CAPACITY_BOUND_20261104/SYNTHESIS_RU.md": {
+      "sha256": "7c515846854dc496f065c5e976fb848fae7a0eb780ae15133128d35ef2d621f8",
+      "lines": 93
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_PREPARATION_HYPOTHESIS_20261105/SYNTHESIS_RU.md": {
+      "sha256": "e2f2208d7bf9e4ab658b6e16775374d9a1762168f6cd565c4f0c4d10cd082eda",
+      "lines": 82
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_SELECTION_RULE_20261105/SYNTHESIS_RU.md": {
+      "sha256": "189dfadc2fa878650f6e9edfd0ef92e3042bb0d75fd2b3e99a5f9d21ee27849c",
+      "lines": 85
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/TRANSFER_SIGN_MECHANISM_20261105/SYNTHESIS_RU.md": {
+      "sha256": "5ab3f4b8e4d585a7b8a4071e1fb1c353dee8b809164edeef68c48a14341d4cec",
+      "lines": 86
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ACQUIRED_COMPATIBILITY_20261105/SYNTHESIS_RU.md": {
+      "sha256": "48f999186cd71b2403c874d06d85c5cdd8fa3aa3166cdcecfcba3ad5d00f5931",
+      "lines": 64
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LEARNING_COOPERATION_PRINCIPLE_20261105/SYNTHESIS_RU.md": {
+      "sha256": "0b31aabd42128a497dbe97ba9d457ed8f303822eda6155b546dc38ed86c07c10",
+      "lines": 81
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ALIGNMENT_TRANSFER_LAW_20261105/synthesis/TRANSFER_LAW_RU.md": {
+      "sha256": "0b45df8511b1ffc45359e994401f585087d15015b71d6b04ab99732efb1cf595",
+      "lines": 203
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ALIGNMENT_TRANSFER_LAW_20261105/SYNTHESIS_RU.md": {
+      "sha256": "a1003f576b5b73e270413b1557a2909e7d5b600bfb10e587ca678db16898fa90",
+      "lines": 104
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LEARNED_COMPATIBILITY_HYPOTHESIS_20261105/SYNTHESIS_RU.md": {
+      "sha256": "0c4755e45a49b20f29753fd4245611c61d9d20de1e845b64d41d653a9e1d55d5",
+      "lines": 93
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COORDINATION_SELECTION_MECHANISM_20261105/SYNTHESIS_RU.md": {
+      "sha256": "cb654d41d0c89370ba4ec00dbff1870943157c10d8a06171b1b5f2403e6e155b",
+      "lines": 75
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/AI_AUTONOMY_STRUCTURE_20261105/SCOUT_REPORT_RU.md": {
+      "sha256": "15f662d551e1c088aabed84e9032aacd18caf31fd808222a5370dd30d70f2cb8",
+      "lines": 120
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/KAZAKOV_PRICE_MEMORY/DECISION_P1_RU.md": {
+      "sha256": "08357b5de991cc83e9724365f748006c9f8d8bbd419c6d84e9c14339f19f283f",
+      "lines": 62
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_plasticity_bp001/BP001_AUTHOR_DECISION_20261028.md": {
+      "sha256": "6f3cfc5719e193314915afcc817045234ad11dfa6a32e38b13a7deb196934684",
+      "lines": 35
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_plasticity_bp003/BP003_MATHEMATICAL_TEST.md": {
+      "sha256": "79e20201c8fd508ac51b6413691ab8daf35592ffddfba7d52b5736d813fa0d69",
+      "lines": 184
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/bp004_prospective_interference_20261028/SCIENTIFIC_REPORT_RU.md": {
+      "sha256": "3a6d0ce39886a3ecce9877694cec09f2fc262b85737453f362569bd41f9419c6",
+      "lines": 87
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_curriculum_transfer_20261028/ADVISOR_GATE_DECISION_20261028_RU.md": {
+      "sha256": "48434c3e6a568a268ce75feec73018b6980a6ec01937e8d68a63377a7ec05410",
+      "lines": 40
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/bp005_coin_reference_repair_20261029/T1_REPORT_RU.md": {
+      "sha256": "b390bfdbad261fca494d5eac1a791b199bb7d755f0bba237ca249585ca777da4",
+      "lines": 93
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/accepted/SILENT_RECODING_001/REPORT_RU.md": {
+      "sha256": "2a2fac53f0e90879cf867035c7904e343feed116dcce071cb591968026a29ae1",
+      "lines": 239
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/accepted/SILENT_RECODING_002_R1/REPORT_RU.md": {
+      "sha256": "db0774c2f82517797c895aff6c11f6eb0de92270a43335a6f08a72d2b19798fc",
+      "lines": 55
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/SILENT_RECODING_003/REPORT_RU.md": {
+      "sha256": "c873aa3d23ed506b2f8932810e53d067c2587c8efca072b7fc896f694310d642",
+      "lines": 53
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/SILENT_RECODING_004/REPORT_RU.md": {
+      "sha256": "415c52a4876f9e931fe5ed01457b4059c0bcd7708ca9fd858e2a689fb93d5c1c",
+      "lines": 121
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
+      "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
+      "lines": 128
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CROSS_SYNTHESIS_20261103/SYNTHESIS_RU.md": {
+      "sha256": "cdf00b9902bc6a630ce9438505f3845184b0e02866b59f37e692699f35730ed5",
+      "lines": 239
+    }
+  },
+  "sources_read": [
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m01/SFP-M01_v2.1.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "e8263d3aa536649af02b20a9824ed50b7093010b31b2a895c275de063e712b42"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m02/SFP-M02_v0.5.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "6767c55a1112d2ecb98041b332f3b924fc349fc45c5d21bbad715dacb2cf5c86"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m03/SFP-M03_v0.3.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "837585a3ffdf685d653d9ced342c414bed113b4df604c4799b4bfccb8bab194f"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m04/SFP-M04_v0.2.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "cbe660d0ffe2f1cd82881018cd46b1ec95a60c7c3c867c8160427df4fb0588d2"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/mechanism.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "5bee4b307ddd0f2be5b79fbd7d098ce82048a6faa531acd5931013476cd4b051"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/equivalence.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "558d281c6040408fc8f8a1e64e97e7a33c1561e6f496be040055bf7db9aa6815"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/parity_theorem.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "6522776d1636646d97e5cfab91b948775afa03694f91e7d7ed990d4f7cb9a7fb"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/metric_prediction.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "c76777a100e5988ad6a6acc58f183efaf436becf54c6fbd925df5b2fd89df504"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/neural.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "d3bfd24b93053265594e4068d714a69a09a22935c710f6d8f5468e9cd3cca6a9"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m06/sections/03_results.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "eabc8b8a1a8b5c2217234d63c1c13f3dfbba2bee07c9fc12d53350e08d2aa831"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m06/sections/02_model.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "01395d72c13e7d84b66c196eacdbf820c7ac4b6a1e228f0cdc45f739d1ee7efb"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m06/sections/04_sensitivity.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "c103da81714fae14ab055d14754fc85f4fe30751cd0aced152bb0850674ec57d"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/02_model_results.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "313c02e6709de8f5ab2af6a74b3814378e79f0fa9c1215dd3fa4c932de09cd7f"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PLASTICITY_COST_CLASSES_20261101/PREPRINT_READY_v0_2/manuscript/model.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "a48165fba4aff31376821719e98d7b61bb6591bef736b01b6dc08e29ac7e72b4"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PLASTICITY_COST_CLASSES_20261101/PREPRINT_READY_v0_2/manuscript/cost.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "997eb623e6790a430b316cef1ec9afe48bd6b7cc9a7e5a274653655398752cd2"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SFP_M09_OBSERVATION_ACCESS_20261102/SICON_SUBMISSION_PREPARATION_20261102/SOURCE/manuscript/main_result.tex",
+      "coverage": "sections",
+      "notes": "19–61: адресное сравнение M09 с квартовой IS; разные утверждения, не дубликаты."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SFP_M09_OBSERVATION_ACCESS_20261102/SICON_SUBMISSION_PREPARATION_20261102/SOURCE/manuscript/conditions.tex",
+      "coverage": "sections",
+      "notes": "4–83: адресное сравнение M09 с квартовой IS; разные утверждения, не дубликаты."
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m10/sections/05_composition.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "05812ee6399530f786dcbe799062c65141a27bc008b566cc75c8cfe095b601a4"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m10/sections/04_ports.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "9b0f6de8becdd9ce9a10fc1b716b31805dc9820986bfa4af35714ead2e4bd573"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m10/sections/06_lower_limits.tex",
+      "coverage": "sections",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "01a37f359d3b5cd0350b4d3e2de74fe5cbebbd9dfeb912adede043462011737a"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/RESULTS.md",
+      "coverage": "full",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "54a4071b6eb9b2e98dd605483654cec558fb0d85006391f5604dc0e5624ab388"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/09_RELEASES/CURRENT_PUBLIC_RELEASES.md",
+      "coverage": "full",
+      "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
+      "sha256": "820ad9c123aaeef5fbce2a718dda70201c556b64082bb0302d77cf028dee5093"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_DEFICIT_CRITERION_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 40–59, 84–146, 114–146, 138–146, 148–166, 157–166"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CLASS_LAW_MILESTONE_20261103/MILESTONE_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 25–66"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 35–72"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMPENSATION_REDUCTION_RULE_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 6–27, 6–48"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMPOSITION_REDUCTION_20261102/composition/CR_C3_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 10–38, 40–70"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CRITERION_COMPOSITION_20261103/construction/COMPOSITION_GEOMETRY_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 54–104"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CRITERION_COMPOSITION_20261103/obstruction/MATCHING_GRAPH_COROLLARY_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 73–105"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CROSS_SYNTHESIS_20261103/CROSS_C1_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 6–20, 22–44, 67–89, 91–139, 113–146"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CROSS_SYNTHESIS_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 70–99"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CUMULATIVE_FUNCTIONS_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 68–82, 68–103, 105–118"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CURRENT_WITH_VOLTAGE_PROTECTION_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 5–16, 18–78, 50–78, 80–99"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/FIXED_LOAD_COMPENSATION_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 8–50, 26–50"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/GEOMETRIC_RULE_20261102/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 7–24, 26–69"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_COMPRESSION_20261102/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 23–51, 130–155"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_STATE_20261102/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 19–42, 147–160"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_STATE_20261102/bounds/IS_NOISE_LOWER_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 9–35, 56–148, 125–142, 145–149"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_STATE_20261102/bounds/IS_S1_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 19–72, 28–72"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INHERITED_EXECUTION_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 7–41, 24–41; также 173–192: явное разграничение M10 и последующего 32→17→2."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LOADED_LOCAL_SYNTHESIS_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 6–35, 6–43"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LOADED_TARGET_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 7–23, 7–42"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/MINIMUM_RESOURCE_20261102/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 86–130"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/NONLINEAR_COMPRESSION_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 26–43, 26–49, 43–70, 51–70"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/NONLINEAR_CRITERION_20261102/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 28–65"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/NONLINEAR_CRITERION_20261102/bounds/NC_ORDER_LIMIT_CHECK_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 6–83, 79–83"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/OBSERVED_TASK_INTERFACE_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 7–24, 27–44, 27–52, 46–60"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_REDUCTION_20261102/construction/FR_C2_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 4–32, 57–91"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/QUANTITATIVE_COMPOSITION_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 39–73"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/RECURSIVE_AND_LOADED_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 15–24, 26–62"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SOURCE_WEAK_LOAD_PRICE_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 6–20, 6–66"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/STATE_COST_TRANSFER_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 23–44, 46–72, 108–125"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/STRUCTURAL_CRITERION_20261102/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: 46–122"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CENTRAL_PHYSICAL_PRINCIPLE_20261103/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[5, 17]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_ALIGNMENT_EXISTENCE_20261104/challenge/INDEPENDENT_PHYSICS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[22, 105], [107, 111], [15, 20]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LEARNED_ALIGNMENT_20261104/challenge/INDEPENDENT_MECHANISM_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[23, 62], [64, 92], [94, 111]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_RULE_ACQUISITION_20261104/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[19, 54], [21, 35]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/MOBILITY_MATERIAL_BALANCE_20261104/synthesis/MATERIAL_DERIVATION_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[19, 41], [23, 66]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/MOBILITY_MATERIAL_BALANCE_20261104/review/COORDINATOR_CHECK_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[35, 41]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_CAPACITY_BOUND_20261104/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[15, 28], [30, 46]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_PREPARATION_HYPOTHESIS_20261105/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[19, 40]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_SELECTION_RULE_20261105/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[9, 23], [25, 35], [37, 43]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/TRANSFER_SIGN_MECHANISM_20261105/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[17, 43], [45, 55], [47, 55]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ACQUIRED_COMPATIBILITY_20261105/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[7, 30], [17, 30]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LEARNING_COOPERATION_PRINCIPLE_20261105/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[19, 37], [39, 46]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ALIGNMENT_TRANSFER_LAW_20261105/synthesis/TRANSFER_LAW_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[21, 91]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ALIGNMENT_TRANSFER_LAW_20261105/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[24, 42], [44, 57]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LEARNED_COMPATIBILITY_HYPOTHESIS_20261105/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[5, 41]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COORDINATION_SELECTION_MECHANISM_20261105/SYNTHESIS_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[11, 23], [25, 46]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/AI_AUTONOMY_STRUCTURE_20261105/SCOUT_REPORT_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[61, 87]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/KAZAKOV_PRICE_MEMORY/DECISION_P1_RU.md",
+      "coverage": "sections",
+      "notes": "Адресно прочитанные диапазоны: [[5, 13]]; полная независимая перепроверка доказательства не заявляется."
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_plasticity_bp001/BP001_AUTHOR_DECISION_20261028.md",
+      "coverage": "sections",
+      "notes": "Строки 18–30; адресное чтение"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_plasticity_bp003/BP003_MATHEMATICAL_TEST.md",
+      "coverage": "sections",
+      "notes": "Строки 50–119; адресное чтение"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/bp004_prospective_interference_20261028/SCIENTIFIC_REPORT_RU.md",
+      "coverage": "sections",
+      "notes": "Строки 1–26; адресное чтение"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_curriculum_transfer_20261028/ADVISOR_GATE_DECISION_20261028_RU.md",
+      "coverage": "sections",
+      "notes": "Строки 1–34; адресное чтение"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/bp005_coin_reference_repair_20261029/T1_REPORT_RU.md",
+      "coverage": "sections",
+      "notes": "Строки 1–25; адресное чтение"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/accepted/SILENT_RECODING_001/REPORT_RU.md",
+      "coverage": "sections",
+      "notes": "Строки 1–32; адресное чтение"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/accepted/SILENT_RECODING_002_R1/REPORT_RU.md",
+      "coverage": "sections",
+      "notes": "Строки 24–40; адресное чтение"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/SILENT_RECODING_003/REPORT_RU.md",
+      "coverage": "sections",
+      "notes": "Строки 32–46; адресное чтение"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/SILENT_RECODING_004/REPORT_RU.md",
+      "coverage": "sections",
+      "notes": "Строки 14–61; адресное чтение"
+    }
+  ],
+  "exclusions": [
+    {
+      "area": "PSB/GTP",
+      "reason": "Другие программы; общий вопрос достаточности описания не является доказанным межсубстратным законом."
+    },
+    {
+      "area": "Behavioral BP001–BP005 and curriculum",
+      "reason": "Покрывает координатор; физические теоремы людям не приписаны."
+    },
+    {
+      "area": "Historical endogenous/dose/contact micro-stages",
+      "reason": "Содержательная история учтена через канонический M05; неподтверждённые расширения из старого реестра не повышены до актуальных теорем."
+    },
+    {
+      "area": "Publication portals and acceptance receipts",
+      "reason": "Не узлы научного доказательства; текущие статусы внешней рецензии не проверялись."
+    },
+    {
+      "area": "Publication packaging, repeat drafts, machine traces, submission status",
+      "reason": "Not scientific propositions; source/version status retained separately."
+    },
+    {
+      "area": "All unassigned SFP foundational and Nov4–5 programs",
+      "reason": "Other delegated extractors; only proposed cross-links, not transferred theorems."
+    },
+    {
+      "area": "KAZAKOV_CANDIDATES_20261103 and KAZAKOV_FEASIBILITY_20261102",
+      "reason": "Прочитаны начала отчётов отбора; отдельная поведенческая/экономическая программа. Полный корпус не импортирован в физическую SFP. Два смежных содержательных узла сохранены с явной границей переноса."
+    },
+    {
+      "area": "Historical map snapshots, duplicated publications, experimental arrays",
+      "reason": "Не самостоятельные научные утверждения; не использованы для искусственного увеличения графа."
+    }
+  ]
+}
