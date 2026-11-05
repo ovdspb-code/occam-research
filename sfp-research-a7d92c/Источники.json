@@ -304,6 +304,10 @@
       "sha256": "415c52a4876f9e931fe5ed01457b4059c0bcd7708ca9fd858e2a689fb93d5c1c",
       "lines": 121
     },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Расширение возможностей — этап 1/Запрет общего усиления.md": {
+      "sha256": "df2bd57d195704cb058099218cd8d9b97acf3c6f18536873ecfd2392a8d1c098",
+      "lines": 59
+    },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
       "lines": 128
@@ -733,6 +737,12 @@
       "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/SILENT_RECODING_004/REPORT_RU.md",
       "coverage": "sections",
       "notes": "Строки 14–61; адресное чтение"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Расширение возможностей — этап 1/Запрет общего усиления.md",
+      "coverage": "full",
+      "notes": "Прочитаны формулировка, доказательство и границы, строки 1–59; источник узла — сама научная записка.",
+      "sha256": "df2bd57d195704cb058099218cd8d9b97acf3c6f18536873ecfd2392a8d1c098"
     }
   ],
   "exclusions": [
