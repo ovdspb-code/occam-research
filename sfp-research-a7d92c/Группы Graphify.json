@@ -87,34 +87,35 @@
       "aq_stz_finite_jam"
     ],
     "7": [
+      "kron_mobility_order",
+      "kron_protected_task_failure",
+      "task_route_realization",
+      "task_triangle_actuator_limit",
+      "universal_execution_log_price"
+    ],
+    "8": [
       "aq_cooperation_delay_tradeoff",
       "aq_coupling_orientation",
       "aq_switching_drift",
       "aq_thixotropic_preparation"
     ],
-    "8": [
+    "9": [
       "aq_electrical_shield",
       "aq_fixed_driver_replacement",
       "aq_harmonic_protection",
       "aq_kron_learning_obstruction"
     ],
-    "9": [
+    "10": [
       "aq_embedded_alignment",
       "aq_full_port_reveals_state",
       "aq_precise_calibration",
       "aq_spring_observation_gap"
     ],
-    "10": [
+    "11": [
       "bio_conditional_certificate",
       "bio_endpoint_alias",
       "bio_panel_observation_tradeoff",
       "bio_silent_recoding"
-    ],
-    "11": [
-      "kron_mobility_order",
-      "kron_protected_task_failure",
-      "task_route_realization",
-      "task_triangle_actuator_limit"
     ],
     "12": [
       "aq_common_flow_alignment",
@@ -216,7 +217,7 @@
     "4": 0.2,
     "5": 0.25,
     "6": 0.2857142857142857,
-    "7": 0.5,
+    "7": 0.4,
     "8": 0.5,
     "9": 0.5,
     "10": 0.5,
