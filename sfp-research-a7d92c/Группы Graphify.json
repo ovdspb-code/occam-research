@@ -56,6 +56,18 @@
       "transfer_one_cell_loss"
     ],
     "4": [
+      "acquired_specialization_log_price",
+      "full_price_gap",
+      "hidden_contribution_universality_deficit",
+      "kron_mobility_order",
+      "kron_protected_task_failure",
+      "strict_readiness_stream_price",
+      "task_route_realization",
+      "task_triangle_actuator_limit",
+      "universal_execution_log_price",
+      "work_order_readiness_price"
+    ],
+    "5": [
       "bracket_two_three",
       "compression_hard_boundary",
       "exact_information_factor",
@@ -66,16 +78,6 @@
       "noise_information_price",
       "nonlinear_interval_memory",
       "nonlinear_quartic"
-    ],
-    "5": [
-      "acquired_specialization_log_price",
-      "hidden_contribution_universality_deficit",
-      "kron_mobility_order",
-      "kron_protected_task_failure",
-      "strict_readiness_stream_price",
-      "task_route_realization",
-      "task_triangle_actuator_limit",
-      "universal_execution_log_price"
     ],
     "6": [
       "m05_closure_null",
@@ -194,21 +196,18 @@
       "bp_learning_clock"
     ],
     "32": [
-      "full_price_gap"
-    ],
-    "33": [
       "m01_predictive_certificate"
     ],
-    "34": [
+    "33": [
       "m06_static_dynamic_gap"
     ],
-    "35": [
+    "34": [
       "m08_switch_cost"
     ],
-    "36": [
+    "35": [
       "mobility_profile_needed"
     ],
-    "37": [
+    "36": [
       "replica_resource_law"
     ]
   },
@@ -217,8 +216,8 @@
     "1": 0.16666666666666666,
     "2": 0.18181818181818182,
     "3": 0.18181818181818182,
-    "4": 0.2,
-    "5": 0.35714285714285715,
+    "4": 0.26666666666666666,
+    "5": 0.2,
     "6": 0.25,
     "7": 0.2857142857142857,
     "8": 0.5,
@@ -249,7 +248,6 @@
     "33": 1.0,
     "34": 1.0,
     "35": 1.0,
-    "36": 1.0,
-    "37": 1.0
+    "36": 1.0
   }
 }
