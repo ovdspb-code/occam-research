@@ -8712,6 +8712,23 @@
         "task_triangle_actuator_limit",
         "all_architecture_minimum"
       ]
+    },
+    {
+      "id": "physical_price_of_organization",
+      "label": "Физическая цена организации",
+      "description": "Геометрия универсального заменителя, физические ограничения управления, программирование будущего обучения и цена наблюдения. Аналитический закон времени относится к исполнению после настройки, не полной цене. b_retained+r≥n — целевой условный вариант; общая теория не доказана. Маршрут не сводится к последнему треугольнику.",
+      "nodes": [
+        "kron_mobility_order",
+        "task_route_realization",
+        "task_triangle_actuator_limit",
+        "all_architecture_minimum",
+        "m07_matrix_programming",
+        "m08_equal_response_different_price",
+        "m09_action_observation_gap",
+        "m09_paid_access_law",
+        "full_price_gap",
+        "future_function_bridge"
+      ]
     }
   ],
   "findings": [
