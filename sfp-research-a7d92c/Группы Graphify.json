@@ -54,16 +54,28 @@
       "nonlinear_quartic"
     ],
     "4": [
-      "m07_family_weak_benefit",
       "m07_matrix_programming",
       "m08_cost_crossover",
       "m08_equal_response_different_price",
       "m08_prefix_transfer",
+      "paid_observable_access",
+      "paid_preparation_joint",
+      "paid_universal_cost_boundary",
       "recon_stream_preparation",
       "stage2_common_criterion_gap",
       "stage2_loading_balance_exchange"
     ],
     "5": [
+      "m05_closure_null",
+      "m05_finite_history",
+      "m05_future_equivalence",
+      "m05_history_action",
+      "m05_metric_sign",
+      "m05_reversal_parity",
+      "m07_family_weak_benefit",
+      "stage1_natural_balance_no_dominance"
+    ],
+    "6": [
       "aq_balance_not_kinetics",
       "aq_directional_budget",
       "aq_frequency_mobility",
@@ -71,15 +83,6 @@
       "aq_same_budget_different_kinetics",
       "aq_stz_directional_state",
       "aq_stz_finite_jam"
-    ],
-    "6": [
-      "m05_closure_null",
-      "m05_finite_history",
-      "m05_future_equivalence",
-      "m05_history_action",
-      "m05_metric_sign",
-      "m05_reversal_parity",
-      "stage1_natural_balance_no_dominance"
     ],
     "7": [
       "aq_cooperation_delay_tradeoff",
@@ -202,8 +205,8 @@
     "1": 0.2,
     "2": 0.18181818181818182,
     "3": 0.2,
-    "4": 0.25,
-    "5": 0.2857142857142857,
+    "4": 0.2,
+    "5": 0.25,
     "6": 0.2857142857142857,
     "7": 0.5,
     "8": 0.5,
