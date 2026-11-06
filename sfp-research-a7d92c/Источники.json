@@ -192,6 +192,10 @@
       "sha256": "548cd98ddbe070a0ed545ea2c93babfe32e5932db2d658a39b8cf261942e57f6",
       "lines": 194
     },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Ресурс будущих задач — 6 ноября/Конструкция и границы.md": {
+      "sha256": "918fd067e62fe18545c6299fc13275590a46c1d2702c58b627285a53375e5428",
+      "lines": 229
+    },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CLASS_LAW_MILESTONE_20261103/MILESTONE_RU.md": {
       "sha256": "35a3fd2be1b4cbbdbb6ae4e0e7334e3de36c2595c6540c1d27aec841cd16e371",
       "lines": 180
@@ -359,6 +363,26 @@
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Сохранение оплаченной подготовки — 6 ноября/Независимая проверка критерия.md": {
       "sha256": "cea15ddf0a968c084f29963934848b7bbfb99c7401453d7d182b21ecad09fa7c",
       "lines": 247
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/kron_mobility_order_20261027_PRIVATE/RESEARCH_NOTE_RU.md": {
+      "sha256": "7cb4c8dc600173663a4a06930e8ccd1a7d9ce663c3d522c67574c182521164ca",
+      "lines": 164
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_PRESERVING_REDUCTION_001/kron_mobility_review_20261027_PRIVATE/REVIEW_RU.md": {
+      "sha256": "0df56155ce830c7da6e94d9ca0f1f70eaefd0ce0ea190d4c4ea4c4979e86598c",
+      "lines": 198
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/protected_task_gate_20261027_PRIVATE/RESEARCH_NOTE_RU.md": {
+      "sha256": "a9a34217a0d3d15e938bb0a9dcd8e6e363b15648d00c7cffa75d61a81f1197e6",
+      "lines": 209
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_PRESERVING_REDUCTION_001/protected_task_review_20261027_PRIVATE/REVIEW_RU.md": {
+      "sha256": "dfad0585afc0f9fc6f92cce0713815c7668c5f2d33cfd876ea2ab4214bb71d96",
+      "lines": 207
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Ресурс будущих задач — 6 ноября/Проверка разделения.md": {
+      "sha256": "b5fe315696ebc4633407c9a811752a42f0baa385a83b914619760d96e997b295",
+      "lines": 245
     },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
@@ -963,6 +987,42 @@
       "coverage": "sections",
       "notes": "Сверена финальная формулировка общего reference-сертификата и границ шума.",
       "sha256": "3abd2ddcbbab7093839c562f804629fb0bded0eb179418dfd62a4e87f21c0200"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/kron_mobility_order_20261027_PRIVATE/RESEARCH_NOTE_RU.md",
+      "coverage": "sections",
+      "notes": "Восстановление пропущенного принятого результата от27октября; адресно сверены формулировки, доказательные диапазоны и ограничения.",
+      "sha256": "7cb4c8dc600173663a4a06930e8ccd1a7d9ce663c3d522c67574c182521164ca"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_PRESERVING_REDUCTION_001/kron_mobility_review_20261027_PRIVATE/REVIEW_RU.md",
+      "coverage": "sections",
+      "notes": "Восстановление пропущенного принятого результата от27октября; адресно сверены формулировки, доказательные диапазоны и ограничения.",
+      "sha256": "0df56155ce830c7da6e94d9ca0f1f70eaefd0ce0ea190d4c4ea4c4979e86598c"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/protected_task_gate_20261027_PRIVATE/RESEARCH_NOTE_RU.md",
+      "coverage": "sections",
+      "notes": "Восстановление пропущенного принятого результата от27октября; адресно сверены формулировки, доказательные диапазоны и ограничения.",
+      "sha256": "a9a34217a0d3d15e938bb0a9dcd8e6e363b15648d00c7cffa75d61a81f1197e6"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_PRESERVING_REDUCTION_001/protected_task_review_20261027_PRIVATE/REVIEW_RU.md",
+      "coverage": "sections",
+      "notes": "Восстановление пропущенного принятого результата от27октября; адресно сверены формулировки, доказательные диапазоны и ограничения.",
+      "sha256": "dfad0585afc0f9fc6f92cce0713815c7668c5f2d33cfd876ea2ab4214bb71d96"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Ресурс будущих задач — 6 ноября/Конструкция и границы.md",
+      "coverage": "sections",
+      "notes": "Адресно сверены принятые формулировки, шумовой бюджет, команды и физическое препятствие текущего этапа.",
+      "sha256": "918fd067e62fe18545c6299fc13275590a46c1d2702c58b627285a53375e5428"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Ресурс будущих задач — 6 ноября/Проверка разделения.md",
+      "coverage": "sections",
+      "notes": "Адресно сверены принятые формулировки, шумовой бюджет, команды и физическое препятствие текущего этапа.",
+      "sha256": "b5fe315696ebc4633407c9a811752a42f0baa385a83b914619760d96e997b295"
     }
   ],
   "exclusions": [
