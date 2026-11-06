@@ -87,6 +87,7 @@
       "aq_stz_finite_jam"
     ],
     "7": [
+      "acquired_specialization_log_price",
       "kron_mobility_order",
       "kron_protected_task_failure",
       "task_route_realization",
