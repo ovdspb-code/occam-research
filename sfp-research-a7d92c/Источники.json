@@ -343,6 +343,10 @@
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/06_endpoint.tex": {
       "sha256": "7d08cf482b9e1dd1c3e2b71fbe12f0a7235f8a2bf0bb079b819d492a68fe324f",
       "lines": 106
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/07_limits.tex": {
+      "sha256": "e911a90dcfca73d98676bbfb7311373c352031b7e35c63706adcc89c8705fbed",
+      "lines": 60
     }
   },
   "sources_read": [
@@ -813,6 +817,12 @@
       "coverage": "sections",
       "notes": "Адресно прочитаны точные диапазоны нового утверждения, доказательства и границ; не полный переаудит корпуса.",
       "sha256": "0d9e9a70ff2acd3687b4610f44b629bbfab200c6c29202d0ad06dff769750507"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/07_limits.tex",
+      "coverage": "sections",
+      "notes": "Адресно сверена строка 18 о возврате функции на конце подготовки.",
+      "sha256": "e911a90dcfca73d98676bbfb7311373c352031b7e35c63706adcc89c8705fbed"
     }
   ],
   "exclusions": [
