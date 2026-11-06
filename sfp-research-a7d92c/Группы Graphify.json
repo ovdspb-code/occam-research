@@ -68,6 +68,16 @@
       "nonlinear_quartic"
     ],
     "5": [
+      "acquired_specialization_log_price",
+      "hidden_contribution_universality_deficit",
+      "kron_mobility_order",
+      "kron_protected_task_failure",
+      "strict_readiness_stream_price",
+      "task_route_realization",
+      "task_triangle_actuator_limit",
+      "universal_execution_log_price"
+    ],
+    "6": [
       "m05_closure_null",
       "m05_finite_history",
       "m05_future_equivalence",
@@ -77,7 +87,7 @@
       "m07_family_weak_benefit",
       "stage1_natural_balance_no_dominance"
     ],
-    "6": [
+    "7": [
       "aq_balance_not_kinetics",
       "aq_directional_budget",
       "aq_frequency_mobility",
@@ -85,14 +95,6 @@
       "aq_same_budget_different_kinetics",
       "aq_stz_directional_state",
       "aq_stz_finite_jam"
-    ],
-    "7": [
-      "acquired_specialization_log_price",
-      "kron_mobility_order",
-      "kron_protected_task_failure",
-      "task_route_realization",
-      "task_triangle_actuator_limit",
-      "universal_execution_log_price"
     ],
     "8": [
       "aq_cooperation_delay_tradeoff",
@@ -216,9 +218,9 @@
     "2": 0.18181818181818182,
     "3": 0.18181818181818182,
     "4": 0.2,
-    "5": 0.25,
-    "6": 0.2857142857142857,
-    "7": 0.4,
+    "5": 0.35714285714285715,
+    "6": 0.25,
+    "7": 0.2857142857142857,
     "8": 0.5,
     "9": 0.5,
     "10": 0.5,
