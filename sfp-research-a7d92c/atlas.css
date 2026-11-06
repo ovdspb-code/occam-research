@@ -8,3 +8,5 @@
 main{height:850px;min-height:0}nav,aside{overflow:auto;height:850px}#canvas{height:850px}#links path{vector-effect:non-scaling-stroke;opacity:.5}#nodes circle{vector-effect:non-scaling-stroke}#zones text{font-weight:650}#nodes g:hover circle{stroke:var(--ink);stroke-width:3px}@media(max-width:1700px){main,nav,aside,#canvas{height:760px}}@media(max-width:1150px){main,nav,aside,#canvas{height:720px}}@media(max-width:850px){main{height:auto}nav{height:auto}#canvas{height:590px}aside{height:620px}}
 
 .research-links{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:flex-end}.research-links a{white-space:normal}@media(max-width:650px){header{flex-wrap:wrap}.research-links{width:100%;justify-content:flex-start}}
+
+.current-note{padding:12px 24px;border-bottom:1px solid var(--line);font-size:13px;background:var(--surface)}.research-links>a:nth-child(-n+2){font-weight:650}@media(max-width:650px){.current-note{padding:12px}}

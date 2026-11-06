@@ -4,7 +4,7 @@ const Atlas = (() => {
   const regions=new Map(data.regions.map(r=>[r.id,r]));
   const state={region:null,route:null,query:'',lens:'all',selected:null,labels:false,scale:1,x:0,y:0};
   const $=id=>document.getElementById(id), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const status={established:'Установлено в корпусе',conditional:'Условный результат',hypothesis:'Гипотеза',refuted:'Опровергнута / проверка не пройдена',open:'Открытый вопрос',known:'Известный механизм'};
+  const status={established:'Установлено в корпусе',conditional:'Условный результат',hypothesis:'Гипотеза',refuted:'Проверка не пройдена',open:'Открытый вопрос',known:'Известный механизм'};
   const relations={requires:'требует',derives:'даёт следствие',generalizes:'обобщает',contradicts:'опровергает',limits:'ограничивает',analogy:'аналогия',open_bridge:'недостающий переход'};
   const svg=(tag,attrs={})=>{const e=document.createElementNS('http://www.w3.org/2000/svg',tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));return e;};
   function searchMatches(){const q=state.query.toLocaleLowerCase().trim();return q?data.nodes.filter(n=>[n.label,n.claim,n.domain,n.family,...n.assumptions].join(' ').toLocaleLowerCase().includes(q)):[];}
@@ -22,7 +22,7 @@ const Atlas = (() => {
     if(['bridges','gaps'].includes(state.lens)){const used=new Set(edges.flatMap(e=>[e.source,e.target]));nodes=nodes.filter(n=>used.has(n.id));}
     return {nodes,edges};
   }
-  function select(id){if(!byId.has(id))return;history.replaceState(null,'','#'+encodeURIComponent(id));state.selected=id;state.query='';$('search').value='';state.region=null;state.route=null;state.lens='all';$('lens').value='all';draw();panelNode(id);}
+  function select(id,remember=true){if(!byId.has(id))return;const hash='#'+encodeURIComponent(id);if(remember&&location.hash!==hash)history.pushState(null,'',hash);state.selected=id;state.query='';$('search').value='';state.region=null;state.route=null;state.lens='all';$('lens').value='all';draw();panelNode(id);}
   function draw(fit=true){
     let {nodes,edges}=visible();
     if(state.selected){const rest=nodes.filter(n=>n.id!==state.selected),radius=data.ui.focusRadius;nodes=nodes.map(n=>n.id===state.selected?{...n,x:0,y:0}:{...n,x:radius*Math.cos(-Math.PI/2+2*Math.PI*rest.findIndex(x=>x.id===n.id)/rest.length),y:radius*Math.sin(-Math.PI/2+2*Math.PI*rest.findIndex(x=>x.id===n.id)/rest.length)});}

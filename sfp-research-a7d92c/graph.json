@@ -7938,6 +7938,110 @@
         }
       ],
       "id": "edge_161"
+    },
+    {
+      "source": "m01_cover_width",
+      "target": "bp_finite_jets",
+      "relation": "analogy",
+      "status": "INFERRED",
+      "explanation": "Для защищённой перестройки существенна геометрия всего разрешённого пути. Точная пиковая ширина покрытия и произвольно длинный путь при одинаковых конечных jets — разные результаты: пик слотов нельзя приравнивать длине или времени.",
+      "sources": [
+        {
+          "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m01/SFP-M01_v2.1.tex",
+          "start": 238,
+          "end": 259,
+          "role": "statement",
+          "name": "SFP-M01_v2.1.tex",
+          "excerpt": "238: \\begin{theorem}[Robust geometric correspondence]\n239: \\label{thm:geometry}\n240: Under the graph assumptions and tolerance~\\eqref{eq:tolerance}:\n241: \\begin{enumerate}[label=(\\roman*)]\n242: \\item Every continuous protected factor path of width $H$ yields a\n243: finite cover route of width at most $H$ between any chosen allowed\n244: endpoint labelings of Section~\\ref{sec:labels}. In particular, a path\n245: from a padded row organization to the completion of\n246: Section~\\ref{sec:completion} has $H\\ge\\mathfrak w(G)$.\n247: \\item Every cover route $L\\to R$ of width $H$ lifts to a continuous\n248: stochastic-factor path of width $H$ preserving $AB=P$ exactly and ending\n249: at the column organization, up to the placement of slots. No extra slot\n250: is needed to implement an exchange.\n251: \\end{enumerate}\n252: Consequently, for the row organization with $r$ idle initial slots,\n253: \\begin{equation}\n254:  H_{\\min}=\\max\\{N+r,\\mathfrak w(G)\\},\\qquad\n255:  \\Delta K_{\\min}=[\\mathfrak w(G)-N-r]_+.\n256:  \\label{eq:geometry-cost}\n257: \\end{equation}\n… Полный диапазон см. в источнике."
+        },
+        {
+          "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_plasticity_bp003/BP003_MATHEMATICAL_TEST.md",
+          "start": 50,
+          "end": 119,
+          "role": "proof",
+          "name": "BP003_MATHEMATICAL_TEST.md",
+          "excerpt": "50: Это длина изменения параметров; при ограничении скорости ≤1 — минимальное\n51: время. Это не число параметров, не биты памяти и не стоимость вычислений.\n52: Разрешено любое управление, а не только конкретный оптимизатор.\n53: \n54: ## 2. Контрпример: одинаковые конечные jets, произвольный разрыв стоимости\n55: \n56: Для любого фиксированного целого k≥1 и любого M≥0 положим\n57: \n58: $$\n59: s=(x,y)\\in\\mathbb R^2,\\qquad G=I,\\qquad\n60: h_{M,k}(x)=M[4x(1-x)]^{k+1},\n61: $$\n62: $$\n63: f_{A,M}(x,y)=y-h_{M,k}(x),\\qquad\n64: L_B(x,y)=\\tfrac12(x-1)^2.\n65: $$\n66: \n67: Начало s_0=(0,0), цель s_1=(1,0). У всех систем:\n68: \n69: - одинаковые текущие ответы f_A(s_0)=0 и потери L_B(s_0)=1/2;\n… Полный диапазон см. в источнике."
+        }
+      ],
+      "id": "edge_162"
+    },
+    {
+      "source": "m03_observation_slot",
+      "target": "aq_spring_observation_gap",
+      "relation": "analogy",
+      "status": "INFERRED",
+      "explanation": "Материальный ресурс может обеспечить безопасное действие без исходного знания скрытого состояния либо открыть диагностическую пробу. Дополнительный слот и пружина выполняют разные операции; количественный обмен между ними не доказан.",
+      "sources": [
+        {
+          "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m03/SFP-M03_v0.3.tex",
+          "start": 257,
+          "end": 279,
+          "role": "statement",
+          "name": "SFP-M03_v0.3.tex",
+          "excerpt": "257: \\section{The workspace theorem}\n258: \\label{sec:main}\n259: \\begin{theorem}[Sharp worst-case observation overhead]\n260: \\label{thm:main}\n261: Under Section~\\ref{sec:contract}, let $\\mathcal F$ be a full observation\n262: fiber of initial width $K$, and let a common preparation-compatible\n263: task have finite known-factor cost $h$. Then\n264: \\begin{equation}\n265:  h\\le\\HH(\\mathcal F;\\calT,\\eps)\\le\\max\\{h,K+1\\}.\n266:  \\label{eq:main}\n267: \\end{equation}\n268: The same interface $\\Ust$ is used for both costs. The upper bound is\n269: attained by finite probing and preparation to a known realization.\n270: If one protected row has strict initial slack, or a specified initial\n271: slot is known to be idle, then $\\HH=h$. Also $\\HH=h$ whenever\n272: $h\\ge K+1$.\n273: \n274: For every graph in the stated class there is a saturated positive\n275: response at $K=N$ whose full observation fiber and calibration terminal\n276: $F=P$ satisfy $h=N$ and $\\HH=N+1$. On the Fano graph another saturated\n… Полный диапазон см. в источнике."
+        },
+        {
+          "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_ALIGNMENT_EXISTENCE_20261104/challenge/INDEPENDENT_PHYSICS_RU.md",
+          "start": 22,
+          "end": 105,
+          "role": "statement",
+          "name": "INDEPENDENT_PHYSICS_RU.md",
+          "excerpt": "22: ## 2. Естественный физический класс\n23: \n24: Рассматриваем перемещение \\(q=(x,y)\\) в вязкой анизотропной среде или эквивалентном линейном демпфирующем механизме. Локальный закон — баланс силы и вязкого сопротивления:\n25: \n26: \\[\n27: \\dot q=M_\\sigma\\bigl(u-\\nabla E_k(q)\\bigr),\\quad\n28: M_\\sigma=\\begin{pmatrix}1&\\sigma/2\\\\\\sigma/2&1\\end{pmatrix},\\quad\n29: E_k(q)=\\tfrac{k}{2}y^2,\\qquad \\sigma\\in\\{-1,+1\\}.\n30: \\]\n31: \n32: Обе матрицы положительно определены, с собственными значениями 1/2 и 3/2. Они получаются поворотом одной диагональной подвижности на противоположные углы 45°. Нужные знаки не постулируются как новый закон обучения: это обычный поворот тензора сопротивления.\n33: \\(\\sigma\\) — неизвестная, но неизменная при доступных перемещениях ориентация материала. Её распределение одно и то же в обеих реализациях. Внешних поворачивающих материал приводов в исходном интерфейсе нет; их добавление остаётся допустимым оплачиваемым расширением.\n34: \n35: Исходная организация имеет поперечный упругий элемент \\(k=1\\). Сокращение физически удаляет только этот элемент: \\(k=0\\). Подвижность, два силовых привода и датчики положений сохраняются. В начале \\(x=y=0\\), поэтому начальные наблюдаемые ответы совпадают; соответствие скрытых начал тождественное, \\(\\sigma\\mapsto\\sigma\\).\n36: \n37: Пассивность выражается балансом\n38: \\[\n39: u^\\top\\dot q=\\frac{dE_k}{dt}+\\dot q^\\top M_\\sigma^{-1}\\dot q.\n40: \\]\n41: Удалён именно физический источник восстанавливающей силы, а не информация, искусственно отнятая у контроллера.\n… Полный диапазон см. в источнике."
+        }
+      ],
+      "id": "edge_163"
+    },
+    {
+      "source": "aq_fixed_driver_replacement",
+      "target": "transfer_paid_mobility_certificate",
+      "relation": "analogy",
+      "status": "INFERRED",
+      "explanation": "Сохранение работы удаляемой структуры требует проверять физическую подвижность и привод. В раннем обходе устанавливается согласованный драйвер с иной нормой; в двухтерминальном критерии сохраняется исходный привод и выводится малая погрешность подвижности. Общая аппаратная цена из сравнения не следует.",
+      "sources": [
+        {
+          "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LEARNED_ALIGNMENT_20261104/challenge/INDEPENDENT_MECHANISM_RU.md",
+          "start": 94,
+          "end": 111,
+          "role": "statement",
+          "name": "INDEPENDENT_MECHANISM_RU.md",
+          "excerpt": "94: ## 4. Явная замена: подготовить фиксированные коэффициенты местных драйверов\n95: \n96: Положим \\(b=(2,-1,2)^\\top\\). После статической подготовки треугольника достаточно использовать\n97: \\[\n98: \\dot z=(a-C_w)b,\n99: \\qquad C_w=z_{12}+z_{13}.\n100: \\]\n101: Тогда \\(\\dot C_w=a-C_w\\), а \\(\\dot\\Lambda(z)v=0\\) для полного старого граничного ответа. Не только старая энергия, но и токи сохраняются. Для приведённого компактного интервала целей все проводимости остаются положительными.\n102: \n103: Это положительная СВЯЗАННАЯ подвижность: \\(M=bb^\\top\\succeq0\\), \\(\\nabla C_w=(1,1,0)^\\top\\), \\(M\\nabla C_w=b\\). Убывание новой потери сохраняет обычный градиентный смысл. Не вводится отрицательное сопротивление или отрицательная собственная подвижность; отрицательный компонент обновления возникает из связи между каналами.\n104: \n105: Нужно один раз подготовить относительные коэффициенты драйверов и общий канал новой ошибки. Для этого семейства b не зависит от будущей цели и текущего h. Старые примеры во время нового обучения не нужны; заменяющая сеть идёт собственным путём и со своей скоростью. Сообщать ей будущее источника также не требуется.\n106: \n107: Поскольку b постоянно, каждое ребро может независимо исполнять команду b_e r, используя заранее записанный коэффициент и уже доступный общий сигнал r. Оперативный обмен между рёбрами, новый центральный процессор и новый общий канал не требуются. Математическая корреляция обновлений и матричная запись M не доказывают нелокальности реализации. Достаточны фиксированные коэффициенты и полярности местных драйверов; их аппаратная стоимость здесь не установлена. Предварительная подготовка даёт конструктивную замену.\n108: \n109: Норма M равна 9; она не согласована с подвижностью исходного носителя. Равенство скорости нового ответа остатку устанавливает выполнение задачи для выбранного драйвера, но не преимущество скорости при равных ресурсах. Умножение M на положительную константу сохраняет защиту и меняет срок. Сравнение сроков требует общей нормировки приводов и физических затрат.\n110: \n111: Это частный вариант известной проекции/координации градиента. Предъявленное новое обучение не идентично прежнему независимому закону, и изменение интерфейса учитывается явно. Не заявлены минимальные память, число сигналов или энергия такого драйвера."
+        },
+        {
+          "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Сохранение оплаченной подготовки — 6 ноября/Физическое условие сохранения.md",
+          "start": 9,
+          "end": 17,
+          "role": "statement",
+          "name": "Физическое условие сохранения.md",
+          "excerpt": "9: Основная физическая величина — четвёртая дирихлеева ёмкость графа блока:\n10: \n11: `S₄(G)=min{Σ_e |V_i−V_j|⁴: V_s=1,V_t=0}`.\n12: \n13: Она определяет подвижность специального, физически описанного множества конфигураций блока при исходном евклидовом обучении. При S₄=1 такая подвижность совпадает с обычным единичным ребром **без изменения часов или привода**. В положительной окрестности этого множества дефект подвижности квадратичен по нарушению статического баланса токов. Это даёт явный достаточный тест сохранения ранее принятого оплаченного протокола.\n14: \n15: Проверка выполнена на уже существующем блоке из восьми параллельных двухрёберных путей: **16 адаптивных рёбер действительно заменяются одним**, включая их участие в диагностике и подготовке. На точном балансном множестве сохраняется полное значение функционального выигрыша; при ненулевой асимметрии и ошибке первоначальной настройки — заданная доля его удостоверенного запаса, если выполняется выписанный бюджет.\n16: \n17: Это условие в классе двухтерминальных замен, не универсальная классификация адаптивных организаций. Самостоятельная мировая новизна связи с p-лапласианом не закрыта. Классический перенос историй используется явно и новым законом не называется. Физическое изготовление/перекоммутация не описаны исходной моделью и не объявляются оплаченными."
+        }
+      ],
+      "id": "edge_164"
+    },
+    {
+      "source": "m06_accuracy_resource",
+      "target": "transfer_paid_mobility_certificate",
+      "relation": "analogy",
+      "status": "INFERRED",
+      "explanation": "Нижний ресурс копирования всех объявленных будущих траекторий и успешная замена с сохранением оплаченной подготовки относятся к разным продолжениям и законам изменения проводимости: относительному и единичной подвижности. Вместе они различают необходимый носитель и устранимую избыточность, но не дают единой количественной границы.",
+      "sources": [
+        {
+          "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m06/sections/03_results.tex",
+          "start": 1,
+          "end": 21,
+          "role": "statement",
+          "name": "03_results.tex",
+          "excerpt": "1: \\section{Resource bounds}\\label{sec:results}\n2: \\begin{theorem}[Sharp finite-accuracy resource law]\\label{thm:main}\n3: There exist constants $c,C,\\del_0>0$, depending only on the fixed model in \\cref{sec:model}, such that for every $N\\ge2$ and $0<\\del\\le\\del_0$, with $L_\\del=1+\\log(1/\\del)$,\n4: \\begin{equation}\\label{eq:main-law}\n5:  c\\min\\{N,L_\\del^2\\}\n6:  \\le m_{\\mathrm{free}}(N,\\del)\n7:  \\le m_{\\mathrm{all}}(N,\\del)\n8:  \\le m_{\\mathrm{star}}(N,\\del)\n9:  \\le C\\min\\{N,L_\\del^2\\}.\n10: \\end{equation}\n11: The upper bound is attained by a fixed parallel star ensemble with a single $C^\\infty$ initialization map and strictly positive conductances. The lower bound allows discontinuous, source-dependent choices of topology and initialization.\n12: \\end{theorem}\n13: \n14: \\begin{corollary}[Constant-factor comparison of topologies]\\label{cor:topology}\n15: For the same $N$ and $\\del$ as in \\cref{thm:main},\n16: \\begin{equation}\\label{eq:constant-comparison}\n17:  m_{\\mathrm{star}}(N,\\del)\n18:  \\le (C/c)\\,m_{\\mathrm{free}}(N,\\del).\n19: \\end{equation}\n20: \\end{corollary}\n… Полный диапазон см. в источнике."
+        },
+        {
+          "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Сохранение оплаченной подготовки — 6 ноября/Физическое условие сохранения.md",
+          "start": 9,
+          "end": 17,
+          "role": "statement",
+          "name": "Физическое условие сохранения.md",
+          "excerpt": "9: Основная физическая величина — четвёртая дирихлеева ёмкость графа блока:\n10: \n11: `S₄(G)=min{Σ_e |V_i−V_j|⁴: V_s=1,V_t=0}`.\n12: \n13: Она определяет подвижность специального, физически описанного множества конфигураций блока при исходном евклидовом обучении. При S₄=1 такая подвижность совпадает с обычным единичным ребром **без изменения часов или привода**. В положительной окрестности этого множества дефект подвижности квадратичен по нарушению статического баланса токов. Это даёт явный достаточный тест сохранения ранее принятого оплаченного протокола.\n14: \n15: Проверка выполнена на уже существующем блоке из восьми параллельных двухрёберных путей: **16 адаптивных рёбер действительно заменяются одним**, включая их участие в диагностике и подготовке. На точном балансном множестве сохраняется полное значение функционального выигрыша; при ненулевой асимметрии и ошибке первоначальной настройки — заданная доля его удостоверенного запаса, если выполняется выписанный бюджет.\n16: \n17: Это условие в классе двухтерминальных замен, не универсальная классификация адаптивных организаций. Самостоятельная мировая новизна связи с p-лапласианом не закрыта. Классический перенос историй используется явно и новым законом не называется. Физическое изготовление/перекоммутация не описаны исходной моделью и не объявляются оплаченными."
+        }
+      ],
+      "id": "edge_165"
     }
   ],
   "regions": [
@@ -8133,6 +8237,57 @@
         "transfer_one_cell_loss",
         "m08_equal_response_different_price",
         "full_price_gap"
+      ]
+    },
+    {
+      "id": "whole_future_sufficiency",
+      "label": "Общая картина I: достаточность для будущего",
+      "description": "Точные ресурсные профили, будущая эквивалентность, необходимый носитель и разные цены. Сравнительный путь: копирование траекторий и выполнение тех же целей — разные задачи; общей формулы здесь нет.",
+      "nodes": [
+        "m01_cover_width",
+        "m02_profile_representative",
+        "m04_cross_substrate_peak",
+        "m05_future_equivalence",
+        "m06_accuracy_resource",
+        "m08_equal_response_different_price",
+        "hidden_guards_obstruction",
+        "bp_finite_jets",
+        "bio_endpoint_alias"
+      ]
+    },
+    {
+      "id": "whole_work_transfer",
+      "label": "Общая картина II: куда переносится работа структуры?",
+      "description": "Дефицит знания, дефицит допустимого действия и устранимая избыточность различены существующими результатами. Кандидат общего принципа — физически вычисляемый необходимый компенсатор; это открытый переход, не доказанный закон.",
+      "nodes": [
+        "m03_observation_slot",
+        "aq_spring_observation_gap",
+        "aq_precise_calibration",
+        "aq_kron_learning_obstruction",
+        "aq_fixed_driver_replacement",
+        "m09_action_observation_gap",
+        "transfer_paid_mobility_certificate",
+        "transfer_one_cell_loss",
+        "m06_accuracy_resource",
+        "full_price_gap"
+      ]
+    },
+    {
+      "id": "whole_experience_relations",
+      "label": "Общая картина III: как опыт меняет отношения?",
+      "description": "История совместного движения, направленная кинетика, закрепление, рабочая передача и обратное влияние партнёра. Общего оплаченного приобретения совместимости при необходимом сотрудничестве пока нет; остановленные задачи не возобновляются.",
+      "nodes": [
+        "aq_maxwell_history",
+        "aq_memory_not_help",
+        "aq_thixotropic_preparation",
+        "aq_coupling_orientation",
+        "aq_latent_consolidation",
+        "aq_stz_directional_state",
+        "aq_cooperation_delay_tradeoff",
+        "aq_partner_induced_jam",
+        "m05_metric_sign",
+        "stage2_loading_balance_exchange",
+        "aq_future_selection_gap"
       ]
     }
   ],
