@@ -2,22 +2,6 @@
   "method": "Graphify cluster / score_all on source-extracted links only; undirected analysis; NOT a theorem or novelty score",
   "communities": {
     "0": [
-      "m05_closure_null",
-      "m05_finite_history",
-      "m05_future_equivalence",
-      "m05_history_action",
-      "m05_metric_sign",
-      "m05_reversal_parity",
-      "m07_family_weak_benefit",
-      "m07_matrix_programming",
-      "m08_cost_crossover",
-      "m08_equal_response_different_price",
-      "m08_prefix_transfer",
-      "stage1_natural_balance_no_dominance",
-      "stage2_common_criterion_gap",
-      "stage2_loading_balance_exchange"
-    ],
-    "1": [
       "context_equivalence_failure",
       "cumulative_old_coordinates",
       "deficit_safety_failure",
@@ -31,7 +15,7 @@
       "static_joint_goal_unreachable",
       "weak_load_nonvanishing_time"
     ],
-    "2": [
+    "1": [
       "active_physical_reduction",
       "conditional_closure",
       "history_cost_transfer",
@@ -43,6 +27,19 @@
       "m10_two_readings",
       "moving_neighbor_synthesis",
       "port_jet_composition"
+    ],
+    "2": [
+      "m01_cover_width",
+      "m01_prepaid_reserve",
+      "m02_normalization",
+      "m02_profile_representative",
+      "m03_observation_slot",
+      "m03_saturated_counterexample",
+      "m04_convex_fiber",
+      "m04_cross_substrate_peak",
+      "m04_preservation_boundary",
+      "m04_safe_probe",
+      "recon_native_drive_boundary"
     ],
     "3": [
       "bracket_two_three",
@@ -57,6 +54,16 @@
       "nonlinear_quartic"
     ],
     "4": [
+      "m07_family_weak_benefit",
+      "m07_matrix_programming",
+      "m08_cost_crossover",
+      "m08_equal_response_different_price",
+      "m08_prefix_transfer",
+      "recon_stream_preparation",
+      "stage2_common_criterion_gap",
+      "stage2_loading_balance_exchange"
+    ],
+    "5": [
       "aq_balance_not_kinetics",
       "aq_directional_budget",
       "aq_frequency_mobility",
@@ -65,58 +72,53 @@
       "aq_stz_directional_state",
       "aq_stz_finite_jam"
     ],
-    "5": [
-      "m01_cover_width",
-      "m01_prepaid_reserve",
-      "m02_normalization",
-      "m02_profile_representative",
-      "m03_observation_slot",
-      "m03_saturated_counterexample",
-      "m04_safe_probe"
-    ],
     "6": [
+      "m05_closure_null",
+      "m05_finite_history",
+      "m05_future_equivalence",
+      "m05_history_action",
+      "m05_metric_sign",
+      "m05_reversal_parity",
+      "stage1_natural_balance_no_dominance"
+    ],
+    "7": [
       "aq_cooperation_delay_tradeoff",
       "aq_coupling_orientation",
       "aq_switching_drift",
       "aq_thixotropic_preparation"
     ],
-    "7": [
+    "8": [
       "aq_electrical_shield",
       "aq_fixed_driver_replacement",
       "aq_harmonic_protection",
       "aq_kron_learning_obstruction"
     ],
-    "8": [
+    "9": [
       "aq_embedded_alignment",
       "aq_full_port_reveals_state",
       "aq_precise_calibration",
       "aq_spring_observation_gap"
     ],
-    "9": [
+    "10": [
       "bio_conditional_certificate",
       "bio_endpoint_alias",
       "bio_panel_observation_tradeoff",
       "bio_silent_recoding"
     ],
-    "10": [
+    "11": [
       "aq_common_flow_alignment",
       "aq_new_load_recovery",
       "aq_partner_induced_jam"
     ],
-    "11": [
+    "12": [
       "aq_future_selection_gap",
       "aq_known_selection",
       "aq_learned_corrections"
     ],
-    "12": [
+    "13": [
       "aq_maxwell_history",
       "aq_memory_not_help",
       "aq_trace_preservation"
-    ],
-    "13": [
-      "m04_convex_fiber",
-      "m04_cross_substrate_peak",
-      "m04_preservation_boundary"
     ],
     "14": [
       "m06_accuracy_resource",
@@ -196,17 +198,17 @@
     ]
   },
   "cohesion": {
-    "0": 0.14285714285714285,
-    "1": 0.16666666666666666,
-    "2": 0.2,
+    "0": 0.16666666666666666,
+    "1": 0.2,
+    "2": 0.18181818181818182,
     "3": 0.2,
-    "4": 0.2857142857142857,
+    "4": 0.25,
     "5": 0.2857142857142857,
-    "6": 0.5,
+    "6": 0.2857142857142857,
     "7": 0.5,
     "8": 0.5,
     "9": 0.5,
-    "10": 0.6666666666666666,
+    "10": 0.5,
     "11": 0.6666666666666666,
     "12": 0.6666666666666666,
     "13": 0.6666666666666666,
