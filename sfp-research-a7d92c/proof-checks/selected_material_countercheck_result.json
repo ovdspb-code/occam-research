@@ -1,0 +1,19 @@
+{
+  "scope": "Counterexample to uniform SPD only; no proof of saturation",
+  "parameters": {
+    "delta": "1/100",
+    "x": "29603/318750000",
+    "center": "707567/51000000",
+    "budget": "181901/85000",
+    "target": "6825559/2000000",
+    "output": "selected_material_countercheck_result.json"
+  },
+  "mass": "42102322873683049737207097/19674759705626319300000000",
+  "W2": "-33832/2510109",
+  "ell_bounds": [
+    "68255490733/20000000000",
+    "3412774536653/1000000000000"
+  ],
+  "specific_forms_positive": true,
+  "script_sha256": "ecb3fea8b9ab7d5224af674e2ba751e9fe1bdce88eeaa4512a2b88122abf8ae2"
+}
