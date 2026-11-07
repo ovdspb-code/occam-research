@@ -536,6 +536,14 @@
       "sha256": "43d013c2959eb5e9e0e1980d6d3d73e62cd6262181fe97d244b2d5e18ae9076b",
       "lines": 44
     },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Советник — приёмка семейного физического критерия.md": {
+      "sha256": "ece1ab13b85db8b97628992c11c4714a52ada07f0baf75d8f3953a87b66995ba",
+      "lines": 202
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Принятая веха — семейные последствия фиксированной работы.md": {
+      "sha256": "66461b0978bc3641aacc4f7a4b6fd894a34b879ba861a7744e1ac774ebb83e1d",
+      "lines": 55
+    },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
       "lines": 128
@@ -1475,6 +1483,16 @@
       "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — семейный закон фиксированной работы.md",
       "sha256": "43d013c2959eb5e9e0e1980d6d3d73e62cd6262181fe97d244b2d5e18ae9076b",
       "coverage": "accepted_family_law_delivery"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Принятая веха — семейные последствия фиксированной работы.md",
+      "sha256": "66461b0978bc3641aacc4f7a4b6fd894a34b879ba861a7744e1ac774ebb83e1d",
+      "coverage": "addressed_review_and_milestone"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Советник — приёмка семейного физического критерия.md",
+      "sha256": "ece1ab13b85db8b97628992c11c4714a52ada07f0baf75d8f3953a87b66995ba",
+      "coverage": "addressed_review_and_milestone"
     }
   ],
   "exclusions": [
