@@ -248,6 +248,10 @@
       "sha256": "532fc4c69839956665a58433e269ebc9d69b8d765bd99cb13e549d96599a7e12",
       "lines": 132
     },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Как фиксированная работа меняет будущие возможности.md": {
+      "sha256": "b8a33e788b5b719cdafdd90d31bf848e83425eaea1785702951ae7b9f4cb0d2a",
+      "lines": 95
+    },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CENTRAL_PHYSICAL_PRINCIPLE_20261103/SYNTHESIS_RU.md": {
       "sha256": "f3401ea9251062d143573c0f77a81959b8c5299f964531d8c6506623fe244935",
       "lines": 99
@@ -519,6 +523,18 @@
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Отобранная организация — цена будущей готовности.md": {
       "sha256": "d1fd4059e8f3940972ce26b503f8297194fe9e066646f7d18eea1b2124185f69",
       "lines": 162
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Фиксированная работа — семейный физический критерий.md": {
+      "sha256": "f7a812e1dcffa8e2655a46d16967ccc9ea9b8f4ac4f95bed966a75be5cc547f6",
+      "lines": 238
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Фиксированная работа — достижимость и определённость будущего.md": {
+      "sha256": "7a250cec86415cb972be886e1aec2ff13d8cd50287989eab8de4bf6f390da85e",
+      "lines": 192
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — семейный закон фиксированной работы.md": {
+      "sha256": "43d013c2959eb5e9e0e1980d6d3d73e62cd6262181fe97d244b2d5e18ae9076b",
+      "lines": 44
     },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
@@ -1439,6 +1455,26 @@
       "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка насыщения — абсолютная доплата.md",
       "sha256": "0cd0055b796a249c736b558f6a698b5e2ce8447be974fb39f9c3e989bd5668f0",
       "coverage": "accepted_delivery"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Как фиксированная работа меняет будущие возможности.md",
+      "sha256": "b8a33e788b5b719cdafdd90d31bf848e83425eaea1785702951ae7b9f4cb0d2a",
+      "coverage": "accepted_family_law_delivery"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Фиксированная работа — семейный физический критерий.md",
+      "sha256": "f7a812e1dcffa8e2655a46d16967ccc9ea9b8f4ac4f95bed966a75be5cc547f6",
+      "coverage": "accepted_family_law_delivery"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Фиксированная работа — достижимость и определённость будущего.md",
+      "sha256": "7a250cec86415cb972be886e1aec2ff13d8cd50287989eab8de4bf6f390da85e",
+      "coverage": "accepted_family_law_delivery"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — семейный закон фиксированной работы.md",
+      "sha256": "43d013c2959eb5e9e0e1980d6d3d73e62cd6262181fe97d244b2d5e18ae9076b",
+      "coverage": "accepted_family_law_delivery"
     }
   ],
   "exclusions": [
