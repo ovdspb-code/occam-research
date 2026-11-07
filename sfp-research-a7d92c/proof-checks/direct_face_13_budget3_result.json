@@ -1,0 +1,24 @@
+{
+  "delta": "1/100",
+  "budget_upper": "3",
+  "face": "d13=0 and d23=0 by symmetry",
+  "target": "170639/50000",
+  "target_upper": 3.4127800000000006,
+  "certified": false,
+  "processed": 245824,
+  "accepted": 110748,
+  "material_pruned": 256,
+  "pending": 23818,
+  "smallest_accepted_lower": 3.4127800069891143,
+  "elapsed_seconds": 90.00007900001947,
+  "pending_worst": [
+    0,
+    [
+      0.007282722792755768,
+      0.007285653849252328,
+      0.654296875,
+      0.65478515625
+    ]
+  ],
+  "script_sha256": "487c5140df827cf893445c16594336e52fee295113241baf7e4d58fcc2fcff1d"
+}

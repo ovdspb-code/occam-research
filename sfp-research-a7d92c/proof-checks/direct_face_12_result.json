@@ -1,0 +1,19 @@
+{
+  "delta": "1/100",
+  "face": "d12=0",
+  "domain": "all material budgets; positive-star closure",
+  "target_upper": 3.414213562373096,
+  "certified": false,
+  "processed": 200000,
+  "accepted": 58516,
+  "pending": 82969,
+  "smallest_accepted_lower": 3.414214073034629,
+  "elapsed_seconds": 23.256021584005794,
+  "pending_worst": [
+    0.912109375,
+    0.912353515625,
+    0.064208984375,
+    0.064453125
+  ],
+  "script_sha256": "88c91df707997dc99da75761fdc4901a043d09788e6f2b0578e92dfec47e55a8"
+}

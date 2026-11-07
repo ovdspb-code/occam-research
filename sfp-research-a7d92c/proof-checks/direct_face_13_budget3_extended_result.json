@@ -1,0 +1,16 @@
+{
+  "delta": "1/100",
+  "budget_upper": "3",
+  "face": "d13=0 and d23=0 by symmetry",
+  "target": "170639/50000",
+  "target_upper": 3.4127800000000006,
+  "certified": true,
+  "processed": 269642,
+  "accepted": 134553,
+  "material_pruned": 269,
+  "pending": 0,
+  "smallest_accepted_lower": 3.4127800069891143,
+  "elapsed_seconds": 99.63764104098664,
+  "pending_worst": null,
+  "script_sha256": "487c5140df827cf893445c16594336e52fee295113241baf7e4d58fcc2fcff1d"
+}

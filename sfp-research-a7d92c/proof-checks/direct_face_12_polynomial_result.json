@@ -1,0 +1,15 @@
+{
+  "delta": "1/100",
+  "face": "d12=0",
+  "method": "exact rational cancellation plus outward interval Horner",
+  "certified": true,
+  "processed": 173377,
+  "accepted": 86689,
+  "pending": 0,
+  "target_upper": 3.414213562373096,
+  "smallest_accepted_lower": 3.4142136138316452,
+  "elapsed_seconds": 62.885887666023336,
+  "pending_worst": null,
+  "script_sha256": "2974510a66a72454ac44f207191fc03b124d7ac55ab6976b9a982d1d3f6c3d83",
+  "interval_library_sha256": "88c91df707997dc99da75761fdc4901a043d09788e6f2b0578e92dfec47e55a8"
+}
