@@ -3,6 +3,7 @@
   "communities": {
     "0": [
       "acquired_specialization_log_price",
+      "diagonal_growth_direction_cost",
       "full_price_gap",
       "hidden_contribution_universality_deficit",
       "kron_mobility_order",
@@ -214,7 +215,7 @@
     ]
   },
   "cohesion": {
-    "0": 0.2727272727272727,
+    "0": 0.2564102564102564,
     "1": 0.19696969696969696,
     "2": 0.16666666666666666,
     "3": 0.18181818181818182,
