@@ -2591,7 +2591,7 @@
       <data key="d15">False</data>
     </node>
     <node id="fixed_work_future_family_profile">
-      <data key="d0">Фиксированная работа создаёт выигрыш и потерю будущих функций</data>
+      <data key="d0">Фиксированная работа: выигрыш и удорожание будущих действий</data>
       <data key="d2">theorem</data>
       <data key="d3">established</data>
       <data key="d4">electrical</data>

@@ -6131,7 +6131,7 @@
     },
     {
       "id": "fixed_work_future_family_profile",
-      "label": "Фиксированная работа создаёт выигрыш и потерю будущих функций",
+      "label": "Фиксированная работа: выигрыш и удорожание будущих действий",
       "kind": "theorem",
       "status": "established",
       "domain": "electrical",
