@@ -236,6 +236,14 @@
       "sha256": "4df253893b9f6f8efe014ede7be0c3834a66a69d40623cd4f03e429c75913dfd",
       "lines": 53
     },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Как окончание работы меняет будущую готовность.md": {
+      "sha256": "e7ae599221f4575cb2d204e7e75a1f195ea7ea6a532163b113b0f26f3da9e882",
+      "lines": 64
+    },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Терминальный закон — граница самостоятельности.md": {
+      "sha256": "5e7e037d3d1f1383d4b609b0385cb531bfb6378f8ea3f40c683caf96027e339c",
+      "lines": 129
+    },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CENTRAL_PHYSICAL_PRINCIPLE_20261103/SYNTHESIS_RU.md": {
       "sha256": "f3401ea9251062d143573c0f77a81959b8c5299f964531d8c6506623fe244935",
       "lines": 99
@@ -945,6 +953,26 @@
     {
       "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Советник — независимое воспроизведение глобального отбора.md",
       "sha256": "d8cf3c6637306cf5fd474407f7fc536330a14fd74d27dc15642b566d9fda62ff"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Как окончание работы меняет будущую готовность.md",
+      "sha256": "e7ae599221f4575cb2d204e7e75a1f195ea7ea6a532163b113b0f26f3da9e882",
+      "coverage": "addressed_internal_delivery"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Терминальный закон — центральная постановка.md",
+      "sha256": "757ebeeb50b0306ff7817604fedacd27f7bdffbfccc72142f14ef2bee539a6a7",
+      "coverage": "addressed_internal_delivery"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Терминальный закон — граница самостоятельности.md",
+      "sha256": "5e7e037d3d1f1383d4b609b0385cb531bfb6378f8ea3f40c683caf96027e339c",
+      "coverage": "addressed_internal_delivery"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Советник — принятая веха двух режимов.md",
+      "sha256": "991737b84afe564411b8937418742ab0be28abd48647698899ccea04101bec7b",
+      "coverage": "addressed_internal_delivery"
     },
     {
       "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CENTRAL_PHYSICAL_PRINCIPLE_20261103/SYNTHESIS_RU.md",
