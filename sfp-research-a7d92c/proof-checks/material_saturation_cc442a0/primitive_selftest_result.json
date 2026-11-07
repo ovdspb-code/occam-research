@@ -1,0 +1,13 @@
+{
+  "seed": 20261107,
+  "all_exact_fraction_inclusions_passed": true,
+  "counts_add_sub_mul_div_square_sqrt": [
+    10000,
+    10000,
+    10000,
+    4921,
+    10000,
+    2504
+  ],
+  "formal_IEEE_or_compiler_verification": false
+}

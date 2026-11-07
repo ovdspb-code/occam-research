@@ -1,0 +1,86 @@
+{
+  "source_commit": "a6c2719de580f999b808e28fb7ed45348cee7b70",
+  "reference_H_commit": "2f87f88854b9978e906d1d51bf0111e292f89dd5",
+  "date": "2026-11-07",
+  "status": "author_computer_assisted_proof; independent review open",
+  "budget": "181901/85000",
+  "competitive_L": "6825559/2000000",
+  "t_floor": "19673/4607252325",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "compiler_options": ["-O2", "-std=c++17", "-ffp-contract=off"],
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "final_run": {
+    "certified": true,
+    "processed": 1864537,
+    "pending": 0,
+    "leaves": 932269,
+    "max_depth": 34,
+    "seconds": 31.996566007,
+    "counts": [0, 1415, 320, 525212, 182159, 118202, 19347, 68205, 15226, 2183],
+    "from_full_initial_domain": true,
+    "resume_used": false
+  },
+  "count_labels": {
+    "1": "material infeasible",
+    "2": "violates competitive t-floor",
+    "3": "objective lower bound exceeds L",
+    "4": "fixed-offdiagonal scalar derivative excludes zero",
+    "5": "normalized f1 derivative excludes zero",
+    "6": "normalized f2 derivative excludes zero",
+    "7": "normalized f3 derivative excludes zero",
+    "8": "exact symmetry half excluded",
+    "9": "competitive linear-solution enclosure empty"
+  },
+  "exact_algebra": {
+    "physical_K_equals_compact": [true, true, true, true, true, true],
+    "det_Df": "-a*b*c/(a + b + c)**3",
+    "coordinate_derivatives_exact": true,
+    "fixed_offdiagonal_derivative_exact": true,
+    "competitive_t_floor_exact": true,
+    "ell_direct_gt_179_over_50": true,
+    "counterexample_W2": "-33832/2510109",
+    "counterexample_Jordan_diagonal_negative": true,
+    "counterexample_three_forms_positive": [true, true, true],
+    "reference_C_decomposition": true,
+    "new_ODE": false,
+    "new_global_stationarity_result_is_interval_not_symbolic": true
+  },
+  "primitive_tests": {
+    "seed": 20261107,
+    "all_exact_fraction_inclusions_passed": true,
+    "counts_add_sub_mul_div_square_sqrt": [10000, 10000, 10000, 4921, 10000, 2504],
+    "formal_IEEE_or_compiler_verification": false
+  },
+  "files": {
+    "saturation_certificate.cpp": {
+      "bytes": 7623,
+      "sha256": "2d5cef1b943de8586af64971222fd494de84cf3499e39cf3d103b15026485b26",
+      "git_blob": "5ded9a71b00e9d40999a1a630a89de6126c0d3b9"
+    },
+    "exact_verification.py": {
+      "bytes": 2648,
+      "sha256": "9ffb6dadf64fc5eb34ca7b9eedbf55604a1f84c22980524c7fd1244db7da80c6",
+      "git_blob": "dd9785a2033b4b5fa0067b67db44f351c3b4177b"
+    },
+    "primitive_selftest.py": {
+      "bytes": 2317,
+      "sha256": "86e6000cd82f6a2b51d09ef471d9881c8429c80e38434c7322d30511e5eef318",
+      "git_blob": "760ef998f657d49d9a9ba4448afcff37dc1736a7"
+    }
+  },
+  "numerical_search_used_as_proof": false,
+  "new_ODE": false,
+  "new_network": false,
+  "budget_or_tau_tuned_after_outcome": false,
+  "full_external_or_formal_verification": false,
+  "limitations": [
+    "IEEE-754 binary64, round-to-nearest and correctly rounded sqrt assumed",
+    "Interval source analytically inspected but no independent full implementation",
+    "Old H and absolute terminal theorem used as accepted premises, not reaudited",
+    "No exact numerical Delta or optimal controller computed",
+    "Only stated fixed budget and preregistered small-tau regime covered"
+  ],
+  "exploratory_status": "Several preliminary enclosures and incomplete runs were not counted as proof. A warm-start completion was also not used as the final certificate. The frozen final source was run from the whole initial domain without resume; it closed every box."
+}

@@ -214,6 +214,9 @@
     ],
     "36": [
       "replica_resource_law"
+    ],
+    "37": [
+      "work_selected_resource_conflict"
     ]
   },
   "cohesion": {
@@ -253,6 +256,7 @@
     "33": 1.0,
     "34": 1.0,
     "35": 1.0,
-    "36": 1.0
+    "36": 1.0,
+    "37": 1.0
   }
 }

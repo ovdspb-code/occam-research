@@ -1,0 +1,25 @@
+{
+  "physical_K_equals_compact": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "det_Df": "-a*b*c/(a + b + c)**3",
+  "coordinate_derivatives_exact": true,
+  "fixed_offdiagonal_derivative_exact": true,
+  "competitive_t_floor_exact": true,
+  "ell_direct_gt_179_over_50": true,
+  "counterexample_W2": "-33832/2510109",
+  "counterexample_Jordan_diagonal_negative": true,
+  "counterexample_three_forms_positive": [
+    true,
+    true,
+    true
+  ],
+  "reference_C_decomposition": true,
+  "new_ODE": false,
+  "new_global_stationarity_result_is_interval_not_symbolic": true
+}

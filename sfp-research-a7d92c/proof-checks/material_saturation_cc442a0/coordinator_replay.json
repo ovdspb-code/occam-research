@@ -1,0 +1,47 @@
+{
+  "source_commit": "cc442a094b60de99f2e8f491c59fd66bb437d2fd",
+  "source_repository": "ovdspb-code/psb",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin",
+  "compiler_flags": [
+    "-O2",
+    "-std=c++17",
+    "-ffp-contract=off"
+  ],
+  "platform": "macOS-26.7.2-arm64-arm-64bit",
+  "architecture": "arm64",
+  "execution": "Full initial box; no saved queue; same original source",
+  "all_author_tree_counts_match": true,
+  "scope": "Independent execution and source audit; NOT an independently implemented interval engine or formal compiler verification",
+  "result": {
+    "certified": true,
+    "processed": 1864537,
+    "pending": 0,
+    "leaves": 932269,
+    "max_depth": 34,
+    "seconds": 15.984891542,
+    "counts": [
+      0,
+      1415,
+      320,
+      525212,
+      182159,
+      118202,
+      19347,
+      68205,
+      15226,
+      2183
+    ],
+    "from_full_initial_domain": true,
+    "resume_used": false
+  },
+  "files": {
+    "RESULT_RU.md": "083ff73eb144d061b1100682858410b0a5587c49efa33cc7019d44e9d233e60a",
+    "VERIFICATION.json": "e5abb5a25e1e916dbe9077db814abb0218834031a6e7fcc7e62375690e81f595",
+    "saturation_certificate.cpp": "2d5cef1b943de8586af64971222fd494de84cf3499e39cf3d103b15026485b26",
+    "exact_verification.py": "9ffb6dadf64fc5eb34ca7b9eedbf55604a1f84c22980524c7fd1244db7da80c6",
+    "primitive_selftest.py": "86e6000cd82f6a2b51d09ef471d9881c8429c80e38434c7322d30511e5eef318",
+    "replay_clang.json": "e1a5f2c9cdea784d95a76aa69534670d5cae0aba821e03cdd3891231c6c0c4c9",
+    "exact_verification.json": "81e4428023b3a6d6fb7f5f374978c9d181aa7c2592ed128f2a8403c361385214",
+    "primitive_selftest_result.json": "432ab0b79ffd73f88620df1d723f3bbe954f0aa9634b059fab130ab1a945d70a"
+  }
+}
