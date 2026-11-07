@@ -244,6 +244,10 @@
       "sha256": "5e7e037d3d1f1383d4b609b0385cb531bfb6378f8ea3f40c683caf96027e339c",
       "lines": 129
     },
+    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Что фиксированная работа оставляет для будущих функций.md": {
+      "sha256": "532fc4c69839956665a58433e269ebc9d69b8d765bd99cb13e549d96599a7e12",
+      "lines": 132
+    },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CENTRAL_PHYSICAL_PRINCIPLE_20261103/SYNTHESIS_RU.md": {
       "sha256": "f3401ea9251062d143573c0f77a81959b8c5299f964531d8c6506623fe244935",
       "lines": 99
@@ -973,6 +977,11 @@
       "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Советник — принятая веха двух режимов.md",
       "sha256": "991737b84afe564411b8937418742ab0be28abd48647698899ccea04101bec7b",
       "coverage": "addressed_internal_delivery"
+    },
+    {
+      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Что фиксированная работа оставляет для будущих функций.md",
+      "sha256": "532fc4c69839956665a58433e269ebc9d69b8d765bd99cb13e549d96599a7e12",
+      "coverage": "editorial_strategy_correction"
     },
     {
       "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CENTRAL_PHYSICAL_PRINCIPLE_20261103/SYNTHESIS_RU.md",
