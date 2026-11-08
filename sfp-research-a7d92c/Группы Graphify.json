@@ -128,37 +128,39 @@
       "bio_silent_recoding"
     ],
     "12": [
+      "fixed_work_future_family_profile",
+      "fixed_work_unique_future_profile",
+      "work_geometry_robust_unique_profile",
+      "work_selected_resource_conflict"
+    ],
+    "13": [
       "aq_common_flow_alignment",
       "aq_new_load_recovery",
       "aq_partner_induced_jam"
     ],
-    "13": [
+    "14": [
       "aq_future_selection_gap",
       "aq_known_selection",
       "aq_learned_corrections"
     ],
-    "14": [
+    "15": [
       "aq_maxwell_history",
       "aq_memory_not_help",
       "aq_trace_preservation"
     ],
-    "15": [
+    "16": [
       "m06_accuracy_resource",
       "m06_exact_saturation",
       "m06_graph_uniform_sensitivity"
     ],
-    "16": [
+    "17": [
       "m09_action_observation_gap",
       "m09_noise_threshold",
       "m09_paid_access_law"
     ],
-    "17": [
+    "18": [
       "balanced_subfamily_minimax",
       "future_function_bridge"
-    ],
-    "18": [
-      "fixed_work_future_family_profile",
-      "work_selected_resource_conflict"
     ],
     "19": [
       "geometric_price",
@@ -238,7 +240,7 @@
     "14": 0.6666666666666666,
     "15": 0.6666666666666666,
     "16": 0.6666666666666666,
-    "17": 1.0,
+    "17": 0.6666666666666666,
     "18": 1.0,
     "19": 1.0,
     "20": 1.0,

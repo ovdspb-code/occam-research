@@ -252,6 +252,10 @@
       "sha256": "b8a33e788b5b719cdafdd90d31bf848e83425eaea1785702951ae7b9f4cb0d2a",
       "lines": 95
     },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/SYNTHESIS_RU.md": {
+      "sha256": "5f5fa8b8cffd2abffc66fbe03bc0f3451aa5f8dd704e742e7f2c9182eeef509c",
+      "lines": 111
+    },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CENTRAL_PHYSICAL_PRINCIPLE_20261103/SYNTHESIS_RU.md": {
       "sha256": "f3401ea9251062d143573c0f77a81959b8c5299f964531d8c6506623fe244935",
       "lines": 99
@@ -543,6 +547,18 @@
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Принятая веха — семейные последствия фиксированной работы.md": {
       "sha256": "66461b0978bc3641aacc4f7a4b6fd894a34b879ba861a7744e1ac774ebb83e1d",
       "lines": 55
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/RIGIDITY_REVIEW_RU.md": {
+      "sha256": "9b7310da64a3466ea1fc94f947e4b2d421b702aa0cd359d9b027491951248234",
+      "lines": 129
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/TERMINAL_PROFILE_ANALYSIS_RU.md": {
+      "sha256": "c0395bed3fe0559ecd2bed701ab56aced08440e874b41a99952cac0d0aacf1f0",
+      "lines": 175
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/ROBUSTNESS_REVIEW_RU.md": {
+      "sha256": "5f60ad67eb5d0dc3914312b7266aa5abb9ce4730a8fc0b53edfaea3fab055d98",
+      "lines": 108
     },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
@@ -1493,6 +1509,31 @@
       "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Советник — приёмка семейного физического критерия.md",
       "sha256": "ece1ab13b85db8b97628992c11c4714a52ada07f0baf75d8f3953a87b66995ba",
       "coverage": "addressed_review_and_milestone"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/SYNTHESIS_RU.md",
+      "sha256": "5f5fa8b8cffd2abffc66fbe03bc0f3451aa5f8dd704e742e7f2c9182eeef509c",
+      "coverage": "frozen_internal_research_delivery"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/RIGIDITY_ANALYSIS_RU.md",
+      "sha256": "fcad35efec2e341cd1314225b7e40c4c04b6d30e901ed3e9c68c546441db7b59",
+      "coverage": "frozen_internal_research_delivery"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/RIGIDITY_REVIEW_RU.md",
+      "sha256": "9b7310da64a3466ea1fc94f947e4b2d421b702aa0cd359d9b027491951248234",
+      "coverage": "frozen_internal_research_delivery"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/TERMINAL_PROFILE_ANALYSIS_RU.md",
+      "sha256": "c0395bed3fe0559ecd2bed701ab56aced08440e874b41a99952cac0d0aacf1f0",
+      "coverage": "frozen_internal_research_delivery"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/ROBUSTNESS_REVIEW_RU.md",
+      "sha256": "5f60ad67eb5d0dc3914312b7266aa5abb9ce4730a8fc0b53edfaea3fab055d98",
+      "coverage": "frozen_internal_research_delivery"
     }
   ],
   "exclusions": [

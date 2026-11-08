@@ -1,0 +1,14 @@
+label rigidity_20261108
+status PASS
+processed 540
+leftover 0
+maxdepth 17
+elapsed 0.010561584000000001
+counts 3 22 3 117 61 62 3 269 0
+minimum_Hss 14504.800014359875
+minimum_Hdd 176.05098786338087
+minimum_det 2601352.9887431767
+arithmetic_flags 0
+arguments 181901/85000 1/5100 1/51 6825559/2000000 19673/4607252325 1/50 33/2500 17/1250 1/5000 10000 60 0 rigidity_20261108
+nonfinite_flags 0
+empty_flags 0
