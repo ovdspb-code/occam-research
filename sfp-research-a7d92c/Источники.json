@@ -261,8 +261,8 @@
       "lines": 122
     },
     "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/SYNTHESIS_RU.md": {
-      "sha256": "1f35c19285663cb5d73869ca7c484dba57ea806d4f8d6fd2a8fef4ab0b7db6c5",
-      "lines": 118
+      "sha256": "a9c87638837841568f7eaecdaa1c1bc1283916598c863e3c8d3fb5cbc66aa90f",
+      "lines": 126
     },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CENTRAL_PHYSICAL_PRINCIPLE_20261103/SYNTHESIS_RU.md": {
       "sha256": "f3401ea9251062d143573c0f77a81959b8c5299f964531d8c6506623fe244935",
@@ -607,6 +607,14 @@
     "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/RETENTION_REVIEW_RU.md": {
       "sha256": "ca02324ee87b33136eee37fedec10e8b607bc9ca35d3fbe9e5c83ba41d57e5c3",
       "lines": 108
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/ACCURACY_COROLLARY_RU.md": {
+      "sha256": "89f308061b2252849160a4c6e0533d52d010e2de424adb48f80154b997f585c8",
+      "lines": 51
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/evidence/ADVISOR_ACCEPTANCE_20261108_RU.md": {
+      "sha256": "4fcb0322b2ad15bad7a8c87184b0b5f07c73e717867813b3dc71029379637535",
+      "lines": 240
     },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
@@ -1615,8 +1623,8 @@
     },
     {
       "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/SYNTHESIS_RU.md",
-      "sha256": "1f35c19285663cb5d73869ca7c484dba57ea806d4f8d6fd2a8fef4ab0b7db6c5",
-      "coverage": "frozen_internal_terminal_selection"
+      "sha256": "a9c87638837841568f7eaecdaa1c1bc1283916598c863e3c8d3fb5cbc66aa90f",
+      "coverage": "addressed_acceptance_and_accuracy_corollary"
     },
     {
       "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/LOWER_SELECTION_RU.md",
@@ -1650,8 +1658,23 @@
     },
     {
       "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/ACCEPTANCE_RU.md",
-      "sha256": "456a54226368ca00a8f03a277053f32a14f682ef8e8d7493de21c5ca58ef524d",
-      "coverage": "frozen_internal_terminal_selection"
+      "sha256": "6665abd8c5dae24ef52be2f1d95295b41cd4cbd270bb5193418f6848ef5f4471",
+      "coverage": "addressed_acceptance_and_accuracy_corollary"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/README_RU.md",
+      "sha256": "4d1d0c5ae5514921503e0f3c9a55d30673f03a86c65dc9aa6f1cc7c3fcddd9ce",
+      "coverage": "addressed_acceptance_and_accuracy_corollary"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/ACCURACY_COROLLARY_RU.md",
+      "sha256": "89f308061b2252849160a4c6e0533d52d010e2de424adb48f80154b997f585c8",
+      "coverage": "addressed_acceptance_and_accuracy_corollary"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/evidence/ADVISOR_ACCEPTANCE_20261108_RU.md",
+      "sha256": "4fcb0322b2ad15bad7a8c87184b0b5f07c73e717867813b3dc71029379637535",
+      "coverage": "addressed_acceptance_and_accuracy_corollary"
     }
   ],
   "exclusions": [

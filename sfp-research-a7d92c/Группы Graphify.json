@@ -90,6 +90,7 @@
       "fixed_work_unique_future_profile",
       "occupied_resource_retention_price",
       "resource_clearance_future_price",
+      "sublog_excess_resource_selection",
       "work_geometry_robust_unique_profile",
       "work_selected_resource_conflict",
       "work_static_hidden_collapse"
@@ -233,7 +234,7 @@
     "3": 0.18181818181818182,
     "4": 0.18181818181818182,
     "5": 0.2,
-    "6": 0.2857142857142857,
+    "6": 0.25,
     "7": 0.25,
     "8": 0.2857142857142857,
     "9": 0.5,
