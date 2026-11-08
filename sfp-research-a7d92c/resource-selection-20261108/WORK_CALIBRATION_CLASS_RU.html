@@ -1,0 +1,60 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Класс работ с полным отбором свободного материала — SFP</title><link rel="stylesheet" href="../atlas.css"><style>article{max-width:1000px;margin:40px auto;padding:0 25px;overflow-wrap:anywhere}article h1{font-size:30px}article h2{font-size:23px;margin:36px 0 15px}article p{margin:14px 0}article a{overflow-wrap:anywhere}article table{border-collapse:collapse;font-size:14px;display:block;overflow:auto}article td,article th{padding:12px;border:1px solid var(--line);min-width:130px;vertical-align:top}article blockquote{border-left:3px solid var(--accent);padding-left:20px;margin-left:0}article pre{white-space:pre-wrap;overflow-wrap:anywhere}article .math-display{max-width:100%;overflow-x:auto;margin:18px 0}article .math-inline{display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle}</style><article><p><a href="../index.html">Атлас</a> · <a href="../index.html#route=physical_price_of_organization">Маршрут «Физическая цена организации»</a></p><h1 id="класс-работ-с-полным-отбором-свободного-материала">Класс работ с полным отбором свободного материала</h1>
+<p>8 ноября 2026. Ограниченная аналитическая проверка структурного следствия координатора. Это применение уже доказанной физической цепочки, без новых поисков, расчётов или изменения носителя.</p>
+<p><strong>Вывод: SUPPORT.</strong> Терминальный закон определяется проверяемой глобальной калибровкой статической длины. Он действует для любого одного заранее объявленного конечного замкнутого рабочего слова, удовлетворяющего этой калибровке. Строгая калибровка сохраняется в открытой окрестности полной геометрии слова, включая несимметричные возмущения. Принятые <code>theta=2,4</code> доказывают непустоту класса.</p>
+<h2 id="точный-класс-и-неподвижная-физика">1. Точный класс и неподвижная физика</h2>
+<p>Сохраняются прежние <code>C0,P,g0,S</code>, шестирёберный носитель, native-привод, Euclidean-норма управления, positivity/material/output guards и будущее семейство <code>C0+tau v</code>, <code>||v||=1</code>, с прежним фиксированным <code>tau</code>.</p>
+<p>Одна геометрия работы задаётся до исполнения конечным словом</p>
+<pre><code>a0=am=0,   a1,...,a_(m−1)∈R³,
+w_j=a_j−a_(j−1)≠0,   j=1,...,m.</code></pre>
+<p>Работа повторяет <code>C0+rho a0→...→C0+rho am</code> ровно <code>N=floor(S/rho²)</code> раз. Все подготовки и обходы разрешены и оплачены. При достаточно малом <code>rho</code> обязательные targets и log-output legs сохраняют исходные строгие guards, поскольку число и геометрия offsets фиксированы.</p>
+<p>На полном физическом положительном слое <code>X0={C=C0,M≤P}</code> определим явные объекты</p>
+<pre><code>H=sum h, Phi=sum f, W=Phi²/H,
+D=diag(C0),
+ell_w(g)=sum_j ||K(g)^−1w_j||,
+ell_dir,w=sum_j ||D^−1w_j||.</code></pre>
+<p><strong>Структурный вход:</strong> существует одно <code>c_w&gt;0</code>, для которого на всём <code>X0</code></p>
+<pre><code>delta_w(g):=ell_w(g)−ell_dir,w ≥c_w W(g).            (1)</code></pre>
+<p>Это не определение через неизвестные оптимальные окончания или будущую value function. Неравенство (1) проверяется по физической матрице <code>K</code>, геометрии слова и явным <code>Phi,H</code>. Для двух прежних треугольников <code>theta=2,4</code> оно уже доказано глобальными cone/support оценками, без H/S новой геометрии.</p>
+<p>Остальные входы принадлежат прежнему носителю: uniform <code>K≥lambda I</code>, bounds изменения <code>K</code>, логарифмическая native-скорость, full bracket rank≤3 на положительной области и прямые каналы <code>dot log d=−u</code>. Они от геометрии обязательного слова не зависят.</p>
+<h2 id="теорема-полного-терминального-отбора">2. Теорема полного терминального отбора</h2>
+<p>Для каждого фиксированного слова с (1) и любого фиксированного <code>Xi&lt;infinity</code> все реальные исполнения, удовлетворяющие</p>
+<pre><code>U[T−V(Q_(rho,N,w);g0)]≤Xi,</code></pre>
+<p>имеют</p>
+<pre><code>H_end≤C_(w,Xi) sqrt(rho)[1+|log rho|]²→0,
+Phi_end→0,
+R_end→Rmax=P−sum C0.                               (2)</code></pre>
+<p>Настоящий инфимум здесь относится именно к этому слову; равенство рабочих цен разных геометрий не утверждается. Нулевые рёбра не достигаются за конечное время; все исполнения положительны.</p>
+<p><strong>Перенос доказательства.</strong> Exact direct log-длина одного периода равна <code>b_rho=rho ell_dir,w+O(rho²)</code>. Scaled-coordinate paid entry и no-reset continuation дают настоящий upper <code>N b_rho+O(log(1/rho))</code> для любого такого конечного слова. Closed-output bounds и cutoff shape-потенциалы <code>J_i</code> не используют число или симметрию targets. Поэтому, если <code>q_rho+c q_rho²=rho ell_dir,w</code>, то</p>
+<pre><code>E=UT−Nq_rho=O(log(1/rho)),
+rho sum_j delta_w(g_j)≤(1+O(rho))E,
+H_j≤C(1+E)Phi_j≤C(1+E)² delta_w(g_j).</code></pre>
+<p>Все периоды, включая подготовительные и длинные, входят в эти all-policy оценки. Гармонический поздний якорь из диапазона оставшейся работы <code>rho^(−3/2)≤r≤N</code> имеет <code>rho r delta_w≤C</code> и <code>H≤C sqrt(rho)log²(1/rho)</code>.</p>
+<p>Физическое тождество <code>0≤diag(C)−K</code>, <code>||diag(C)−K||≤3Phi²/H</code> и relative closed-period hidden-дрейф дают из фактического якоря продолжение того же слова ценой <code>r q_rho+O(1)</code> без перехода к иному состоянию и без reset. Восстановление конечного <code>H≥d&gt;0</code> потребовало бы по logarithmic tail-bound расходящейся надбавки. Замена хвоста противоречит bounded regret и даёт (2), ровно как в <code>LOWER_SELECTION_RU.md</code> и <code>TERM_ENDGAME_RU.md</code>. Все constants могут зависеть от одного фиксированного слова.</p>
+<p>При прежнем <code>tau</code> вся сфера имеет strict clearance, поскольку <code>tau&lt;C0,min=A</code> и <code>Rmax&gt;2A&gt;sqrt(3)tau</code>. Ресурсный закон поэтому даёт на всём классе один предельный профиль</p>
+<pre><code>sup_||v||=1 |U D_(tau,v)(g_end)
+             −||log[(C0+tau v)/C0]|||→0.            (3)</code></pre>
+<p>Это не утверждение, что все будущие цены улучшились относительно <code>g0</code>.</p>
+<h2 id="строгая-калибровка-открыта-по-полной-геометрии">3. Строгая калибровка открыта по полной геометрии</h2>
+<p>Положим <code>X=K(g)^−1</code>, <code>Y=D^−1</code>, <code>beta=lambda^−1</code>. Обе матрицы находятся в uniform SPD-компакте</p>
+<pre><code>P^−1 I≤X,Y≤beta I.</code></pre>
+<p>Для ненулевого <code>z</code> градиент функции <code>||Xz||</code> по вектору <code>z</code> равен</p>
+<pre><code>G(X,z)=X²z/||Xz||.</code></pre>
+<p>Прямое вычитание дробей даёт, равномерно по всем <code>z≠0</code>,</p>
+<pre><code>||G(X,z)−G(Y,z)||≤C_G||X−Y||,
+C_G=2beta P+(beta P)².                              (4)</code></pre>
+<p>Первое слагаемое получается из <code>||X²−Y²||≤2beta||X−Y||</code> и <code>||Xz||≥||z||/P</code>; второе — из Lipschitz-разности двух знаменателей. Это проверка относительной ошибки, не обычная непрерывность значения <code>ell</code>.</p>
+<p>Пусть sides изменились на <code>w'_j=w_j+Delta w_j</code> и <code>||Delta w_j||&lt;||w_j||/2</code>. Весь прямой сегмент между sides тогда не содержит нуля. Интегрируя (4) вдоль него,</p>
+<pre><code>|delta_w&#39;(g)−delta_w(g)|
+   ≤C_G sum_j||Delta w_j||·||K^−1−D^−1||.</code></pre>
+<p>На всём <code>X0</code> резольвентное тождество и <code>||diag(C0)−K||≤3W</code> дают</p>
+<pre><code>||K^−1−D^−1||≤3beta||D^−1||W.</code></pre>
+<p>Следовательно с явной достаточной константой <code>C_cal=3beta||D^−1||C_G</code></p>
+<pre><code>delta_w&#39;(g)≥[c_w−C_cal sum_j||Delta w_j||]W(g).     (5)</code></pre>
+<p>При <code>sum_j||Delta w_j||&lt;c_w/(2C_cal)</code> сохраняется (1) с <code>c_w/2</code> на <strong>всём</strong> физическом слое, включая сколь угодно малые <code>Phi,H</code>. Именно множитель <code>W</code> не даёт потерять строгий знак у dormant-границы.</p>
+<p>Замкнутость слова сохраняется выбором waypoint-координат: <code>Delta a0=Delta am=0</code>, <code>Delta w_j=Delta a_j−Delta a_(j−1)</code>. В открытой окрестности <code>(a1,...,a_(m−1))∈R^(3(m−1))</code> выполнены обе малости выше. Это полная геометрическая окрестность, а не только <code>R</code>-симметричная подсемья. Она содержит работы с несимметричными mandatory targets; никакая симметрия controls или концов для (1)–(3) не требуется.</p>
+<p>Получен аналитический достаточный радиус через <code>c_w,C_cal,min||w_j||</code>; его численное значение не вычислялось. Каждая геометрия объявляется до исполнения и раскрытия будущего запроса. Исходная работа под ответ не заменяется.</p>
+<h2 id="масштаб-вывода">4. Масштаб вывода</h2>
+<p>Класс непуст: оба уже проверенных <code>theta=2,4</code> удовлетворяют (1), и вокруг каждого есть открытая область полной геометрии. Терминальный отбор <code>(Phi,R)</code> и universal direct-профиль сохраняются во всём этом классе. Удержание фиксированной ненулевой скрытой массы имеет прежний <code>Theta(log(1/rho))</code> true-excess порядок в допустимом диапазоне порогов; proof restoration также использует только конечное замкнутое слово.</p>
+<p>Вне (1) вывод не заявляется: особая физическая калибровка является содержательным достаточным условием, а не произвольным определением общего адаптивного субстрата. Точные work-value коэффициенты, мировой приоритет и самостоятельная публикационная значимость не устанавливались. Новая сеть, новый <code>tau</code>, новая оптимизация или переаудит прежних результатов не запускались.</p>
+<p>Создан только этот файл; временных ресурсов, изменений M11, Git и внешних действий нет.</p>
+<h2>Доказательные материалы и границы проверки</h2><p>Перекрёстная внутренняя аналитическая приёмка, не внешняя человеческая экспертиза и не формальная верификация. Мировой приоритет и публикационная значимость отдельно не установлены.</p><p><a href="https://github.com/ovdspb-code/psb/blob/9bef891818cbd4a2b23589a28c817f13168bc6b7/docs/sfp/terminal_activity_reserve_20261108/WORK_CALIBRATION_CLASS_RU.md">Точная версия PSB@9bef891 (приватный источник) ↗</a></p><ul><li><a href="SYNTHESIS_RU.html">Полная физическая цена выбирает свободный ресурс</a></li><li><a href="LOWER_SELECTION_RU.html">Абсолютный терминальный отбор: исчезает вся скрытая масса</a></li><li><a href="UPPER_SELECTION_RU.html">Оплаченный подход к неактивной организации: верх полной цены</a></li><li><a href="TERM_ENDGAME_RU.html">Поздний якорь, полный терминальный отбор и цена удержания: проверка</a></li><li><a href="RETENTION_PRICE_RU.html">Сколько стоит сохранить конечную занятость скрытого ресурса</a></li><li><a href="RETENTION_REVIEW_RU.html">Адресная проверка цены удержания скрытого ресурса</a></li><li><a href="WORK_CALIBRATION_CLASS_RU.html">Класс работ с полным отбором свободного материала</a></li><li><a href="ACCEPTANCE_RU.html">Приёмка полного физического отбора и цены удержания</a></li></ul><p><a href="../future-choice-20261108/SYNTHESIS_RU.html">Историческая терминальная лакуна</a> · <a href="../SYNTHESIS_RU.html">Сохранённый положительный результат определимости</a></p></article></html>

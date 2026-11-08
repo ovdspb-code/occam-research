@@ -260,6 +260,10 @@
       "sha256": "aaa1aa0a0c29a0edf7134c154e5769af5e9f946519147e7ef43165216260ad23",
       "lines": 122
     },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/SYNTHESIS_RU.md": {
+      "sha256": "1f35c19285663cb5d73869ca7c484dba57ea806d4f8d6fd2a8fef4ab0b7db6c5",
+      "lines": 118
+    },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CENTRAL_PHYSICAL_PRINCIPLE_20261103/SYNTHESIS_RU.md": {
       "sha256": "f3401ea9251062d143573c0f77a81959b8c5299f964531d8c6506623fe244935",
       "lines": 99
@@ -583,6 +587,26 @@
     "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/RESOURCE_CLEARANCE_REVIEW_RU.md": {
       "sha256": "1c8efd61e07d939a5cb417120c3d574735704d97c27cced153b7b0f5d82ef919",
       "lines": 133
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/LOWER_SELECTION_RU.md": {
+      "sha256": "4d0873a9efcec6e5f36e91d815b2d75f065e4544a06ef306c93831c3f8e05020",
+      "lines": 268
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/WORK_CALIBRATION_CLASS_RU.md": {
+      "sha256": "c930e68bcef0979cad836d513a06aeab0da2713501aeffc1125ec24aa104e498",
+      "lines": 106
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/TERM_ENDGAME_RU.md": {
+      "sha256": "ebc9b436f6623e9e85e83b084f84e284a3eaf2fc6ede97e12b110a4b1a361880",
+      "lines": 206
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/RETENTION_PRICE_RU.md": {
+      "sha256": "0789552caaac2de8a5eb86d7fe78cc557de813b6b52faec986455d78f780966f",
+      "lines": 97
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/RETENTION_REVIEW_RU.md": {
+      "sha256": "ca02324ee87b33136eee37fedec10e8b607bc9ca35d3fbe9e5c83ba41d57e5c3",
+      "lines": 108
     },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
@@ -1588,6 +1612,46 @@
       "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/RESOURCE_CLEARANCE_REVIEW_RU.md",
       "sha256": "1c8efd61e07d939a5cb417120c3d574735704d97c27cced153b7b0f5d82ef919",
       "coverage": "frozen_internal_boundary_stage"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/SYNTHESIS_RU.md",
+      "sha256": "1f35c19285663cb5d73869ca7c484dba57ea806d4f8d6fd2a8fef4ab0b7db6c5",
+      "coverage": "frozen_internal_terminal_selection"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/LOWER_SELECTION_RU.md",
+      "sha256": "4d0873a9efcec6e5f36e91d815b2d75f065e4544a06ef306c93831c3f8e05020",
+      "coverage": "frozen_internal_terminal_selection"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/UPPER_SELECTION_RU.md",
+      "sha256": "7af97c0a16aad0a1df724361c38a41e8f269052270c929a1bc2a393fa1cfd230",
+      "coverage": "frozen_internal_terminal_selection"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/TERM_ENDGAME_RU.md",
+      "sha256": "ebc9b436f6623e9e85e83b084f84e284a3eaf2fc6ede97e12b110a4b1a361880",
+      "coverage": "frozen_internal_terminal_selection"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/RETENTION_PRICE_RU.md",
+      "sha256": "0789552caaac2de8a5eb86d7fe78cc557de813b6b52faec986455d78f780966f",
+      "coverage": "frozen_internal_terminal_selection"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/RETENTION_REVIEW_RU.md",
+      "sha256": "ca02324ee87b33136eee37fedec10e8b607bc9ca35d3fbe9e5c83ba41d57e5c3",
+      "coverage": "frozen_internal_terminal_selection"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/WORK_CALIBRATION_CLASS_RU.md",
+      "sha256": "c930e68bcef0979cad836d513a06aeab0da2713501aeffc1125ec24aa104e498",
+      "coverage": "frozen_internal_terminal_selection"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/ACCEPTANCE_RU.md",
+      "sha256": "456a54226368ca00a8f03a277053f32a14f682ef8e8d7493de21c5ca58ef524d",
+      "coverage": "frozen_internal_terminal_selection"
     }
   ],
   "exclusions": [

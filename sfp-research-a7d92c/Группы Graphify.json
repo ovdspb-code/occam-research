@@ -85,6 +85,16 @@
       "nonlinear_quartic"
     ],
     "6": [
+      "boundary_terminal_selection_gap",
+      "fixed_work_future_family_profile",
+      "fixed_work_unique_future_profile",
+      "occupied_resource_retention_price",
+      "resource_clearance_future_price",
+      "work_geometry_robust_unique_profile",
+      "work_selected_resource_conflict",
+      "work_static_hidden_collapse"
+    ],
+    "7": [
       "m05_closure_null",
       "m05_finite_history",
       "m05_future_equivalence",
@@ -94,7 +104,7 @@
       "m07_family_weak_benefit",
       "stage1_natural_balance_no_dominance"
     ],
-    "7": [
+    "8": [
       "aq_balance_not_kinetics",
       "aq_directional_budget",
       "aq_frequency_mobility",
@@ -103,35 +113,29 @@
       "aq_stz_directional_state",
       "aq_stz_finite_jam"
     ],
-    "8": [
+    "9": [
       "aq_cooperation_delay_tradeoff",
       "aq_coupling_orientation",
       "aq_switching_drift",
       "aq_thixotropic_preparation"
     ],
-    "9": [
+    "10": [
       "aq_electrical_shield",
       "aq_fixed_driver_replacement",
       "aq_harmonic_protection",
       "aq_kron_learning_obstruction"
     ],
-    "10": [
+    "11": [
       "aq_embedded_alignment",
       "aq_full_port_reveals_state",
       "aq_precise_calibration",
       "aq_spring_observation_gap"
     ],
-    "11": [
+    "12": [
       "bio_conditional_certificate",
       "bio_endpoint_alias",
       "bio_panel_observation_tradeoff",
       "bio_silent_recoding"
-    ],
-    "12": [
-      "fixed_work_future_family_profile",
-      "fixed_work_unique_future_profile",
-      "work_geometry_robust_unique_profile",
-      "work_selected_resource_conflict"
     ],
     "13": [
       "aq_common_flow_alignment",
@@ -192,43 +196,34 @@
       "aq_same_error_not_same_learning"
     ],
     "28": [
-      "boundary_terminal_selection_gap"
-    ],
-    "29": [
       "bp_current_matching"
     ],
-    "30": [
+    "29": [
       "bp_cyclic_signal"
     ],
-    "31": [
+    "30": [
       "bp_finite_jets"
     ],
-    "32": [
+    "31": [
       "bp_future_predictor"
     ],
-    "33": [
+    "32": [
       "bp_learning_clock"
     ],
-    "34": [
+    "33": [
       "m01_predictive_certificate"
     ],
-    "35": [
+    "34": [
       "m06_static_dynamic_gap"
     ],
-    "36": [
+    "35": [
       "m08_switch_cost"
     ],
-    "37": [
+    "36": [
       "mobility_profile_needed"
     ],
-    "38": [
+    "37": [
       "replica_resource_law"
-    ],
-    "39": [
-      "resource_clearance_future_price"
-    ],
-    "40": [
-      "work_static_hidden_collapse"
     ]
   },
   "cohesion": {
@@ -238,13 +233,13 @@
     "3": 0.18181818181818182,
     "4": 0.18181818181818182,
     "5": 0.2,
-    "6": 0.25,
-    "7": 0.2857142857142857,
-    "8": 0.5,
+    "6": 0.2857142857142857,
+    "7": 0.25,
+    "8": 0.2857142857142857,
     "9": 0.5,
     "10": 0.5,
     "11": 0.5,
-    "12": 0.6666666666666666,
+    "12": 0.5,
     "13": 0.6666666666666666,
     "14": 0.6666666666666666,
     "15": 0.6666666666666666,
@@ -269,9 +264,6 @@
     "34": 1.0,
     "35": 1.0,
     "36": 1.0,
-    "37": 1.0,
-    "38": 1.0,
-    "39": 1.0,
-    "40": 1.0
+    "37": 1.0
   }
 }

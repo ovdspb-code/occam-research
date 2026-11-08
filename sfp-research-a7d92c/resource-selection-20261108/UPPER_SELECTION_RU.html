@@ -1,0 +1,88 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Оплаченный подход к неактивной организации: верх полной цены — SFP</title><link rel="stylesheet" href="../atlas.css"><style>article{max-width:1000px;margin:40px auto;padding:0 25px;overflow-wrap:anywhere}article h1{font-size:30px}article h2{font-size:23px;margin:36px 0 15px}article p{margin:14px 0}article a{overflow-wrap:anywhere}article table{border-collapse:collapse;font-size:14px;display:block;overflow:auto}article td,article th{padding:12px;border:1px solid var(--line);min-width:130px;vertical-align:top}article blockquote{border-left:3px solid var(--accent);padding-left:20px;margin-left:0}article pre{white-space:pre-wrap;overflow-wrap:anywhere}article .math-display{max-width:100%;overflow-x:auto;margin:18px 0}article .math-inline{display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle}</style><article><p><a href="../index.html">Атлас</a> · <a href="../index.html#route=physical_price_of_organization">Маршрут «Физическая цена организации»</a></p><h1 id="оплаченный-подход-к-неактивной-организации-верх-полной-цены">Оплаченный подход к неактивной организации: верх полной цены</h1>
+<p>8 ноября 2026. Upper-вклад в полном исходном физическом контракте. Используются принятые dormant-минимумы <code>theta=2,4</code>; прежние H/S и singleton не переаудируются.</p>
+<p><strong>Содержательный результат.</strong> Существуют реальные положительные исполнения исходной работы с полностью оплаченной ценой</p>
+<pre><code>U T ≤ B_Q+C log(1/rho)+C,</code></pre>
+<p>которые оставляют <code>Phi=Theta(rho^p)</code>, <code>H=Theta(rho^p)</code>, <code>R→P−sum C0</code> при любом одном заранее выбранном <code>p&gt;1</code>. Здесь <code>B_Q</code> — точная direct log-длина того же обязательного слова, а не подставленный неизвестный оптимум. Получен настоящий logarithmic upper, включая вход и всю работу, без дешёвого Euclidean-моста у границы и без реального достижения нулевых рёбер. Предложенный координатором вход в координатах <code>(log d,h/s)</code> проверен и используется ниже.</p>
+<p>Одновременно all-policy оценка показывает логарифмическую стоимость подавления активности сверх direct-baseline. Коэффициент и постоянная часть этой цены пока не вычислены; построенные здесь исполнения <strong>не</strong> объявляются абсолютно почти оптимальными. Однако их logarithmic upper достаточен для уже замкнутого терминального закона в <code>LOWER_SELECTION_RU.md</code>, адресно проверенного в <code>TERM_ENDGAME_RU.md</code>: взвешенный поздний якорь и замена реального хвоста выбирают <code>H_end→0</code>, <code>Phi_end→0</code>, <code>R_end→P−sum C0</code> у всех исполнений с bounded absolute excess. Точная калибровка полного value function для этого оказалась не нужна.</p>
+<h2 id="данные-и-точная-direct-baseline">1. Данные и точная direct-baseline</h2>
+<p>Прочитаны <code>COORDINATION.md</code>, прежние <code>appendix_selection.tex</code>, принятый <code>RESOURCE_CLEARANCE_LAW_RU.md</code> и текст «Физический баланс организации и цена изменения ресурса». Применяется целенаправленное исполнение: результат — реальные paid upper и сопоставление с true infimum; основание — однородность полей и точные балансы; проверка — uniform-контроль входа, работы и guards; предел — один аналитический проход, без новых прогонов; стоп — точное место, где абсолютное сравнение ещё не закрыто.</p>
+<p>Пусть <code>q0=C0</code>, <code>q1=C0+rho a1</code>, <code>q2=C0+rho a2</code>, <code>q3=C0</code>; направления и <code>N=floor(S/rho²)</code> не меняются. Положим</p>
+<pre><code>b_rho=sum_(j=1..3)||log(qj/q_(j−1))||,
+B_Q=N b_rho.</code></pre>
+<p>Это физическая direct log-длина: у direct-системы <code>dot log d=−u</code> каждый обязательный переход имеет именно эту цену. Для фиксированных ненулевых сторон</p>
+<pre><code>B_Q=N rho ell_dir+O(N rho²)=N rho ell_dir+O(1).     (1)</code></pre>
+<p>Для полного native-оптимума это ещё не равенство; hidden-управление и подготовка разрешены. Все логарифмы покомпонентные, нормы Euclidean.</p>
+<h2 id="почему-оплаченный-вход-можно-ограничить-логарифмом">2. Почему оплаченный вход можно ограничить логарифмом</h2>
+<p>Определим положительную целевую семью</p>
+<pre><code>g_s=(C0−s fbar,s hbar),   s&gt;0,
+hbar=(1/100,1/100,1),   fbar=C0/2.</code></pre>
+<p>При достаточно малом фиксированном <code>s1&gt;0</code> она имеет большой материальный запас. Прежние связность положительного interior слоя и bracket generation дают один конечный оплаченный вход <code>g0→g_s1</code>. Его цена фиксирована, не исчезает и не исключается из бюджета.</p>
+<p>Для следующего fractional contraction используем координаты</p>
+<pre><code>r=log d,   h=s z,</code></pre>
+<p>с фиксированным внутри одного шага масштабом <code>s</code>. Native-поля имеют точный вид</p>
+<pre><code>rdot=−u,
+zdot=−diag(z)D_z f(z)^T u.                        (2)</code></pre>
+<p>Они <strong>не зависят от <code>s</code> и <code>r</code></strong>, потому что <code>D f</code> однородна степени ноль. Для каждого <code>s&gt;0</code> замена координат — диффеоморфизм, поэтому принятые full rank и bracket step≤3 переносятся. На одном фиксированном положительном shape-компакте около <code>hbar</code> ball-box константа в <code>(r,z)</code> равномерна по <code>s</code>; абсолютное смещение <code>r</code> также не меняет поля.</p>
+<p>Выберем один малый fractional параметр <code>kappa∈(0,1)</code> до <code>rho→0</code>. Endpoints шага:</p>
+<pre><code>z0=hbar,           r0=log(C0−s fbar),
+z1=(1−kappa)hbar,  r1=log(C0−s(1−kappa)fbar).</code></pre>
+<p>В координатах (2) расстояние <code>O(kappa)</code> равномерно при <code>0&lt;s≤s1</code>, поэтому оплаченная control-длина шага не больше <code>C kappa^(1/3)</code>. Путь имеет малое фиксированное отклонение <code>r</code> и остаётся в положительном shape-компакте.</p>
+<p><code>kappa</code> выбирается достаточно малым по прежнему строгому port-margin <code>C0_i&gt;a0</code>; затем <code>s1</code> достаточно мал по запасу <code>P−sum C0</code>. Во всём шаге <code>d=exp r</code> близко к <code>C0</code>, <code>H=s sum z</code> мало, следовательно <code>M=sum d+H&lt;P</code>, а output <code>C=exp r+s f(z)</code> сохраняет guards. Это настоящие native-экскурсии, а не вертикальное масштабирование <code>h</code> при фиксированном <code>C</code>.</p>
+<p>В конце шага вновь ровно <code>C=C0</code>; переобозначаем масштаб <code>s←(1−kappa)s</code> и shape <code>z←hbar</code>. Все оценки повторяются с теми же константами. После <code>O(log(s1/epsilon))</code> шагов и одного неполного шага получаем</p>
+<pre><code>U T_entry(epsilon)≤C_entry+C_shrink log(s1/epsilon). (3)</code></pre>
+<p>Оба конца всегда положительны. Нулевая boundary-точка не используется. Напротив, любой вход в <code>g_epsilon</code> имеет цену не меньше <code>log(s0/epsilon)</code> по native-ограничению лог-скорости скрытого ребра. Поэтому расходящуюся цену входа невозможно честно заменить одной постоянной или бесплатной перенастройкой.</p>
+<h2 id="работа-после-входа-не-требует-повторных-reset-мостов">3. Работа после входа не требует повторных reset-мостов</h2>
+<p>Есть uniform-оценка относительного hidden-дрейфа одного возвращённого периода даже при <code>epsilon→0</code>. Для <code>p_i=h_i/H</code> каждый коэффициент <code>B_j=D_(h_j) f</code> — полином степени≤2 по <code>p</code>. Из <code>|dot log h_i|≤||u||</code> следует <code>||dot p||_1≤2||u||</code>; потому</p>
+<pre><code>||B_j(t)−B_j(0)||≤4sqrt(3) theta(t).</code></pre>
+<p>На closed-output периоде замораживание <code>K</code> даёт <code>||integral u||≤c theta²</code>, <code>c=L_K/(2lambda)</code>. Следовательно, с одной глобальной константой</p>
+<pre><code>|Delta log h_j|≤C_log theta²,
+C_log=c+2sqrt(3),</code></pre>
+<p>и независимо также <code>|Delta log h_j|≤theta</code>. Никакого индивидуального floor скрытых рёбер в этой оценке нет.</p>
+<p>Исполняем три <strong>точных log-output legs</strong> каждого исходного периода через native-подъём <code>g'=A K^−1 C'</code>. Каждый период имеет control-длину≤<code>B rho</code> с общей <code>B</code>. Поэтому за любое число периодов до <code>N</code></p>
+<pre><code>sum theta_j²≤B² N rho²≤B²S,
+epsilon hbar_j exp(−C_log B²S)
+    ≤h_j≤epsilon hbar_j exp(C_log B²S).</code></pre>
+<p>Внутри отдельного периода добавляется лишь фактор <code>exp(B rho)</code>. Таким образом на всём рабочем пути <code>H=Theta(epsilon)</code>, <code>Phi=Theta(epsilon)</code>. Output-сумма отличается от <code>sum C0</code> на <code>O(rho)</code>, а <code>M≤sum C+H</code>; при малых <code>epsilon,rho</code> исходные positivity/material/port guards сохраняются. Эти оценки замыкаются по периодам первым выходом; reset скрытой организации не нужен.</p>
+<p>По <code>0≤diag(C)−K≤diag(f)</code> имеем на этом пути <code>K^−1−diag(C)^−1=O(epsilon)</code>. Поэтому стоимость каждого log-output leg равна его direct log-длине с ошибкой <code>O(epsilon rho)</code>, и</p>
+<pre><code>U T_work≤B_Q+C epsilon N rho
+             ≤B_Q+C epsilon/rho.                 (4)</code></pre>
+<p>Конец точно имеет <code>C0</code>; терминальная коррекция к заранее назначенному полному состоянию не требуется и не проводится.</p>
+<h2 id="полная-цена-и-настоящее-оставленное-будущее">4. Полная цена и настоящее оставленное будущее</h2>
+<p>Пусть <code>epsilon=rho^p</code>, где один <code>p&gt;1</code> фиксирован заранее. Из (3),(4)</p>
+<pre><code>U T_Gamma≤B_Q+C log(1/rho)+C+O(rho^(p−1)),          (5)
+Phi_end=Theta(rho^p), H_end=Theta(rho^p),
+R_end→mmax:=P−sum C0.</code></pre>
+<p>Вся подготовка включена. Это реальные допустимые исполнения одной исходной работы при старых <code>rho,N,theta,S,g0</code>; меняется стратегия исполнения, а не контракт.</p>
+<p>Будущее также не уменьшается. Полный прежний sphere-guard требует <code>tau&lt;C0,min=A</code>, а <code>tau sqrt(3)&lt;2A&lt;mmax</code>. Поэтому при достаточно малом <code>rho</code> у всей исходной сферы есть общий strict resource clearance. Принятый ресурсный закон даёт</p>
+<pre><code>sup_||v||=1 |U D_(tau,v)(g_end)
+    −||log[(C0+tau v)/C0]|||→0.                   (6)</code></pre>
+<p>Это непустой физический класс оплаченных исполнений с максимальным предельным свободным запасом и universal direct-профилем. Утверждение об их <strong>абсолютной</strong> почти оптимальности в (5),(6) не добавляется.</p>
+<h2 id="all-policy-контроль-baseline-и-логарифмической-платы-за-активность">5. All-policy контроль baseline и логарифмической платы за активность</h2>
+<p>На обоих нынешних <code>theta=2,4</code> принятый глобальный результат даёт <code>ell(g)≥ell_dir</code>. Каждый реальный returned период любой допустимой политики удовлетворяет</p>
+<pre><code>rho ell_dir≤theta_j+c theta_j².</code></pre>
+<p>Пусть <code>q_rho&gt;0</code> решает <code>q_rho+c q_rho²=rho ell_dir</code>. Тогда <code>theta_j≥q_rho</code> <strong>для всех периодов</strong>, включая периоды с подготовкой, большими экскурсиями и терминальным изменением. Поэтому</p>
+<pre><code>U w_rho≥N q_rho=B_Q−O(1).                         (7)</code></pre>
+<p>Из uniform log-дрейфа §3 получается более сильная терминальная оценка. Положим <code>E=sum theta_j−N q_rho≥0</code>. На периодах <code>theta_j≤2q_rho</code> суммарный абсолютный log-дрейф любого hidden-ребра≤<code>4C_log N q_rho²=O(S)</code>. На остальных <code>theta_j≤2(theta_j−q_rho)</code> и используется linear log-скорость. В итоге для каждого hidden-ребра</p>
+<pre><code>|log[h_j(T)/h_j(0)]|≤C_S+2E.</code></pre>
+<p>У трёхлучевой звезды <code>Phi≥min_i h_i</code>: после обозначения <code>a=min h</code> неравенство равносильно <code>bc≥a²</code>. Если <code>hmin0=min h_i(g0)&gt;0</code>, то</p>
+<pre><code>U T_Gamma≥B_Q+(1/2)log(hmin0/Phi_end)−C.           (8)</code></pre>
+<p>При большом <code>Phi_end</code> логарифм может быть отрицательным, и остаётся (7). При <code>Phi_end→0</code> (8) даёт явную all-policy расходящуюся плату сверх direct-baseline. Это ещё не нижняя оценка <strong>excess относительно <code>w_rho</code></strong>: сам <code>w_rho</code> также может содержать logarithmic correction.</p>
+<h2 id="storage-баланс-и-роль-upper-в-замкнутом-терминальном-законе">6. Storage-баланс и роль upper в замкнутом терминальном законе</h2>
+<p>Прямое дифференцирование подтверждает прежнюю явную величину</p>
+<pre><code>V=H+sum[d_i−C0_i−C0_i log(d_i/C0_i)],
+Vdot=−(C−C0)·u.</code></pre>
+<p>На терминальном слое при <code>Phi→0</code></p>
+<pre><code>V=H+O(Phi²),
+R=P−sum C0−V+Phi+O(Phi²).                         (9)</code></pre>
+<p>Следовательно при <code>Phi_end→0</code> выбор доступного reserve равносилен выбору конечного storage <code>V</code>. Сам <code>V</code> не инвариант произвольных разрешённых подготовок; оплаченные большие выходные экскурсии менять его могут. Полный терминальный закон теперь даёт дополнительно <code>V_end→0</code>, не запрещая эти экскурсии.</p>
+<p>На всей closed-output процедуре также точно</p>
+<pre><code>integral u_i=log[d_i(0)/(C0_i−f_i(T))].</code></pre>
+<p>При <code>Phi_end→0</code> этот вектор остаётся конечным, хотя полная контрольная длина подавления активности расходится. Поэтому реальный вход содержит компенсирующие команды/экскурсии; он не реализуется простой бесплатной заменой hidden-массы.</p>
+<p>Совокупность (5),(7) пока даёт только</p>
+<pre><code>B_Q−C≤U w_rho≤B_Q+C log(1/rho)+C.</code></pre>
+<p>Она сама не удостоверяет <code>U(T_Gamma−w_rho)→0</code>; остаток данного upper-кандидата может расходиться логарифмически. Из одного даже совпадающего logarithmic коэффициента без контроля постоянной части абсолютная оптимальность кандидата не следовала бы.</p>
+<p>Прямой путь через совпадение всей платы за подход к dormant-границе потребовал бы существенно более точной калибровки, включая storage-изменяющие экскурсии. Вместо этого lower-доказательство использует (3) только для глобального budget <code>E=O(log(1/rho))</code>. Гармонически взвешенный поздний реальный якорь имеет одновременно малый <code>H</code> и ограниченный <code>rho r delta_ell</code>; отсюда continuation (4), усиленный через <code>delta_ell≈Phi²/H</code>, даёт <strong>ограниченную абсолютную</strong> надбавку оставшейся работы. Рост конечного <code>H</code> после якоря потребовал бы расходящейся надбавки, которую допустимая замена экономит. Это сравнение непосредственно с истинным инфимумом, без совпадения полных logarithmic коэффициентов.</p>
+<p>В результате для каждого фиксированного bounded regret <code>Xi</code> доказано <code>H_end≤C_Xi sqrt(rho)(1+|log rho|)²</code>, а значит <code>Phi_end→0</code>, <code>R_end→P−sum C0</code>. Это полный физический отбор пары <code>(Phi,R)</code> для обоих нынешних <code>theta=2,4</code>, а не только свойство upper-кандидата §4. Разные предельные headroom-ветви при этом абсолютном критерии исключены. Предельный direct-профиль не означает улучшения всех функций относительно <code>g0</code>.</p>
+<p>«А ведёт ли потенциально этот путь к великим открытиям или он просто — следующий шаг по инерции?» Содержательная развязка — физическая эффективность выбирает нулевую остаточную скрытую массу там, где статическая длина была по массе плоской. Paid upper, shape-потенциалы и поздняя замена совместно закрывают этот вопрос. Точное значение ценового коэффициента остаётся отдельным возможным уточнением, не новым условием признания терминального результата.</p>
+<p>Создан только этот файл. Новых вычислительных кампаний, временных ресурсов, подагентов, изменений M11, Git или внешних отправок нет.</p>
+<h2>Доказательные материалы и границы проверки</h2><p>Перекрёстная внутренняя аналитическая приёмка, не внешняя человеческая экспертиза и не формальная верификация. Мировой приоритет и публикационная значимость отдельно не установлены.</p><p><a href="https://github.com/ovdspb-code/psb/blob/9bef891818cbd4a2b23589a28c817f13168bc6b7/docs/sfp/terminal_activity_reserve_20261108/UPPER_SELECTION_RU.md">Точная версия PSB@9bef891 (приватный источник) ↗</a></p><ul><li><a href="SYNTHESIS_RU.html">Полная физическая цена выбирает свободный ресурс</a></li><li><a href="LOWER_SELECTION_RU.html">Абсолютный терминальный отбор: исчезает вся скрытая масса</a></li><li><a href="UPPER_SELECTION_RU.html">Оплаченный подход к неактивной организации: верх полной цены</a></li><li><a href="TERM_ENDGAME_RU.html">Поздний якорь, полный терминальный отбор и цена удержания: проверка</a></li><li><a href="RETENTION_PRICE_RU.html">Сколько стоит сохранить конечную занятость скрытого ресурса</a></li><li><a href="RETENTION_REVIEW_RU.html">Адресная проверка цены удержания скрытого ресурса</a></li><li><a href="WORK_CALIBRATION_CLASS_RU.html">Класс работ с полным отбором свободного материала</a></li><li><a href="ACCEPTANCE_RU.html">Приёмка полного физического отбора и цены удержания</a></li></ul><p><a href="../future-choice-20261108/SYNTHESIS_RU.html">Историческая терминальная лакуна</a> · <a href="../SYNTHESIS_RU.html">Сохранённый положительный результат определимости</a></p></article></html>
