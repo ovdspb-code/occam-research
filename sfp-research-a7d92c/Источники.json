@@ -256,6 +256,10 @@
       "sha256": "5f5fa8b8cffd2abffc66fbe03bc0f3451aa5f8dd704e742e7f2c9182eeef509c",
       "lines": 111
     },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/SYNTHESIS_RU.md": {
+      "sha256": "aaa1aa0a0c29a0edf7134c154e5769af5e9f946519147e7ef43165216260ad23",
+      "lines": 122
+    },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CENTRAL_PHYSICAL_PRINCIPLE_20261103/SYNTHESIS_RU.md": {
       "sha256": "f3401ea9251062d143573c0f77a81959b8c5299f964531d8c6506623fe244935",
       "lines": 99
@@ -559,6 +563,26 @@
     "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/ROBUSTNESS_REVIEW_RU.md": {
       "sha256": "5f60ad67eb5d0dc3914312b7266aa5abb9ce4730a8fc0b53edfaea3fab055d98",
       "lines": 108
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/MECHANISM_ANALYSIS_RU.md": {
+      "sha256": "018002c811d0fb232099f6b0b3fd65a1c242fed97859b304bec4f0d38a340d8e",
+      "lines": 273
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/MECHANISM_REVIEW_RU.md": {
+      "sha256": "3a265aa792e0282b26f1f79ec8fac243aeaa20524f9143e4fea99791dcfead9e",
+      "lines": 104
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/ACTION_CRITERION_RU.md": {
+      "sha256": "ce607b73a4c42678dcbda29aec5d93041d2dc3710c958c7b1d633c045e8a5a47",
+      "lines": 208
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/RESOURCE_CLEARANCE_LAW_RU.md": {
+      "sha256": "be1b90fd022355fa42299372b675246441f2a0636dfa199729819a31fb9c46cb",
+      "lines": 164
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/RESOURCE_CLEARANCE_REVIEW_RU.md": {
+      "sha256": "1c8efd61e07d939a5cb417120c3d574735704d97c27cced153b7b0f5d82ef919",
+      "lines": 133
     },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
@@ -1534,6 +1558,36 @@
       "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/ROBUSTNESS_REVIEW_RU.md",
       "sha256": "5f60ad67eb5d0dc3914312b7266aa5abb9ce4730a8fc0b53edfaea3fab055d98",
       "coverage": "frozen_internal_research_delivery"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/SYNTHESIS_RU.md",
+      "sha256": "aaa1aa0a0c29a0edf7134c154e5769af5e9f946519147e7ef43165216260ad23",
+      "coverage": "frozen_internal_boundary_stage"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/MECHANISM_ANALYSIS_RU.md",
+      "sha256": "018002c811d0fb232099f6b0b3fd65a1c242fed97859b304bec4f0d38a340d8e",
+      "coverage": "frozen_internal_boundary_stage"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/MECHANISM_REVIEW_RU.md",
+      "sha256": "3a265aa792e0282b26f1f79ec8fac243aeaa20524f9143e4fea99791dcfead9e",
+      "coverage": "frozen_internal_boundary_stage"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/ACTION_CRITERION_RU.md",
+      "sha256": "ce607b73a4c42678dcbda29aec5d93041d2dc3710c958c7b1d633c045e8a5a47",
+      "coverage": "frozen_internal_boundary_stage"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/RESOURCE_CLEARANCE_LAW_RU.md",
+      "sha256": "be1b90fd022355fa42299372b675246441f2a0636dfa199729819a31fb9c46cb",
+      "coverage": "frozen_internal_boundary_stage"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/RESOURCE_CLEARANCE_REVIEW_RU.md",
+      "sha256": "1c8efd61e07d939a5cb417120c3d574735704d97c27cced153b7b0f5d82ef919",
+      "coverage": "frozen_internal_boundary_stage"
     }
   ],
   "exclusions": [

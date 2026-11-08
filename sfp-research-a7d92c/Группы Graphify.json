@@ -192,34 +192,43 @@
       "aq_same_error_not_same_learning"
     ],
     "28": [
-      "bp_current_matching"
+      "boundary_terminal_selection_gap"
     ],
     "29": [
-      "bp_cyclic_signal"
+      "bp_current_matching"
     ],
     "30": [
-      "bp_finite_jets"
+      "bp_cyclic_signal"
     ],
     "31": [
-      "bp_future_predictor"
+      "bp_finite_jets"
     ],
     "32": [
-      "bp_learning_clock"
+      "bp_future_predictor"
     ],
     "33": [
-      "m01_predictive_certificate"
+      "bp_learning_clock"
     ],
     "34": [
-      "m06_static_dynamic_gap"
+      "m01_predictive_certificate"
     ],
     "35": [
-      "m08_switch_cost"
+      "m06_static_dynamic_gap"
     ],
     "36": [
-      "mobility_profile_needed"
+      "m08_switch_cost"
     ],
     "37": [
+      "mobility_profile_needed"
+    ],
+    "38": [
       "replica_resource_law"
+    ],
+    "39": [
+      "resource_clearance_future_price"
+    ],
+    "40": [
+      "work_static_hidden_collapse"
     ]
   },
   "cohesion": {
@@ -260,6 +269,9 @@
     "34": 1.0,
     "35": 1.0,
     "36": 1.0,
-    "37": 1.0
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0
   }
 }
