@@ -2,6 +2,28 @@
   "method": "Graphify cluster / score_all on source-extracted links only; undirected analysis; NOT a theorem or novelty score",
   "communities": {
     "0": [
+      "active_physical_reduction",
+      "bracket_two_three",
+      "compression_hard_boundary",
+      "conditional_closure",
+      "exact_information_factor",
+      "finite_diagnostic_code",
+      "hidden_guards_obstruction",
+      "history_cost_transfer",
+      "inherited_port_execution",
+      "loaded_hold_failure",
+      "m10_paid_repeated_reduction",
+      "m10_stagewise_error",
+      "m10_two_readings",
+      "mixed_sensor_two_reads",
+      "moving_neighbor_synthesis",
+      "no_order_ceiling",
+      "noise_information_price",
+      "nonlinear_interval_memory",
+      "nonlinear_quartic",
+      "port_jet_composition"
+    ],
+    "1": [
       "acquired_specialization_log_price",
       "diagonal_growth_direction_cost",
       "full_price_gap",
@@ -18,21 +40,22 @@
       "universal_execution_log_price",
       "work_order_readiness_price"
     ],
-    "1": [
-      "active_physical_reduction",
-      "conditional_closure",
-      "history_cost_transfer",
-      "inherited_port_execution",
-      "loaded_hold_failure",
+    "2": [
+      "m07_matrix_programming",
+      "m08_cost_crossover",
+      "m08_equal_response_different_price",
+      "m08_prefix_transfer",
       "m10_mobility_defect",
-      "m10_paid_repeated_reduction",
-      "m10_stagewise_error",
-      "m10_two_readings",
-      "moving_neighbor_synthesis",
-      "port_jet_composition",
+      "paid_observable_access",
+      "paid_preparation_joint",
+      "paid_universal_cost_boundary",
+      "recon_stream_preparation",
+      "stage2_common_criterion_gap",
+      "stage2_loading_balance_exchange",
+      "transfer_one_cell_loss",
       "transfer_paid_mobility_certificate"
     ],
-    "2": [
+    "3": [
       "context_equivalence_failure",
       "cumulative_old_coordinates",
       "deficit_safety_failure",
@@ -46,7 +69,7 @@
       "static_joint_goal_unreachable",
       "weak_load_nonvanishing_time"
     ],
-    "3": [
+    "4": [
       "m01_cover_width",
       "m01_prepaid_reserve",
       "m02_normalization",
@@ -59,33 +82,9 @@
       "m04_safe_probe",
       "recon_native_drive_boundary"
     ],
-    "4": [
-      "m07_matrix_programming",
-      "m08_cost_crossover",
-      "m08_equal_response_different_price",
-      "m08_prefix_transfer",
-      "paid_observable_access",
-      "paid_preparation_joint",
-      "paid_universal_cost_boundary",
-      "recon_stream_preparation",
-      "stage2_common_criterion_gap",
-      "stage2_loading_balance_exchange",
-      "transfer_one_cell_loss"
-    ],
     "5": [
-      "bracket_two_three",
-      "compression_hard_boundary",
-      "exact_information_factor",
-      "finite_diagnostic_code",
-      "hidden_guards_obstruction",
-      "mixed_sensor_two_reads",
-      "no_order_ceiling",
-      "noise_information_price",
-      "nonlinear_interval_memory",
-      "nonlinear_quartic"
-    ],
-    "6": [
       "boundary_terminal_selection_gap",
+      "common_drive_terminal_selection",
       "fixed_work_future_family_profile",
       "fixed_work_unique_future_profile",
       "occupied_resource_retention_price",
@@ -95,7 +94,7 @@
       "work_selected_resource_conflict",
       "work_static_hidden_collapse"
     ],
-    "7": [
+    "6": [
       "m05_closure_null",
       "m05_finite_history",
       "m05_future_equivalence",
@@ -105,7 +104,7 @@
       "m07_family_weak_benefit",
       "stage1_natural_balance_no_dominance"
     ],
-    "8": [
+    "7": [
       "aq_balance_not_kinetics",
       "aq_directional_budget",
       "aq_frequency_mobility",
@@ -114,138 +113,138 @@
       "aq_stz_directional_state",
       "aq_stz_finite_jam"
     ],
-    "9": [
+    "8": [
       "aq_cooperation_delay_tradeoff",
       "aq_coupling_orientation",
       "aq_switching_drift",
       "aq_thixotropic_preparation"
     ],
-    "10": [
+    "9": [
       "aq_electrical_shield",
       "aq_fixed_driver_replacement",
       "aq_harmonic_protection",
       "aq_kron_learning_obstruction"
     ],
-    "11": [
+    "10": [
       "aq_embedded_alignment",
       "aq_full_port_reveals_state",
       "aq_precise_calibration",
       "aq_spring_observation_gap"
     ],
-    "12": [
+    "11": [
       "bio_conditional_certificate",
       "bio_endpoint_alias",
       "bio_panel_observation_tradeoff",
       "bio_silent_recoding"
     ],
-    "13": [
+    "12": [
       "aq_common_flow_alignment",
       "aq_new_load_recovery",
       "aq_partner_induced_jam"
     ],
-    "14": [
+    "13": [
       "aq_future_selection_gap",
       "aq_known_selection",
       "aq_learned_corrections"
     ],
-    "15": [
+    "14": [
       "aq_maxwell_history",
       "aq_memory_not_help",
       "aq_trace_preservation"
     ],
-    "16": [
+    "15": [
       "m06_accuracy_resource",
       "m06_exact_saturation",
       "m06_graph_uniform_sensitivity"
     ],
-    "17": [
+    "16": [
       "m09_action_observation_gap",
       "m09_noise_threshold",
       "m09_paid_access_law"
     ],
-    "18": [
+    "17": [
       "balanced_subfamily_minimax",
       "future_function_bridge"
     ],
-    "19": [
+    "18": [
       "geometric_price",
       "loaded_matrix_impossibility"
     ],
-    "20": [
+    "19": [
       "knowledge_complexity",
       "linear_grid_memory"
     ],
-    "21": [
+    "20": [
       "all_architecture_minimum"
     ],
-    "22": [
+    "21": [
       "aq_ai_information_coverage"
     ],
-    "23": [
+    "22": [
       "aq_latent_consolidation"
     ],
-    "24": [
+    "23": [
       "aq_prep_can_reverse_savings"
     ],
-    "25": [
+    "24": [
       "aq_preparation_opens_learning"
     ],
-    "26": [
+    "25": [
       "aq_price_history_nonidentification"
     ],
-    "27": [
+    "26": [
       "aq_same_error_not_same_learning"
     ],
-    "28": [
+    "27": [
       "bp_current_matching"
     ],
-    "29": [
+    "28": [
       "bp_cyclic_signal"
     ],
-    "30": [
+    "29": [
       "bp_finite_jets"
     ],
-    "31": [
+    "30": [
       "bp_future_predictor"
     ],
-    "32": [
+    "31": [
       "bp_learning_clock"
     ],
-    "33": [
+    "32": [
       "m01_predictive_certificate"
     ],
-    "34": [
+    "33": [
       "m06_static_dynamic_gap"
     ],
-    "35": [
+    "34": [
       "m08_switch_cost"
     ],
-    "36": [
+    "35": [
       "mobility_profile_needed"
     ],
-    "37": [
+    "36": [
       "replica_resource_law"
     ]
   },
   "cohesion": {
-    "0": 0.21904761904761905,
-    "1": 0.19696969696969696,
-    "2": 0.16666666666666666,
-    "3": 0.18181818181818182,
+    "0": 0.11052631578947368,
+    "1": 0.21904761904761905,
+    "2": 0.15384615384615385,
+    "3": 0.16666666666666666,
     "4": 0.18181818181818182,
-    "5": 0.2,
+    "5": 0.24444444444444444,
     "6": 0.25,
-    "7": 0.25,
-    "8": 0.2857142857142857,
+    "7": 0.2857142857142857,
+    "8": 0.5,
     "9": 0.5,
     "10": 0.5,
     "11": 0.5,
-    "12": 0.5,
+    "12": 0.6666666666666666,
     "13": 0.6666666666666666,
     "14": 0.6666666666666666,
     "15": 0.6666666666666666,
     "16": 0.6666666666666666,
-    "17": 0.6666666666666666,
+    "17": 1.0,
     "18": 1.0,
     "19": 1.0,
     "20": 1.0,
@@ -264,7 +263,6 @@
     "33": 1.0,
     "34": 1.0,
     "35": 1.0,
-    "36": 1.0,
-    "37": 1.0
+    "36": 1.0
   }
 }

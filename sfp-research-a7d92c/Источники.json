@@ -616,6 +616,18 @@
       "sha256": "4fcb0322b2ad15bad7a8c87184b0b5f07c73e717867813b3dc71029379637535",
       "lines": 240
     },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/SYNTHESIS_RU.md": {
+      "sha256": "8f5472e6beba0c4c4f876f81755b019e646da84b5c2485adcfa0430a3c73c4ba",
+      "lines": 34
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/TERMINAL_LAW_RU.md": {
+      "sha256": "e89a18da9b7a15851a94fdb7531f32b53e9efb65f70474c24969aa09fdf324b7",
+      "lines": 127
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/COMMON_DRIVE_RU.md": {
+      "sha256": "722eacac0448dc83e05610851cf870c25d3ece8e44bb21d013166a1320ce33cd",
+      "lines": 133
+    },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
       "lines": 128
@@ -1675,6 +1687,31 @@
       "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/evidence/ADVISOR_ACCEPTANCE_20261108_RU.md",
       "sha256": "4fcb0322b2ad15bad7a8c87184b0b5f07c73e717867813b3dc71029379637535",
       "coverage": "addressed_acceptance_and_accuracy_corollary"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/COMMON_DRIVE_RU.md",
+      "sha256": "722eacac0448dc83e05610851cf870c25d3ece8e44bb21d013166a1320ce33cd",
+      "coverage": "current_research_proof_and_addressed_review"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/PRIOR_ART_AND_GATE_RU.md",
+      "sha256": "8e0bc6bebac595ab8c80b79a031b19c0c75621ee1cf35ba1a6fa823858b61d20",
+      "coverage": "current_research_proof_and_addressed_review"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/STATIC_GEOMETRY_RU.md",
+      "sha256": "3c43378ec94ccdd58112c07209431a043dd85b18c3347cb60c19adc850636b6d",
+      "coverage": "current_research_proof_and_addressed_review"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/SYNTHESIS_RU.md",
+      "sha256": "8f5472e6beba0c4c4f876f81755b019e646da84b5c2485adcfa0430a3c73c4ba",
+      "coverage": "current_research_proof_and_addressed_review"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/TERMINAL_LAW_RU.md",
+      "sha256": "e89a18da9b7a15851a94fdb7531f32b53e9efb65f70474c24969aa09fdf324b7",
+      "coverage": "current_research_proof_and_addressed_review"
     }
   ],
   "exclusions": [
