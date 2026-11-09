@@ -687,6 +687,10 @@
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/07_limits.tex": {
       "sha256": "e911a90dcfca73d98676bbfb7311373c352031b7e35c63706adcc89c8705fbed",
       "lines": 60
+    },
+    "docs/sfp/physical_history_recovery_20261109/COMPRESSION_RU.md": {
+      "sha256": "ab96d72635e68340ff6754bd57c8d1a96da4287633bcc5e982e440684484d74f",
+      "lines": 236
     }
   },
   "sources_read": [
@@ -1812,6 +1816,11 @@
       "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_joint_execution_20261109/JOINT_EXECUTION_RU.md",
       "sha256": "2b829cf8287252aa9f9852cc40a5a0eb25ca6b8870fda8a9d589b0241623a25f",
       "coverage": "c2_rad_joint_execution_cost"
+    },
+    {
+      "path": "docs/sfp/physical_history_recovery_20261109/COMPRESSION_RU.md",
+      "sha256": "ab96d72635e68340ff6754bd57c8d1a96da4287633bcc5e982e440684484d74f",
+      "coverage": "physical_history_recovery"
     }
   ],
   "exclusions": [

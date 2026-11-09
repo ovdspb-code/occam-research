@@ -29,6 +29,7 @@
       "fixed_work_future_family_profile",
       "fixed_work_unique_future_profile",
       "occupied_resource_retention_price",
+      "physical_history_recovery",
       "resource_clearance_future_price",
       "sublog_excess_resource_selection",
       "work_geometry_robust_unique_profile",
@@ -235,7 +236,7 @@
   },
   "cohesion": {
     "0": 0.21904761904761905,
-    "1": 0.1523809523809524,
+    "1": 0.15,
     "2": 0.19696969696969696,
     "3": 0.16666666666666666,
     "4": 0.18181818181818182,
