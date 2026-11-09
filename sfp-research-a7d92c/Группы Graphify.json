@@ -23,6 +23,7 @@
       "c2_rad_diversity_selection",
       "c2_rad_free_terminal_localization",
       "c2_rad_natural_precision_gap",
+      "c2_rad_safe_future_aggregation",
       "common_drive_terminal_selection",
       "fixed_work_future_family_profile",
       "fixed_work_unique_future_profile",
@@ -233,7 +234,7 @@
   },
   "cohesion": {
     "0": 0.21904761904761905,
-    "1": 0.1794871794871795,
+    "1": 0.16483516483516483,
     "2": 0.19696969696969696,
     "3": 0.16666666666666666,
     "4": 0.18181818181818182,

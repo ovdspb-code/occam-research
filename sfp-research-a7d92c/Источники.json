@@ -656,6 +656,14 @@
       "sha256": "45d7d38a9d648e0809820cfc15aef06ab6f1ff9d0e27b26c511de4830ed19a6c",
       "lines": 19
     },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_future_aggregation_20261109/SAFE_AGGREGATION_RU.md": {
+      "sha256": "02413a99fce943ff2e48be9379541111821059396ea11a189712a8637967aeb9",
+      "lines": 87
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_future_aggregation_20261109/LITERATURE_AND_STATUS_RU.md": {
+      "sha256": "04d32bb457eb8000d961bc4b686ef18326bcb3c4b0cc82c6b4cad0fa3f155b7b",
+      "lines": 28
+    },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
       "lines": 128
@@ -1780,6 +1788,21 @@
       "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_free_terminal_20261109/HYBRID_WITNESS_RU.md",
       "sha256": "3c9a9aa24e48d974796133d35c51a79682ce7f76f2b6a6ba5fc645fdb7ab8553",
       "coverage": "c2_rad_free_terminal_author_proof"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_future_aggregation_20261109/LITERATURE_AND_STATUS_RU.md",
+      "sha256": "04d32bb457eb8000d961bc4b686ef18326bcb3c4b0cc82c6b4cad0fa3f155b7b",
+      "coverage": "c2_rad_safe_future_aggregation"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_future_aggregation_20261109/SAFE_AGGREGATION_RU.md",
+      "sha256": "02413a99fce943ff2e48be9379541111821059396ea11a189712a8637967aeb9",
+      "coverage": "c2_rad_safe_future_aggregation"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_future_aggregation_20261109/SHORT_RESERVE_RU.md",
+      "sha256": "ca578ce8e3b4e4d654126273e00e2ce851d297dd7c7c68b349708c4d5b2adefb",
+      "coverage": "c2_rad_safe_future_aggregation"
     }
   ],
   "exclusions": [
