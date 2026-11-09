@@ -22,6 +22,7 @@
       "boundary_terminal_selection_gap",
       "c2_rad_diversity_selection",
       "c2_rad_free_terminal_localization",
+      "c2_rad_joint_execution_cost",
       "c2_rad_natural_precision_gap",
       "c2_rad_safe_future_aggregation",
       "common_drive_terminal_selection",
@@ -234,7 +235,7 @@
   },
   "cohesion": {
     "0": 0.21904761904761905,
-    "1": 0.16483516483516483,
+    "1": 0.1523809523809524,
     "2": 0.19696969696969696,
     "3": 0.16666666666666666,
     "4": 0.18181818181818182,

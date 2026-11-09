@@ -664,6 +664,10 @@
       "sha256": "04d32bb457eb8000d961bc4b686ef18326bcb3c4b0cc82c6b4cad0fa3f155b7b",
       "lines": 28
     },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_joint_execution_20261109/JOINT_EXECUTION_RU.md": {
+      "sha256": "2b829cf8287252aa9f9852cc40a5a0eb25ca6b8870fda8a9d589b0241623a25f",
+      "lines": 104
+    },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
       "lines": 128
@@ -1803,6 +1807,11 @@
       "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_future_aggregation_20261109/SHORT_RESERVE_RU.md",
       "sha256": "ca578ce8e3b4e4d654126273e00e2ce851d297dd7c7c68b349708c4d5b2adefb",
       "coverage": "c2_rad_safe_future_aggregation"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_joint_execution_20261109/JOINT_EXECUTION_RU.md",
+      "sha256": "2b829cf8287252aa9f9852cc40a5a0eb25ca6b8870fda8a9d589b0241623a25f",
+      "coverage": "c2_rad_joint_execution_cost"
     }
   ],
   "exclusions": [
