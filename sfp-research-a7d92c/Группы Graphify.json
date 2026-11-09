@@ -19,6 +19,21 @@
       "work_order_readiness_price"
     ],
     "1": [
+      "boundary_terminal_selection_gap",
+      "c2_rad_diversity_selection",
+      "c2_rad_free_terminal_localization",
+      "c2_rad_natural_precision_gap",
+      "common_drive_terminal_selection",
+      "fixed_work_future_family_profile",
+      "fixed_work_unique_future_profile",
+      "occupied_resource_retention_price",
+      "resource_clearance_future_price",
+      "sublog_excess_resource_selection",
+      "work_geometry_robust_unique_profile",
+      "work_selected_resource_conflict",
+      "work_static_hidden_collapse"
+    ],
+    "2": [
       "active_physical_reduction",
       "conditional_closure",
       "history_cost_transfer",
@@ -31,20 +46,6 @@
       "moving_neighbor_synthesis",
       "port_jet_composition",
       "transfer_paid_mobility_certificate"
-    ],
-    "2": [
-      "boundary_terminal_selection_gap",
-      "c2_rad_diversity_selection",
-      "c2_rad_natural_precision_gap",
-      "common_drive_terminal_selection",
-      "fixed_work_future_family_profile",
-      "fixed_work_unique_future_profile",
-      "occupied_resource_retention_price",
-      "resource_clearance_future_price",
-      "sublog_excess_resource_selection",
-      "work_geometry_robust_unique_profile",
-      "work_selected_resource_conflict",
-      "work_static_hidden_collapse"
     ],
     "3": [
       "context_equivalence_failure",
@@ -232,7 +233,7 @@
   },
   "cohesion": {
     "0": 0.21904761904761905,
-    "1": 0.19696969696969696,
+    "1": 0.1794871794871795,
     "2": 0.19696969696969696,
     "3": 0.16666666666666666,
     "4": 0.18181818181818182,
