@@ -636,6 +636,18 @@
       "sha256": "3d1d50a4a58eba8c2dfbac59c02342370716dca15d90acc4d04f606e047ae551",
       "lines": 30
     },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_natural_precision_20261109/NATURAL_PRECISION_RU.md": {
+      "sha256": "b525b639af835c3f36276559068b4c449534b900c4dd3845ac9d8b024be57ce4",
+      "lines": 80
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_natural_precision_20261109/COALESCENCE_LOOP_RU.md": {
+      "sha256": "f726277a2372681215ffeab84dddd4c87bd7a042eb9b0e6de8989a524eb60589",
+      "lines": 57
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_natural_precision_20261109/AUDIT_AA5_RU.md": {
+      "sha256": "5d94e4fe6950e93782ae9ef6d50ec06637dbb4bb544b2092065dcc631171fd56",
+      "lines": 12
+    },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
       "lines": 128
@@ -1730,6 +1742,21 @@
       "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_diversity_20261109/TERMINAL_COROLLARY_RU.md",
       "sha256": "3d1d50a4a58eba8c2dfbac59c02342370716dca15d90acc4d04f606e047ae551",
       "coverage": "accepted_fixed_c2_rad_proof"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_natural_precision_20261109/AUDIT_AA5_RU.md",
+      "sha256": "5d94e4fe6950e93782ae9ef6d50ec06637dbb4bb544b2092065dcc631171fd56",
+      "coverage": "c2_rad_natural_precision_author_proof"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_natural_precision_20261109/COALESCENCE_LOOP_RU.md",
+      "sha256": "f726277a2372681215ffeab84dddd4c87bd7a042eb9b0e6de8989a524eb60589",
+      "coverage": "c2_rad_natural_precision_author_proof"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_natural_precision_20261109/NATURAL_PRECISION_RU.md",
+      "sha256": "b525b639af835c3f36276559068b4c449534b900c4dd3845ac9d8b024be57ce4",
+      "coverage": "c2_rad_natural_precision_author_proof"
     }
   ],
   "exclusions": [

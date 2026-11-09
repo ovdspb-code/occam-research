@@ -33,6 +33,20 @@
       "transfer_paid_mobility_certificate"
     ],
     "2": [
+      "boundary_terminal_selection_gap",
+      "c2_rad_diversity_selection",
+      "c2_rad_natural_precision_gap",
+      "common_drive_terminal_selection",
+      "fixed_work_future_family_profile",
+      "fixed_work_unique_future_profile",
+      "occupied_resource_retention_price",
+      "resource_clearance_future_price",
+      "sublog_excess_resource_selection",
+      "work_geometry_robust_unique_profile",
+      "work_selected_resource_conflict",
+      "work_static_hidden_collapse"
+    ],
+    "3": [
       "context_equivalence_failure",
       "cumulative_old_coordinates",
       "deficit_safety_failure",
@@ -45,19 +59,6 @@
       "state_cost_transfer",
       "static_joint_goal_unreachable",
       "weak_load_nonvanishing_time"
-    ],
-    "3": [
-      "boundary_terminal_selection_gap",
-      "c2_rad_diversity_selection",
-      "common_drive_terminal_selection",
-      "fixed_work_future_family_profile",
-      "fixed_work_unique_future_profile",
-      "occupied_resource_retention_price",
-      "resource_clearance_future_price",
-      "sublog_excess_resource_selection",
-      "work_geometry_robust_unique_profile",
-      "work_selected_resource_conflict",
-      "work_static_hidden_collapse"
     ],
     "4": [
       "m01_cover_width",
@@ -232,8 +233,8 @@
   "cohesion": {
     "0": 0.21904761904761905,
     "1": 0.19696969696969696,
-    "2": 0.16666666666666666,
-    "3": 0.21818181818181817,
+    "2": 0.19696969696969696,
+    "3": 0.16666666666666666,
     "4": 0.18181818181818182,
     "5": 0.18181818181818182,
     "6": 0.2,
