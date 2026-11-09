@@ -628,6 +628,14 @@
       "sha256": "722eacac0448dc83e05610851cf870c25d3ece8e44bb21d013166a1320ce33cd",
       "lines": 133
     },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_diversity_20261109/STATIC_GATE_RU.md": {
+      "sha256": "986bad55ab26e75c51dfc16028440b692322bdaa4a1bfc85766aedf60bbc5a6e",
+      "lines": 116
+    },
+    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_diversity_20261109/TERMINAL_COROLLARY_RU.md": {
+      "sha256": "3d1d50a4a58eba8c2dfbac59c02342370716dca15d90acc4d04f606e047ae551",
+      "lines": 30
+    },
     "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
       "lines": 128
@@ -1712,6 +1720,16 @@
       "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/TERMINAL_LAW_RU.md",
       "sha256": "e89a18da9b7a15851a94fdb7531f32b53e9efb65f70474c24969aa09fdf324b7",
       "coverage": "current_research_proof_and_addressed_review"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_diversity_20261109/STATIC_GATE_RU.md",
+      "sha256": "986bad55ab26e75c51dfc16028440b692322bdaa4a1bfc85766aedf60bbc5a6e",
+      "coverage": "accepted_fixed_c2_rad_proof"
+    },
+    {
+      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_diversity_20261109/TERMINAL_COROLLARY_RU.md",
+      "sha256": "3d1d50a4a58eba8c2dfbac59c02342370716dca15d90acc4d04f606e047ae551",
+      "coverage": "accepted_fixed_c2_rad_proof"
     }
   ],
   "exclusions": [
