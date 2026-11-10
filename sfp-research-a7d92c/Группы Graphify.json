@@ -4,6 +4,7 @@
     "0": [
       "acquired_specialization_log_price",
       "diagonal_growth_direction_cost",
+      "distinction_budget_material_lower_bound",
       "full_price_gap",
       "hidden_contribution_universality_deficit",
       "kron_mobility_order",
@@ -20,19 +21,26 @@
     ],
     "1": [
       "boundary_terminal_selection_gap",
+      "bounded_lift_price_transfer",
       "c2_rad_diversity_selection",
       "c2_rad_free_terminal_localization",
       "c2_rad_joint_execution_cost",
       "c2_rad_natural_precision_gap",
       "c2_rad_safe_future_aggregation",
+      "carrier_law_open_boundary",
       "common_drive_terminal_selection",
       "eight_edge_minimum",
       "fixed_work_future_family_profile",
       "fixed_work_unique_future_profile",
+      "layer_function_loop_invariance",
+      "near_optimal_end_ellipsoid",
       "occupied_resource_retention_price",
       "physical_history_recovery",
+      "price_jet_rank_lower_bound_tool",
       "resource_clearance_future_price",
       "sublog_excess_resource_selection",
+      "three_terminal_moment_identity",
+      "work_forced_minimum_organization",
       "work_geometry_robust_unique_profile",
       "work_selected_resource_conflict",
       "work_static_hidden_collapse"
@@ -79,6 +87,7 @@
       "recon_native_drive_boundary"
     ],
     "5": [
+      "cmk_two_terminal_distinguishing_pair",
       "m07_matrix_programming",
       "m08_cost_crossover",
       "m08_equal_response_different_price",
@@ -104,6 +113,7 @@
       "nonlinear_quartic"
     ],
     "7": [
+      "future_price_germ_sufficiency",
       "m05_closure_null",
       "m05_finite_history",
       "m05_future_equivalence",
@@ -236,14 +246,14 @@
     ]
   },
   "cohesion": {
-    "0": 0.21904761904761905,
-    "1": 0.13970588235294118,
+    "0": 0.26666666666666666,
+    "1": 0.11594202898550725,
     "2": 0.19696969696969696,
     "3": 0.16666666666666666,
     "4": 0.18181818181818182,
-    "5": 0.18181818181818182,
+    "5": 0.22727272727272727,
     "6": 0.2,
-    "7": 0.25,
+    "7": 0.2222222222222222,
     "8": 0.2857142857142857,
     "9": 0.5,
     "10": 0.5,
