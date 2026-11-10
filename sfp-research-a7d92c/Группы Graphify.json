@@ -32,6 +32,7 @@
       "eight_edge_minimum",
       "fixed_work_future_family_profile",
       "fixed_work_unique_future_profile",
+      "four_edge_barrier_direct_edge_condition",
       "layer_function_loop_invariance",
       "near_optimal_end_ellipsoid",
       "occupied_resource_retention_price",
@@ -42,6 +43,8 @@
       "three_terminal_moment_identity",
       "work_forced_minimum_organization",
       "work_geometry_robust_unique_profile",
+      "work_opposite_outcomes_same_carrier",
+      "work_overpay_threshold_asymmetry",
       "work_selected_resource_conflict",
       "work_static_hidden_collapse"
     ],

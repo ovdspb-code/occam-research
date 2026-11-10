@@ -711,6 +711,18 @@
     "docs/sfp/stratified_carrier_law_20261110/R1_JET_BARRIER_RU.md": {
       "sha256": "7f0e5b5c199006cc1ddeea272e78dcb5831973099e8492c0b7e585221aeee03a",
       "lines": 1926
+    },
+    "docs/sfp/work_selects_organization_20261110/README_RU.md": {
+      "sha256": "0f078e5737f83224e9c6fd0a86eab32538d4038d2100e372e144b359ce250f11",
+      "lines": 58
+    },
+    "docs/sfp/work_selects_organization_20261110/ADVISOR_VERDICT_d8bc5423_RU.md": {
+      "sha256": "6cce231700e112fb4387542c66da3c693b753948f6121eeef5a7b79b28f8e7ed",
+      "lines": 100
+    },
+    "docs/sfp/work_selects_organization_20261110/SELECTION_LAW_RU.md": {
+      "sha256": "5edb7ddb13840f091780d359a1a11e015bac2df334a787793e82b743d23b8be0",
+      "lines": 1413
     }
   },
   "sources_read": [
@@ -1866,6 +1878,21 @@
       "path": "docs/sfp/stratified_carrier_law_20261110/R1_JET_BARRIER_RU.md",
       "sha256": "7f0e5b5c199006cc1ddeea272e78dcb5831973099e8492c0b7e585221aeee03a",
       "coverage": "three_terminal_moment_identity"
+    },
+    {
+      "path": "docs/sfp/work_selects_organization_20261110/README_RU.md",
+      "sha256": "0f078e5737f83224e9c6fd0a86eab32538d4038d2100e372e144b359ce250f11",
+      "coverage": "four_edge_barrier_direct_edge_condition"
+    },
+    {
+      "path": "docs/sfp/work_selects_organization_20261110/ADVISOR_VERDICT_d8bc5423_RU.md",
+      "sha256": "6cce231700e112fb4387542c66da3c693b753948f6121eeef5a7b79b28f8e7ed",
+      "coverage": "work_forced_minimum_organization"
+    },
+    {
+      "path": "docs/sfp/work_selects_organization_20261110/SELECTION_LAW_RU.md",
+      "sha256": "5edb7ddb13840f091780d359a1a11e015bac2df334a787793e82b743d23b8be0",
+      "coverage": "work_opposite_outcomes_same_carrier"
     }
   ],
   "exclusions": [
