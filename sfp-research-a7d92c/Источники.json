@@ -691,6 +691,10 @@
     "docs/sfp/physical_history_recovery_20261109/COMPRESSION_RU.md": {
       "sha256": "ab96d72635e68340ff6754bd57c8d1a96da4287633bcc5e982e440684484d74f",
       "lines": 236
+    },
+    "docs/sfp/minimal_price_carrier_20261110/MINIMUM_RU.md": {
+      "sha256": "7711426fd7bef61910f003e718fad377d5d5bf6980a4d2c163342a5766e94c9d",
+      "lines": 238
     }
   },
   "sources_read": [
@@ -1821,6 +1825,11 @@
       "path": "docs/sfp/physical_history_recovery_20261109/COMPRESSION_RU.md",
       "sha256": "ab96d72635e68340ff6754bd57c8d1a96da4287633bcc5e982e440684484d74f",
       "coverage": "physical_history_recovery"
+    },
+    {
+      "path": "docs/sfp/minimal_price_carrier_20261110/MINIMUM_RU.md",
+      "sha256": "7711426fd7bef61910f003e718fad377d5d5bf6980a4d2c163342a5766e94c9d",
+      "coverage": "eight_edge_minimum"
     }
   ],
   "exclusions": [
