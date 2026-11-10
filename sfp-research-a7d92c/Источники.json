@@ -1,690 +1,690 @@
 {
   "cited_files": {
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m01/SFP-M01_v2.1.tex": {
+    "primary_sources/m01/SFP-M01_v2.1.tex": {
       "sha256": "e8263d3aa536649af02b20a9824ed50b7093010b31b2a895c275de063e712b42",
       "lines": 986
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m02/SFP-M02_v0.5.tex": {
+    "primary_sources/m02/SFP-M02_v0.5.tex": {
       "sha256": "6767c55a1112d2ecb98041b332f3b924fc349fc45c5d21bbad715dacb2cf5c86",
       "lines": 1172
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m03/SFP-M03_v0.3.tex": {
+    "primary_sources/m03/SFP-M03_v0.3.tex": {
       "sha256": "837585a3ffdf685d653d9ced342c414bed113b4df604c4799b4bfccb8bab194f",
       "lines": 902
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m04/SFP-M04_v0.2.tex": {
+    "primary_sources/m04/SFP-M04_v0.2.tex": {
       "sha256": "cbe660d0ffe2f1cd82881018cd46b1ec95a60c7c3c867c8160427df4fb0588d2",
       "lines": 335
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/mechanism.tex": {
+    "primary_sources/m05/sections/mechanism.tex": {
       "sha256": "5bee4b307ddd0f2be5b79fbd7d098ce82048a6faa531acd5931013476cd4b051",
       "lines": 63
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/equivalence.tex": {
+    "primary_sources/m05/sections/equivalence.tex": {
       "sha256": "558d281c6040408fc8f8a1e64e97e7a33c1561e6f496be040055bf7db9aa6815",
       "lines": 64
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/parity_theorem.tex": {
+    "primary_sources/m05/sections/parity_theorem.tex": {
       "sha256": "6522776d1636646d97e5cfab91b948775afa03694f91e7d7ed990d4f7cb9a7fb",
       "lines": 100
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/metric_prediction.tex": {
+    "primary_sources/m05/sections/metric_prediction.tex": {
       "sha256": "c76777a100e5988ad6a6acc58f183efaf436becf54c6fbd925df5b2fd89df504",
       "lines": 88
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/neural.tex": {
+    "primary_sources/m05/sections/neural.tex": {
       "sha256": "d3bfd24b93053265594e4068d714a69a09a22935c710f6d8f5468e9cd3cca6a9",
       "lines": 61
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m06/sections/02_model.tex": {
+    "primary_sources/m06/sections/02_model.tex": {
       "sha256": "01395d72c13e7d84b66c196eacdbf820c7ac4b6a1e228f0cdc45f739d1ee7efb",
       "lines": 99
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m06/sections/03_results.tex": {
+    "primary_sources/m06/sections/03_results.tex": {
       "sha256": "eabc8b8a1a8b5c2217234d63c1c13f3dfbba2bee07c9fc12d53350e08d2aa831",
       "lines": 34
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m06/sections/04_sensitivity.tex": {
+    "primary_sources/m06/sections/04_sensitivity.tex": {
       "sha256": "c103da81714fae14ab055d14754fc85f4fe30751cd0aced152bb0850674ec57d",
       "lines": 69
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/02_model_results.tex": {
+    "WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/02_model_results.tex": {
       "sha256": "313c02e6709de8f5ab2af6a74b3814378e79f0fa9c1215dd3fa4c932de09cd7f",
       "lines": 107
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PLASTICITY_COST_CLASSES_20261101/PREPRINT_READY_v0_2/manuscript/model.tex": {
+    "PLASTICITY_COST_CLASSES_20261101/PREPRINT_READY_v0_2/manuscript/model.tex": {
       "sha256": "a48165fba4aff31376821719e98d7b61bb6591bef736b01b6dc08e29ac7e72b4",
       "lines": 84
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PLASTICITY_COST_CLASSES_20261101/PREPRINT_READY_v0_2/manuscript/cost.tex": {
+    "PLASTICITY_COST_CLASSES_20261101/PREPRINT_READY_v0_2/manuscript/cost.tex": {
       "sha256": "997eb623e6790a430b316cef1ec9afe48bd6b7cc9a7e5a274653655398752cd2",
       "lines": 96
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SFP_M09_OBSERVATION_ACCESS_20261102/SICON_SUBMISSION_PREPARATION_20261102/SOURCE/manuscript/main_result.tex": {
+    "SFP_M09_OBSERVATION_ACCESS_20261102/SICON_SUBMISSION_PREPARATION_20261102/SOURCE/manuscript/main_result.tex": {
       "sha256": "35d4b718b0239b5f153f39147ba4e917e1c57b78520e1e21be78644000223149",
       "lines": 61
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SFP_M09_OBSERVATION_ACCESS_20261102/SICON_SUBMISSION_PREPARATION_20261102/SOURCE/manuscript/conditions.tex": {
+    "SFP_M09_OBSERVATION_ACCESS_20261102/SICON_SUBMISSION_PREPARATION_20261102/SOURCE/manuscript/conditions.tex": {
       "sha256": "9680053362d07d868351998fc5c57bfec72ac4811e6f4eaf2b55d0b415a5143f",
       "lines": 83
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m10/sections/04_ports.tex": {
+    "primary_sources/m10/sections/04_ports.tex": {
       "sha256": "9b0f6de8becdd9ce9a10fc1b716b31805dc9820986bfa4af35714ead2e4bd573",
       "lines": 169
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m10/sections/05_composition.tex": {
+    "primary_sources/m10/sections/05_composition.tex": {
       "sha256": "05812ee6399530f786dcbe799062c65141a27bc008b566cc75c8cfe095b601a4",
       "lines": 131
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/RECURSIVE_AND_LOADED_20261103/SYNTHESIS_RU.md": {
+    "RECURSIVE_AND_LOADED_20261103/SYNTHESIS_RU.md": {
       "sha256": "4e92b3fa985951be90e5f9f211d533e28e611691e96b64ca1b95a26280456f73",
       "lines": 214
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m10/sections/06_lower_limits.tex": {
+    "primary_sources/m10/sections/06_lower_limits.tex": {
       "sha256": "01a37f359d3b5cd0350b4d3e2de74fe5cbebbd9dfeb912adede043462011737a",
       "lines": 169
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMPOSITION_REDUCTION_20261102/composition/CR_C3_RU.md": {
+    "COMPOSITION_REDUCTION_20261102/composition/CR_C3_RU.md": {
       "sha256": "23e01975eb96fb2ff2a8e1a78d8bca9f771c867de80055ac29340e639381f0bc",
       "lines": 151
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_REDUCTION_20261102/construction/FR_C2_RU.md": {
+    "PHYSICAL_REDUCTION_20261102/construction/FR_C2_RU.md": {
       "sha256": "58fbf114633d7067000eeeb614d00a805631f52d3dafdcca1d3c6358e97076b9",
       "lines": 131
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/MINIMUM_RESOURCE_20261102/SYNTHESIS_RU.md": {
+    "MINIMUM_RESOURCE_20261102/SYNTHESIS_RU.md": {
       "sha256": "d568eef29e02566e815d1a5172df0570f09497686279b89315281a4413dd5162",
       "lines": 153
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/STRUCTURAL_CRITERION_20261102/SYNTHESIS_RU.md": {
+    "STRUCTURAL_CRITERION_20261102/SYNTHESIS_RU.md": {
       "sha256": "ca5d6f4729c819f407a7ccf285939e32e20bae5549e38d4be01367eba12c79fa",
       "lines": 227
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/NONLINEAR_CRITERION_20261102/SYNTHESIS_RU.md": {
+    "NONLINEAR_CRITERION_20261102/SYNTHESIS_RU.md": {
       "sha256": "ef4043fde8d345fca2934c7117416d0e431cc81bfb9335158eb2eb8e5bd95f5f",
       "lines": 225
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/NONLINEAR_CRITERION_20261102/bounds/NC_ORDER_LIMIT_CHECK_RU.md": {
+    "NONLINEAR_CRITERION_20261102/bounds/NC_ORDER_LIMIT_CHECK_RU.md": {
       "sha256": "850f73d02c9a6abe961cc591491c00e0032bada40efb349bd3c66883b4a88caa",
       "lines": 93
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/GEOMETRIC_RULE_20261102/SYNTHESIS_RU.md": {
+    "GEOMETRIC_RULE_20261102/SYNTHESIS_RU.md": {
       "sha256": "3949c22b698afa09d3bfca61915c64f6bf732cec3c649c5f84fb4ea36d2895c9",
       "lines": 209
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_STATE_20261102/SYNTHESIS_RU.md": {
+    "INFORMATION_STATE_20261102/SYNTHESIS_RU.md": {
       "sha256": "be3f64fb08e395bffe36a0e737a03f90c947f3dc58167e4ee7332c55ca06551e",
       "lines": 196
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_STATE_20261102/bounds/IS_S1_RU.md": {
+    "INFORMATION_STATE_20261102/bounds/IS_S1_RU.md": {
       "sha256": "33df2159063e114a9861f2c8b21f1ce099d5e035a9d1e21cc947976a8743b1ae",
       "lines": 240
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_STATE_20261102/bounds/IS_NOISE_LOWER_RU.md": {
+    "INFORMATION_STATE_20261102/bounds/IS_NOISE_LOWER_RU.md": {
       "sha256": "2536449c429f9af637666b31e8fbf9eb10b3fbc0722d4b57e82284ccea8d0d1f",
       "lines": 152
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_COMPRESSION_20261102/SYNTHESIS_RU.md": {
+    "INFORMATION_COMPRESSION_20261102/SYNTHESIS_RU.md": {
       "sha256": "97c374cf52c4c68604a6cb108d820bdb79970937dffa2f26aadc694391d34049",
       "lines": 215
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/NONLINEAR_COMPRESSION_20261103/SYNTHESIS_RU.md": {
+    "NONLINEAR_COMPRESSION_20261103/SYNTHESIS_RU.md": {
       "sha256": "c69e7c62b1f8e0e5c18b77cb5256807f9a3c615f286b4b3a8c3482963506a15c",
       "lines": 122
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/QUANTITATIVE_COMPOSITION_20261103/SYNTHESIS_RU.md": {
+    "QUANTITATIVE_COMPOSITION_20261103/SYNTHESIS_RU.md": {
       "sha256": "50508ac2394ed76b8dc587409316f275e5174ae90b3ce69fed5349985cf8c68e",
       "lines": 126
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LOADED_TARGET_20261103/SYNTHESIS_RU.md": {
+    "LOADED_TARGET_20261103/SYNTHESIS_RU.md": {
       "sha256": "ca668fcec129f3f0f488a84a8c05444513859402028cbcfb9966f6d1c0eb20e2",
       "lines": 201
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CROSS_SYNTHESIS_20261103/CROSS_C1_RU.md": {
+    "CROSS_SYNTHESIS_20261103/CROSS_C1_RU.md": {
       "sha256": "265565c6110f7fe3cc493071ef717aee4ae594dfe7d83caad9df61107976253a",
       "lines": 300
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LOADED_LOCAL_SYNTHESIS_20261103/SYNTHESIS_RU.md": {
+    "LOADED_LOCAL_SYNTHESIS_20261103/SYNTHESIS_RU.md": {
       "sha256": "57daae8af6f1cba91e394fc6692b3672017e6341ede1c8dda04330e051e83508",
       "lines": 158
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INHERITED_EXECUTION_20261103/SYNTHESIS_RU.md": {
+    "INHERITED_EXECUTION_20261103/SYNTHESIS_RU.md": {
       "sha256": "f1928272daa461e5d7dc3770f172e1453e3ae10b868554a9aa456ad04f3ed1fe",
       "lines": 199
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/OBSERVED_TASK_INTERFACE_20261103/SYNTHESIS_RU.md": {
+    "OBSERVED_TASK_INTERFACE_20261103/SYNTHESIS_RU.md": {
       "sha256": "d3c2bdf6d3a9f9ecbe0bbca33ac7e5d9c6e2d5ff54896ef9d44843af3fe50c93",
       "lines": 188
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/FIXED_LOAD_COMPENSATION_20261103/SYNTHESIS_RU.md": {
+    "FIXED_LOAD_COMPENSATION_20261103/SYNTHESIS_RU.md": {
       "sha256": "a5a76e34189d7754ede68ae32f3bc8f59d804bf8c6407740d42775c4ee217806",
       "lines": 180
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMPENSATION_REDUCTION_RULE_20261103/SYNTHESIS_RU.md": {
+    "COMPENSATION_REDUCTION_RULE_20261103/SYNTHESIS_RU.md": {
       "sha256": "1ac5ac4186dedf3f088e7842ee0a8e61c447b1ff3a46045d9d5d93667416f2fc",
       "lines": 214
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/STATE_COST_TRANSFER_20261103/SYNTHESIS_RU.md": {
+    "STATE_COST_TRANSFER_20261103/SYNTHESIS_RU.md": {
       "sha256": "16885e6c4e406f9cb7f468bfa713b3ca56d8150fe6a1a5b5c5351a458fe93499",
       "lines": 182
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SOURCE_WEAK_LOAD_PRICE_20261103/SYNTHESIS_RU.md": {
+    "SOURCE_WEAK_LOAD_PRICE_20261103/SYNTHESIS_RU.md": {
       "sha256": "b3802c30da7f3b3e798e0b79943fdb0de4ad514285f1423142cd112ad11c6307",
       "lines": 197
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_DEFICIT_CRITERION_20261103/SYNTHESIS_RU.md": {
+    "ADAPTIVE_DEFICIT_CRITERION_20261103/SYNTHESIS_RU.md": {
       "sha256": "15d344abed9d22abbe8b0678f75c2cf2113550acac716ee788a7d021e4ba9c8d",
       "lines": 198
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CRITERION_COMPOSITION_20261103/construction/COMPOSITION_GEOMETRY_RU.md": {
+    "CRITERION_COMPOSITION_20261103/construction/COMPOSITION_GEOMETRY_RU.md": {
       "sha256": "62251767223c3dd097e164c1b57e1057d4c9817f60fb238393249c547ff5f13f",
       "lines": 138
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CRITERION_COMPOSITION_20261103/obstruction/MATCHING_GRAPH_COROLLARY_RU.md": {
+    "CRITERION_COMPOSITION_20261103/obstruction/MATCHING_GRAPH_COROLLARY_RU.md": {
       "sha256": "6c9d2e8bbd820b4031a5932514a76932fe4f52e9497b15ca369adb66d08ac7a0",
       "lines": 105
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CUMULATIVE_FUNCTIONS_20261103/SYNTHESIS_RU.md": {
+    "CUMULATIVE_FUNCTIONS_20261103/SYNTHESIS_RU.md": {
       "sha256": "10109b01b1cb22c4449e9181bc2d9b9bb7db12e948083f9a22e9f4bb87bae602",
       "lines": 175
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CURRENT_WITH_VOLTAGE_PROTECTION_20261103/SYNTHESIS_RU.md": {
+    "CURRENT_WITH_VOLTAGE_PROTECTION_20261103/SYNTHESIS_RU.md": {
       "sha256": "548cd98ddbe070a0ed545ea2c93babfe32e5932db2d658a39b8cf261942e57f6",
       "lines": 194
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Ресурс будущих задач — 6 ноября/Конструкция и границы.md": {
+    "Стратегия исследований/Ресурс будущих задач — 6 ноября/Конструкция и границы.md": {
       "sha256": "918fd067e62fe18545c6299fc13275590a46c1d2702c58b627285a53375e5428",
       "lines": 229
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CLASS_LAW_MILESTONE_20261103/MILESTONE_RU.md": {
+    "CLASS_LAW_MILESTONE_20261103/MILESTONE_RU.md": {
       "sha256": "35a3fd2be1b4cbbdbb6ae4e0e7334e3de36c2595c6540c1d27aec841cd16e371",
       "lines": 180
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Как работа отбирает доступный ресурс — критерий и открытая граница.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Как работа отбирает доступный ресурс — критерий и открытая граница.md": {
       "sha256": "1d959512c66c98ea75fd934eb295488a6746aaabb808b9e1fd4f527daf1b3380",
       "lines": 100
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Отбор ресурса работой — терминальные ограничения.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Отбор ресурса работой — терминальные ограничения.md": {
       "sha256": "2c543d3facc8ef5304d6019898f69a7c78cb8f1715ef45d34e649838d48842eb",
       "lines": 297
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Оптимальная организация и цена исчезающих связей.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Оптимальная организация и цена исчезающих связей.md": {
       "sha256": "f542270b349b64ec1ca77792f329f25471022bcbf7df9ab02b01d0849faf0dbb",
       "lines": 103
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Глобальный отбор — положительный класс минимумов.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Глобальный отбор — положительный класс минимумов.md": {
       "sha256": "cdb37a486a9e24173ad4746d186ba9a6b36f77ff57a844504f1c6d4be158db6e",
       "lines": 182
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Готовность и свободный материал отобранной организации.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Готовность и свободный материал отобранной организации.md": {
       "sha256": "daf4248255517a14056eaebdad44ebe869ad05549b0d2f22d3a6aa3df67297ac",
       "lines": 86
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Отобранная организация — глобальный материальный тест.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Отобранная организация — глобальный материальный тест.md": {
       "sha256": "a433d6b0b6ce760b64fc5979fd42320676ffacce6a150a3ac963af305a61591c",
       "lines": 211
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Советник — независимое воспроизведение глобального отбора.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Советник — независимое воспроизведение глобального отбора.md": {
       "sha256": "d8cf3c6637306cf5fd474407f7fc536330a14fd74d27dc15642b566d9fda62ff",
       "lines": 198
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Когда эффективная работа конфликтует с будущей готовностью.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Когда эффективная работа конфликтует с будущей готовностью.md": {
       "sha256": "91e5d586ccde65724fd535cead944a74f8f6e206947fbcdee4cf876a5d46bfe9",
       "lines": 102
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — два физических режима готовности.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — два физических режима готовности.md": {
       "sha256": "4df253893b9f6f8efe014ede7be0c3834a66a69d40623cd4f03e429c75913dfd",
       "lines": 53
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Как окончание работы меняет будущую готовность.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Как окончание работы меняет будущую готовность.md": {
       "sha256": "e7ae599221f4575cb2d204e7e75a1f195ea7ea6a532163b113b0f26f3da9e882",
       "lines": 64
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Терминальный закон — граница самостоятельности.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Терминальный закон — граница самостоятельности.md": {
       "sha256": "5e7e037d3d1f1383d4b609b0385cb531bfb6378f8ea3f40c683caf96027e339c",
       "lines": 129
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Что фиксированная работа оставляет для будущих функций.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Что фиксированная работа оставляет для будущих функций.md": {
       "sha256": "532fc4c69839956665a58433e269ebc9d69b8d765bd99cb13e549d96599a7e12",
       "lines": 132
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Как фиксированная работа меняет будущие возможности.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Как фиксированная работа меняет будущие возможности.md": {
       "sha256": "b8a33e788b5b719cdafdd90d31bf848e83425eaea1785702951ae7b9f4cb0d2a",
       "lines": 95
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/SYNTHESIS_RU.md": {
+    "docs/sfp/determinacy_fixed_work_20261108/SYNTHESIS_RU.md": {
       "sha256": "5f5fa8b8cffd2abffc66fbe03bc0f3451aa5f8dd704e742e7f2c9182eeef509c",
       "lines": 111
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/SYNTHESIS_RU.md": {
+    "docs/sfp/future_choice_boundary_20261108/SYNTHESIS_RU.md": {
       "sha256": "aaa1aa0a0c29a0edf7134c154e5769af5e9f946519147e7ef43165216260ad23",
       "lines": 122
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/SYNTHESIS_RU.md": {
+    "docs/sfp/terminal_activity_reserve_20261108/SYNTHESIS_RU.md": {
       "sha256": "a9c87638837841568f7eaecdaa1c1bc1283916598c863e3c8d3fb5cbc66aa90f",
       "lines": 126
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CENTRAL_PHYSICAL_PRINCIPLE_20261103/SYNTHESIS_RU.md": {
+    "CENTRAL_PHYSICAL_PRINCIPLE_20261103/SYNTHESIS_RU.md": {
       "sha256": "f3401ea9251062d143573c0f77a81959b8c5299f964531d8c6506623fe244935",
       "lines": 99
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_ALIGNMENT_EXISTENCE_20261104/challenge/INDEPENDENT_PHYSICS_RU.md": {
+    "PHYSICAL_ALIGNMENT_EXISTENCE_20261104/challenge/INDEPENDENT_PHYSICS_RU.md": {
       "sha256": "1e86361a1a9246ddb5721d0f16c99ca2e9778f9d64db001bbbaddd339a0f5461",
       "lines": 151
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LEARNED_ALIGNMENT_20261104/challenge/INDEPENDENT_MECHANISM_RU.md": {
+    "LEARNED_ALIGNMENT_20261104/challenge/INDEPENDENT_MECHANISM_RU.md": {
       "sha256": "36a10fced854ff98c9bdb2229aaf7a5e9984815a4cdde4c498a3e7e3e2c6b293",
       "lines": 165
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_RULE_ACQUISITION_20261104/SYNTHESIS_RU.md": {
+    "ADAPTIVE_RULE_ACQUISITION_20261104/SYNTHESIS_RU.md": {
       "sha256": "f8a820a6eeca27307a902764cd170d2a953ddcf032db3b1b69fd759804346c26",
       "lines": 80
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/MOBILITY_MATERIAL_BALANCE_20261104/synthesis/MATERIAL_DERIVATION_RU.md": {
+    "MOBILITY_MATERIAL_BALANCE_20261104/synthesis/MATERIAL_DERIVATION_RU.md": {
       "sha256": "cf039830e5051d92cecfd9d8e8c1d69762a0e290368f9603e0d04ebced92e090",
       "lines": 150
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/MOBILITY_MATERIAL_BALANCE_20261104/review/COORDINATOR_CHECK_RU.md": {
+    "MOBILITY_MATERIAL_BALANCE_20261104/review/COORDINATOR_CHECK_RU.md": {
       "sha256": "be5e5fa2499c9301b6afbcd94f74c964982f1d2ade7031770457a6b1d3379917",
       "lines": 55
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_CAPACITY_BOUND_20261104/SYNTHESIS_RU.md": {
+    "ADAPTIVE_CAPACITY_BOUND_20261104/SYNTHESIS_RU.md": {
       "sha256": "7c515846854dc496f065c5e976fb848fae7a0eb780ae15133128d35ef2d621f8",
       "lines": 93
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_PREPARATION_HYPOTHESIS_20261105/SYNTHESIS_RU.md": {
+    "PHYSICAL_PREPARATION_HYPOTHESIS_20261105/SYNTHESIS_RU.md": {
       "sha256": "e2f2208d7bf9e4ab658b6e16775374d9a1762168f6cd565c4f0c4d10cd082eda",
       "lines": 82
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_SELECTION_RULE_20261105/SYNTHESIS_RU.md": {
+    "PHYSICAL_SELECTION_RULE_20261105/SYNTHESIS_RU.md": {
       "sha256": "189dfadc2fa878650f6e9edfd0ef92e3042bb0d75fd2b3e99a5f9d21ee27849c",
       "lines": 85
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/TRANSFER_SIGN_MECHANISM_20261105/SYNTHESIS_RU.md": {
+    "TRANSFER_SIGN_MECHANISM_20261105/SYNTHESIS_RU.md": {
       "sha256": "5ab3f4b8e4d585a7b8a4071e1fb1c353dee8b809164edeef68c48a14341d4cec",
       "lines": 86
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ACQUIRED_COMPATIBILITY_20261105/SYNTHESIS_RU.md": {
+    "ACQUIRED_COMPATIBILITY_20261105/SYNTHESIS_RU.md": {
       "sha256": "48f999186cd71b2403c874d06d85c5cdd8fa3aa3166cdcecfcba3ad5d00f5931",
       "lines": 64
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LEARNING_COOPERATION_PRINCIPLE_20261105/SYNTHESIS_RU.md": {
+    "LEARNING_COOPERATION_PRINCIPLE_20261105/SYNTHESIS_RU.md": {
       "sha256": "0b31aabd42128a497dbe97ba9d457ed8f303822eda6155b546dc38ed86c07c10",
       "lines": 81
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ALIGNMENT_TRANSFER_LAW_20261105/synthesis/TRANSFER_LAW_RU.md": {
+    "ALIGNMENT_TRANSFER_LAW_20261105/synthesis/TRANSFER_LAW_RU.md": {
       "sha256": "0b45df8511b1ffc45359e994401f585087d15015b71d6b04ab99732efb1cf595",
       "lines": 203
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ALIGNMENT_TRANSFER_LAW_20261105/SYNTHESIS_RU.md": {
+    "ALIGNMENT_TRANSFER_LAW_20261105/SYNTHESIS_RU.md": {
       "sha256": "a1003f576b5b73e270413b1557a2909e7d5b600bfb10e587ca678db16898fa90",
       "lines": 104
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LEARNED_COMPATIBILITY_HYPOTHESIS_20261105/SYNTHESIS_RU.md": {
+    "LEARNED_COMPATIBILITY_HYPOTHESIS_20261105/SYNTHESIS_RU.md": {
       "sha256": "0c4755e45a49b20f29753fd4245611c61d9d20de1e845b64d41d653a9e1d55d5",
       "lines": 93
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COORDINATION_SELECTION_MECHANISM_20261105/SYNTHESIS_RU.md": {
+    "COORDINATION_SELECTION_MECHANISM_20261105/SYNTHESIS_RU.md": {
       "sha256": "cb654d41d0c89370ba4ec00dbff1870943157c10d8a06171b1b5f2403e6e155b",
       "lines": 75
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/AI_AUTONOMY_STRUCTURE_20261105/SCOUT_REPORT_RU.md": {
+    "AI_AUTONOMY_STRUCTURE_20261105/SCOUT_REPORT_RU.md": {
       "sha256": "15f662d551e1c088aabed84e9032aacd18caf31fd808222a5370dd30d70f2cb8",
       "lines": 120
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/KAZAKOV_PRICE_MEMORY/DECISION_P1_RU.md": {
+    "KAZAKOV_PRICE_MEMORY/DECISION_P1_RU.md": {
       "sha256": "08357b5de991cc83e9724365f748006c9f8d8bbd419c6d84e9c14339f19f283f",
       "lines": 62
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_plasticity_bp001/BP001_AUTHOR_DECISION_20261028.md": {
+    "BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_plasticity_bp001/BP001_AUTHOR_DECISION_20261028.md": {
       "sha256": "6f3cfc5719e193314915afcc817045234ad11dfa6a32e38b13a7deb196934684",
       "lines": 35
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_plasticity_bp003/BP003_MATHEMATICAL_TEST.md": {
+    "BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_plasticity_bp003/BP003_MATHEMATICAL_TEST.md": {
       "sha256": "79e20201c8fd508ac51b6413691ab8daf35592ffddfba7d52b5736d813fa0d69",
       "lines": 184
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/bp004_prospective_interference_20261028/SCIENTIFIC_REPORT_RU.md": {
+    "BEHAVIORAL_PLASTICITY_BP001/docs/sfp/bp004_prospective_interference_20261028/SCIENTIFIC_REPORT_RU.md": {
       "sha256": "3a6d0ce39886a3ecce9877694cec09f2fc262b85737453f362569bd41f9419c6",
       "lines": 87
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_curriculum_transfer_20261028/ADVISOR_GATE_DECISION_20261028_RU.md": {
+    "BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_curriculum_transfer_20261028/ADVISOR_GATE_DECISION_20261028_RU.md": {
       "sha256": "48434c3e6a568a268ce75feec73018b6980a6ec01937e8d68a63377a7ec05410",
       "lines": 40
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/bp005_coin_reference_repair_20261029/T1_REPORT_RU.md": {
+    "BEHAVIORAL_PLASTICITY_BP001/docs/sfp/bp005_coin_reference_repair_20261029/T1_REPORT_RU.md": {
       "sha256": "b390bfdbad261fca494d5eac1a791b199bb7d755f0bba237ca249585ca777da4",
       "lines": 93
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/accepted/SILENT_RECODING_001/REPORT_RU.md": {
+    "SILENT_RECODING/accepted/SILENT_RECODING_001/REPORT_RU.md": {
       "sha256": "2a2fac53f0e90879cf867035c7904e343feed116dcce071cb591968026a29ae1",
       "lines": 239
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/accepted/SILENT_RECODING_002_R1/REPORT_RU.md": {
+    "SILENT_RECODING/accepted/SILENT_RECODING_002_R1/REPORT_RU.md": {
       "sha256": "db0774c2f82517797c895aff6c11f6eb0de92270a43335a6f08a72d2b19798fc",
       "lines": 55
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/SILENT_RECODING_003/REPORT_RU.md": {
+    "SILENT_RECODING/SILENT_RECODING_003/REPORT_RU.md": {
       "sha256": "c873aa3d23ed506b2f8932810e53d067c2587c8efca072b7fc896f694310d642",
       "lines": 53
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/SILENT_RECODING_004/REPORT_RU.md": {
+    "SILENT_RECODING/SILENT_RECODING_004/REPORT_RU.md": {
       "sha256": "415c52a4876f9e931fe5ed01457b4059c0bcd7708ca9fd858e2a689fb93d5c1c",
       "lines": 121
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Расширение возможностей — этап 1/Запрет общего усиления.md": {
+    "Стратегия исследований/Расширение возможностей — этап 1/Запрет общего усиления.md": {
       "sha256": "df2bd57d195704cb058099218cd8d9b97acf3c6f18536873ecfd2392a8d1c098",
       "lines": 59
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/03_loading.tex": {
+    "WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/03_loading.tex": {
       "sha256": "351b75bdb0fbd6556e38b69bb83d46f9228a15a155aad707610105b5df1098db",
       "lines": 104
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Атлас SFP/Критерий компенсации — результат.md": {
+    "Стратегия исследований/Атлас SFP/Критерий компенсации — результат.md": {
       "sha256": "59068137278bbfd01bfa50dc4a0c64c3bdcbc8d61adcd2d8a36237637db06bc3",
       "lines": 114
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Критерий компенсации — этап 2/Вывод критерия.md": {
+    "Стратегия исследований/Критерий компенсации — этап 2/Вывод критерия.md": {
       "sha256": "5d2fd5f1e0d064c5fda7960f4aacfc957e3ed590423a2dd958afda49e019dfcc",
       "lines": 159
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Рекогносцировка по Атласу — 6 ноября/Положительные мосты.md": {
+    "Стратегия исследований/Рекогносцировка по Атласу — 6 ноября/Положительные мосты.md": {
       "sha256": "0a4d4f6e421c2715930c39a7ecbaefef35ebca8051ffcd8f3060c998e6fea118",
       "lines": 175
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Рекогносцировка по Атласу — 6 ноября/Независимая рекогносцировка.md": {
+    "Стратегия исследований/Рекогносцировка по Атласу — 6 ноября/Независимая рекогносцировка.md": {
       "sha256": "0d9e9a70ff2acd3687b4610f44b629bbfab200c6c29202d0ad06dff769750507",
       "lines": 135
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Доступная подготовка.md": {
+    "Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Доступная подготовка.md": {
       "sha256": "4d4c3723d2042c2f6d6398c8caae29174747794a27cf8a66619c8043eec13ae0",
       "lines": 220
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Атлас SFP/Доступная и оплаченная подготовка.md": {
+    "Стратегия исследований/Атлас SFP/Доступная и оплаченная подготовка.md": {
       "sha256": "b758f49a9c9c1d02ba8836643af894cb6c0a897054e6bb47ca032c2074dc9613",
       "lines": 104
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Совместная проверка оплаты.md": {
+    "Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Совместная проверка оплаты.md": {
       "sha256": "47a3bc05a4b329eef2413556ff6f875743b1994ae2e4861824843f5fa7c34f59",
       "lines": 152
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Совместная проверка доступности.md": {
+    "Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Совместная проверка доступности.md": {
       "sha256": "3da4bd93c835804d681f80c75093ea3340964d094638f800a1520adfb4d87660",
       "lines": 197
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Оплата функционального выигрыша.md": {
+    "Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Оплата функционального выигрыша.md": {
       "sha256": "75b7807a4eda603e47c76eb555b18eab4c28ba557a31ba55bfa7ecc4974e2716",
       "lines": 206
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Сохранение оплаченной подготовки — 6 ноября/Физическое условие сохранения.md": {
+    "Стратегия исследований/Сохранение оплаченной подготовки — 6 ноября/Физическое условие сохранения.md": {
       "sha256": "eecf97e8ecffe1da0685c4ec46dbf7972418bbc548a792c321bfbcf80041d778",
       "lines": 277
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Атлас SFP/Замена организации и сохранение подготовки.md": {
+    "Стратегия исследований/Атлас SFP/Замена организации и сохранение подготовки.md": {
       "sha256": "3abd2ddcbbab7093839c562f804629fb0bded0eb179418dfd62a4e87f21c0200",
       "lines": 117
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Сохранение оплаченной подготовки — 6 ноября/Независимая проверка критерия.md": {
+    "Стратегия исследований/Сохранение оплаченной подготовки — 6 ноября/Независимая проверка критерия.md": {
       "sha256": "cea15ddf0a968c084f29963934848b7bbfb99c7401453d7d182b21ecad09fa7c",
       "lines": 247
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/kron_mobility_order_20261027_PRIVATE/RESEARCH_NOTE_RU.md": {
+    "BEHAVIORAL_PLASTICITY_BP001/docs/sfp/kron_mobility_order_20261027_PRIVATE/RESEARCH_NOTE_RU.md": {
       "sha256": "7cb4c8dc600173663a4a06930e8ccd1a7d9ce663c3d522c67574c182521164ca",
       "lines": 164
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_PRESERVING_REDUCTION_001/kron_mobility_review_20261027_PRIVATE/REVIEW_RU.md": {
+    "ADAPTIVE_PRESERVING_REDUCTION_001/kron_mobility_review_20261027_PRIVATE/REVIEW_RU.md": {
       "sha256": "0df56155ce830c7da6e94d9ca0f1f70eaefd0ce0ea190d4c4ea4c4979e86598c",
       "lines": 198
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/protected_task_gate_20261027_PRIVATE/RESEARCH_NOTE_RU.md": {
+    "BEHAVIORAL_PLASTICITY_BP001/docs/sfp/protected_task_gate_20261027_PRIVATE/RESEARCH_NOTE_RU.md": {
       "sha256": "a9a34217a0d3d15e938bb0a9dcd8e6e363b15648d00c7cffa75d61a81f1197e6",
       "lines": 209
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_PRESERVING_REDUCTION_001/protected_task_review_20261027_PRIVATE/REVIEW_RU.md": {
+    "ADAPTIVE_PRESERVING_REDUCTION_001/protected_task_review_20261027_PRIVATE/REVIEW_RU.md": {
       "sha256": "dfad0585afc0f9fc6f92cce0713815c7668c5f2d33cfd876ea2ab4214bb71d96",
       "lines": 207
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Ресурс будущих задач — 6 ноября/Проверка разделения.md": {
+    "Стратегия исследований/Ресурс будущих задач — 6 ноября/Проверка разделения.md": {
       "sha256": "b5fe315696ebc4633407c9a811752a42f0baa385a83b914619760d96e997b295",
       "lines": 245
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Закон минимальной цены универсальности.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Закон минимальной цены универсальности.md": {
       "sha256": "ac31b2246995ec6a74c18cf39087edde17698f00fb8fb2acc7a1ed2d140a151b",
       "lines": 158
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Цена приобретённой специализации.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Цена приобретённой специализации.md": {
       "sha256": "5114314de56b94cec57e6da0a410362b926811e056323c3ba08aee8cca320161",
       "lines": 171
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приобретённая специализация — достижимость.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Приобретённая специализация — достижимость.md": {
       "sha256": "6ab62476b68759f0b70aa9de9303c14719d9286dd7627f5bc91831fcaf99e6c4",
       "lines": 263
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приобретённая специализация — необходимость.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Приобретённая специализация — необходимость.md": {
       "sha256": "4bc8eeadfce70820ab34ffe4b2435192c1ff7ccf68bf0cb6b62bad2ad3b3c04a",
       "lines": 287
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Полная цена меняющихся задач.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Полная цена меняющихся задач.md": {
       "sha256": "ef1783ae177c5090705cbcc8c5d0b5e8c2cf8dc7a8c9a4046df24d7a3b845232",
       "lines": 139
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Полная цена потока — необходимые затраты.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Полная цена потока — необходимые затраты.md": {
       "sha256": "845c5804783d3b70304c5f0d9b42c66e40c51065a3cd2e0d927b784bbaf54209",
       "lines": 284
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Полная цена потока — достигающая политика.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Полная цена потока — достигающая политика.md": {
       "sha256": "53b0a48c5ca933a354ac54b4500adc87e26b63b4d35d45f8f9c481249eb873b1",
       "lines": 237
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Порядок работы и цена будущей готовности.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Порядок работы и цена будущей готовности.md": {
       "sha256": "66e41c501e9b8afa93f44bb026ea8059d4cc699a26384b23ee47f68c94fb223b",
       "lines": 165
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Попутное приобретение — необходимые затраты.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Попутное приобретение — необходимые затраты.md": {
       "sha256": "3317c0430fe23eeed797a7f5262734fd0f88f3237a60f3a8539e34aec4c9fbbf",
       "lines": 193
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Попутное приобретение — достижимость.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Попутное приобретение — достижимость.md": {
       "sha256": "983c57949edd58ac4d7d07f7869c42e69a80e030ff726239a2bd9491b8f2431c",
       "lines": 227
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Конечная готовность и предел накопительного подхода.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Конечная готовность и предел накопительного подхода.md": {
       "sha256": "04796bed60637f554d321e9e5ff4d372ade805911561a6bd76cde9f8301d0e68",
       "lines": 133
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Конечное приобретение — достижимость.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Конечное приобретение — достижимость.md": {
       "sha256": "ee0318a74ab3913f308a36becaf2766daa3d24949926ef24d4db45b56ef3e7a6",
       "lines": 262
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Конечное приобретение — оптимальная цена.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Конечное приобретение — оптимальная цена.md": {
       "sha256": "937859df553e296bcfd2334f0d3715fbc0d7064c88b4601dfa9133d6307ca2cf",
       "lines": 292
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Обратимое обслуживание — доказательство Советника.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Обратимое обслуживание — доказательство Советника.md": {
       "sha256": "172958853d94c881194c87cb094841521a82d9931fdae7616545a05b84990888",
       "lines": 267
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Обратимое обслуживание — режимы доплаты.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Обратимое обслуживание — режимы доплаты.md": {
       "sha256": "30c3426dbcf068e10c614171fc1e112a2d8f989dd23c096ecb66bc64761b553c",
       "lines": 128
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Когда оптимальная работа сама обеспечивает готовность.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Когда оптимальная работа сама обеспечивает готовность.md": {
       "sha256": "02e577df920143162db503a2ead5cd32766cbb1a7e016e3c2baf0d29f8a50b43",
       "lines": 118
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Итоги Kimi и критерий совместимости работы с готовностью.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Итоги Kimi и критерий совместимости работы с готовностью.md": {
       "sha256": "f9e81971cf6a83a17b97f7965c3d66fa67e59d3f04f0a6634cee26086869accd",
       "lines": 131
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Когда работа вынуждает готовность — критерий и физическая граница.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Когда работа вынуждает готовность — критерий и физическая граница.md": {
       "sha256": "8d9fc99697abf4695702df3e86ff8bd88cfbfe8552b081f288ef9db01d2a04e9",
       "lines": 148
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Допустимые продолжения — терминальный критерий.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Допустимые продолжения — терминальный критерий.md": {
       "sha256": "f1159fe1f6333e83c75f6b56601918136aba70704848a6c9250df28b99db0c2c",
       "lines": 240
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Допустимые продолжения — физический перенос и граница.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Допустимые продолжения — физический перенос и граница.md": {
       "sha256": "6db4a2f1ffc94d7d0fbf7235c43d57f52c5b2bf836a2363a2e445eb633792707",
       "lines": 197
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Советник — насыщение материала и положительная доплата.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Советник — насыщение материала и положительная доплата.md": {
       "sha256": "083ff73eb144d061b1100682858410b0a5587c49efa33cc7019d44e9d233e60a",
       "lines": 254
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Отобранная организация — цена будущей готовности.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Отобранная организация — цена будущей готовности.md": {
       "sha256": "d1fd4059e8f3940972ce26b503f8297194fe9e066646f7d18eea1b2124185f69",
       "lines": 162
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Фиксированная работа — семейный физический критерий.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Фиксированная работа — семейный физический критерий.md": {
       "sha256": "f7a812e1dcffa8e2655a46d16967ccc9ea9b8f4ac4f95bed966a75be5cc547f6",
       "lines": 238
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Фиксированная работа — достижимость и определённость будущего.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Фиксированная работа — достижимость и определённость будущего.md": {
       "sha256": "7a250cec86415cb972be886e1aec2ff13d8cd50287989eab8de4bf6f390da85e",
       "lines": 192
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — семейный закон фиксированной работы.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — семейный закон фиксированной работы.md": {
       "sha256": "43d013c2959eb5e9e0e1980d6d3d73e62cd6262181fe97d244b2d5e18ae9076b",
       "lines": 44
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Советник — приёмка семейного физического критерия.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Советник — приёмка семейного физического критерия.md": {
       "sha256": "ece1ab13b85db8b97628992c11c4714a52ada07f0baf75d8f3953a87b66995ba",
       "lines": 202
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Принятая веха — семейные последствия фиксированной работы.md": {
+    "Стратегия исследований/Физическая цена организации — 6 ноября/Принятая веха — семейные последствия фиксированной работы.md": {
       "sha256": "66461b0978bc3641aacc4f7a4b6fd894a34b879ba861a7744e1ac774ebb83e1d",
       "lines": 55
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/RIGIDITY_REVIEW_RU.md": {
+    "docs/sfp/determinacy_fixed_work_20261108/RIGIDITY_REVIEW_RU.md": {
       "sha256": "9b7310da64a3466ea1fc94f947e4b2d421b702aa0cd359d9b027491951248234",
       "lines": 129
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/TERMINAL_PROFILE_ANALYSIS_RU.md": {
+    "docs/sfp/determinacy_fixed_work_20261108/TERMINAL_PROFILE_ANALYSIS_RU.md": {
       "sha256": "c0395bed3fe0559ecd2bed701ab56aced08440e874b41a99952cac0d0aacf1f0",
       "lines": 175
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/ROBUSTNESS_REVIEW_RU.md": {
+    "docs/sfp/determinacy_fixed_work_20261108/ROBUSTNESS_REVIEW_RU.md": {
       "sha256": "5f60ad67eb5d0dc3914312b7266aa5abb9ce4730a8fc0b53edfaea3fab055d98",
       "lines": 108
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/MECHANISM_ANALYSIS_RU.md": {
+    "docs/sfp/future_choice_boundary_20261108/MECHANISM_ANALYSIS_RU.md": {
       "sha256": "018002c811d0fb232099f6b0b3fd65a1c242fed97859b304bec4f0d38a340d8e",
       "lines": 273
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/MECHANISM_REVIEW_RU.md": {
+    "docs/sfp/future_choice_boundary_20261108/MECHANISM_REVIEW_RU.md": {
       "sha256": "3a265aa792e0282b26f1f79ec8fac243aeaa20524f9143e4fea99791dcfead9e",
       "lines": 104
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/ACTION_CRITERION_RU.md": {
+    "docs/sfp/future_choice_boundary_20261108/ACTION_CRITERION_RU.md": {
       "sha256": "ce607b73a4c42678dcbda29aec5d93041d2dc3710c958c7b1d633c045e8a5a47",
       "lines": 208
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/RESOURCE_CLEARANCE_LAW_RU.md": {
+    "docs/sfp/future_choice_boundary_20261108/RESOURCE_CLEARANCE_LAW_RU.md": {
       "sha256": "be1b90fd022355fa42299372b675246441f2a0636dfa199729819a31fb9c46cb",
       "lines": 164
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/RESOURCE_CLEARANCE_REVIEW_RU.md": {
+    "docs/sfp/future_choice_boundary_20261108/RESOURCE_CLEARANCE_REVIEW_RU.md": {
       "sha256": "1c8efd61e07d939a5cb417120c3d574735704d97c27cced153b7b0f5d82ef919",
       "lines": 133
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/LOWER_SELECTION_RU.md": {
+    "docs/sfp/terminal_activity_reserve_20261108/LOWER_SELECTION_RU.md": {
       "sha256": "4d0873a9efcec6e5f36e91d815b2d75f065e4544a06ef306c93831c3f8e05020",
       "lines": 268
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/WORK_CALIBRATION_CLASS_RU.md": {
+    "docs/sfp/terminal_activity_reserve_20261108/WORK_CALIBRATION_CLASS_RU.md": {
       "sha256": "c930e68bcef0979cad836d513a06aeab0da2713501aeffc1125ec24aa104e498",
       "lines": 106
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/TERM_ENDGAME_RU.md": {
+    "docs/sfp/terminal_activity_reserve_20261108/TERM_ENDGAME_RU.md": {
       "sha256": "ebc9b436f6623e9e85e83b084f84e284a3eaf2fc6ede97e12b110a4b1a361880",
       "lines": 206
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/RETENTION_PRICE_RU.md": {
+    "docs/sfp/terminal_activity_reserve_20261108/RETENTION_PRICE_RU.md": {
       "sha256": "0789552caaac2de8a5eb86d7fe78cc557de813b6b52faec986455d78f780966f",
       "lines": 97
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/RETENTION_REVIEW_RU.md": {
+    "docs/sfp/terminal_activity_reserve_20261108/RETENTION_REVIEW_RU.md": {
       "sha256": "ca02324ee87b33136eee37fedec10e8b607bc9ca35d3fbe9e5c83ba41d57e5c3",
       "lines": 108
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/ACCURACY_COROLLARY_RU.md": {
+    "docs/sfp/terminal_activity_reserve_20261108/ACCURACY_COROLLARY_RU.md": {
       "sha256": "89f308061b2252849160a4c6e0533d52d010e2de424adb48f80154b997f585c8",
       "lines": 51
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/evidence/ADVISOR_ACCEPTANCE_20261108_RU.md": {
+    "docs/sfp/terminal_activity_reserve_20261108/evidence/ADVISOR_ACCEPTANCE_20261108_RU.md": {
       "sha256": "4fcb0322b2ad15bad7a8c87184b0b5f07c73e717867813b3dc71029379637535",
       "lines": 240
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/SYNTHESIS_RU.md": {
+    "docs/sfp/organization_selection_composition_20261109/SYNTHESIS_RU.md": {
       "sha256": "8f5472e6beba0c4c4f876f81755b019e646da84b5c2485adcfa0430a3c73c4ba",
       "lines": 34
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/TERMINAL_LAW_RU.md": {
+    "docs/sfp/organization_selection_composition_20261109/TERMINAL_LAW_RU.md": {
       "sha256": "e89a18da9b7a15851a94fdb7531f32b53e9efb65f70474c24969aa09fdf324b7",
       "lines": 127
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/COMMON_DRIVE_RU.md": {
+    "docs/sfp/organization_selection_composition_20261109/COMMON_DRIVE_RU.md": {
       "sha256": "722eacac0448dc83e05610851cf870c25d3ece8e44bb21d013166a1320ce33cd",
       "lines": 133
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_diversity_20261109/STATIC_GATE_RU.md": {
+    "docs/sfp/c2_rad_diversity_20261109/STATIC_GATE_RU.md": {
       "sha256": "986bad55ab26e75c51dfc16028440b692322bdaa4a1bfc85766aedf60bbc5a6e",
       "lines": 116
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_diversity_20261109/TERMINAL_COROLLARY_RU.md": {
+    "docs/sfp/c2_rad_diversity_20261109/TERMINAL_COROLLARY_RU.md": {
       "sha256": "3d1d50a4a58eba8c2dfbac59c02342370716dca15d90acc4d04f606e047ae551",
       "lines": 30
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_natural_precision_20261109/NATURAL_PRECISION_RU.md": {
+    "docs/sfp/c2_rad_natural_precision_20261109/NATURAL_PRECISION_RU.md": {
       "sha256": "b525b639af835c3f36276559068b4c449534b900c4dd3845ac9d8b024be57ce4",
       "lines": 80
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_natural_precision_20261109/COALESCENCE_LOOP_RU.md": {
+    "docs/sfp/c2_rad_natural_precision_20261109/COALESCENCE_LOOP_RU.md": {
       "sha256": "f726277a2372681215ffeab84dddd4c87bd7a042eb9b0e6de8989a524eb60589",
       "lines": 57
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_natural_precision_20261109/AUDIT_AA5_RU.md": {
+    "docs/sfp/c2_rad_natural_precision_20261109/AUDIT_AA5_RU.md": {
       "sha256": "5d94e4fe6950e93782ae9ef6d50ec06637dbb4bb544b2092065dcc631171fd56",
       "lines": 12
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_free_terminal_20261109/FREE_TERMINAL_RU.md": {
+    "docs/sfp/c2_rad_free_terminal_20261109/FREE_TERMINAL_RU.md": {
       "sha256": "e311357785116ec9e4d1952a8068b6c07db31176cc0a57a7dcf400b63a9b4144",
       "lines": 91
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_free_terminal_20261109/AUDIT_NATURAL_GAP_RU.md": {
+    "docs/sfp/c2_rad_free_terminal_20261109/AUDIT_NATURAL_GAP_RU.md": {
       "sha256": "45d7d38a9d648e0809820cfc15aef06ab6f1ff9d0e27b26c511de4830ed19a6c",
       "lines": 19
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_future_aggregation_20261109/SAFE_AGGREGATION_RU.md": {
+    "docs/sfp/c2_rad_future_aggregation_20261109/SAFE_AGGREGATION_RU.md": {
       "sha256": "02413a99fce943ff2e48be9379541111821059396ea11a189712a8637967aeb9",
       "lines": 87
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_future_aggregation_20261109/LITERATURE_AND_STATUS_RU.md": {
+    "docs/sfp/c2_rad_future_aggregation_20261109/LITERATURE_AND_STATUS_RU.md": {
       "sha256": "04d32bb457eb8000d961bc4b686ef18326bcb3c4b0cc82c6b4cad0fa3f155b7b",
       "lines": 28
     },
-    "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_joint_execution_20261109/JOINT_EXECUTION_RU.md": {
+    "docs/sfp/c2_rad_joint_execution_20261109/JOINT_EXECUTION_RU.md": {
       "sha256": "2b829cf8287252aa9f9852cc40a5a0eb25ca6b8870fda8a9d589b0241623a25f",
       "lines": 104
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
+    "COMMON_CLASS_20261102/SYNTHESIS_RU.md": {
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce",
       "lines": 128
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CROSS_SYNTHESIS_20261103/SYNTHESIS_RU.md": {
+    "CROSS_SYNTHESIS_20261103/SYNTHESIS_RU.md": {
       "sha256": "cdf00b9902bc6a630ce9438505f3845184b0e02866b59f37e692699f35730ed5",
       "lines": 239
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/04_transfer.tex": {
+    "WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/04_transfer.tex": {
       "sha256": "2bf85815f2b0e1c796aeb1fe98f594038c242973dee446932b3c8a401a85c7b7",
       "lines": 136
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/06_endpoint.tex": {
+    "WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/06_endpoint.tex": {
       "sha256": "7d08cf482b9e1dd1c3e2b71fbe12f0a7235f8a2bf0bb079b819d492a68fe324f",
       "lines": 106
     },
-    "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/07_limits.tex": {
+    "WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/07_limits.tex": {
       "sha256": "e911a90dcfca73d98676bbfb7311373c352031b7e35c63706adcc89c8705fbed",
       "lines": 60
     },
@@ -715,1125 +715,1125 @@
   },
   "sources_read": [
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m01/SFP-M01_v2.1.tex",
+      "path": "primary_sources/m01/SFP-M01_v2.1.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "e8263d3aa536649af02b20a9824ed50b7093010b31b2a895c275de063e712b42"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m02/SFP-M02_v0.5.tex",
+      "path": "primary_sources/m02/SFP-M02_v0.5.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "6767c55a1112d2ecb98041b332f3b924fc349fc45c5d21bbad715dacb2cf5c86"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m03/SFP-M03_v0.3.tex",
+      "path": "primary_sources/m03/SFP-M03_v0.3.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "837585a3ffdf685d653d9ced342c414bed113b4df604c4799b4bfccb8bab194f"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m04/SFP-M04_v0.2.tex",
+      "path": "primary_sources/m04/SFP-M04_v0.2.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "cbe660d0ffe2f1cd82881018cd46b1ec95a60c7c3c867c8160427df4fb0588d2"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/mechanism.tex",
+      "path": "primary_sources/m05/sections/mechanism.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "5bee4b307ddd0f2be5b79fbd7d098ce82048a6faa531acd5931013476cd4b051"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/equivalence.tex",
+      "path": "primary_sources/m05/sections/equivalence.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "558d281c6040408fc8f8a1e64e97e7a33c1561e6f496be040055bf7db9aa6815"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/parity_theorem.tex",
+      "path": "primary_sources/m05/sections/parity_theorem.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "6522776d1636646d97e5cfab91b948775afa03694f91e7d7ed990d4f7cb9a7fb"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/metric_prediction.tex",
+      "path": "primary_sources/m05/sections/metric_prediction.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "c76777a100e5988ad6a6acc58f183efaf436becf54c6fbd925df5b2fd89df504"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m05/sections/neural.tex",
+      "path": "primary_sources/m05/sections/neural.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "d3bfd24b93053265594e4068d714a69a09a22935c710f6d8f5468e9cd3cca6a9"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m06/sections/03_results.tex",
+      "path": "primary_sources/m06/sections/03_results.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "eabc8b8a1a8b5c2217234d63c1c13f3dfbba2bee07c9fc12d53350e08d2aa831"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m06/sections/02_model.tex",
+      "path": "primary_sources/m06/sections/02_model.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "01395d72c13e7d84b66c196eacdbf820c7ac4b6a1e228f0cdc45f739d1ee7efb"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m06/sections/04_sensitivity.tex",
+      "path": "primary_sources/m06/sections/04_sensitivity.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "c103da81714fae14ab055d14754fc85f4fe30751cd0aced152bb0850674ec57d"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/02_model_results.tex",
+      "path": "WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/02_model_results.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "313c02e6709de8f5ab2af6a74b3814378e79f0fa9c1215dd3fa4c932de09cd7f"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PLASTICITY_COST_CLASSES_20261101/PREPRINT_READY_v0_2/manuscript/model.tex",
+      "path": "PLASTICITY_COST_CLASSES_20261101/PREPRINT_READY_v0_2/manuscript/model.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "a48165fba4aff31376821719e98d7b61bb6591bef736b01b6dc08e29ac7e72b4"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PLASTICITY_COST_CLASSES_20261101/PREPRINT_READY_v0_2/manuscript/cost.tex",
+      "path": "PLASTICITY_COST_CLASSES_20261101/PREPRINT_READY_v0_2/manuscript/cost.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "997eb623e6790a430b316cef1ec9afe48bd6b7cc9a7e5a274653655398752cd2"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SFP_M09_OBSERVATION_ACCESS_20261102/SICON_SUBMISSION_PREPARATION_20261102/SOURCE/manuscript/main_result.tex",
+      "path": "SFP_M09_OBSERVATION_ACCESS_20261102/SICON_SUBMISSION_PREPARATION_20261102/SOURCE/manuscript/main_result.tex",
       "coverage": "sections",
       "notes": "19–61: адресное сравнение M09 с квартовой IS; разные утверждения, не дубликаты.",
       "sha256": "35d4b718b0239b5f153f39147ba4e917e1c57b78520e1e21be78644000223149"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SFP_M09_OBSERVATION_ACCESS_20261102/SICON_SUBMISSION_PREPARATION_20261102/SOURCE/manuscript/conditions.tex",
+      "path": "SFP_M09_OBSERVATION_ACCESS_20261102/SICON_SUBMISSION_PREPARATION_20261102/SOURCE/manuscript/conditions.tex",
       "coverage": "sections",
       "notes": "4–83: адресное сравнение M09 с квартовой IS; разные утверждения, не дубликаты.",
       "sha256": "9680053362d07d868351998fc5c57bfec72ac4811e6f4eaf2b55d0b415a5143f"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m10/sections/05_composition.tex",
+      "path": "primary_sources/m10/sections/05_composition.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "05812ee6399530f786dcbe799062c65141a27bc008b566cc75c8cfe095b601a4"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m10/sections/04_ports.tex",
+      "path": "primary_sources/m10/sections/04_ports.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "9b0f6de8becdd9ce9a10fc1b716b31805dc9820986bfa4af35714ead2e4bd573"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-landscape-20261105/primary_sources/m10/sections/06_lower_limits.tex",
+      "path": "primary_sources/m10/sections/06_lower_limits.tex",
       "coverage": "sections",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "01a37f359d3b5cd0350b4d3e2de74fe5cbebbd9dfeb912adede043462011737a"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/RESULTS.md",
+      "path": "BEHAVIORAL_PLASTICITY_BP001/docs/sfp/RESULTS.md",
       "coverage": "full",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "54a4071b6eb9b2e98dd605483654cec558fb0d85006391f5604dc0e5624ab388"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/09_RELEASES/CURRENT_PUBLIC_RELEASES.md",
+      "path": "09_RELEASES/CURRENT_PUBLIC_RELEASES.md",
       "coverage": "full",
       "notes": "Целевые формулировки и указанные в узлах фрагменты; доказательства выборочно. Не полный математический аудит.",
       "sha256": "820ad9c123aaeef5fbce2a718dda70201c556b64082bb0302d77cf028dee5093"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_DEFICIT_CRITERION_20261103/SYNTHESIS_RU.md",
+      "path": "ADAPTIVE_DEFICIT_CRITERION_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 40–59, 84–146, 114–146, 138–146, 148–166, 157–166",
       "sha256": "15d344abed9d22abbe8b0678f75c2cf2113550acac716ee788a7d021e4ba9c8d"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CLASS_LAW_MILESTONE_20261103/MILESTONE_RU.md",
+      "path": "CLASS_LAW_MILESTONE_20261103/MILESTONE_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 25–66",
       "sha256": "35a3fd2be1b4cbbdbb6ae4e0e7334e3de36c2595c6540c1d27aec841cd16e371"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMMON_CLASS_20261102/SYNTHESIS_RU.md",
+      "path": "COMMON_CLASS_20261102/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 35–72",
       "sha256": "fb6f675e2837ab48e6b0e9f3fe663503ba1b1623bede38eea70e8620fd5f95ce"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMPENSATION_REDUCTION_RULE_20261103/SYNTHESIS_RU.md",
+      "path": "COMPENSATION_REDUCTION_RULE_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 6–27, 6–48",
       "sha256": "1ac5ac4186dedf3f088e7842ee0a8e61c447b1ff3a46045d9d5d93667416f2fc"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COMPOSITION_REDUCTION_20261102/composition/CR_C3_RU.md",
+      "path": "COMPOSITION_REDUCTION_20261102/composition/CR_C3_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 10–38, 40–70",
       "sha256": "23e01975eb96fb2ff2a8e1a78d8bca9f771c867de80055ac29340e639381f0bc"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CRITERION_COMPOSITION_20261103/construction/COMPOSITION_GEOMETRY_RU.md",
+      "path": "CRITERION_COMPOSITION_20261103/construction/COMPOSITION_GEOMETRY_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 54–104",
       "sha256": "62251767223c3dd097e164c1b57e1057d4c9817f60fb238393249c547ff5f13f"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CRITERION_COMPOSITION_20261103/obstruction/MATCHING_GRAPH_COROLLARY_RU.md",
+      "path": "CRITERION_COMPOSITION_20261103/obstruction/MATCHING_GRAPH_COROLLARY_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 73–105",
       "sha256": "6c9d2e8bbd820b4031a5932514a76932fe4f52e9497b15ca369adb66d08ac7a0"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CROSS_SYNTHESIS_20261103/CROSS_C1_RU.md",
+      "path": "CROSS_SYNTHESIS_20261103/CROSS_C1_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 6–20, 22–44, 67–89, 91–139, 113–146",
       "sha256": "265565c6110f7fe3cc493071ef717aee4ae594dfe7d83caad9df61107976253a"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CROSS_SYNTHESIS_20261103/SYNTHESIS_RU.md",
+      "path": "CROSS_SYNTHESIS_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 70–99",
       "sha256": "cdf00b9902bc6a630ce9438505f3845184b0e02866b59f37e692699f35730ed5"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CUMULATIVE_FUNCTIONS_20261103/SYNTHESIS_RU.md",
+      "path": "CUMULATIVE_FUNCTIONS_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 68–82, 68–103, 105–118",
       "sha256": "10109b01b1cb22c4449e9181bc2d9b9bb7db12e948083f9a22e9f4bb87bae602"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CURRENT_WITH_VOLTAGE_PROTECTION_20261103/SYNTHESIS_RU.md",
+      "path": "CURRENT_WITH_VOLTAGE_PROTECTION_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 5–16, 18–78, 50–78, 80–99",
       "sha256": "548cd98ddbe070a0ed545ea2c93babfe32e5932db2d658a39b8cf261942e57f6"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/FIXED_LOAD_COMPENSATION_20261103/SYNTHESIS_RU.md",
+      "path": "FIXED_LOAD_COMPENSATION_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 8–50, 26–50",
       "sha256": "a5a76e34189d7754ede68ae32f3bc8f59d804bf8c6407740d42775c4ee217806"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/GEOMETRIC_RULE_20261102/SYNTHESIS_RU.md",
+      "path": "GEOMETRIC_RULE_20261102/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 7–24, 26–69",
       "sha256": "3949c22b698afa09d3bfca61915c64f6bf732cec3c649c5f84fb4ea36d2895c9"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_COMPRESSION_20261102/SYNTHESIS_RU.md",
+      "path": "INFORMATION_COMPRESSION_20261102/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 23–51, 130–155",
       "sha256": "97c374cf52c4c68604a6cb108d820bdb79970937dffa2f26aadc694391d34049"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_STATE_20261102/SYNTHESIS_RU.md",
+      "path": "INFORMATION_STATE_20261102/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 19–42, 147–160",
       "sha256": "be3f64fb08e395bffe36a0e737a03f90c947f3dc58167e4ee7332c55ca06551e"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_STATE_20261102/bounds/IS_NOISE_LOWER_RU.md",
+      "path": "INFORMATION_STATE_20261102/bounds/IS_NOISE_LOWER_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 9–35, 56–148, 125–142, 145–149",
       "sha256": "2536449c429f9af637666b31e8fbf9eb10b3fbc0722d4b57e82284ccea8d0d1f"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INFORMATION_STATE_20261102/bounds/IS_S1_RU.md",
+      "path": "INFORMATION_STATE_20261102/bounds/IS_S1_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 19–72, 28–72",
       "sha256": "33df2159063e114a9861f2c8b21f1ce099d5e035a9d1e21cc947976a8743b1ae"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/INHERITED_EXECUTION_20261103/SYNTHESIS_RU.md",
+      "path": "INHERITED_EXECUTION_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 7–41, 24–41; также 173–192: явное разграничение M10 и последующего 32→17→2.",
       "sha256": "f1928272daa461e5d7dc3770f172e1453e3ae10b868554a9aa456ad04f3ed1fe"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LOADED_LOCAL_SYNTHESIS_20261103/SYNTHESIS_RU.md",
+      "path": "LOADED_LOCAL_SYNTHESIS_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 6–35, 6–43",
       "sha256": "57daae8af6f1cba91e394fc6692b3672017e6341ede1c8dda04330e051e83508"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LOADED_TARGET_20261103/SYNTHESIS_RU.md",
+      "path": "LOADED_TARGET_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 7–23, 7–42",
       "sha256": "ca668fcec129f3f0f488a84a8c05444513859402028cbcfb9966f6d1c0eb20e2"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/MINIMUM_RESOURCE_20261102/SYNTHESIS_RU.md",
+      "path": "MINIMUM_RESOURCE_20261102/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 86–130",
       "sha256": "d568eef29e02566e815d1a5172df0570f09497686279b89315281a4413dd5162"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/NONLINEAR_COMPRESSION_20261103/SYNTHESIS_RU.md",
+      "path": "NONLINEAR_COMPRESSION_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 26–43, 26–49, 43–70, 51–70",
       "sha256": "c69e7c62b1f8e0e5c18b77cb5256807f9a3c615f286b4b3a8c3482963506a15c"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/NONLINEAR_CRITERION_20261102/SYNTHESIS_RU.md",
+      "path": "NONLINEAR_CRITERION_20261102/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 28–65",
       "sha256": "ef4043fde8d345fca2934c7117416d0e431cc81bfb9335158eb2eb8e5bd95f5f"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/NONLINEAR_CRITERION_20261102/bounds/NC_ORDER_LIMIT_CHECK_RU.md",
+      "path": "NONLINEAR_CRITERION_20261102/bounds/NC_ORDER_LIMIT_CHECK_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 6–83, 79–83",
       "sha256": "850f73d02c9a6abe961cc591491c00e0032bada40efb349bd3c66883b4a88caa"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/OBSERVED_TASK_INTERFACE_20261103/SYNTHESIS_RU.md",
+      "path": "OBSERVED_TASK_INTERFACE_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 7–24, 27–44, 27–52, 46–60",
       "sha256": "d3c2bdf6d3a9f9ecbe0bbca33ac7e5d9c6e2d5ff54896ef9d44843af3fe50c93"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_REDUCTION_20261102/construction/FR_C2_RU.md",
+      "path": "PHYSICAL_REDUCTION_20261102/construction/FR_C2_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 4–32, 57–91",
       "sha256": "58fbf114633d7067000eeeb614d00a805631f52d3dafdcca1d3c6358e97076b9"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/QUANTITATIVE_COMPOSITION_20261103/SYNTHESIS_RU.md",
+      "path": "QUANTITATIVE_COMPOSITION_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 39–73",
       "sha256": "50508ac2394ed76b8dc587409316f275e5174ae90b3ce69fed5349985cf8c68e"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/RECURSIVE_AND_LOADED_20261103/SYNTHESIS_RU.md",
+      "path": "RECURSIVE_AND_LOADED_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 15–24, 26–62",
       "sha256": "4e92b3fa985951be90e5f9f211d533e28e611691e96b64ca1b95a26280456f73"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SOURCE_WEAK_LOAD_PRICE_20261103/SYNTHESIS_RU.md",
+      "path": "SOURCE_WEAK_LOAD_PRICE_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 6–20, 6–66",
       "sha256": "b3802c30da7f3b3e798e0b79943fdb0de4ad514285f1423142cd112ad11c6307"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/STATE_COST_TRANSFER_20261103/SYNTHESIS_RU.md",
+      "path": "STATE_COST_TRANSFER_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 23–44, 46–72, 108–125",
       "sha256": "16885e6c4e406f9cb7f468bfa713b3ca56d8150fe6a1a5b5c5351a458fe93499"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/STRUCTURAL_CRITERION_20261102/SYNTHESIS_RU.md",
+      "path": "STRUCTURAL_CRITERION_20261102/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: 46–122",
       "sha256": "ca5d6f4729c819f407a7ccf285939e32e20bae5549e38d4be01367eba12c79fa"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Отбор ресурса работой — терминальные ограничения.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Отбор ресурса работой — терминальные ограничения.md",
       "coverage": "sections1-7 only; section8 unreviewed and not an evidence basis",
       "sha256": "2c543d3facc8ef5304d6019898f69a7c78cb8f1715ef45d34e649838d48842eb",
       "notes": "Замороженный пакет; H не установлена. Непроверенное авторское дополнение §8 не используется как источник принятого критерия."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Отбор ресурса работой — физическая доступность.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Отбор ресурса работой — физическая доступность.md",
       "coverage": "sections",
       "sha256": "4c4919dff7895152f6b00e09bb97c7d58640d1538b93ebb9a387baabba1ba79f",
       "notes": "Замороженный пакет; H не установлена. Непроверенное авторское дополнение §8 не используется как источник принятого критерия."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Физический баланс организации и цена изменения ресурса.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Физический баланс организации и цена изменения ресурса.md",
       "coverage": "sections",
       "sha256": "0f2da0d0d7a0d5f6d1aa0b6761a0e7cd64f68869041d82dd2054c4aa4878955d",
       "notes": "Замороженный пакет; H не установлена. Непроверенное авторское дополнение §8 не используется как источник принятого критерия."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Как работа отбирает доступный ресурс — критерий и открытая граница.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Как работа отбирает доступный ресурс — критерий и открытая граница.md",
       "coverage": "sections",
       "sha256": "1d959512c66c98ea75fd934eb295488a6746aaabb808b9e1fd4f527daf1b3380",
       "notes": "Замороженный пакет; H не установлена. Непроверенное авторское дополнение §8 не используется как источник принятого критерия."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Советник — доступный ресурс и различение состояний.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Советник — доступный ресурс и различение состояний.md",
       "coverage": "sections",
       "sha256": "d77a777c508c2d99f8078f41357b50ee8c9beaf7ec746c3f2028f6c670c8f42c",
       "notes": "Замороженный пакет; H не установлена. Непроверенное авторское дополнение §8 не используется как источник принятого критерия."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — отбор ресурса и физический баланс.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — отбор ресурса и физический баланс.md",
       "coverage": "sections",
       "sha256": "0a814dcd13349aed89ba8347770f33bc7dd84fde0f43ee3b7bdcb63a95e1f711",
       "notes": "Замороженный пакет; H не установлена. Непроверенное авторское дополнение §8 не используется как источник принятого критерия."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Советник — статический отбор и недостижимая граница.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Советник — статический отбор и недостижимая граница.md",
       "coverage": "sections",
       "sha256": "3d2b5c5053b4a17dcce889b70e457090bc91a5b364da080d2c65be42bea41e20",
       "notes": "Глобальные сертификаты и оплаченная граница; H доказана только в объявленном диапазоне. Готовностная Δ не закрыта. Исследовательский код при поставке не исполнялся."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Глобальный отбор — прямые грани и минимум.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Глобальный отбор — прямые грани и минимум.md",
       "coverage": "sections",
       "sha256": "b38c27a4ff194e3a533eb673df54d895ba4c78edae182cc2b815dfcaf6281fc0",
       "notes": "Глобальные сертификаты и оплаченная граница; H доказана только в объявленном диапазоне. Готовностная Δ не закрыта. Исследовательский код при поставке не исполнялся."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Глобальный отбор — исключённая прямая грань.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Глобальный отбор — исключённая прямая грань.md",
       "coverage": "sections",
       "sha256": "9f041ed22248cc3f7a0bba8607d77761d858e895eacfb22aaeb8286cab7077ff",
       "notes": "Глобальные сертификаты и оплаченная граница; H доказана только в объявленном диапазоне. Готовностная Δ не закрыта. Исследовательский код при поставке не исполнялся."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Глобальный отбор — положительный класс минимумов.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Глобальный отбор — положительный класс минимумов.md",
       "coverage": "sections",
       "sha256": "cdb37a486a9e24173ad4746d186ba9a6b36f77ff57a844504f1c6d4be158db6e",
       "notes": "Глобальные сертификаты и оплаченная граница; H доказана только в объявленном диапазоне. Готовностная Δ не закрыта. Исследовательский код при поставке не исполнялся."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Глобальный отбор — оплаченная граница.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Глобальный отбор — оплаченная граница.md",
       "coverage": "sections",
       "sha256": "69c54405aaadfef5e22ec400ea0f16e20e36f5f765700ab8e9d040c03fa18ac5",
       "notes": "Глобальные сертификаты и оплаченная граница; H доказана только в объявленном диапазоне. Готовностная Δ не закрыта. Исследовательский код при поставке не исполнялся."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Оптимальная организация и цена исчезающих связей.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Оптимальная организация и цена исчезающих связей.md",
       "coverage": "sections",
       "sha256": "f542270b349b64ec1ca77792f329f25471022bcbf7df9ab02b01d0849faf0dbb",
       "notes": "Глобальные сертификаты и оплаченная граница; H доказана только в объявленном диапазоне. Готовностная Δ не закрыта. Исследовательский код при поставке не исполнялся."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — глобальный отбор и прямая граница.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — глобальный отбор и прямая граница.md",
       "coverage": "sections",
       "sha256": "9334529302ea9947ed4ccf1d6dbd9f6725cd3feacbc181e2a4003f17d6907259",
       "notes": "Глобальные сертификаты и оплаченная граница; H доказана только в объявленном диапазоне. Готовностная Δ не закрыта. Исследовательский код при поставке не исполнялся."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Готовность и свободный материал отобранной организации.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Готовность и свободный материал отобранной организации.md",
       "sha256": "daf4248255517a14056eaebdad44ebe869ad05549b0d2f22d3a6aa3df67297ac"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — готовность и материальный тест.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — готовность и материальный тест.md",
       "sha256": "46776c630ec36ed337574a7f98c5958b061068fab03e8b7c1b9cfb1e88309128"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Отобранная организация — глобальный материальный тест.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Отобранная организация — глобальный материальный тест.md",
       "sha256": "a433d6b0b6ce760b64fc5979fd42320676ffacce6a150a3ac963af305a61591c"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Отобранная организация — цена будущей готовности.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Отобранная организация — цена будущей готовности.md",
       "sha256": "d1fd4059e8f3940972ce26b503f8297194fe9e066646f7d18eea1b2124185f69"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Советник — независимое воспроизведение глобального отбора.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Советник — независимое воспроизведение глобального отбора.md",
       "sha256": "d8cf3c6637306cf5fd474407f7fc536330a14fd74d27dc15642b566d9fda62ff"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Как окончание работы меняет будущую готовность.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Как окончание работы меняет будущую готовность.md",
       "sha256": "e7ae599221f4575cb2d204e7e75a1f195ea7ea6a532163b113b0f26f3da9e882",
       "coverage": "addressed_internal_delivery"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Терминальный закон — центральная постановка.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Терминальный закон — центральная постановка.md",
       "sha256": "757ebeeb50b0306ff7817604fedacd27f7bdffbfccc72142f14ef2bee539a6a7",
       "coverage": "addressed_internal_delivery"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Терминальный закон — граница самостоятельности.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Терминальный закон — граница самостоятельности.md",
       "sha256": "5e7e037d3d1f1383d4b609b0385cb531bfb6378f8ea3f40c683caf96027e339c",
       "coverage": "addressed_internal_delivery"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Советник — принятая веха двух режимов.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Советник — принятая веха двух режимов.md",
       "sha256": "991737b84afe564411b8937418742ab0be28abd48647698899ccea04101bec7b",
       "coverage": "addressed_internal_delivery"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Что фиксированная работа оставляет для будущих функций.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Что фиксированная работа оставляет для будущих функций.md",
       "sha256": "532fc4c69839956665a58433e269ebc9d69b8d765bd99cb13e549d96599a7e12",
       "coverage": "editorial_strategy_correction"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/CENTRAL_PHYSICAL_PRINCIPLE_20261103/SYNTHESIS_RU.md",
+      "path": "CENTRAL_PHYSICAL_PRINCIPLE_20261103/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[5, 17]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "f3401ea9251062d143573c0f77a81959b8c5299f964531d8c6506623fe244935"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_ALIGNMENT_EXISTENCE_20261104/challenge/INDEPENDENT_PHYSICS_RU.md",
+      "path": "PHYSICAL_ALIGNMENT_EXISTENCE_20261104/challenge/INDEPENDENT_PHYSICS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[22, 105], [107, 111], [15, 20]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "1e86361a1a9246ddb5721d0f16c99ca2e9778f9d64db001bbbaddd339a0f5461"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LEARNED_ALIGNMENT_20261104/challenge/INDEPENDENT_MECHANISM_RU.md",
+      "path": "LEARNED_ALIGNMENT_20261104/challenge/INDEPENDENT_MECHANISM_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[23, 62], [64, 92], [94, 111]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "36a10fced854ff98c9bdb2229aaf7a5e9984815a4cdde4c498a3e7e3e2c6b293"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_RULE_ACQUISITION_20261104/SYNTHESIS_RU.md",
+      "path": "ADAPTIVE_RULE_ACQUISITION_20261104/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[19, 54], [21, 35]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "f8a820a6eeca27307a902764cd170d2a953ddcf032db3b1b69fd759804346c26"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/MOBILITY_MATERIAL_BALANCE_20261104/synthesis/MATERIAL_DERIVATION_RU.md",
+      "path": "MOBILITY_MATERIAL_BALANCE_20261104/synthesis/MATERIAL_DERIVATION_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[19, 41], [23, 66]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "cf039830e5051d92cecfd9d8e8c1d69762a0e290368f9603e0d04ebced92e090"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/MOBILITY_MATERIAL_BALANCE_20261104/review/COORDINATOR_CHECK_RU.md",
+      "path": "MOBILITY_MATERIAL_BALANCE_20261104/review/COORDINATOR_CHECK_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[35, 41]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "be5e5fa2499c9301b6afbcd94f74c964982f1d2ade7031770457a6b1d3379917"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_CAPACITY_BOUND_20261104/SYNTHESIS_RU.md",
+      "path": "ADAPTIVE_CAPACITY_BOUND_20261104/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[15, 28], [30, 46]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "7c515846854dc496f065c5e976fb848fae7a0eb780ae15133128d35ef2d621f8"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_PREPARATION_HYPOTHESIS_20261105/SYNTHESIS_RU.md",
+      "path": "PHYSICAL_PREPARATION_HYPOTHESIS_20261105/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[19, 40]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "e2f2208d7bf9e4ab658b6e16775374d9a1762168f6cd565c4f0c4d10cd082eda"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/PHYSICAL_SELECTION_RULE_20261105/SYNTHESIS_RU.md",
+      "path": "PHYSICAL_SELECTION_RULE_20261105/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[9, 23], [25, 35], [37, 43]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "189dfadc2fa878650f6e9edfd0ef92e3042bb0d75fd2b3e99a5f9d21ee27849c"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/TRANSFER_SIGN_MECHANISM_20261105/SYNTHESIS_RU.md",
+      "path": "TRANSFER_SIGN_MECHANISM_20261105/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[17, 43], [45, 55], [47, 55]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "5ab3f4b8e4d585a7b8a4071e1fb1c353dee8b809164edeef68c48a14341d4cec"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ACQUIRED_COMPATIBILITY_20261105/SYNTHESIS_RU.md",
+      "path": "ACQUIRED_COMPATIBILITY_20261105/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[7, 30], [17, 30]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "48f999186cd71b2403c874d06d85c5cdd8fa3aa3166cdcecfcba3ad5d00f5931"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LEARNING_COOPERATION_PRINCIPLE_20261105/SYNTHESIS_RU.md",
+      "path": "LEARNING_COOPERATION_PRINCIPLE_20261105/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[19, 37], [39, 46]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "0b31aabd42128a497dbe97ba9d457ed8f303822eda6155b546dc38ed86c07c10"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ALIGNMENT_TRANSFER_LAW_20261105/synthesis/TRANSFER_LAW_RU.md",
+      "path": "ALIGNMENT_TRANSFER_LAW_20261105/synthesis/TRANSFER_LAW_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[21, 91]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "0b45df8511b1ffc45359e994401f585087d15015b71d6b04ab99732efb1cf595"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ALIGNMENT_TRANSFER_LAW_20261105/SYNTHESIS_RU.md",
+      "path": "ALIGNMENT_TRANSFER_LAW_20261105/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[24, 42], [44, 57]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "a1003f576b5b73e270413b1557a2909e7d5b600bfb10e587ca678db16898fa90"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/LEARNED_COMPATIBILITY_HYPOTHESIS_20261105/SYNTHESIS_RU.md",
+      "path": "LEARNED_COMPATIBILITY_HYPOTHESIS_20261105/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[5, 41]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "0c4755e45a49b20f29753fd4245611c61d9d20de1e845b64d41d653a9e1d55d5"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/COORDINATION_SELECTION_MECHANISM_20261105/SYNTHESIS_RU.md",
+      "path": "COORDINATION_SELECTION_MECHANISM_20261105/SYNTHESIS_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[11, 23], [25, 46]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "cb654d41d0c89370ba4ec00dbff1870943157c10d8a06171b1b5f2403e6e155b"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/AI_AUTONOMY_STRUCTURE_20261105/SCOUT_REPORT_RU.md",
+      "path": "AI_AUTONOMY_STRUCTURE_20261105/SCOUT_REPORT_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[61, 87]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "15f662d551e1c088aabed84e9032aacd18caf31fd808222a5370dd30d70f2cb8"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/KAZAKOV_PRICE_MEMORY/DECISION_P1_RU.md",
+      "path": "KAZAKOV_PRICE_MEMORY/DECISION_P1_RU.md",
       "coverage": "sections",
       "notes": "Адресно прочитанные диапазоны: [[5, 13]]; полная независимая перепроверка доказательства не заявляется.",
       "sha256": "08357b5de991cc83e9724365f748006c9f8d8bbd419c6d84e9c14339f19f283f"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_plasticity_bp001/BP001_AUTHOR_DECISION_20261028.md",
+      "path": "BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_plasticity_bp001/BP001_AUTHOR_DECISION_20261028.md",
       "coverage": "sections",
       "notes": "Строки 18–30; адресное чтение",
       "sha256": "6f3cfc5719e193314915afcc817045234ad11dfa6a32e38b13a7deb196934684"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_plasticity_bp003/BP003_MATHEMATICAL_TEST.md",
+      "path": "BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_plasticity_bp003/BP003_MATHEMATICAL_TEST.md",
       "coverage": "sections",
       "notes": "Строки 50–119; адресное чтение",
       "sha256": "79e20201c8fd508ac51b6413691ab8daf35592ffddfba7d52b5736d813fa0d69"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/bp004_prospective_interference_20261028/SCIENTIFIC_REPORT_RU.md",
+      "path": "BEHAVIORAL_PLASTICITY_BP001/docs/sfp/bp004_prospective_interference_20261028/SCIENTIFIC_REPORT_RU.md",
       "coverage": "sections",
       "notes": "Строки 1–26; адресное чтение",
       "sha256": "3a6d0ce39886a3ecce9877694cec09f2fc262b85737453f362569bd41f9419c6"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_curriculum_transfer_20261028/ADVISOR_GATE_DECISION_20261028_RU.md",
+      "path": "BEHAVIORAL_PLASTICITY_BP001/docs/sfp/behavioral_curriculum_transfer_20261028/ADVISOR_GATE_DECISION_20261028_RU.md",
       "coverage": "sections",
       "notes": "Строки 1–34; адресное чтение",
       "sha256": "48434c3e6a568a268ce75feec73018b6980a6ec01937e8d68a63377a7ec05410"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/bp005_coin_reference_repair_20261029/T1_REPORT_RU.md",
+      "path": "BEHAVIORAL_PLASTICITY_BP001/docs/sfp/bp005_coin_reference_repair_20261029/T1_REPORT_RU.md",
       "coverage": "sections",
       "notes": "Строки 1–25; адресное чтение",
       "sha256": "b390bfdbad261fca494d5eac1a791b199bb7d755f0bba237ca249585ca777da4"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/accepted/SILENT_RECODING_001/REPORT_RU.md",
+      "path": "SILENT_RECODING/accepted/SILENT_RECODING_001/REPORT_RU.md",
       "coverage": "sections",
       "notes": "Строки 1–32; адресное чтение",
       "sha256": "2a2fac53f0e90879cf867035c7904e343feed116dcce071cb591968026a29ae1"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/accepted/SILENT_RECODING_002_R1/REPORT_RU.md",
+      "path": "SILENT_RECODING/accepted/SILENT_RECODING_002_R1/REPORT_RU.md",
       "coverage": "sections",
       "notes": "Строки 24–40; адресное чтение",
       "sha256": "db0774c2f82517797c895aff6c11f6eb0de92270a43335a6f08a72d2b19798fc"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/SILENT_RECODING_003/REPORT_RU.md",
+      "path": "SILENT_RECODING/SILENT_RECODING_003/REPORT_RU.md",
       "coverage": "sections",
       "notes": "Строки 32–46; адресное чтение",
       "sha256": "c873aa3d23ed506b2f8932810e53d067c2587c8efca072b7fc896f694310d642"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/SILENT_RECODING/SILENT_RECODING_004/REPORT_RU.md",
+      "path": "SILENT_RECODING/SILENT_RECODING_004/REPORT_RU.md",
       "coverage": "sections",
       "notes": "Строки 14–61; адресное чтение",
       "sha256": "415c52a4876f9e931fe5ed01457b4059c0bcd7708ca9fd858e2a689fb93d5c1c"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Расширение возможностей — этап 1/Запрет общего усиления.md",
+      "path": "Стратегия исследований/Расширение возможностей — этап 1/Запрет общего усиления.md",
       "coverage": "full",
       "notes": "Прочитаны формулировка, доказательство и границы, строки 1–59; источник узла — сама научная записка.",
       "sha256": "df2bd57d195704cb058099218cd8d9b97acf3c6f18536873ecfd2392a8d1c098"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Атлас SFP/Критерий компенсации — результат.md",
+      "path": "Стратегия исследований/Атлас SFP/Критерий компенсации — результат.md",
       "coverage": "sections",
       "notes": "Адресно сверены диапазоны, указанные в узлах и связях этапа 2; не полный повторный аудит работы.",
       "sha256": "59068137278bbfd01bfa50dc4a0c64c3bdcbc8d61adcd2d8a36237637db06bc3"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Критерий компенсации — этап 2/Вывод критерия.md",
+      "path": "Стратегия исследований/Критерий компенсации — этап 2/Вывод критерия.md",
       "coverage": "sections",
       "notes": "Адресно сверены диапазоны, указанные в узлах и связях этапа 2; не полный повторный аудит работы.",
       "sha256": "5d2fd5f1e0d064c5fda7960f4aacfc957e3ed590423a2dd958afda49e019dfcc"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/03_loading.tex",
+      "path": "WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/03_loading.tex",
       "coverage": "sections",
       "notes": "Адресно сверены диапазоны, указанные в узлах и связях этапа 2; не полный повторный аудит работы.",
       "sha256": "351b75bdb0fbd6556e38b69bb83d46f9228a15a155aad707610105b5df1098db"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/04_transfer.tex",
+      "path": "WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/04_transfer.tex",
       "coverage": "sections",
       "notes": "Адресно сверены диапазоны, указанные в узлах и связях этапа 2; не полный повторный аудит работы.",
       "sha256": "2bf85815f2b0e1c796aeb1fe98f594038c242973dee446932b3c8a401a85c7b7"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/06_endpoint.tex",
+      "path": "WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/06_endpoint.tex",
       "coverage": "sections",
       "notes": "Адресно сверены диапазоны, указанные в узлах и связях этапа 2; не полный повторный аудит работы.",
       "sha256": "7d08cf482b9e1dd1c3e2b71fbe12f0a7235f8a2bf0bb079b819d492a68fe324f"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Рекогносцировка по Атласу — 6 ноября/Положительные мосты.md",
+      "path": "Стратегия исследований/Рекогносцировка по Атласу — 6 ноября/Положительные мосты.md",
       "coverage": "sections",
       "notes": "Адресно прочитаны точные диапазоны нового утверждения, доказательства и границ; не полный переаудит корпуса.",
       "sha256": "0a4d4f6e421c2715930c39a7ecbaefef35ebca8051ffcd8f3060c998e6fea118"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Рекогносцировка по Атласу — 6 ноября/Независимая рекогносцировка.md",
+      "path": "Стратегия исследований/Рекогносцировка по Атласу — 6 ноября/Независимая рекогносцировка.md",
       "coverage": "sections",
       "notes": "Адресно прочитаны точные диапазоны нового утверждения, доказательства и границ; не полный переаудит корпуса.",
       "sha256": "0d9e9a70ff2acd3687b4610f44b629bbfab200c6c29202d0ad06dff769750507"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/07_limits.tex",
+      "path": "WEAK_TASK_LEARNING_20261029/JPA_ADAPTATION_20261105/source/sections/07_limits.tex",
       "coverage": "sections",
       "notes": "Адресно сверена строка 18 о возврате функции на конце подготовки.",
       "sha256": "e911a90dcfca73d98676bbfb7311373c352031b7e35c63706adcc89c8705fbed"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Доступная подготовка.md",
+      "path": "Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Доступная подготовка.md",
       "coverage": "sections",
       "notes": "Адресно прочитаны указанные формулировки, доказательные диапазоны и границы нового этапа; не полный аудит корпуса.",
       "sha256": "4d4c3723d2042c2f6d6398c8caae29174747794a27cf8a66619c8043eec13ae0"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Оплата функционального выигрыша.md",
+      "path": "Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Оплата функционального выигрыша.md",
       "coverage": "sections",
       "notes": "Адресно прочитаны указанные формулировки, доказательные диапазоны и границы нового этапа; не полный аудит корпуса.",
       "sha256": "75b7807a4eda603e47c76eb555b18eab4c28ba557a31ba55bfa7ecc4974e2716"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Совместная проверка оплаты.md",
+      "path": "Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Совместная проверка оплаты.md",
       "coverage": "sections",
       "notes": "Адресно прочитаны указанные формулировки, доказательные диапазоны и границы нового этапа; не полный аудит корпуса.",
       "sha256": "47a3bc05a4b329eef2413556ff6f875743b1994ae2e4861824843f5fa7c34f59"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Атлас SFP/Доступная и оплаченная подготовка.md",
+      "path": "Стратегия исследований/Атлас SFP/Доступная и оплаченная подготовка.md",
       "coverage": "sections",
       "notes": "Адресно прочитаны указанные формулировки, доказательные диапазоны и границы нового этапа; не полный аудит корпуса.",
       "sha256": "b758f49a9c9c1d02ba8836643af894cb6c0a897054e6bb47ca032c2074dc9613"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Совместная проверка доступности.md",
+      "path": "Стратегия исследований/Доступная и оплаченная подготовка — 6 ноября/Совместная проверка доступности.md",
       "coverage": "sections",
       "notes": "Адресно проверены проекция исходного коммутатора (1) и ошибка относительно вертикального референса (4).",
       "sha256": "3da4bd93c835804d681f80c75093ea3340964d094638f800a1520adfb4d87660"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Сохранение оплаченной подготовки — 6 ноября/Физическое условие сохранения.md",
+      "path": "Стратегия исследований/Сохранение оплаченной подготовки — 6 ноября/Физическое условие сохранения.md",
       "coverage": "sections",
       "notes": "Адресно прочитаны указанные физические, доказательные и ресурсные диапазоны; сборка и выпуск ожидают научной приёмки.",
       "sha256": "eecf97e8ecffe1da0685c4ec46dbf7972418bbc548a792c321bfbcf80041d778"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Сохранение оплаченной подготовки — 6 ноября/Независимая проверка критерия.md",
+      "path": "Стратегия исследований/Сохранение оплаченной подготовки — 6 ноября/Независимая проверка критерия.md",
       "coverage": "sections",
       "notes": "Адресно прочитаны указанные физические, доказательные и ресурсные диапазоны; сборка и выпуск ожидают научной приёмки.",
       "sha256": "cea15ddf0a968c084f29963934848b7bbfb99c7401453d7d182b21ecad09fa7c"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Атлас SFP/Замена организации и сохранение подготовки.md",
+      "path": "Стратегия исследований/Атлас SFP/Замена организации и сохранение подготовки.md",
       "coverage": "sections",
       "notes": "Сверена финальная формулировка общего reference-сертификата и границ шума.",
       "sha256": "3abd2ddcbbab7093839c562f804629fb0bded0eb179418dfd62a4e87f21c0200"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/kron_mobility_order_20261027_PRIVATE/RESEARCH_NOTE_RU.md",
+      "path": "BEHAVIORAL_PLASTICITY_BP001/docs/sfp/kron_mobility_order_20261027_PRIVATE/RESEARCH_NOTE_RU.md",
       "coverage": "sections",
       "notes": "Восстановление пропущенного принятого результата от27октября; адресно сверены формулировки, доказательные диапазоны и ограничения.",
       "sha256": "7cb4c8dc600173663a4a06930e8ccd1a7d9ce663c3d522c67574c182521164ca"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_PRESERVING_REDUCTION_001/kron_mobility_review_20261027_PRIVATE/REVIEW_RU.md",
+      "path": "ADAPTIVE_PRESERVING_REDUCTION_001/kron_mobility_review_20261027_PRIVATE/REVIEW_RU.md",
       "coverage": "sections",
       "notes": "Восстановление пропущенного принятого результата от27октября; адресно сверены формулировки, доказательные диапазоны и ограничения.",
       "sha256": "0df56155ce830c7da6e94d9ca0f1f70eaefd0ce0ea190d4c4ea4c4979e86598c"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/BEHAVIORAL_PLASTICITY_BP001/docs/sfp/protected_task_gate_20261027_PRIVATE/RESEARCH_NOTE_RU.md",
+      "path": "BEHAVIORAL_PLASTICITY_BP001/docs/sfp/protected_task_gate_20261027_PRIVATE/RESEARCH_NOTE_RU.md",
       "coverage": "sections",
       "notes": "Восстановление пропущенного принятого результата от27октября; адресно сверены формулировки, доказательные диапазоны и ограничения.",
       "sha256": "a9a34217a0d3d15e938bb0a9dcd8e6e363b15648d00c7cffa75d61a81f1197e6"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/ADAPTIVE_PRESERVING_REDUCTION_001/protected_task_review_20261027_PRIVATE/REVIEW_RU.md",
+      "path": "ADAPTIVE_PRESERVING_REDUCTION_001/protected_task_review_20261027_PRIVATE/REVIEW_RU.md",
       "coverage": "sections",
       "notes": "Восстановление пропущенного принятого результата от27октября; адресно сверены формулировки, доказательные диапазоны и ограничения.",
       "sha256": "dfad0585afc0f9fc6f92cce0713815c7668c5f2d33cfd876ea2ab4214bb71d96"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Ресурс будущих задач — 6 ноября/Конструкция и границы.md",
+      "path": "Стратегия исследований/Ресурс будущих задач — 6 ноября/Конструкция и границы.md",
       "coverage": "sections",
       "notes": "Адресно сверены принятые формулировки, шумовой бюджет, команды и физическое препятствие текущего этапа.",
       "sha256": "918fd067e62fe18545c6299fc13275590a46c1d2702c58b627285a53375e5428"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Ресурс будущих задач — 6 ноября/Проверка разделения.md",
+      "path": "Стратегия исследований/Ресурс будущих задач — 6 ноября/Проверка разделения.md",
       "coverage": "sections",
       "notes": "Адресно сверены принятые формулировки, шумовой бюджет, команды и физическое препятствие текущего этапа.",
       "sha256": "b5fe315696ebc4633407c9a811752a42f0baa385a83b914619760d96e997b295"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Закон минимальной цены универсальности.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Закон минимальной цены универсальности.md",
       "coverage": "full",
       "notes": "Принятая цельная теорема; верх, нижний квантор и границы исполнения.",
       "sha256": "ac31b2246995ec6a74c18cf39087edde17698f00fb8fb2acc7a1ed2d140a151b"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Цена приобретённой специализации.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Цена приобретённой специализации.md",
       "coverage": "sections",
       "sha256": "5114314de56b94cec57e6da0a410362b926811e056323c3ba08aee8cca320161",
       "notes": "Принятый синтез и две завершённые доказательные опоры; границы не расширены."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приобретённая специализация — достижимость.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Приобретённая специализация — достижимость.md",
       "coverage": "sections",
       "sha256": "6ab62476b68759f0b70aa9de9303c14719d9286dd7627f5bc91831fcaf99e6c4",
       "notes": "Принятый синтез и две завершённые доказательные опоры; границы не расширены."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приобретённая специализация — необходимость.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Приобретённая специализация — необходимость.md",
       "coverage": "sections",
       "sha256": "4bc8eeadfce70820ab34ffe4b2435192c1ff7ccf68bf0cb6b62bad2ad3b3c04a",
       "notes": "Принятый синтез и две завершённые доказательные опоры; границы не расширены."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Полная цена меняющихся задач.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Полная цена меняющихся задач.md",
       "coverage": "sections",
       "sha256": "ef1783ae177c5090705cbcc8c5d0b5e8c2cf8dc7a8c9a4046df24d7a3b845232",
       "notes": "Замороженный читательский текст и завершённые необходимые/достигающие доказательства; внутренний этап не публикуется."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Полная цена потока — необходимые затраты.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Полная цена потока — необходимые затраты.md",
       "coverage": "sections",
       "sha256": "845c5804783d3b70304c5f0d9b42c66e40c51065a3cd2e0d927b784bbaf54209",
       "notes": "Замороженный читательский текст и завершённые необходимые/достигающие доказательства; внутренний этап не публикуется."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Полная цена потока — достигающая политика.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Полная цена потока — достигающая политика.md",
       "coverage": "sections",
       "sha256": "53b0a48c5ca933a354ac54b4500adc87e26b63b4d35d45f8f9c481249eb873b1",
       "notes": "Замороженный читательский текст и завершённые необходимые/достигающие доказательства; внутренний этап не публикуется."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Порядок работы и цена будущей готовности.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Порядок работы и цена будущей готовности.md",
       "coverage": "sections",
       "sha256": "66e41c501e9b8afa93f44bb026ea8059d4cc699a26384b23ee47f68c94fb223b",
       "notes": "Замороженный читательский текст и две завершённые доказательные опоры; внутренний этап не публикуется."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Попутное приобретение — необходимые затраты.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Попутное приобретение — необходимые затраты.md",
       "coverage": "sections",
       "sha256": "3317c0430fe23eeed797a7f5262734fd0f88f3237a60f3a8539e34aec4c9fbbf",
       "notes": "Замороженный читательский текст и две завершённые доказательные опоры; внутренний этап не публикуется."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Попутное приобретение — достижимость.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Попутное приобретение — достижимость.md",
       "coverage": "sections",
       "sha256": "983c57949edd58ac4d7d07f7869c42e69a80e030ff726239a2bd9491b8f2431c",
       "notes": "Замороженный читательский текст и две завершённые доказательные опоры; внутренний этап не публикуется."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Конечная готовность и предел накопительного подхода.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Конечная готовность и предел накопительного подхода.md",
       "coverage": "sections",
       "sha256": "04796bed60637f554d321e9e5ff4d372ade805911561a6bd76cde9f8301d0e68",
       "notes": "Замороженный читательский итог и две завершённые проверки границы накопительного подхода; внутренний этап не публикуется."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Конечное приобретение — достижимость.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Конечное приобретение — достижимость.md",
       "coverage": "sections",
       "sha256": "ee0318a74ab3913f308a36becaf2766daa3d24949926ef24d4db45b56ef3e7a6",
       "notes": "Замороженный читательский итог и две завершённые проверки границы накопительного подхода; внутренний этап не публикуется."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Конечное приобретение — оптимальная цена.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Конечное приобретение — оптимальная цена.md",
       "coverage": "sections",
       "sha256": "937859df553e296bcfd2334f0d3715fbc0d7064c88b4601dfa9133d6307ca2cf",
       "notes": "Замороженный читательский итог и две завершённые проверки границы накопительного подхода; внутренний этап не публикуется."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Обратимое обслуживание — доказательство Советника.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Обратимое обслуживание — доказательство Советника.md",
       "coverage": "sections",
       "sha256": "172958853d94c881194c87cb094841521a82d9931fdae7616545a05b84990888",
       "notes": "Замороженный источник; исторические статусы исходных копий сохранены, текущая приёмка в reader/отдельной странице. Научные источники — доказательства, не вердикт."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Обратимое обслуживание — режимы доплаты.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Обратимое обслуживание — режимы доплаты.md",
       "coverage": "sections",
       "sha256": "30c3426dbcf068e10c614171fc1e112a2d8f989dd23c096ecb66bc64761b553c",
       "notes": "Замороженный источник; исторические статусы исходных копий сохранены, текущая приёмка в reader/отдельной странице. Научные источники — доказательства, не вердикт."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Когда оптимальная работа сама обеспечивает готовность.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Когда оптимальная работа сама обеспечивает готовность.md",
       "coverage": "sections",
       "sha256": "02e577df920143162db503a2ead5cd32766cbb1a7e016e3c2baf0d29f8a50b43",
       "notes": "Замороженный источник; исторические статусы исходных копий сохранены, текущая приёмка в reader/отдельной странице. Научные источники — доказательства, не вердикт."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — конечная готовность при обратимой работе.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — конечная готовность при обратимой работе.md",
       "coverage": "review",
       "sha256": "6badbca7f18f364ea8d1b8b99350f0fa8f21bd42c0c4b8e1b52e0dd5c32c745e",
       "notes": "Замороженный источник; исторические статусы исходных копий сохранены, текущая приёмка в reader/отдельной странице. Научные источники — доказательства, не вердикт."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Итоги Kimi и критерий совместимости работы с готовностью.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Итоги Kimi и критерий совместимости работы с готовностью.md",
       "coverage": "full",
       "sha256": "f9e81971cf6a83a17b97f7965c3d66fa67e59d3f04f0a6634cee26086869accd",
       "notes": "Замороженный статус: точный контрпример отдельно от сообщённой конструкции. Исправленная рукопись SHA96cb… недоступна; её приёмка не заявляется."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Допустимые продолжения — терминальный критерий.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Допустимые продолжения — терминальный критерий.md",
       "coverage": "sections",
       "sha256": "f1159fe1f6333e83c75f6b56601918136aba70704848a6c9250df28b99db0c2c",
       "notes": "Внутренняя перекрёстная проверка; прежняя A–D приёмка сохранена и не повторялась."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Допустимые продолжения — физический перенос и граница.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Допустимые продолжения — физический перенос и граница.md",
       "coverage": "sections",
       "sha256": "6db4a2f1ffc94d7d0fbf7235c43d57f52c5b2bf836a2363a2e445eb633792707",
       "notes": "Внутренняя перекрёстная проверка; прежняя A–D приёмка сохранена и не повторялась."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Когда работа вынуждает готовность — критерий и физическая граница.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Когда работа вынуждает готовность — критерий и физическая граница.md",
       "coverage": "sections",
       "sha256": "8d9fc99697abf4695702df3e86ff8bd88cfbfe8552b081f288ef9db01d2a04e9",
       "notes": "Внутренняя перекрёстная проверка; прежняя A–D приёмка сохранена и не повторялась."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — допустимые продолжения и физический перенос.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — допустимые продолжения и физический перенос.md",
       "coverage": "review",
       "sha256": "88ebc61b340b478bdef154da95b74c49a4189c70f5bc33fee11e1b7fc1e17fa8",
       "notes": "Внутренняя перекрёстная проверка; прежняя A–D приёмка сохранена и не повторялась."
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Когда эффективная работа конфликтует с будущей готовностью.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Когда эффективная работа конфликтует с будущей готовностью.md",
       "sha256": "91e5d586ccde65724fd535cead944a74f8f6e206947fbcdee4cf876a5d46bfe9",
       "coverage": "accepted_delivery"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — два физических режима готовности.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — два физических режима готовности.md",
       "sha256": "4df253893b9f6f8efe014ede7be0c3834a66a69d40623cd4f03e429c75913dfd",
       "coverage": "accepted_delivery"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Советник — насыщение материала и положительная доплата.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Советник — насыщение материала и положительная доплата.md",
       "sha256": "083ff73eb144d061b1100682858410b0a5587c49efa33cc7019d44e9d233e60a",
       "coverage": "accepted_delivery"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка насыщения — интервальное покрытие.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка насыщения — интервальное покрытие.md",
       "sha256": "652e1eb5e8bc87f350fac58e841e8d2bb3f5293e941e985d6fafc8a45ff9cabb",
       "coverage": "accepted_delivery"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка насыщения — абсолютная доплата.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка насыщения — абсолютная доплата.md",
       "sha256": "0cd0055b796a249c736b558f6a698b5e2ce8447be974fb39f9c3e989bd5668f0",
       "coverage": "accepted_delivery"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Как фиксированная работа меняет будущие возможности.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Как фиксированная работа меняет будущие возможности.md",
       "sha256": "b8a33e788b5b719cdafdd90d31bf848e83425eaea1785702951ae7b9f4cb0d2a",
       "coverage": "accepted_family_law_delivery"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Фиксированная работа — семейный физический критерий.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Фиксированная работа — семейный физический критерий.md",
       "sha256": "f7a812e1dcffa8e2655a46d16967ccc9ea9b8f4ac4f95bed966a75be5cc547f6",
       "coverage": "accepted_family_law_delivery"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Фиксированная работа — достижимость и определённость будущего.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Фиксированная работа — достижимость и определённость будущего.md",
       "sha256": "7a250cec86415cb972be886e1aec2ff13d8cd50287989eab8de4bf6f390da85e",
       "coverage": "accepted_family_law_delivery"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — семейный закон фиксированной работы.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Приёмка — семейный закон фиксированной работы.md",
       "sha256": "43d013c2959eb5e9e0e1980d6d3d73e62cd6262181fe97d244b2d5e18ae9076b",
       "coverage": "accepted_family_law_delivery"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Принятая веха — семейные последствия фиксированной работы.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Принятая веха — семейные последствия фиксированной работы.md",
       "sha256": "66461b0978bc3641aacc4f7a4b6fd894a34b879ba861a7744e1ac774ebb83e1d",
       "coverage": "addressed_review_and_milestone"
     },
     {
-      "path": "/Users/ovd/RESEARCH/10_PROGRAMS/SFP/Стратегия исследований/Физическая цена организации — 6 ноября/Советник — приёмка семейного физического критерия.md",
+      "path": "Стратегия исследований/Физическая цена организации — 6 ноября/Советник — приёмка семейного физического критерия.md",
       "sha256": "ece1ab13b85db8b97628992c11c4714a52ada07f0baf75d8f3953a87b66995ba",
       "coverage": "addressed_review_and_milestone"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/SYNTHESIS_RU.md",
+      "path": "docs/sfp/determinacy_fixed_work_20261108/SYNTHESIS_RU.md",
       "sha256": "5f5fa8b8cffd2abffc66fbe03bc0f3451aa5f8dd704e742e7f2c9182eeef509c",
       "coverage": "frozen_internal_research_delivery"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/RIGIDITY_ANALYSIS_RU.md",
+      "path": "docs/sfp/determinacy_fixed_work_20261108/RIGIDITY_ANALYSIS_RU.md",
       "sha256": "fcad35efec2e341cd1314225b7e40c4c04b6d30e901ed3e9c68c546441db7b59",
       "coverage": "frozen_internal_research_delivery"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/RIGIDITY_REVIEW_RU.md",
+      "path": "docs/sfp/determinacy_fixed_work_20261108/RIGIDITY_REVIEW_RU.md",
       "sha256": "9b7310da64a3466ea1fc94f947e4b2d421b702aa0cd359d9b027491951248234",
       "coverage": "frozen_internal_research_delivery"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/TERMINAL_PROFILE_ANALYSIS_RU.md",
+      "path": "docs/sfp/determinacy_fixed_work_20261108/TERMINAL_PROFILE_ANALYSIS_RU.md",
       "sha256": "c0395bed3fe0559ecd2bed701ab56aced08440e874b41a99952cac0d0aacf1f0",
       "coverage": "frozen_internal_research_delivery"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/determinacy_fixed_work_20261108/ROBUSTNESS_REVIEW_RU.md",
+      "path": "docs/sfp/determinacy_fixed_work_20261108/ROBUSTNESS_REVIEW_RU.md",
       "sha256": "5f60ad67eb5d0dc3914312b7266aa5abb9ce4730a8fc0b53edfaea3fab055d98",
       "coverage": "frozen_internal_research_delivery"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/SYNTHESIS_RU.md",
+      "path": "docs/sfp/future_choice_boundary_20261108/SYNTHESIS_RU.md",
       "sha256": "aaa1aa0a0c29a0edf7134c154e5769af5e9f946519147e7ef43165216260ad23",
       "coverage": "frozen_internal_boundary_stage"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/MECHANISM_ANALYSIS_RU.md",
+      "path": "docs/sfp/future_choice_boundary_20261108/MECHANISM_ANALYSIS_RU.md",
       "sha256": "018002c811d0fb232099f6b0b3fd65a1c242fed97859b304bec4f0d38a340d8e",
       "coverage": "frozen_internal_boundary_stage"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/MECHANISM_REVIEW_RU.md",
+      "path": "docs/sfp/future_choice_boundary_20261108/MECHANISM_REVIEW_RU.md",
       "sha256": "3a265aa792e0282b26f1f79ec8fac243aeaa20524f9143e4fea99791dcfead9e",
       "coverage": "frozen_internal_boundary_stage"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/ACTION_CRITERION_RU.md",
+      "path": "docs/sfp/future_choice_boundary_20261108/ACTION_CRITERION_RU.md",
       "sha256": "ce607b73a4c42678dcbda29aec5d93041d2dc3710c958c7b1d633c045e8a5a47",
       "coverage": "frozen_internal_boundary_stage"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/RESOURCE_CLEARANCE_LAW_RU.md",
+      "path": "docs/sfp/future_choice_boundary_20261108/RESOURCE_CLEARANCE_LAW_RU.md",
       "sha256": "be1b90fd022355fa42299372b675246441f2a0636dfa199729819a31fb9c46cb",
       "coverage": "frozen_internal_boundary_stage"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/future_choice_boundary_20261108/RESOURCE_CLEARANCE_REVIEW_RU.md",
+      "path": "docs/sfp/future_choice_boundary_20261108/RESOURCE_CLEARANCE_REVIEW_RU.md",
       "sha256": "1c8efd61e07d939a5cb417120c3d574735704d97c27cced153b7b0f5d82ef919",
       "coverage": "frozen_internal_boundary_stage"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/SYNTHESIS_RU.md",
+      "path": "docs/sfp/terminal_activity_reserve_20261108/SYNTHESIS_RU.md",
       "sha256": "a9c87638837841568f7eaecdaa1c1bc1283916598c863e3c8d3fb5cbc66aa90f",
       "coverage": "addressed_acceptance_and_accuracy_corollary"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/LOWER_SELECTION_RU.md",
+      "path": "docs/sfp/terminal_activity_reserve_20261108/LOWER_SELECTION_RU.md",
       "sha256": "4d0873a9efcec6e5f36e91d815b2d75f065e4544a06ef306c93831c3f8e05020",
       "coverage": "frozen_internal_terminal_selection"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/UPPER_SELECTION_RU.md",
+      "path": "docs/sfp/terminal_activity_reserve_20261108/UPPER_SELECTION_RU.md",
       "sha256": "7af97c0a16aad0a1df724361c38a41e8f269052270c929a1bc2a393fa1cfd230",
       "coverage": "frozen_internal_terminal_selection"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/TERM_ENDGAME_RU.md",
+      "path": "docs/sfp/terminal_activity_reserve_20261108/TERM_ENDGAME_RU.md",
       "sha256": "ebc9b436f6623e9e85e83b084f84e284a3eaf2fc6ede97e12b110a4b1a361880",
       "coverage": "frozen_internal_terminal_selection"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/RETENTION_PRICE_RU.md",
+      "path": "docs/sfp/terminal_activity_reserve_20261108/RETENTION_PRICE_RU.md",
       "sha256": "0789552caaac2de8a5eb86d7fe78cc557de813b6b52faec986455d78f780966f",
       "coverage": "frozen_internal_terminal_selection"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/RETENTION_REVIEW_RU.md",
+      "path": "docs/sfp/terminal_activity_reserve_20261108/RETENTION_REVIEW_RU.md",
       "sha256": "ca02324ee87b33136eee37fedec10e8b607bc9ca35d3fbe9e5c83ba41d57e5c3",
       "coverage": "frozen_internal_terminal_selection"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/WORK_CALIBRATION_CLASS_RU.md",
+      "path": "docs/sfp/terminal_activity_reserve_20261108/WORK_CALIBRATION_CLASS_RU.md",
       "sha256": "c930e68bcef0979cad836d513a06aeab0da2713501aeffc1125ec24aa104e498",
       "coverage": "frozen_internal_terminal_selection"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/ACCEPTANCE_RU.md",
+      "path": "docs/sfp/terminal_activity_reserve_20261108/ACCEPTANCE_RU.md",
       "sha256": "6665abd8c5dae24ef52be2f1d95295b41cd4cbd270bb5193418f6848ef5f4471",
       "coverage": "addressed_acceptance_and_accuracy_corollary"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/README_RU.md",
+      "path": "docs/sfp/terminal_activity_reserve_20261108/README_RU.md",
       "sha256": "4d1d0c5ae5514921503e0f3c9a55d30673f03a86c65dc9aa6f1cc7c3fcddd9ce",
       "coverage": "addressed_acceptance_and_accuracy_corollary"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/ACCURACY_COROLLARY_RU.md",
+      "path": "docs/sfp/terminal_activity_reserve_20261108/ACCURACY_COROLLARY_RU.md",
       "sha256": "89f308061b2252849160a4c6e0533d52d010e2de424adb48f80154b997f585c8",
       "coverage": "addressed_acceptance_and_accuracy_corollary"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/terminal_activity_reserve_20261108/evidence/ADVISOR_ACCEPTANCE_20261108_RU.md",
+      "path": "docs/sfp/terminal_activity_reserve_20261108/evidence/ADVISOR_ACCEPTANCE_20261108_RU.md",
       "sha256": "4fcb0322b2ad15bad7a8c87184b0b5f07c73e717867813b3dc71029379637535",
       "coverage": "addressed_acceptance_and_accuracy_corollary"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/COMMON_DRIVE_RU.md",
+      "path": "docs/sfp/organization_selection_composition_20261109/COMMON_DRIVE_RU.md",
       "sha256": "722eacac0448dc83e05610851cf870c25d3ece8e44bb21d013166a1320ce33cd",
       "coverage": "current_research_proof_and_addressed_review"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/PRIOR_ART_AND_GATE_RU.md",
+      "path": "docs/sfp/organization_selection_composition_20261109/PRIOR_ART_AND_GATE_RU.md",
       "sha256": "8e0bc6bebac595ab8c80b79a031b19c0c75621ee1cf35ba1a6fa823858b61d20",
       "coverage": "current_research_proof_and_addressed_review"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/STATIC_GEOMETRY_RU.md",
+      "path": "docs/sfp/organization_selection_composition_20261109/STATIC_GEOMETRY_RU.md",
       "sha256": "3c43378ec94ccdd58112c07209431a043dd85b18c3347cb60c19adc850636b6d",
       "coverage": "current_research_proof_and_addressed_review"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/SYNTHESIS_RU.md",
+      "path": "docs/sfp/organization_selection_composition_20261109/SYNTHESIS_RU.md",
       "sha256": "8f5472e6beba0c4c4f876f81755b019e646da84b5c2485adcfa0430a3c73c4ba",
       "coverage": "current_research_proof_and_addressed_review"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/organization_selection_composition_20261109/TERMINAL_LAW_RU.md",
+      "path": "docs/sfp/organization_selection_composition_20261109/TERMINAL_LAW_RU.md",
       "sha256": "e89a18da9b7a15851a94fdb7531f32b53e9efb65f70474c24969aa09fdf324b7",
       "coverage": "current_research_proof_and_addressed_review"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_diversity_20261109/STATIC_GATE_RU.md",
+      "path": "docs/sfp/c2_rad_diversity_20261109/STATIC_GATE_RU.md",
       "sha256": "986bad55ab26e75c51dfc16028440b692322bdaa4a1bfc85766aedf60bbc5a6e",
       "coverage": "accepted_fixed_c2_rad_proof"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_diversity_20261109/TERMINAL_COROLLARY_RU.md",
+      "path": "docs/sfp/c2_rad_diversity_20261109/TERMINAL_COROLLARY_RU.md",
       "sha256": "3d1d50a4a58eba8c2dfbac59c02342370716dca15d90acc4d04f606e047ae551",
       "coverage": "accepted_fixed_c2_rad_proof"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_natural_precision_20261109/AUDIT_AA5_RU.md",
+      "path": "docs/sfp/c2_rad_natural_precision_20261109/AUDIT_AA5_RU.md",
       "sha256": "5d94e4fe6950e93782ae9ef6d50ec06637dbb4bb544b2092065dcc631171fd56",
       "coverage": "c2_rad_natural_precision_author_proof"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_natural_precision_20261109/COALESCENCE_LOOP_RU.md",
+      "path": "docs/sfp/c2_rad_natural_precision_20261109/COALESCENCE_LOOP_RU.md",
       "sha256": "f726277a2372681215ffeab84dddd4c87bd7a042eb9b0e6de8989a524eb60589",
       "coverage": "c2_rad_natural_precision_author_proof"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_natural_precision_20261109/NATURAL_PRECISION_RU.md",
+      "path": "docs/sfp/c2_rad_natural_precision_20261109/NATURAL_PRECISION_RU.md",
       "sha256": "b525b639af835c3f36276559068b4c449534b900c4dd3845ac9d8b024be57ce4",
       "coverage": "c2_rad_natural_precision_author_proof"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_free_terminal_20261109/AUDIT_NATURAL_GAP_RU.md",
+      "path": "docs/sfp/c2_rad_free_terminal_20261109/AUDIT_NATURAL_GAP_RU.md",
       "sha256": "45d7d38a9d648e0809820cfc15aef06ab6f1ff9d0e27b26c511de4830ed19a6c",
       "coverage": "c2_rad_free_terminal_author_proof"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_free_terminal_20261109/FREE_TERMINAL_RU.md",
+      "path": "docs/sfp/c2_rad_free_terminal_20261109/FREE_TERMINAL_RU.md",
       "sha256": "e311357785116ec9e4d1952a8068b6c07db31176cc0a57a7dcf400b63a9b4144",
       "coverage": "c2_rad_free_terminal_author_proof"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_free_terminal_20261109/HYBRID_WITNESS_RU.md",
+      "path": "docs/sfp/c2_rad_free_terminal_20261109/HYBRID_WITNESS_RU.md",
       "sha256": "3c9a9aa24e48d974796133d35c51a79682ce7f76f2b6a6ba5fc645fdb7ab8553",
       "coverage": "c2_rad_free_terminal_author_proof"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_future_aggregation_20261109/LITERATURE_AND_STATUS_RU.md",
+      "path": "docs/sfp/c2_rad_future_aggregation_20261109/LITERATURE_AND_STATUS_RU.md",
       "sha256": "04d32bb457eb8000d961bc4b686ef18326bcb3c4b0cc82c6b4cad0fa3f155b7b",
       "coverage": "c2_rad_safe_future_aggregation"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_future_aggregation_20261109/SAFE_AGGREGATION_RU.md",
+      "path": "docs/sfp/c2_rad_future_aggregation_20261109/SAFE_AGGREGATION_RU.md",
       "sha256": "02413a99fce943ff2e48be9379541111821059396ea11a189712a8637967aeb9",
       "coverage": "c2_rad_safe_future_aggregation"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_future_aggregation_20261109/SHORT_RESERVE_RU.md",
+      "path": "docs/sfp/c2_rad_future_aggregation_20261109/SHORT_RESERVE_RU.md",
       "sha256": "ca578ce8e3b4e4d654126273e00e2ce851d297dd7c7c68b349708c4d5b2adefb",
       "coverage": "c2_rad_safe_future_aggregation"
     },
     {
-      "path": "/Users/ovd/Library/Developer/AgentWorkspaces/sfp-m11-draft-20261107/docs/sfp/c2_rad_joint_execution_20261109/JOINT_EXECUTION_RU.md",
+      "path": "docs/sfp/c2_rad_joint_execution_20261109/JOINT_EXECUTION_RU.md",
       "sha256": "2b829cf8287252aa9f9852cc40a5a0eb25ca6b8870fda8a9d589b0241623a25f",
       "coverage": "c2_rad_joint_execution_cost"
     },
