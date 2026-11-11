@@ -723,6 +723,10 @@
     "docs/sfp/work_selects_organization_20261110/SELECTION_LAW_RU.md": {
       "sha256": "5edb7ddb13840f091780d359a1a11e015bac2df334a787793e82b743d23b8be0",
       "lines": 1413
+    },
+    "docs/sfp/bilinear_first_order_sufficiency_20261111/RECORD_RU.md": {
+      "sha256": "49763ba084133aa2a54fa276971e64c39d1d8a31b209218eeeddd562f1641fba",
+      "lines": 101
     }
   },
   "sources_read": [
@@ -1893,6 +1897,11 @@
       "path": "docs/sfp/work_selects_organization_20261110/SELECTION_LAW_RU.md",
       "sha256": "5edb7ddb13840f091780d359a1a11e015bac2df334a787793e82b743d23b8be0",
       "coverage": "work_opposite_outcomes_same_carrier"
+    },
+    {
+      "path": "docs/sfp/bilinear_first_order_sufficiency_20261111/RECORD_RU.md",
+      "sha256": "49763ba084133aa2a54fa276971e64c39d1d8a31b209218eeeddd562f1641fba",
+      "coverage": "bilinear_first_order_sufficiency"
     }
   ],
   "exclusions": [

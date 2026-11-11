@@ -20,6 +20,7 @@
       "work_order_readiness_price"
     ],
     "1": [
+      "bilinear_first_order_sufficiency",
       "boundary_terminal_selection_gap",
       "bounded_lift_price_transfer",
       "c2_rad_diversity_selection",
