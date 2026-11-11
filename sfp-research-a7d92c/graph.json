@@ -8006,7 +8006,8 @@
       "region": "reduction",
       "x": 4730,
       "y": 260,
-      "anchor": false
+      "anchor": false,
+      "proof_url": "https://github.com/ovdspb-code/psb/blob/6d4c7bc3f5b868d89e77ca9f15c560d9005d712d/docs/sfp/bilinear_operational_equivalence_20261111/CONTROL_LEMMA_RU.md"
     }
   ],
   "edges": [
