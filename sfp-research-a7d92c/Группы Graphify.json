@@ -47,7 +47,8 @@
       "work_opposite_outcomes_same_carrier",
       "work_overpay_threshold_asymmetry",
       "work_selected_resource_conflict",
-      "work_static_hidden_collapse"
+      "work_static_hidden_collapse",
+      "w2_terminal_interchannel_necessity"
     ],
     "2": [
       "active_physical_reduction",
