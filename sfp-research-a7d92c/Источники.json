@@ -747,6 +747,18 @@
     "docs/sfp/operational_simplification_cost_20261111/fable_table_20261112/advisor_review_62497e7/ADVISOR_REVIEW_RU.md": {
       "sha256": "03876ec4547c9854af2bf8792bc04f8c6c5b368954721acc0540d525152d6c06",
       "lines": 157
+    },
+    "docs/sfp/rc_invariant_drift_20261112/BALANCE_AND_DRIFT_RU.md": {
+      "sha256": "912d3ed4fa464b4acc9190629f81e2188395ccacf73551e60a9dc210d9b34dad",
+      "lines": 120
+    },
+    "docs/sfp/rc_invariant_drift_20261112/FUTURE_LEARNING_RU.md": {
+      "sha256": "ad466cfd02e2df30a38cd0b79dbb6d763e278cd77f0dc020ac6a139e01f74dab",
+      "lines": 72
+    },
+    "docs/sfp/rc_invariant_drift_20261112/advisor_review_a02627a/ADVISOR_REVIEW_RU.md": {
+      "sha256": "1413d0442e0556d777fef6580e954565d9ec1d428d0f887f5af7182344d5354a",
+      "lines": 218
     }
   },
   "sources_read": [
@@ -1947,6 +1959,21 @@
       "path": "docs/sfp/operational_simplification_cost_20261111/fable_table_20261112/advisor_review_62497e7/ADVISOR_REVIEW_RU.md",
       "sha256": "03876ec4547c9854af2bf8792bc04f8c6c5b368954721acc0540d525152d6c06",
       "coverage": "w2_terminal_interchannel_necessity"
+    },
+    {
+      "path": "docs/sfp/rc_invariant_drift_20261112/BALANCE_AND_DRIFT_RU.md",
+      "sha256": "912d3ed4fa464b4acc9190629f81e2188395ccacf73551e60a9dc210d9b34dad",
+      "coverage": "rc_invariant_drift"
+    },
+    {
+      "path": "docs/sfp/rc_invariant_drift_20261112/FUTURE_LEARNING_RU.md",
+      "sha256": "ad466cfd02e2df30a38cd0b79dbb6d763e278cd77f0dc020ac6a139e01f74dab",
+      "coverage": "rc_invariant_drift"
+    },
+    {
+      "path": "docs/sfp/rc_invariant_drift_20261112/advisor_review_a02627a/ADVISOR_REVIEW_RU.md",
+      "sha256": "1413d0442e0556d777fef6580e954565d9ec1d428d0f887f5af7182344d5354a",
+      "coverage": "rc_invariant_drift"
     }
   ],
   "exclusions": [
