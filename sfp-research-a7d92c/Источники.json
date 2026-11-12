@@ -743,6 +743,10 @@
     "docs/sfp/operational_simplification_cost_20261111/advisor_review_c6b1063/ADVISOR_REVIEW_RU.md": {
       "sha256": "4b998f44a8e54508fe96aa400b817338093d196a85b73540dfe2eed9ec63bd6f",
       "lines": 157
+    },
+    "docs/sfp/operational_simplification_cost_20261111/fable_table_20261112/advisor_review_62497e7/ADVISOR_REVIEW_RU.md": {
+      "sha256": "03876ec4547c9854af2bf8792bc04f8c6c5b368954721acc0540d525152d6c06",
+      "lines": 157
     }
   },
   "sources_read": [
@@ -1937,6 +1941,11 @@
     {
       "path": "docs/sfp/operational_simplification_cost_20261111/advisor_review_c6b1063/ADVISOR_REVIEW_RU.md",
       "sha256": "4b998f44a8e54508fe96aa400b817338093d196a85b73540dfe2eed9ec63bd6f",
+      "coverage": "w2_terminal_interchannel_necessity"
+    },
+    {
+      "path": "docs/sfp/operational_simplification_cost_20261111/fable_table_20261112/advisor_review_62497e7/ADVISOR_REVIEW_RU.md",
+      "sha256": "03876ec4547c9854af2bf8792bc04f8c6c5b368954721acc0540d525152d6c06",
       "coverage": "w2_terminal_interchannel_necessity"
     }
   ],
