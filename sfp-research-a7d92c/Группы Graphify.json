@@ -250,6 +250,7 @@
       "replica_resource_law"
     ],
     "38": [
+      "rc_directed_drift",
       "rc_invariant_drift"
     ]
   },

@@ -759,6 +759,22 @@
     "docs/sfp/rc_invariant_drift_20261112/advisor_review_a02627a/ADVISOR_REVIEW_RU.md": {
       "sha256": "1413d0442e0556d777fef6580e954565d9ec1d428d0f887f5af7182344d5354a",
       "lines": 218
+    },
+    "docs/sfp/rc_directed_drift_20261113/EFFECTIVE_LAW_RU.md": {
+      "sha256": "69451a6586caf9da2c49d04de727a7e4b0f4b584604dd754a509bb0e8ce7ebda",
+      "lines": 94
+    },
+    "docs/sfp/rc_directed_drift_20261113/SCALE_AND_PROBES_RU.md": {
+      "sha256": "6f700223666e86aed709340a9a656dcea1eb3322ad67499ab8043f10668d6f19",
+      "lines": 91
+    },
+    "docs/sfp/rc_directed_drift_20261113/advisor_review_eb1c3bb/ADVISOR_REVIEW_RU.md": {
+      "sha256": "a368769467da1c9878b1c8ed6dd2d60fa27a18ff942ffa30ff7ea97612858ad0",
+      "lines": 190
+    },
+    "docs/sfp/rc_directed_drift_20261113/PRELIMINARY_NOVELTY_RU.md": {
+      "sha256": "a2761fadd588b131ac9efcdc9725c9a66b2f2245290f3fe7b32b7cadd91614aa",
+      "lines": 22
     }
   },
   "sources_read": [
@@ -1974,6 +1990,26 @@
       "path": "docs/sfp/rc_invariant_drift_20261112/advisor_review_a02627a/ADVISOR_REVIEW_RU.md",
       "sha256": "1413d0442e0556d777fef6580e954565d9ec1d428d0f887f5af7182344d5354a",
       "coverage": "rc_invariant_drift"
+    },
+    {
+      "path": "docs/sfp/rc_directed_drift_20261113/EFFECTIVE_LAW_RU.md",
+      "sha256": "69451a6586caf9da2c49d04de727a7e4b0f4b584604dd754a509bb0e8ce7ebda",
+      "coverage": "rc_directed_drift"
+    },
+    {
+      "path": "docs/sfp/rc_directed_drift_20261113/SCALE_AND_PROBES_RU.md",
+      "sha256": "6f700223666e86aed709340a9a656dcea1eb3322ad67499ab8043f10668d6f19",
+      "coverage": "rc_directed_drift"
+    },
+    {
+      "path": "docs/sfp/rc_directed_drift_20261113/advisor_review_eb1c3bb/ADVISOR_REVIEW_RU.md",
+      "sha256": "a368769467da1c9878b1c8ed6dd2d60fa27a18ff942ffa30ff7ea97612858ad0",
+      "coverage": "rc_directed_drift"
+    },
+    {
+      "path": "docs/sfp/rc_directed_drift_20261113/PRELIMINARY_NOVELTY_RU.md",
+      "sha256": "a2761fadd588b131ac9efcdc9725c9a66b2f2245290f3fe7b32b7cadd91614aa",
+      "coverage": "rc_directed_drift"
     }
   ],
   "exclusions": [
