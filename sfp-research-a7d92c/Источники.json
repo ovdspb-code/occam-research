@@ -775,6 +775,10 @@
     "docs/sfp/rc_directed_drift_20261113/PRELIMINARY_NOVELTY_RU.md": {
       "sha256": "a2761fadd588b131ac9efcdc9725c9a66b2f2245290f3fe7b32b7cadd91614aa",
       "lines": 22
+    },
+    "docs/sfp/rc_directed_drift_20261113/advisor_publication_9bd5f66/ADVISOR_DECISION_RU.md": {
+      "sha256": "7288b8ab787bfb5404c092589a02a85b23cecdb148cf20855273193380694f1e",
+      "lines": 96
     }
   },
   "sources_read": [
@@ -2009,6 +2013,11 @@
     {
       "path": "docs/sfp/rc_directed_drift_20261113/PRELIMINARY_NOVELTY_RU.md",
       "sha256": "a2761fadd588b131ac9efcdc9725c9a66b2f2245290f3fe7b32b7cadd91614aa",
+      "coverage": "rc_directed_drift"
+    },
+    {
+      "path": "docs/sfp/rc_directed_drift_20261113/advisor_publication_9bd5f66/ADVISOR_DECISION_RU.md",
+      "sha256": "7288b8ab787bfb5404c092589a02a85b23cecdb148cf20855273193380694f1e",
       "coverage": "rc_directed_drift"
     }
   ],
