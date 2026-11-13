@@ -1,7 +1,34 @@
 {
-  "updated": "2026-10-02",
+  "updated": "2026-11-13",
   "source": "Curated publication records and verified DOI metadata",
   "publications": [
+    {
+      "title": "Directed structural drift from finite relaxation in adaptive resistor networks",
+      "doi": "10.5281/zenodo.24202951",
+      "type": "preprint",
+      "status": "preprint",
+      "venue": "Zenodo · v0.1",
+      "date": "2026-11-13",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.24202951"
+        },
+        {
+          "label": "ResearchGate",
+          "url": "https://www.researchgate.net/publication/417866813"
+        },
+        {
+          "label": "Reader guide",
+          "url": "https://www.researchgate.net/publication/417867112"
+        }
+      ],
+      "source": "manual",
+      "added": "2026-11-13"
+    },
     {
       "title": "Coherent-resonant netting: disorder-enhanced selectivity from transient wave-like dynamics on biological connectomes",
       "doi": "10.3389/fncom.2026.1813959",
