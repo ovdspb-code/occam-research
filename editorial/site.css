@@ -184,8 +184,7 @@ summary { color: var(--link); cursor: pointer; }
 .brand { font-weight: 600; letter-spacing: -.035em; }
 .hero { grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 6vw, 6rem); padding-block: 1.6rem 2.8rem; }
 .hero .eyebrow, .intro .eyebrow, .programs .eyebrow { color: var(--annotation); }
-.hero-copy h1 { font: 500 clamp(5rem, 9.7vw, 9rem)/.83 var(--serif); letter-spacing: -.075em; }
-.hero-copy h1 em { display: block; margin-left: .56em; font-weight: 400; }
+.hero-copy h1 { font: 500 clamp(3rem, 5.3vw, 5rem)/1.02 var(--serif); letter-spacing: -.027em; text-wrap: balance; }
 .hero-copy > p:not(.eyebrow) { max-width: 46ch; margin-top: 1.65rem; font: clamp(1.19rem, 1.65vw, 1.48rem)/1.36 var(--serif); }
 .field-links { display: flex; flex-wrap: wrap; gap: .45rem 1.1rem; margin-top: 1.3rem; font-size: .92rem; }
 .circuit-plate { margin: 0; }
@@ -220,8 +219,7 @@ summary { color: var(--link); cursor: pointer; }
 .duel-cover img { height: auto; width: 100%; }
 @media (max-width: 49rem) {
   .hero { grid-template-columns: 1fr; gap: .9rem; }
-  .hero-copy h1 { font-size: clamp(4rem, 14vw, 6.7rem); line-height: 1; }
-  .hero-copy h1 em { display: inline; margin: 0; }
+  .hero-copy h1 { font-size: clamp(2.6rem, 8vw, 4rem); max-width: 18ch; }
   .circuit-plate img { max-width: 21rem; }
   .intro + .hero-figure, .notation { grid-template-columns: 1fr; }
 }
