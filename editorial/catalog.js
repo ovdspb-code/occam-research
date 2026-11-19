@@ -20,6 +20,33 @@ const typeLabels = {
 
 const typeOrder = ['journal', 'under_review', 'preprint', 'published', 'unpublished'];
 
+const readinessBands = [
+  { min: 9, tone: 'near', label: 'Near submission' },
+  { min: 6, tone: 'develop', label: 'Needs development' },
+  { min: 0, tone: 'early', label: 'Early stage' },
+];
+
+function readinessIndicator(score, scale) {
+  const band = readinessBands.find(item => score >= item.min);
+  const wrapper = element('div', '', `readiness-indicator readiness-${band.tone}`);
+  const number = element('span', String(score), 'readiness-score');
+  number.append(element('small', `/${scale}`));
+  const label = element('div', '', 'readiness-label');
+  label.append(element('strong', 'Editorial readiness'), element('span', band.label));
+  wrapper.append(number, label);
+  return wrapper;
+}
+
+function renderReadinessLegend(scale) {
+  const legend = document.querySelector('[data-readiness-legend]');
+  legend.replaceChildren(...readinessBands.map((band, index) => {
+    const upper = index === 0 ? scale : readinessBands[index - 1].min - 1;
+    const entry = element('li', '', `readiness-${band.tone}`);
+    entry.append(element('span', '', 'readiness-dot'), element('strong', `${band.min}–${upper}`), band.label);
+    return entry;
+  }));
+}
+
 function publicationStatus(record) {
   if (record.historical) return 'Historical preprint';
   return statusLabels[record.status ?? record.type] ?? 'Archived record';
@@ -67,6 +94,7 @@ function publicationCard(record, { featured, candidate, scale } = {}) {
   title.append(link(record.title, `#${id}`));
   const authors = Array.isArray(record.authors) ? record.authors.join(', ') : record.authors;
   const context = [authors || 'Oleg Dolgikh', record.date ?? record.year, record.venue].filter(Boolean);
+  if (candidate) card.append(readinessIndicator(record.readiness.score, scale));
   card.append(element('p', typeLabels[record.type] ?? record.type, 'eyebrow'), title,
     element('p', context.join(' · '), 'byline'));
 
@@ -80,10 +108,7 @@ function publicationCard(record, { featured, candidate, scale } = {}) {
     ['Version', record.venue?.includes(`v${record.version}`) ? '' : record.version],
     ['License', record.license?.toUpperCase().replace(/-/g, ' ')],
   ];
-  if (candidate) {
-    facts.push(['Editorial readiness', `${record.readiness.score}/${scale}`],
-      ['Editorial stage', record.readiness.stage]);
-  }
+  if (candidate) facts.push(['Editorial stage', record.readiness.stage]);
   const sourceLinks = publishLinks(record);
   if (record.readiness && !candidate) {
     const candidateLink = element('li');
@@ -111,6 +136,7 @@ function sortRecords(records) {
 
 function renderCandidates(outlet, catalogue) {
   const { candidateGroups, publications, readinessScale } = catalogue;
+  renderReadinessLegend(readinessScale);
   const nav = document.querySelector('[data-candidate-navigation]');
   const order = publications.filter(record => record.readiness).sort((a, b) => a.readiness.order - b.readiness.order);
   nav.replaceChildren();
