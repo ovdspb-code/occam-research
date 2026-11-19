@@ -14,7 +14,7 @@ To add a new page, you **copy a template, fill in your data, and register it**.
 
 ```
 your-repo/
-├── index.html          ← Hub page (auto-reads pages.json)
+├── index.html          ← Occam Research home
 ├── pages.json          ← Registry: one entry per organism
 ├── human.html          ← Example: full GKSL animation
 ├── drosophila.html     ← Example: static connectome
@@ -230,3 +230,22 @@ Before pushing, verify:
 ## Questions?
 
 Open an issue on GitHub or contact the maintainer.
+
+## Updating the research catalogue
+
+Add or update the published version in `publications.json`. Check the exact version
+DOI first. Keep the date, authors, version, licence and links from the primary
+record. Use `program` to place the work on a program page, and `collection:
+"technical"` for technical notes and disclosures. A featured work also has a
+reader-facing summary, scope and description of the verification.
+
+For a Journal candidates entry, add `readiness` to the same record with the
+group, editorial score, stage where applicable, next step and display order.
+Keep the existing `anchor` when updating a record. Report the publication
+status and verification separately from the editorial estimate. Where a
+dataset has a DOI and its associated manuscript has none, link the dataset
+from the manuscript record.
+
+The static site reads this file directly. For a local review, serve the
+repository over HTTP from its root. Check `/catalog/`, the program page, and
+the exact `/publications/#anchor` when the work is a journal candidate.

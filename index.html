@@ -1,412 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Occam Research — Independent science across disciplines</title>
-<meta name="description" content="Occam Research — the independent practice of Oleg Dolgikh. Bold cross-disciplinary questions, held to evidence: peer-reviewed work, open data, and adversarial duels.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Cutive+Mono&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIzMjE1NiIgc3Ryb2tlLXdpZHRoPSIzIi8+PGVsbGlwc2UgY3g9IjI0IiBjeT0iMjQiIHJ4PSIxMSIgcnk9IjIxIiBmaWxsPSJub25lIiBzdHJva2U9IiMyMzIxNTYiIHN0cm9rZS13aWR0aD0iMi41IiB0cmFuc2Zvcm09InJvdGF0ZSgtMzAgMjQgMjQpIi8+PGVsbGlwc2UgY3g9IjI0IiBjeT0iMjQiIHJ4PSIxMSIgcnk9IjIxIiBmaWxsPSJub25lIiBzdHJva2U9IiNiZDFlNjMiIHN0cm9rZS13aWR0aD0iMi41IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAyNCAyNCkiLz48cGF0aCBkPSJNNCAyMFEyNCAxNiA0NCAyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTA2YmIyIiBzdHJva2Utd2lkdGg9IjEuOCIvPjxwYXRoIGQ9Ik00IDI4UTI0IDMyIDQ0IDI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM1MDZiYjIiIHN0cm9rZS13aWR0aD0iMS44Ii8+PC9zdmc+Cg==">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="icon" href="favicon.ico">
-<link rel="stylesheet" href="manuscript.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Independent research on transport, physical learning and the formation of order.">
+<title>Occam World · Occam Research</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/editorial/site.css">
+<script type="module" src="/editorial/chart.js"></script>
+<script type="module" src="/editorial/legacy-links.js"></script>
 </head>
 <body>
-
-<header class="site-header">
-<div class="wrap">
-<nav class="nav">
-  <a href="index.html" class="nav-brand">
-    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIzMjE1NiIgc3Ryb2tlLXdpZHRoPSIzIi8+PGVsbGlwc2UgY3g9IjI0IiBjeT0iMjQiIHJ4PSIxMSIgcnk9IjIxIiBmaWxsPSJub25lIiBzdHJva2U9IiMyMzIxNTYiIHN0cm9rZS13aWR0aD0iMi41IiB0cmFuc2Zvcm09InJvdGF0ZSgtMzAgMjQgMjQpIi8+PGVsbGlwc2UgY3g9IjI0IiBjeT0iMjQiIHJ4PSIxMSIgcnk9IjIxIiBmaWxsPSJub25lIiBzdHJva2U9IiNiZDFlNjMiIHN0cm9rZS13aWR0aD0iMi41IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAyNCAyNCkiLz48cGF0aCBkPSJNNCAyMFEyNCAxNiA0NCAyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTA2YmIyIiBzdHJva2Utd2lkdGg9IjEuOCIvPjxwYXRoIGQ9Ik00IDI4UTI0IDMyIDQ0IDI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM1MDZiYjIiIHN0cm9rZS13aWR0aD0iMS44Ii8+PC9zdmc+Cg==" alt="Occam Research" class="nav-logo" style="height:28px;width:auto;">
-    Occam Research
-  </a>
-  <div class="nav-right">
-    <a href="#disputesSection">Duels</a>
-    <a href="#workSection">Work</a>
-    <a href="publications/">Journal candidates</a>
-    <a href="#defensivePublications">Defensive</a>
-    <a href="https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1813959/full" target="_blank" rel="noopener noreferrer">Paper</a>
-    <a href="https://github.com/ovdspb-code" target="_blank" rel="noopener noreferrer">GitHub</a>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+  <div class="frame header-inner">
+    <a class="brand" href="/"><img src="/favicon.svg" width="34" height="34" alt="">Occam Research</a>
+    <nav aria-label="Main navigation"><a href="/#researchDirections" aria-current="true" >Research</a><a href="/catalog/">Publications &amp; Data</a><a href="/how-we-work/">How we work</a><a href="/about/">About</a></nav>
   </div>
-</nav>
-</div>
 </header>
-
-<main>
-<div class="wrap">
-
-<section class="hero hero-center">
-  <div class="hero-badge">● Independent research</div>
-  <h1>Bold questions across the <em>sciences</em></h1>
-  <p class="hero-sub">Honest answers, or none. Occam Research is the independent practice of Oleg Dolgikh — chasing decidable questions across disciplines and holding every claim to evidence. Peer-reviewed work, open data, and, when a claim deserves a fight, a public duel.</p>
-  <div class="hero-actions">
-    <a class="btn" href="#disputesSection">Read the duels</a>
-    <a class="btn outline" href="https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1813959/full" target="_blank" rel="noopener noreferrer">Peer-reviewed paper →</a>
+<main id="main" class="frame">
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Independent research</p>
+    <h1>Transport, learning<br class="hero-break"> and the formation<br class="hero-break"> of order</h1>
+    <p>Occam Research studies how physical structure shapes what a system can do. We work with mathematical models, simulations and empirical data, and publish the evidence and limits of each result.</p>
+    <a class="button" href="#researchDirections">Explore the research <span aria-hidden="true">↓</span></a>
   </div>
-</section>
-
-<!-- FEATURED PAPER -->
-<div class="featured reveal">
-  <div class="feat-label">● Peer-reviewed · Frontiers in Computational Neuroscience</div>
-  <div class="feat-title">Coherent-resonant netting: disorder-enhanced selectivity from transient wave-like dynamics on biological connectomes</div>
-  <div class="feat-meta">Oleg Dolgikh · 2026 · doi:10.3389/fncom.2026.1813959</div>
-  <p class="feat-desc">The capstone of the CRN program: a falsifiable account of how moderate disorder can sharpen selective signal routing on real connectomes — tested, published, and peer-reviewed. The interactive companion lives below.</p>
-  <div class="pub-links">
-    <a href="https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1813959/full" target="_blank" rel="noopener noreferrer">Read in Frontiers</a>
-    <a href="https://doi.org/10.3389/fncom.2026.1813959" target="_blank" rel="noopener noreferrer">DOI</a>
-    <a href="#workSection">The CRN trophy ↓</a>
-  </div>
-</div>
-
-<section class="section reveal" id="researchDirections">
-  <h2>Current research</h2>
-  <div class="card-grid" style="margin-top:var(--space-6)">
-    <div class="card static"><h3>Transport and computation</h3><p>CRN studies how topology, disorder and readout shape transport on biological connectomes. The Frontiers article is peer-reviewed; supporting preprints and datasets are identified separately.</p><a href="https://doi.org/10.3389/fncom.2026.1813959">Journal article</a></div>
-    <div class="card static"><h3>Structural safety of learning</h3><p>When can local physical learning preserve the conducting structure required by its own task? VCS gives sufficient certificates within a stated resistor-network model.</p><a href="https://doi.org/10.5281/zenodo.23032195">VCS preprint v0.2.1</a></div>
-    <div class="card static"><h3>Learning and learnability</h3><p>Recent work gives sufficient certificates for joint voltage training and preservation of learnability. Assumptions, admissible targets and limitations are stated explicitly.</p><a href="https://doi.org/10.5281/zenodo.23080791">SCI-006B preprint v0.3</a></div>
-  </div>
-</section>
-
-<!-- APPROACH -->
-<section class="section reveal">
-  <h2>How the work goes</h2>
-  <div class="card-grid" style="margin-top:var(--space-6)">
-    <div class="card static">
-      <div class="card-icon" style="background:var(--accent-light)">I</div>
-      <h3>Scout</h3>
-      <p>Range across fields for questions sharp enough to be <em>decided</em> — where an independent researcher can still land a real result.</p>
+  <figure class="hero-figure">
+    <div class="figure-head">
+      <p class="eyebrow">CRN · Drosophila benchmark</p>
+      <p class="figure-title">Selectivity gain falls with dephasing</p>
     </div>
-    <div class="card static">
-      <div class="card-icon" style="background:var(--teal-light)">II</div>
-      <h3>Test</h3>
-      <p>Attack the question with computation, real data, and explicit null models. No claim survives without evidence — and the nulls have to fail honestly.</p>
-    </div>
-    <div class="card static">
-      <div class="card-icon" style="background:var(--warm-light)">III</div>
-      <h3>Duel</h3>
-      <p>Put the strongest version of a claim against its strongest objection, in the open, to a verdict. One of several formats — see Duellum Veritatis.</p>
-    </div>
+    <canvas id="dephasing-chart" width="720" height="390" role="img" aria-label="The selectivity gain from increasing disorder falls from 2.349 at low dephasing to 0.053 at high dephasing. Exact values follow."></canvas>
+    <figcaption>Change in model selectivity from ε = 0 to ε = 3 in a fruit-fly connectome simulation. <a href="/research/crn/#coherent-resonant-netting">Study and source</a>
+      <details class="chart-data">
+        <summary>Exact values</summary>
+        <table id="dephasing-data">
+          <thead><tr><th scope="col">Dephasing κ</th><th scope="col">Selectivity gain Δ</th></tr></thead>
+          <tbody><tr><td>0.001</td><td>2.349</td></tr><tr><td>1</td><td>0.685</td></tr><tr><td>3</td><td>0.284</td></tr><tr><td>10</td><td>0.053</td></tr></tbody>
+        </table>
+      </details>
+    </figcaption>
+  </figure>
+</section>
+
+<section class="section" id="researchDirections" aria-labelledby="research-title">
+  <div class="section-heading"><h2 id="research-title">Research programs</h2><a href="/catalog/">Browse publications and data <span aria-hidden="true">↗</span></a></div>
+  <div class="programs">
+    <article>
+      <p class="eyebrow">Computational neuroscience</p>
+      <h3><a href="/research/crn/">Coherent-Resonant Netting <span aria-hidden="true">↗</span></a></h3>
+      <p>How do the wiring of a network and its transport dynamics shape which signals reach their targets?</p>
+      <a class="work-link" href="/research/crn/#coherent-resonant-netting">Frontiers journal article</a>
+    </article>
+    <article>
+      <p class="eyebrow">Adaptive networks</p>
+      <h3><a href="/research/physical-learning/">Physical learning <span aria-hidden="true">↗</span></a></h3>
+      <p>How does learning change what a physical network can do next, even when its current function is restored?</p>
+      <a class="work-link" href="/research/physical-learning/#work-induced-specialization">Preprint on work-induced specialization</a>
+    </article>
+    <article>
+      <p class="eyebrow">Order and records</p>
+      <h3><a href="/research/fold/">FOLD <span aria-hidden="true">↗</span></a></h3>
+      <p>When do local relations give rise to observable order, and what can a system retain about its past?</p>
+      <a class="work-link" href="/research/fold/#power-law-gap-reachability">Preprint on random partial orders</a>
+    </article>
   </div>
 </section>
 
-<!-- DUELLUM VERITATIS (loaded dynamically from disputes.json) -->
-<section class="section reveal" id="disputesSection">
-  <h2>Duellum Veritatis</h2>
-  <p class="disputes-meta" style="font-size:var(--text-xs);color:var(--text-3);margin-bottom:var(--space-4)">Loading digests…</p>
-  <div class="pub-list" id="disputesList"></div>
-</section>
-
-<!-- CRN — FOUNDING TROPHY -->
-<section class="section reveal" id="workSection">
-  <h2>CRN — the founding trophy</h2>
-  <p>Coherent Resonant Netting is, as an active program, closed. But it is the trophy that forged everything here: it set the method — falsifiable claims, real connectome data, honest null models — and it still shapes what I scout and how I fight. Peer-reviewed in <em>Frontiers in Computational Neuroscience</em>; below, the interactive companion across organisms.</p>
-  <div class="card-grid reveal" id="cardGrid"></div>
-
-  <details class="crn-details">
-    <summary>The CRN hypothesis, in brief</summary>
-    <p>Biological agents face an energy–information bottleneck: inference needs rapid exploration of large hypothesis spaces, yet high-gain spiking is metabolically expensive. CRN proposes a <strong>two-regime decision architecture</strong>. <strong>Stage-I (netting)</strong> — low-cost wave-like filtering via GKSL/Lindblad dynamics, with tunable dephasing κ and disorder ε on the structural connectome, concentrating probability on target hypotheses. <strong>Stage-II (fixation)</strong> — expensive spiking commitment that broadcasts the winner. By filtering before firing, the system cuts costly O(N) broadcast events to O(1). The testable signature is <strong>Disorder-Enhanced Selectivity</strong>: moderate disorder improves target selectivity on real connectomes and depends on native topology — degree-preserving rewiring destroys it, and classical random walks cannot reproduce it.</p>
-  </details>
-
-  <div class="disclaimer">
-    <strong>Note on scope.</strong> CRN is a testable computational hypothesis, not a claim of microscopic quantum coherence in neural tissue. The GKSL formalism is used as a functional proxy for wave-like dynamics with tunable damping.
+<section class="section site-index" aria-labelledby="explore-title">
+  <h2 id="explore-title">Explore the site</h2>
+  <div class="index-links">
+    <a id="workSection" href="/research/crn/#workSection"><span id="cardGrid">CRN interactive companions</span></a>
+    <a id="scorecardSection" href="/research/crn/#scorecardSection"><span id="scorecardGrid">Historical CRN scorecard</span></a>
+    <a id="pubsSection" href="/catalog/"><span id="pubsList">Publications &amp; Data</span></a>
+    <a id="defensivePublications" href="/catalog/#defensivePublications">Technical notes and defensive disclosures</a>
+    <a id="disputesSection" href="/how-we-work/duellum-veritatis/"><span id="disputesList">Duellum Veritatis</span></a>
+    <a href="/how-we-work/">How we work</a>
   </div>
 </section>
-
-<!-- SCORECARD -->
-<section class="scorecard section reveal" id="scorecardSection">
-  <h2>Historical CRN scorecard</h2>
-  <p>This is the March 2026 working assessment, preserved for provenance. Its scores are internal assessments, not probabilities, independent peer-review ratings, or the current status of every research claim. Consult the dated publications for their stated findings and limitations.</p>
-  <p class="scorecard-meta">Loading scorecard…</p>
-  <div id="scorecardGrid"></div>
-</section>
-
-<!-- PUBLICATIONS (loaded dynamically from publications.json) -->
-<section class="section reveal" id="pubsSection">
-  <h2>Publications &amp; Data</h2>
-  <p>Recent preprints: <a href="works/structural-safety.html">Structural Safety</a> · <a href="works/joint-training-learnability.html">Joint Training and Learnability Preservation</a></p>
-  <p class="pubs-meta" style="font-size:var(--text-xs);color:var(--text-3);margin-bottom:var(--space-4)">Loading publications…</p>
-  <div class="pub-list" id="pubsList"></div>
-</section>
-
-<!-- DEFENSIVE PUBLICATIONS -->
-<section class="section reveal" id="defensivePublications">
-  <h2>Defensive Publications</h2>
-  <div class="pub-list">
-    <div class="pub-item">
-      <span class="pub-tag software">software &middot; disclosure &middot; 2026</span>
-      <div class="pub-title">Universal CRTC: Context Re-validation at Turn Completion for Conversational Gateways</div>
-      <div class="pub-meta">Oleg Dolgikh &middot; Occam Research &middot; v0.1.0 &middot; DOI 10.5281/zenodo.21193362</div>
-      <p>Host-agnostic pre-delivery gate for conversational agents: after a backend computes a candidate response but before delivery, CRTC revalidates the durable inbound queue, suppresses stale answers, persists supersede/merge state, and redispatches a bounded merged turn.</p>
-      <p>Defensive disclosure archived on Zenodo. Release archive SHA256: <span style="font-family:var(--font-mono);font-size:var(--text-xs);overflow-wrap:anywhere">effbd3af8be61fc78dfb073722b19a2eb955fe0984c0e202612e8b465c162309</span>.</p>
-      <div class="pub-links">
-        <a href="https://zenodo.org/records/21193362" target="_blank" rel="noopener noreferrer">Zenodo record</a>
-        <a href="https://doi.org/10.5281/zenodo.21193362" target="_blank" rel="noopener noreferrer">Version DOI</a>
-        <a href="https://doi.org/10.5281/zenodo.21193361" target="_blank" rel="noopener noreferrer">Concept DOI</a>
-      </div>
-    </div>
-  </div>
-  <div class="pub-item" style="margin-top:var(--space-5)">
-    <span class="pub-tag software">Technical note · 2026</span>
-    <div class="pub-title">Verace: A Deterministic Conflict Detection Pipeline Architecture for Enterprise Knowledge Bases</div>
-    <div class="pub-meta">Oleg Dolgikh · v1.1 · DOI 10.5281/zenodo.19402813</div>
-    <div class="pub-links">
-      <a href="https://zenodo.org/records/19402813" target="_blank" rel="noopener noreferrer">Technical note</a>
-      <a href="https://doi.org/10.5281/zenodo.19402813" target="_blank" rel="noopener noreferrer">Version DOI</a>
-    </div>
-  </div>
-</section>
-
-<!-- OPEN RESOURCES -->
-<section class="section reveal">
-  <h2>Open Resources</h2>
-  <div class="card-grid" style="margin-top:var(--space-4)">
-    <a href="https://github.com/ovdspb-code" class="card" target="_blank" rel="noopener noreferrer" style="padding:var(--space-5)">
-      <h3 style="font-size:var(--text-base)">GitHub</h3>
-      <p style="font-size:var(--text-sm);margin-bottom:0">Simulation code, analysis pipelines, configuration files</p>
-    </a>
-    <a href="https://zenodo.org/records/20528910" class="card" target="_blank" rel="noopener noreferrer" style="padding:var(--space-5)">
-      <h3 style="font-size:var(--text-base)">Zenodo</h3>
-      <p style="font-size:var(--text-sm);margin-bottom:0">Preprints, datasets, DOI-archived releases</p>
-    </a>
-    <a href="https://www.researchgate.net/profile/Oleg-Dolgikh-3" class="card" target="_blank" rel="noopener noreferrer" style="padding:var(--space-5)">
-      <h3 style="font-size:var(--text-base)">ResearchGate</h3>
-      <p style="font-size:var(--text-sm);margin-bottom:0">Full-text access, community discussion</p>
-    </a>
-    <a href="https://orcid.org/0009-0008-0159-1718" class="card" target="_blank" rel="noopener noreferrer" style="padding:var(--space-5)">
-      <h3 style="font-size:var(--text-base)">ORCID</h3>
-      <p style="font-size:var(--text-sm);margin-bottom:0">0009-0008-0159-1718</p>
-    </a>
-    <a href="https://scholar.google.com/citations?user=6wxP_EkAAAAJ&amp;hl=en" class="card" target="_blank" rel="noopener noreferrer" style="padding:var(--space-5)">
-      <h3 style="font-size:var(--text-base)">Google Scholar</h3>
-      <p style="font-size:var(--text-sm);margin-bottom:0">Author profile, bibliography, and citations</p>
-    </a>
-  </div>
-</section>
-
-<!-- PI -->
-<section class="section reveal">
-  <h2>The researcher</h2>
-  <div class="pi-box">
-    <div>
-      <h3 class="pi-info" style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;margin-bottom:2px">Oleg Dolgikh</h3>
-      <div class="pi-role">Independent Researcher · Occam Research</div>
-      <p class="pi-bio">Oleg Dolgikh is an independent researcher working on computation, transport, and learning in networks. His research spans computational neuroscience, open-system models of biological connectomes, and mathematical guarantees for local physical learning. Through Occam Research, he shares research with explicit assumptions, reproducible materials, and clear limits on each claim.</p>
-      <div class="contact-row">
-        <div><div class="label">Location</div>Sant Cugat del Vallès, Barcelona</div>
-        <div><div class="label">Affiliation</div>Occam Research</div>
-        <div><div class="label">ORCID</div><a href="https://orcid.org/0009-0008-0159-1718" target="_blank" rel="noopener noreferrer">0009-0008-0159-1718</a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-</div>
 </main>
-
-<footer class="site-footer">
-<div class="wrap">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="footer-brand-name">Occam Research</div>
-      <div class="footer-brand-sub">Independent science across disciplines — bold questions, held to evidence.</div>
-    </div>
-    <div class="footer-links">
-      <div class="footer-col">
-        <h4>CRN Trophy</h4>
-        <a href="human.html">Human Connectome</a>
-        <a href="elegans.html">C. elegans</a>
-        <a href="drosophila.html">Drosophila</a>
-        <a href="mouse.html">Mouse Proxy</a>
-      </div>
-      <div class="footer-col">
-        <h4>External</h4>
-        <a href="https://www.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2026.1813959/full" target="_blank" rel="noopener noreferrer">Frontiers paper</a>
-        <a href="https://github.com/ovdspb-code" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://orcid.org/0009-0008-0159-1718" target="_blank" rel="noopener noreferrer">ORCID</a>
-        <a href="https://scholar.google.com/citations?user=6wxP_EkAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-      </div>
-    </div>
+<footer class="footer">
+  <div class="frame footer-inner">
+    <a class="brand" href="/">Occam Research</a>
+    <nav aria-label="Resources">
+      <a href="/publications/">Journal candidates</a>
+      <a href="https://github.com/ovdspb-code">GitHub</a>
+      <a href="https://zenodo.org/records/20528910">Zenodo</a>
+      <a href="https://www.researchgate.net/profile/Oleg-Dolgikh-3">ResearchGate</a>
+      <a href="https://orcid.org/0009-0008-0159-1718">ORCID</a>
+      <a href="https://scholar.google.com/citations?user=6wxP_EkAAAAJ&amp;hl=en">Google Scholar</a>
+    </nav>
   </div>
-  <div class="footer-bottom">
-    <span>&copy; 2026 Occam Research</span>
-    <span><a href="https://occam.world" target="_blank" rel="noopener noreferrer">occam.world</a></span>
-  </div>
-</div>
 </footer>
-
-<script>
-const icons = {
-  human:     {letter:'H', bg:'var(--accent-light)'},
-  drosophila:{letter:'D', bg:'var(--teal-light)'},
-  elegans:   {letter:'C', bg:'var(--warm-light)'},
-  mouse:     {letter:'M', bg:'var(--coral-light)'},
-};
-fetch('pages.json').then(r=>r.json()).then(pages => {
-  const grid = document.getElementById('cardGrid');
-  pages.forEach(p => {
-    const ic = icons[p.id] || {letter:'·', bg:'var(--surface-alt)'};
-    const card = document.createElement('a');
-    card.href = p.id + '.html';
-    card.className = 'card';
-    card.innerHTML = `
-      <div class="card-icon" style="background:${ic.bg}">${ic.letter}</div>
-      <h3>${p.title}</h3>
-      <p>${p.desc}</p>
-      <div class="card-meta">${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
-      <div class="card-date">${p.date}</div>
-    `;
-    grid.appendChild(card);
-  });
-}).catch(() => {
-  document.getElementById('cardGrid').innerHTML = '<p style="color:var(--text-3);font-size:var(--text-sm)">Could not load pages.json. If viewing locally, use a simple HTTP server: <code>python -m http.server</code></p>';
-});
-
-// ===== PUBLICATIONS from publications.json =====
-fetch('publications.json?v=2026-10-02-r3').then(r=>r.json()).then(data => {
-  const meta = document.querySelector('.pubs-meta');
-  meta.textContent = `Updated ${data.updated} · ${data.publications.length} works · Source: ${data.source}`;
-  const list = document.getElementById('pubsList');
-  list.innerHTML = '';
-
-  const statusLabels = {
-    journal: { label: 'Peer-reviewed', cls: 'review' },
-    under_review: { label: 'Under Review', cls: 'review' },
-    preprint: { label: 'Preprint', cls: 'preprint' },
-    published: { label: 'Published', cls: 'dataset' }
-  };
-  const typeLabels = {
-    article: 'article',
-    preprint: 'preprint',
-    dataset: 'dataset',
-    software: 'software'
-  };
-
-  // Sort: peer-reviewed journal first, then under_review, preprints, then rest; within group by date desc
-  const order = { journal: -1, under_review: 0, preprint: 1, published: 2 };
-  const sorted = [...data.publications].sort((a, b) => {
-    const oa = order[a.status] ?? 3, ob = order[b.status] ?? 3;
-    if (oa !== ob) return oa - ob;
-    return (b.date||'').localeCompare(a.date||'');
-  });
-
-  sorted.forEach(pub => {
-    let tagCls, tagLabel;
-    if (statusLabels[pub.status] && (pub.status === 'journal' || pub.status === 'under_review')) {
-      tagCls = statusLabels[pub.status].cls;
-      tagLabel = statusLabels[pub.status].label;
-    } else if (pub.type === 'preprint') {
-      const st = { label: pub.historical ? 'Historical preprint' : 'Preprint', cls: 'preprint' };
-      tagCls = st.cls; tagLabel = st.label;
-    } else {
-      tagCls = typeLabels[pub.type] || pub.type || 'preprint';
-      const t = pub.type || 'work';
-      tagLabel = t.charAt(0).toUpperCase() + t.slice(1);
-    }
-    const year = pub.date ? pub.date.split('-')[0] : (pub.year || '');
-    const venue = pub.venue ? ` · ${pub.venue}` : '';
-    const authors = Array.isArray(pub.authors) ? pub.authors.join(', ') : (pub.authors || 'O. Dolgikh');
-
-    let linksArr = [];
-    if (Array.isArray(pub.links)) {
-      linksArr = pub.links.map(l => typeof l === 'string'
-        ? `<a href="${l}" target="_blank" rel="noopener noreferrer">Link</a>`
-        : `<a href="${l.url}" target="_blank" rel="noopener noreferrer">${l.label||'Link'}</a>`);
-    } else if (pub.links && typeof pub.links === 'object') {
-      linksArr = Object.entries(pub.links).map(([name, url]) =>
-        `<a href="${url}" target="_blank" rel="noopener noreferrer">${name.charAt(0).toUpperCase()+name.slice(1)}</a>`);
-    } else if (pub.doi) {
-      linksArr = [`<a href="https://doi.org/${pub.doi}" target="_blank" rel="noopener noreferrer">DOI</a>`];
-    }
-
-    const el = document.createElement('div');
-    el.className = 'pub-item';
-    el.innerHTML = `
-      <span class="pub-tag ${tagCls}">${tagLabel}</span>
-      <div class="pub-title">${pub.title}</div>
-      <div class="pub-meta">${authors} · ${year}${venue}</div>
-      <div class="pub-links">${linksArr.join('')}</div>
-    `;
-    list.appendChild(el);
-  });
-}).catch(() => {
-  const s = document.getElementById('pubsSection');
-  if(s) s.querySelector('.pubs-meta').textContent = 'Could not load publications.json';
-});
-
-// ===== DUELLUM VERITATIS from disputes.json =====
-fetch('disputes.json?v=2026-10-02-r2').then(r=>r.json()).then(data => {
-  const sec = document.getElementById('disputesSection');
-  if(!sec) return;
-  const meta = sec.querySelector('.disputes-meta');
-  const n = data.disputes.length;
-  if(meta){
-    let m = `${data.subtitle} · ${n} digest${n===1?'':'s'} · Updated ${data.updated}`;
-    if(data.doi) m += ` · ${data.doi_label || 'DOI'}: `;
-    meta.textContent = m;
-    if(data.doi){
-      const a = document.createElement('a');
-      a.href = `https://doi.org/${data.doi}`;
-      a.target = '_blank'; a.rel = 'noopener noreferrer';
-      a.textContent = data.doi;
-      meta.appendChild(a);
-    }
-  }
-  const list = document.getElementById('disputesList');
-  list.innerHTML = '';
-  [...data.disputes].sort((a,b)=>b.date.localeCompare(a.date)).forEach(d => {
-    const links = [];
-    links.push(`<a href="${d.html}">Read</a>`);
-    if(d.pdf) links.push(`<a href="${d.pdf}" target="_blank" rel="noopener noreferrer">${d.archived_pdf ? "Website PDF" : "PDF"}</a>`);
-    if(d.archived_pdf) links.push(`<a href="${d.archived_pdf}" target="_blank" rel="noopener noreferrer">Archived PDF</a>`);
-    if(d.doi) links.push(`<a href="https://doi.org/${d.doi}" target="_blank" rel="noopener noreferrer">DOI</a>`);
-    const el = document.createElement('div');
-    el.className = 'pub-item';
-    el.innerHTML = `
-      <span class="pub-tag review">No. ${d.no} · ${d.date}</span>
-      <div class="pub-title">${d.title}</div>
-      <div class="pub-meta">${d.subtitle}${d.verdict ? ` · Verdict: ${d.verdict}` : ''}</div>
-      <div class="pub-links">${links.join('')}</div>
-    `;
-    list.appendChild(el);
-  });
-}).catch(() => {
-  const s = document.getElementById('disputesSection');
-  if(s){ const m = s.querySelector('.disputes-meta'); if(m) m.textContent = 'Could not load disputes.json'; }
-});
-
-// ===== SCORECARD from scorecard.json =====
-fetch('scorecard.json').then(r=>r.json()).then(sc => {
-  const meta = document.querySelector('.scorecard-meta');
-  meta.textContent = `Updated ${sc.updated} · ${sc.version} · ${sc.trials} GKSL trials · ${sc.subjects} HCP subjects`;
-  const grid = document.getElementById('scorecardGrid');
-  grid.innerHTML = '';
-  sc.claims.forEach(c => {
-    const cls = c.score >= 80 ? 'high' : c.score >= 60 ? 'mid' : 'low';
-    const color = c.score >= 80 ? 'var(--teal)' : c.score >= 60 ? 'var(--warm)' : 'var(--coral)';
-    const el = document.createElement('div');
-    el.className = 'sc-item';
-    el.innerHTML = `
-      <div class="sc-header">
-        <span class="sc-id">${c.id}</span>
-        <span class="sc-name">${c.name}</span>
-        <span class="sc-score ${cls}">${c.score}%</span>
-      </div>
-      <div class="sc-bar"><div class="sc-bar-fill" style="width:${c.score}%;background:linear-gradient(90deg, ${color}, ${color})"></div></div>
-      <div class="sc-desc">${c.desc}</div>
-      <div class="sc-evidence"><strong>Evidence:</strong> ${c.evidence}<br><strong>Gap:</strong> ${c.gap}</div>
-    `;
-    grid.appendChild(el);
-  });
-  const note = document.createElement('p');
-  note.style.cssText = 'font-size:var(--text-xs);color:var(--text-3);margin-top:var(--space-4);line-height:1.6;max-width:72ch';
-  note.textContent = sc.note;
-  grid.appendChild(note);
-}).catch(() => {
-  const s = document.getElementById('scorecardSection');
-  if(s) s.style.display = 'none';
-});
-</script>
 </body>
 </html>

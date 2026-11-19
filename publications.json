@@ -27,7 +27,22 @@
         }
       ],
       "source": "manual",
-      "added": "2026-11-18"
+      "added": "2026-11-18",
+      "program": "fold",
+      "version": "0.1",
+      "license": "cc-by-4.0",
+      "anchor": "power-law-gap-reachability",
+      "summary": "In a directed random graph with gap-dependent edges, a density integral determines the threshold for a path between two fixed times. It also describes the limiting order seen by a sample of fixed size.",
+      "readiness": {
+        "group": "new",
+        "score": 7,
+        "stage": "Specialist review pending",
+        "next": "Obtain a human specialist assessment of the proof and its relation to prior work, then select a journal.",
+        "order": 18
+      },
+      "featured": true,
+      "scope": "The result covers each fixed nonnegative gap exponent. It gives no uniform estimate near the threshold or as the exponent varies.",
+      "verification": "Mathematical proof included in the deposit. Independent human specialist review pending."
     },
     {
       "title": "Directed structural drift from finite relaxation in adaptive resistor networks",
@@ -54,7 +69,17 @@
         }
       ],
       "source": "manual",
-      "added": "2026-11-13"
+      "added": "2026-11-13",
+      "program": "physical-learning",
+      "anchor": "directed-structural-drift",
+      "summary": "In a two-node model of an adaptive resistor network, a small voltage lag can change which node gains more conductance during long periodic training.",
+      "readiness": {
+        "group": "priority",
+        "score": 8,
+        "stage": "Journal route to select",
+        "next": "Select a journal and prepare the manuscript for its submission requirements.",
+        "order": 3
+      }
     },
     {
       "title": "Coherent-resonant netting: disorder-enhanced selectivity from transient wave-like dynamics on biological connectomes",
@@ -74,10 +99,21 @@
         {
           "label": "DOI",
           "url": "https://doi.org/10.3389/fncom.2026.1813959"
+        },
+        {
+          "label": "Interactive companion",
+          "url": "/research/crn/#workSection"
         }
       ],
       "source": "manual",
-      "added": "2026-06-03"
+      "added": "2026-06-03",
+      "program": "crn",
+      "anchor": "coherent-resonant-netting",
+      "featured": true,
+      "license": "cc-by-4.0",
+      "summary": "Simulations on two biological connectome benchmarks found that partial coherence can improve target-selective routing. In a fruit-fly mushroom-body motif, selectivity peaked at intermediate disorder. Rewiring the network or increasing dephasing weakened the effect.",
+      "scope": "The article models the routing stage with an open-system proxy. The stage that commits to a decision and its energetic cost remain outside the tested result.",
+      "verification": "Journal peer review. Numerical benchmarks with matched classical and rewired controls, and a permutation test for the fruit-fly contrast."
     },
     {
       "title": "Verace: A Deterministic Conflict Detection Pipeline Architecture for Enterprise Knowledge Bases",
@@ -88,9 +124,19 @@
       "date": "2026-04-03",
       "status": "published",
       "venue": "Technical note · v1.1",
-      "links": {
-        "zenodo": "https://zenodo.org/records/19402813"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://zenodo.org/records/19402813"
+        },
+        {
+          "label": "Version DOI",
+          "url": "https://doi.org/10.5281/zenodo.19402813"
+        }
+      ],
+      "program": "other",
+      "collection": "technical",
+      "version": "1.1"
     },
     {
       "title": "Parameter A as a Motif-Scale Transport Coordinate: Target Vulnerability and Central-Path Modulation on Human Routing Motifs",
@@ -101,7 +147,9 @@
         "Oleg Dolgikh"
       ],
       "source": "ORCID",
-      "date": "2026-03-30"
+      "date": "2026-03-30",
+      "program": "crn",
+      "links": []
     },
     {
       "title": "Parameter A as a Motif-Scale Transport Coordinate: Target Vulnerability and Central-Path Modulation on Human Routing Motifs",
@@ -113,7 +161,9 @@
       ],
       "source": "ORCID",
       "status": "published",
-      "date": "2026-03-30"
+      "date": "2026-03-30",
+      "program": "crn",
+      "links": []
     },
     {
       "title": "CRN Paper 3 — Companion Dataset (v2): Coherence-Cost Landscape for Dephasing-Assisted Transport on Connectome Routing Motifs",
@@ -125,7 +175,9 @@
       ],
       "source": "ORCID",
       "status": "published",
-      "metadata_date_under_review": true
+      "metadata_date_under_review": true,
+      "program": "crn",
+      "links": []
     },
     {
       "id": "crn-ssrn",
@@ -137,9 +189,13 @@
       "date": "2026-03-05",
       "venue": "SSRN",
       "doi": "10.2139/ssrn.6150569",
-      "links": {
-        "ssrn": "https://doi.org/10.2139/ssrn.6150569"
-      }
+      "links": [
+        {
+          "label": "Ssrn",
+          "url": "https://doi.org/10.2139/ssrn.6150569"
+        }
+      ],
+      "program": "crn"
     },
     {
       "id": "ssrn-6353239",
@@ -158,7 +214,8 @@
           "label": "DOI",
           "url": "https://doi.org/10.2139/ssrn.6353239"
         }
-      ]
+      ],
+      "program": "crn"
     },
     {
       "id": "qrn-thermodynamic-motivation",
@@ -171,11 +228,21 @@
       "venue": null,
       "doi": "10.5281/zenodo.18133404",
       "links": [
-        "https://doi.org/10.5281/zenodo.18133404",
-        "https://zenodo.org/records/18133404",
-        "https://doi.org/10.5281/zenodo.18133403"
+        {
+          "label": "Link",
+          "url": "https://doi.org/10.5281/zenodo.18133404"
+        },
+        {
+          "label": "Link",
+          "url": "https://zenodo.org/records/18133404"
+        },
+        {
+          "label": "Link",
+          "url": "https://doi.org/10.5281/zenodo.18133403"
+        }
       ],
-      "historical": true
+      "historical": true,
+      "program": "crn"
     },
     {
       "id": "lindblad-preprint",
@@ -187,11 +254,18 @@
       "date": "2026-01-08",
       "venue": null,
       "doi": "10.5281/zenodo.18189550",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18189550",
-        "researchgate": "https://www.researchgate.net/publication/399528998"
-      },
-      "historical": true
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18189550"
+        },
+        {
+          "label": "Researchgate",
+          "url": "https://www.researchgate.net/publication/399528998"
+        }
+      ],
+      "historical": true,
+      "program": "crn"
     },
     {
       "id": "crn-sim",
@@ -203,10 +277,17 @@
       "date": "2026-01-19",
       "venue": null,
       "doi": "10.5281/zenodo.18248773",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18248773",
-        "github": "https://github.com/ovdspb-code"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18248773"
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/ovdspb-code"
+        }
+      ],
+      "program": "crn"
     },
     {
       "id": "crn-core",
@@ -218,11 +299,18 @@
       "date": "2026-01-14",
       "venue": null,
       "doi": "10.5281/zenodo.18249250",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18249250",
-        "researchgate": "https://www.researchgate.net/publication/399867871"
-      },
-      "historical": true
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18249250"
+        },
+        {
+          "label": "Researchgate",
+          "url": "https://www.researchgate.net/publication/399867871"
+        }
+      ],
+      "historical": true,
+      "program": "crn"
     },
     {
       "id": "crn-sim-r12",
@@ -234,9 +322,13 @@
       "date": "2026-02-14",
       "venue": null,
       "doi": "10.5281/zenodo.18338260",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18338260"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18338260"
+        }
+      ],
+      "program": "crn"
     },
     {
       "id": "egt-paper",
@@ -248,9 +340,13 @@
       "date": "2026-01-26",
       "venue": null,
       "doi": "10.5281/zenodo.18379851",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18379851"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18379851"
+        }
+      ],
+      "program": "other"
     },
     {
       "id": "elegans-data",
@@ -262,9 +358,13 @@
       "date": "2026-01-30",
       "venue": null,
       "doi": "10.5281/zenodo.18432681",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18432681"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18432681"
+        }
+      ],
+      "program": "crn"
     },
     {
       "id": "mouse-data",
@@ -276,9 +376,13 @@
       "date": "2026-01-30",
       "venue": null,
       "doi": "10.5281/zenodo.18433187",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18433187"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18433187"
+        }
+      ],
+      "program": "crn"
     },
     {
       "id": "crn-hcp-enaqt",
@@ -290,10 +394,17 @@
       "date": "2026-02-07",
       "venue": null,
       "doi": "10.5281/zenodo.18519173",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18519173",
-        "github": "https://github.com/ovdspb-code"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18519173"
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/ovdspb-code"
+        }
+      ],
+      "program": "crn"
     },
     {
       "id": "icc-paper",
@@ -304,10 +415,17 @@
       "authors": "O. Dolgikh",
       "date": "2026-02-07",
       "doi": "10.5281/zenodo.18520884",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18520884",
-        "researchgate": "https://www.researchgate.net/publication/400638253"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18520884"
+        },
+        {
+          "label": "Researchgate",
+          "url": "https://www.researchgate.net/publication/400638253"
+        }
+      ],
+      "program": "crn"
     },
     {
       "id": "drosophila-data",
@@ -319,9 +437,13 @@
       "date": "2026-02-19",
       "venue": null,
       "doi": "10.5281/zenodo.18697117",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18697117"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18697117"
+        }
+      ],
+      "program": "crn"
     },
     {
       "id": "hcp-subgraphs",
@@ -333,10 +455,17 @@
       "date": "2026-02-25",
       "venue": null,
       "doi": "10.5281/zenodo.18773244",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18773244",
-        "researchgate": "https://www.researchgate.net/publication/401205486"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18773244"
+        },
+        {
+          "label": "Researchgate",
+          "url": "https://www.researchgate.net/publication/401205486"
+        }
+      ],
+      "program": "crn"
     },
     {
       "id": "c5c-energy",
@@ -348,10 +477,17 @@
       "date": "2026-02-26",
       "venue": null,
       "doi": "10.5281/zenodo.18785552",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18785552",
-        "researchgate": "https://www.researchgate.net/publication/401245088"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18785552"
+        },
+        {
+          "label": "Researchgate",
+          "url": "https://www.researchgate.net/publication/401245088"
+        }
+      ],
+      "program": "crn"
     },
     {
       "id": "c5c-energy-data",
@@ -363,9 +499,13 @@
       "date": "2026-02-26",
       "venue": null,
       "doi": "10.5281/zenodo.18785856",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18785856"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18785856"
+        }
+      ],
+      "program": "crn"
     },
     {
       "id": "readout-symmetry",
@@ -377,11 +517,21 @@
       "date": "2026-03-04",
       "venue": null,
       "doi": "10.5281/zenodo.18865478",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18865478",
-        "researchgate": "https://www.researchgate.net/publication/401552887",
-        "ssrn": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6353239"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18865478"
+        },
+        {
+          "label": "Researchgate",
+          "url": "https://www.researchgate.net/publication/401552887"
+        },
+        {
+          "label": "Ssrn",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6353239"
+        }
+      ],
+      "program": "crn"
     },
     {
       "id": "crn-fcn-data",
@@ -393,9 +543,13 @@
       "date": "2026-03-11",
       "venue": null,
       "doi": "10.5281/zenodo.18959732",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18959732"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18959732"
+        }
+      ],
+      "program": "crn"
     },
     {
       "id": "crn-fcn",
@@ -407,10 +561,17 @@
       "date": "2026-03-11",
       "venue": null,
       "doi": "10.5281/zenodo.18960172",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18960172",
-        "researchgate": "https://www.researchgate.net/publication/401802742"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18960172"
+        },
+        {
+          "label": "Researchgate",
+          "url": "https://www.researchgate.net/publication/401802742"
+        }
+      ],
+      "program": "crn"
     },
     {
       "id": "enaqt-boundary-conditions-on-the-allen-m",
@@ -422,9 +583,13 @@
       "date": "2026-03-12",
       "venue": null,
       "doi": "10.5281/zenodo.18968563",
-      "links": {
-        "zenodo": "https://doi.org/10.5281/zenodo.18968563"
-      }
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.18968563"
+        }
+      ],
+      "program": "crn"
     },
     {
       "id": "crn-stage2-hcp-1064-dataset",
@@ -447,7 +612,8 @@
           "label": "Zenodo record",
           "url": "https://zenodo.org/records/19056201"
         }
-      ]
+      ],
+      "program": "crn"
     },
     {
       "id": "10-5281-zenodo-19119411",
@@ -466,7 +632,8 @@
           "label": "DOI",
           "url": "https://doi.org/10.5281/zenodo.19119411"
         }
-      ]
+      ],
+      "program": "crn"
     },
     {
       "title": "Coherent Transport Advantage in Human Connectomes Re-emerges on Routing Motifs but Not at Whole-Brain Scale",
@@ -474,9 +641,33 @@
       "type": "preprint",
       "date": "2026-03-25",
       "authors": "Oleg Dolgikh",
-      "links": {
-        "zenodo": "https://zenodo.org/records/19222237",
-        "researchgate": "https://www.researchgate.net/publication/403296918"
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://zenodo.org/records/19222237"
+        },
+        {
+          "label": "Researchgate",
+          "url": "https://www.researchgate.net/publication/403296918"
+        },
+        {
+          "label": "Zenodo preprint",
+          "url": "https://doi.org/10.5281/zenodo.19222237"
+        },
+        {
+          "label": "SSRN",
+          "url": "https://doi.org/10.2139/ssrn.6498079"
+        }
+      ],
+      "program": "crn",
+      "anchor": "routing-motifs",
+      "summary": "In the simulations studied, a wave-like transport advantage appears on selected routing motifs and disappears in the whole-connectome comparison.",
+      "readiness": {
+        "group": "data",
+        "score": 7,
+        "stage": "Revision candidate",
+        "next": "Revise the comparisons and narrow the claims in light of reviewer feedback.",
+        "order": 15
       }
     },
     {
@@ -490,11 +681,30 @@
         "Oleg Dolgikh"
       ],
       "version": "0.3",
-      "links": {
-        "zenodo": "https://zenodo.org/records/23080791",
-        "overview": "https://occam.world/works/joint-training-learnability.html"
-      },
-      "source": "verified Zenodo API"
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://zenodo.org/records/23080791"
+        },
+        {
+          "label": "Overview",
+          "url": "https://occam.world/works/joint-training-learnability.html"
+        },
+        {
+          "label": "Zenodo preprint",
+          "url": "https://doi.org/10.5281/zenodo.23080791"
+        }
+      ],
+      "source": "verified Zenodo API",
+      "program": "physical-learning",
+      "anchor": "joint-training",
+      "summary": "Gives sufficient conditions for training voltages while preserving the ability to learn within a specified resistor model.",
+      "readiness": {
+        "group": "networks",
+        "score": 7,
+        "next": "Define the paper’s distinct contribution and compare it with the nearest physical-learning guarantees.",
+        "order": 14
+      }
     },
     {
       "id": "vcs-core",
@@ -507,11 +717,509 @@
         "Oleg Dolgikh"
       ],
       "version": "0.2.1",
-      "links": {
-        "zenodo": "https://zenodo.org/records/23032195",
-        "overview": "https://occam.world/works/structural-safety.html"
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://zenodo.org/records/23032195"
+        },
+        {
+          "label": "Overview",
+          "url": "https://occam.world/works/structural-safety.html"
+        },
+        {
+          "label": "Zenodo preprint",
+          "url": "https://doi.org/10.5281/zenodo.23032195"
+        },
+        {
+          "label": "ResearchGate companion",
+          "url": "https://www.researchgate.net/publication/415203544"
+        }
+      ],
+      "source": "verified Zenodo API",
+      "program": "physical-learning",
+      "anchor": "structural-safety",
+      "summary": "Gives conditions on the starting state under which local resistor updates preserve the conducting structure needed for the task.",
+      "readiness": {
+        "group": "networks",
+        "score": 7,
+        "next": "Identify the strongest standalone theorem and distinguish it from the joint-training result.",
+        "order": 13
+      }
+    },
+    {
+      "title": "Programming the learning-response matrix in adaptive resistor ladders",
+      "type": "preprint",
+      "status": "preprint",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "doi": "10.5281/zenodo.23783971",
+      "venue": "Zenodo",
+      "date": "2026-10-30",
+      "version": "0.2.1",
+      "license": "cc-by-4.0",
+      "anchor": "learning-response",
+      "program": "physical-learning",
+      "summary": "In a model resistor ladder, teaching can change how the network learns next while restoring its original input–output function.",
+      "readiness": {
+        "group": "priority",
+        "score": 10,
+        "stage": "Journal adaptation prepared",
+        "next": "Complete pre-submission review, check the key proof steps and revise the journal version.",
+        "order": 1
       },
-      "source": "verified Zenodo API"
+      "links": [
+        {
+          "label": "Zenodo preprint",
+          "url": "https://doi.org/10.5281/zenodo.23783971"
+        },
+        {
+          "label": "ResearchGate",
+          "url": "https://www.researchgate.net/publication/417156794"
+        }
+      ]
+    },
+    {
+      "title": "Observation-limited access to fast plasticity preparation in adaptive resistor networks",
+      "type": "preprint",
+      "status": "preprint",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "doi": "10.5281/zenodo.23882510",
+      "venue": "Zenodo",
+      "date": "2026-11-02",
+      "version": "0.1",
+      "license": "cc-by-4.0",
+      "anchor": "observation-limited-preparation",
+      "program": "physical-learning",
+      "summary": "Even when a network can be prepared quickly in principle, noisy observations can make that ability expensive to use. The time bounds include probing and restoration.",
+      "readiness": {
+        "group": "priority",
+        "score": 9,
+        "stage": "Submission package in preparation",
+        "next": "Check the final submission files and make the assumptions on prior knowledge and noise explicit.",
+        "order": 2
+      },
+      "links": [
+        {
+          "label": "Zenodo preprint",
+          "url": "https://doi.org/10.5281/zenodo.23882510"
+        },
+        {
+          "label": "ResearchGate",
+          "url": "https://www.researchgate.net/publication/417334580"
+        }
+      ]
+    },
+    {
+      "title": "Work-Induced Specialization and Trade-offs in Future Capabilities of Adaptive Physical Networks",
+      "type": "preprint",
+      "status": "preprint",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "doi": "10.5281/zenodo.24047675",
+      "venue": "Zenodo",
+      "date": "2026-11-08",
+      "version": "0.1",
+      "license": "cc-by-4.0",
+      "anchor": "work-induced-specialization",
+      "program": "physical-learning",
+      "summary": "In a specified class of adaptive conductance networks, efficient execution of a mandatory task makes some later changes faster and others slower, even when the original input–output function is restored.",
+      "readiness": {
+        "group": "priority",
+        "score": 8,
+        "next": "Check the proofs and closest literature, then select a journal.",
+        "order": 4
+      },
+      "links": [
+        {
+          "label": "Zenodo preprint",
+          "url": "https://doi.org/10.5281/zenodo.24047675"
+        },
+        {
+          "label": "ResearchGate",
+          "url": "https://www.researchgate.net/publication/417618902"
+        },
+        {
+          "label": "Reader guide",
+          "url": "https://www.researchgate.net/publication/417624670"
+        }
+      ],
+      "featured": true,
+      "scope": "The theorem assumes a specified material constraint and terminal-state selection rule. It applies at a small fixed task amplitude.",
+      "verification": "Mathematical theorem for the stated network class. Author preprint."
+    },
+    {
+      "title": "Same learning response, different preparation costs in adaptive resistor networks",
+      "type": "preprint",
+      "status": "preprint",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "doi": "10.5281/zenodo.23977239",
+      "venue": "Zenodo",
+      "date": "2026-11-05",
+      "version": "0.2 (editorial update 2026-11-05)",
+      "license": "cc-by-4.0",
+      "anchor": "preparation-costs",
+      "program": "physical-learning",
+      "summary": "Networks with the same present function, conductance norm and learning response can still require different amounts of time to prepare for the same local change.",
+      "readiness": {
+        "group": "priority",
+        "score": 8,
+        "stage": "Journal route to select",
+        "next": "Frame the contribution as a control problem and choose a specialist journal.",
+        "order": 5
+      },
+      "links": [
+        {
+          "label": "Zenodo preprint",
+          "url": "https://doi.org/10.5281/zenodo.23977239"
+        },
+        {
+          "label": "ResearchGate",
+          "url": "https://www.researchgate.net/publication/417296612"
+        }
+      ]
+    },
+    {
+      "title": "The workspace cost of observation-based control of stochastic memories",
+      "type": "preprint",
+      "status": "preprint",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "doi": "10.5281/zenodo.23603550",
+      "venue": "Zenodo",
+      "date": "2026-10-23",
+      "version": "0.3",
+      "license": "cc-by-4.0",
+      "anchor": "observation-based-control",
+      "program": "physical-learning",
+      "summary": "For a specified observation and control interface, one extra slot can suffice and can be necessary in the worst case.",
+      "readiness": {
+        "group": "networks",
+        "score": 8,
+        "next": "Compare the workspace bound with the closest control and memory results.",
+        "order": 6
+      },
+      "links": [
+        {
+          "label": "Zenodo preprint",
+          "url": "https://doi.org/10.5281/zenodo.23603550"
+        },
+        {
+          "label": "ResearchGate",
+          "url": "https://www.researchgate.net/publication/416322235"
+        }
+      ]
+    },
+    {
+      "title": "Resource-preserving normalization and safe probing in resistor networks",
+      "type": "preprint",
+      "status": "preprint",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "doi": "10.5281/zenodo.23603564",
+      "venue": "Zenodo",
+      "date": "2026-10-23",
+      "version": "0.2",
+      "license": "cc-by-4.0",
+      "anchor": "safe-probing",
+      "program": "physical-learning",
+      "summary": "Constructs paths between equivalent networks at the original node budget while preserving the specified cross-response block.",
+      "readiness": {
+        "group": "networks",
+        "score": 8,
+        "next": "Separate the new construction from standard network reductions and state the probing assumptions clearly.",
+        "order": 7
+      },
+      "links": [
+        {
+          "label": "Zenodo preprint",
+          "url": "https://doi.org/10.5281/zenodo.23603564"
+        },
+        {
+          "label": "ResearchGate",
+          "url": "https://www.researchgate.net/publication/417013983"
+        }
+      ]
+    },
+    {
+      "title": "Repeated physical reduction with paid diagnosis in adaptive gradient systems",
+      "type": "preprint",
+      "status": "preprint",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "doi": "10.5281/zenodo.23919157",
+      "venue": "Zenodo",
+      "date": "2026-11-03",
+      "version": "1",
+      "license": "cc-by-4.0",
+      "anchor": "paid-diagnosis",
+      "program": "physical-learning",
+      "summary": "In a specified hybrid network, successive physical reductions preserve a two-reading diagnosis and the corrective program that follows.",
+      "readiness": {
+        "group": "networks",
+        "score": 7,
+        "next": "Compare with existing reduction methods and explain which properties survive both reductions.",
+        "order": 8
+      },
+      "links": [
+        {
+          "label": "Zenodo preprint",
+          "url": "https://doi.org/10.5281/zenodo.23919157"
+        },
+        {
+          "label": "ResearchGate",
+          "url": "https://www.researchgate.net/publication/417398907"
+        }
+      ]
+    },
+    {
+      "title": "Temporal prediction and the reserve cost of safe memory reconfiguration",
+      "type": "preprint",
+      "status": "preprint",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "doi": "10.5281/zenodo.23603425",
+      "venue": "Zenodo",
+      "date": "2026-10-23",
+      "version": "2.1",
+      "license": "cc-by-4.0",
+      "anchor": "safe-memory-reconfiguration",
+      "program": "physical-learning",
+      "summary": "Identifies conditions under which a stochastic memory needs temporary extra capacity to change while maintaining its current function.",
+      "readiness": {
+        "group": "networks",
+        "score": 7,
+        "next": "Clarify the standalone contribution and compare the lower bound with the closest work on memory reconfiguration.",
+        "order": 9
+      },
+      "links": [
+        {
+          "label": "Zenodo preprint",
+          "url": "https://doi.org/10.5281/zenodo.23603425"
+        },
+        {
+          "label": "ResearchGate",
+          "url": "https://www.researchgate.net/publication/416242972"
+        }
+      ]
+    },
+    {
+      "title": "Temporal observability and resource-preserving reductions of stochastic memories",
+      "type": "preprint",
+      "status": "preprint",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "doi": "10.5281/zenodo.23603495",
+      "venue": "Zenodo",
+      "date": "2026-10-23",
+      "version": "0.5",
+      "license": "cc-by-4.0",
+      "anchor": "temporal-observability",
+      "program": "physical-learning",
+      "summary": "For a specified class of stochastic memories, population observations determine the resource profile of protected reconfiguration.",
+      "readiness": {
+        "group": "networks",
+        "score": 7,
+        "next": "Verify the prior submission status and distinguish this result from the reserve-cost paper.",
+        "order": 10
+      },
+      "links": [
+        {
+          "label": "Zenodo preprint",
+          "url": "https://doi.org/10.5281/zenodo.23603495"
+        },
+        {
+          "label": "ResearchGate",
+          "url": "https://www.researchgate.net/publication/416254967"
+        }
+      ]
+    },
+    {
+      "title": "When Restoring Function Does Not Restore Learning Dynamics",
+      "type": "preprint",
+      "status": "preprint",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "doi": "10.5281/zenodo.23603582",
+      "venue": "Zenodo",
+      "date": "2026-10-23",
+      "version": "1.1",
+      "license": "cc-by-4.0",
+      "anchor": "restoring-function",
+      "program": "physical-learning",
+      "summary": "In specified networks, a learning episode followed by restoration leaves a measurable change in the response to a subsequent task.",
+      "readiness": {
+        "group": "networks",
+        "score": 7,
+        "stage": "Revision candidate",
+        "next": "Sharpen the causal demonstration and separate it from the later work on programming learning and work-induced specialization.",
+        "order": 11
+      },
+      "links": [
+        {
+          "label": "Zenodo preprint",
+          "url": "https://doi.org/10.5281/zenodo.23603582"
+        },
+        {
+          "label": "ResearchGate",
+          "url": "https://www.researchgate.net/publication/416699790"
+        }
+      ]
+    },
+    {
+      "title": "The Cost of Reproducing Learning Trajectories: Sharp Resource Bounds for Adaptive Resistor Networks",
+      "type": "preprint",
+      "status": "preprint",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "doi": "10.5281/zenodo.23655709",
+      "venue": "Zenodo",
+      "date": "2026-10-26",
+      "version": "0.3",
+      "license": "cc-by-4.0",
+      "anchor": "learning-trajectory-bounds",
+      "program": "physical-learning",
+      "summary": "Gives sharp worst-case bounds on the number of trainable edges needed to reproduce learning trajectories for a specified network family and update rule.",
+      "readiness": {
+        "group": "networks",
+        "score": 7,
+        "stage": "Submission paused",
+        "next": "Reassess journal fit and make the result and its scope easier to verify before resuming submission preparation.",
+        "order": 12
+      },
+      "links": [
+        {
+          "label": "Zenodo preprint",
+          "url": "https://doi.org/10.5281/zenodo.23655709"
+        },
+        {
+          "label": "ResearchGate",
+          "url": "https://www.researchgate.net/publication/416825144"
+        }
+      ]
+    },
+    {
+      "title": "Connectome-Derived Scalar Control Lowers Downstream Commitment Cost Across Ports and Decision Laws",
+      "type": "manuscript",
+      "status": "unpublished",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "anchor": "commitment-cost",
+      "program": "crn",
+      "summary": "Tests whether a signal derived from simulated transport on human connectomes lowers the cost of a later decision in several downstream models.",
+      "readiness": {
+        "group": "data",
+        "score": 7,
+        "stage": "Manuscript assembled · Dataset available",
+        "next": "Recheck comparator models and define which conclusions the simulations support.",
+        "order": 16
+      },
+      "links": [
+        {
+          "label": "Zenodo dataset",
+          "url": "https://doi.org/10.5281/zenodo.19056201"
+        }
+      ]
+    },
+    {
+      "title": "Local ≥3-Way Representability Without Held-Out Predictive Lift",
+      "type": "report",
+      "status": "published",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "doi": "10.5281/zenodo.22087107",
+      "venue": "Zenodo",
+      "date": "2026-08-25",
+      "version": "1.0",
+      "license": "cc-by-4.0",
+      "anchor": "higher-order-representability",
+      "program": "other",
+      "summary": "A basket-data case study finds local higher-order structure alongside a lack of measured improvement in held-out prediction.",
+      "readiness": {
+        "group": "data",
+        "score": 6,
+        "stage": "Technical report available",
+        "next": "Develop a focused methods article and add empirical support if extending the claim beyond the case study.",
+        "order": 17
+      },
+      "links": [
+        {
+          "label": "Zenodo technical report",
+          "url": "https://doi.org/10.5281/zenodo.22087107"
+        }
+      ]
+    },
+    {
+      "title": "Minimum network size for preserving future task costs",
+      "type": "manuscript",
+      "status": "unpublished",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "anchor": "minimum-network-size",
+      "program": "physical-learning",
+      "summary": "Finds the minimum number of trainable edges needed to preserve the costs of specified future tasks within a positive tolerance for a class of adaptive resistor networks.",
+      "readiness": {
+        "group": "new",
+        "score": 5,
+        "stage": "Theorem established in a specified class",
+        "next": "Check novelty and assemble the theorem, construction and reproducible calculations into a manuscript.",
+        "order": 19
+      },
+      "links": []
+    },
+    {
+      "anchor": "universal-crtc",
+      "program": "other",
+      "collection": "technical",
+      "type": "defensive disclosure",
+      "status": "published",
+      "title": "Universal CRTC: Context Re-validation at Turn Completion for Conversational Gateways",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "venue": "Zenodo",
+      "doi": "10.5281/zenodo.21193362",
+      "date": "2026-07-04",
+      "version": "0.1.0",
+      "license": "cc-by-nc-nd-4.0",
+      "summary": "A pre-delivery check for conversational gateways that revalidates the inbound event queue, suppresses stale responses and supports bounded recovery.",
+      "checksum": "effbd3af8be61fc78dfb073722b19a2eb955fe0984c0e202612e8b465c162309",
+      "links": [
+        {
+          "label": "Zenodo record",
+          "url": "https://zenodo.org/records/21193362"
+        },
+        {
+          "label": "Version DOI",
+          "url": "https://doi.org/10.5281/zenodo.21193362"
+        },
+        {
+          "label": "Concept DOI",
+          "url": "https://doi.org/10.5281/zenodo.21193361"
+        }
+      ]
     }
-  ]
+  ],
+  "readinessScale": 12,
+  "candidateGroups": {
+    "priority": "Priority manuscripts",
+    "networks": "Other network studies",
+    "data": "Connectomes and statistics",
+    "new": "New theory"
+  }
 }
