@@ -149,7 +149,12 @@
       "source": "ORCID",
       "date": "2026-03-30",
       "program": "crn",
-      "links": []
+      "links": [
+        {
+          "label": "SSRN",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6498138"
+        }
+      ]
     },
     {
       "title": "Parameter A as a Motif-Scale Transport Coordinate: Target Vulnerability and Central-Path Modulation on Human Routing Motifs",
@@ -485,6 +490,10 @@
         {
           "label": "Researchgate",
           "url": "https://www.researchgate.net/publication/401245088"
+        },
+        {
+          "label": "SSRN",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6353158"
         }
       ],
       "program": "crn"
@@ -569,6 +578,10 @@
         {
           "label": "Researchgate",
           "url": "https://www.researchgate.net/publication/401802742"
+        },
+        {
+          "label": "SSRN",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6393718"
         }
       ],
       "program": "crn"
