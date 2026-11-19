@@ -171,3 +171,62 @@ summary { color: var(--link); cursor: pointer; }
 .readiness-legend { display: flex; flex-wrap: wrap; gap: .45rem 1.25rem; margin: .9rem 0 0; padding: 0; list-style: none; font-size: .87rem; }
 .readiness-legend li { display: flex; align-items: center; gap: .4rem; }
 .readiness-dot { width: .6rem; height: .6rem; border-radius: 50%; background: var(--readiness-ink); }
+
+/* The wordmark's carmine meridian is also the annotation colour on the plates. */
+:root {
+  --annotation: #96334f;
+  --serif: Baskerville, 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --folio-rule: 1px solid var(--line);
+}
+.header { border: 0; }
+.header-inner { border-top: 3px solid var(--ink); border-bottom: var(--folio-rule); }
+.header nav a[aria-current] { text-decoration-color: var(--annotation); text-decoration-thickness: 2px; }
+.brand { font-weight: 600; letter-spacing: -.035em; }
+.hero { grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 6vw, 6rem); padding-block: 1.6rem 2.8rem; }
+.hero .eyebrow, .intro .eyebrow, .programs .eyebrow { color: var(--annotation); }
+.hero-copy h1 { font: 500 clamp(5rem, 9.7vw, 9rem)/.83 var(--serif); letter-spacing: -.075em; }
+.hero-copy h1 em { display: block; margin-left: .56em; font-weight: 400; }
+.hero-copy > p:not(.eyebrow) { max-width: 46ch; margin-top: 1.65rem; font: clamp(1.19rem, 1.65vw, 1.48rem)/1.36 var(--serif); }
+.field-links { display: flex; flex-wrap: wrap; gap: .45rem 1.1rem; margin-top: 1.3rem; font-size: .92rem; }
+.circuit-plate { margin: 0; }
+.circuit-plate img { width: min(100%, 29rem); height: auto; margin-inline: auto; }
+.circuit-plate figcaption, .notation figcaption { padding-block-start: .65rem; border-top: var(--folio-rule); font-size: .88rem; color: var(--muted); line-height: 1.45; }
+.circuit-plate figcaption strong { display: block; font: 600 1.3rem/1.3 var(--serif); color: var(--ink); }
+.circuit-plate figcaption a { white-space: nowrap; }
+#researchDirections { border-top: 3px double var(--ink); }
+#researchDirections .programs { display: block; border: 0; }
+#researchDirections article { display: grid; grid-template-columns: minmax(12rem, 1fr) minmax(12rem, 1fr); gap: .15rem 3rem; border: 0; border-top: var(--folio-rule); padding: 1.1rem 0; }
+#researchDirections article .eyebrow { margin: 0 0 .3rem; }
+#researchDirections article h3 { grid-column: 1; font-size: clamp(1.65rem, 3vw, 2.5rem); }
+#researchDirections article p:not(.eyebrow) { grid-column: 2; grid-row: 1 / 3; align-self: center; margin: 0; max-width: 51ch; }
+#researchDirections article .work-link { grid-column: 2; margin-top: .2rem; }
+.intro h1 { font-weight: 500; }
+.featured { border-top: 3px double var(--ink); }
+.featured > h2 { color: var(--annotation); font: italic 1.4rem/1.3 var(--serif); }
+.record-featured, .record-featured:target { background: transparent; border: 0; padding: .4rem 0 1rem; }
+.record-featured .record-scope { border-inline-start: 2px solid var(--annotation); padding-inline-start: .8rem; }
+.intro + .hero-figure, .notation { margin: 2rem 0; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 1.25rem 2rem; }
+.intro + .hero-figure { max-width: 60rem; }
+.intro + .hero-figure figcaption { grid-column: 1 / -1; }
+.notation { max-width: 60rem; padding-block: 1rem; }
+.equation { color: var(--ink); font: italic clamp(1.6rem, 3vw, 2.6rem)/1.15 var(--serif); }
+.equation i { font-size: .55em; color: var(--annotation); }
+.equation sub, .equation sup { font-size: .55em; }
+.fraction { display: inline-grid; text-align: center; vertical-align: middle; }
+.fraction > :first-child { border-bottom: 1px solid; padding: 0 .16em .1em; }
+.notation figcaption a { display: block; margin-top: .4rem; }
+.section:has(.duel-cover) { display: flow-root; }
+.duel-cover { float: right; margin: 0 0 1rem 2rem; width: min(36%, 16rem); }
+.duel-cover img { height: auto; width: 100%; }
+@media (max-width: 49rem) {
+  .hero { grid-template-columns: 1fr; gap: .9rem; }
+  .hero-copy h1 { font-size: clamp(4rem, 14vw, 6.7rem); line-height: 1; }
+  .hero-copy h1 em { display: inline; margin: 0; }
+  .circuit-plate img { max-width: 21rem; }
+  .intro + .hero-figure, .notation { grid-template-columns: 1fr; }
+}
+@media (max-width: 39rem) {
+  #researchDirections article { display: block; }
+  #researchDirections article p:not(.eyebrow) { margin-block: .5rem; }
+  .duel-cover { float: none; display: block; width: min(65%, 14rem); margin: 0 0 1rem; }
+}

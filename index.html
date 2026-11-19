@@ -7,7 +7,6 @@
 <title>Occam World · Occam Research</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/editorial/site.css">
-<script type="module" src="/editorial/chart.js"></script>
 <script type="module" src="/editorial/legacy-links.js"></script>
 </head>
 <body>
@@ -21,26 +20,16 @@
 <main id="main" class="frame">
 <section class="hero">
   <div class="hero-copy">
-    <p class="eyebrow">Independent research</p>
-    <h1>Transport, learning<br class="hero-break"> and the formation<br class="hero-break"> of order</h1>
-    <p>Occam Research studies how physical structure shapes what a system can do. We work with mathematical models, simulations and empirical data, and publish the evidence and limits of each result.</p>
-    <a class="button" href="#researchDirections">Explore the research <span aria-hidden="true">↓</span></a>
+    <p class="eyebrow">An independent research initiative</p>
+    <h1>Occam <em>World</em></h1>
+    <p>A signal reaches one neuron and misses another. A circuit finishes a task and learns the next one differently. An order emerges from links between events. Occam Research asks how the structure of each system makes these outcomes possible.</p>
+    <nav class="field-links" aria-label="Research programs"><a href="/research/crn/">CRN</a><a href="/research/physical-learning/">Physical learning</a><a href="/research/fold/">FOLD</a></nav>
   </div>
-  <figure class="hero-figure">
-    <div class="figure-head">
-      <p class="eyebrow">CRN · Drosophila benchmark</p>
-      <p class="figure-title">Selectivity gain falls with dephasing</p>
-    </div>
-    <canvas id="dephasing-chart" width="720" height="390" role="img" aria-label="The selectivity gain from increasing disorder falls from 2.349 at low dephasing to 0.053 at high dephasing. Exact values follow."></canvas>
-    <figcaption>Change in model selectivity from ε = 0 to ε = 3 in a fruit-fly connectome simulation. <a href="/research/crn/#coherent-resonant-netting">Study and source</a>
-      <details class="chart-data">
-        <summary>Exact values</summary>
-        <table id="dephasing-data">
-          <thead><tr><th scope="col">Dephasing κ</th><th scope="col">Selectivity gain Δ</th></tr></thead>
-          <tbody><tr><td>0.001</td><td>2.349</td></tr><tr><td>1</td><td>0.685</td></tr><tr><td>3</td><td>0.284</td></tr><tr><td>10</td><td>0.053</td></tr></tbody>
-        </table>
-      </details>
-    </figcaption>
+  <figure class="circuit-plate">
+    <a href="/elegans.html"><img src="/editorial/touch-circuit.png" width="1000" height="1000" alt="Weighted connections among the 24 neurons in the C. elegans touch-circuit model. Connections to AVA are highlighted."></a>
+    <figcaption><strong><i>C. elegans</i> · Touch withdrawal</strong>
+      Line width follows connection weight. Carmine marks the connections of interneuron AVA.
+      <a href="/elegans.html">Open the circuit ↗</a></figcaption>
   </figure>
 </section>
 
@@ -69,7 +58,7 @@
 </section>
 
 <section class="section site-index" aria-labelledby="explore-title">
-  <h2 id="explore-title">Explore the site</h2>
+  <h2 id="explore-title">Archives and companions</h2>
   <div class="index-links">
     <a id="workSection" href="/research/crn/#workSection"><span id="cardGrid">CRN interactive companions</span></a>
     <a id="scorecardSection" href="/research/crn/#scorecardSection"><span id="scorecardGrid">Historical CRN scorecard</span></a>

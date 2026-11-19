@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="/editorial/site.css">
 <script type="module" src="/editorial/catalog.js"></script>
 <script type="module" src="/editorial/archives.js"></script>
+<script type="module" src="/editorial/chart.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -20,6 +21,22 @@
 </header>
 <main id="main" class="frame">
 <header class="intro"><p class="eyebrow">Computational neuroscience</p><h1>Coherent-Resonant Netting</h1><p class="lede">CRN studies how topology, disorder and dephasing affect selective transport on biological connectomes. The journal article tests the routing stage in computational benchmarks.</p></header>
+  <figure class="hero-figure">
+    <div class="figure-head">
+      <p class="eyebrow">CRN · Drosophila benchmark</p>
+      <p class="figure-title">Selectivity gain falls with dephasing</p>
+    </div>
+    <canvas id="dephasing-chart" width="720" height="390" role="img" aria-label="The selectivity gain from increasing disorder falls from 2.349 at low dephasing to 0.053 at high dephasing. Exact values follow."></canvas>
+    <figcaption>Change in model selectivity from ε = 0 to ε = 3 in a fruit-fly connectome simulation. <a href="#coherent-resonant-netting">Read the study</a>
+      <details class="chart-data">
+        <summary>Exact values</summary>
+        <table id="dephasing-data">
+          <thead><tr><th scope="col">Dephasing κ</th><th scope="col">Selectivity gain Δ</th></tr></thead>
+          <tbody><tr><td>0.001</td><td>2.349</td></tr><tr><td>1</td><td>0.685</td></tr><tr><td>3</td><td>0.284</td></tr><tr><td>10</td><td>0.053</td></tr></tbody>
+        </table>
+      </details>
+    </figcaption>
+  </figure>
 <section class="section featured" aria-labelledby="featured-title">
   <h2 id="featured-title">Featured publication</h2>
   <div data-catalog-view="featured" data-program="crn" aria-live="polite"><p>Loading publication…</p></div>
