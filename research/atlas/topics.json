@@ -385,7 +385,7 @@
     {
       "name": "State and environment",
       "question": "How much of a later process is specified by a local state and how much by its environment?",
-      "entries": 79,
+      "entries": 80,
       "selected": [
         {
           "title": "Sufficiency of a description of acquired form",
@@ -4932,6 +4932,13 @@
           "paper": null,
           "topic": "State and environment",
           "status": "Under review"
+        },
+        {
+          "id": "2470c84d8f4989",
+          "label": "State and environment · under review",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Under review"
         }
       ],
       "edges": [
@@ -8034,6 +8041,12 @@
         [
           "6565dadf740b96",
           "3ec0935f5938d9",
+          "refines",
+          false
+        ],
+        [
+          "2470c84d8f4989",
+          "6565dadf740b96",
           "refines",
           false
         ]
