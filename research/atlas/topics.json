@@ -1,0 +1,519 @@
+{
+  "sfp": [
+    {
+      "name": "Learning after a change",
+      "question": "Can two networks perform the same task today and learn differently tomorrow?",
+      "entries": 18,
+      "selected": [
+        {
+          "title": "Which changes are invisible to a future learning task?",
+          "paper": "restoring-function",
+          "status": "Result"
+        },
+        {
+          "title": "Programming the matrix of future responses",
+          "paper": "learning-response",
+          "status": "Result"
+        }
+      ],
+      "links": {
+        "Acquired compatibility": 2,
+        "Molecular accessibility": 1,
+        "Networks in combination": 2,
+        "Access through observation": 1,
+        "Preparation costs": 8,
+        "Smaller physical models": 6,
+        "Memory and reserve": 1
+      }
+    },
+    {
+      "name": "Preparation costs",
+      "question": "What does it cost to reach a state from which the next task is easy?",
+      "entries": 14,
+      "selected": [
+        {
+          "title": "Preparation at equal present response",
+          "paper": "preparation-costs",
+          "status": "Result"
+        }
+      ],
+      "links": {
+        "Acquired compatibility": 2,
+        "Molecular accessibility": 1,
+        "Networks in combination": 6,
+        "Identifying mechanisms": 1,
+        "Learning after a change": 8,
+        "Access through observation": 3,
+        "Smaller physical models": 15
+      }
+    },
+    {
+      "name": "Memory and reserve",
+      "question": "How much spare capacity does a memory need while it changes?",
+      "entries": 12,
+      "selected": [
+        {
+          "title": "Reserve during memory reconfiguration",
+          "paper": "safe-memory-reconfiguration",
+          "status": "Result"
+        },
+        {
+          "title": "Preserving future costs during reduction",
+          "paper": "temporal-observability",
+          "status": "Result"
+        },
+        {
+          "title": "The workspace needed to act on an observation",
+          "paper": "observation-based-control",
+          "status": "Result"
+        },
+        {
+          "title": "Identifying a physical state by safe probing",
+          "paper": "safe-probing",
+          "status": "Result"
+        }
+      ],
+      "links": {
+        "Acquired compatibility": 1,
+        "Identifying mechanisms": 1,
+        "Learning after a change": 1,
+        "Access through observation": 1,
+        "Smaller physical models": 1
+      }
+    },
+    {
+      "name": "Access through observation",
+      "question": "When can a controller identify a fast preparation path from what it measures?",
+      "entries": 12,
+      "selected": [
+        {
+          "title": "Time spent acting and time spent identifying the state",
+          "paper": "observation-limited-preparation",
+          "status": "Conditional"
+        }
+      ],
+      "links": {
+        "Acquired compatibility": 1,
+        "Molecular accessibility": 1,
+        "Networks in combination": 4,
+        "Identifying mechanisms": 1,
+        "Learning after a change": 1,
+        "Preparation costs": 3,
+        "Smaller physical models": 1,
+        "Memory and reserve": 1
+      }
+    },
+    {
+      "name": "Smaller physical models",
+      "question": "Which future behaviours survive when a physical network is reduced?",
+      "entries": 43,
+      "selected": [
+        {
+          "title": "Network size and trajectory accuracy",
+          "paper": "learning-trajectory-bounds",
+          "status": "Result"
+        },
+        {
+          "title": "Repeated reduction with a diagnostic cost",
+          "paper": "paid-diagnosis",
+          "status": "Result"
+        }
+      ],
+      "links": {
+        "Acquired compatibility": 1,
+        "Networks in combination": 13,
+        "Identifying mechanisms": 1,
+        "Learning after a change": 6,
+        "Access through observation": 1,
+        "Preparation costs": 15,
+        "Memory and reserve": 1
+      }
+    },
+    {
+      "name": "Networks in combination",
+      "question": "Which response properties survive when components are connected?",
+      "entries": 20,
+      "selected": [
+        {
+          "title": "Composing responses at network ports",
+          "paper": null,
+          "status": "Result"
+        }
+      ],
+      "links": {
+        "Acquired compatibility": 1,
+        "Identifying mechanisms": 1,
+        "Learning after a change": 2,
+        "Access through observation": 4,
+        "Preparation costs": 6,
+        "Smaller physical models": 13
+      }
+    },
+    {
+      "name": "Acquired compatibility",
+      "question": "How does past work change the adjustments a system can make next?",
+      "entries": 25,
+      "selected": [
+        {
+          "title": "Alignment built into the physical system",
+          "paper": null,
+          "status": "Hypothesis"
+        }
+      ],
+      "links": {
+        "Networks in combination": 1,
+        "Identifying mechanisms": 1,
+        "Learning after a change": 2,
+        "Access through observation": 1,
+        "Preparation costs": 2,
+        "Smaller physical models": 1,
+        "Memory and reserve": 1
+      }
+    },
+    {
+      "name": "Identifying mechanisms",
+      "question": "Which observations can distinguish competing accounts of adaptation?",
+      "entries": 7,
+      "selected": [
+        {
+          "title": "Identifying a mechanism from a history of costs",
+          "paper": null,
+          "status": "Conditional"
+        }
+      ],
+      "links": {
+        "Acquired compatibility": 1,
+        "Molecular accessibility": 1,
+        "Networks in combination": 1,
+        "Access through observation": 1,
+        "Preparation costs": 1,
+        "Smaller physical models": 1,
+        "Memory and reserve": 1
+      }
+    },
+    {
+      "name": "Molecular accessibility",
+      "question": "What can an endpoint reveal about the path a system took?",
+      "entries": 4,
+      "selected": [
+        {
+          "title": "Event order and the final sequence",
+          "paper": null,
+          "status": "Conditional"
+        }
+      ],
+      "links": {
+        "Identifying mechanisms": 1,
+        "Learning after a change": 1,
+        "Access through observation": 1,
+        "Preparation costs": 1
+      }
+    }
+  ],
+  "fold": [
+    {
+      "name": "The formation question",
+      "question": "Can local dynamics form a bounded state that organizes a later process?",
+      "entries": 38,
+      "selected": [
+        {
+          "title": "Physical systems in which organization can arise",
+          "paper": null,
+          "status": "Open"
+        },
+        {
+          "title": "Impossibility within a specified class",
+          "paper": null,
+          "status": "Open"
+        },
+        {
+          "title": "Necessary and sufficient conditions",
+          "paper": null,
+          "status": "Open"
+        }
+      ],
+      "links": {
+        "Limits of local descriptions": 21,
+        "Alternative models": 7,
+        "Correlation and assembly": 5,
+        "States and couplings": 14,
+        "Feedback": 1,
+        "Random partial orders": 5,
+        "Origins of order": 20,
+        "Physical carriers": 20,
+        "State and environment": 46,
+        "Costs and scales": 22,
+        "Open measurements": 16
+      }
+    },
+    {
+      "name": "Random partial orders",
+      "question": "How does the probability of reaching a later event depend on temporal separation?",
+      "entries": 11,
+      "selected": [
+        {
+          "title": "An age-dependent random partial order",
+          "paper": null,
+          "status": "Result"
+        },
+        {
+          "title": "The reachability threshold for a power-law gap kernel",
+          "paper": "power-law-gap-reachability",
+          "status": "Result"
+        }
+      ],
+      "links": {
+        "The formation question": 5,
+        "Alternative models": 2,
+        "Correlation and assembly": 1,
+        "Costs and scales": 2,
+        "Earlier results": 1,
+        "Open measurements": 1
+      }
+    },
+    {
+      "name": "Correlation and assembly",
+      "question": "Which relations must be retained to assemble a later structure?",
+      "entries": 8,
+      "selected": [
+        {
+          "title": "Connectivity, isolation and the cost of contact",
+          "paper": null,
+          "status": "Result"
+        },
+        {
+          "title": "Sparse assembly in the presence of false prerequisites",
+          "paper": null,
+          "status": "Result"
+        }
+      ],
+      "links": {
+        "The formation question": 5,
+        "Alternative models": 1,
+        "Random partial orders": 1,
+        "Earlier results": 2,
+        "Open measurements": 1
+      }
+    },
+    {
+      "name": "States and couplings",
+      "question": "What can be inferred when both a state and its couplings evolve?",
+      "entries": 17,
+      "selected": [
+        {
+          "title": "Coupled evolution of states and links",
+          "paper": null,
+          "status": "Result"
+        }
+      ],
+      "links": {
+        "The formation question": 14,
+        "Limits of local descriptions": 2,
+        "Feedback": 1,
+        "Origins of order": 3,
+        "Costs and scales": 1,
+        "Earlier results": 1,
+        "Open measurements": 6
+      }
+    },
+    {
+      "name": "Feedback",
+      "question": "How can feedback during formation affect later composition?",
+      "entries": 3,
+      "selected": [
+        {
+          "title": "Causal effects of feedback",
+          "paper": null,
+          "status": "Under review"
+        }
+      ],
+      "links": {
+        "The formation question": 1,
+        "States and couplings": 1,
+        "Open measurements": 1
+      }
+    },
+    {
+      "name": "Origins of order",
+      "question": "Which initial conditions and dynamics can account for the origin of a structure?",
+      "entries": 25,
+      "selected": [
+        {
+          "title": "A finite thermal Markov chain",
+          "paper": null,
+          "status": "Result"
+        }
+      ],
+      "links": {
+        "The formation question": 20,
+        "States and couplings": 3,
+        "State and environment": 1,
+        "Costs and scales": 3,
+        "Earlier results": 4,
+        "Open measurements": 4
+      }
+    },
+    {
+      "name": "Physical carriers",
+      "question": "Which physical degrees of freedom can retain a record as the system evolves?",
+      "entries": 41,
+      "selected": [
+        {
+          "title": "Kinetically constrained dynamics",
+          "paper": null,
+          "status": "Result"
+        },
+        {
+          "title": "Thermal behaviour across multiple blocks",
+          "paper": null,
+          "status": "Open"
+        }
+      ],
+      "links": {
+        "The formation question": 20,
+        "State and environment": 13,
+        "Costs and scales": 10,
+        "Earlier results": 2,
+        "Open measurements": 17
+      }
+    },
+    {
+      "name": "State and environment",
+      "question": "How much of a later process is specified by a local state and how much by its environment?",
+      "entries": 68,
+      "selected": [
+        {
+          "title": "Sufficiency of a description of acquired form",
+          "paper": null,
+          "status": "Open"
+        }
+      ],
+      "links": {
+        "The formation question": 46,
+        "Limits of local descriptions": 4,
+        "Origins of order": 1,
+        "Physical carriers": 13,
+        "Costs and scales": 20,
+        "Earlier results": 1,
+        "Open measurements": 20
+      }
+    },
+    {
+      "name": "Limits of local descriptions",
+      "question": "When is a local description sufficient to determine what comes next?",
+      "entries": 29,
+      "selected": [
+        {
+          "title": "Preserving order during plastic execution",
+          "paper": null,
+          "status": "Closed"
+        }
+      ],
+      "links": {
+        "The formation question": 21,
+        "Alternative models": 2,
+        "States and couplings": 2,
+        "State and environment": 4,
+        "Earlier results": 2,
+        "Open measurements": 3
+      }
+    },
+    {
+      "name": "Costs and scales",
+      "question": "How do size and reliability constrain the cost of composition?",
+      "entries": 37,
+      "selected": [
+        {
+          "title": "How the price of composition scales",
+          "paper": null,
+          "status": "Open"
+        }
+      ],
+      "links": {
+        "The formation question": 22,
+        "Alternative models": 3,
+        "States and couplings": 1,
+        "Random partial orders": 2,
+        "Origins of order": 3,
+        "Physical carriers": 10,
+        "State and environment": 20,
+        "Earlier results": 5,
+        "Open measurements": 26
+      }
+    },
+    {
+      "name": "Alternative models",
+      "question": "Which features of organization can be represented by reversible or substitution models?",
+      "entries": 12,
+      "selected": [
+        {
+          "title": "Reversibility and persistence of organization",
+          "paper": null,
+          "status": "Refuted"
+        }
+      ],
+      "links": {
+        "The formation question": 7,
+        "Limits of local descriptions": 2,
+        "Correlation and assembly": 1,
+        "Random partial orders": 2,
+        "Costs and scales": 3,
+        "Earlier results": 5,
+        "Open measurements": 1
+      }
+    },
+    {
+      "name": "Earlier results",
+      "question": "Which mathematical and physical results bear on the formation question?",
+      "entries": 20,
+      "selected": [
+        {
+          "title": "Limits of random orders",
+          "paper": null,
+          "status": "Prior work"
+        },
+        {
+          "title": "Thermodynamics of computation",
+          "paper": null,
+          "status": "Prior work"
+        }
+      ],
+      "links": {
+        "Limits of local descriptions": 2,
+        "Alternative models": 5,
+        "Correlation and assembly": 2,
+        "States and couplings": 1,
+        "Random partial orders": 1,
+        "Origins of order": 4,
+        "Physical carriers": 2,
+        "State and environment": 1,
+        "Costs and scales": 5
+      }
+    },
+    {
+      "name": "Open measurements",
+      "question": "Which quantities still lack an operational measure?",
+      "entries": 14,
+      "selected": [
+        {
+          "title": "Locality and capacity of a putative carrier",
+          "paper": null,
+          "status": "Open"
+        }
+      ],
+      "links": {
+        "The formation question": 16,
+        "Limits of local descriptions": 3,
+        "Alternative models": 1,
+        "Correlation and assembly": 1,
+        "States and couplings": 6,
+        "Feedback": 1,
+        "Random partial orders": 1,
+        "Origins of order": 4,
+        "Physical carriers": 17,
+        "State and environment": 20,
+        "Costs and scales": 26
+      }
+    }
+  ]
+}
