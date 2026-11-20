@@ -245,7 +245,7 @@
         "Feedback": 1,
         "Random partial orders": 5,
         "Origins of order": 20,
-        "Physical carriers": 25,
+        "Physical carriers": 26,
         "State and environment": 61,
         "Costs and scales": 29,
         "Open measurements": 17
@@ -352,6 +352,7 @@
       "links": {
         "The formation question": 20,
         "States and couplings": 3,
+        "Physical carriers": 1,
         "State and environment": 1,
         "Costs and scales": 3,
         "Earlier results": 4,
@@ -361,7 +362,7 @@
     {
       "name": "Physical carriers",
       "question": "Which physical degrees of freedom can retain a record as the system evolves?",
-      "entries": 42,
+      "entries": 43,
       "selected": [
         {
           "title": "Kinetically constrained dynamics",
@@ -375,8 +376,9 @@
         }
       ],
       "links": {
-        "The formation question": 25,
-        "State and environment": 17,
+        "The formation question": 26,
+        "Origins of order": 1,
+        "State and environment": 18,
         "Costs and scales": 10,
         "Earlier results": 2,
         "Open measurements": 17
@@ -397,7 +399,7 @@
         "The formation question": 61,
         "Limits of local descriptions": 4,
         "Origins of order": 1,
-        "Physical carriers": 17,
+        "Physical carriers": 18,
         "Costs and scales": 20,
         "Earlier results": 1,
         "Open measurements": 20
@@ -5380,6 +5382,13 @@
           "paper": null,
           "topic": "Physical carriers",
           "status": "Under review"
+        },
+        {
+          "id": "2adfc53cda509a",
+          "label": "Physical carriers · under review",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Under review"
         }
       ],
       "edges": [
@@ -9411,6 +9420,30 @@
         ],
         [
           "782aabdcc9d7b7",
+          "4d98893e06cf66",
+          "related",
+          false
+        ],
+        [
+          "2adfc53cda509a",
+          "782aabdcc9d7b7",
+          "related",
+          false
+        ],
+        [
+          "2adfc53cda509a",
+          "d4a544b5549fdb",
+          "related",
+          false
+        ],
+        [
+          "2adfc53cda509a",
+          "4840fdf9ae95ac",
+          "related",
+          false
+        ],
+        [
+          "2adfc53cda509a",
           "4d98893e06cf66",
           "related",
           false
