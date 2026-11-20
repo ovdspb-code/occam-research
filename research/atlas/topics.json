@@ -214,7 +214,7 @@
     {
       "name": "The formation question",
       "question": "Can local dynamics form a bounded state that organizes a later process?",
-      "entries": 39,
+      "entries": 40,
       "selected": [
         {
           "title": "Physical systems in which organization can arise",
@@ -385,7 +385,7 @@
     {
       "name": "State and environment",
       "question": "How much of a later process is specified by a local state and how much by its environment?",
-      "entries": 72,
+      "entries": 75,
       "selected": [
         {
           "title": "Sufficiency of a description of acquired form",
@@ -4890,6 +4890,27 @@
           "paper": null,
           "topic": "The formation question",
           "status": "Under review"
+        },
+        {
+          "id": "609bb7e698bb1b",
+          "label": "State and environment · result",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "b6c715fb02d50a",
+          "label": "State and environment · under review",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Under review"
+        },
+        {
+          "id": "7842ccdfad926c",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
         }
       ],
       "edges": [
@@ -7944,6 +7965,30 @@
         [
           "88d04df02b8a63",
           "6e6869ca33c72d",
+          "refines",
+          false
+        ],
+        [
+          "609bb7e698bb1b",
+          "967002beecb15b",
+          "refines",
+          false
+        ],
+        [
+          "609bb7e698bb1b",
+          "3ec0935f5938d9",
+          "refines",
+          false
+        ],
+        [
+          "b6c715fb02d50a",
+          "6f076d0beb8431",
+          "refines",
+          false
+        ],
+        [
+          "7842ccdfad926c",
+          "eb56be8bbfbd19",
           "refines",
           false
         ]
