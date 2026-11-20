@@ -245,7 +245,7 @@
         "Feedback": 1,
         "Random partial orders": 5,
         "Origins of order": 20,
-        "Physical carriers": 24,
+        "Physical carriers": 25,
         "State and environment": 61,
         "Costs and scales": 29,
         "Open measurements": 17
@@ -361,7 +361,7 @@
     {
       "name": "Physical carriers",
       "question": "Which physical degrees of freedom can retain a record as the system evolves?",
-      "entries": 41,
+      "entries": 42,
       "selected": [
         {
           "title": "Kinetically constrained dynamics",
@@ -375,8 +375,8 @@
         }
       ],
       "links": {
-        "The formation question": 24,
-        "State and environment": 13,
+        "The formation question": 25,
+        "State and environment": 17,
         "Costs and scales": 10,
         "Earlier results": 2,
         "Open measurements": 17
@@ -397,7 +397,7 @@
         "The formation question": 61,
         "Limits of local descriptions": 4,
         "Origins of order": 1,
-        "Physical carriers": 13,
+        "Physical carriers": 17,
         "Costs and scales": 20,
         "Earlier results": 1,
         "Open measurements": 20
@@ -5373,6 +5373,13 @@
           "paper": null,
           "topic": "The formation question",
           "status": "Under review"
+        },
+        {
+          "id": "782aabdcc9d7b7",
+          "label": "Physical carriers · under review",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Under review"
         }
       ],
       "edges": [
@@ -9393,6 +9400,18 @@
         [
           "b075d8dec77014",
           "c624d60552f443",
+          "related",
+          false
+        ],
+        [
+          "782aabdcc9d7b7",
+          "efbeee65246a25",
+          "related",
+          false
+        ],
+        [
+          "782aabdcc9d7b7",
+          "4d98893e06cf66",
           "related",
           false
         ]
