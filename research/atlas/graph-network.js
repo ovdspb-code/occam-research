@@ -5,7 +5,7 @@ function esc(s) {
 
 // Build vis datasets
 const nodesDS = new vis.DataSet(RAW_NODES.map((n, i) => ({
-  id: n.id, label: n.label, color: n.color, size: n.size,
+  id: n.id, label: n.label, color: n.color, size: n.size, shape:n.shape || 'dot', borderWidth:n.borderWidth ?? 1.5, role:n.role,
   font: n.font, title: n.title,
   // Fermat/golden-angle spiral seed positions (#3699): spreading nodes out
   // before physics runs keeps avoidOverlap from computing near-zero-distance
@@ -106,6 +106,7 @@ function showInfo(nodeId) {
   }).join('');
   const isMetaNode = !n.file_type && !n.source_file;
   let html = `<div class="field"><b>${esc(n.label)}</b></div>`;
+  if (n.role) html += `<div class="field">${esc(n.role)}</div>`;
   if (!isMetaNode) {
     html += `<div class="field">Type: ${esc(n.file_type || 'unknown')}</div>`;
   }
