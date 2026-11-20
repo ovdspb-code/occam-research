@@ -385,7 +385,7 @@
     {
       "name": "State and environment",
       "question": "How much of a later process is specified by a local state and how much by its environment?",
-      "entries": 77,
+      "entries": 78,
       "selected": [
         {
           "title": "Sufficiency of a description of acquired form",
