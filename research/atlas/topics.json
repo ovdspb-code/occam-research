@@ -214,7 +214,7 @@
     {
       "name": "The formation question",
       "question": "Can local dynamics form a bounded state that organizes a later process?",
-      "entries": 74,
+      "entries": 75,
       "selected": [
         {
           "title": "Physical systems in which organization can arise",
@@ -247,7 +247,7 @@
         "Origins of order": 20,
         "Physical carriers": 22,
         "State and environment": 59,
-        "Costs and scales": 27,
+        "Costs and scales": 28,
         "Open measurements": 17
       }
     },
@@ -426,7 +426,7 @@
     {
       "name": "Costs and scales",
       "question": "How do size and reliability constrain the cost of composition?",
-      "entries": 40,
+      "entries": 41,
       "selected": [
         {
           "title": "How the price of composition scales",
@@ -435,7 +435,7 @@
         }
       ],
       "links": {
-        "The formation question": 27,
+        "The formation question": 28,
         "Alternative models": 3,
         "States and couplings": 1,
         "Random partial orders": 2,
@@ -5254,6 +5254,20 @@
           "paper": null,
           "topic": "The formation question",
           "status": "Under review"
+        },
+        {
+          "id": "0b48d12e2e4bd6",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "540095b39986ee",
+          "label": "Costs and scales · under review",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Under review"
         }
       ],
       "edges": [
@@ -8963,6 +8977,30 @@
           "38c179cd3b08aa",
           "b9c1d2446dd3fe",
           "related",
+          false
+        ],
+        [
+          "0b48d12e2e4bd6",
+          "7efabee361aaba",
+          "refines",
+          false
+        ],
+        [
+          "0b48d12e2e4bd6",
+          "aacc38a3c0e14a",
+          "refines",
+          false
+        ],
+        [
+          "540095b39986ee",
+          "5cce100f2b2a80",
+          "refines",
+          false
+        ],
+        [
+          "540095b39986ee",
+          "4d98893e06cf66",
+          "refines",
           false
         ]
       ]
