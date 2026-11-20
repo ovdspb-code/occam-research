@@ -164,3 +164,8 @@ document.querySelector('#fit').onclick=()=>network.fit({animation:true});
 for(const [id,factor] of [['zoom-in',1.45],['zoom-out',1/1.45]]){
   document.getElementById(id).onclick=()=>network.moveTo({scale:network.getScale()*factor,animation:true});
 }
+const requestedNode = new URLSearchParams(location.search).get('node');
+if (requestedNode && nodesDS.get(requestedNode)) {
+  network.once('stabilizationIterationsDone', () => focusNode(requestedNode));
+  showInfo(requestedNode);
+}
