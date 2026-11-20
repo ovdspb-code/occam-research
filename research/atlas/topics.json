@@ -246,7 +246,7 @@
         "Random partial orders": 5,
         "Origins of order": 20,
         "Physical carriers": 20,
-        "State and environment": 55,
+        "State and environment": 56,
         "Costs and scales": 22,
         "Open measurements": 17
       }
@@ -385,7 +385,7 @@
     {
       "name": "State and environment",
       "question": "How much of a later process is specified by a local state and how much by its environment?",
-      "entries": 87,
+      "entries": 88,
       "selected": [
         {
           "title": "Sufficiency of a description of acquired form",
@@ -394,7 +394,7 @@
         }
       ],
       "links": {
-        "The formation question": 55,
+        "The formation question": 56,
         "Limits of local descriptions": 4,
         "Origins of order": 1,
         "Physical carriers": 13,
@@ -4988,6 +4988,13 @@
           "paper": null,
           "topic": "State and environment",
           "status": "Under review"
+        },
+        {
+          "id": "0e08c506ed8ecd",
+          "label": "State and environment · under review",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Under review"
         }
       ],
       "edges": [
@@ -8180,6 +8187,18 @@
         [
           "9f9d7e2d659d68",
           "5f337a50b717e5",
+          "refines",
+          false
+        ],
+        [
+          "0e08c506ed8ecd",
+          "eb56be8bbfbd19",
+          "refines",
+          false
+        ],
+        [
+          "0e08c506ed8ecd",
+          "b1bf285fea63ea",
           "refines",
           false
         ]
