@@ -214,7 +214,7 @@
     {
       "name": "The formation question",
       "question": "Can local dynamics form a bounded state that organizes a later process?",
-      "entries": 80,
+      "entries": 81,
       "selected": [
         {
           "title": "Physical systems in which organization can arise",
@@ -245,8 +245,8 @@
         "Feedback": 1,
         "Random partial orders": 5,
         "Origins of order": 20,
-        "Physical carriers": 22,
-        "State and environment": 59,
+        "Physical carriers": 24,
+        "State and environment": 61,
         "Costs and scales": 28,
         "Open measurements": 17
       }
@@ -375,7 +375,7 @@
         }
       ],
       "links": {
-        "The formation question": 22,
+        "The formation question": 24,
         "State and environment": 13,
         "Costs and scales": 10,
         "Earlier results": 2,
@@ -394,7 +394,7 @@
         }
       ],
       "links": {
-        "The formation question": 59,
+        "The formation question": 61,
         "Limits of local descriptions": 4,
         "Origins of order": 1,
         "Physical carriers": 13,
@@ -5303,6 +5303,13 @@
           "paper": null,
           "topic": "The formation question",
           "status": "Under review"
+        },
+        {
+          "id": "584517f853bbe6",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
         }
       ],
       "edges": [
@@ -9125,6 +9132,42 @@
         [
           "dc75111cdddd3d",
           "4d98893e06cf66",
+          "refines",
+          false
+        ],
+        [
+          "584517f853bbe6",
+          "dc75111cdddd3d",
+          "refines",
+          false
+        ],
+        [
+          "584517f853bbe6",
+          "4d98893e06cf66",
+          "refines",
+          false
+        ],
+        [
+          "584517f853bbe6",
+          "1531174b63062a",
+          "refines",
+          false
+        ],
+        [
+          "584517f853bbe6",
+          "6f71db9a80116e",
+          "refines",
+          false
+        ],
+        [
+          "584517f853bbe6",
+          "ec13c454b94cd0",
+          "refines",
+          false
+        ],
+        [
+          "584517f853bbe6",
+          "10128ee36e3915",
           "refines",
           false
         ]
