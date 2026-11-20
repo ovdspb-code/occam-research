@@ -14,3 +14,7 @@
 .atlas-relations a {display:flex;justify-content:space-between;gap:.75rem;padding:.45rem 0;text-decoration:none;background:linear-gradient(to right,var(--figure-bar) var(--share),var(--line) var(--share)) left bottom/100% 2px no-repeat}
 .atlas-relations span {font-variant-numeric:tabular-nums}
 @media(max-width:650px){.atlas-layout{display:block}.topic-index{display:flex;flex-wrap:wrap;gap:.2rem .45rem;margin-bottom:1.2rem;padding-top:.5rem}.topic-index a{font-size:.88rem;padding:.32rem .4rem}.topic-detail h2{scroll-margin-top:1rem}}
+main:has(.graph-plate) .intro {padding-block:1.3rem}
+.graph-plate iframe {display:block;width:100%;height:clamp(450px,67vh,790px);border:1px solid var(--line);background:#f8f9fa}
+.graph-plate p {margin:.5rem 0 2rem;font-size:.9rem}
+@media(max-width:650px){.graph-plate iframe{height:72vh;min-height:480px}}

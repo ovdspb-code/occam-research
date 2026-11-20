@@ -520,5 +520,7434 @@
         "Costs and scales": 26
       }
     }
-  ]
+  ],
+  "graphs": {
+    "sfp": {
+      "nodes": [
+        {
+          "id": "adcfbd33b62f09",
+          "label": "Reserve during memory reconfiguration",
+          "paper": "safe-memory-reconfiguration",
+          "topic": "Memory and reserve",
+          "status": "Result"
+        },
+        {
+          "id": "1b334e8a734948",
+          "label": "Predictive certificate",
+          "paper": "safe-memory-reconfiguration",
+          "topic": "Memory and reserve",
+          "status": "Result"
+        },
+        {
+          "id": "68d271f96c8a62",
+          "label": "Prepaid reserve",
+          "paper": "safe-memory-reconfiguration",
+          "topic": "Memory and reserve",
+          "status": "Result"
+        },
+        {
+          "id": "9a9b2975dac4d9",
+          "label": "Profile representative",
+          "paper": "temporal-observability",
+          "topic": "Memory and reserve",
+          "status": "Result"
+        },
+        {
+          "id": "7065174f76a341",
+          "label": "Preserving future costs during reduction",
+          "paper": "temporal-observability",
+          "topic": "Memory and reserve",
+          "status": "Result"
+        },
+        {
+          "id": "16e2f4a905e7ce",
+          "label": "The workspace needed to act on an observation",
+          "paper": "observation-based-control",
+          "topic": "Memory and reserve",
+          "status": "Result"
+        },
+        {
+          "id": "2baa7585272774",
+          "label": "Saturated counterexample",
+          "paper": "observation-based-control",
+          "topic": "Memory and reserve",
+          "status": "Result"
+        },
+        {
+          "id": "2a079237179cec",
+          "label": "Convex fiber",
+          "paper": "safe-probing",
+          "topic": "Memory and reserve",
+          "status": "Result"
+        },
+        {
+          "id": "25882d4ee28cd4",
+          "label": "Cross substrate peak",
+          "paper": "safe-probing",
+          "topic": "Memory and reserve",
+          "status": "Result"
+        },
+        {
+          "id": "2f8573a5aceb1f",
+          "label": "Identifying a physical state by safe probing",
+          "paper": "safe-probing",
+          "topic": "Memory and reserve",
+          "status": "Result"
+        },
+        {
+          "id": "6deafdff8200d9",
+          "label": "Preservation boundary",
+          "paper": "safe-probing",
+          "topic": "Memory and reserve",
+          "status": "Result"
+        },
+        {
+          "id": "a486a15d7867ee",
+          "label": "History action",
+          "paper": "restoring-function",
+          "topic": "Learning after a change",
+          "status": "Result"
+        },
+        {
+          "id": "65ee750f5172f5",
+          "label": "Which changes are invisible to a future learning task?",
+          "paper": "restoring-function",
+          "topic": "Learning after a change",
+          "status": "Result"
+        },
+        {
+          "id": "05fec543e3aa85",
+          "label": "Closure null",
+          "paper": "restoring-function",
+          "topic": "Learning after a change",
+          "status": "Prior work"
+        },
+        {
+          "id": "57b83cd095374e",
+          "label": "Reversal parity",
+          "paper": "restoring-function",
+          "topic": "Learning after a change",
+          "status": "Result"
+        },
+        {
+          "id": "dcb2c15f888ebc",
+          "label": "Metric sign",
+          "paper": "restoring-function",
+          "topic": "Learning after a change",
+          "status": "Result"
+        },
+        {
+          "id": "07a2d6cc4bc1bc",
+          "label": "Finite history",
+          "paper": "restoring-function",
+          "topic": "Learning after a change",
+          "status": "Result"
+        },
+        {
+          "id": "003191f6201d52",
+          "label": "Static dynamic gap",
+          "paper": "learning-trajectory-bounds",
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "cbbceb22356bd5",
+          "label": "Network size and trajectory accuracy",
+          "paper": "learning-trajectory-bounds",
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "9c7b32bc4897f1",
+          "label": "Exact saturation",
+          "paper": "learning-trajectory-bounds",
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "8d6a687f64e993",
+          "label": "Graph uniform sensitivity",
+          "paper": "learning-trajectory-bounds",
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "55984582616167",
+          "label": "Programming the matrix of future responses",
+          "paper": "learning-response",
+          "topic": "Learning after a change",
+          "status": "Result"
+        },
+        {
+          "id": "0c5946830d6503",
+          "label": "Family weak benefit",
+          "paper": "learning-response",
+          "topic": "Learning after a change",
+          "status": "Result"
+        },
+        {
+          "id": "af0ba032a378a7",
+          "label": "Preparation at equal present response",
+          "paper": "preparation-costs",
+          "topic": "Preparation costs",
+          "status": "Result"
+        },
+        {
+          "id": "9437ae6de44b83",
+          "label": "Cost crossover",
+          "paper": "preparation-costs",
+          "topic": "Preparation costs",
+          "status": "Result"
+        },
+        {
+          "id": "9048ed888925ad",
+          "label": "Switch cost",
+          "paper": "preparation-costs",
+          "topic": "Preparation costs",
+          "status": "Result"
+        },
+        {
+          "id": "839eda0b274186",
+          "label": "Prefix transfer",
+          "paper": "preparation-costs",
+          "topic": "Preparation costs",
+          "status": "Result"
+        },
+        {
+          "id": "0601027dfa12ba",
+          "label": "Action observation gap",
+          "paper": "observation-limited-preparation",
+          "topic": "Access through observation",
+          "status": "Result"
+        },
+        {
+          "id": "165d6b71918394",
+          "label": "Time spent acting and time spent identifying the state",
+          "paper": "observation-limited-preparation",
+          "topic": "Access through observation",
+          "status": "Conditional"
+        },
+        {
+          "id": "b8bb4b086bbabd",
+          "label": "Noise threshold",
+          "paper": "observation-limited-preparation",
+          "topic": "Access through observation",
+          "status": "Result"
+        },
+        {
+          "id": "08caa0646e99ea",
+          "label": "Mobility defect",
+          "paper": "paid-diagnosis",
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "deeb12913cd86b",
+          "label": "Repeated reduction with a diagnostic cost",
+          "paper": "paid-diagnosis",
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "21a8552f111112",
+          "label": "Stagewise error",
+          "paper": "paid-diagnosis",
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "a19198a68dc3c8",
+          "label": "Two readings",
+          "paper": "paid-diagnosis",
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "b1cf94069bc6ce",
+          "label": "Composing responses at network ports",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "d20e94a0ba5e30",
+          "label": "History cost transfer",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "0431e996a06d38",
+          "label": "Active physical reduction",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "85eff21d5b2c1a",
+          "label": "Replica resource law",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "b3ed32bea4e23c",
+          "label": "Bracket two three",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "f10f98c3033d53",
+          "label": "Nonlinear quartic",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "8a9196ab1014d9",
+          "label": "No order ceiling",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "f31cf48ad1c2a8",
+          "label": "Geometric price",
+          "paper": null,
+          "topic": "Preparation costs",
+          "status": "Result"
+        },
+        {
+          "id": "e6d50596fa70eb",
+          "label": "Exact information factor",
+          "paper": null,
+          "topic": "Access through observation",
+          "status": "Result"
+        },
+        {
+          "id": "e8521c32481bcc",
+          "label": "Hidden guards obstruction",
+          "paper": null,
+          "topic": "Access through observation",
+          "status": "Result"
+        },
+        {
+          "id": "5f0d4bdcd61166",
+          "label": "Knowledge complexity",
+          "paper": null,
+          "topic": "Access through observation",
+          "status": "Result"
+        },
+        {
+          "id": "602944e976bc3e",
+          "label": "Noise information price",
+          "paper": null,
+          "topic": "Access through observation",
+          "status": "Result"
+        },
+        {
+          "id": "9945abc7ac71b7",
+          "label": "Linear grid memory",
+          "paper": null,
+          "topic": "Access through observation",
+          "status": "Result"
+        },
+        {
+          "id": "9625dd08be2ba1",
+          "label": "Compression hard boundary",
+          "paper": null,
+          "topic": "Access through observation",
+          "status": "Result"
+        },
+        {
+          "id": "8dc808c2f2a926",
+          "label": "Nonlinear interval memory",
+          "paper": null,
+          "topic": "Access through observation",
+          "status": "Result"
+        },
+        {
+          "id": "8025e5c6202033",
+          "label": "Finite diagnostic code",
+          "paper": null,
+          "topic": "Access through observation",
+          "status": "Result"
+        },
+        {
+          "id": "73678f04c0c9e5",
+          "label": "Mixed sensor two reads",
+          "paper": null,
+          "topic": "Access through observation",
+          "status": "Result"
+        },
+        {
+          "id": "a485399f57f332",
+          "label": "Loaded hold failure",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "8f0a706c442bb5",
+          "label": "Loaded matrix impossibility",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "4bc78eba0bf249",
+          "label": "Conditional closure",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "d9ef279db83ac0",
+          "label": "Moving neighbor synthesis",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "33e5816cc69290",
+          "label": "Inherited port execution",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "9c68dd61a39423",
+          "label": "Context equivalence failure",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "e4bc7f9cb561ca",
+          "label": "Observed task interface",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "2783edf4bad768",
+          "label": "Fixed load compensation",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "baba31deeebb2e",
+          "label": "Weak load nonvanishing time",
+          "paper": null,
+          "topic": "Preparation costs",
+          "status": "Result"
+        },
+        {
+          "id": "b3e163ee92e72f",
+          "label": "State cost transfer",
+          "paper": null,
+          "topic": "Preparation costs",
+          "status": "Result"
+        },
+        {
+          "id": "22d4e609f2868a",
+          "label": "Mobility profile needed",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "a5597da0b0b17c",
+          "label": "Source fixed prior price",
+          "paper": null,
+          "topic": "Preparation costs",
+          "status": "Result"
+        },
+        {
+          "id": "869df41afe4f0e",
+          "label": "Physical deficit price",
+          "paper": null,
+          "topic": "Preparation costs",
+          "status": "Result"
+        },
+        {
+          "id": "31587acae6fa23",
+          "label": "Deficit safety failure",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "5a41ec6238081d",
+          "label": "Matching graph inheritance",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "60399e21dd0bc8",
+          "label": "Cumulative old coordinates",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "5ac8483526e985",
+          "label": "Static joint goal unreachable",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "09133135a16811",
+          "label": "Protected current price",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "d001206c196321",
+          "label": "Balanced subfamily minimax",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Result"
+        },
+        {
+          "id": "5ce7804b59a280",
+          "label": "All architecture minimum",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Open"
+        },
+        {
+          "id": "62db679c0f4ae0",
+          "label": "Full price gap",
+          "paper": null,
+          "topic": "Preparation costs",
+          "status": "Open"
+        },
+        {
+          "id": "0c4c63f74a84f4",
+          "label": "Future function bridge",
+          "paper": null,
+          "topic": "Networks in combination",
+          "status": "Open"
+        },
+        {
+          "id": "15c8782e4c6be7",
+          "label": "Alignment built into the physical system",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Hypothesis"
+        },
+        {
+          "id": "d6759b739484aa",
+          "label": "Spring observation gap",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "d4d7399c5f99b3",
+          "label": "Precise calibration",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "af6528836fc6d5",
+          "label": "Full port reveals state",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Conditional"
+        },
+        {
+          "id": "082c70813ae157",
+          "label": "Electrical shield",
+          "paper": null,
+          "topic": "Learning after a change",
+          "status": "Conditional"
+        },
+        {
+          "id": "ea306231cbd1c7",
+          "label": "Kron learning obstruction",
+          "paper": null,
+          "topic": "Learning after a change",
+          "status": "Conditional"
+        },
+        {
+          "id": "df65ae3950d6d6",
+          "label": "Fixed driver replacement",
+          "paper": null,
+          "topic": "Learning after a change",
+          "status": "Conditional"
+        },
+        {
+          "id": "b4d5cbd3f0555d",
+          "label": "Frequency mobility",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "a3819290e80ccc",
+          "label": "Mobility time metric",
+          "paper": null,
+          "topic": "Preparation costs",
+          "status": "Conditional"
+        },
+        {
+          "id": "b97a821a4d58e8",
+          "label": "Stz directional state",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Prior work"
+        },
+        {
+          "id": "d245523afc9420",
+          "label": "Balance not kinetics",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Prior work"
+        },
+        {
+          "id": "c842a11ccd8e39",
+          "label": "Stz finite jam",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Prior work"
+        },
+        {
+          "id": "9250233c707cf6",
+          "label": "Directional budget",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "fc5a7f99863cfa",
+          "label": "Same budget different kinetics",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "4ce5f0f37e14c3",
+          "label": "Preparation opens learning",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "31bb210ad64e2e",
+          "label": "Maxwell history",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Prior work"
+        },
+        {
+          "id": "b9b60379c1d2ce",
+          "label": "Trace preservation",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "a23a459003fba5",
+          "label": "Memory not help",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "0f1751893cf1af",
+          "label": "Latent consolidation",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "5279bd6d5e8524",
+          "label": "Same error not same learning",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "1d4eb28676d1d8",
+          "label": "Prep can reverse savings",
+          "paper": null,
+          "topic": "Preparation costs",
+          "status": "Conditional"
+        },
+        {
+          "id": "0e9b6bc98ac5d2",
+          "label": "Thixotropic preparation",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "028b5796d83c9a",
+          "label": "Coupling orientation",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "96a7e06c5aae53",
+          "label": "Cooperation delay tradeoff",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "32d0106326c942",
+          "label": "Switching drift",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "295d8f5e6c1cc8",
+          "label": "Common flow alignment",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "129f6f135ce152",
+          "label": "New load recovery",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "9de264f1436533",
+          "label": "Partner induced jam",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "0f46dd1243e139",
+          "label": "Learned corrections",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Hypothesis"
+        },
+        {
+          "id": "ca12aa1dac8e49",
+          "label": "Known selection",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Prior work"
+        },
+        {
+          "id": "e2ed070dd59bf4",
+          "label": "Future selection gap",
+          "paper": null,
+          "topic": "Acquired compatibility",
+          "status": "Open"
+        },
+        {
+          "id": "eee3370d0d59e0",
+          "label": "Ai information coverage",
+          "paper": null,
+          "topic": "Identifying mechanisms",
+          "status": "Prior work"
+        },
+        {
+          "id": "d27db0e813aacf",
+          "label": "Identifying a mechanism from a history of costs",
+          "paper": null,
+          "topic": "Identifying mechanisms",
+          "status": "Conditional"
+        },
+        {
+          "id": "308dd203aeea83",
+          "label": "Harmonic protection",
+          "paper": null,
+          "topic": "Learning after a change",
+          "status": "Conditional"
+        },
+        {
+          "id": "cb23687304de3c",
+          "label": "Cyclic signal",
+          "paper": null,
+          "topic": "Identifying mechanisms",
+          "status": "Prior work"
+        },
+        {
+          "id": "3ca2efda85da40",
+          "label": "Finite jets",
+          "paper": null,
+          "topic": "Identifying mechanisms",
+          "status": "Result"
+        },
+        {
+          "id": "09971f810bd1ae",
+          "label": "Future predictor",
+          "paper": null,
+          "topic": "Identifying mechanisms",
+          "status": "Refuted"
+        },
+        {
+          "id": "35afd981561469",
+          "label": "Current matching",
+          "paper": null,
+          "topic": "Identifying mechanisms",
+          "status": "Conditional"
+        },
+        {
+          "id": "9de890ed5e5651",
+          "label": "Learning clock",
+          "paper": null,
+          "topic": "Identifying mechanisms",
+          "status": "Open"
+        },
+        {
+          "id": "54ae5e3e4ab2d0",
+          "label": "Silent recoding",
+          "paper": null,
+          "topic": "Molecular accessibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "63a0528d048d4c",
+          "label": "Conditional certificate",
+          "paper": null,
+          "topic": "Molecular accessibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "f1b571081d5e90",
+          "label": "Event order and the final sequence",
+          "paper": null,
+          "topic": "Molecular accessibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "c26ddfb0c6c3c1",
+          "label": "Panel observation tradeoff",
+          "paper": null,
+          "topic": "Molecular accessibility",
+          "status": "Conditional"
+        },
+        {
+          "id": "b8d383655e53ad",
+          "label": "Natural balance no dominance",
+          "paper": null,
+          "topic": "Learning after a change",
+          "status": "Result"
+        },
+        {
+          "id": "586bc2b943714d",
+          "label": "Loading balance exchange",
+          "paper": null,
+          "topic": "Learning after a change",
+          "status": "Result"
+        },
+        {
+          "id": "597ec3eb79d5f0",
+          "label": "Common criterion gap",
+          "paper": null,
+          "topic": "Learning after a change",
+          "status": "Open"
+        },
+        {
+          "id": "b4d777519fe511",
+          "label": "Stream preparation",
+          "paper": null,
+          "topic": "Learning after a change",
+          "status": "Result"
+        },
+        {
+          "id": "197f2bf462b000",
+          "label": "Native drive boundary",
+          "paper": null,
+          "topic": "Memory and reserve",
+          "status": "Result"
+        },
+        {
+          "id": "0217e280d6801f",
+          "label": "Paid observable access",
+          "paper": null,
+          "topic": "Learning after a change",
+          "status": "Result"
+        },
+        {
+          "id": "cb61e1302c3e9a",
+          "label": "Paid preparation joint",
+          "paper": null,
+          "topic": "Preparation costs",
+          "status": "Result"
+        },
+        {
+          "id": "2da41ea43734ab",
+          "label": "Paid universal cost boundary",
+          "paper": null,
+          "topic": "Preparation costs",
+          "status": "Result"
+        },
+        {
+          "id": "d4c25bad90c59b",
+          "label": "Transfer paid mobility certificate",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "abca9a4dc3faa6",
+          "label": "Transfer one cell loss",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "ee2079aeb28c72",
+          "label": "Kron mobility order",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "6453a977f72857",
+          "label": "Kron protected task failure",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "eac8e28819082c",
+          "label": "Task route realization",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "854972505512e2",
+          "label": "Task triangle actuator limit",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "9695cea614dbab",
+          "label": "Universal execution log price",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "613e2f2efc2836",
+          "label": "Acquired specialization log price",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "e6b3046fd54666",
+          "label": "Hidden contribution universality deficit",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "14debc9d608e2f",
+          "label": "Strict readiness stream price",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "32b52d4f16308d",
+          "label": "Work order readiness price",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "8b62cd10d4bfbc",
+          "label": "Long work optimal reorganization",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "7a70120d2da8b0",
+          "label": "Reversible work zero surcharge",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "558753f7a399a5",
+          "label": "Diagonal growth direction cost",
+          "paper": null,
+          "topic": "Learning after a change",
+          "status": "Result"
+        },
+        {
+          "id": "fafac27ed5c05d",
+          "label": "Reflected work zero readiness",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "0faca3c1082566",
+          "label": "Material limit small to future transfer",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "60605ad7025dd4",
+          "label": "Work selected resource conflict",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "48a955ae6b2197",
+          "label": "Fixed work future family profile",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "03cd4431245178",
+          "label": "Fixed work unique future profile",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "a0781c8f3f2872",
+          "label": "Work geometry robust unique profile",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "a4c7a43c4b83ee",
+          "label": "Work static hidden collapse",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "4db6da39cfcd80",
+          "label": "Resource clearance future price",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "36cfefb5025f1a",
+          "label": "Boundary terminal selection gap",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "234fb8d3a43c75",
+          "label": "Occupied resource retention price",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "478fa2e1fc09ac",
+          "label": "Sublog excess resource selection",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "6abb02ea5ab8a1",
+          "label": "Common drive terminal selection",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "9a774b3c63f8b0",
+          "label": "Diversity selection",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "9edacdfe6a13a4",
+          "label": "Natural precision gap",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "3057406ab75659",
+          "label": "Free terminal localization",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "a06e4234254f6f",
+          "label": "Safe future aggregation",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "fd662a96886ff8",
+          "label": "Joint execution cost",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        }
+      ],
+      "edges": [
+        [
+          "adcfbd33b62f09",
+          "68d271f96c8a62",
+          "derives",
+          false
+        ],
+        [
+          "9a9b2975dac4d9",
+          "adcfbd33b62f09",
+          "requires",
+          false
+        ],
+        [
+          "7065174f76a341",
+          "9a9b2975dac4d9",
+          "derives",
+          false
+        ],
+        [
+          "9a9b2975dac4d9",
+          "16e2f4a905e7ce",
+          "limits",
+          false
+        ],
+        [
+          "2baa7585272774",
+          "16e2f4a905e7ce",
+          "derives",
+          false
+        ],
+        [
+          "2a079237179cec",
+          "25882d4ee28cd4",
+          "derives",
+          false
+        ],
+        [
+          "adcfbd33b62f09",
+          "25882d4ee28cd4",
+          "open bridge",
+          false
+        ],
+        [
+          "16e2f4a905e7ce",
+          "2f8573a5aceb1f",
+          "limits",
+          false
+        ],
+        [
+          "6deafdff8200d9",
+          "25882d4ee28cd4",
+          "limits",
+          false
+        ],
+        [
+          "a486a15d7867ee",
+          "07a2d6cc4bc1bc",
+          "derives",
+          false
+        ],
+        [
+          "05fec543e3aa85",
+          "a486a15d7867ee",
+          "limits",
+          false
+        ],
+        [
+          "65ee750f5172f5",
+          "05fec543e3aa85",
+          "generalizes",
+          false
+        ],
+        [
+          "57b83cd095374e",
+          "a486a15d7867ee",
+          "generalizes",
+          false
+        ],
+        [
+          "dcb2c15f888ebc",
+          "a486a15d7867ee",
+          "limits",
+          false
+        ],
+        [
+          "003191f6201d52",
+          "cbbceb22356bd5",
+          "analogy",
+          true
+        ],
+        [
+          "8d6a687f64e993",
+          "cbbceb22356bd5",
+          "derives",
+          false
+        ],
+        [
+          "9c7b32bc4897f1",
+          "cbbceb22356bd5",
+          "limits",
+          false
+        ],
+        [
+          "a486a15d7867ee",
+          "55984582616167",
+          "analogy",
+          true
+        ],
+        [
+          "55984582616167",
+          "0c5946830d6503",
+          "derives",
+          false
+        ],
+        [
+          "af0ba032a378a7",
+          "55984582616167",
+          "limits",
+          false
+        ],
+        [
+          "9437ae6de44b83",
+          "af0ba032a378a7",
+          "derives",
+          false
+        ],
+        [
+          "839eda0b274186",
+          "af0ba032a378a7",
+          "generalizes",
+          false
+        ],
+        [
+          "9048ed888925ad",
+          "0c5946830d6503",
+          "limits",
+          true
+        ],
+        [
+          "af0ba032a378a7",
+          "0601027dfa12ba",
+          "analogy",
+          true
+        ],
+        [
+          "0601027dfa12ba",
+          "165d6b71918394",
+          "requires",
+          false
+        ],
+        [
+          "165d6b71918394",
+          "b8bb4b086bbabd",
+          "derives",
+          false
+        ],
+        [
+          "08caa0646e99ea",
+          "deeb12913cd86b",
+          "derives",
+          false
+        ],
+        [
+          "21a8552f111112",
+          "deeb12913cd86b",
+          "derives",
+          false
+        ],
+        [
+          "a19198a68dc3c8",
+          "deeb12913cd86b",
+          "limits",
+          false
+        ],
+        [
+          "cbbceb22356bd5",
+          "deeb12913cd86b",
+          "limits",
+          true
+        ],
+        [
+          "b1cf94069bc6ce",
+          "d20e94a0ba5e30",
+          "derives",
+          false
+        ],
+        [
+          "d20e94a0ba5e30",
+          "0431e996a06d38",
+          "derives",
+          false
+        ],
+        [
+          "b3ed32bea4e23c",
+          "85eff21d5b2c1a",
+          "analogy",
+          true
+        ],
+        [
+          "f10f98c3033d53",
+          "b3ed32bea4e23c",
+          "generalizes",
+          false
+        ],
+        [
+          "8a9196ab1014d9",
+          "b3ed32bea4e23c",
+          "limits",
+          false
+        ],
+        [
+          "8a9196ab1014d9",
+          "f10f98c3033d53",
+          "limits",
+          true
+        ],
+        [
+          "e8521c32481bcc",
+          "e6d50596fa70eb",
+          "limits",
+          false
+        ],
+        [
+          "5f0d4bdcd61166",
+          "9945abc7ac71b7",
+          "limits",
+          false
+        ],
+        [
+          "f31cf48ad1c2a8",
+          "602944e976bc3e",
+          "open bridge",
+          false
+        ],
+        [
+          "602944e976bc3e",
+          "f10f98c3033d53",
+          "requires",
+          false
+        ],
+        [
+          "e6d50596fa70eb",
+          "602944e976bc3e",
+          "limits",
+          false
+        ],
+        [
+          "9945abc7ac71b7",
+          "8dc808c2f2a926",
+          "open bridge",
+          false
+        ],
+        [
+          "9625dd08be2ba1",
+          "8025e5c6202033",
+          "limits",
+          false
+        ],
+        [
+          "8dc808c2f2a926",
+          "8025e5c6202033",
+          "derives",
+          false
+        ],
+        [
+          "602944e976bc3e",
+          "8025e5c6202033",
+          "limits",
+          false
+        ],
+        [
+          "8025e5c6202033",
+          "73678f04c0c9e5",
+          "derives",
+          false
+        ],
+        [
+          "deeb12913cd86b",
+          "73678f04c0c9e5",
+          "generalizes",
+          false
+        ],
+        [
+          "a485399f57f332",
+          "deeb12913cd86b",
+          "limits",
+          false
+        ],
+        [
+          "8f0a706c442bb5",
+          "f31cf48ad1c2a8",
+          "limits",
+          false
+        ],
+        [
+          "b1cf94069bc6ce",
+          "4bc78eba0bf249",
+          "derives",
+          false
+        ],
+        [
+          "d20e94a0ba5e30",
+          "4bc78eba0bf249",
+          "derives",
+          false
+        ],
+        [
+          "e6d50596fa70eb",
+          "4bc78eba0bf249",
+          "derives",
+          false
+        ],
+        [
+          "deeb12913cd86b",
+          "4bc78eba0bf249",
+          "derives",
+          false
+        ],
+        [
+          "a485399f57f332",
+          "d9ef279db83ac0",
+          "limits",
+          false
+        ],
+        [
+          "33e5816cc69290",
+          "d9ef279db83ac0",
+          "generalizes",
+          false
+        ],
+        [
+          "33e5816cc69290",
+          "e4bc7f9cb561ca",
+          "open bridge",
+          false
+        ],
+        [
+          "9c68dd61a39423",
+          "e4bc7f9cb561ca",
+          "limits",
+          false
+        ],
+        [
+          "b1cf94069bc6ce",
+          "e4bc7f9cb561ca",
+          "analogy",
+          true
+        ],
+        [
+          "e4bc7f9cb561ca",
+          "2783edf4bad768",
+          "derives",
+          false
+        ],
+        [
+          "8f0a706c442bb5",
+          "2783edf4bad768",
+          "limits",
+          true
+        ],
+        [
+          "baba31deeebb2e",
+          "2783edf4bad768",
+          "generalizes",
+          false
+        ],
+        [
+          "baba31deeebb2e",
+          "b3e163ee92e72f",
+          "limits",
+          false
+        ],
+        [
+          "a5597da0b0b17c",
+          "b3e163ee92e72f",
+          "generalizes",
+          false
+        ],
+        [
+          "22d4e609f2868a",
+          "e6d50596fa70eb",
+          "analogy",
+          true
+        ],
+        [
+          "a5597da0b0b17c",
+          "869df41afe4f0e",
+          "derives",
+          false
+        ],
+        [
+          "31587acae6fa23",
+          "869df41afe4f0e",
+          "limits",
+          false
+        ],
+        [
+          "e8521c32481bcc",
+          "31587acae6fa23",
+          "analogy",
+          true
+        ],
+        [
+          "5a41ec6238081d",
+          "869df41afe4f0e",
+          "generalizes",
+          false
+        ],
+        [
+          "5a41ec6238081d",
+          "60399e21dd0bc8",
+          "derives",
+          false
+        ],
+        [
+          "5ac8483526e985",
+          "60399e21dd0bc8",
+          "limits",
+          false
+        ],
+        [
+          "5a41ec6238081d",
+          "09133135a16811",
+          "analogy",
+          false
+        ],
+        [
+          "d001206c196321",
+          "0c4c63f74a84f4",
+          "limits",
+          false
+        ],
+        [
+          "869df41afe4f0e",
+          "0c4c63f74a84f4",
+          "open bridge",
+          false
+        ],
+        [
+          "85eff21d5b2c1a",
+          "5ce7804b59a280",
+          "open bridge",
+          false
+        ],
+        [
+          "869df41afe4f0e",
+          "62db679c0f4ae0",
+          "open bridge",
+          false
+        ],
+        [
+          "8025e5c6202033",
+          "62db679c0f4ae0",
+          "open bridge",
+          false
+        ],
+        [
+          "d6759b739484aa",
+          "15c8782e4c6be7",
+          "limits",
+          false
+        ],
+        [
+          "d4d7399c5f99b3",
+          "d6759b739484aa",
+          "limits",
+          false
+        ],
+        [
+          "af6528836fc6d5",
+          "15c8782e4c6be7",
+          "limits",
+          false
+        ],
+        [
+          "082c70813ae157",
+          "ea306231cbd1c7",
+          "derives",
+          false
+        ],
+        [
+          "df65ae3950d6d6",
+          "ea306231cbd1c7",
+          "limits",
+          false
+        ],
+        [
+          "ea306231cbd1c7",
+          "d6759b739484aa",
+          "analogy",
+          true
+        ],
+        [
+          "b4d5cbd3f0555d",
+          "a3819290e80ccc",
+          "derives",
+          false
+        ],
+        [
+          "d245523afc9420",
+          "b4d5cbd3f0555d",
+          "limits",
+          false
+        ],
+        [
+          "b97a821a4d58e8",
+          "d245523afc9420",
+          "derives",
+          false
+        ],
+        [
+          "c842a11ccd8e39",
+          "b97a821a4d58e8",
+          "derives",
+          false
+        ],
+        [
+          "fc5a7f99863cfa",
+          "9250233c707cf6",
+          "limits",
+          false
+        ],
+        [
+          "9250233c707cf6",
+          "b97a821a4d58e8",
+          "requires",
+          false
+        ],
+        [
+          "31bb210ad64e2e",
+          "b9b60379c1d2ce",
+          "derives",
+          false
+        ],
+        [
+          "a23a459003fba5",
+          "31bb210ad64e2e",
+          "limits",
+          false
+        ],
+        [
+          "4ce5f0f37e14c3",
+          "31bb210ad64e2e",
+          "open bridge",
+          false
+        ],
+        [
+          "0f1751893cf1af",
+          "4ce5f0f37e14c3",
+          "analogy",
+          true
+        ],
+        [
+          "5279bd6d5e8524",
+          "4ce5f0f37e14c3",
+          "limits",
+          true
+        ],
+        [
+          "1d4eb28676d1d8",
+          "0e9b6bc98ac5d2",
+          "limits",
+          true
+        ],
+        [
+          "028b5796d83c9a",
+          "31bb210ad64e2e",
+          "analogy",
+          true
+        ],
+        [
+          "028b5796d83c9a",
+          "0e9b6bc98ac5d2",
+          "limits",
+          false
+        ],
+        [
+          "96a7e06c5aae53",
+          "0e9b6bc98ac5d2",
+          "limits",
+          false
+        ],
+        [
+          "32d0106326c942",
+          "96a7e06c5aae53",
+          "limits",
+          false
+        ],
+        [
+          "129f6f135ce152",
+          "295d8f5e6c1cc8",
+          "requires",
+          false
+        ],
+        [
+          "9de264f1436533",
+          "129f6f135ce152",
+          "limits",
+          false
+        ],
+        [
+          "9de264f1436533",
+          "96a7e06c5aae53",
+          "analogy",
+          true
+        ],
+        [
+          "295d8f5e6c1cc8",
+          "0f46dd1243e139",
+          "open bridge",
+          false
+        ],
+        [
+          "ca12aa1dac8e49",
+          "0f46dd1243e139",
+          "limits",
+          false
+        ],
+        [
+          "e2ed070dd59bf4",
+          "0f46dd1243e139",
+          "limits",
+          false
+        ],
+        [
+          "e2ed070dd59bf4",
+          "31bb210ad64e2e",
+          "open bridge",
+          false
+        ],
+        [
+          "eee3370d0d59e0",
+          "af6528836fc6d5",
+          "analogy",
+          true
+        ],
+        [
+          "d27db0e813aacf",
+          "0f1751893cf1af",
+          "analogy",
+          true
+        ],
+        [
+          "308dd203aeea83",
+          "082c70813ae157",
+          "derives",
+          false
+        ],
+        [
+          "f1b571081d5e90",
+          "63a0528d048d4c",
+          "limits",
+          false
+        ],
+        [
+          "63a0528d048d4c",
+          "54ae5e3e4ab2d0",
+          "limits",
+          false
+        ],
+        [
+          "c26ddfb0c6c3c1",
+          "63a0528d048d4c",
+          "derives",
+          false
+        ],
+        [
+          "35afd981561469",
+          "09971f810bd1ae",
+          "analogy",
+          true
+        ],
+        [
+          "cb23687304de3c",
+          "f1b571081d5e90",
+          "analogy",
+          true
+        ],
+        [
+          "65ee750f5172f5",
+          "b8d383655e53ad",
+          "derives",
+          false
+        ],
+        [
+          "b8d383655e53ad",
+          "0c5946830d6503",
+          "analogy",
+          false
+        ],
+        [
+          "586bc2b943714d",
+          "55984582616167",
+          "derives",
+          false
+        ],
+        [
+          "586bc2b943714d",
+          "597ec3eb79d5f0",
+          "limits",
+          false
+        ],
+        [
+          "b8d383655e53ad",
+          "597ec3eb79d5f0",
+          "open bridge",
+          false
+        ],
+        [
+          "0c5946830d6503",
+          "597ec3eb79d5f0",
+          "open bridge",
+          false
+        ],
+        [
+          "55984582616167",
+          "b4d777519fe511",
+          "derives",
+          false
+        ],
+        [
+          "0c5946830d6503",
+          "b4d777519fe511",
+          "analogy",
+          true
+        ],
+        [
+          "b4d777519fe511",
+          "62db679c0f4ae0",
+          "open bridge",
+          true
+        ],
+        [
+          "165d6b71918394",
+          "b4d777519fe511",
+          "open bridge",
+          true
+        ],
+        [
+          "d20e94a0ba5e30",
+          "b4d777519fe511",
+          "open bridge",
+          true
+        ],
+        [
+          "197f2bf462b000",
+          "25882d4ee28cd4",
+          "limits",
+          false
+        ],
+        [
+          "197f2bf462b000",
+          "2f8573a5aceb1f",
+          "limits",
+          false
+        ],
+        [
+          "197f2bf462b000",
+          "b4d777519fe511",
+          "limits",
+          true
+        ],
+        [
+          "55984582616167",
+          "0217e280d6801f",
+          "derives",
+          false
+        ],
+        [
+          "0217e280d6801f",
+          "cb61e1302c3e9a",
+          "analogy",
+          false
+        ],
+        [
+          "af0ba032a378a7",
+          "cb61e1302c3e9a",
+          "analogy",
+          true
+        ],
+        [
+          "b4d777519fe511",
+          "cb61e1302c3e9a",
+          "analogy",
+          true
+        ],
+        [
+          "cb61e1302c3e9a",
+          "62db679c0f4ae0",
+          "open bridge",
+          true
+        ],
+        [
+          "cb61e1302c3e9a",
+          "d20e94a0ba5e30",
+          "open bridge",
+          true
+        ],
+        [
+          "2da41ea43734ab",
+          "cb61e1302c3e9a",
+          "limits",
+          false
+        ],
+        [
+          "2da41ea43734ab",
+          "b4d777519fe511",
+          "limits",
+          true
+        ],
+        [
+          "08caa0646e99ea",
+          "d4c25bad90c59b",
+          "derives",
+          false
+        ],
+        [
+          "d4c25bad90c59b",
+          "cb61e1302c3e9a",
+          "requires",
+          false
+        ],
+        [
+          "d4c25bad90c59b",
+          "d20e94a0ba5e30",
+          "requires",
+          false
+        ],
+        [
+          "abca9a4dc3faa6",
+          "cb61e1302c3e9a",
+          "limits",
+          false
+        ],
+        [
+          "af0ba032a378a7",
+          "abca9a4dc3faa6",
+          "analogy",
+          true
+        ],
+        [
+          "d4c25bad90c59b",
+          "62db679c0f4ae0",
+          "open bridge",
+          true
+        ],
+        [
+          "6453a977f72857",
+          "ee2079aeb28c72",
+          "limits",
+          false
+        ],
+        [
+          "ea306231cbd1c7",
+          "6453a977f72857",
+          "analogy",
+          true
+        ],
+        [
+          "854972505512e2",
+          "eac8e28819082c",
+          "limits",
+          false
+        ],
+        [
+          "854972505512e2",
+          "ee2079aeb28c72",
+          "limits",
+          false
+        ],
+        [
+          "eac8e28819082c",
+          "5ce7804b59a280",
+          "open bridge",
+          true
+        ],
+        [
+          "ee2079aeb28c72",
+          "9695cea614dbab",
+          "derives",
+          false
+        ],
+        [
+          "eac8e28819082c",
+          "9695cea614dbab",
+          "analogy",
+          true
+        ],
+        [
+          "9695cea614dbab",
+          "62db679c0f4ae0",
+          "open bridge",
+          false
+        ],
+        [
+          "9695cea614dbab",
+          "0c4c63f74a84f4",
+          "open bridge",
+          false
+        ],
+        [
+          "ee2079aeb28c72",
+          "613e2f2efc2836",
+          "derives",
+          false
+        ],
+        [
+          "9695cea614dbab",
+          "613e2f2efc2836",
+          "analogy",
+          false
+        ],
+        [
+          "613e2f2efc2836",
+          "62db679c0f4ae0",
+          "open bridge",
+          false
+        ],
+        [
+          "613e2f2efc2836",
+          "0c4c63f74a84f4",
+          "open bridge",
+          false
+        ],
+        [
+          "ee2079aeb28c72",
+          "e6b3046fd54666",
+          "derives",
+          false
+        ],
+        [
+          "e6b3046fd54666",
+          "14debc9d608e2f",
+          "derives",
+          false
+        ],
+        [
+          "613e2f2efc2836",
+          "14debc9d608e2f",
+          "derives",
+          false
+        ],
+        [
+          "14debc9d608e2f",
+          "62db679c0f4ae0",
+          "open bridge",
+          false
+        ],
+        [
+          "9695cea614dbab",
+          "14debc9d608e2f",
+          "analogy",
+          false
+        ],
+        [
+          "14debc9d608e2f",
+          "32b52d4f16308d",
+          "analogy",
+          false
+        ],
+        [
+          "32b52d4f16308d",
+          "62db679c0f4ae0",
+          "limits",
+          false
+        ],
+        [
+          "32b52d4f16308d",
+          "0c4c63f74a84f4",
+          "open bridge",
+          false
+        ],
+        [
+          "613e2f2efc2836",
+          "8b62cd10d4bfbc",
+          "derives",
+          false
+        ],
+        [
+          "e6b3046fd54666",
+          "8b62cd10d4bfbc",
+          "derives",
+          false
+        ],
+        [
+          "8b62cd10d4bfbc",
+          "32b52d4f16308d",
+          "limits",
+          false
+        ],
+        [
+          "8b62cd10d4bfbc",
+          "62db679c0f4ae0",
+          "open bridge",
+          false
+        ],
+        [
+          "613e2f2efc2836",
+          "7a70120d2da8b0",
+          "derives",
+          false
+        ],
+        [
+          "7a70120d2da8b0",
+          "14debc9d608e2f",
+          "analogy",
+          false
+        ],
+        [
+          "7a70120d2da8b0",
+          "32b52d4f16308d",
+          "analogy",
+          false
+        ],
+        [
+          "7a70120d2da8b0",
+          "62db679c0f4ae0",
+          "open bridge",
+          false
+        ],
+        [
+          "558753f7a399a5",
+          "613e2f2efc2836",
+          "analogy",
+          false
+        ],
+        [
+          "558753f7a399a5",
+          "62db679c0f4ae0",
+          "limits",
+          false
+        ],
+        [
+          "7a70120d2da8b0",
+          "fafac27ed5c05d",
+          "derives",
+          false
+        ],
+        [
+          "fafac27ed5c05d",
+          "62db679c0f4ae0",
+          "open bridge",
+          false
+        ],
+        [
+          "0faca3c1082566",
+          "fafac27ed5c05d",
+          "analogy",
+          false
+        ],
+        [
+          "0faca3c1082566",
+          "62db679c0f4ae0",
+          "limits",
+          false
+        ],
+        [
+          "fafac27ed5c05d",
+          "60605ad7025dd4",
+          "analogy",
+          true
+        ],
+        [
+          "60605ad7025dd4",
+          "62db679c0f4ae0",
+          "open bridge",
+          false
+        ],
+        [
+          "60605ad7025dd4",
+          "48a955ae6b2197",
+          "derives",
+          false
+        ],
+        [
+          "48a955ae6b2197",
+          "0c4c63f74a84f4",
+          "open bridge",
+          false
+        ],
+        [
+          "48a955ae6b2197",
+          "62db679c0f4ae0",
+          "open bridge",
+          false
+        ],
+        [
+          "60605ad7025dd4",
+          "03cd4431245178",
+          "derives",
+          false
+        ],
+        [
+          "03cd4431245178",
+          "48a955ae6b2197",
+          "derives",
+          false
+        ],
+        [
+          "03cd4431245178",
+          "a0781c8f3f2872",
+          "derives",
+          false
+        ],
+        [
+          "03cd4431245178",
+          "0c4c63f74a84f4",
+          "open bridge",
+          false
+        ],
+        [
+          "a0781c8f3f2872",
+          "0c4c63f74a84f4",
+          "open bridge",
+          false
+        ],
+        [
+          "03cd4431245178",
+          "36cfefb5025f1a",
+          "analogy",
+          false
+        ],
+        [
+          "a4c7a43c4b83ee",
+          "36cfefb5025f1a",
+          "requires",
+          false
+        ],
+        [
+          "4db6da39cfcd80",
+          "36cfefb5025f1a",
+          "derives",
+          false
+        ],
+        [
+          "a4c7a43c4b83ee",
+          "4db6da39cfcd80",
+          "open bridge",
+          false
+        ],
+        [
+          "36cfefb5025f1a",
+          "0c4c63f74a84f4",
+          "open bridge",
+          false
+        ],
+        [
+          "36cfefb5025f1a",
+          "234fb8d3a43c75",
+          "derives",
+          false
+        ],
+        [
+          "234fb8d3a43c75",
+          "478fa2e1fc09ac",
+          "derives",
+          false
+        ],
+        [
+          "478fa2e1fc09ac",
+          "6abb02ea5ab8a1",
+          "generalizes",
+          false
+        ],
+        [
+          "03cd4431245178",
+          "6abb02ea5ab8a1",
+          "generalizes",
+          false
+        ],
+        [
+          "6abb02ea5ab8a1",
+          "9a774b3c63f8b0",
+          "derives",
+          false
+        ],
+        [
+          "9a774b3c63f8b0",
+          "9edacdfe6a13a4",
+          "derives",
+          false
+        ],
+        [
+          "9edacdfe6a13a4",
+          "3057406ab75659",
+          "derives",
+          false
+        ],
+        [
+          "3057406ab75659",
+          "a06e4234254f6f",
+          "derives",
+          false
+        ],
+        [
+          "a06e4234254f6f",
+          "fd662a96886ff8",
+          "derives",
+          false
+        ],
+        [
+          "25882d4ee28cd4",
+          "003191f6201d52",
+          "limits",
+          true
+        ],
+        [
+          "65ee750f5172f5",
+          "af0ba032a378a7",
+          "analogy",
+          true
+        ],
+        [
+          "0c5946830d6503",
+          "0c4c63f74a84f4",
+          "open bridge",
+          true
+        ],
+        [
+          "af0ba032a378a7",
+          "22d4e609f2868a",
+          "analogy",
+          true
+        ],
+        [
+          "9048ed888925ad",
+          "1d4eb28676d1d8",
+          "analogy",
+          true
+        ],
+        [
+          "0601027dfa12ba",
+          "d6759b739484aa",
+          "analogy",
+          true
+        ],
+        [
+          "003191f6201d52",
+          "ea306231cbd1c7",
+          "analogy",
+          true
+        ],
+        [
+          "df65ae3950d6d6",
+          "5ce7804b59a280",
+          "limits",
+          true
+        ],
+        [
+          "308dd203aeea83",
+          "b3ed32bea4e23c",
+          "analogy",
+          true
+        ],
+        [
+          "3ca2efda85da40",
+          "f31cf48ad1c2a8",
+          "limits",
+          true
+        ],
+        [
+          "3ca2efda85da40",
+          "8a9196ab1014d9",
+          "analogy",
+          true
+        ],
+        [
+          "a486a15d7867ee",
+          "54ae5e3e4ab2d0",
+          "analogy",
+          true
+        ],
+        [
+          "f1b571081d5e90",
+          "e6d50596fa70eb",
+          "analogy",
+          true
+        ],
+        [
+          "35afd981561469",
+          "0601027dfa12ba",
+          "analogy",
+          true
+        ],
+        [
+          "c26ddfb0c6c3c1",
+          "62db679c0f4ae0",
+          "open bridge",
+          true
+        ],
+        [
+          "9de264f1436533",
+          "9c68dd61a39423",
+          "analogy",
+          true
+        ],
+        [
+          "ca12aa1dac8e49",
+          "e2ed070dd59bf4",
+          "open bridge",
+          true
+        ],
+        [
+          "deeb12913cd86b",
+          "33e5816cc69290",
+          "analogy",
+          true
+        ],
+        [
+          "9a9b2975dac4d9",
+          "e6d50596fa70eb",
+          "analogy",
+          true
+        ],
+        [
+          "05fec543e3aa85",
+          "e2ed070dd59bf4",
+          "limits",
+          true
+        ],
+        [
+          "adcfbd33b62f09",
+          "3ca2efda85da40",
+          "analogy",
+          true
+        ],
+        [
+          "16e2f4a905e7ce",
+          "d6759b739484aa",
+          "analogy",
+          true
+        ],
+        [
+          "df65ae3950d6d6",
+          "d4c25bad90c59b",
+          "analogy",
+          true
+        ],
+        [
+          "cbbceb22356bd5",
+          "d4c25bad90c59b",
+          "analogy",
+          true
+        ]
+      ]
+    },
+    "fold": {
+      "nodes": [
+        {
+          "id": "4d98893e06cf66",
+          "label": "Formation of a local organizing state",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "32d833f348ce37",
+          "label": "Physical systems in which organization can arise",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "8845886be6cbcf",
+          "label": "Impossibility within a specified class",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "9fc58f1abf0d4f",
+          "label": "Necessary and sufficient conditions",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "1d577afd108d98",
+          "label": "Unfolding from structure already present",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "698a8201fcbbed",
+          "label": "Formation within an ordered environment",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "398b9e4fa29bd7",
+          "label": "Operational novelty",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "afd5f9b260e5a1",
+          "label": "Interpretive capacity of the environment",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "95410dfdd689c1",
+          "label": "Locality and capacity",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "6308198a172138",
+          "label": "Preparation depth and accuracy",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "5498723eb85329",
+          "label": "How the price of composition scales",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Open"
+        },
+        {
+          "id": "709e3452392ea1",
+          "label": "Algebra of carriers",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "2363dca2c4cb38",
+          "label": "Form under changes of tempo",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "89515eb0d18aac",
+          "label": "Cold elastic contrast",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Open"
+        },
+        {
+          "id": "516554f5ef5e93",
+          "label": "Thermal behaviour across multiple blocks",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Open"
+        },
+        {
+          "id": "967002beecb15b",
+          "label": "Local state and receiving environment",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Open"
+        },
+        {
+          "id": "ca58103b696fd9",
+          "label": "Sufficiency of a description of acquired form",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Open"
+        },
+        {
+          "id": "47197a6106866b",
+          "label": "Formation in an ordered environment",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "1b709e6b3eef77",
+          "label": "Novelty of a configuration",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "d019327296e273",
+          "label": "Interpreting configuration rarity",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "9fb31c2a31ef48",
+          "label": "Existence of a formative state",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "1620293f5c8761",
+          "label": "Open directed paths",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "5539b60eb3736e",
+          "label": "Formation and execution",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "2e41844ff2edcd",
+          "label": "Causal effects of feedback",
+          "paper": null,
+          "topic": "Feedback",
+          "status": "Under review"
+        },
+        {
+          "id": "035086e2363bbe",
+          "label": "Preserving order during plastic execution",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Closed"
+        },
+        {
+          "id": "d31d9ecd6a140e",
+          "label": "Endogenous readout",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Under review"
+        },
+        {
+          "id": "6a1de6d41e8c6b",
+          "label": "Minimal determining region",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Closed"
+        },
+        {
+          "id": "722e3cba1ea8d4",
+          "label": "Limits of possibility",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Withdrawn"
+        },
+        {
+          "id": "c2841d720520c2",
+          "label": "Implicit wholes",
+          "paper": null,
+          "topic": "Alternative models",
+          "status": "Restricted scope"
+        },
+        {
+          "id": "bea1bdd5c77a7a",
+          "label": "Parallel batches and a scalar order",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Refuted"
+        },
+        {
+          "id": "84b5b70d46b777",
+          "label": "Criteria for novelty",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Restricted scope"
+        },
+        {
+          "id": "99569894a09154",
+          "label": "Tempo and stable relations",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Refuted"
+        },
+        {
+          "id": "a18f9f7a0565f3",
+          "label": "Cost of reliable composition",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Restricted scope"
+        },
+        {
+          "id": "9af71fa6b2975c",
+          "label": "Equilibrium formation and unfolding",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Refuted"
+        },
+        {
+          "id": "a93272199a8c2d",
+          "label": "Reversibility and persistence of organization",
+          "paper": null,
+          "topic": "Alternative models",
+          "status": "Refuted"
+        },
+        {
+          "id": "13fb6671965df1",
+          "label": "Depth of a likely sequence",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Withdrawn"
+        },
+        {
+          "id": "151d29a5a81ac4",
+          "label": "Information specified by composition",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Restricted scope"
+        },
+        {
+          "id": "7e64d60a108276",
+          "label": "Cost and range",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Restricted scope"
+        },
+        {
+          "id": "4a5240c26d6944",
+          "label": "Finite kernels and automaticity",
+          "paper": null,
+          "topic": "Alternative models",
+          "status": "Restricted scope"
+        },
+        {
+          "id": "262ee2e0e4953a",
+          "label": "Substitution dynamics",
+          "paper": null,
+          "topic": "Alternative models",
+          "status": "Restricted scope"
+        },
+        {
+          "id": "d3e720380a8ce5",
+          "label": "Confluence",
+          "paper": null,
+          "topic": "Alternative models",
+          "status": "Withdrawn"
+        },
+        {
+          "id": "2ee7a5012d78ed",
+          "label": "Recoil",
+          "paper": null,
+          "topic": "Alternative models",
+          "status": "Open"
+        },
+        {
+          "id": "436183da0b7968",
+          "label": "Dynamic rank inversion",
+          "paper": null,
+          "topic": "Alternative models",
+          "status": "Prior work"
+        },
+        {
+          "id": "ac7885f6694a99",
+          "label": "Interchangeability in protected assembly",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Refuted"
+        },
+        {
+          "id": "4d31fdf323dafe",
+          "label": "Order under incomplete observation",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Withdrawn"
+        },
+        {
+          "id": "59e66bd77f041f",
+          "label": "Limits on possible forms",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Open"
+        },
+        {
+          "id": "89121cf2df7afc",
+          "label": "Acquired partitions",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Under review"
+        },
+        {
+          "id": "d8e3225e2a2d96",
+          "label": "Paired slots and an executor",
+          "paper": null,
+          "topic": "Correlation and assembly",
+          "status": "Result"
+        },
+        {
+          "id": "41b06990a74e56",
+          "label": "Coupled evolution of states and links",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Result"
+        },
+        {
+          "id": "3d05792313196c",
+          "label": "An age-dependent random partial order",
+          "paper": null,
+          "topic": "Random partial orders",
+          "status": "Result"
+        },
+        {
+          "id": "b2b73cabb1aed3",
+          "label": "Kinetically constrained dynamics",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "374ccd9155a44e",
+          "label": "Hierarchical coalescence process",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "e980d2152f3d40",
+          "label": "Reciprocal gradient diffusion",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "ca0ceccaa54829",
+          "label": "Elastic line with insertions",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Limited result"
+        },
+        {
+          "id": "20b6578f517e7e",
+          "label": "Moving coupled blocks",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "44619320791f85",
+          "label": "Allen–Cahn interfaces in three dimensions",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "2d03d8a10ef5ae",
+          "label": "Simplex embedding",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Result"
+        },
+        {
+          "id": "6723905a187823",
+          "label": "A finite thermal Markov chain",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Result"
+        },
+        {
+          "id": "a16e5c0d8893c7",
+          "label": "Hydra cell aggregates",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Limited result"
+        },
+        {
+          "id": "eb1a97729e2efc",
+          "label": "Active shell mechanics",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Limited result"
+        },
+        {
+          "id": "4d33c20dbc00fb",
+          "label": "Crumpled sheet",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Under review"
+        },
+        {
+          "id": "259be7f5fb5ecd",
+          "label": "Polarity in Drosophila",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "ec986a9f2a508c",
+          "label": "Cortical organization in Paramecium",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "30064b3e092582",
+          "label": "Neuronal homeobox codes",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "39981cb929cf16",
+          "label": "Threshold hub with recoil",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "2c5f80cb305381",
+          "label": "Hippocampal recordings",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Preliminary"
+        },
+        {
+          "id": "6636f4a9746ea0",
+          "label": "Language models as substrates",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Under review"
+        },
+        {
+          "id": "48ab72fe2d4e73",
+          "label": "Cycle and phase models",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Preliminary"
+        },
+        {
+          "id": "6fca76ed4167f3",
+          "label": "Sequences in neuronal data",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Preliminary"
+        },
+        {
+          "id": "d940a13ae897b5",
+          "label": "Formation of a sequence carrier",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Prior work"
+        },
+        {
+          "id": "ce7b177f8d7283",
+          "label": "Form after recovery",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Closed"
+        },
+        {
+          "id": "9dac1507b40bab",
+          "label": "Embryonic organization",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Limited result"
+        },
+        {
+          "id": "77abb839bd2f34",
+          "label": "Acquired differences after loss of geometry",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Result"
+        },
+        {
+          "id": "046cf33c1ae836",
+          "label": "Endogenous code and finite execution",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Result"
+        },
+        {
+          "id": "3e5c9b493c9edf",
+          "label": "Shifts and isolated events",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Limited result"
+        },
+        {
+          "id": "c5f6cbb1992fa2",
+          "label": "Sufficient criterion for preserving order",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Result"
+        },
+        {
+          "id": "0929a93e28cc01",
+          "label": "Monotone additive networks",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Result"
+        },
+        {
+          "id": "6e4d18e8c7e52e",
+          "label": "Island and front asymptotics",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Result"
+        },
+        {
+          "id": "bbc5a681e2ed18",
+          "label": "Acquired selectivity",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Result"
+        },
+        {
+          "id": "2112cd0ccffae1",
+          "label": "Composition and sequence",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Result"
+        },
+        {
+          "id": "3e8195360049f2",
+          "label": "Nonempty classes of generated states",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Result"
+        },
+        {
+          "id": "c04a6751f85b98",
+          "label": "Persistent commuting systems",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Preliminary"
+        },
+        {
+          "id": "deddf6865c32f2",
+          "label": "A model of the formative system",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Preliminary"
+        },
+        {
+          "id": "b6c97c7bd447f1",
+          "label": "Channels of prior state",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Limited result"
+        },
+        {
+          "id": "ad272bebf53d02",
+          "label": "Dating the emergence of organization",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Preliminary"
+        },
+        {
+          "id": "a31c9ffc96057a",
+          "label": "Candidate physical systems",
+          "paper": null,
+          "topic": "Alternative models",
+          "status": "Limited result"
+        },
+        {
+          "id": "bcfbf135dcccf6",
+          "label": "Access to a historical episode",
+          "paper": null,
+          "topic": "Limits of local descriptions",
+          "status": "Under review"
+        },
+        {
+          "id": "fe73a7e31ebc02",
+          "label": "Distribution of small directed acyclic graphs",
+          "paper": null,
+          "topic": "Correlation and assembly",
+          "status": "Result"
+        },
+        {
+          "id": "c0679e788de95e",
+          "label": "Connectivity, isolation and the cost of contact",
+          "paper": null,
+          "topic": "Correlation and assembly",
+          "status": "Result"
+        },
+        {
+          "id": "96dcbcde45c8c4",
+          "label": "Fragility of dense assembly",
+          "paper": null,
+          "topic": "Correlation and assembly",
+          "status": "Result"
+        },
+        {
+          "id": "c2a3763a86923e",
+          "label": "Sparse assembly in the presence of false prerequisites",
+          "paper": null,
+          "topic": "Correlation and assembly",
+          "status": "Result"
+        },
+        {
+          "id": "a0477469abd547",
+          "label": "Criterion for complete execution",
+          "paper": null,
+          "topic": "Correlation and assembly",
+          "status": "Result"
+        },
+        {
+          "id": "61b2bb95a2b9f7",
+          "label": "Distribution of compositions",
+          "paper": null,
+          "topic": "Correlation and assembly",
+          "status": "Result"
+        },
+        {
+          "id": "af5e9c25c82827",
+          "label": "Critical reachability window",
+          "paper": null,
+          "topic": "Correlation and assembly",
+          "status": "Limited result"
+        },
+        {
+          "id": "7425b6e67ea086",
+          "label": "Depth from substitution",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "6bc991488b48d8",
+          "label": "Selection within a family",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Withdrawn"
+        },
+        {
+          "id": "e9213d4422de6a",
+          "label": "Four levels of equivalence",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Result"
+        },
+        {
+          "id": "5979fecdadcc7a",
+          "label": "Retention and link removal",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Result"
+        },
+        {
+          "id": "a4ea6bedb7b5e6",
+          "label": "Reachability with revision",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Result"
+        },
+        {
+          "id": "a43ece7b4b5280",
+          "label": "Causal contrast without weights",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Result"
+        },
+        {
+          "id": "b07b9c1f2e4f03",
+          "label": "Late preservation of composition",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Result"
+        },
+        {
+          "id": "e550abad225b6b",
+          "label": "Autonomous onset of execution",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Result"
+        },
+        {
+          "id": "d72aa4efdfb614",
+          "label": "Execution during reorganization",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Result"
+        },
+        {
+          "id": "cd501ab5a1a5c4",
+          "label": "Observation and causal contrast",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Result"
+        },
+        {
+          "id": "9223a2b2e77ac6",
+          "label": "Scalar obstruction",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Result"
+        },
+        {
+          "id": "10609996c3f339",
+          "label": "Dimension and load ceiling",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Result"
+        },
+        {
+          "id": "1c868b03a6f93f",
+          "label": "Relations from small initial states",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Result"
+        },
+        {
+          "id": "8977b8cd27d5de",
+          "label": "Internal formation and stochastic unfolding",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Result"
+        },
+        {
+          "id": "a703bd589d08e5",
+          "label": "Prior work on relational emergence",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Result"
+        },
+        {
+          "id": "eb1747ddb227f4",
+          "label": "Small sufficient mass and rarity",
+          "paper": null,
+          "topic": "States and couplings",
+          "status": "Limited result"
+        },
+        {
+          "id": "0c64c6769e6de9",
+          "label": "Subthreshold Bessel bound",
+          "paper": null,
+          "topic": "Feedback",
+          "status": "Limited result"
+        },
+        {
+          "id": "cf00fa2a5e74c5",
+          "label": "Counterexample to a feedback prediction",
+          "paper": null,
+          "topic": "Feedback",
+          "status": "Limited result"
+        },
+        {
+          "id": "ff764f85dac1d2",
+          "label": "Compact law of relations",
+          "paper": null,
+          "topic": "Random partial orders",
+          "status": "Result"
+        },
+        {
+          "id": "e13a330fa99594",
+          "label": "Above-threshold saturation",
+          "paper": null,
+          "topic": "Random partial orders",
+          "status": "Result"
+        },
+        {
+          "id": "2c77e9edd13955",
+          "label": "The reachability threshold for a power-law gap kernel",
+          "paper": "power-law-gap-reachability",
+          "topic": "Random partial orders",
+          "status": "Result"
+        },
+        {
+          "id": "a9e6744ea2f632",
+          "label": "Boundary of a reachability argument",
+          "paper": null,
+          "topic": "Random partial orders",
+          "status": "Result"
+        },
+        {
+          "id": "7f94d3823f688b",
+          "label": "Completeness of a threshold argument",
+          "paper": null,
+          "topic": "Alternative models",
+          "status": "Result"
+        },
+        {
+          "id": "2fe20a1194e9bd",
+          "label": "Height of the random partial order",
+          "paper": null,
+          "topic": "Random partial orders",
+          "status": "Result"
+        },
+        {
+          "id": "c449ea8e88d3f5",
+          "label": "Smooth age windows and interval orders",
+          "paper": null,
+          "topic": "Random partial orders",
+          "status": "Result"
+        },
+        {
+          "id": "0722b2c7ca4d9c",
+          "label": "Early growth",
+          "paper": null,
+          "topic": "Random partial orders",
+          "status": "Preliminary"
+        },
+        {
+          "id": "166ee7fb0e6f1c",
+          "label": "Grammar of competition",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Limited result"
+        },
+        {
+          "id": "a4da33edfe1f32",
+          "label": "Uniform stitching lemma",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Result"
+        },
+        {
+          "id": "73d06257000c2b",
+          "label": "Limits of inverse inference",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Result"
+        },
+        {
+          "id": "94dca469805495",
+          "label": "Trace condition",
+          "paper": null,
+          "topic": "Alternative models",
+          "status": "Result"
+        },
+        {
+          "id": "a38d67f619697f",
+          "label": "Trained materials and thresholds",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Restricted scope"
+        },
+        {
+          "id": "c6d22686c4799f",
+          "label": "Language of live execution",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Result"
+        },
+        {
+          "id": "c56871912af239",
+          "label": "Continuations after a common prefix",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Result"
+        },
+        {
+          "id": "6d6a70b37cd315",
+          "label": "A transient link during revision",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Limited result"
+        },
+        {
+          "id": "452dbd259a5d4e",
+          "label": "Preparation and joint executability",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Result"
+        },
+        {
+          "id": "4840fdf9ae95ac",
+          "label": "Local mechanics of a polarity field",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Limited result"
+        },
+        {
+          "id": "ed3afcbba4b3a1",
+          "label": "Changing carriers and linear extensions",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Result"
+        },
+        {
+          "id": "d51da707c5c5e6",
+          "label": "Monotone schedules by epoch",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "38961357d8aa19",
+          "label": "Orientation of fibres and protrusions",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Limited result"
+        },
+        {
+          "id": "fa309d6ae7d9dd",
+          "label": "Mechanochemical active surfaces",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Prior work"
+        },
+        {
+          "id": "a08d96846007ec",
+          "label": "Causal contrast in crumpled sheets",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Under review"
+        },
+        {
+          "id": "a9bddd95e869d5",
+          "label": "Tree growth and equal cuts",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Prior work"
+        },
+        {
+          "id": "adeb65b845505a",
+          "label": "Relaxational composition",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Result"
+        },
+        {
+          "id": "26a08e5e6f36b4",
+          "label": "Passive memory during action",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Result"
+        },
+        {
+          "id": "296ed8dc42fe5c",
+          "label": "Detailed balance during action",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Result"
+        },
+        {
+          "id": "d210aacad377df",
+          "label": "Physical constraints on formation",
+          "paper": null,
+          "topic": "Origins of order",
+          "status": "Result"
+        },
+        {
+          "id": "536cd0703bca5e",
+          "label": "Histories of coalescence in the East model",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "86829417fd5068",
+          "label": "Soft-barrier threshold",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "6e8d653c9b342d",
+          "label": "First elastic branching",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Limited result"
+        },
+        {
+          "id": "ea04bf4e8ec555",
+          "label": "Elastic returns",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Limited result"
+        },
+        {
+          "id": "fb5b757ebb415e",
+          "label": "History along elastic rearrangements",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "0b14e2b20cccb3",
+          "label": "Weak interaction contrast",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "ec13c454b94cd0",
+          "label": "Barrier graph of a reciprocal potential",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "16541ad889ab27",
+          "label": "Composition in reciprocal diffusion",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "cbf3c02ae15ac2",
+          "label": "Local stability of composition",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "de18d7ec9ed026",
+          "label": "Finite coalescence repertoire",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "1531174b63062a",
+          "label": "Soft kernel and tree criterion",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "959b325f8da4f6",
+          "label": "Organization across aggregates",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "6332b0f5fa49e7",
+          "label": "Thermal preparation and block memory",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "3def2c96395f5c",
+          "label": "Thermal triples",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Limited result"
+        },
+        {
+          "id": "ad25e56d257abd",
+          "label": "Prepared thermal response",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "5b055d9cf654a2",
+          "label": "Prepared collisions",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Limited result"
+        },
+        {
+          "id": "523dcb0b648dd1",
+          "label": "Equilibrium formation of composition",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "4aa66f09995a8c",
+          "label": "Ring without a pinned coordinate",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "f4ebd9760fe01e",
+          "label": "Physical origin of ring order",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "9b8793c9d86a34",
+          "label": "Late returns in a full history",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "5d560198e2ad19",
+          "label": "Geometric composition in Allen–Cahn dynamics",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "dcd719bdf7550c",
+          "label": "Binary trees of labelled relations",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "de4841acad4ed6",
+          "label": "Geometric origin of organization",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "fb0400d2f65d5c",
+          "label": "Definition of the formative object",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "368a83efcb1afe",
+          "label": "Identifiability from state history",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "fbb77f04060b8a",
+          "label": "Information in differences between wholes",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "8385371e46e995",
+          "label": "Limits of inferring origin from future behaviour",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "6f71db9a80116e",
+          "label": "Sum epochs in coalescence",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "009fae16ca331e",
+          "label": "Limits of an interchangeability classification",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "4299309260f141",
+          "label": "Differences revealed by context",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "13304b1b1667c9",
+          "label": "Competence without relay",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "bd86d293391f59",
+          "label": "Acquisition of polarity",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "d4a544b5549fdb",
+          "label": "Cortical composition",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "abcb04d7b4053d",
+          "label": "Three formation questions",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "3a12c9ac06e009",
+          "label": "Width of the composition window",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Restricted scope"
+        },
+        {
+          "id": "04a177a5d884f6",
+          "label": "Repertoire capacity and rarity",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Restricted scope"
+        },
+        {
+          "id": "0bbaf69587029d",
+          "label": "Bounds on repertoire capacity",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Result"
+        },
+        {
+          "id": "c01952a9ac86f1",
+          "label": "Hierarchies in locomotion",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "06137b882d12f7",
+          "label": "Passive readout lemma",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "555021d8a1d43e",
+          "label": "Recoil as a control",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "f9ae6c8ceffb82",
+          "label": "Information bottleneck bound",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Restricted scope"
+        },
+        {
+          "id": "dc7cf7666d5602",
+          "label": "Tempo across two epochs",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "947f13983605de",
+          "label": "Ring trajectories",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "443984ee5c4176",
+          "label": "Order without clocks",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "afcb6f6fe8f44f",
+          "label": "Mirror correspondence",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Limited result"
+        },
+        {
+          "id": "4934fa0123e162",
+          "label": "Depth of successive partitions",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "cbecd4e138eb3f",
+          "label": "Alternating rhythms",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "eec6f1679a22c1",
+          "label": "Reliability and rarity",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "89599c22b13e00",
+          "label": "Energy cost of directionality",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Prior work"
+        },
+        {
+          "id": "a4b9b0c4fa899d",
+          "label": "Macrostate reversal identity",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "d7d543f97c2931",
+          "label": "Counterexample to a cost trilemma",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Result"
+        },
+        {
+          "id": "aae63b631c76ca",
+          "label": "Strand displacement and confluence",
+          "paper": null,
+          "topic": "Alternative models",
+          "status": "Restricted scope"
+        },
+        {
+          "id": "86ecd75f2b9e7b",
+          "label": "Periodic substitution and aperiodic order",
+          "paper": null,
+          "topic": "Alternative models",
+          "status": "Preliminary"
+        },
+        {
+          "id": "336deb0f49bd5d",
+          "label": "Rarity under intervention",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Limited result"
+        },
+        {
+          "id": "0dee310413188d",
+          "label": "Competition and neural sequences",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "41f24716e7d61f",
+          "label": "Limits of random orders",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "10480cdbc3f5b1",
+          "label": "Interval orders",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "0be02c2c2c33e4",
+          "label": "Organization and branching motifs",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "93c8ed67cddd61",
+          "label": "Thermodynamics of computation",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "778dfb5605b023",
+          "label": "Trace theory",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "b12fb04b1f4b10",
+          "label": "Completion and critical pairs",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "b14fa3c30c4be3",
+          "label": "Random tree growth",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "cbf43c7d59c6ad",
+          "label": "Hall’s theorem and transversal matroids",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "defdfe8e777491",
+          "label": "Tempo and rate limitation",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "6fe1713c6bfa06",
+          "label": "Reliable computation with unreliable elements",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "d9ba1539d704ad",
+          "label": "Geometry of interfaces",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "1c6be09f7a9bc4",
+          "label": "Predictive information and time reversal",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "899948d67f9428",
+          "label": "Scrambling in hysterons",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "b5f28c40bbc366",
+          "label": "Automatic sequences",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "c7e49fdf894b16",
+          "label": "Periodic coarsening",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "481115bc272afe",
+          "label": "Homeobox codes in C. elegans",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "a0e9933e29c640",
+          "label": "Hydra aggregates",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "98d40ed0e21f50",
+          "label": "Mechanisms of ring formation",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "b8d391174c7699",
+          "label": "Monotone additive networks",
+          "paper": null,
+          "topic": "Earlier results",
+          "status": "Prior work"
+        },
+        {
+          "id": "653f6cf70c25c9",
+          "label": "Learning by a receiving environment",
+          "paper": null,
+          "topic": "Open measurements",
+          "status": "Open"
+        },
+        {
+          "id": "33ca87b2c6ca44",
+          "label": "Measuring configuration rarity",
+          "paper": null,
+          "topic": "Open measurements",
+          "status": "Open"
+        },
+        {
+          "id": "7e70f0709660e7",
+          "label": "Interpreter and causal state",
+          "paper": null,
+          "topic": "Open measurements",
+          "status": "Open"
+        },
+        {
+          "id": "5082d57ff9c77d",
+          "label": "Locality and capacity of a putative carrier",
+          "paper": null,
+          "topic": "Open measurements",
+          "status": "Open"
+        },
+        {
+          "id": "79ede6b0f6213c",
+          "label": "Scaling with number of parts",
+          "paper": null,
+          "topic": "Open measurements",
+          "status": "Open"
+        },
+        {
+          "id": "6295dd701cc9a6",
+          "label": "Evidence for central results",
+          "paper": null,
+          "topic": "Open measurements",
+          "status": "Open"
+        },
+        {
+          "id": "2c767b1b44b6c4",
+          "label": "Reduction to prior results",
+          "paper": null,
+          "topic": "Open measurements",
+          "status": "Open"
+        },
+        {
+          "id": "a8f06af24767a4",
+          "label": "From a model to living tissue",
+          "paper": null,
+          "topic": "Open measurements",
+          "status": "Open"
+        },
+        {
+          "id": "1b1e00453f18b6",
+          "label": "Mediation between formation and execution",
+          "paper": null,
+          "topic": "Open measurements",
+          "status": "Open"
+        },
+        {
+          "id": "04c6e8e1c5234b",
+          "label": "Composition with an environment",
+          "paper": null,
+          "topic": "Open measurements",
+          "status": "Open"
+        },
+        {
+          "id": "2a8fb54e934ec6",
+          "label": "Preparation resources in coupled models",
+          "paper": null,
+          "topic": "Open measurements",
+          "status": "Open"
+        },
+        {
+          "id": "6e6869ca33c72d",
+          "label": "Measuring tempo",
+          "paper": null,
+          "topic": "Open measurements",
+          "status": "Open"
+        },
+        {
+          "id": "b39a80a55a16ea",
+          "label": "Information carried by the interpreter",
+          "paper": null,
+          "topic": "Open measurements",
+          "status": "Open"
+        },
+        {
+          "id": "f1489a7c6dba6c",
+          "label": "Protected domains and tree weights",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "4bb3923d939a49",
+          "label": "Future laws after the third epoch",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "85a2b98283a0d7",
+          "label": "Prepared tissue in planaria",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "f57013ee07e6fa",
+          "label": "Prepared tissue and new axial anatomy",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "3ec0935f5938d9",
+          "label": "Parts in a larger whole",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Open"
+        },
+        {
+          "id": "f3ce9054ea79d2",
+          "label": "Competent environments",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "429e2b18638dac",
+          "label": "Scope of the power-law threshold",
+          "paper": null,
+          "topic": "Random partial orders",
+          "status": "Withdrawn"
+        },
+        {
+          "id": "b526089d900164",
+          "label": "Mirror correspondence in stationary diffusion",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Result"
+        },
+        {
+          "id": "2aff94bbff19da",
+          "label": "Boundaries on possible compositions",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "eb56be8bbfbd19",
+          "label": "Preservation across different executions",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "7f3dbd892eba02",
+          "label": "Physical contrasts between forms",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "74b6c658449c89",
+          "label": "Dynamics and possible compositions",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Open"
+        },
+        {
+          "id": "73f0bfa4838fbb",
+          "label": "Anatomy during tissue reorganization",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "6b4e9107540393",
+          "label": "Limits of local polarity control",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "67e851c498577e",
+          "label": "Position of new organizing centres",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "3222aaa1b52e92",
+          "label": "Compound regeneration",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "f186088c71bd01",
+          "label": "Local geometry and later hierarchy",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "942e1092fad82d",
+          "label": "Composition beyond the repertoire",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "5130f53e5e1a1d",
+          "label": "Candidate systems for composition",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "6b17535793d312",
+          "label": "Specificity and joint continuation in RNA",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "a84f063c1967a4",
+          "label": "Acquired life cycles",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "79aae5a962d965",
+          "label": "Products that become producers",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "d425cef365468a",
+          "label": "Early changes to future composition",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "16cef4d2184a3e",
+          "label": "Order after a common first movement",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "9cf5d9db7a6c1f",
+          "label": "Preparation at several sites",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "c70313158f1102",
+          "label": "Later ancestry after a common first merger",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "2ad215402b2b82",
+          "label": "Window for late divergence",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "a6aadd099fd47f",
+          "label": "Precision of one-sided cold assembly",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "98e3197e3c3592",
+          "label": "Functional contrasts in digital evolution",
+          "paper": null,
+          "topic": "Costs and scales",
+          "status": "Preliminary"
+        },
+        {
+          "id": "e42d559f9b4e0d",
+          "label": "Alternating cold assembly",
+          "paper": null,
+          "topic": "Physical carriers",
+          "status": "Result"
+        },
+        {
+          "id": "ae6085ccc06ad9",
+          "label": "Basin of acquisition",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "a451c533048786",
+          "label": "Density of acquired structures",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Limited result"
+        },
+        {
+          "id": "410624a11fb9fa",
+          "label": "Two-label test for new clades",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "8ee20b71bb2172",
+          "label": "Scaling of acquired organization",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "6c325d76223c87",
+          "label": "Bounds on large-scale guarantees",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "b28c97f6050b6c",
+          "label": "Universality in one-dimensional coalescence",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Prior work"
+        },
+        {
+          "id": "5ecf3504bcdefc",
+          "label": "Aging in the East model",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Prior work"
+        },
+        {
+          "id": "206391eb37e49d",
+          "label": "Stability of prepared hierarchies",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "a7e9971b3df5e1",
+          "label": "Identifiability of later chemical order",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "aa4414a6499bac",
+          "label": "Sequential mechanical coupling",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "10128ee36e3915",
+          "label": "Internal reuse",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "15afe84bb144a8",
+          "label": "Passive compliance",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "b2abb14e91f262",
+          "label": "Active embedding and passive calibration",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "f136114508f81e",
+          "label": "Relations in digital evolutionary histories",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "6505a425713013",
+          "label": "Prepared organization in Botrylloides",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "f3adbbb36aa607",
+          "label": "History-dependent readout",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "2ee3ecc95844c0",
+          "label": "Preserved craniofacial relations in Xenopus",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Result"
+        },
+        {
+          "id": "6f076d0beb8431",
+          "label": "Local functional contrast in digital evolution",
+          "paper": null,
+          "topic": "State and environment",
+          "status": "Under review"
+        },
+        {
+          "id": "88d04df02b8a63",
+          "label": "Tempo thresholds",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        }
+      ],
+      "edges": [
+        [
+          "32d833f348ce37",
+          "4d98893e06cf66",
+          "refines",
+          false
+        ],
+        [
+          "8845886be6cbcf",
+          "4d98893e06cf66",
+          "refines",
+          false
+        ],
+        [
+          "9fc58f1abf0d4f",
+          "4d98893e06cf66",
+          "refines",
+          false
+        ],
+        [
+          "1d577afd108d98",
+          "32d833f348ce37",
+          "refines",
+          false
+        ],
+        [
+          "698a8201fcbbed",
+          "32d833f348ce37",
+          "refines",
+          false
+        ],
+        [
+          "398b9e4fa29bd7",
+          "32d833f348ce37",
+          "refines",
+          false
+        ],
+        [
+          "afd5f9b260e5a1",
+          "9fc58f1abf0d4f",
+          "refines",
+          false
+        ],
+        [
+          "95410dfdd689c1",
+          "9fc58f1abf0d4f",
+          "refines",
+          false
+        ],
+        [
+          "6308198a172138",
+          "9fc58f1abf0d4f",
+          "refines",
+          false
+        ],
+        [
+          "5498723eb85329",
+          "6308198a172138",
+          "refines",
+          true
+        ],
+        [
+          "709e3452392ea1",
+          "4d98893e06cf66",
+          "refines",
+          false
+        ],
+        [
+          "2363dca2c4cb38",
+          "4d98893e06cf66",
+          "refines",
+          false
+        ],
+        [
+          "ca58103b696fd9",
+          "95410dfdd689c1",
+          "refines",
+          true
+        ],
+        [
+          "967002beecb15b",
+          "afd5f9b260e5a1",
+          "refines",
+          true
+        ],
+        [
+          "967002beecb15b",
+          "ca58103b696fd9",
+          "raises question",
+          false
+        ],
+        [
+          "89515eb0d18aac",
+          "1d577afd108d98",
+          "refines",
+          true
+        ],
+        [
+          "516554f5ef5e93",
+          "698a8201fcbbed",
+          "refines",
+          true
+        ],
+        [
+          "9fb31c2a31ef48",
+          "32d833f348ce37",
+          "answers",
+          false
+        ],
+        [
+          "1620293f5c8761",
+          "9fb31c2a31ef48",
+          "refines",
+          false
+        ],
+        [
+          "5539b60eb3736e",
+          "4d98893e06cf66",
+          "refines",
+          false
+        ],
+        [
+          "2e41844ff2edcd",
+          "5539b60eb3736e",
+          "tests",
+          false
+        ],
+        [
+          "47197a6106866b",
+          "698a8201fcbbed",
+          "raises question",
+          true
+        ],
+        [
+          "d019327296e273",
+          "398b9e4fa29bd7",
+          "refines",
+          true
+        ],
+        [
+          "1b709e6b3eef77",
+          "398b9e4fa29bd7",
+          "refines",
+          true
+        ],
+        [
+          "1b709e6b3eef77",
+          "5498723eb85329",
+          "conflicts with",
+          true
+        ],
+        [
+          "947f13983605de",
+          "4aa66f09995a8c",
+          "tests",
+          false
+        ],
+        [
+          "947f13983605de",
+          "523dcb0b648dd1",
+          "tests",
+          false
+        ],
+        [
+          "48ab72fe2d4e73",
+          "32d833f348ce37",
+          "answers",
+          true
+        ],
+        [
+          "6fca76ed4167f3",
+          "32d833f348ce37",
+          "answers",
+          false
+        ],
+        [
+          "6fca76ed4167f3",
+          "2c5f80cb305381",
+          "uses model",
+          false
+        ],
+        [
+          "d940a13ae897b5",
+          "0dee310413188d",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "d940a13ae897b5",
+          "698a8201fcbbed",
+          "answers",
+          true
+        ],
+        [
+          "ce7b177f8d7283",
+          "2363dca2c4cb38",
+          "answers",
+          true
+        ],
+        [
+          "9dac1507b40bab",
+          "32d833f348ce37",
+          "answers",
+          false
+        ],
+        [
+          "77abb839bd2f34",
+          "32d833f348ce37",
+          "answers",
+          false
+        ],
+        [
+          "9dac1507b40bab",
+          "967002beecb15b",
+          "parallel",
+          true
+        ],
+        [
+          "77abb839bd2f34",
+          "bd86d293391f59",
+          "parallel",
+          true
+        ],
+        [
+          "046cf33c1ae836",
+          "1d577afd108d98",
+          "answers",
+          false
+        ],
+        [
+          "3e5c9b493c9edf",
+          "bcfbf135dcccf6",
+          "builds on",
+          false
+        ],
+        [
+          "c5f6cbb1992fa2",
+          "035086e2363bbe",
+          "tests",
+          false
+        ],
+        [
+          "0929a93e28cc01",
+          "8845886be6cbcf",
+          "answers",
+          false
+        ],
+        [
+          "0929a93e28cc01",
+          "b8d391174c7699",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "6e4d18e8c7e52e",
+          "1d577afd108d98",
+          "answers",
+          true
+        ],
+        [
+          "722e3cba1ea8d4",
+          "8845886be6cbcf",
+          "answers",
+          false
+        ],
+        [
+          "6e4d18e8c7e52e",
+          "722e3cba1ea8d4",
+          "refutes",
+          false
+        ],
+        [
+          "59e66bd77f041f",
+          "722e3cba1ea8d4",
+          "refines",
+          false
+        ],
+        [
+          "c04a6751f85b98",
+          "8845886be6cbcf",
+          "answers",
+          false
+        ],
+        [
+          "bbc5a681e2ed18",
+          "89121cf2df7afc",
+          "tests",
+          false
+        ],
+        [
+          "2112cd0ccffae1",
+          "bbc5a681e2ed18",
+          "tests",
+          false
+        ],
+        [
+          "3e8195360049f2",
+          "a4ea6bedb7b5e6",
+          "raises question",
+          false
+        ],
+        [
+          "a4ea6bedb7b5e6",
+          "3e8195360049f2",
+          "replaces",
+          false
+        ],
+        [
+          "deddf6865c32f2",
+          "32d833f348ce37",
+          "answers",
+          true
+        ],
+        [
+          "b6c97c7bd447f1",
+          "95410dfdd689c1",
+          "answers",
+          true
+        ],
+        [
+          "ad272bebf53d02",
+          "c2841d720520c2",
+          "tests",
+          false
+        ],
+        [
+          "ad272bebf53d02",
+          "8385371e46e995",
+          "parallel",
+          true
+        ],
+        [
+          "d31d9ecd6a140e",
+          "698a8201fcbbed",
+          "answers",
+          true
+        ],
+        [
+          "6a1de6d41e8c6b",
+          "95410dfdd689c1",
+          "answers",
+          false
+        ],
+        [
+          "a31c9ffc96057a",
+          "32d833f348ce37",
+          "answers",
+          false
+        ],
+        [
+          "6636f4a9746ea0",
+          "32d833f348ce37",
+          "answers",
+          true
+        ],
+        [
+          "fe73a7e31ebc02",
+          "d8e3225e2a2d96",
+          "uses model",
+          false
+        ],
+        [
+          "fe73a7e31ebc02",
+          "1d577afd108d98",
+          "answers",
+          false
+        ],
+        [
+          "c0679e788de95e",
+          "fe73a7e31ebc02",
+          "builds on",
+          false
+        ],
+        [
+          "96dcbcde45c8c4",
+          "fe73a7e31ebc02",
+          "builds on",
+          false
+        ],
+        [
+          "c0679e788de95e",
+          "9fc58f1abf0d4f",
+          "answers",
+          false
+        ],
+        [
+          "96dcbcde45c8c4",
+          "8845886be6cbcf",
+          "answers",
+          false
+        ],
+        [
+          "c2a3763a86923e",
+          "96dcbcde45c8c4",
+          "refines",
+          false
+        ],
+        [
+          "c2a3763a86923e",
+          "c0679e788de95e",
+          "builds on",
+          false
+        ],
+        [
+          "a0477469abd547",
+          "c2a3763a86923e",
+          "follows from",
+          false
+        ],
+        [
+          "a0477469abd547",
+          "9fc58f1abf0d4f",
+          "answers",
+          false
+        ],
+        [
+          "a0477469abd547",
+          "10480cdbc3f5b1",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "61b2bb95a2b9f7",
+          "fe73a7e31ebc02",
+          "refines",
+          false
+        ],
+        [
+          "af5e9c25c82827",
+          "fe73a7e31ebc02",
+          "refines",
+          false
+        ],
+        [
+          "af5e9c25c82827",
+          "a0477469abd547",
+          "builds on",
+          false
+        ],
+        [
+          "af5e9c25c82827",
+          "41f24716e7d61f",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "af5e9c25c82827",
+          "ff764f85dac1d2",
+          "parallel",
+          true
+        ],
+        [
+          "6bc991488b48d8",
+          "8845886be6cbcf",
+          "answers",
+          false
+        ],
+        [
+          "7425b6e67ea086",
+          "afd5f9b260e5a1",
+          "answers",
+          false
+        ],
+        [
+          "7425b6e67ea086",
+          "6fe1713c6bfa06",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "e9213d4422de6a",
+          "41b06990a74e56",
+          "uses model",
+          true
+        ],
+        [
+          "5979fecdadcc7a",
+          "e9213d4422de6a",
+          "follows from",
+          false
+        ],
+        [
+          "5979fecdadcc7a",
+          "41b06990a74e56",
+          "uses model",
+          false
+        ],
+        [
+          "a4ea6bedb7b5e6",
+          "5979fecdadcc7a",
+          "follows from",
+          false
+        ],
+        [
+          "a4ea6bedb7b5e6",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "a43ece7b4b5280",
+          "a4ea6bedb7b5e6",
+          "builds on",
+          true
+        ],
+        [
+          "b07b9c1f2e4f03",
+          "a43ece7b4b5280",
+          "follows from",
+          false
+        ],
+        [
+          "e550abad225b6b",
+          "b07b9c1f2e4f03",
+          "follows from",
+          false
+        ],
+        [
+          "e550abad225b6b",
+          "a4ea6bedb7b5e6",
+          "builds on",
+          false
+        ],
+        [
+          "e550abad225b6b",
+          "1d577afd108d98",
+          "answers",
+          false
+        ],
+        [
+          "d72aa4efdfb614",
+          "e550abad225b6b",
+          "refines",
+          false
+        ],
+        [
+          "cd501ab5a1a5c4",
+          "d72aa4efdfb614",
+          "follows from",
+          false
+        ],
+        [
+          "9223a2b2e77ac6",
+          "cd501ab5a1a5c4",
+          "follows from",
+          false
+        ],
+        [
+          "9223a2b2e77ac6",
+          "8845886be6cbcf",
+          "answers",
+          false
+        ],
+        [
+          "10609996c3f339",
+          "9223a2b2e77ac6",
+          "follows from",
+          false
+        ],
+        [
+          "10609996c3f339",
+          "9fc58f1abf0d4f",
+          "answers",
+          false
+        ],
+        [
+          "1c868b03a6f93f",
+          "10609996c3f339",
+          "follows from",
+          false
+        ],
+        [
+          "1c868b03a6f93f",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "8977b8cd27d5de",
+          "1c868b03a6f93f",
+          "follows from",
+          false
+        ],
+        [
+          "8977b8cd27d5de",
+          "1d577afd108d98",
+          "answers",
+          false
+        ],
+        [
+          "8977b8cd27d5de",
+          "9fc58f1abf0d4f",
+          "answers",
+          false
+        ],
+        [
+          "a703bd589d08e5",
+          "8977b8cd27d5de",
+          "tests",
+          false
+        ],
+        [
+          "a703bd589d08e5",
+          "0be02c2c2c33e4",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "eb1747ddb227f4",
+          "1c868b03a6f93f",
+          "narrows",
+          false
+        ],
+        [
+          "d72aa4efdfb614",
+          "5539b60eb3736e",
+          "tests",
+          false
+        ],
+        [
+          "9223a2b2e77ac6",
+          "10609996c3f339",
+          "parallel",
+          false
+        ],
+        [
+          "0c64c6769e6de9",
+          "2e41844ff2edcd",
+          "tests",
+          false
+        ],
+        [
+          "cf00fa2a5e74c5",
+          "2e41844ff2edcd",
+          "refutes",
+          false
+        ],
+        [
+          "2e41844ff2edcd",
+          "41b06990a74e56",
+          "uses model",
+          false
+        ],
+        [
+          "ff764f85dac1d2",
+          "3d05792313196c",
+          "uses model",
+          false
+        ],
+        [
+          "ff764f85dac1d2",
+          "e13a330fa99594",
+          "builds on",
+          false
+        ],
+        [
+          "ff764f85dac1d2",
+          "41f24716e7d61f",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "ff764f85dac1d2",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "2c77e9edd13955",
+          "ff764f85dac1d2",
+          "refines",
+          false
+        ],
+        [
+          "a9e6744ea2f632",
+          "2c77e9edd13955",
+          "refines",
+          false
+        ],
+        [
+          "7f94d3823f688b",
+          "2c77e9edd13955",
+          "tests",
+          false
+        ],
+        [
+          "a9e6744ea2f632",
+          "7f94d3823f688b",
+          "refutes",
+          false
+        ],
+        [
+          "2fe20a1194e9bd",
+          "2c77e9edd13955",
+          "refines",
+          false
+        ],
+        [
+          "2c77e9edd13955",
+          "8845886be6cbcf",
+          "answers",
+          false
+        ],
+        [
+          "bea1bdd5c77a7a",
+          "2c77e9edd13955",
+          "builds on",
+          false
+        ],
+        [
+          "bea1bdd5c77a7a",
+          "8845886be6cbcf",
+          "answers",
+          false
+        ],
+        [
+          "c449ea8e88d3f5",
+          "bea1bdd5c77a7a",
+          "refutes",
+          false
+        ],
+        [
+          "bea1bdd5c77a7a",
+          "10609996c3f339",
+          "parallel",
+          false
+        ],
+        [
+          "0722b2c7ca4d9c",
+          "ff764f85dac1d2",
+          "parallel",
+          false
+        ],
+        [
+          "166ee7fb0e6f1c",
+          "0dee310413188d",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "166ee7fb0e6f1c",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "a4da33edfe1f32",
+          "166ee7fb0e6f1c",
+          "refines",
+          false
+        ],
+        [
+          "73d06257000c2b",
+          "a4da33edfe1f32",
+          "refines",
+          false
+        ],
+        [
+          "73d06257000c2b",
+          "8845886be6cbcf",
+          "answers",
+          false
+        ],
+        [
+          "94dca469805495",
+          "778dfb5605b023",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "94dca469805495",
+          "9fc58f1abf0d4f",
+          "answers",
+          false
+        ],
+        [
+          "a38d67f619697f",
+          "32d833f348ce37",
+          "answers",
+          false
+        ],
+        [
+          "c6d22686c4799f",
+          "a4ea6bedb7b5e6",
+          "builds on",
+          false
+        ],
+        [
+          "c6d22686c4799f",
+          "1d577afd108d98",
+          "answers",
+          false
+        ],
+        [
+          "c56871912af239",
+          "a4ea6bedb7b5e6",
+          "builds on",
+          false
+        ],
+        [
+          "c56871912af239",
+          "1d577afd108d98",
+          "answers",
+          false
+        ],
+        [
+          "6d6a70b37cd315",
+          "a4ea6bedb7b5e6",
+          "tests",
+          false
+        ],
+        [
+          "452dbd259a5d4e",
+          "1d577afd108d98",
+          "answers",
+          false
+        ],
+        [
+          "452dbd259a5d4e",
+          "cbf43c7d59c6ad",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "452dbd259a5d4e",
+          "398b9e4fa29bd7",
+          "answers",
+          false
+        ],
+        [
+          "4840fdf9ae95ac",
+          "a16e5c0d8893c7",
+          "uses model",
+          false
+        ],
+        [
+          "4840fdf9ae95ac",
+          "967002beecb15b",
+          "answers",
+          true
+        ],
+        [
+          "4840fdf9ae95ac",
+          "a0e9933e29c640",
+          "builds on",
+          false
+        ],
+        [
+          "ed3afcbba4b3a1",
+          "c6d22686c4799f",
+          "refines",
+          false
+        ],
+        [
+          "d51da707c5c5e6",
+          "ed3afcbba4b3a1",
+          "refines",
+          false
+        ],
+        [
+          "38961357d8aa19",
+          "eb1a97729e2efc",
+          "uses model",
+          false
+        ],
+        [
+          "38961357d8aa19",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "38961357d8aa19",
+          "4840fdf9ae95ac",
+          "follows from",
+          false
+        ],
+        [
+          "fa309d6ae7d9dd",
+          "eb1a97729e2efc",
+          "uses model",
+          true
+        ],
+        [
+          "fa309d6ae7d9dd",
+          "698a8201fcbbed",
+          "answers",
+          true
+        ],
+        [
+          "a08d96846007ec",
+          "4d33c20dbc00fb",
+          "uses model",
+          false
+        ],
+        [
+          "a08d96846007ec",
+          "698a8201fcbbed",
+          "answers",
+          true
+        ],
+        [
+          "a9bddd95e869d5",
+          "b14fa3c30c4be3",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "a9bddd95e869d5",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "adeb65b845505a",
+          "2d03d8a10ef5ae",
+          "uses model",
+          false
+        ],
+        [
+          "adeb65b845505a",
+          "1d577afd108d98",
+          "answers",
+          false
+        ],
+        [
+          "26a08e5e6f36b4",
+          "6723905a187823",
+          "uses model",
+          false
+        ],
+        [
+          "26a08e5e6f36b4",
+          "9fc58f1abf0d4f",
+          "answers",
+          false
+        ],
+        [
+          "296ed8dc42fe5c",
+          "8845886be6cbcf",
+          "answers",
+          false
+        ],
+        [
+          "26a08e5e6f36b4",
+          "296ed8dc42fe5c",
+          "follows from",
+          false
+        ],
+        [
+          "d210aacad377df",
+          "6308198a172138",
+          "answers",
+          false
+        ],
+        [
+          "d210aacad377df",
+          "9fc58f1abf0d4f",
+          "answers",
+          false
+        ],
+        [
+          "536cd0703bca5e",
+          "b2b73cabb1aed3",
+          "uses model",
+          false
+        ],
+        [
+          "536cd0703bca5e",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "536cd0703bca5e",
+          "47197a6106866b",
+          "parallel",
+          true
+        ],
+        [
+          "86829417fd5068",
+          "536cd0703bca5e",
+          "refines",
+          false
+        ],
+        [
+          "86829417fd5068",
+          "9fc58f1abf0d4f",
+          "answers",
+          false
+        ],
+        [
+          "6e8d653c9b342d",
+          "ca0ceccaa54829",
+          "uses model",
+          false
+        ],
+        [
+          "6e8d653c9b342d",
+          "86829417fd5068",
+          "follows from",
+          false
+        ],
+        [
+          "ea04bf4e8ec555",
+          "6e8d653c9b342d",
+          "refines",
+          false
+        ],
+        [
+          "fb5b757ebb415e",
+          "ea04bf4e8ec555",
+          "follows from",
+          false
+        ],
+        [
+          "fb5b757ebb415e",
+          "89515eb0d18aac",
+          "raises question",
+          false
+        ],
+        [
+          "0b14e2b20cccb3",
+          "89515eb0d18aac",
+          "parallel",
+          false
+        ],
+        [
+          "ec13c454b94cd0",
+          "e980d2152f3d40",
+          "uses model",
+          false
+        ],
+        [
+          "ec13c454b94cd0",
+          "fb5b757ebb415e",
+          "follows from",
+          true
+        ],
+        [
+          "16541ad889ab27",
+          "ec13c454b94cd0",
+          "follows from",
+          false
+        ],
+        [
+          "16541ad889ab27",
+          "1d577afd108d98",
+          "answers",
+          true
+        ],
+        [
+          "cbf3c02ae15ac2",
+          "16541ad889ab27",
+          "refines",
+          false
+        ],
+        [
+          "cbf3c02ae15ac2",
+          "9fc58f1abf0d4f",
+          "answers",
+          true
+        ],
+        [
+          "de18d7ec9ed026",
+          "374ccd9155a44e",
+          "uses model",
+          false
+        ],
+        [
+          "de18d7ec9ed026",
+          "536cd0703bca5e",
+          "follows from",
+          true
+        ],
+        [
+          "de18d7ec9ed026",
+          "9fc58f1abf0d4f",
+          "answers",
+          true
+        ],
+        [
+          "1531174b63062a",
+          "de18d7ec9ed026",
+          "follows from",
+          false
+        ],
+        [
+          "1531174b63062a",
+          "8845886be6cbcf",
+          "answers",
+          false
+        ],
+        [
+          "959b325f8da4f6",
+          "1531174b63062a",
+          "follows from",
+          false
+        ],
+        [
+          "959b325f8da4f6",
+          "20b6578f517e7e",
+          "uses model",
+          false
+        ],
+        [
+          "959b325f8da4f6",
+          "698a8201fcbbed",
+          "answers",
+          true
+        ],
+        [
+          "6332b0f5fa49e7",
+          "959b325f8da4f6",
+          "refines",
+          false
+        ],
+        [
+          "6332b0f5fa49e7",
+          "516554f5ef5e93",
+          "raises question",
+          false
+        ],
+        [
+          "3def2c96395f5c",
+          "6332b0f5fa49e7",
+          "tests",
+          false
+        ],
+        [
+          "ad25e56d257abd",
+          "3def2c96395f5c",
+          "follows from",
+          false
+        ],
+        [
+          "5b055d9cf654a2",
+          "ad25e56d257abd",
+          "follows from",
+          false
+        ],
+        [
+          "523dcb0b648dd1",
+          "16541ad889ab27",
+          "builds on",
+          false
+        ],
+        [
+          "523dcb0b648dd1",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "4aa66f09995a8c",
+          "523dcb0b648dd1",
+          "refines",
+          false
+        ],
+        [
+          "4aa66f09995a8c",
+          "e980d2152f3d40",
+          "uses model",
+          false
+        ],
+        [
+          "4aa66f09995a8c",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "f4ebd9760fe01e",
+          "4aa66f09995a8c",
+          "tests",
+          false
+        ],
+        [
+          "f4ebd9760fe01e",
+          "98d40ed0e21f50",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "9b8793c9d86a34",
+          "4aa66f09995a8c",
+          "refines",
+          false
+        ],
+        [
+          "9b8793c9d86a34",
+          "86829417fd5068",
+          "builds on",
+          true
+        ],
+        [
+          "5d560198e2ad19",
+          "44619320791f85",
+          "uses model",
+          false
+        ],
+        [
+          "5d560198e2ad19",
+          "698a8201fcbbed",
+          "answers",
+          true
+        ],
+        [
+          "dcd719bdf7550c",
+          "5d560198e2ad19",
+          "follows from",
+          false
+        ],
+        [
+          "de4841acad4ed6",
+          "dcd719bdf7550c",
+          "tests",
+          false
+        ],
+        [
+          "de4841acad4ed6",
+          "d9ba1539d704ad",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "9b8793c9d86a34",
+          "151d29a5a81ac4",
+          "conflicts with",
+          true
+        ],
+        [
+          "fb0400d2f65d5c",
+          "4d98893e06cf66",
+          "refines",
+          false
+        ],
+        [
+          "fb0400d2f65d5c",
+          "ca58103b696fd9",
+          "raises question",
+          false
+        ],
+        [
+          "368a83efcb1afe",
+          "fb0400d2f65d5c",
+          "follows from",
+          false
+        ],
+        [
+          "fbb77f04060b8a",
+          "fb0400d2f65d5c",
+          "follows from",
+          false
+        ],
+        [
+          "8385371e46e995",
+          "fb0400d2f65d5c",
+          "follows from",
+          false
+        ],
+        [
+          "fbb77f04060b8a",
+          "151d29a5a81ac4",
+          "refutes",
+          false
+        ],
+        [
+          "fbb77f04060b8a",
+          "f9ae6c8ceffb82",
+          "narrows",
+          false
+        ],
+        [
+          "fbb77f04060b8a",
+          "04a177a5d884f6",
+          "narrows",
+          true
+        ],
+        [
+          "368a83efcb1afe",
+          "95410dfdd689c1",
+          "answers",
+          false
+        ],
+        [
+          "8385371e46e995",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "368a83efcb1afe",
+          "6a1de6d41e8c6b",
+          "parallel",
+          true
+        ],
+        [
+          "6f71db9a80116e",
+          "ca58103b696fd9",
+          "answers",
+          false
+        ],
+        [
+          "6f71db9a80116e",
+          "374ccd9155a44e",
+          "uses model",
+          false
+        ],
+        [
+          "6f71db9a80116e",
+          "de18d7ec9ed026",
+          "builds on",
+          false
+        ],
+        [
+          "009fae16ca331e",
+          "ac7885f6694a99",
+          "refutes",
+          false
+        ],
+        [
+          "ac7885f6694a99",
+          "6f71db9a80116e",
+          "builds on",
+          false
+        ],
+        [
+          "4299309260f141",
+          "ac7885f6694a99",
+          "raises question",
+          false
+        ],
+        [
+          "4299309260f141",
+          "009fae16ca331e",
+          "parallel",
+          false
+        ],
+        [
+          "13304b1b1667c9",
+          "967002beecb15b",
+          "answers",
+          false
+        ],
+        [
+          "13304b1b1667c9",
+          "259be7f5fb5ecd",
+          "uses model",
+          false
+        ],
+        [
+          "bd86d293391f59",
+          "967002beecb15b",
+          "answers",
+          false
+        ],
+        [
+          "bd86d293391f59",
+          "259be7f5fb5ecd",
+          "uses model",
+          false
+        ],
+        [
+          "d4a544b5549fdb",
+          "967002beecb15b",
+          "answers",
+          false
+        ],
+        [
+          "d4a544b5549fdb",
+          "ec986a9f2a508c",
+          "uses model",
+          false
+        ],
+        [
+          "bd86d293391f59",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "d4a544b5549fdb",
+          "1d577afd108d98",
+          "answers",
+          true
+        ],
+        [
+          "fb0400d2f65d5c",
+          "dcd719bdf7550c",
+          "tests",
+          false
+        ],
+        [
+          "fb0400d2f65d5c",
+          "9b8793c9d86a34",
+          "tests",
+          false
+        ],
+        [
+          "fb0400d2f65d5c",
+          "947f13983605de",
+          "tests",
+          false
+        ],
+        [
+          "fb0400d2f65d5c",
+          "c7e49fdf894b16",
+          "tests",
+          false
+        ],
+        [
+          "abcb04d7b4053d",
+          "32d833f348ce37",
+          "answers",
+          false
+        ],
+        [
+          "abcb04d7b4053d",
+          "8845886be6cbcf",
+          "answers",
+          false
+        ],
+        [
+          "abcb04d7b4053d",
+          "9fc58f1abf0d4f",
+          "answers",
+          false
+        ],
+        [
+          "abcb04d7b4053d",
+          "47197a6106866b",
+          "follows from",
+          false
+        ],
+        [
+          "84b5b70d46b777",
+          "398b9e4fa29bd7",
+          "answers",
+          false
+        ],
+        [
+          "336deb0f49bd5d",
+          "84b5b70d46b777",
+          "refutes",
+          false
+        ],
+        [
+          "d019327296e273",
+          "84b5b70d46b777",
+          "narrows",
+          true
+        ],
+        [
+          "3a12c9ac06e009",
+          "8845886be6cbcf",
+          "answers",
+          false
+        ],
+        [
+          "3a12c9ac06e009",
+          "5498723eb85329",
+          "answers",
+          true
+        ],
+        [
+          "3a12c9ac06e009",
+          "4840fdf9ae95ac",
+          "uses model",
+          false
+        ],
+        [
+          "04a177a5d884f6",
+          "398b9e4fa29bd7",
+          "answers",
+          false
+        ],
+        [
+          "0bbaf69587029d",
+          "04a177a5d884f6",
+          "refutes",
+          false
+        ],
+        [
+          "04a177a5d884f6",
+          "f9ae6c8ceffb82",
+          "builds on",
+          false
+        ],
+        [
+          "c01952a9ac86f1",
+          "30064b3e092582",
+          "uses model",
+          false
+        ],
+        [
+          "c01952a9ac86f1",
+          "04a177a5d884f6",
+          "tests",
+          false
+        ],
+        [
+          "c01952a9ac86f1",
+          "481115bc272afe",
+          "builds on",
+          false
+        ],
+        [
+          "c01952a9ac86f1",
+          "afd5f9b260e5a1",
+          "answers",
+          true
+        ],
+        [
+          "06137b882d12f7",
+          "8845886be6cbcf",
+          "answers",
+          false
+        ],
+        [
+          "06137b882d12f7",
+          "2ee7a5012d78ed",
+          "tests",
+          false
+        ],
+        [
+          "555021d8a1d43e",
+          "39981cb929cf16",
+          "uses model",
+          false
+        ],
+        [
+          "555021d8a1d43e",
+          "06137b882d12f7",
+          "refines",
+          false
+        ],
+        [
+          "06137b882d12f7",
+          "94dca469805495",
+          "parallel",
+          true
+        ],
+        [
+          "f9ae6c8ceffb82",
+          "95410dfdd689c1",
+          "answers",
+          false
+        ],
+        [
+          "f9ae6c8ceffb82",
+          "39981cb929cf16",
+          "uses model",
+          false
+        ],
+        [
+          "99569894a09154",
+          "2363dca2c4cb38",
+          "answers",
+          false
+        ],
+        [
+          "dc7cf7666d5602",
+          "99569894a09154",
+          "refutes",
+          false
+        ],
+        [
+          "dc7cf7666d5602",
+          "2363dca2c4cb38",
+          "answers",
+          false
+        ],
+        [
+          "dc7cf7666d5602",
+          "defdfe8e777491",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "dc7cf7666d5602",
+          "d51da707c5c5e6",
+          "parallel",
+          false
+        ],
+        [
+          "443984ee5c4176",
+          "947f13983605de",
+          "refines",
+          false
+        ],
+        [
+          "443984ee5c4176",
+          "151d29a5a81ac4",
+          "follows from",
+          false
+        ],
+        [
+          "151d29a5a81ac4",
+          "5498723eb85329",
+          "raises question",
+          false
+        ],
+        [
+          "afcb6f6fe8f44f",
+          "9af71fa6b2975c",
+          "refutes",
+          false
+        ],
+        [
+          "afcb6f6fe8f44f",
+          "a93272199a8c2d",
+          "refutes",
+          false
+        ],
+        [
+          "afcb6f6fe8f44f",
+          "1c6be09f7a9bc4",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "afcb6f6fe8f44f",
+          "8845886be6cbcf",
+          "answers",
+          true
+        ],
+        [
+          "afcb6f6fe8f44f",
+          "523dcb0b648dd1",
+          "parallel",
+          true
+        ],
+        [
+          "4934fa0123e162",
+          "13fb6671965df1",
+          "replaces",
+          false
+        ],
+        [
+          "4934fa0123e162",
+          "5498723eb85329",
+          "answers",
+          false
+        ],
+        [
+          "4934fa0123e162",
+          "4aa66f09995a8c",
+          "uses model",
+          true
+        ],
+        [
+          "cbecd4e138eb3f",
+          "4934fa0123e162",
+          "refines",
+          false
+        ],
+        [
+          "7e64d60a108276",
+          "4934fa0123e162",
+          "follows from",
+          false
+        ],
+        [
+          "a18f9f7a0565f3",
+          "5498723eb85329",
+          "answers",
+          false
+        ],
+        [
+          "eec6f1679a22c1",
+          "a18f9f7a0565f3",
+          "refutes",
+          false
+        ],
+        [
+          "89599c22b13e00",
+          "a18f9f7a0565f3",
+          "refines",
+          false
+        ],
+        [
+          "89599c22b13e00",
+          "93c8ed67cddd61",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "a4b9b0c4fa899d",
+          "a18f9f7a0565f3",
+          "refines",
+          false
+        ],
+        [
+          "d7d543f97c2931",
+          "a4b9b0c4fa899d",
+          "refutes",
+          false
+        ],
+        [
+          "a4b9b0c4fa899d",
+          "afcb6f6fe8f44f",
+          "parallel",
+          true
+        ],
+        [
+          "eec6f1679a22c1",
+          "d210aacad377df",
+          "parallel",
+          true
+        ],
+        [
+          "7425b6e67ea086",
+          "4934fa0123e162",
+          "parallel",
+          true
+        ],
+        [
+          "4a5240c26d6944",
+          "b5f28c40bbc366",
+          "builds on",
+          false
+        ],
+        [
+          "4a5240c26d6944",
+          "398b9e4fa29bd7",
+          "answers",
+          true
+        ],
+        [
+          "262ee2e0e4953a",
+          "c7e49fdf894b16",
+          "uses model",
+          false
+        ],
+        [
+          "86ecd75f2b9e7b",
+          "262ee2e0e4953a",
+          "narrows",
+          false
+        ],
+        [
+          "d3e720380a8ce5",
+          "b12fb04b1f4b10",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "aae63b631c76ca",
+          "d3e720380a8ce5",
+          "tests",
+          false
+        ],
+        [
+          "aae63b631c76ca",
+          "1d577afd108d98",
+          "answers",
+          true
+        ],
+        [
+          "436183da0b7968",
+          "899948d67f9428",
+          "reduces to prior work",
+          false
+        ],
+        [
+          "2ee7a5012d78ed",
+          "8845886be6cbcf",
+          "answers",
+          true
+        ],
+        [
+          "94dca469805495",
+          "fe73a7e31ebc02",
+          "parallel",
+          true
+        ],
+        [
+          "c2841d720520c2",
+          "95410dfdd689c1",
+          "answers",
+          false
+        ],
+        [
+          "653f6cf70c25c9",
+          "698a8201fcbbed",
+          "is limited by",
+          true
+        ],
+        [
+          "653f6cf70c25c9",
+          "47197a6106866b",
+          "is limited by",
+          true
+        ],
+        [
+          "653f6cf70c25c9",
+          "536cd0703bca5e",
+          "is limited by",
+          true
+        ],
+        [
+          "653f6cf70c25c9",
+          "a4ea6bedb7b5e6",
+          "is limited by",
+          true
+        ],
+        [
+          "33ca87b2c6ca44",
+          "398b9e4fa29bd7",
+          "is limited by",
+          true
+        ],
+        [
+          "33ca87b2c6ca44",
+          "84b5b70d46b777",
+          "is limited by",
+          true
+        ],
+        [
+          "33ca87b2c6ca44",
+          "336deb0f49bd5d",
+          "is limited by",
+          true
+        ],
+        [
+          "33ca87b2c6ca44",
+          "04a177a5d884f6",
+          "is limited by",
+          true
+        ],
+        [
+          "33ca87b2c6ca44",
+          "1b709e6b3eef77",
+          "is limited by",
+          true
+        ],
+        [
+          "33ca87b2c6ca44",
+          "d019327296e273",
+          "is limited by",
+          true
+        ],
+        [
+          "7e70f0709660e7",
+          "afd5f9b260e5a1",
+          "is limited by",
+          true
+        ],
+        [
+          "7e70f0709660e7",
+          "7425b6e67ea086",
+          "is limited by",
+          true
+        ],
+        [
+          "7e70f0709660e7",
+          "c01952a9ac86f1",
+          "is limited by",
+          true
+        ],
+        [
+          "7e70f0709660e7",
+          "967002beecb15b",
+          "is limited by",
+          true
+        ],
+        [
+          "7e70f0709660e7",
+          "13304b1b1667c9",
+          "is limited by",
+          true
+        ],
+        [
+          "5082d57ff9c77d",
+          "95410dfdd689c1",
+          "is limited by",
+          true
+        ],
+        [
+          "5082d57ff9c77d",
+          "368a83efcb1afe",
+          "is limited by",
+          true
+        ],
+        [
+          "5082d57ff9c77d",
+          "f9ae6c8ceffb82",
+          "is limited by",
+          true
+        ],
+        [
+          "5082d57ff9c77d",
+          "6a1de6d41e8c6b",
+          "is limited by",
+          true
+        ],
+        [
+          "5082d57ff9c77d",
+          "8977b8cd27d5de",
+          "is limited by",
+          true
+        ],
+        [
+          "5082d57ff9c77d",
+          "fe73a7e31ebc02",
+          "is limited by",
+          true
+        ],
+        [
+          "79ede6b0f6213c",
+          "5498723eb85329",
+          "is limited by",
+          true
+        ],
+        [
+          "79ede6b0f6213c",
+          "959b325f8da4f6",
+          "is limited by",
+          true
+        ],
+        [
+          "79ede6b0f6213c",
+          "4aa66f09995a8c",
+          "is limited by",
+          true
+        ],
+        [
+          "79ede6b0f6213c",
+          "4934fa0123e162",
+          "is limited by",
+          true
+        ],
+        [
+          "79ede6b0f6213c",
+          "dcd719bdf7550c",
+          "is limited by",
+          true
+        ],
+        [
+          "79ede6b0f6213c",
+          "7e64d60a108276",
+          "is limited by",
+          true
+        ],
+        [
+          "6295dd701cc9a6",
+          "4aa66f09995a8c",
+          "is limited by",
+          true
+        ],
+        [
+          "6295dd701cc9a6",
+          "947f13983605de",
+          "is limited by",
+          true
+        ],
+        [
+          "6295dd701cc9a6",
+          "de18d7ec9ed026",
+          "is limited by",
+          true
+        ],
+        [
+          "6295dd701cc9a6",
+          "536cd0703bca5e",
+          "is limited by",
+          true
+        ],
+        [
+          "6295dd701cc9a6",
+          "16541ad889ab27",
+          "is limited by",
+          true
+        ],
+        [
+          "2c767b1b44b6c4",
+          "de4841acad4ed6",
+          "is limited by",
+          true
+        ],
+        [
+          "2c767b1b44b6c4",
+          "f4ebd9760fe01e",
+          "is limited by",
+          true
+        ],
+        [
+          "2c767b1b44b6c4",
+          "a703bd589d08e5",
+          "is limited by",
+          true
+        ],
+        [
+          "2c767b1b44b6c4",
+          "ff764f85dac1d2",
+          "is limited by",
+          true
+        ],
+        [
+          "2c767b1b44b6c4",
+          "452dbd259a5d4e",
+          "is limited by",
+          true
+        ],
+        [
+          "2c767b1b44b6c4",
+          "dc7cf7666d5602",
+          "is limited by",
+          true
+        ],
+        [
+          "a8f06af24767a4",
+          "de18d7ec9ed026",
+          "is limited by",
+          true
+        ],
+        [
+          "a8f06af24767a4",
+          "bd86d293391f59",
+          "is limited by",
+          true
+        ],
+        [
+          "a8f06af24767a4",
+          "d4a544b5549fdb",
+          "is limited by",
+          true
+        ],
+        [
+          "a8f06af24767a4",
+          "4840fdf9ae95ac",
+          "is limited by",
+          true
+        ],
+        [
+          "a8f06af24767a4",
+          "523dcb0b648dd1",
+          "is limited by",
+          true
+        ],
+        [
+          "1b1e00453f18b6",
+          "5539b60eb3736e",
+          "is limited by",
+          true
+        ],
+        [
+          "1b1e00453f18b6",
+          "2e41844ff2edcd",
+          "is limited by",
+          true
+        ],
+        [
+          "1b1e00453f18b6",
+          "d72aa4efdfb614",
+          "is limited by",
+          true
+        ],
+        [
+          "1b1e00453f18b6",
+          "555021d8a1d43e",
+          "is limited by",
+          true
+        ],
+        [
+          "04c6e8e1c5234b",
+          "709e3452392ea1",
+          "is limited by",
+          true
+        ],
+        [
+          "04c6e8e1c5234b",
+          "959b325f8da4f6",
+          "is limited by",
+          true
+        ],
+        [
+          "04c6e8e1c5234b",
+          "1531174b63062a",
+          "is limited by",
+          true
+        ],
+        [
+          "2a8fb54e934ec6",
+          "6308198a172138",
+          "is limited by",
+          true
+        ],
+        [
+          "2a8fb54e934ec6",
+          "5498723eb85329",
+          "is limited by",
+          true
+        ],
+        [
+          "2a8fb54e934ec6",
+          "d210aacad377df",
+          "is limited by",
+          true
+        ],
+        [
+          "2a8fb54e934ec6",
+          "26a08e5e6f36b4",
+          "is limited by",
+          true
+        ],
+        [
+          "2a8fb54e934ec6",
+          "eb1747ddb227f4",
+          "is limited by",
+          true
+        ],
+        [
+          "2a8fb54e934ec6",
+          "523dcb0b648dd1",
+          "is limited by",
+          true
+        ],
+        [
+          "6e6869ca33c72d",
+          "2363dca2c4cb38",
+          "is limited by",
+          true
+        ],
+        [
+          "6e6869ca33c72d",
+          "dc7cf7666d5602",
+          "is limited by",
+          true
+        ],
+        [
+          "6e6869ca33c72d",
+          "99569894a09154",
+          "is limited by",
+          true
+        ],
+        [
+          "6e6869ca33c72d",
+          "ce7b177f8d7283",
+          "is limited by",
+          true
+        ],
+        [
+          "b39a80a55a16ea",
+          "2ee7a5012d78ed",
+          "is limited by",
+          true
+        ],
+        [
+          "b39a80a55a16ea",
+          "7425b6e67ea086",
+          "is limited by",
+          true
+        ],
+        [
+          "b39a80a55a16ea",
+          "151d29a5a81ac4",
+          "is limited by",
+          true
+        ],
+        [
+          "b39a80a55a16ea",
+          "f9ae6c8ceffb82",
+          "is limited by",
+          true
+        ],
+        [
+          "b39a80a55a16ea",
+          "8977b8cd27d5de",
+          "is limited by",
+          true
+        ],
+        [
+          "b39a80a55a16ea",
+          "06137b882d12f7",
+          "is limited by",
+          true
+        ],
+        [
+          "009fae16ca331e",
+          "6f71db9a80116e",
+          "builds on",
+          false
+        ],
+        [
+          "009fae16ca331e",
+          "de18d7ec9ed026",
+          "builds on",
+          false
+        ],
+        [
+          "f1489a7c6dba6c",
+          "009fae16ca331e",
+          "refines",
+          false
+        ],
+        [
+          "4bb3923d939a49",
+          "009fae16ca331e",
+          "follows from",
+          false
+        ],
+        [
+          "4bb3923d939a49",
+          "f1489a7c6dba6c",
+          "builds on",
+          false
+        ],
+        [
+          "f57013ee07e6fa",
+          "85a2b98283a0d7",
+          "uses model",
+          false
+        ],
+        [
+          "4bb3923d939a49",
+          "f57013ee07e6fa",
+          "raises question",
+          false
+        ],
+        [
+          "f57013ee07e6fa",
+          "967002beecb15b",
+          "answers",
+          true
+        ],
+        [
+          "3ec0935f5938d9",
+          "709e3452392ea1",
+          "parallel",
+          true
+        ],
+        [
+          "3ec0935f5938d9",
+          "967002beecb15b",
+          "refines",
+          true
+        ],
+        [
+          "009fae16ca331e",
+          "3ec0935f5938d9",
+          "answers",
+          false
+        ],
+        [
+          "4bb3923d939a49",
+          "3ec0935f5938d9",
+          "answers",
+          false
+        ],
+        [
+          "4299309260f141",
+          "3ec0935f5938d9",
+          "answers",
+          false
+        ],
+        [
+          "13304b1b1667c9",
+          "3ec0935f5938d9",
+          "answers",
+          true
+        ],
+        [
+          "bd86d293391f59",
+          "3ec0935f5938d9",
+          "answers",
+          false
+        ],
+        [
+          "d4a544b5549fdb",
+          "3ec0935f5938d9",
+          "answers",
+          false
+        ],
+        [
+          "f57013ee07e6fa",
+          "3ec0935f5938d9",
+          "answers",
+          true
+        ],
+        [
+          "f3ce9054ea79d2",
+          "967002beecb15b",
+          "answers",
+          false
+        ],
+        [
+          "429e2b18638dac",
+          "2c77e9edd13955",
+          "refines",
+          false
+        ],
+        [
+          "b526089d900164",
+          "afcb6f6fe8f44f",
+          "follows from",
+          false
+        ],
+        [
+          "b526089d900164",
+          "4aa66f09995a8c",
+          "refines",
+          false
+        ],
+        [
+          "2aff94bbff19da",
+          "74b6c658449c89",
+          "refines",
+          false
+        ],
+        [
+          "eb56be8bbfbd19",
+          "74b6c658449c89",
+          "refines",
+          false
+        ],
+        [
+          "7f3dbd892eba02",
+          "74b6c658449c89",
+          "refines",
+          false
+        ],
+        [
+          "74b6c658449c89",
+          "4d98893e06cf66",
+          "refines",
+          true
+        ],
+        [
+          "2aff94bbff19da",
+          "2c77e9edd13955",
+          "builds on",
+          false
+        ],
+        [
+          "2aff94bbff19da",
+          "10609996c3f339",
+          "builds on",
+          false
+        ],
+        [
+          "eb56be8bbfbd19",
+          "8977b8cd27d5de",
+          "builds on",
+          false
+        ],
+        [
+          "eb56be8bbfbd19",
+          "a0477469abd547",
+          "builds on",
+          false
+        ],
+        [
+          "7f3dbd892eba02",
+          "9dac1507b40bab",
+          "builds on",
+          false
+        ],
+        [
+          "7f3dbd892eba02",
+          "77abb839bd2f34",
+          "builds on",
+          false
+        ],
+        [
+          "c449ea8e88d3f5",
+          "2aff94bbff19da",
+          "answers",
+          true
+        ],
+        [
+          "2fe20a1194e9bd",
+          "2aff94bbff19da",
+          "answers",
+          true
+        ],
+        [
+          "bd86d293391f59",
+          "7f3dbd892eba02",
+          "answers",
+          true
+        ],
+        [
+          "d4a544b5549fdb",
+          "7f3dbd892eba02",
+          "answers",
+          true
+        ],
+        [
+          "f57013ee07e6fa",
+          "7f3dbd892eba02",
+          "answers",
+          true
+        ],
+        [
+          "653f6cf70c25c9",
+          "bd86d293391f59",
+          "is limited by",
+          true
+        ],
+        [
+          "653f6cf70c25c9",
+          "d4a544b5549fdb",
+          "is limited by",
+          true
+        ],
+        [
+          "653f6cf70c25c9",
+          "13304b1b1667c9",
+          "is limited by",
+          true
+        ],
+        [
+          "653f6cf70c25c9",
+          "f3ce9054ea79d2",
+          "is limited by",
+          true
+        ],
+        [
+          "653f6cf70c25c9",
+          "4299309260f141",
+          "is limited by",
+          true
+        ],
+        [
+          "04c6e8e1c5234b",
+          "3ec0935f5938d9",
+          "is limited by",
+          true
+        ],
+        [
+          "04c6e8e1c5234b",
+          "009fae16ca331e",
+          "is limited by",
+          true
+        ],
+        [
+          "04c6e8e1c5234b",
+          "4bb3923d939a49",
+          "is limited by",
+          true
+        ],
+        [
+          "a8f06af24767a4",
+          "f57013ee07e6fa",
+          "is limited by",
+          true
+        ],
+        [
+          "a8f06af24767a4",
+          "3ec0935f5938d9",
+          "is limited by",
+          true
+        ],
+        [
+          "7e70f0709660e7",
+          "6f71db9a80116e",
+          "is limited by",
+          true
+        ],
+        [
+          "7e70f0709660e7",
+          "4299309260f141",
+          "is limited by",
+          true
+        ],
+        [
+          "b39a80a55a16ea",
+          "368a83efcb1afe",
+          "is limited by",
+          true
+        ],
+        [
+          "73f0bfa4838fbb",
+          "3ec0935f5938d9",
+          "answers",
+          false
+        ],
+        [
+          "73f0bfa4838fbb",
+          "967002beecb15b",
+          "answers",
+          false
+        ],
+        [
+          "6b4e9107540393",
+          "3ec0935f5938d9",
+          "answers",
+          false
+        ],
+        [
+          "6b4e9107540393",
+          "967002beecb15b",
+          "answers",
+          false
+        ],
+        [
+          "67e851c498577e",
+          "3ec0935f5938d9",
+          "answers",
+          false
+        ],
+        [
+          "67e851c498577e",
+          "967002beecb15b",
+          "answers",
+          false
+        ],
+        [
+          "3222aaa1b52e92",
+          "3ec0935f5938d9",
+          "answers",
+          false
+        ],
+        [
+          "3222aaa1b52e92",
+          "967002beecb15b",
+          "answers",
+          false
+        ],
+        [
+          "73f0bfa4838fbb",
+          "f57013ee07e6fa",
+          "refines",
+          false
+        ],
+        [
+          "6b4e9107540393",
+          "73f0bfa4838fbb",
+          "refines",
+          false
+        ],
+        [
+          "67e851c498577e",
+          "6b4e9107540393",
+          "refines",
+          false
+        ],
+        [
+          "3222aaa1b52e92",
+          "67e851c498577e",
+          "refines",
+          false
+        ],
+        [
+          "f186088c71bd01",
+          "3222aaa1b52e92",
+          "refines",
+          false
+        ],
+        [
+          "73f0bfa4838fbb",
+          "5539b60eb3736e",
+          "tests",
+          false
+        ],
+        [
+          "73f0bfa4838fbb",
+          "1b1e00453f18b6",
+          "refines",
+          false
+        ],
+        [
+          "f186088c71bd01",
+          "5d560198e2ad19",
+          "builds on",
+          false
+        ],
+        [
+          "f186088c71bd01",
+          "dcd719bdf7550c",
+          "builds on",
+          false
+        ],
+        [
+          "f186088c71bd01",
+          "ca58103b696fd9",
+          "answers",
+          false
+        ],
+        [
+          "3222aaa1b52e92",
+          "ca58103b696fd9",
+          "answers",
+          false
+        ],
+        [
+          "1b1e00453f18b6",
+          "73f0bfa4838fbb",
+          "is limited by",
+          true
+        ],
+        [
+          "942e1092fad82d",
+          "7e70f0709660e7",
+          "refines",
+          false
+        ],
+        [
+          "942e1092fad82d",
+          "33ca87b2c6ca44",
+          "refines",
+          false
+        ],
+        [
+          "942e1092fad82d",
+          "368a83efcb1afe",
+          "conflicts with",
+          true
+        ],
+        [
+          "5130f53e5e1a1d",
+          "653f6cf70c25c9",
+          "refines",
+          false
+        ],
+        [
+          "5130f53e5e1a1d",
+          "7e70f0709660e7",
+          "refines",
+          false
+        ],
+        [
+          "5130f53e5e1a1d",
+          "33ca87b2c6ca44",
+          "refines",
+          false
+        ],
+        [
+          "5130f53e5e1a1d",
+          "368a83efcb1afe",
+          "builds on",
+          false
+        ],
+        [
+          "6b17535793d312",
+          "3ec0935f5938d9",
+          "answers",
+          false
+        ],
+        [
+          "6b17535793d312",
+          "967002beecb15b",
+          "answers",
+          false
+        ],
+        [
+          "6b17535793d312",
+          "ca58103b696fd9",
+          "answers",
+          false
+        ],
+        [
+          "6b17535793d312",
+          "368a83efcb1afe",
+          "builds on",
+          false
+        ],
+        [
+          "5130f53e5e1a1d",
+          "3ec0935f5938d9",
+          "refines",
+          false
+        ],
+        [
+          "a84f063c1967a4",
+          "1d577afd108d98",
+          "answers",
+          false
+        ],
+        [
+          "a84f063c1967a4",
+          "eb56be8bbfbd19",
+          "answers",
+          false
+        ],
+        [
+          "a84f063c1967a4",
+          "ca58103b696fd9",
+          "answers",
+          false
+        ],
+        [
+          "79aae5a962d965",
+          "1d577afd108d98",
+          "answers",
+          false
+        ],
+        [
+          "79aae5a962d965",
+          "eb56be8bbfbd19",
+          "answers",
+          false
+        ],
+        [
+          "79aae5a962d965",
+          "ca58103b696fd9",
+          "answers",
+          false
+        ],
+        [
+          "d425cef365468a",
+          "1d577afd108d98",
+          "answers",
+          false
+        ],
+        [
+          "d425cef365468a",
+          "eb56be8bbfbd19",
+          "answers",
+          false
+        ],
+        [
+          "d425cef365468a",
+          "ca58103b696fd9",
+          "answers",
+          false
+        ],
+        [
+          "16cef4d2184a3e",
+          "1d577afd108d98",
+          "answers",
+          false
+        ],
+        [
+          "16cef4d2184a3e",
+          "eb56be8bbfbd19",
+          "answers",
+          false
+        ],
+        [
+          "16cef4d2184a3e",
+          "ca58103b696fd9",
+          "answers",
+          false
+        ],
+        [
+          "9cf5d9db7a6c1f",
+          "1d577afd108d98",
+          "answers",
+          false
+        ],
+        [
+          "9cf5d9db7a6c1f",
+          "eb56be8bbfbd19",
+          "answers",
+          false
+        ],
+        [
+          "9cf5d9db7a6c1f",
+          "ca58103b696fd9",
+          "answers",
+          false
+        ],
+        [
+          "c70313158f1102",
+          "1d577afd108d98",
+          "answers",
+          false
+        ],
+        [
+          "c70313158f1102",
+          "eb56be8bbfbd19",
+          "answers",
+          false
+        ],
+        [
+          "c70313158f1102",
+          "1531174b63062a",
+          "builds on",
+          false
+        ],
+        [
+          "2ad215402b2b82",
+          "c70313158f1102",
+          "refines",
+          false
+        ],
+        [
+          "2ad215402b2b82",
+          "1531174b63062a",
+          "follows from",
+          false
+        ],
+        [
+          "2ad215402b2b82",
+          "eb56be8bbfbd19",
+          "answers",
+          false
+        ],
+        [
+          "a6aadd099fd47f",
+          "5498723eb85329",
+          "answers",
+          false
+        ],
+        [
+          "a6aadd099fd47f",
+          "6308198a172138",
+          "answers",
+          false
+        ],
+        [
+          "a6aadd099fd47f",
+          "959b325f8da4f6",
+          "builds on",
+          false
+        ],
+        [
+          "98e3197e3c3592",
+          "698a8201fcbbed",
+          "refines",
+          false
+        ],
+        [
+          "98e3197e3c3592",
+          "ca58103b696fd9",
+          "refines",
+          false
+        ],
+        [
+          "98e3197e3c3592",
+          "7e70f0709660e7",
+          "refines",
+          false
+        ],
+        [
+          "98e3197e3c3592",
+          "368a83efcb1afe",
+          "refines",
+          false
+        ],
+        [
+          "98e3197e3c3592",
+          "8385371e46e995",
+          "refines",
+          false
+        ],
+        [
+          "e42d559f9b4e0d",
+          "a6aadd099fd47f",
+          "follows from",
+          false
+        ],
+        [
+          "e42d559f9b4e0d",
+          "959b325f8da4f6",
+          "builds on",
+          false
+        ],
+        [
+          "e42d559f9b4e0d",
+          "5498723eb85329",
+          "answers",
+          false
+        ],
+        [
+          "ae6085ccc06ad9",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "ae6085ccc06ad9",
+          "eb56be8bbfbd19",
+          "answers",
+          false
+        ],
+        [
+          "ae6085ccc06ad9",
+          "de18d7ec9ed026",
+          "builds on",
+          false
+        ],
+        [
+          "a451c533048786",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "a451c533048786",
+          "eb56be8bbfbd19",
+          "answers",
+          false
+        ],
+        [
+          "a451c533048786",
+          "ae6085ccc06ad9",
+          "builds on",
+          false
+        ],
+        [
+          "410624a11fb9fa",
+          "a451c533048786",
+          "follows from",
+          false
+        ],
+        [
+          "410624a11fb9fa",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "8ee20b71bb2172",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "8ee20b71bb2172",
+          "eb56be8bbfbd19",
+          "answers",
+          false
+        ],
+        [
+          "8ee20b71bb2172",
+          "a451c533048786",
+          "builds on",
+          false
+        ],
+        [
+          "6c325d76223c87",
+          "8ee20b71bb2172",
+          "refines",
+          false
+        ],
+        [
+          "6c325d76223c87",
+          "b28c97f6050b6c",
+          "builds on",
+          false
+        ],
+        [
+          "6c325d76223c87",
+          "5ecf3504bcdefc",
+          "builds on",
+          false
+        ],
+        [
+          "6c325d76223c87",
+          "ae6085ccc06ad9",
+          "builds on",
+          false
+        ],
+        [
+          "206391eb37e49d",
+          "de18d7ec9ed026",
+          "builds on",
+          false
+        ],
+        [
+          "206391eb37e49d",
+          "6308198a172138",
+          "answers",
+          false
+        ],
+        [
+          "206391eb37e49d",
+          "3ec0935f5938d9",
+          "refines",
+          false
+        ],
+        [
+          "a7e9971b3df5e1",
+          "3ec0935f5938d9",
+          "answers",
+          false
+        ],
+        [
+          "a7e9971b3df5e1",
+          "967002beecb15b",
+          "refines",
+          false
+        ],
+        [
+          "aa4414a6499bac",
+          "3ec0935f5938d9",
+          "answers",
+          false
+        ],
+        [
+          "aa4414a6499bac",
+          "967002beecb15b",
+          "refines",
+          false
+        ],
+        [
+          "10128ee36e3915",
+          "3ec0935f5938d9",
+          "answers",
+          false
+        ],
+        [
+          "10128ee36e3915",
+          "967002beecb15b",
+          "refines",
+          false
+        ],
+        [
+          "15afe84bb144a8",
+          "10128ee36e3915",
+          "follows from",
+          false
+        ],
+        [
+          "15afe84bb144a8",
+          "3ec0935f5938d9",
+          "refines",
+          false
+        ],
+        [
+          "b2abb14e91f262",
+          "10128ee36e3915",
+          "builds on",
+          false
+        ],
+        [
+          "b2abb14e91f262",
+          "3ec0935f5938d9",
+          "answers",
+          false
+        ],
+        [
+          "f136114508f81e",
+          "98e3197e3c3592",
+          "builds on",
+          false
+        ],
+        [
+          "f136114508f81e",
+          "698a8201fcbbed",
+          "answers",
+          false
+        ],
+        [
+          "6505a425713013",
+          "967002beecb15b",
+          "refines",
+          false
+        ],
+        [
+          "2ee3ecc95844c0",
+          "eb56be8bbfbd19",
+          "refines",
+          false
+        ],
+        [
+          "88d04df02b8a63",
+          "6e6869ca33c72d",
+          "refines",
+          false
+        ]
+      ]
+    }
+  }
 }
