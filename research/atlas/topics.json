@@ -214,7 +214,7 @@
     {
       "name": "The formation question",
       "question": "Can local dynamics form a bounded state that organizes a later process?",
-      "entries": 50,
+      "entries": 54,
       "selected": [
         {
           "title": "Physical systems in which organization can arise",
@@ -5065,6 +5065,34 @@
           "paper": null,
           "topic": "The formation question",
           "status": "Under review"
+        },
+        {
+          "id": "45973625d1f497",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "6c33982b3e9adb",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "6e79d566f0e23e",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "ea803a55375466",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
         }
       ],
       "edges": [
@@ -8406,6 +8434,36 @@
         ],
         [
           "edc865cea9e463",
+          "4d98893e06cf66",
+          "refines",
+          false
+        ],
+        [
+          "45973625d1f497",
+          "4d98893e06cf66",
+          "refines",
+          false
+        ],
+        [
+          "6c33982b3e9adb",
+          "4d98893e06cf66",
+          "refines",
+          false
+        ],
+        [
+          "6e79d566f0e23e",
+          "6c33982b3e9adb",
+          "refines",
+          false
+        ],
+        [
+          "ea803a55375466",
+          "edc865cea9e463",
+          "refines",
+          false
+        ],
+        [
+          "ea803a55375466",
           "4d98893e06cf66",
           "refines",
           false
