@@ -33,6 +33,11 @@ async function load() {
   window.LEGEND=topics.map((label,cid)=>({label,cid,color:palette[cid%palette.length],count:nodes.filter(n=>n.topic===label).length}));
   await script('graph-network.js');
   await script('graph-controls.js');
+  const findings=books.graphs[program].findings;
+  if (findings && Object.keys(findings.entries).length) {
+    window.atlasFindings=findings;
+    await script('findings.js');
+  }
   document.querySelector('#stats').textContent=nodes.length+' nodes · '+edges.length+' directed links';
 }
 load().catch(()=>{document.querySelector('#stats').textContent='Graph unavailable. Reload to try again.';});

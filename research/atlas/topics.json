@@ -5016,7 +5016,7 @@
         },
         {
           "id": "c025b01a43eb13",
-          "label": "The formation question · under review",
+          "label": "Merger times and the weights of histories",
           "paper": null,
           "topic": "The formation question",
           "status": "Under review"
@@ -5051,7 +5051,7 @@
         },
         {
           "id": "3bcc8a25540d56",
-          "label": "The formation question · under review",
+          "label": "Conditional weight of a whole merger tree",
           "paper": null,
           "topic": "The formation question",
           "status": "Under review"
@@ -5870,7 +5870,7 @@
         },
         {
           "id": "404025c073f12d",
-          "label": "The formation question · under review",
+          "label": "Resolution limits at the last merger",
           "paper": null,
           "topic": "The formation question",
           "status": "Under review"
@@ -5884,7 +5884,7 @@
         },
         {
           "id": "f3f5559466616e",
-          "label": "The formation question · under review",
+          "label": "Positions and velocities as observation channels",
           "paper": null,
           "topic": "The formation question",
           "status": "Under review"
@@ -11324,7 +11324,43 @@
           "tests",
           false
         ]
-      ]
+      ],
+      "findings": {
+        "entries": {
+          "404025c073f12d": {
+            "significance": "Reading every position and velocity at resolution 1/n leaves a positive error risk for the composition of the final merger. This establishes a limit for that readout; the exact resolution threshold remains open.",
+            "scientific_verification": "The analytical conclusion was independently reproduced using AI within the stated model. External human verification is pending.",
+            "novelty": "Publication novelty has not been assessed.",
+            "publication_readiness": "Publication readiness has not been established."
+          },
+          "f3f5559466616e": {
+            "significance": "For one future material relation, exact velocities give a risk tending to zero, while exact positions give a Bayes risk tending to one half. The comparison concerns observation channels.",
+            "scientific_verification": "An independent AI derivation reproduced both limits. It did not establish a convergence rate. External human verification is pending.",
+            "novelty": "Publication novelty has not been assessed.",
+            "publication_readiness": "Publication readiness has not been established."
+          },
+          "c025b01a43eb13": {
+            "significance": "The merger calendar changes the conditional weights of ranked merger histories.",
+            "scientific_verification": "The result was independently reproduced using AI under the stated assumptions. External human verification is pending.",
+            "novelty": "Priority remains open after a limited review of prior work.",
+            "publication_readiness": "Published in a shared preprint on merger calendars and trees.",
+            "doi": "10.5281/zenodo.24410493"
+          },
+          "3bcc8a25540d56": {
+            "significance": "Every fixed ranked plane tree of large material cores has positive conditional weight in common macroscopic windows for sufficiently large systems.",
+            "scientific_verification": "The stated result was independently reproduced using AI. External human verification is pending.",
+            "novelty": "Priority remains open after a limited review of prior work.",
+            "publication_readiness": "Published in a shared preprint on merger calendars and trees.",
+            "doi": "10.5281/zenodo.24410493"
+          }
+        },
+        "style": {
+          "accent": "#E7BA52",
+          "ring_gap": 7,
+          "ring_width": 3,
+          "halo_blur": 12
+        }
+      }
     }
   }
 }

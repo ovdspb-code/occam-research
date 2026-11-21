@@ -1,0 +1,21 @@
+/* Curator marks are independent of the node's scientific status colour. */
+#findings-panel { padding: 12px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+#findings-toggle { width: 100%; text-align: left; padding: 9px; border-radius: 6px;
+  border: 1px solid var(--finding-accent); background: var(--bg); color: var(--text); cursor: pointer; }
+#findings-toggle[aria-pressed="true"] { box-shadow: inset 3px 0 var(--finding-accent); font-weight: 600; }
+.finding-mark { color: var(--finding-accent); font-weight: 700; }
+#findings-panel p { font-size: 11px; line-height: 1.45; color: var(--text-2); margin-top: 7px; }
+#findings-list { max-height: 240px; overflow-y: auto; margin-top: 7px; }
+.finding-link { display: block; width: 100%; text-align: left; background: transparent; color: var(--text);
+  border: 0; border-radius: 4px; padding: 6px; font: inherit; font-size: 12px; cursor: pointer; }
+.finding-link:hover, .finding-link:focus-visible { background: var(--border); }
+.finding-link small { display: block; color: var(--text-2); font-size: 10px; margin-top: 3px; }
+.finding-card { border-left: 3px solid var(--finding-accent); padding-left: 10px; margin: 10px 0; }
+.finding-card h4 { color: var(--text); font-size: 13px; margin-bottom: 7px; }
+.finding-card dl { margin: 0; }
+.finding-card dt { font-weight: 600; color: var(--text); margin-top: 7px; }
+.finding-card dd { margin: 0; }
+
+#sidebar:has(#findings-panel){overflow-y:auto}
+#sidebar:has(#findings-panel) > *{flex-shrink:0}
+#sidebar:has(#findings-panel) #legend-wrap{overflow:visible}
