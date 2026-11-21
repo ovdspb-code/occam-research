@@ -214,7 +214,7 @@
     {
       "name": "The formation question",
       "question": "Can local dynamics form a bounded state that organizes a later process?",
-      "entries": 135,
+      "entries": 137,
       "selected": [
         {
           "title": "Physical systems in which organization can arise",
@@ -246,7 +246,7 @@
         "Random partial orders": 5,
         "Origins of order": 20,
         "Physical carriers": 29,
-        "State and environment": 67,
+        "State and environment": 70,
         "Costs and scales": 29,
         "Open measurements": 17
       }
@@ -397,7 +397,7 @@
         }
       ],
       "links": {
-        "The formation question": 67,
+        "The formation question": 70,
         "Limits of local descriptions": 4,
         "Origins of order": 1,
         "Physical carriers": 18,
@@ -5713,6 +5713,20 @@
           "paper": null,
           "topic": "The formation question",
           "status": "Under review"
+        },
+        {
+          "id": "ba5738c75fb45e",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "b150ac8898a1b0",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
         }
       ],
       "edges": [
@@ -10669,6 +10683,42 @@
         [
           "f98cfb3d963c97",
           "3ec0935f5938d9",
+          "related",
+          true
+        ],
+        [
+          "ba5738c75fb45e",
+          "f98cfb3d963c97",
+          "related",
+          false
+        ],
+        [
+          "ba5738c75fb45e",
+          "609bb7e698bb1b",
+          "related",
+          false
+        ],
+        [
+          "ba5738c75fb45e",
+          "3ec0935f5938d9",
+          "related",
+          true
+        ],
+        [
+          "b150ac8898a1b0",
+          "ba5738c75fb45e",
+          "related",
+          false
+        ],
+        [
+          "b150ac8898a1b0",
+          "3ec0935f5938d9",
+          "related",
+          true
+        ],
+        [
+          "b150ac8898a1b0",
+          "4d98893e06cf66",
           "related",
           true
         ]
