@@ -214,7 +214,7 @@
     {
       "name": "The formation question",
       "question": "Can local dynamics form a bounded state that organizes a later process?",
-      "entries": 118,
+      "entries": 121,
       "selected": [
         {
           "title": "Physical systems in which organization can arise",
@@ -5594,6 +5594,27 @@
           "paper": null,
           "topic": "The formation question",
           "status": "Under review"
+        },
+        {
+          "id": "ba0e20f6ab449d",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "614f2c3aa5d369",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "0bbcc69ba1175f",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
         }
       ],
       "edges": [
@@ -10220,6 +10241,66 @@
         [
           "391b81feb61ddd",
           "d1c1ebce1134e0",
+          "related",
+          false
+        ],
+        [
+          "ba0e20f6ab449d",
+          "391b81feb61ddd",
+          "related",
+          false
+        ],
+        [
+          "ba0e20f6ab449d",
+          "baf7d26e29d58b",
+          "related",
+          false
+        ],
+        [
+          "ba0e20f6ab449d",
+          "5cc3bdde31699b",
+          "related",
+          false
+        ],
+        [
+          "ba0e20f6ab449d",
+          "4d98893e06cf66",
+          "related",
+          false
+        ],
+        [
+          "614f2c3aa5d369",
+          "9fec78a3756655",
+          "related",
+          false
+        ],
+        [
+          "614f2c3aa5d369",
+          "4da2c8e1faf633",
+          "related",
+          false
+        ],
+        [
+          "614f2c3aa5d369",
+          "4d98893e06cf66",
+          "related",
+          false
+        ],
+        [
+          "0bbcc69ba1175f",
+          "ba0e20f6ab449d",
+          "related",
+          false
+        ],
+        [
+          "0bbcc69ba1175f",
+          "d1c1ebce1134e0",
+          "related",
+          false
+        ],
+        [
+          "0bbcc69ba1175f",
+          "4d98893e06cf66",
           "related",
           false
         ]
