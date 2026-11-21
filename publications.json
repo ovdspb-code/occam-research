@@ -1,7 +1,45 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-21",
   "source": "Curated publication records and verified DOI metadata",
   "publications": [
+    {
+      "title": "Merger Times and Genealogies in a Finite Gaussian Sticky-Particle Gas",
+      "doi": "10.5281/zenodo.24410493",
+      "type": "preprint",
+      "status": "preprint",
+      "venue": "Zenodo · v0.1",
+      "date": "2026-11-21",
+      "authors": [
+        "Oleg Dolgikh"
+      ],
+      "links": [
+        {
+          "label": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.24410493"
+        },
+        {
+          "label": "Reader guide",
+          "url": "https://zenodo.org/records/24410493/files/Same%20merger%20times%2C%20different%20histories.pdf?download=1"
+        }
+      ],
+      "source": "manual",
+      "added": "2026-11-21",
+      "program": "fold",
+      "version": "0.1",
+      "license": "cc-by-4.0",
+      "anchor": "merger-times-and-genealogies",
+      "summary": "Four sticky particles can share the same collision times and form different groups. The paper gives the conditional weights of complete merger histories in a finite Gaussian chain and bounds the probability of a prescribed sequence of mergers of labelled cores in common time windows.",
+      "readiness": {
+        "group": "new",
+        "score": 7,
+        "stage": "Specialist review pending",
+        "next": "Obtain a human specialist assessment of the proofs and their relation to prior work, then select a journal.",
+        "order": 20
+      },
+      "featured": true,
+      "scope": "The model is a one-dimensional chain of equally spaced unit masses with independent standard Gaussian initial velocities. Both results condition on full coalescence and the first collision joining particles 1 and 2. The macroscopic bound concerns a fixed ranked planar binary tree on the cores, with the leaves in spatial order. Hitting the time windows is part of the event.",
+      "verification": "The preprint includes proofs of both results and an explicit four-particle calculation. Human specialist review is pending."
+    },
     {
       "title": "A reachability threshold for random partial orders with a power-law gap kernel",
       "doi": "10.5281/zenodo.24333797",
