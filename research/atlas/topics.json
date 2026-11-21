@@ -11354,16 +11354,12 @@
       "findings": {
         "entries": {
           "404025c073f12d": {
-            "significance": "Reading every position and velocity at resolution 1/n leaves a positive error risk for the composition of the final merger. This establishes a limit for that readout; the exact resolution threshold remains open.",
             "scientific_verification": "The analytical conclusion was independently reproduced using AI within the stated model. External human verification is pending.",
-            "novelty": "Publication novelty has not been assessed.",
-            "publication_readiness": "Publication readiness has not been established."
+            "novelty": "Publication novelty has not been assessed."
           },
           "f3f5559466616e": {
-            "significance": "For one future material relation, exact velocities give a risk tending to zero, while exact positions give a Bayes risk tending to one half. The comparison concerns observation channels.",
             "scientific_verification": "An independent AI derivation reproduced both limits. It did not establish a convergence rate. External human verification is pending.",
-            "novelty": "Publication novelty has not been assessed.",
-            "publication_readiness": "Publication readiness has not been established."
+            "novelty": "Publication novelty has not been assessed."
           },
           "c025b01a43eb13": {
             "significance": "The merger calendar changes the conditional weights of ranked merger histories.",
