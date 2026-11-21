@@ -214,7 +214,7 @@
     {
       "name": "The formation question",
       "question": "Can local dynamics form a bounded state that organizes a later process?",
-      "entries": 181,
+      "entries": 184,
       "selected": [
         {
           "title": "Physical systems in which organization can arise",
@@ -246,7 +246,7 @@
         "Random partial orders": 5,
         "Origins of order": 21,
         "Physical carriers": 29,
-        "State and environment": 87,
+        "State and environment": 89,
         "Costs and scales": 29,
         "Open measurements": 17
       }
@@ -397,7 +397,7 @@
         }
       ],
       "links": {
-        "The formation question": 87,
+        "The formation question": 89,
         "Limits of local descriptions": 4,
         "Origins of order": 1,
         "Physical carriers": 18,
@@ -6031,6 +6031,27 @@
         },
         {
           "id": "0efe6573db275c",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "8f54f88080d5fc",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "0b95b92cf2fb0a",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "d10e4aea95eda2",
           "label": "The formation question · under review",
           "paper": null,
           "topic": "The formation question",
@@ -11735,6 +11756,54 @@
         [
           "0efe6573db275c",
           "3ec0935f5938d9",
+          "related",
+          false
+        ],
+        [
+          "8f54f88080d5fc",
+          "0efe6573db275c",
+          "related",
+          false
+        ],
+        [
+          "8f54f88080d5fc",
+          "d05befb6bab323",
+          "related",
+          false
+        ],
+        [
+          "8f54f88080d5fc",
+          "3ec0935f5938d9",
+          "related",
+          false
+        ],
+        [
+          "0b95b92cf2fb0a",
+          "6336814b8d21dc",
+          "related",
+          false
+        ],
+        [
+          "0b95b92cf2fb0a",
+          "4d98893e06cf66",
+          "related",
+          false
+        ],
+        [
+          "d10e4aea95eda2",
+          "2cdafce668e2c0",
+          "related",
+          false
+        ],
+        [
+          "d10e4aea95eda2",
+          "0b95b92cf2fb0a",
+          "related",
+          false
+        ],
+        [
+          "d10e4aea95eda2",
+          "4d98893e06cf66",
           "related",
           false
         ]
