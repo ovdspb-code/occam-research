@@ -214,7 +214,7 @@
     {
       "name": "The formation question",
       "question": "Can local dynamics form a bounded state that organizes a later process?",
-      "entries": 177,
+      "entries": 181,
       "selected": [
         {
           "title": "Physical systems in which organization can arise",
@@ -246,7 +246,7 @@
         "Random partial orders": 5,
         "Origins of order": 21,
         "Physical carriers": 29,
-        "State and environment": 85,
+        "State and environment": 87,
         "Costs and scales": 29,
         "Open measurements": 17
       }
@@ -397,7 +397,7 @@
         }
       ],
       "links": {
-        "The formation question": 85,
+        "The formation question": 87,
         "Limits of local descriptions": 4,
         "Origins of order": 1,
         "Physical carriers": 18,
@@ -6003,6 +6003,34 @@
         },
         {
           "id": "554aa1ce13dc09",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "64db1736e1d7f8",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "d05befb6bab323",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "6336814b8d21dc",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "0efe6573db275c",
           "label": "The formation question · under review",
           "paper": null,
           "topic": "The formation question",
@@ -11655,6 +11683,60 @@
           "d2603da4cc8974",
           "related",
           false
+        ],
+        [
+          "64db1736e1d7f8",
+          "554aa1ce13dc09",
+          "related",
+          false
+        ],
+        [
+          "64db1736e1d7f8",
+          "3ec0935f5938d9",
+          "related",
+          false
+        ],
+        [
+          "d05befb6bab323",
+          "64db1736e1d7f8",
+          "related",
+          false
+        ],
+        [
+          "d05befb6bab323",
+          "4d98893e06cf66",
+          "related",
+          false
+        ],
+        [
+          "6336814b8d21dc",
+          "792b756a9db7ac",
+          "related",
+          false
+        ],
+        [
+          "6336814b8d21dc",
+          "997d889a25f485",
+          "related",
+          false
+        ],
+        [
+          "6336814b8d21dc",
+          "4d98893e06cf66",
+          "related",
+          false
+        ],
+        [
+          "0efe6573db275c",
+          "d05befb6bab323",
+          "related",
+          false
+        ],
+        [
+          "0efe6573db275c",
+          "3ec0935f5938d9",
+          "related",
+          false
         ]
       ],
       "findings": {
@@ -11682,7 +11764,8 @@
           },
           "26a29df4bdc5fb": {},
           "bfbdee0935b876": {},
-          "c1bd5973590a21": {}
+          "c1bd5973590a21": {},
+          "6336814b8d21dc": {}
         },
         "style": {
           "accent": "#E7BA52",
