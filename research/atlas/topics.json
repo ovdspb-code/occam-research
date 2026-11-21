@@ -214,7 +214,7 @@
     {
       "name": "The formation question",
       "question": "Can local dynamics form a bounded state that organizes a later process?",
-      "entries": 165,
+      "entries": 167,
       "selected": [
         {
           "title": "Physical systems in which organization can arise",
@@ -246,7 +246,7 @@
         "Random partial orders": 5,
         "Origins of order": 21,
         "Physical carriers": 29,
-        "State and environment": 80,
+        "State and environment": 81,
         "Costs and scales": 29,
         "Open measurements": 17
       }
@@ -397,7 +397,7 @@
         }
       ],
       "links": {
-        "The formation question": 80,
+        "The formation question": 81,
         "Limits of local descriptions": 4,
         "Origins of order": 1,
         "Physical carriers": 18,
@@ -5923,6 +5923,20 @@
           "paper": null,
           "topic": "The formation question",
           "status": "Under review"
+        },
+        {
+          "id": "8de0187d3678d5",
+          "label": "The formation question · result",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Result"
+        },
+        {
+          "id": "ac6e78ded9ee36",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
         }
       ],
       "edges": [
@@ -11349,6 +11363,48 @@
           "3ec0935f5938d9",
           "tests",
           false
+        ],
+        [
+          "8de0187d3678d5",
+          "f3f5559466616e",
+          "related",
+          false
+        ],
+        [
+          "8de0187d3678d5",
+          "404025c073f12d",
+          "related",
+          false
+        ],
+        [
+          "8de0187d3678d5",
+          "7efabee361aaba",
+          "related",
+          false
+        ],
+        [
+          "8de0187d3678d5",
+          "4d98893e06cf66",
+          "related",
+          false
+        ],
+        [
+          "ac6e78ded9ee36",
+          "a63d7fe182c8c4",
+          "related",
+          false
+        ],
+        [
+          "ac6e78ded9ee36",
+          "3ec0935f5938d9",
+          "related",
+          false
+        ],
+        [
+          "ac6e78ded9ee36",
+          "4d98893e06cf66",
+          "related",
+          false
         ]
       ],
       "findings": {
@@ -11358,7 +11414,6 @@
             "novelty": "Publication novelty has not been assessed."
           },
           "f3f5559466616e": {
-            "scientific_verification": "An independent AI derivation reproduced both limits. It did not establish a convergence rate. External human verification is pending.",
             "novelty": "Publication novelty has not been assessed."
           },
           "c025b01a43eb13": {
@@ -11374,7 +11429,9 @@
             "novelty": "Priority remains open after a limited review of prior work.",
             "publication_readiness": "Published in a shared preprint on merger calendars and trees.",
             "doi": "10.5281/zenodo.24410493"
-          }
+          },
+          "26a29df4bdc5fb": {},
+          "bfbdee0935b876": {}
         },
         "style": {
           "accent": "#E7BA52",
