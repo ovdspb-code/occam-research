@@ -214,7 +214,7 @@
     {
       "name": "The formation question",
       "question": "Can local dynamics form a bounded state that organizes a later process?",
-      "entries": 133,
+      "entries": 135,
       "selected": [
         {
           "title": "Physical systems in which organization can arise",
@@ -246,7 +246,7 @@
         "Random partial orders": 5,
         "Origins of order": 20,
         "Physical carriers": 29,
-        "State and environment": 65,
+        "State and environment": 67,
         "Costs and scales": 29,
         "Open measurements": 17
       }
@@ -397,7 +397,7 @@
         }
       ],
       "links": {
-        "The formation question": 65,
+        "The formation question": 67,
         "Limits of local descriptions": 4,
         "Origins of order": 1,
         "Physical carriers": 18,
@@ -5699,6 +5699,20 @@
           "paper": null,
           "topic": "The formation question",
           "status": "Under review"
+        },
+        {
+          "id": "b1bb17b014f6fb",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "f98cfb3d963c97",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
         }
       ],
       "edges": [
@@ -10619,6 +10633,42 @@
         [
           "2134d908c3f7d6",
           "4d98893e06cf66",
+          "related",
+          true
+        ],
+        [
+          "b1bb17b014f6fb",
+          "2134d908c3f7d6",
+          "related",
+          false
+        ],
+        [
+          "b1bb17b014f6fb",
+          "c74fb57d3e34b7",
+          "related",
+          true
+        ],
+        [
+          "b1bb17b014f6fb",
+          "4d98893e06cf66",
+          "related",
+          true
+        ],
+        [
+          "f98cfb3d963c97",
+          "609bb7e698bb1b",
+          "related",
+          false
+        ],
+        [
+          "f98cfb3d963c97",
+          "b1bb17b014f6fb",
+          "related",
+          false
+        ],
+        [
+          "f98cfb3d963c97",
+          "3ec0935f5938d9",
           "related",
           true
         ]
