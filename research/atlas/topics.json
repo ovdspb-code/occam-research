@@ -214,7 +214,7 @@
     {
       "name": "The formation question",
       "question": "Can local dynamics form a bounded state that organizes a later process?",
-      "entries": 155,
+      "entries": 157,
       "selected": [
         {
           "title": "Physical systems in which organization can arise",
@@ -238,7 +238,7 @@
         }
       ],
       "links": {
-        "Limits of local descriptions": 24,
+        "Limits of local descriptions": 25,
         "Alternative models": 7,
         "Correlation and assembly": 5,
         "States and couplings": 14,
@@ -418,7 +418,7 @@
         }
       ],
       "links": {
-        "The formation question": 24,
+        "The formation question": 25,
         "Alternative models": 2,
         "States and couplings": 2,
         "Physical carriers": 1,
@@ -5853,6 +5853,20 @@
           "paper": null,
           "topic": "The formation question",
           "status": "Under review"
+        },
+        {
+          "id": "1d94bfc176b513",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
+        },
+        {
+          "id": "7d74266358be73",
+          "label": "The formation question · under review",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Under review"
         }
       ],
       "edges": [
@@ -11129,6 +11143,36 @@
           "4d98893e06cf66",
           "related",
           true
+        ],
+        [
+          "1d94bfc176b513",
+          "b575beac3311ac",
+          "related",
+          false
+        ],
+        [
+          "1d94bfc176b513",
+          "d940a13ae897b5",
+          "related",
+          true
+        ],
+        [
+          "7d74266358be73",
+          "7efabee361aaba",
+          "related",
+          false
+        ],
+        [
+          "7d74266358be73",
+          "4d98893e06cf66",
+          "related",
+          true
+        ],
+        [
+          "7d74266358be73",
+          "1d94bfc176b513",
+          "related",
+          false
         ]
       ]
     }
