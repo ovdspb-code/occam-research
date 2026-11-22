@@ -1,5 +1,7 @@
 import {probeFrom} from './engine.js';
 
+import {describeDifference} from './inspector.js';
+
 const strings={
  ru:['Обмен памятью одной клетки','На выбранном шаге копируем оба кольца и меняем между копиями все восемь весов выбранной клетки. Рисунки остаются прежними. Дальше веса снова обучаются по обычному закону. Каждую копию сравниваем с её собственным ходом без обмена.','Поменять веса и проследить','Выберите шаг до конца пробы.','Клетка','шаг обмена','Следующий бит: без обмена → после обмена','Шаг наблюдения','Без обмена','После обмена','Различаются клетки','ни одной','Строки сверху вниз — клетки 1–13; время идёт слева направо. Цвет показывает, где обмен изменил бит. Черта отмечает выбранный шаг.','История А','История Б','Изменить шаг наблюдения'],
  en:['Swap one cell’s memory','At the selected step, copy both rings and exchange all eight weights of the selected cell between the copies. Keep both patterns intact, then resume learning. Compare each copy with its own run without the swap.','Swap weights and follow the rings','Choose a step before the end of the probe.','Cell','swap step','Next bit: original → swapped','Observation step','Original','After swap','Cells that differ','none','Rows from top to bottom are cells 1–13; time runs left to right. Colour shows where the swap changed a bit. The line marks the selected step.','History A','History B','Change observation step']
@@ -39,7 +41,7 @@ export function swapView(lang,model,settings,memory,words,step,cell){
    pair.replaceChildren();saved.at=Number(slider.value)-step;tick.value=slider.value;
    base.forEach((series,h)=>{
     const after=changed[h],i=saved.at,p=element('article','');
-    p.append(element('h4',c[13+h]),element('p',c[6]+': '+series[1][cell]+' → '+after[1][cell]),heatmap(series,after,i));
+    p.append(element('h4',c[13+h]),element('p',describeDifference(lang,[series,after],step,true)),element('p',c[6]+': '+series[1][cell]+' → '+after[1][cell]),heatmap(series,after,i));
     const ids=compare(series,after,i).map(j=>j+1);
     for(const [title,val] of [[c[8],series[i]],[c[9],after[i]]]){
      const row=element('div',title+' ');row.append(element('code',val));p.append(row);

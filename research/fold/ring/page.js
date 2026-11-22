@@ -1,6 +1,6 @@
 import {swapView} from './swap.js';
 import {probeFrom} from './engine.js';
-import {inspect,firstDifference} from './inspector.js';
+import {inspect,firstDifference,describeDifference} from './inspector.js';
 import {text} from './text.js';
 import {boundaries,rhythm,ring,plot} from './charts.js';
 const $=id=>document.getElementById(id);
@@ -37,8 +37,8 @@ function panels(){
  inspect(lang,allWords,step,memory,model.law.walsh_masks,$('panels'));
  swapView(lang,model,current,memory,allWords,step,Number($('cell').value));
  const diff=series=>series[0].findIndex((v,i)=>v!==series[1][i]);
- const d=diff(allWords),c=diff(allCounts);
- $('difference').textContent=[d<0?t('same'):t('delta')+' · '+d,c<0?t('sameCounts'):t('countDelta')+' · '+c].join('. ');
+ const c=diff(allCounts);
+ $('difference').textContent=[describeDifference(lang,allWords),c<0?t('sameCounts'):t('countDelta')+' · '+c].join(' ');
  $('output').hidden=false;$('share').href=replayUrl(current);
 }
 function paint(){

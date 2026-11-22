@@ -9,6 +9,18 @@ export function firstDifference(words){
  if(step<1)return null;
  return {step:step-1,cell:[...words[0][step]].findIndex((v,i)=>v!==words[1][step][i])};
 }
+export function describeDifference(lang,words,start=0,swap=false){
+ const first=firstDifference(words),end=start+words[0].length-1,ru=lang==='ru';
+ if(!first){
+  if(swap)return ru?`После обмена все клетки на каждом шаге до конца опыта (шаг ${end}) повторили ход без обмена.`:`After the swap, every cell matched its original run at every step through step ${end}.`;
+  return ru?`За весь опыт (шаги 0–${end}) все клетки обоих колец совпали.`:`Both rings matched in every cell throughout the experiment (steps 0–${end}).`;
+ }
+ const index=first.step+1;
+ const [a,b]=words.map(series=>series[index]);
+ const changes=Array.from(a, (bit,i)=>bit===b[i]?null:`${i+1} (${bit} → ${b[i]})`).filter(Boolean);
+ const key=swap?(ru?'без обмена → после обмена':'original → swapped'):(ru?'А → Б':'A → B');
+ return ru?`Первое расхождение на шаге ${start+index}. ${changes.length===1?'Клетка':'Клетки'} ${changes.join(', ')}. Значения: ${key}.`:`First divergence at step ${start+index}. ${changes.length===1?'Cell':'Cells'} ${changes.join(', ')}. Values: ${key}.`;
+}
 export function inspect(lang,words,step,memory,masks,panels){
  const c=copy[lang],cell=Number(el('cell').value),end=step===words[0].length-1,first=firstDifference(words);
  ['ins-title','ins-help','ins-cell','find-diff'].forEach((id,i)=>el(id).textContent=c[i]);
