@@ -1,3 +1,4 @@
+import {stableText} from './layout.js';
 import {swapView} from './swap.js';
 import {probeFrom} from './engine.js';
 import {inspect,firstDifference,describeDifference} from './inspector.js';
@@ -21,6 +22,7 @@ function panels(){
  const step=Number($('step').value);$('tick').value=step;
  const allWords=traces.map(trace=>[current.probe,...trace]);
  const allCounts=allWords.map(words=>words.map(boundaries));
+ const expanded=Array.from($('panels').querySelectorAll('details'),details=>details.open);
  $('panels').replaceChildren();
  for(const [i,words] of allWords.entries()){
   const counts=allCounts[i],p=node('article','');p.className='panel';
@@ -31,21 +33,27 @@ function panels(){
   const values=node('div','');values.append(node('code',words[step]),node('div',t('bounds')+' · '+counts[step]));diagram.append(svg,values);p.append(diagram);
   const chart=svg.cloneNode(false);chart.classList.add('line');chart.setAttribute('viewBox','0 0 300 80');plot(chart,counts,step);
   const axis=node('div','');axis.className='axis';axis.append(node('span',t('first')),node('span','0–12 · '+t('bounds')),node('span',t('last')));
-  p.append(chart,axis,node('p',t('period')+' · '+(rhythm(counts.slice(1))??t('none'))+' / '+t('word')+' · '+(rhythm(words.slice(1))??t('none'))));
+  const rhythmLabel=(a,b)=>t('period')+' · '+a+' / '+t('word')+' · '+b;
+  const summary=node('p','');stableText(summary,rhythmLabel(rhythm(counts.slice(1))??t('none'),rhythm(words.slice(1))??t('none')),[rhythmLabel(t('none'),t('none'))]);
+  p.append(chart,axis,summary);
   $('panels').append(p);
  }
  inspect(lang,allWords,step,memory,model.law.walsh_masks,$('panels'));
+ $('panels').querySelectorAll('details').forEach((details,i)=>details.open=Boolean(expanded[i]));
  swapView(lang,model,current,memory,allWords,step,Number($('cell').value));
  const diff=series=>series[0].findIndex((v,i)=>v!==series[1][i]);
  const c=diff(allCounts);
- $('difference').textContent=[describeDifference(lang,allWords),c<0?t('sameCounts'):t('countDelta')+' · '+c].join(' ');
+ const result=[describeDifference(lang,allWords),c<0?t('sameCounts'):t('countDelta')+' · '+c].join(' ');
+ const uniform=bit=>bit.repeat(current.probe.length);
+ const exemplar=[ [uniform('0'),uniform('0')], [uniform('0'),uniform('1')] ];
+ stableText($('difference'),result,[describeDifference(lang,exemplar,model.horizon-1)+' '+t('sameCounts'),describeDifference(lang,exemplar,model.horizon-1)+' '+t('countDelta')+' · '+model.horizon]);
  $('output').hidden=false;$('share').href=replayUrl(current);
 }
 function paint(){
  document.documentElement.lang=lang;document.title=t('title')+' · Occam Research';
  document.querySelectorAll('[data-t]').forEach(n=>{n.textContent=t(n.dataset.t)});
  $('lang').textContent=lang==='ru'?'English':'Русский';$('lang').lang=lang==='ru'?'en':'ru';
- $('status').textContent=status?t(status):'';$('origin').textContent=t(origin);
+ stableText($('status'),status?t(status):'',['pending','dirty','busy','error'].map(t));stableText($('origin'),t(origin),['archive','fresh','verified'].map(t));
  $('run').disabled=!model||busy;$('reset').disabled=!model||busy;
  for(const el of Object.values(controls))el.disabled=busy;
  $('settings').setAttribute('aria-busy',String(busy));

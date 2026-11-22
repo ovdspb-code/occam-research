@@ -1,3 +1,4 @@
+import {stableText} from './layout.js';
 import {probeFrom} from './engine.js';
 
 import {describeDifference} from './inspector.js';
@@ -28,11 +29,11 @@ function heatmap(base,changed,at){
 let saved;
 export function swapView(lang,model,settings,memory,words,step,cell){
  const c=strings[lang],btn=get('exchange'),out=get('swap-result'),end=step===model.horizon;
- get('swap-title').textContent=c[0];get('swap-help').textContent=c[1];btn.textContent=end?c[3]:c[2];btn.disabled=end;
- if(saved&&(saved.memory!==memory||saved.step!==step||saved.cell!==cell))saved=null;
+ get('swap-title').textContent=c[0];get('swap-help').textContent=c[1];stableText(btn,end?c[3]:c[2],[c[2],c[3]]);btn.disabled=end;
+ if(saved&&saved.memory!==memory)saved=null;
  function render(){
   out.replaceChildren();if(!saved)return;
-  const {base,changed}=saved;
+  const {base,changed,step,cell}=saved;
   out.append(element('p',c[4]+' '+(cell+1)+' · '+c[5]+' '+step),element('p',c[12]));
   const label=element('label',c[7]+' '),tick=element('output',''),slider=document.createElement('input');label.className='step';
   slider.type='range';slider.min=step;slider.max=model.horizon;slider.value=step+saved.at;slider.setAttribute('aria-label',c[15]);label.append(tick,slider);out.append(label);
@@ -41,12 +42,19 @@ export function swapView(lang,model,settings,memory,words,step,cell){
    pair.replaceChildren();saved.at=Number(slider.value)-step;tick.value=slider.value;
    base.forEach((series,h)=>{
     const after=changed[h],i=saved.at,p=element('article','');
-    p.append(element('h4',c[13+h]),element('p',describeDifference(lang,[series,after],step,true)),element('p',c[6]+': '+series[1][cell]+' → '+after[1][cell]),heatmap(series,after,i));
+    const summary=element('p',''), width=series[0].length;
+    const zero='0'.repeat(width), one=zero.slice(1)+'1';
+    stableText(summary,describeDifference(lang,[series,after],step,true),[
+     describeDifference(lang,[[zero,zero],[zero,one]],model.horizon-1,true),
+     describeDifference(lang,[[zero],[zero]],model.horizon,true)
+    ]);
+    p.append(element('h4',c[13+h]),summary,element('p',c[6]+': '+series[1][cell]+' → '+after[1][cell]),heatmap(series,after,i));
     const ids=compare(series,after,i).map(j=>j+1);
     for(const [title,val] of [[c[8],series[i]],[c[9],after[i]]]){
      const row=element('div',title+' ');row.append(element('code',val));p.append(row);
     }
-    p.append(element('div',c[10]+': '+(ids.join(', ')||c[11])));pair.append(p);
+    const list=element('div','');
+    stableText(list,c[10]+': '+(ids.join(', ')||c[11]),[c[10]+': '+Array.from(series[i],(_,j)=>j+1).join(', '),c[10]+': '+c[11]]);p.append(list);pair.append(p);
    });
   }
   slider.oninput=draw;draw();

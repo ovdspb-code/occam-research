@@ -25,6 +25,7 @@ function makeTransition(model,settings,progress) {
       if(probe)trace.push(word.join(''));
       if(t%2048===0)progress();
     }
+    if(probe)memory.push(weights.slice());
     return {word,weights,trace,memory};
   }
   return evolve;
