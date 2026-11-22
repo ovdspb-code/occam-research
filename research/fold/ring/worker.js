@@ -3,7 +3,7 @@ let streams;
 self.onmessage=async ({data:{model,settings}})=>{
  try{
   streams??=Promise.all([0,1].map(async i=>{const r=await fetch('stream-'+i+'.bin');if(!r.ok)throw Error();return r.arrayBuffer();}));
-  const trace=simulate(model,await streams,settings,()=>postMessage({working:true}));
-  postMessage({trace});
+  const runs=simulate(model,await streams,settings,()=>postMessage({working:true}));
+  postMessage({trace:runs.map(r=>r.trace),memory:runs.map(r=>r.memory)});
  }catch{streams=null;postMessage({error:true});}
 };

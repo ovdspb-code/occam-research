@@ -9,11 +9,14 @@ export function rhythm(series){
  for(let p=1;p<=series.length/2;p++)if(series.slice(-p).every((v,i)=>v===series[series.length-2*p+i]))return p;
  return null;
 }
-export function ring(svg,word){
+export function ring(svg,word,cell,onPick){
  svg.replaceChildren(shape('circle',{cx:58,cy:58,r:46,fill:'none',stroke:'var(--line)'}));
  for(let i=0;i<word.length;i++){
   const a=i*2*Math.PI/word.length-Math.PI/2;
-  svg.append(shape('circle',{cx:58+46*Math.cos(a),cy:58+46*Math.sin(a),r:7,stroke:'var(--ink)',fill:word[i]==='1'?'var(--ink)':'var(--paper)'}));
+  const cx=58+46*Math.cos(a),cy=58+46*Math.sin(a);
+  if(i===cell)svg.append(shape('circle',{cx,cy,r:10,stroke:'#b75016','stroke-width':2,fill:'none'}));
+  const dot=shape('circle',{cx,cy,r:7,stroke:'var(--ink)',fill:word[i]==='1'?'var(--ink)':'var(--paper)'});
+  dot.style.cursor='pointer';dot.onclick=()=>onPick(i);svg.append(dot);
  }
 }
 export function plot(svg,counts,step){
