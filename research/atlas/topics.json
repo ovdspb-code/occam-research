@@ -106,7 +106,7 @@
     {
       "name": "Smaller physical models",
       "question": "Which future behaviours survive when a physical network is reduced?",
-      "entries": 43,
+      "entries": 45,
       "selected": [
         {
           "title": "Network size and trajectory accuracy",
@@ -1612,6 +1612,20 @@
           "paper": null,
           "topic": "Smaller physical models",
           "status": "Result"
+        },
+        {
+          "id": "cbf6118ae0d808",
+          "label": "Smaller physical models · result",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
+        },
+        {
+          "id": "20356243c4a8d3",
+          "label": "Smaller physical models · result",
+          "paper": null,
+          "topic": "Smaller physical models",
+          "status": "Result"
         }
       ],
       "edges": [
@@ -2958,6 +2972,18 @@
           "d4c25bad90c59b",
           "analogy",
           true
+        ],
+        [
+          "48a955ae6b2197",
+          "cbf6118ae0d808",
+          "analogy",
+          true
+        ],
+        [
+          "cbf6118ae0d808",
+          "20356243c4a8d3",
+          "limits",
+          false
         ]
       ]
     },
