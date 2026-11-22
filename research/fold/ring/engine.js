@@ -29,8 +29,8 @@ function makeTransition(model,settings,progress) {
   }
   return evolve;
 }
-export function probeFrom(model,settings,weights){
-  return makeTransition(model,settings,()=>{})(Uint8Array.from(settings.probe),weights,0,model.horizon,null,true);
+export function probeFrom(model,settings,weights,steps=model.horizon){
+  return makeTransition(model,settings,()=>{})(Uint8Array.from(settings.probe),weights,0,steps,null,true);
 }
 export function simulate(model,buffers,settings,progress=()=>{}){
   const n=model.law.cells,width=model.law.walsh_masks.length;
