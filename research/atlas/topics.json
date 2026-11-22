@@ -214,7 +214,7 @@
     {
       "name": "The formation question",
       "question": "Can local dynamics form a bounded state that organizes a later process?",
-      "entries": 195,
+      "entries": 196,
       "selected": [
         {
           "title": "Physical systems in which organization can arise",
@@ -6140,6 +6140,13 @@
           "paper": null,
           "topic": "The formation question",
           "status": "Result"
+        },
+        {
+          "id": "2712d260f92bfa",
+          "label": "The formation question · result",
+          "paper": null,
+          "topic": "The formation question",
+          "status": "Result"
         }
       ],
       "edges": [
@@ -12040,6 +12047,18 @@
           "c025b01a43eb13",
           "related",
           false
+        ],
+        [
+          "2712d260f92bfa",
+          "1d577afd108d98",
+          "refines",
+          false
+        ],
+        [
+          "2712d260f92bfa",
+          "698a8201fcbbed",
+          "refines",
+          false
         ]
       ],
       "findings": {
@@ -12077,7 +12096,8 @@
           "83850fcd1e1e58": {},
           "a335e30395ebda": {},
           "5cb45314672715": {},
-          "1791655ac5cf58": {}
+          "1791655ac5cf58": {},
+          "2712d260f92bfa": {}
         },
         "style": {
           "accent": "#E7BA52",
