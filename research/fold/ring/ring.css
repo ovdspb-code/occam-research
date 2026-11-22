@@ -1,0 +1,7 @@
+main{padding-block:2rem 4rem}.ring-intro h1{margin:.3rem 0 1rem}.ring-intro h2{max-width:32ch;font-size:clamp(1.45rem,3vw,2.25rem)}
+main section,main footer{padding-block:1.6rem;border-top:1px solid var(--line);margin-top:1.5rem}
+.fields,.actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.1rem}.fields label{display:grid;gap:.25rem;color:var(--ink);font-weight:600}
+button,select{font:inherit;color:var(--ink);border:1px solid var(--line);background:var(--paper);padding:.4rem .7rem}button{cursor:pointer}#run{background:var(--ink);color:var(--paper)}button:disabled{opacity:.6}
+#origin{color:var(--ink);font-weight:600}.step{display:block;max-width:40rem;margin:1rem 0}.step input{display:block;width:100%;accent-color:var(--ink)}
+#panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}.panel{border-top:2px solid var(--ink);padding-top:.65rem;min-width:0}.diagram{display:flex;align-items:center;gap:1rem}.diagram svg{width:7rem;height:auto}.diagram code{font-size:1rem}.line{width:100%;height:auto;color:#246077}.axis{display:flex;justify-content:space-between;font-size:.85rem}.panel:nth-child(2) .line{color:#944d29}#difference{font-weight:600}select:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #976826}
+@media(max-width:620px){#panels{grid-template-columns:1fr}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.fields select{max-width:100%}.header-inner{flex-wrap:wrap}.diagram svg{width:6rem}}
